@@ -703,13 +703,14 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
             const isBbPath = window.location.pathname.startsWith('/b/');
             
             // Выводим ссылку BB только если мы НЕ на странице BB
-            if (!isBbPath) {
-                scLink += `&nbsp;<a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
-            }
+     //       if (!isBbPath) {
+       //         scLink += `&nbsp;<a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
+         //   }
             
             const bookMatch = slug.match(/^[a-z]+/); 
             const book = bookMatch ? bookMatch[0] : "";
-            scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
+            // scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
+           scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="https://theBuddhasWords.net/${book}/${slug}.html">TBW</a>`;
         }
     }
 

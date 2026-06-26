@@ -465,21 +465,21 @@ Mousetrap.bind("*", function (e) {
   document.getElementById("pali").click();
 });
 
-Mousetrap.bind("h", function (e) {
-  window.location.href = "../home/help.html";
+Mousetrap.bind("?", function (e) {
+  window.location.href = "./home/help.html";
 });
 
 Mousetrap.bind("H", function (e) {
-  window.location.href = "../home/index.html";
+  window.location.href = "./home/index.html";
 });
 
 
 Mousetrap.bind("?", function (e) {
-  window.location.href = "../home/help.html";
+  window.location.href = "./home/help.html";
 });
 
 Mousetrap.bind("c", function (e) {
-  window.location.href = "../home/contact.html";
+  window.location.href = "./home/contact.html";
 });
 
 Mousetrap.bind("d", function (e) {
