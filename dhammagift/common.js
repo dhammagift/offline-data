@@ -1669,9 +1669,19 @@ window.handleFetchError = function(slug, isRussian) {
 
     localStorage.setItem(redirectKey, redirectCount + 1);
 
+const isRu = window.location.pathname.includes('/r/') ||
+             window.location.pathname.includes('/mt/') ||
+             window.location.pathname.includes('/ml/') ||
+             window.location.pathname.includes('/ru/');
+
+const prefix = isRu ? "/ru" : "";
+
+
     // Фолбэк-поиск через XHR
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/?p=-kn&q=" + encodeURIComponent(slug), true);
+    xhr.open("GET", prefix + "/?p=-kn&q=" + encodeURIComponent(slug), true);
+    xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+    xhr.setRequestHeader("Referer", window.location.href);
     xhr.send();
 
     xhr.onreadystatechange = function() {
@@ -1680,7 +1690,7 @@ window.handleFetchError = function(slug, isRussian) {
                 if (!xhr.responseText.includes("Page not found") && 
                     !xhr.responseText.includes("404") &&
                     xhr.responseText.trim().length > 0) {
-                    window.location.href = "/?p=-kn&q=" + encodeURIComponent(slug);
+                    window.location.href = prefix + "/?p=-kn&q=" + encodeURIComponent(slug);
                 } else {
                     console.log('Page not found or empty response');
                 }
