@@ -693,26 +693,31 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     */
     
 
-    // BB, TBW, Th.ru, Th.su
-    const isLocal = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
+// BB, TBW, Th.ru, Th.su
+const isLocal = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
 
-    if (typeof tbwLinksData !== 'undefined') {
-        const hasTbw = tbwLinksData.find(item => Array.isArray(item) ? item[0] === slug : item === slug);
-        if (hasTbw) {
-            // Проверяем, не находимся ли мы уже в директории /b/
-            const isBbPath = window.location.pathname.startsWith('/b/');
-            
-            // Выводим ссылку BB только если мы НЕ на странице BB
-     //       if (!isBbPath) {
-       //         scLink += `&nbsp;<a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
-         //   }
-            
-            const bookMatch = slug.match(/^[a-z]+/); 
-            const book = bookMatch ? bookMatch[0] : "";
-            // scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
-           scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="https://theBuddhasWords.net/${book}/${slug}.html">TBW</a>`;
+if (typeof tbwLinksData !== 'undefined') {
+    const hasTbw = tbwLinksData.find(item => Array.isArray(item) ? item[0] === slug : item === slug);
+    if (hasTbw) {
+        // Проверяем, не находимся ли мы уже в директории /b/
+        const isBbPath = window.location.pathname.startsWith('/b/');
+
+        // BB — показываем только на локалхосте и только если мы не на странице /b/
+        if (!isBbPath && isLocal) {
+            scLink += `&nbsp;<a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
+        }
+
+        const bookMatch = slug.match(/^[a-z]+/);
+        const book = bookMatch ? bookMatch[0] : "";
+
+        // TBW — ссылка зависит от окружения
+        if (isLocal) {
+            scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
+        } else {
+            scLink += `&nbsp;<a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="https://theBuddhasWords.net/${book}/${slug}.html">TBW</a>`;
         }
     }
+}
 
 
     if (typeof thruLinksData !== 'undefined') {
