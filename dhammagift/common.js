@@ -1886,9 +1886,7 @@ window.addEventListener('suttaLoaded', addIconsTo01);
 window.addEventListener('suttaRenderedCentral', addIconsTo01);
 
 
-
-
-
+//Smart link in each line
 document.addEventListener('DOMContentLoaded', () => {
   // Определяем язык интерфейса по URL
   const path = window.location.pathname;
@@ -1898,7 +1896,8 @@ document.addEventListener('DOMContentLoaded', () => {
     quote: isRu ? 'Цитата' : 'Quote',
     link: isRu ? 'Ссылка' : 'Link',
     audio: isRu ? 'Аудио' : 'Audio',
-    bookmark: isRu ? 'Избранное' : 'Bookmark'
+    bookmark: isRu ? 'Избранное' : 'Bookmark',
+    memo: isRu ? 'Запомнить' : 'Memo'
   };
 
   // 1. Создаем HTML структуру меню
@@ -1909,6 +1908,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li id="sm-link"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.link}</li>
         <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
         <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.bookmark}</li>
+        <li id="sm-memo"><img src="/assets/svg/memo.svg" class="menu-icon" alt=""> ${labels.memo}</li>
       </ul>
     </div>
   `;
@@ -1918,21 +1918,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentContext = null;
 
   // 2. Открытие меню по клику на .copyLink
-  // Используем фазу перехвата (true), чтобы заблокировать выполнение inline onclick
   document.addEventListener('click', (e) => {
-    // Игнорируем синтетические клики
     if (e.isSimulated) return;
 
     const copyBtn = e.target.closest('.copyLink');
 
     if (copyBtn) {
       e.preventDefault();
-      e.stopImmediatePropagation(); // Блокируем копирование левым кликом
+      e.stopImmediatePropagation();
 
       const parentSpan = copyBtn.closest('span[id]');
       if (!parentSpan) return;
 
-      // Извлекаем URL 
       const onclickAttr = copyBtn.getAttribute('onclick') || '';
       const urlMatch = onclickAttr.match(/copyToClipboard\('([^']*)'\)/);
       let rawUrl = urlMatch ? urlMatch[1] : window.location.href;
@@ -1944,40 +1941,34 @@ document.addEventListener('DOMContentLoaded', () => {
         hash: parentSpan.id.toLowerCase()
       };
 
-      // Уводим меню за экран для безопасного вычисления размеров
       menu.style.left = '-9999px';
       menu.style.top = '-9999px';
       menu.classList.remove('segment-menu-hidden');
 
-      // Позиционирование строго относительно ссылки
       const btnRect = copyBtn.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
 
       let left = btnRect.left + window.scrollX;
       let top = btnRect.bottom + window.scrollY + 10;
 
-      // Если меню выходит за правый край видимого экрана
       if (left + menuRect.width > window.innerWidth) {
         left = window.innerWidth - menuRect.width - 10;
       }
 
-      // Если меню выходит за нижний край видимого экрана, открываем его вверх от ссылки
       if (top + menuRect.height > window.innerHeight + window.scrollY) {
         top = btnRect.top + window.scrollY - menuRect.height - 10;
       }
 
-      // Применяем финальные координаты
       menu.style.left = `${left}px`;
       menu.style.top = `${top}px`;
 
       return;
     }
 
-    // Закрываем меню при клике мимо
     if (!menu.contains(e.target)) {
       menu.classList.add('segment-menu-hidden');
     }
-  }, true); // Установлен capture: true для перехвата событий!
+  }, true); 
 
   // 3. Логика кнопок меню
 
@@ -1987,7 +1978,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
 
-    // Вызываем оригинальную функцию копирования через синтетический клик
     const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
     clickEvent.isSimulated = true;
     currentContext.element.dispatchEvent(clickEvent);
@@ -2036,7 +2026,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const isPlayerActive = playerContainer && playerContainer.classList.contains('active');
 
       if (isPlayerActive) {
-        // Если плеер уже открыт, принудительно жмем внутреннюю кнопку Play для старта
         const playBtn = playerContainer.querySelector('.play-main-button');
         if (playBtn) playBtn.click();
       } else if (!window.isVoiceScriptLoaded && typeof window.loadVoiceScripts === 'function') {
@@ -2061,7 +2050,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const q = urlParams.get('q');
 
-      // Интерактивно определяем текст (Пали или перевод), откуда произошел клик
       const targetLangSegment = currentContext.element.closest('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
       const fallbackSpan = currentContext.parentSpan.querySelector('.rus-lang, .eng-lang, .tha-lang') || currentContext.parentSpan.querySelector('.pli-lang');
       const textSpan = targetLangSegment || fallbackSpan;
@@ -2082,6 +2070,75 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFavoriteGlobal(bookmarkData);
     }
   });
+
+  // --- MEMO (ЗАПОМИНАНИЕ) ---
+  document.getElementById('sm-memo').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
+
+    const suttaContainer = document.getElementById('sutta') || document;
+    const targetLangSegment = currentContext.element.closest('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
+    
+    let targetSelector = '.pli-lang';
+    if (targetLangSegment) {
+        if (targetLangSegment.classList.contains('rus-lang')) targetSelector = '.rus-lang';
+        else if (targetLangSegment.classList.contains('eng-lang')) targetSelector = '.eng-lang';
+        else if (targetLangSegment.classList.contains('tha-lang')) targetSelector = '.tha-lang';
+    }
+
+    let allValidElements = Array.from(suttaContainer.querySelectorAll(targetSelector));
+    
+    if (allValidElements.length === 0) {
+        allValidElements = Array.from(suttaContainer.querySelectorAll('p, h1, h2, h3, h4, li, blockquote'));
+    }
+
+    allValidElements = allValidElements.filter(el => 
+        el.offsetParent !== null && !el.closest('.tts-ignore, nav, footer, .input-group')
+    );
+
+    const segmentId = currentContext.parentSpan.id;
+    let startIndex = allValidElements.findIndex(el => el.id === segmentId || el.closest(`[id="${segmentId}"]`));
+    
+    let textToPass = '';
+    const MAX_CHARS = 1200;
+    const URL_MAX_LENGTH = 1500;
+
+    if (startIndex !== -1) {
+        let currentLength = 0;
+        let textArr = [];
+        for (let i = startIndex; i < allValidElements.length; i++) {
+            // Очищаем текст от визуальных символов ссылки
+            let text = (allValidElements[i].innerText || allValidElements[i].textContent).replace(/✦/g, '').trim();
+            if (text) {
+                if (currentLength + text.length > MAX_CHARS) {
+                    let remainingSpace = Math.max(0, MAX_CHARS - currentLength - 3);
+                    if (remainingSpace > 0) textArr.push(text.substring(0, remainingSpace) + '...');
+                    break;
+                }
+                textArr.push(text);
+                currentLength += text.length + 1;
+            }
+        }
+        textToPass = textArr.join('\n');
+    }
+
+    const baseUrl = isRu ? '/ru/memo/' : '/memo/';
+
+    if (textToPass) {
+        if (textToPass.length <= URL_MAX_LENGTH) {
+            localStorage.removeItem('currentMemoText'); 
+            window.open(`${baseUrl}?text=${encodeURIComponent(textToPass)}`, '_blank');
+        } else {
+            localStorage.setItem('currentMemoText', textToPass);
+            window.open(baseUrl, '_blank');
+        }
+    } else {
+        localStorage.removeItem('currentMemoText');
+        window.open(baseUrl, '_blank');
+    }
+  });
+
 });
 
 
