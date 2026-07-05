@@ -1812,6 +1812,133 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// ==========================================
+// ИКОНКИ АУДИО И ПОДЕЛИТЬСЯ ДЛЯ СТРОКИ 0.1
+// ==========================================
+function addIconsTo01() {
+    // Находим строго строку 0.1
+    const segment01 = document.getElementById('0.1');
+    if (!segment01) return;
+
+    // Защита от повторного добавления при перерисовках
+    if (segment01.classList.contains('icons-added')) return;
+    segment01.classList.add('icons-added');
+
+    // Внедряем стили для скрытия иконок на втором языке и их выравнивания
+    if (!document.getElementById('title-icon-styles')) {
+        const style = document.createElement('style');
+        style.id = 'title-icon-styles';
+        style.textContent = `
+            /* Скрываем иконки у перевода, если пали видим */
+            .trn-title-icon { display: none !important; }
+            #sutta.hide-pali .trn-title-icon { display: inline-block !important; }
+            
+            .title-play-btn, .title-share-btn {
+                display: inline-block;
+                vertical-align: baseline;
+                font-size: 1.1em;
+                line-height: 1;
+                user-select: none;
+                text-decoration: none;
+            }
+            .title-play-btn { margin-right: 8px; }
+            .title-share-btn { margin-left: 8px; }
+        `;
+        document.head.appendChild(style);
+    }
+
+    const langSpans = segment01.querySelectorAll('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
+
+    langSpans.forEach(span => {
+        // Определяем, является ли этот спан Пали
+        const isPali = span.classList.contains('pli-lang');
+        // Класс для скрытия иконки, если это второй язык
+        const hideClass = isPali ? '' : 'trn-title-icon';
+
+        // 1. Убираем стартовые якоря
+        const copyStarts = span.querySelectorAll('.copyLink-start');
+        copyStarts.forEach(el => el.remove());
+
+        // 2. Извлекаем URL и удаляем старые якоря .copyLink
+        const oldLinks = span.querySelectorAll('.copyLink');
+        let copyUrl = '';
+        if (oldLinks.length > 0) {
+            const match = oldLinks[oldLinks.length - 1].getAttribute('onclick')?.match(/copyToClipboard\('([^']*)'\)/);
+            if (match) copyUrl = match[1];
+            oldLinks.forEach(el => el.remove());
+        }
+
+        // 3. Добавляем новую чистую кнопку 🔗 (без класса copyLink, чтобы избежать меню)
+        if (copyUrl) {
+            const shareBtn = document.createElement('span');
+            shareBtn.className = `title-share-btn cursor-pointer ${hideClass}`;
+            shareBtn.innerHTML = '🔗';
+            
+            const doCopy = (e) => {
+                if (e) { e.preventDefault(); e.stopPropagation(); }
+                if (typeof copyToClipboard === 'function') {
+                    // Передача URL напрямую. Функция скопирует только ссылку.
+                    copyToClipboard(copyUrl);
+                }
+            };
+
+            // Стандартный клик и правый клик
+            shareBtn.addEventListener('click', doCopy);
+            shareBtn.addEventListener('contextmenu', doCopy);
+            
+            // Долгое нажатие
+            let pressTimer;
+            shareBtn.addEventListener('touchstart', (e) => {
+                pressTimer = setTimeout(() => {
+                    doCopy(e);
+                }, 500);
+            }, {passive: true});
+            shareBtn.addEventListener('touchend', () => clearTimeout(pressTimer));
+            shareBtn.addEventListener('touchmove', () => clearTimeout(pressTimer));
+
+            span.appendChild(shareBtn);
+        }
+
+        // 4. Добавляем эмодзи Play 🔊
+        const playBtn = document.createElement('span');
+        playBtn.className = `title-play-btn cursor-pointer ${hideClass}`;
+        playBtn.innerHTML = '🔊';
+        
+        playBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (typeof window.activateSegmentForTTS === 'function') {
+                window.activateSegmentForTTS(span);
+                
+                const playerContainer = document.getElementById('voice-player-container');
+                const isPlayerActive = playerContainer && playerContainer.classList.contains('active');
+
+                if (isPlayerActive) {
+                    const mainPlayBtn = playerContainer.querySelector('.play-main-button');
+                    if (mainPlayBtn) mainPlayBtn.click();
+                } else if (!window.isVoiceScriptLoaded && typeof window.loadVoiceScripts === 'function') {
+                    window.loadVoiceScripts(() => {
+                        const dynamicBtn = document.querySelector('.dynamic-tts-btn');
+                        if (dynamicBtn) dynamicBtn.click();
+                    });
+                } else {
+                    const dynamicBtn = document.querySelector('.dynamic-tts-btn');
+                    if (dynamicBtn) dynamicBtn.click();
+                }
+            }
+        });
+        
+        span.insertBefore(playBtn, span.firstChild);
+    });
+}
+
+// Привязываем выполнение к стандартным событиям окончания загрузки сутты
+window.addEventListener('suttaLoaded', addIconsTo01);
+window.addEventListener('suttaRenderedCentral', addIconsTo01);
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Определяем язык интерфейса по URL
   const path = window.location.pathname;
@@ -1831,7 +1958,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li id="sm-quote"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.quote}</li>
         <li id="sm-link"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.link}</li>
         <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
-        <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" alt=""> ${labels.bookmark}</li>
+        <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.bookmark}</li>
       </ul>
     </div>
   `;
@@ -1841,6 +1968,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentContext = null;
 
   // 2. Открытие меню по клику на .copyLink
+  // Используем фазу перехвата (true), чтобы заблокировать выполнение inline onclick
   document.addEventListener('click', (e) => {
     // Игнорируем синтетические клики
     if (e.isSimulated) return;
@@ -1849,7 +1977,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (copyBtn) {
       e.preventDefault();
-      e.stopPropagation();
+      e.stopImmediatePropagation(); // Блокируем копирование левым кликом
 
       const parentSpan = copyBtn.closest('span[id]');
       if (!parentSpan) return;
@@ -1871,21 +1999,24 @@ document.addEventListener('DOMContentLoaded', () => {
       menu.style.top = '-9999px';
       menu.classList.remove('segment-menu-hidden');
 
-      const rect = menu.getBoundingClientRect();
-      let left = e.pageX;
-      let top = e.pageY + 15;
+      // Позиционирование строго относительно ссылки
+      const btnRect = copyBtn.getBoundingClientRect();
+      const menuRect = menu.getBoundingClientRect();
 
-      // Если меню выходит за правый край видимого экрана, сдвигаем его влево от курсора
-      if (e.clientX + rect.width > window.innerWidth) {
-        left = Math.max(5, e.pageX - rect.width - 5);
+      let left = btnRect.left + window.scrollX;
+      let top = btnRect.bottom + window.scrollY + 10;
+
+      // Если меню выходит за правый край видимого экрана
+      if (left + menuRect.width > window.innerWidth) {
+        left = window.innerWidth - menuRect.width - 10;
       }
 
-      // Если меню выходит за нижний край видимого экрана, открываем его вверх
-      if (e.clientY + 15 + rect.height > window.innerHeight) {
-        top = e.pageY - rect.height - 10;
+      // Если меню выходит за нижний край видимого экрана, открываем его вверх от ссылки
+      if (top + menuRect.height > window.innerHeight + window.scrollY) {
+        top = btnRect.top + window.scrollY - menuRect.height - 10;
       }
 
-      // Применяем финальные безопасные координаты
+      // Применяем финальные координаты
       menu.style.left = `${left}px`;
       menu.style.top = `${top}px`;
 
@@ -1896,7 +2027,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!menu.contains(e.target)) {
       menu.classList.add('segment-menu-hidden');
     }
-  });
+  }, true); // Установлен capture: true для перехвата событий!
 
   // 3. Логика кнопок меню
 
@@ -1906,7 +2037,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
 
-    // Вызываем твою оригинальную функцию через синтетический клик
+    // Вызываем оригинальную функцию копирования через синтетический клик
     const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
     clickEvent.isSimulated = true;
     currentContext.element.dispatchEvent(clickEvent);
@@ -1946,14 +2077,19 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
 
-    // Ищем целевой спан языка, от которого был совершен клик по кнопке
     const targetLangSegment = currentContext.element.closest('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
     
     if (targetLangSegment && typeof window.activateSegmentForTTS === 'function') {
       window.activateSegmentForTTS(targetLangSegment);
 
-      // Инициируем загрузку/воспроизведение TTS
-      if (!window.isVoiceScriptLoaded && typeof window.loadVoiceScripts === 'function') {
+      const playerContainer = document.getElementById('voice-player-container');
+      const isPlayerActive = playerContainer && playerContainer.classList.contains('active');
+
+      if (isPlayerActive) {
+        // Если плеер уже открыт, принудительно жмем внутреннюю кнопку Play для старта
+        const playBtn = playerContainer.querySelector('.play-main-button');
+        if (playBtn) playBtn.click();
+      } else if (!window.isVoiceScriptLoaded && typeof window.loadVoiceScripts === 'function') {
         window.loadVoiceScripts(() => {
             const dynamicBtn = document.querySelector('.dynamic-tts-btn');
             if (dynamicBtn) dynamicBtn.click();
@@ -1975,19 +2111,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const q = urlParams.get('q');
 
-      // Извлекаем текст для заголовка закладки
-      const textSpan = currentContext.parentSpan.querySelector('.rus-lang, .eng-lang, .tha-lang') || currentContext.parentSpan.querySelector('.pli-lang');
+      // Интерактивно определяем текст (Пали или перевод), откуда произошел клик
+      const targetLangSegment = currentContext.element.closest('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
+      const fallbackSpan = currentContext.parentSpan.querySelector('.rus-lang, .eng-lang, .tha-lang') || currentContext.parentSpan.querySelector('.pli-lang');
+      const textSpan = targetLangSegment || fallbackSpan;
+      
       let textSnippet = textSpan ? textSpan.textContent.replace(/[✦]/g, '').trim().substring(0, 40) + '...' : currentContext.hash;
 
-      // Формируем уникальный идентификатор для конкретной строки
       const uniqueLineSlug = `${q}#${currentContext.hash}`;
 
       const bookmarkData = {
-        slug: uniqueLineSlug, // Тоггл срабатывает только в рамках этой строки
+        slug: uniqueLineSlug, 
         id: currentContext.hash,
         title: `${q} - ${textSnippet}`,
         path: window.location.pathname,
-        search: window.location.search + '#' + currentContext.hash, // Добавляем хэш для автоскролла
+        search: window.location.search + '#' + currentContext.hash,
         timestamp: Date.now()
       };
 
@@ -1995,6 +2133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 //ToDo ЛОГику ждя избранного чтоюы понимал строки пали и второй язвк. 
 // цает иконок одинаковый. 
