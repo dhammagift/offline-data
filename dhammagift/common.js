@@ -1911,7 +1911,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li id="sm-link"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.link}</li>
         <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
         <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.bookmark}</li>
-        <li id="sm-memo"><img src="/assets/svg/memo.svg" class="menu-icon" alt=""> ${labels.memo}</li>
+        <li id="sm-memo"><img src="/assets/svg/memo.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.memo}</li>
       </ul>
     </div>
   `;
@@ -1951,8 +1951,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnRect = copyBtn.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
 
-      let left = btnRect.left + window.scrollX;
-      let top = btnRect.bottom + window.scrollY + 10;
+const offsetTop = 25; // Фиксированное расстояние от иконки вниз
+const offsetLeft = 0; // Смещение по горизонтали
+
+menu.style.left = `${btnRect.left + offsetLeft}px`;
+menu.style.top = `${btnRect.top + window.scrollY + offsetTop}px`;
+
 
       if (left + menuRect.width > window.innerWidth) {
         left = window.innerWidth - menuRect.width - 10;
