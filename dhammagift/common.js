@@ -1842,16 +1842,19 @@ function addIconsTo01() {
                 shareLink.classList.add(hideClass);
             }
             
+            // Вставляем SVG вместо текста и прячем от TTS
+            shareLink.innerHTML = '<img src="/assets/svg/link-solid-full.svg" class="title-svg-icon" alt="" aria-hidden="true">';
+            
             // Удаляем дубликаты
             for (let i = 0; i < oldLinks.length - 1; i++) {
                 oldLinks[i].remove();
             }
         }
 
-        // 3. Добавляем эмодзи Play 🔊 в начало
+        // 3. Добавляем SVG Play в начало
         const playBtn = document.createElement('span');
         playBtn.className = hideClass ? `title-play-btn ${hideClass}` : 'title-play-btn';
-        playBtn.innerHTML = '🔊';
+        playBtn.innerHTML = '<img src="/assets/svg/volume-solid-full.svg" class="title-svg-icon" alt="" aria-hidden="true">';
         
         playBtn.addEventListener('click', (e) => {
             e.stopPropagation();
