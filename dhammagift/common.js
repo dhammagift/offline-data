@@ -1816,92 +1816,41 @@ document.addEventListener('click', function(event) {
 // ИКОНКИ АУДИО И ПОДЕЛИТЬСЯ ДЛЯ СТРОКИ 0.1
 // ==========================================
 function addIconsTo01() {
-    // Находим строго строку 0.1
     const segment01 = document.getElementById('0.1');
     if (!segment01) return;
 
-    // Защита от повторного добавления при перерисовках
     if (segment01.classList.contains('icons-added')) return;
     segment01.classList.add('icons-added');
 
-    // Внедряем стили для скрытия иконок на втором языке и их выравнивания
-    if (!document.getElementById('title-icon-styles')) {
-        const style = document.createElement('style');
-        style.id = 'title-icon-styles';
-        style.textContent = `
-            /* Скрываем иконки у перевода, если пали видим */
-            .trn-title-icon { display: none !important; }
-            #sutta.hide-pali .trn-title-icon { display: inline-block !important; }
-            
-            .title-play-btn, .title-share-btn {
-                display: inline-block;
-                vertical-align: baseline;
-                font-size: 1.1em;
-                line-height: 1;
-                user-select: none;
-                text-decoration: none;
-            }
-            .title-play-btn { margin-right: 8px; }
-            .title-share-btn { margin-left: 8px; }
-        `;
-        document.head.appendChild(style);
-    }
-
     const langSpans = segment01.querySelectorAll('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
 
-    langSpans.forEach(span => {
-        // Определяем, является ли этот спан Пали
-        const isPali = span.classList.contains('pli-lang');
-        // Класс для скрытия иконки, если это второй язык
-        const hideClass = isPali ? '' : 'trn-title-icon';
+    langSpans.forEach((span, index) => {
+        // Если это первый доступный язык (любой), он главный. Остальные скрыты по умолчанию.
+        const hideClass = index === 0 ? '' : 'trn-title-icon';
 
-        // 1. Убираем стартовые якоря
+        // 1. Убираем стартовые якоря, они здесь не нужны
         const copyStarts = span.querySelectorAll('.copyLink-start');
         copyStarts.forEach(el => el.remove());
 
-        // 2. Извлекаем URL и удаляем старые якоря .copyLink
+        // 2. Находим конечную ссылку и вешаем классы для CSS
         const oldLinks = span.querySelectorAll('.copyLink');
-        let copyUrl = '';
         if (oldLinks.length > 0) {
-            const match = oldLinks[oldLinks.length - 1].getAttribute('onclick')?.match(/copyToClipboard\('([^']*)'\)/);
-            if (match) copyUrl = match[1];
-            oldLinks.forEach(el => el.remove());
+            const shareLink = oldLinks[oldLinks.length - 1]; 
+            
+            shareLink.classList.add('copy-Link-special');
+            if (hideClass) {
+                shareLink.classList.add(hideClass);
+            }
+            
+            // Удаляем дубликаты
+            for (let i = 0; i < oldLinks.length - 1; i++) {
+                oldLinks[i].remove();
+            }
         }
 
-        // 3. Добавляем новую чистую кнопку 🔗 (без класса copyLink, чтобы избежать меню)
-        if (copyUrl) {
-            const shareBtn = document.createElement('span');
-            shareBtn.className = `title-share-btn cursor-pointer ${hideClass}`;
-            shareBtn.innerHTML = '🔗';
-            
-            const doCopy = (e) => {
-                if (e) { e.preventDefault(); e.stopPropagation(); }
-                if (typeof copyToClipboard === 'function') {
-                    // Передача URL напрямую. Функция скопирует только ссылку.
-                    copyToClipboard(copyUrl);
-                }
-            };
-
-            // Стандартный клик и правый клик
-            shareBtn.addEventListener('click', doCopy);
-            shareBtn.addEventListener('contextmenu', doCopy);
-            
-            // Долгое нажатие
-            let pressTimer;
-            shareBtn.addEventListener('touchstart', (e) => {
-                pressTimer = setTimeout(() => {
-                    doCopy(e);
-                }, 500);
-            }, {passive: true});
-            shareBtn.addEventListener('touchend', () => clearTimeout(pressTimer));
-            shareBtn.addEventListener('touchmove', () => clearTimeout(pressTimer));
-
-            span.appendChild(shareBtn);
-        }
-
-        // 4. Добавляем эмодзи Play 🔊
+        // 3. Добавляем эмодзи Play 🔊 в начало
         const playBtn = document.createElement('span');
-        playBtn.className = `title-play-btn cursor-pointer ${hideClass}`;
+        playBtn.className = hideClass ? `title-play-btn ${hideClass}` : 'title-play-btn';
         playBtn.innerHTML = '🔊';
         
         playBtn.addEventListener('click', (e) => {
@@ -1931,6 +1880,7 @@ function addIconsTo01() {
     });
 }
 
+
 // Привязываем выполнение к стандартным событиям окончания загрузки сутты
 window.addEventListener('suttaLoaded', addIconsTo01);
 window.addEventListener('suttaRenderedCentral', addIconsTo01);
@@ -1948,7 +1898,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quote: isRu ? 'Цитата' : 'Quote',
     link: isRu ? 'Ссылка' : 'Link',
     audio: isRu ? 'Аудио' : 'Audio',
-    bookmark: isRu ? 'Закладка' : 'Bookmark'
+    bookmark: isRu ? 'Избранное' : 'Bookmark'
   };
 
   // 1. Создаем HTML структуру меню
