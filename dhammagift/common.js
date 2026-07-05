@@ -1811,3 +1811,192 @@ document.addEventListener('click', function(event) {
         window.location.href = targetUrl.toString();
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Определяем язык интерфейса по URL
+  const path = window.location.pathname;
+  const isRu = path.includes('/r/') || path.includes('/ru/') || path.includes('/ml/') || path.includes('/mt/');
+
+  const labels = {
+    quote: isRu ? 'Цитата' : 'Quote',
+    link: isRu ? 'Ссылка' : 'Link',
+    audio: isRu ? 'Аудио' : 'Audio',
+    bookmark: isRu ? 'Закладка' : 'Bookmark'
+  };
+
+  // 1. Создаем HTML структуру меню
+  const menuHtml = `
+    <div id="segment-context-menu" class="segment-menu-hidden">
+      <ul>
+        <li id="sm-quote"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.quote}</li>
+        <li id="sm-link"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.link}</li>
+        <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
+        <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" alt=""> ${labels.bookmark}</li>
+      </ul>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', menuHtml);
+
+  const menu = document.getElementById('segment-context-menu');
+  let currentContext = null;
+
+  // 2. Открытие меню по клику на .copyLink
+  document.addEventListener('click', (e) => {
+    // Игнорируем синтетические клики
+    if (e.isSimulated) return;
+
+    const copyBtn = e.target.closest('.copyLink');
+
+    if (copyBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const parentSpan = copyBtn.closest('span[id]');
+      if (!parentSpan) return;
+
+      // Извлекаем URL 
+      const onclickAttr = copyBtn.getAttribute('onclick') || '';
+      const urlMatch = onclickAttr.match(/copyToClipboard\('([^']*)'\)/);
+      let rawUrl = urlMatch ? urlMatch[1] : window.location.href;
+
+      currentContext = {
+        element: copyBtn,
+        parentSpan: parentSpan,
+        url: rawUrl,
+        hash: parentSpan.id.toLowerCase()
+      };
+
+      // Уводим меню за экран для безопасного вычисления размеров
+      menu.style.left = '-9999px';
+      menu.style.top = '-9999px';
+      menu.classList.remove('segment-menu-hidden');
+
+      const rect = menu.getBoundingClientRect();
+      let left = e.pageX;
+      let top = e.pageY + 15;
+
+      // Если меню выходит за правый край видимого экрана, сдвигаем его влево от курсора
+      if (e.clientX + rect.width > window.innerWidth) {
+        left = Math.max(5, e.pageX - rect.width - 5);
+      }
+
+      // Если меню выходит за нижний край видимого экрана, открываем его вверх
+      if (e.clientY + 15 + rect.height > window.innerHeight) {
+        top = e.pageY - rect.height - 10;
+      }
+
+      // Применяем финальные безопасные координаты
+      menu.style.left = `${left}px`;
+      menu.style.top = `${top}px`;
+
+      return;
+    }
+
+    // Закрываем меню при клике мимо
+    if (!menu.contains(e.target)) {
+      menu.classList.add('segment-menu-hidden');
+    }
+  });
+
+  // 3. Логика кнопок меню
+
+  // --- ЦИТАТА ---
+  document.getElementById('sm-quote').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
+
+    // Вызываем твою оригинальную функцию через синтетический клик
+    const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
+    clickEvent.isSimulated = true;
+    currentContext.element.dispatchEvent(clickEvent);
+  });
+
+  // --- ССЫЛКА ---
+  document.getElementById('sm-link').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
+
+    try {
+      const baseUrl = new URL(currentContext.url);
+      if (baseUrl.searchParams.has('q')) {
+        baseUrl.searchParams.set('q', baseUrl.searchParams.get('q').toLowerCase());
+      }
+      baseUrl.hash = currentContext.hash;
+      let finalUrl = baseUrl.href;
+
+      if (finalUrl.includes('localhost') || finalUrl.includes('127.0.0.1')) {
+        finalUrl = finalUrl.replace(/https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/gi, 'https://dhamma.gift');
+      }
+
+      navigator.clipboard.writeText(finalUrl).then(() => {
+        if (typeof showBubbleNotification === 'function') {
+          showBubbleNotification(isRu ? "Ссылка скопирована" : "Link copied");
+        }
+      });
+    } catch (err) {
+      console.error('URL parse error', err);
+    }
+  });
+
+  // --- АУДИО ---
+  document.getElementById('sm-audio').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
+
+    // Ищем целевой спан языка, от которого был совершен клик по кнопке
+    const targetLangSegment = currentContext.element.closest('.pli-lang, .rus-lang, .eng-lang, .tha-lang');
+    
+    if (targetLangSegment && typeof window.activateSegmentForTTS === 'function') {
+      window.activateSegmentForTTS(targetLangSegment);
+
+      // Инициируем загрузку/воспроизведение TTS
+      if (!window.isVoiceScriptLoaded && typeof window.loadVoiceScripts === 'function') {
+        window.loadVoiceScripts(() => {
+            const dynamicBtn = document.querySelector('.dynamic-tts-btn');
+            if (dynamicBtn) dynamicBtn.click();
+        });
+      } else {
+        const dynamicBtn = document.querySelector('.dynamic-tts-btn');
+        if (dynamicBtn) dynamicBtn.click();
+      }
+    }
+  });
+
+  // --- ЗАКЛАДКА ---
+  document.getElementById('sm-bookmark').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
+
+    if (typeof toggleFavoriteGlobal === 'function') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const q = urlParams.get('q');
+
+      // Извлекаем текст для заголовка закладки
+      const textSpan = currentContext.parentSpan.querySelector('.rus-lang, .eng-lang, .tha-lang') || currentContext.parentSpan.querySelector('.pli-lang');
+      let textSnippet = textSpan ? textSpan.textContent.replace(/[✦]/g, '').trim().substring(0, 40) + '...' : currentContext.hash;
+
+      // Формируем уникальный идентификатор для конкретной строки
+      const uniqueLineSlug = `${q}#${currentContext.hash}`;
+
+      const bookmarkData = {
+        slug: uniqueLineSlug, // Тоггл срабатывает только в рамках этой строки
+        id: currentContext.hash,
+        title: `${q} - ${textSnippet}`,
+        path: window.location.pathname,
+        search: window.location.search + '#' + currentContext.hash, // Добавляем хэш для автоскролла
+        timestamp: Date.now()
+      };
+
+      toggleFavoriteGlobal(bookmarkData);
+    }
+  });
+});
+
+//ToDo ЛОГику ждя избранного чтоюы понимал строки пали и второй язвк. 
+// цает иконок одинаковый. 
+// чтобы окно всегжа нп одном расстоягии открвадось оь ссылки а не относительно палбца.
+//доавить аудио и копи в название. 
