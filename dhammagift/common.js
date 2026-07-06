@@ -1358,10 +1358,10 @@ window.toggleThePali = window.toggleThePali || function() {
         });
 
         if (headings.length === 0) {
-            if (tocBtn) tocBtn.style.display = 'none';
+            if (tocBtn) tocBtn.classList.add('hidden-toc');
             return;
         } else {
-            if (tocBtn) tocBtn.style.display = 'flex';
+            if (tocBtn) tocBtn.classList.remove('hidden-toc');
         }
 
         let activeIndex = 0;
@@ -1380,7 +1380,6 @@ window.toggleThePali = window.toggleThePali || function() {
 
         let labelText = '';
         if (isMemoPath) {
-            // В режиме мемо для ярлыка берем только полный текст (игнорируя первобуквы .pli-lang)
             const fullSpan = headings[activeIndex].querySelector('.rus-lang, .eng-lang, .tha-lang');
             labelText = fullSpan ? fullSpan.textContent : headings[activeIndex].innerText;
         } else {
@@ -1467,7 +1466,6 @@ window.toggleThePali = window.toggleThePali || function() {
                 const item = document.createElement('div');
                 item.className = `toc-item toc-${tocClassType}`;
                 item.textContent = capitalize(displayText); 
-                item.style.cursor = 'pointer';
                 item.onclick = (e) => {
                     e.stopPropagation();
                     tocPanel.classList.remove('active');
@@ -1541,7 +1539,6 @@ window.toggleThePali = window.toggleThePali || function() {
                 tocPanel.classList.remove('active');
                 const offset = 120;
                 
-                // Если элемент скрыт (координаты = 0), ищем его видимого родителя (например, блок с ID)
                 let scrollTarget = targetElement;
                 if (!scrollTarget.offsetParent || scrollTarget.getBoundingClientRect().height === 0) {
                     scrollTarget = scrollTarget.closest('[id]') || scrollTarget.parentElement || scrollTarget;
@@ -1559,7 +1556,6 @@ window.toggleThePali = window.toggleThePali || function() {
                     const span = document.createElement('span');
                     span.className = l.cls;
                     span.textContent = capitalize(l.txt) + ' '; 
-                    span.style.cursor = 'pointer';
                     span.onclick = (e) => { e.stopPropagation(); scrollAndHighlight(el); };
                     item.appendChild(span);
                 });
@@ -1574,7 +1570,6 @@ window.toggleThePali = window.toggleThePali || function() {
                         let cleanText = clone.textContent.replace(/[()\[\]"“”«»'‘’]/g, '').replace(/\s+/g, ' ').trim();
                         if (cleanText) {
                             clone.textContent = capitalize(cleanText) + ' '; 
-                            clone.style.cursor = 'pointer';
                             clone.onclick = (e) => { e.stopPropagation(); scrollAndHighlight(originalSpan); };
                             item.appendChild(clone);
                         }
@@ -1910,8 +1905,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <li id="sm-quote"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.quote}</li>
         <li id="sm-link"><img src="/assets/svg/copy.svg" class="menu-icon" alt=""> ${labels.link}</li>
         <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
-        <li id="sm-bookmark"><img src="/assets/svg/star.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.bookmark}</li>
-        <li id="sm-memo"><img src="/assets/svg/memo.svg" class="menu-icon" style="filter: none; opacity: 1;" alt=""> ${labels.memo}</li>
+        <li id="sm-bookmark"><img src="/assets/svg/star-black.svg" class="menu-icon" alt=""> ${labels.bookmark}</li>
+        <li id="sm-memo"><img src="/assets/svg/memo-black.svg" class="menu-icon" alt=""> ${labels.memo}</li>
       </ul>
     </div>
   `;
