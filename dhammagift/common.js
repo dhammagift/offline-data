@@ -768,13 +768,30 @@ function renderNavigation(slug, slugReady) {
             // === НОВЫЙ КОД ДЛЯ ОБНОВЛЕНИЯ TITLE ===
             let currentItem = textInfo[slug] || textInfo[slugReady];
             let cleanSlug = slug.replace(/pli-tv-|b[ui]-vb-/g, "");
-            let newTitle = cleanSlug;
+            let newTitle = cleanSlug; // По умолчанию только номер
 
             if (currentItem && currentItem.pi && currentItem.pi.trim() !== "~" && currentItem.pi.trim() !== "") {
-                // Убираем цифры из пали названия, если они есть
                 let cleanPaliName = currentItem.pi.replace(/[0-9.-]/g, '').trim();
+                
                 if (cleanPaliName) {
-                    newTitle = cleanPaliName;
+                    const isRuPath = window.location.pathname.includes('/r/') || 
+                                     window.location.pathname.includes('/ru/') || 
+                                     window.location.pathname.includes('/mt/') || 
+                                     window.location.pathname.includes('/ml/');
+                                     
+                    let translatedName = "";
+                    
+                    if (isRuPath && currentItem.ru && currentItem.ru.trim() !== "~") {
+                        translatedName = currentItem.ru.replace(/[0-9.-]/g, '').trim();
+                    } else if (!isRuPath && currentItem.en && currentItem.en.trim() !== "~") {
+                        translatedName = currentItem.en.replace(/[0-9.-]/g, '').trim();
+                    }
+
+                    if (translatedName) {
+                        newTitle = `${cleanPaliName} ${translatedName} ${cleanSlug}`;
+                    } else {
+                        newTitle = `${cleanPaliName} ${cleanSlug}`;
+                    }
                 }
             }
             
