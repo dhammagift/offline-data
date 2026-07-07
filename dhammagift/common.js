@@ -1931,9 +1931,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const labels = {
     quote: isRu ? 'Цитата' : 'Quote',
     link: isRu ? 'Ссылка' : 'Link',
-    audio: isRu ? 'Аудио' : 'Audio',
+    audio: isRu ? 'Слушать' : 'Voice',
     bookmark: isRu ? 'Избранное' : 'Bookmark',
-    memo: isRu ? 'Запомнить' : 'Memo'
+    memo: isRu ? 'Запомнить' : 'Memorize'
   };
 
   // 1. Создаем HTML структуру меню
@@ -1963,6 +1963,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       e.stopImmediatePropagation();
 
+      // Пасхалка: рандомизация названия пункта Memo
+      const memoBtn = document.getElementById('sm-memo');
+      if (memoBtn) {
+        const isMeditate = Math.random() > 0.5;
+        const textRu = isMeditate ? 'Медитировать' : 'Запомнить';
+        const textEn = isMeditate ? 'Meditate' : 'Memorize';
+        memoBtn.innerHTML = `<img src="/assets/svg/memo-black.svg" class="menu-icon" alt=""> ${isRu ? textRu : textEn}`;
+      }
+
       const parentSpan = copyBtn.closest('span[id]');
       if (!parentSpan) return;
 
@@ -1984,12 +1993,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnRect = copyBtn.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
 
-const offsetTop = 25; // Фиксированное расстояние от иконки вниз
-const offsetLeft = 0; // Смещение по горизонтали
+      const offsetTop = 25; // Фиксированное расстояние от иконки вниз
+      const offsetLeft = 0; // Смещение по горизонтали
 
-menu.style.left = `${btnRect.left + offsetLeft}px`;
-menu.style.top = `${btnRect.top + window.scrollY + offsetTop}px`;
-
+      let left = btnRect.left + offsetLeft;
+      let top = btnRect.top + window.scrollY + offsetTop;
 
       if (left + menuRect.width > window.innerWidth) {
         left = window.innerWidth - menuRect.width - 10;
@@ -2182,6 +2190,3 @@ menu.style.top = `${btnRect.top + window.scrollY + offsetTop}px`;
 });
 
 
-//ToDo ЛОГику ждя избранного чтоюы понимал строки пали и второй язвк. 
-// чтобы окно всегжа нп одном расстоягии открвадось оь ссылки а не относительно палбца.
-//доавить аудио и копи в название. 
