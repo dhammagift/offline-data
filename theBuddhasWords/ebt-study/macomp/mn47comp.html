@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 47 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 47: Vīmaṃsaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn44comp.html#content"></a><a id="next-sutta" href="./mn77comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+		<p class="origin-note"><em>Originally published 2010 under the title "The Scope of Free Inquiry – According to the Vīmaṃsaka-sutta and its Madhyama-āgama Parallel" in the <i>Rivista di Studi Sudasiatici</i>, 4: 7–20.</em></p>
+<p class="read-links">Read: <a href="../../mn/mn47.html">MN 47</a> / <a href="../../parallels/ma186.html">MĀ 186</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>The theme of the present chapter is the scope of free inquiry from the perspective of the <i>V</i>ī<i>ma</i>ṃ<i>saka-sutta</i> of the <i>Majjhima</i><i>nik</i>ā<i>ya </i>and its counterpart in the <i>Madhyama-</i>ā<i>gama</i>. In these two discourses, a prospective disciple is encouraged to investigate whether the Buddha's claim to being a fully awakened teacher is justified. Below I translate the <i>Madhyama-</i>ā<i>gama</i> discourse, followed by a comparative study of the two versions and an evaluation of the significance of their presentation.</p>
+<p>Examinations of Buddhist thought often refer to the <i>K</i>ā<i>l</i>ā<i>ma-</i><i>sutta </i>as the example par excellence for the advocacy of a principle of free inquiry, expressing a non-authoritarian and pragmatic attitude.<span class="note" id="mn47compn1"><span class="details"><span class="p">[n.1] AN 3.65 at AN I 188,12 to 193,21, which has a parallel in MĀ 16 at T I 438b13 to 439c21. For a recent examination of this discourse cf. Evans 2007, with a reply in Pāsādika 2012.</span></span></span> Yet, compared with the <i>K</i>ā<i>l</i>ā<i>ma-sutta</i> the <i>V</i>ī<i>ma</i>ṃ<i>saka-</i><i>sutta </i>could lay an even greater claim to presenting a remarkable advocacy of free inquiry. The scope that this discourse allows for free inquiry stands in contrast to the well-known Indian conception of a teacher as being invested with an authority that should never be questioned. According to the <i>V</i>ī<i>ma</i>ṃ<i>saka-sutta </i>and its parallel, however, even the Buddha's claim to being a fully awakened teacher can be made the object of the most searching type of scrutiny.<span class="note" id="mn47compn2"><span class="details"><span class="p">[n.2] The claim of an arahant to having reached awakening should similarly be checked, though the procedure adopted for this purpose in MN 112 at MN III 29,19 to 37,4 and its parallel MĀ 187 at T I 732a21 to734a25 is less stringent; for a translation and study of this discourse cf. below p. 223.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p>Discourse on Investigating [for the Sake of] Understanding<span class="note" id="mn47compn3"><span class="details"><span class="p">[n.3] The translated text is MĀ 186 at T I 731a29 to 732a8; for a comparative study cf. Anālayo 2011a: 291–293.</span></span></span></p>
+<p>1. Thus have I heard. At one time the Buddha was dwelling in the Kuru country, in Kammāsadhamma, a town of the Kurus.<span class="note" id="mn47compn4"><span class="details"><span class="p">[n.4] MN 47 at MN I 317,20 instead locates the discourse in Jeta's Grove, Sāvatthī; for studies of MN 47 cf. Premasiri 1991/2006 and Anālayo 2009f.</span></span></span></p>
+<p>2. At that time the Blessed One said to the monks:<span class="note" id="mn47compn5"><span class="details"><span class="p">[n.5] MĀ 186 at T I 731b3: 世尊, the standard counterpart to <i>bhagavat </i>in the <i>Madhyama-</i>ā<i>gama</i>. Nattier 2003b: 232 comments that "an etymological connection between this term and its Indian antecedent is not immediately evident ... at the present state of our knowledge it seems prudent simply to assume that 世尊 was coined as an interpretative rather than an etymological translation".</span></span></span> "If based on [the abilities] of one's own mind, one does not know the mind of another as it really is, then one cannot know if the Blessed One is rightly and fully awakened. How [should one] investigate [for the sake of] understanding the Tathāgata?"</p>
+<p>3. The monks said to the Blessed One: "The Blessed One is the source of the Dharma<i>, </i>the Blessed One is the master of the Dharma, the Dharma stems from the Blessed One. We only wish that he explains it, having heard it we will gain an extensive understanding of the meaning [of the earlier statement]." The Buddha said: "Monks, listen and pay careful attention, I shall give you a detailed explanation." The monks listened to receive the teaching.</p>
+<p>4. The Blessed One said: "If based on [the abilities of] one's own mind, one does not know the mind of another as it really is, one should investigate in two ways [for the sake of] understanding the Tathāgata. Firstly [in regard to] forms known by the eye, and secondly [in regard to] sounds heard by the ear. [One should investigate like this]:</p>
+<p>"'Could defiled states knowable through the eye or the ear be found in this venerable one?'<span class="note" id="mn47compn6"><span class="details"><span class="p">[n.6] MĀ 186 is consistent in its use of the expression "that venerable one", 彼尊 者, to refer to the Buddha throughout the course of the inquiry. The same expression is found later on in the Pāli version as well; cf., e.g., MN 47 at MN I 318,23: <i>ayam </i>ā<i>yasm</i>ā. In the present inquiry about the defiled and undefiled states, however, the Pāli version instead speaks of the Tathāgata, MN 47 at MN I 318,6: <i>sa</i>ṃ<i>vijjanti v</i>ā<i> te tath</i>ā<i>gatassa no v</i>ā; cf. the discussion below.</span></span></span> Suppose at the time of investigating one comes to know that defiled states knowable through the eye or the ear are not found in this venerable one. If there are no [such defiled states], one should further investigate:</p>
+<p>5. "'Could mixed states knowable through the eye or the ear be found in this venerable one?' Suppose at the time of investigating one comes to know that mixed states knowable through the eye or the ear are not found in this venerable one. If there are no [such mixed states], one should further investigate:</p>
+<p>6. "'Could pure states knowable through the eye or the ear be found in this venerable one?' Suppose at the time of investigating one comes to know that pure states knowable through the eye or the ear are found in this venerable one. If there are [such pure states], one should further investigate:</p>
+<p>7. "'Has this venerable one been practising this Dharma for a long time, or is he practising it [only] temporarily?'<span class="note" id="mn47compn7"><span class="details"><span class="p">[n.7] MĀ 186 at T I 731b19: 為長夜行此法, 為暫行耶. MN 47 at MN I 318,23 instead inquires if he has attained this wholesome Dharma a long time ago or only recently, <i>d</i>ī<i>gharatta</i>ṃ<i> sam</i>ā<i>panno ayam </i>ā<i>yasm</i>ā<i> ima</i>ṃ<i> kusala</i>ṃ<i> dham</i><i>ma</i>ṃ<i> ud</i>ā<i>hu ittarasam</i>ā<i>panno</i>, which Ps II 382,5 explains to mean "since a very long time ... or else ... yesterday", <i>cirak</i>ā<i>lato pa</i>ṭṭ<i>h</i>ā<i>ya ... ud</i>ā<i>hu ... hiyyo</i>.</span></span></span> Suppose at the time of investigating one comes to know that this venerable one has been practising this Dharma for a long time, he is not [just] practising it temporarily. If he constantly has been practicing [like that for a long time], one should investigate still further:</p>
+<p>8. "'Does this venerable one enter into meditation for the sake of fame or gain, or does he enter into meditation for the sake of neither fame nor gain?'<span class="note" id="mn47compn8"><span class="details"><span class="p">[n.8] Instead of referring to meditation practice, MN 47 at MN I 318,29 inquires if 'that venerable one' has acquired fame without succumbing to the dangers that result from becoming famous.</span></span></span> Suppose at the time of investigating one comes to know that this venerable one does not enter into meditation motivated by something [that would result in] misfortune or badness [such as being desirous of fame and gain].</p>
+<p>9. "If [the investigator then] speaks like this: 'That venerable one delights in the practice, he is not afraid. Being free from desire he does not engage in sensuality, having eradicated sensual desires'.<span class="note" id="mn47compn9"><span class="details"><span class="p">[n.9] In MN 47 at MN I 319,2 this declaration is preceded by an inquiry whether 'that venerable one' is free from fear and sensuality. This fits the earlier pattern of describing an investigation followed by a corresponding conclusion, whereas in MĀ 186 the conclusion comes somewhat unexpected.</span></span></span></p>
+<p>10. "Then [someone] might ask [the investigator]: 'Venerable friend, what is the practice, what is the power, what is the knowledge, that enables the venerable one to see for himself rightly and make this declaration: 'That venerable one delights in this practice, he is not afraid. Being free from desire he does not engage in sensuality, having eradicated sensual desires'?'</p>
+<p>"[The investigator then can] give this answer: 'Venerable friend, I do not know the mind of others, and I also do not have knowledge of other things [by way of psychic power].<span class="note" id="mn47compn10"><span class="details"><span class="p">[n.10] </span></span></span> Yet, that venerable one, whether he is in seclusion, or among the [monastic] community, or in a [public] assembly; if [some] are progressing well; if [he] becomes the teacher for [those who] are progressing well; [or else] in relation to material things; [in any of these instances] one can see [the detached nature of] that venerable one.<span class="note" id="mn47compn11"><span class="details"><span class="p">[n.11] </span></span></span></p>
+<p>"[Moreover, though] I did not come to know this myself [by psychic power], I heard it from that venerable one, asking him face to face, [whereon he said]: 'I delight in the practice, I am not afraid. Being free from desire I do not engage in sensuality, having already eradicated sensual desires'.</p>
+<p>"Venerable friend, this is the practice, this is the power, this is the knowledge, due to which I rightly see for myself and make this declaration: 'That venerable one delights in the practice, he is not afraid. Being free from desire he does not engage in sensuality, having eradicated sensual desires'.'</p>
+<p>11. "Herein, [the investigator] should further ask the Tathāgata [directly in regard to such] states, whether there are defiled states knowable through the eye or the ear, [or if the Tathāgata has reached] that attainment where those states cease entirely.<span class="note" id="mn47compn12"><span class="details"><span class="p">[n.12] </span></span></span> [The investigator should further ask] if there are mixed states knowable through the eye or the ear, [or if the Tathāgata has reached] that attainment where those states cease entirely. [He should further ask] if there are pure states knowable through the eye or the ear, [or if the Tathāgata has reached] that attainment where those states cease entirely.</p>
+<p>12. "The Tathāgata will tell him in reply if there are defiled things knowable through the eye or the ear, [or if he has reached] that state where those things cease entirely; if there are mixed states knowable through the eye or the ear, [or if he has reached] that state where those things cease entirely, [saying]:</p>
+<p>13. "'As to defiled things knowable through the eye or the ear, the Tathāgata has completely eliminated and uprooted them, so that they will not arise again.<span class="note" id="mn47compn13"><span class="details"><span class="p">[n.13] </span></span></span> As to mixed states knowable through the eye or the ear the Tathāgata has completely eradicated and uprooted them, so that they will not arise again. As to pure states, like this is my purity, like this are my objects, like this is my recluse-ship, like this I am accomplished in this true teaching and discipline'.<span class="note" id="mn47compn14"><span class="details"><span class="p">[n.14] </span></span></span></p>
+<p>14. "A disciple, who has [in this way gained some] confidence, approaches the Tathāgata to see him. He acts respectfully towards the Tathāgata and hears the Dharma from the Tathāgata. The Tathāgata teaches him the Dharma that [leads] high and even higher, that is sublime and even more sublime, skilfully discarding black and white.<span class="note" id="mn47compn15"><span class="details"><span class="p">[n.15] </span></span></span></p>
+<p>"As the Tathāgata teaches him the Dharma that [leads] high and even higher, that is sublime and even more sublime, skilfully discarding black and white, hearing it exactly like this [the disciple] comes to know thoroughly a certain teaching and in regard to all phenomena attains the supreme,<span class="note" id="mn47compn16"><span class="details"><span class="p">[n.16] </span></span></span> [thereby arriving at] tranquil confidence in the Blessed One: 'The Blessed One is rightly and fully awakened!'<span class="note" id="mn47compn17"><span class="details"><span class="p">[n.17] </span></span></span></p>
+<p>15. "Again, [someone] might ask [the disciple]: 'Venerable friend, what is the practice, what is the power, what is the knowledge, due to which the venerable one came to know thoroughly a certain teaching and in regard to all phenomena attained the supreme, [thereby arriving at] tranquil confidence in the Blessed One: 'The Blessed One is rightly and fully awakened!'?'</p>
+<p>"[The disciple then can] give this answer: 'Venerable friend, I do not know the mind of the Blessed One, and I also do not have knowledge of other things [by way of psychic power].<span class="note" id="mn47compn18"><span class="details"><span class="p">[n.18] </span></span></span> Yet, in relation to the Blessed One I have this tranquil confidence, [because] the Blessed One taught me the Dharma that [leads] high and even higher, that is sublime and even more sublime, skilfully discarding black and white.</p>
+<p>"Venerable friend, as and when the Blessed One taught me the Dharma, I heard it exactly like this, [knowing that] 'the Blessed One teaches me the Dharma that [leads] high and even higher, that is sublime and even more sublime, skilfully discarding black and white'.<span class="note" id="mn47compn19"><span class="details"><span class="p">[n.19] That the teachings were heard like this is not mentioned in MN 47.</span></span></span> Having heard it exactly like this, I came to know thoroughly one state and in regard to all phenomena attained the supreme, [thereby arriving at] tranquil confidence in the Blessed One: 'That Blessed One is rightly and fully awakened!'</p>
+<p>"Venerable friend, this is the practice, this is the power, this is the knowledge, due to which I came to know thoroughly a certain teaching and in regard to all phenomena attained the supreme, [thereby arriving at] tranquil confidence in the Blessed One: 'That Blessed One is rightly and fully awakened!'</p>
+<p>16. "Once there is such practice, such power, deeply settled in the Tathāgata, once the basis of confidence is [firmly] established, then this is reckoned a [type of] faith that is rooted in vision, that is indestructible [because it is] united with knowledge and cannot be shaken by any recluse or brahmin, god, Māra or Brahmā, or anyone else in the world. In this way [one should] investigate [for the sake of] understanding the Tathāgata, in this way one will truly know the Tathāgata."</p>
+<p>The Buddha spoke like this. The monks, having listened to what the Buddha said, were delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>The main thrust of the two versions is quite similar and differences found between them involve mostly details. One such detail is that the <i>Madhyama-</i>ā<i>gama </i> version employs the expression "this venerable one" right from the outset to refer to the Buddha, while in the <i>Majjhima-nik</i>ā<i>ya</i> version this usage sets in only at a later stage in the investigation. The usage of this expression as such is remarkable, since it purposely puts the Buddha on the same footing as any other monk. The expression "this venerable one" thereby constitutes an eloquent expression of the fact that what is being investigated is precisely the question whether "this venerable one" qualifies for being reckoned a Tathāgata.</p>
+<p>Since to refer to the Buddha with this term is rather unusual in the early discourses, thereby being the <i>lectio difficilior</i>, it seems probable that in this respect the <i>Madhyama-</i>ā<i>gama </i>discourse has preserved an earlier reading. It could easily have happened that the unusual way of referring to the Buddha as <i>aya</i>ṃ ā<i>yasm</i>ā was replaced by the expression <i>tath</i>ā<i>gata </i>during the course of oral transmission of the Pāli discourse, perhaps even quite unintentionally, whereas a change in the opposite direction would be improbable.</p>
+<p>Another minor difference is that in the Pāli version the investigator examines whether the Buddha has "attained" this wholesome condition a long time ago or only recently. According to the Chinese version, the point of the investigation was whether he has been "practising" in this wholesome way for a long time or only temporarily. Thus the point at stake in the Chinese discourse does not appear to be how long ago the Buddha has attained awakening, but whether he is consistent in his conduct.<span class="note" id="mn47compn20"><span class="details"><span class="p">[n.20] </span></span></span></p>
+<p>In fact, the question whether the Buddha is indeed a fully awakened teacher or not would not necessarily be solved by finding out how long ago he has reached what he claims to be his awakening. The early Buddhist position on this topic can be gleaned from a discourse found in the <i>Sa</i>ṃ<i>yutta</i>-<i>nik</i>ā<i>ya</i>, together with its Chinese and Sanskrit parallels. The different versions of this discourse report the Buddha explaining to King Pasenadi that the level of realization of even a young monk recently gone forth should not be underestimated.<span class="note" id="mn47compn21"><span class="details"><span class="p">[n.21] </span></span></span> The rationale for this declaration is closely related to the present instance, since the parallel versions of this discourse report that Pasenadi had just expressed doubts about the Buddha's claim to be fully awakened, due to the Buddha's young age at the time when their meeting took place. Thus to query whether the Buddha had only recently attained awakening would, from the perspective of this discourse, not appear to be a valid criterion for verifying his realization.</p>
+<p>In its description of the Buddha's aloofness from fame and gain, the <i>Madhyama-</i>ā<i>gama </i>version also indicates that he is not afraid.<span class="note" id="mn47compn22"><span class="details"><span class="p">[n.22] </span></span></span> The implications of this statement in the Chinese version are not entirely clear. Here the Pāli parallel offers help, clarifying that the issue investigated is whether the Buddha is restrained out of fear.<span class="note" id="mn47compn23"><span class="details"><span class="p">[n.23] </span></span></span> Thus the point at stake appears to be that the Buddha observes restraint as a natural expression of purity, not out of fear of being overpowered by some defilement or of incurring reproach.</p>
+<p>The Pāli version continues by describing that "this venerable one" does not despise anyone, whether the disciples are progressing well or badly, whether they are attached to material things or not. The passage is already somewhat cryptic in the Pāli original, and the <i>Madhyama-</i>ā<i>gama </i>translators evidently had difficulties with what they found in their Indic original, since the corresponding passage in the Chinese is rather obscure.</p>
+<p>In this way, a comparison of the two versions helps to gather clarifying information in regard to some details that would remain somewhat unclear or puzzling if one were to rely on only one of them. Perhaps the most important result of such comparative studies, however, is that the variations found testify to the genuineness of the oral transmission of these different versions. The type of differences found in the present case, for example, do not seem to be the result of conscious editing, nor do they appear to be due to the influence of opinions and dogmas held by the Buddhist school that transmitted the discourse in question. Instead, the variations found appear to be simply the kind of errors that are natural to material preserved over longer periods by oral means.</p>
+<p>In the present case, the comparative study of the <i>V</i>ī<i>ma</i>ṃ<i>saka-</i><i>sutta </i>and its <i>Madhyama-</i>ā<i>gama </i>parallel thus confirms the reliability of the central message given in the two discourses as an expression of early Buddhist thought on the theme of free inquiry. This central message is an invitation to use all available means possible to test someone's claim to being a fully awakened teacher.<span class="note" id="mn47compn24"><span class="details"><span class="p">[n.24] </span></span></span> In both versions, this investigation can be seen to proceed through four main stages:</p>
+<p>1) Searching for impurities by empirical observation: Prospective disciples who have no telepathic powers and thus are not able to gauge the mind of another person directly should check the purity of a teacher who claims to be awakened in other ways. Such checking can be undertaken by observing the teacher's behaviour</p>
+<ul>
+<li>watching how the teacher acts and listening to what the teacher says – in order to see if anything contradicts such a claim. 2) Scrutiny of the attitude of the teacher: Once a basic degree of purity of the teacher's way of behaviour has been ascertained in this way, the next step is to see how this person handles the role of being a teacher. Leaving aside the disagreement between the two versions over the first part of this inquiry (whether the point is if the teacher has attained realization a long time ago or if the teacher is consistent), in both versions the teacher's attitude towards fame and gain should be investigated. To express the point in modern language, the main point of inquiry is whether the teacher is attached to his (or her) role. 3) Direct query of the teacher: Far from concluding the inquiry at this point, the investigator is encouraged to directly confront the teacher now, face to face asking if there is any impurity. This direct and rather challenging form of confrontation is perhaps the most remarkable aspect of this process of inquiry, in view of the ancient Indian context. 4) Personal verification: After having undertaken this comprehensive range of investigations of the teacher, the time has come to put the teachings to the test. The investigation has yielded an initial degree of confidence (<i>saddh</i>ā), sufficient for being willing to give it a try. Yet, true confidence in the teacher comes to its completion only when the teachings have led the disciple to personal verification of their efficacy.<span class="note" id="mn47compn25"><span class="details"><span class="p">[n.25] </span></span></span> At this point, a type of confidence has been reached that according to both versions is firmly rooted in personal experience and therefore unshakeable.</li>
+</ul>
+<p>The thorough testing advocated in these four steps clearly shows that in early Buddhist thought – in the way this is reflected in the discourses preserved in the Pāli <i>Nik</i>ā<i>ya</i>s and the Chinese Ā<i>gama</i>s – the scope of free inquiry is such that the teacher and founder of the tradition himself can become an object of a rather searching type of scrutiny and examination by a prospective disciple.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn47.html">MN47</a>: Vīmaṃsaka Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

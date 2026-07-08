@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 29 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 29: Mahāsāropama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn28comp.html#content"></a><a id="next-sutta" href="./mn30comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn29.html">MN 29</a> / <a href="../../parallels/ea43.4.html">EĀ 43.4</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāsāropama-sutta, the “greater discourse on the simile of the heartwood”, examines the types of achievement that should not be mistaken for the final goal. This discourse has a parallel in the Ekottarika-āgama,<span class="note" id="mn29n282"><span class="details"><span class="p">[n.282] The parallel is <a href="../../parallels/ea43.4.html">EĀ 43.4</a> at T II 759a-759c. While according to <a href="../../mn/mn29.html">MN 29</a> the events took place at Mount Vulture Peak outside of Rājagaha, <a href="../../parallels/ea43.4.html">EĀ 43.4</a> has the Squirrels’ Feeding Ground in the Bamboo Grove, likewise at Rājagaha, as its venue. The summary verse at T II 764c11 refers to <a href="../../parallels/ea43.4.html">EĀ 43.4</a> as “Devadatta”, 提婆達.</span></span></span> which at the same time is also the parallel to the next discourse in the Majjhima-nikāya, the Cūḷasāropama-sutta.</p>
+<p>According to the opening section of the Majjhima-nikāya version, the Buddha delivered the present discourse in relation to Devadatta.<span class="note" id="mn29n283"><span class="details"><span class="p">[n.283] <a href="../../mn/mn29.html">MN 29</a> at MN I 192,3: bhagavā devadattaṃ ārabbha bhikkhū āmantesi. Devadatta’s attempt at creating a schism is described in Vin II 199,1; for a comparative study of the accounts of this attempt in the different Vinayas cf. especially Bareau 1991 and Mukherjee 1966 (for a brief survey of the relevant Vinaya passages cf. Frauwallner 1956: 117-120); on Devadatta cf. also, e.g., Bareau 1988b: 538-547, Boucher 2008: 46-49, Deeg 1999, id. 2004, Dhirasekera 1988, Hocart 1923 (on which cf. Emeneau 1939 and Mitra 1924), Jing Yin 2009, Klimkeit 1990: 124-127, Lamotte 1949/1981: 868-878, id. 1970b, Ray 1994: 162-173, Sarao 1989: 63-65, id. 2004, Tinti 1997, and Waldschmidt 1964.</span></span></span> The Ekottarika-āgama version offers more details in this respect. It reports that Devadatta, who by the time of this discourse had lost all his supernormal powers, had gained such favour with King Ajātasattu that the latter was supplying Devadatta and his followers with five hundred measures of food per day. When the monks informed the Buddha about this, according to the Ekottarika-āgama account the Buddha declared that these material gains would prevent Devadatta from achieving the goal for the sake of which he had gone forth.<span class="note" id="mn29n284"><span class="details"><span class="p">[n.284] <a href="../../parallels/ea43.4.html">EĀ 43.4</a> at T II 759b10. A similar introductory narration can be found, e.g., in <a href="../../sn/sn17.36.html">SN 17:36</a> at SN II 242,2 and in its parallels <a href="../../parallels/sa1064.html">SĀ 1064</a> at T II 276b21, <a href="../../parallels/sa-2.3.html">SĀ2 3</a> at T II 374b21 (which precedes this with an account of how Devadatta won the king’s favour), <a href="../../parallels/ea12.7.html">EĀ 12.7</a> at T II 570b23, and <a href="../../parallels/ea23.7.html">EĀ 23.7</a> at T II 614a19.</span></span></span></p>
+<p>The Mahāsāropama-sutta and its Ekottarika-āgama parallel deliver a simile about mistaking various parts of a tree, such as its twigs or leaves, for heartwood.<span class="note" id="mn29n285"><span class="details"><span class="p">[n.285] <a href="../../mn/mn29.html">MN 29</a> at MN I 192,15 and <a href="../../parallels/ea43.4.html">EĀ 43.4</a> at T II 759b11. This simile occurs frequently in the Majjhima-nikāya, cf. <a href="../../mn/mn18.html">MN 18</a> at MN I 111,6, <a href="../../mn/mn30.html">MN 30</a> at MN I 198,20, <a href="../../mn/mn133.html">MN 133</a> at MN III 194,32, <a href="../../mn/mn138.html">MN 138</a> at MN III 224,21, and with less frequency also in other Nikāyas, cf. <a href="../../sn/sn35.116.html">SN 35:116</a> at SN IV 94,23, <a href="../../sn/sn35.117.html">SN 35:117</a> at SN IV 99,27, <a href="../../an/an10.115.html">AN 10:115</a> at AN V 226,17, and <a href="../../an/an10.172.html">AN 10:172</a> at AN V 256,21; cf. also <a href="../../an/an5.24.html">AN 5:24</a> at AN III 20,16, which illustrates the need for sīla with the necessity a tree has of possessing twigs and leaves in order to be able to grow.</span></span></span> A similar mistake takes place when someone praises himself and disparages others, instead of making an effort to progress further. According to both versions, such praising oneself may take place because of:</p>
+<ul>
+<li>getting material gains, honour, and fame,</li>
+<li>being of virtuous conduct,</li>
+<li>having achieved concentration.</li>
+</ul>
+<p>The Majjhima-nikāya discourse considers knowledge and vision as another achievement on account of which a monk might become negligent, praise himself, and disparage others,<span class="note" id="mn29n286"><span class="details"><span class="p">[n.286] <a href="../../mn/mn29.html">MN 29</a> at MN I 195,23: tena ñāṇadassanena attān’ ukkaṃseti paraṃ vambheti ... tena ñāṇadassanena majjati pamajjati pamādaṃ āpajjati.</span></span></span> after which it turns to permanent liberation, at which point the “heartwood” has been reached.<span class="note" id="mn29n287"><span class="details"><span class="p">[n.287] <a href="../../mn/mn29.html">MN 29</a> at MN I 196,29 reads samayavimokha and Se-MN I 371,19 similarly samayavimokkha, while Be-MN I 256,15 and Ce-MN I 476,21 read asamayavimokkha, which Bodhi in Ñāṇamoli 1995/2005: 1224 note 348 notes as the preferable reading, a reading also followed by the commentary, Ps II 232,3.</span></span></span> The Majjhima-nikāya version concludes by stating that the holy life has neither material gain, nor virtue, nor concentration, nor knowledge and vision as its ultimate aim, but only unshakeable deliverance of the mind (akuppa cetovimutti).<span class="note" id="mn29n288"><span class="details"><span class="p">[n.288] <a href="../../mn/mn29.html">MN 29</a> at MN I 197,29; on the term akuppa cf. also Hara 2005.</span></span></span></p>
+<p>The Ekottarika-āgama version does not mention knowledge and vision, as its presentation proceeds from describing how a monk achieves concentration to his acquisition of wisdom, at which point the Ekottarika-āgama discourse qualifies such a monk as first and foremost (see table 3.7).<span class="note" id="mn29n289"><span class="details"><span class="p">[n.289] <a href="../../parallels/ea43.4.html">EĀ 43.4</a> at T II 759c1.</span></span></span></p>
+<p>The Ekottarika-āgama discourse continues with the Buddha answering a question by one of the monks in relation to Devadatta, followed by stanzas spoken by the Buddha in praise of liberating wisdom. After these stanzas, according to the Ekottarika-āgama account the Buddha summed up his exposition by relating greed for material gains to wrong views. Having wrong views will in turn lead to wrong manifestations of the other seven path factors. As a follow up to this exposition, the Buddha exhorts the monks to scorn material gains.</p>
+<table class="comparative-table">
+<caption>Table 3.7: Attainments in <a href="../../mn/mn29.html">MN 29</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn29.html">MN 29</a></th><th><a href="../../parallels/ea43.3.html">EĀ 43.3</a></th></tr>
+<tr><td>gains and honour (1)</td><td>gains and honour (→ 1)</td></tr>
+<tr><td>virtue (2)</td><td>virtue (→ 2)</td></tr>
+<tr><td>concentration (3)</td><td>concentration (→ 3)</td></tr>
+<tr><td>knowledge and vision (4)</td><td>wisdom (→ 4?)</td></tr>
+<tr><td>permanent liberation (5)</td><td>(≠ 5)</td></tr>
+</table>
+<p>The Ekottarika-āgama discourse concludes by reporting that this exposition on the dangers of succumbing to the attraction of material gains had a strong effect on the monks, since it caused a group of over sixty monks to disrobe, while another group of a similar size became arahants.<span class="note" id="mn29n290"><span class="details"><span class="p">[n.290] <a href="../../parallels/ea43.4.html">EĀ 43.4</a> at T II 759c26 reports that the second group of over sixty monks attained the extinction of the influxes (viz. they became arahants) and the Dharma-eye (viz. they became stream-enterers), 復有六十 餘比丘, 漏盡意解, 諸塵垢盡, 得法眼淨. Perhaps this should be understood to indicate that the present discourse had so powerful an effect as to enable them to progress from the level of worldlings through stream-entry all the way up to full awakening.</span></span></span> A discourse in the Aṅguttara-nikāya and its counterparts in the Madhyama-āgama and the Ekottarika-āgama report a similar outcome for another discourse given by the Buddha, which vividly illustrates the dire consequences incurred by a monk who engages in evil conduct.<span class="note" id="mn29n291"><span class="details"><span class="p">[n.291] <a href="../../an/an7.68.html">AN 7:68</a> at AN IV 135,5, <a href="../../parallels/ma5.html">MĀ 5</a> at T I 427a3, and <a href="../../parallels/ea33.10.html">EĀ 33.10</a> at T II 689c1 conclude with sixty monks disrobing and sixty monks becoming arahants, an outcome also reported at the conclusion of <a href="../../parallels/ea43.5.html">EĀ 43.5</a> at T II 761b11.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.198 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.198</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 198</span><span class="mirror-right">（一九八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn73.html">MN 73</a> / <a href="../parallels/sa964.html">SĀ 964</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was in Rajagriha. At that time, the Brahman Varṣākāra went to where the Buddha was, greeted the Buddha, and sat to one side. He said to the Buddha, &quot;Gautama! I have a few doubts. If I am allowed to ask, I will dare to ask.&quot; The Buddha remained silent and did not answer. The second and third times he asked, the Buddha also remained silent. Varṣākāra said, &quot;Gautama! For a long time, you and I have been close friends. I have a few questions. I only wish you would answer me.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城。尔时，犊子梵志往诣佛所，问讯佛已，在一面坐。白佛言：「瞿昙！我有少疑，若蒙听察，乃敢发问。」佛默然不答。第二第三，亦如是问。第二第三，佛亦默然。犊子言：「瞿昙！我于长夜，与汝亲厚，我有少问，唯愿答我。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha thought, &quot;The Brahman Varṣākāra has been honest and sincere for a long time, without flattery or deceit. All his questions are for the sake of understanding, not to cause trouble. I shall listen to him. If it is about Abhidharma or Vinaya, I shall answer according to his questions.&quot; The Buddha told Varṣākāra, &quot;Ask as you please. Whatever doubts you have, do not hesitate to ask.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛作是念：「犊子梵志长夜已来，禀性质直，无有谄伪，诸有所问，皆求解故，不为恼乱，吾当听之，若阿毘昙、毘尼，随其所问。」佛告犊子：「恣汝所问，诸有所疑，无得疑难。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Varṣākāra said to the Buddha, &quot;Gautama! Is there any unwholesomeness in the entire world?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子白佛言：「瞿昙！一切世间有不善不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha replied, &quot;There is.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛答言：「有。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He further asked, &quot;Is there any wholesomeness?&quot;</p></td><td lang="lzh" class="agama-chi"><p>又问：「颇有善不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha replied, &quot;There is.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛答言：「有。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf said, &quot;Gautama! Please explain the wholesome and unwholesome dharmas to me, so that I may understand.&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子言：「瞿昙！愿为我说善不善法，令我解了。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;I can explain the wholesome and unwholesome in many ways. Now I will briefly explain the essentials for you.&quot; The Buddha further told the calf, &quot;Desiring is unwholesome, being free from desire is wholesome; anger, hatred, and delusion are unwholesome, being free from anger, hatred, and delusion is wholesome; killing is unwholesome, being free from killing is wholesome; stealing, sexual misconduct, false speech, harsh speech, divisive speech, greed, hatred, and wrong views are unwholesome, being free from these is right view and wholesome. I have explained the three kinds of unwholesome and the three kinds of wholesome for you, as well as the ten kinds of unwholesome and the ten kinds of wholesome.&quot; He further told the calf, &quot;If my disciples understand these three kinds of wholesome and unwholesome, and the ten kinds of wholesome and unwholesome, and are able to truly know them, they will be able to completely eliminate desire, anger, and delusion. All greed and evil will be completely extinguished without remainder. By being able to completely eliminate greed and delusion, all the defilements of desire will be completely exhausted. By exhausting the defilements, one will accomplish the undefiled, attain liberation of the mind, and liberation through wisdom. In the seen Dharma, one will personally understand, realize, and attain the Dharma. One will know that birth is exhausted, the holy life has been established, what was to be done has been done, and one will not be reborn again.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「吾能多种说善不善，今当为汝略说其要。」佛复告犊子：「欲为不善，离欲为善；瞋恚愚痴，是名不善，离瞋恚痴，是名为善；杀生不善，离杀为善；偷盗、邪婬、妄语、恶口、两舌、贪恚、邪见，是名不善，离如是等，正见为善。吾为汝说三种不善，三种善。十种不善，十种善。」复告犊子：「若我弟子，解此三种善不善，及十种善不善，如实能知，便能尽欲，瞋恚、愚痴亦能永尽，贪欲诸恶都灭无余。能尽贪欲、愚痴故，诸欲漏都尽。以尽漏故，成就无漏，心得解脱，慧得解脱，于见法中，自身解了，证知得法，自知生尽，梵行已立，所作已办，更不受有。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf said to the Buddha, &quot;Is there a bhikkhu who, in the Buddha&#x27;s teachings, has accomplished the undefiled, attained liberation of the mind, liberation through wisdom, personally understood, realized, and attained the Dharma in the seen Dharma, knows that birth is exhausted, the holy life has been established, what was to be done has been done, and will not be reborn again?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子白佛：「颇有一比丘，于佛教法，成就无漏，心得解脱，慧得解脱，于见法中，自身解了，证知得法，自知生尽，梵行已立，所作已办，更不受有，为有是不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;Those who attain this Dharma are not just one or two, or three or four, but up to five hundred. There are many bhikkhus who have attained liberation of the mind and liberation through wisdom, and have personally realized it in this very life.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「得是法者，不但一二，及以三四，乃至五百，多有比丘，心得解脱，慧得解脱，于现法中，自身取证。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf further asked, &quot;Is there a bhikkhuni in the Buddha&#x27;s teachings who has attained liberation of the mind and liberation through wisdom?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子复问：「佛教法中，颇有一比丘尼，心得解脱，慧得解脱不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;In my teachings, there are many bhikkhunis who have attained this Dharma, not just one or two, or three or four, but up to five hundred.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「我教法中，比丘尼等，得斯法者，非一二三，乃至五百，其数众多。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf further asked, &quot;Apart from those bhikkhus and bhikkhunis, is there a male lay follower who has crossed to the other shore of doubt?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子又问：「除彼比丘及比丘尼，颇有一优婆塞，度疑彼岸以不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;In my Buddha Dharma, there are many male lay followers who have crossed to the other shore of doubt, not just one or two, or three or four, but up to five hundred. They have severed the five lower fetters and attained the state of non-returners, not returning to the desire realm.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「我佛法中，诸优婆塞度疑彼岸，非一二三，乃至五百，其数众多，断五下分结，成阿那含，不还欲界。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf further asked, &quot;Apart from bhikkhus, bhikkhunis, and those who practice the holy life, and apart from male lay followers, is there a female lay follower who has crossed to the other shore of doubt, free from doubt and regret?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子又问：「除比丘、比丘尼，修梵行者除优婆塞，颇有一优婆夷，除于疑悔，度疑彼岸不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;In my Buddha Dharma, there are many who have attained this Dharma, not just one or two, or three or four, but up to five hundred. They have severed the five lower fetters and attained the state of non-returners, not returning to the desire realm.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「我佛法中，得斯法者，非一二三，乃至五百，其数众多，断五下分结，成阿那含，不还欲界。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The brahmin calf further said to the Buddha, &quot;Apart from bhikkhus, bhikkhunis, and male and female lay followers who practice the holy life, is there a male lay follower in this Buddha Dharma who, while living at home, enjoying the pleasures of the five senses, has crossed to the other shore of doubt?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子梵志复白佛言：「置比丘、比丘尼，并优婆塞、优婆夷修梵行者，是佛法中，颇有优婆塞，独在居家，受五欲乐，度疑彼岸不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;In this Buddha Dharma, there are not just one or two, or three or four, but up to five hundred such people who live together with men and women, in close quarters, wearing fragrant flowers, necklaces, and fine silk garments, applying various sandalwood and other fine fragrances to their bodies, possessing gold, silver, and various precious treasures, with many servants and attendants. Living in this crowded and cramped environment, they are able to sever the three fetters, attain the state of stream-enterer, and are certain to reach the supreme enlightenment, ending all suffering. The dullest among them will naturally be reborn seven times, not falling into the three evil realms, transmigrating among humans and gods, naturally ending all suffering.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「是佛法中，非一二三，乃至五百，其数众多，如斯等人，乃与男女群居，逼迮共住，香华璎珞，著细缯衣，用好旃檀众妙杂香，以涂其身，受畜金银种种珍宝，奴婢僮仆其数众多，处斯愦閙逼隘之中，能断三结，得须陀洹，决定必至于三菩提，尽诸苦际。极钝根者，任运七生，不至三恶，人天流转，自然得尽诸苦边际。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf further asked, &quot;Apart from bhikkhus, bhikkhunis, male and female lay followers who practice the holy life, and male lay followers who, while in the midst of desire, attain the state of stream-enterer, is there a female lay follower in the Buddha&#x27;s teachings who, while in the midst of desire, has crossed to the other shore of doubt?&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子又问：「且置比丘、比丘尼、优婆塞、优婆夷修梵行者，又置优婆塞在欲得须陀洹，颇有女人，在佛教法，作优婆夷，在于欲中度疑彼岸者不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;In my Buddha Dharma, there are not just one or two, or three or four, but up to five hundred female lay followers who, while in the midst of desire, have crossed to the other shore of doubt. These female lay followers, though living at home, are like male lay followers who have severed the three fetters and attained the state of stream-enterer.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「我佛法中，诸优婆夷，在欲度疑，非一二三，乃至五百，其数众多。诸优婆夷，虽处居家，如优婆塞，断于三结，得须陀洹。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf said, &quot;Gautama! You have attained perfect enlightenment in regard to bodhi. If those who practice the holy life, whether bhikkhus, bhikkhunis, male or female lay followers, or male or female lay followers in the midst of desire, do not fully practice the path, then it is incomplete.&quot; The calf said, &quot;Gautama! Now that you have attained perfect enlightenment, those who have attained the fruits, whether bhikkhus, bhikkhunis, those who practice the holy life, male or female lay followers, or male or female lay followers in the midst of desire, have all attained the fruits. In the Buddha&#x27;s teachings, this is called complete.&quot; The calf further said, &quot;Gautama! I now wish to speak a parable. Please listen to me.</p></td><td lang="lzh" class="agama-chi"><p>犊子言：「瞿昙！汝于菩提，已得正觉，设当修梵行比丘、比丘尼、优婆塞、优婆夷、处欲优婆塞、处欲优婆夷，若如是等，不具道行，便为支不满足。」犊子言：「瞿昙！汝今既得成等正觉，得果比丘、比丘尼、修梵行优婆塞、优婆夷、处欲优婆塞、处欲优婆夷，悉获果证，于佛教法，是名具足。」犊子复言：「瞿昙！我今乐说譬喻，愿听我说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;Speak as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「随汝意说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;It is like when heavy rain falls from the sky, the water flows down and enters the great ocean. Your teachings are also like this. Men, women, the young, the old, and the aged, having been bathed in the Dharma rain of the Buddha, all head towards nirvana for a long time. Excellent, Gautama! Excellent, wonderful Dharma! Excellent, those who can enter the Buddha&#x27;s teachings!&quot; The calf said, &quot;I now ask you a question. If one can renounce the householder life and practice the holy life, how long will it take to accomplish it?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「譬如天降大雨，随下水流，注于大海。汝之教法，亦复如是，男女长幼，及以衰老，蒙佛法雨，于长夜中，尽趣涅槃。善哉！瞿昙！善哉！妙法，善哉！能入佛教法者。」犊子言：「我今相问，设得出家修梵行者，为久近成？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;If there are non-Buddhist practitioners who seek to renounce the householder life and practice the holy life in the Buddha&#x27;s teachings, they should first shave their beards and hair, and for four months, their minds and intentions should be subdued and gentle among the Sangha. Then they can receive the precepts. It is not necessarily so, but it also depends on the mind of the person.&quot; When the calf brāhmaṇa heard the Buddha&#x27;s words, he was delighted in his heart, thinking, &quot;If I can renounce the householder life and receive the precepts, I would do it even for four years, let alone four months?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「若有外道异学，于佛法中，求出家者，先剃其须发，满足四月，于众僧中，心意调濡，然后受戒，不必尽尔，亦随人心。」犊子梵志闻佛语已，心生喜乐：「若蒙出家，得受戒者，假设四年，我尚为之，况四月也？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the calf, &quot;I have previously told you about two kinds of people, but it is not necessarily so for everyone.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「吾先为汝说二种人，不必一切悉皆如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The calf said, &quot;Gautama! You did indeed say that before.&quot;</p></td><td lang="lzh" class="agama-chi"><p>犊子言：「瞿昙！先者实作是说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikkhus, &quot;Now you should shave the calf&#x27;s head and give him the precepts.&quot; At that time, the bhikkhus, having received the Buddha&#x27;s order, immediately shaved his head and gave him the precepts.</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「汝等今者，与彼犊子，剃发受戒。」尔时，比丘受佛勅已，即剃其发，并与受戒。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>As a bhikkhu, Venerable Calf diligently practiced the path. Within half a month, he attained the stage of learning, understood the Dharma, saw the Dharma, realized the Dharma. Having attained the fruit of learning, he knew, understood, and realized the Dharma. Venerable Calf thought, &quot;I should now go to the Buddha.&quot; Having thought this, he went to the Buddha, bowed at the Buddha&#x27;s feet, stood to one side, and said to the Buddha, &quot;World-Honored One! I have fully realized the stage of learning. I only wish that the World-Honored One would explain it again for me, so that I may hear the Dharma and attain liberation of the mind.&quot;</p></td><td lang="lzh" class="agama-chi"><p>如比丘法，尊者犊子精勤修道，于半月中，具于学地，知法到法，见法觉法。既得学果，知已解已，得证法已。尊者犊子作是念：「我今应诣佛所。」作是念已，即往佛所，顶礼佛足，在一面立。白佛言：「世尊！我于学地，都证知已，唯愿世尊，重为我说，令我闻法，心得解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Calf, &quot;If you quickly seek liberation of the mind, you should cultivate two dharmas, learn two dharmas, and increase and expand two dharmas. The two dharmas are wisdom and concentration. If you can cultivate and expand them like this, it is called knowing the various realms, penetrating the realms, and knowing countless realms.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子：「汝若速求心得解脱，应修二法，当学二法，增广二法。言二法者，所谓智定，若能如是修习增广，是则名为知种种界，通达诸界，知无数界。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikkhu Calf, &quot;If one wishes to be free from desire and evil unwholesome states, one should enter the first jhana with initial and sustained thought. Thus, bhikkhu, one should cultivate two dharmas, namely concentration and wisdom, up to the fourth jhana, loving-kindness, compassion, sympathetic joy, and equanimity, the sphere of boundless space, the sphere of boundless consciousness, the sphere of nothingness, and the sphere of neither perception nor non-perception. Calf! Those who wish to attain the fruits of stream-entry, once-returning, and non-returning should all learn these two dharmas. Those who wish to attain the supernormal powers of the body, know the minds of others, know past lives, attain the divine eye and ear, and attain the knowledge of the exhaustion of taints should cultivate two dharmas, increase and expand two dharmas, know the various realms, penetrate the realms, and know countless realms.&quot; The Venerable Calf, having heard the Buddha&#x27;s words, was delighted and bowed his head in reverence before departing.</p></td><td lang="lzh" class="agama-chi"><p>佛告犊子比丘：「若欲离欲恶不善者，有觉有观，入于初禅。如是比丘，应修二法，定及智慧，乃至四禅，慈悲喜舍，空处、识处、不用处、非想非非想处，亦复如是。犊子！欲得须陀洹、斯陀含、阿那含者，悉皆应学如是二法。欲学身通，欲知他心智，欲知宿命，欲得天眼耳，欲得漏尽智，应修二法，增广二法，知种种界，通达诸界，知无数界。」尊者犊子闻佛所说，欢喜顶礼而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Tathāgata taught him various causes and conditions. After receiving the Buddha&#x27;s teachings, Calf practiced diligently in solitude, his mind not lax. He always abided in concentration. The reason for the noble sons to shave their beards and hair is precisely to cultivate the unsurpassed holy life. In this present life, they personally realize that their births are exhausted, the holy life are established, the tasks are accomplished, and they will not be reborn again.</p></td><td lang="lzh" class="agama-chi"><p>大悲如来种种因缘教导，犊子受佛教已，于闲静处，独坐精懃，心不放逸，常处禅定。所以族姓子，剃除须发，正欲为修无上梵行故，于现法中，自身取证，我生已尽，梵行已立，所作已办，更不受有。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, many bhikṣus went to where the Buddha was. The Venerable Calf saw the bhikṣus and asked them, &quot;Where are you going?&quot; The bhikṣus replied, &quot;We are going to where the Buddha is to pay respects and make offerings.&quot; The bhikṣu Calf said to the bhikṣus, &quot;When you go to where the Buddha is, please convey my words to inquire about the World-Honored One&#x27;s well-being, whether he is in good health and free from illness and affliction. Also, please tell the World-Honored One on my behalf that the bhikṣu Calf has already repaid the Buddha&#x27;s kindness, made offerings for the Dharma, and followed the practices of the Buddha.&quot; At that time, the many bhikṣus went to where the Buddha was, bowed at the Buddha&#x27;s feet, and sat to one side. They said to the Buddha, &quot;World-Honored One! The Venerable Calf bows at the World-Honored One&#x27;s feet and inquires about the World-Honored One&#x27;s well-being, whether he is in good health and free from illness and affliction. The bhikṣu Calf also says, &#x27;Please tell the Buddha on my behalf that I have already practiced in accordance with the Buddha&#x27;s teachings. The practices of the World-Honored One, I have already fully attained.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>时众多比丘往至佛所，尔时，尊者犊子见诸比丘，即问之言：「汝等欲何所至？」比丘答言：「我等将诣佛所，亲近供养。」犊子比丘语诸比丘言：「汝等今者往至佛所，因以我语问讯世尊，起居轻利，少病少恼？并可为我白世尊言：『犊子比丘已报佛恩，为法供养，顺佛所行。』」时众多比丘往至佛所，礼佛足已，在一面坐。白佛言：「世尊！尊者犊子比丘，稽首世尊足下，问讯世尊，起居轻利，少病少恼？犊子比丘又作是言：『为我白佛，我已修行，随顺佛说，世尊所行，我已具得。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;Before, a deity came to me and said, &#x27;The bhikṣu Calf has already attained arahantship.&#x27; I already knew this, and the deity was guiding you. Now you have also followed the deity.&quot; At that time, the World-Honored One prophesied that Calf had already attained arahantship.</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「先汝有天来至我所言：『犊子比丘已得罗汉。』我已先知，天在后导，汝等今者复在天后。」尔时，世尊记彼犊子已成罗汉。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken this, the Buddha finished. The bhikṣus, having heard the Buddha&#x27;s words, rejoiced and received them with respect.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Body, life, and Maudgalyāyana, rare Kātyāyana, unprecedented, with<br/>self, views, and ignorance, left home with Calf.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>身命及目连　　希有迦旃延未曾有、有我　　见及于愚痴犊子所出家</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 9 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 9: Sammādiṭṭhi-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn8comp.html#content"></a><a id="next-sutta" href="./mn10comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn9.html">MN 9</a> / <a href="../../parallels/ma29.html">MĀ 29 (~)</a> / <a href="../../parallels/sa344.html">SĀ 344</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sammādiṭṭhi-sutta, the “discourse on right view”, features an exposition by Sāriputta on right view. This discourse has two Chinese parallels, found in the Madhyamaāgama and in the Saṃyukta-āgama,<span class="note" id="mn9n195"><span class="details"><span class="p">[n.195] The parallels are <a href="../../parallels/ma29.html">MĀ 29</a> at T I 461b-464b, entitled “discourse on Mahākoṭṭhita”, 大拘絺羅經, and <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94b-95b, for which Akanuma 1929/1990: 48 gives the tentative title “Koṭṭhita”, 拘絺羅. A translation of <a href="../../parallels/sa344.html">SĀ 344</a> is forthcoming in Anālayo 2012f. While <a href="../../mn/mn9.html">MN 9</a> has Jeta’s Grove at Sāvatthī as its location, <a href="../../parallels/ma29.html">MĀ 29</a> and <a href="../../parallels/sa344.html">SĀ 344</a> take place at Rājagaha. <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94b2 further specifies that, while the Buddha was in Rājagaha itself, Sāriputta and Mahākoṭṭhita were staying at Mount Vulture Peak near Rājagaha. This specification explains why the Buddha does not take any part in the present discourse. Akanuma 1929/1990: 163 lists <a href="../../parallels/ea49.5.html">EĀ 49.5</a> at T II 797b as another parallel to the Sammādiṭṭhi-sutta. <a href="../../parallels/ea49.5.html">EĀ 49.5</a>, however, reports the Buddha giving a detailed explanation of the twelve links of dependent arising and correcting Ānanda’s lack of appreciation of its depth. Thus <a href="../../parallels/ea49.5.html">EĀ 49.5</a> finds a better parallel in <a href="../../sn/sn12.2.html">SN 12:2</a> at SN II 2,12, in as much as its exposition of the links of dependent arising is concerned, and has Ānanda’s underestimation of the depth of dependent arising in common with <a href="../../dn/dn15.html">DN 15</a> at DN II 55,9 and <a href="../../sn/sn12.60.html">SN 12:60</a> at SN II 92,8.</span></span></span> and a parallel in a Sanskrit fragment.<span class="note" id="mn9n196"><span class="details"><span class="p">[n.196] S 474 folio 16V9 to folio 18V5 in Tripāṭhī 1962: 50-54. S 474 folio 16V9 agrees with <a href="../../parallels/ma29.html">MĀ 29</a> and <a href="../../parallels/sa344.html">SĀ 344</a> on the location of the discourse, while S 474 folio 16V10, similar to <a href="../../parallels/sa344.html">SĀ 344</a>, specifies that the two protagonists were staying at Mount Vulture Peak.</span></span></span></p>
+<p>While the Sammādiṭṭhi-sutta begins with Sāriputta addressing the monks on his own initiative, the Samyukta-āgama discourse and the Sanskrit fragment version report that Mahākoṭṭhita visited Sāriputta and asked about the implications of right view.<span class="note" id="mn9n197"><span class="details"><span class="p">[n.197] <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94b4 and S 474 folio 16V10 in Tripāṭhī 1962: 50.</span></span></span> According to the Madhyama-āgama discourse, however, it was Sāriputta who had visited Mahākoṭṭhita in order to ask the same question.<span class="note" id="mn9n198"><span class="details"><span class="p">[n.198] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 461b25. For a similar reversal of roles between these two monks cf. below p. 268; cf. also <a href="../../an/an5.165.html">AN 5:165</a> at AN III 192,7, according to which Sāriputta would ask others questions in order to draw out their knowledge.</span></span></span> In each case, the question that led to the delivery of the discourse was about the implications of being endowed with right view and of having achieved perfect confidence in the teaching, expressions that stand for the attainment of stream-entry.<span class="note" id="mn9n199"><span class="details"><span class="p">[n.199] In the Jain tradition, the conception of right view appears to have a comparable function and related implications, as according to Jaini 1979/1998: 145 the attainment of “samyak-dṛṣṭi ... heralds ... irreversible entry onto the path that leads to mokṣa”, which will take place (ibid. p. 146) “within no more than four lifetimes”. Ibid. pp. 148-149 explains that “upon the attainment of samyak-darśana ... the body, the possessions, even the ever-changing psychological states ... are no longer identified with the self ... awareness of objects no longer generates a tendency to grasp or manipulate them”. “Gross forms of anger, pride, deceitfulness and greed ... have been rendered inoperative ... he is invariably ... ‘at peace’ with himself ... he no longer perceives things as ‘attractive’ or ‘desirable’, but rather he penetrates to the fact that every aspect of life is transitory and mortal”, leading to a “strong disenchantment with worldly things”.</span></span></span></p>
+<p>The first reply to this question, according to all versions, is that to understand wholesomeness and unwholesomeness, together with their respective roots, is to have right view (see table 1.10).<span class="note" id="mn9n200"><span class="details"><span class="p">[n.200] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 461c3 differs slightly from the other versions, since it presents knowing the unwholesome together with its root as one way of having right view, and at T I 461c14 then indicates that knowing the wholesome together with its root is yet another way of having right view. The parallel versions have both together as a single way of having right view. In fact, to understand the unwholesome would entail also understanding what is wholesome, these being but two sides of the same coin, so that such understanding does not seem to entail two separate ways of having right view.</span></span></span> According to the Pāli account, unwholesomeness here stands for the ten unwholesome courses of action (akusala kammapatha).<span class="note" id="mn9n201"><span class="details"><span class="p">[n.201] <a href="../../mn/mn9.html">MN 9</a> at MN I 47,5.</span></span></span> The Chinese discourses and the Sanskrit fragment define the same in terms of the three unwholesome actions by way of body, speech, and mind, thereby differing in letter but not in meaning from the Pāli presentation.<span class="note" id="mn9n202"><span class="details"><span class="p">[n.202] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 461c4, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94b15, and S 474 folio 16R3 in Tripāṭhī 1962: 51.</span></span></span> All versions agree that greed, anger, and delusion are the roots of what is unwholesome, and their absence is the root of what is wholesome.</p>
+<p>The Majjhima-nikāya version stands alone in concluding this presentation (and each of the following expositions of right view) by speaking of abandoning the underlying tendencies to lust, to irritation, and to the conceited view ‘I am’, together with overcoming ignorance and making an end of dukkha.<span class="note" id="mn9n203"><span class="details"><span class="p">[n.203] <a href="../../mn/mn9.html">MN 9</a> at MN I 47,22, MN I 48,14, MN I 49,10+34, MN I 50,14+29, MN I 51,8+23, MN I 52,3+21, MN I 53,2+21, MN I 54,1+16+33, and MN I 55,18.</span></span></span> This statement does not seem to fit its context, since to overcome ignorance and make an end of dukkha implies full awakening, whereas the question of having right view, found in all versions, is concerned with stream-entry.<span class="note" id="mn9n204"><span class="details"><span class="p">[n.204] <a href="../../mn/mn9.html">MN 9</a> at MN I 46,22 speaks of being “endowed with perfect confidence in the Dharma”, dhamme aveccappasādena samannāgato, and of having “arrived at the true Dharma”, āgato imaṃ saddhammaṃ, expressions clearly referring to stream-entry. Ps I 197,24 in fact records a discussion between the rehearsing monks on whether the attainment of full awakening was already intended by the introductory statement on the noble disciple being endowed with right view, a discussion which indicates that the commentators also had difficulties reconciling the present passage with the main theme of the discourse. An extract from the present discussion already appeared in Anālayo 2005b: 5-6.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 1.10: Insight Leading to Right View in <a href="../../mn/mn9.html">MN 9</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn9.html">MN 9</a></th><th><a href="../../parallels/ma29.html">MĀ 29</a></th><th><a href="../../parallels/sa344.html">SĀ 344</a> & S 474 (Skt frgm.)</th></tr>
+<tr><td>wholesome/unwholesome (1)</td><td>unwholesome (→ 1)</td><td>wholesome/unwholesome (→ 1)</td></tr>
+<tr><td>nutriment (2)</td><td>wholesome (→ 1)</td><td>nutriment (→ 2)</td></tr>
+<tr><td>4 noble truths (3)</td><td>nutriment (→ 2)</td><td>influxes (→ 16)</td></tr>
+<tr><td>old age and death (4)</td><td>influxes (→ 16)</td><td>4 noble truths (→ 3)</td></tr>
+<tr><td>birth (5)</td><td>4 noble truths (→ 3)</td><td>old age and death (→ 4)</td></tr>
+<tr><td>becoming (6)</td><td>old age and death (→ 4)</td><td>birth (→ 5)</td></tr>
+<tr><td>clinging (7)</td><td>birth (→ 5)</td><td>becoming (→ 6)</td></tr>
+<tr><td>craving (8)</td><td>becoming (→ 6)</td><td>clinging (→ 7)</td></tr>
+<tr><td>feeling (9)</td><td>clinging (→ 7)</td><td>craving (→ 8)</td></tr>
+<tr><td>contact (10)</td><td>craving (→ 8)</td><td>feeling (→ 9)</td></tr>
+<tr><td>6 senses (11)</td><td>feeling (→ 9)</td><td>contact (→ 10)</td></tr>
+<tr><td>name-and-form (12)</td><td>contact (→ 10)</td><td>6 senses (→ 11)</td></tr>
+<tr><td>consciousness (13)</td><td>6 senses (→ 11)</td><td>name-and-form (→ 12)</td></tr>
+<tr><td>formations (14)</td><td>name-and-form (→ 12)</td><td>consciousness (→ 13)</td></tr>
+<tr><td>ignorance (15)</td><td>consciousness (→ 13)</td><td>formations (→ 14)</td></tr>
+<tr><td>influxes (16)</td><td>formations (→ 14)</td><td></td></tr>
+<tr><td></td><td>(≠ 15)</td><td>(≠ 15)</td></tr>
+</table>
+<p>The Pāli discourse follows this passage on full awakening by declaring that “to that extent” the noble disciple is endowed with right view and has perfect confidence in the teaching.<span class="note" id="mn9n205"><span class="details"><span class="p">[n.205] E.g., <a href="../../mn/mn9.html">MN 9</a> at MN I 47,25: ettāvatā ... ariyasāvako sammādiṭṭhi hoti (Se-MN I 86,20: sammādiṭṭhī), adopting the translation of ettāvatā given in CPD II: 657 s.v. ettāvatā for the present passage.</span></span></span> Yet, such right view and perfect confidence are the hallmarks of stream-entry, at which stage the underlying tendencies mentioned are not yet abandoned, ignorance has not yet been fully overcome, and the making an end of dukkha has still to be accomplished. Hence the expression “to that extent” does not seem to tally with the content of the passage to which it refers. In view of this it appears as if this particular passage, which is not found in the Chinese and Sanskrit parallels, may be the result of an error in the transmission of the Pāli discourse.</p>
+<p>After the treatment of wholesomeness and unwholesomeness as a way of having right view, the next alternative way of having right view in the Pāli, Chinese, and Sanskrit versions is insight into nutriment.<span class="note" id="mn9n206"><span class="details"><span class="p">[n.206] <a href="../../mn/mn9.html">MN 9</a> at MN I 47,33, <a href="../../parallels/ma29.html">MĀ 29</a> at T I 461c24, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94b27, and S 474 folio 16R9 in Tripāṭhī 1962: 51. Norman 1991/1993c: 273 highlights the historical background to the Buddhist use of āhāra, explaining that “in brahminical thought we find the idea that food is required to sustain the existence of the inhabitants of other worlds or in the next life. The gods need sacrifices as their food, the pitṛs need offerings to continue their existence, and good deeds are seen as a sort of nourishment for the next life”.</span></span></span> All versions apply the scheme of the four noble truths to nutriment and to the other items discussed later on, speaking in each case of knowing the particular item in question, its arising, its cessation, and the noble eightfold path leading to its cessation.<span class="note" id="mn9n207"><span class="details"><span class="p">[n.207] Cf. also Ñāṇamoli 1991a: 5.</span></span></span> In relation to the origin and the cessation of nutriment, all versions point to craving as the crucial factor.</p>
+<p>The Pāli discourse turns to the four noble truths as its next item,<span class="note" id="mn9n208"><span class="details"><span class="p">[n.208] <a href="../../mn/mn9.html">MN 9</a> at MN I 48,24.</span></span></span> while the Chinese and the Sanskrit versions first take up the three influxes, after which they also turn to the four noble truths (see above table 1.10).<span class="note" id="mn9n209"><span class="details"><span class="p">[n.209] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a26, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94c29, and S 474 folio 17V11 in Tripāṭhī 1962: 52.</span></span></span> The three influxes occur in the Pāli version only at the end of the entire exposition.<span class="note" id="mn9n210"><span class="details"><span class="p">[n.210] <a href="../../mn/mn9.html">MN 9</a> at MN I 55,3.</span></span></span> Although there is thus some disagreement in regard to the placing of the three influxes within the sequence of the overall presentation, the treatment given to them in the four versions is fairly similar.</p>
+<p>A minor difference in relation to the four noble truths is that while the Pāli discourse lists sorrow, lamentation, pain, grief, and despair in its definition of dukkha,<span class="note" id="mn9n211"><span class="details"><span class="p">[n.211] <a href="../../mn/mn9.html">MN 9</a> at MN I 48,32.</span></span></span> the Chinese and Sanskrit versions instead take up being separated from what is liked and associating with what is disliked.<span class="note" id="mn9n212"><span class="details"><span class="p">[n.212] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a28, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a2, and S 474 folio 17V12 in Tripāṭhī 1962: 52.</span></span></span></p>
+<p>Some Pāli editions of the present discourse agree with the Chinese and Sanskrit versions in mentioning to be separated from what is liked and to associate with what is disliked as instances of dukkha.<span class="note" id="mn9n213"><span class="details"><span class="p">[n.213] Be-MN I 59,27 and Se-MN I 88,22 include being separated from what is liked and having to associate with what is disliked in their definition of dukkha. The same is absent from Ee-MN I 48,33 and Ce-MN I 114,21. Be and Se do not include sickness in their list of manifestations of dukkha, whereas Ee-MN I 48,32 and Ce- MN I 114,20 agree with the Chinese and Sanskrit versions on including the same; cf. <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a27, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a2, and S 474 folio 17V12 in Tripāṭhī 1962: 52; cf. also Dayal 1932/1970: 242, the remark in Trenckner 1888/1993: 531, and the note in Ce-MN I 114,34. Oldenberg 1915: 120 notes a counterpart to the reference to not getting what one wants in Chāndogya Upaniṣad stanza 8:3:2, cf. Radhakrishnan 1953/1992: 495: yac cānyad icchan na labhate, although the context shows that the implications of this passage are quite different.</span></span></span> The same reference recurs in the different Pāli editions of the Dhammacakkapavattana-sutta, the discourse which, according to the traditional account, constitutes the Buddha’s first exposition of the four noble truths and of the nature of dukkha.<span class="note" id="mn9n214"><span class="details"><span class="p">[n.214] <a href="../../sn/sn56.11.html">SN 56:11</a> at SN V 421,21 and Vin I 10,27; for parallel versions cf. Chung 2006.</span></span></span></p>
+<p>The Madhyama-āgama version differs from the other three versions in tracing the arising of dukkha to old age and death instead of tracing it to craving.<span class="note" id="mn9n215"><span class="details"><span class="p">[n.215] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462b1: 因老死便有苦. The standard exposition of dependent arising presents old age and death as manifestations of dukkha, not as causes for its arising, cf., e.g., <a href="../../sn/sn12.1.html">SN 12.1</a> at SN II 1,20. A passage similar to <a href="../../parallels/ma29.html">MĀ 29</a> can be found in <a href="../../parallels/ma55.html">MĀ 55</a> at T I 490c21, a discourse without a Pāli parallel, which also presents old age and death as what leads to the arising of dukkha: “‘what is reckoned to be the arising of dukkha?’, the answer is: ‘old age and death are its arising’”, 何謂苦習, 答曰, 老死為習.</span></span></span> Another difference, which recurs frequently between expositions of the arising of dukkha preserved in Pāli and Chinese texts, is that the Saṃyukta-āgama version does not specify craving to be of three types, namely craving for sensual pleasures, for being and for non-being.<span class="note" id="mn9n216"><span class="details"><span class="p">[n.216] <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a5. Choong 2000: 166 notes that the three types of craving are not found in other discourses in the Saṃyukta-āgama, pointing out (note 78) that they do, however, occur in <a href="../../parallels/ea49.5.html">EĀ 49.5</a> at T II 797c8: 欲愛, 有愛, 無有愛. Ibid. also draws attention to another variation found in three parallels to the Mahānidāna-sutta (<a href="../../parallels/ma97.html">MĀ 97</a> at T I 579b22, T 14 at T I 243a19, and T 52 at T I 845a9), which present craving as twofold: craving for sensual pleasures and for existence, 欲愛, 有愛. Such a presentation is also found in SHT III 822R7-8 (p. 40): dve ānanda tṛṣṇe, kāmatṛ[ṣṇ]ā bhavatṛṣṇā ca (which according to SHT VII p. 268 is a parallel to <a href="../../parallels/ma97.html">MĀ 97</a>). Another parallel to the Mahānidāna-sutta, <a href="../../parallels/da13.html">DĀ 13</a> at T I 60c13, has the three types of craving for sensual pleasures, existence, and non-existence; a presentation also found in other discourses in this collection, cf., e.g., <a href="../../parallels/da9.html">DĀ 9</a> at T I 50a21, <a href="../../parallels/da10.html">DĀ 10</a> at T I 53a25, and <a href="../../parallels/da11.html">DĀ 11</a> at T I 57c15. The three types of craving are absent from the version of the Buddha’s first discourse in the Mahāvastu in Basak 1968/2004: 198,11 or in Senart 1897: 332,5.</span></span></span></p>
+<p>The Saṃyukta-āgama version and the Sanskrit fragment have preserved the treatment of the links intervening between old age and formations only in an abbreviated form, so that this part of the Sammādiṭṭhi-sutta can only be compared with the Madhyama-āgama exposition.</p>
+<p>A difference between these two versions is that while the Majjhima-nikāya version analyzes craving, feelings, and contact by way of the six sense-doors,<span class="note" id="mn9n217"><span class="details"><span class="p">[n.217] <a href="../../mn/mn9.html">MN 9</a> at MN I 51,16+31 and MN I 52,12.</span></span></span> the Madhyama-āgama version takes up each of these in a three-fold manner. In relation to craving, the Madhyama-āgama account distinguishes between craving related to sensuality, form, and formlessness.<span class="note" id="mn9n218"><span class="details"><span class="p">[n.218] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 463a22. Both versions apply the same threefold distinction to becoming (bhava), cf. <a href="../../mn/mn9.html">MN 9</a> at MN I 50,22 and <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462c21.</span></span></span> In relation to feelings and contact the Madhyama-āgama discourse differentiates between pleasant, unpleasant, and neutral types.<span class="note" id="mn9n219"><span class="details"><span class="p">[n.219] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 463b7+23.</span></span></span></p>
+<p>While the Majjhima-nikāya version defines name (nāma) by listing feeling, perception, volition, contact, and attention, according to the Madhyama-āgama version name stands for the four immaterial aggregates.<span class="note" id="mn9n220"><span class="details"><span class="p">[n.220] <a href="../../mn/mn9.html">MN 9</a> at MN I 53,11: vedanā, saññā, cetanā, phasso, manasikāro, idaṃ ... nāmaṃ (the same definition recurs in <a href="../../sn/sn12.2.html">SN 12:2</a> at SN II 3,33), whereas <a href="../../parallels/ma29.html">MĀ 29</a> at T I 463c25 reads 四非色陰為名. A definition of nāma in <a href="../../parallels/ea46.8.html">EĀ 46.8</a> at T II 778c24 and <a href="../../parallels/ea49.5.html">EĀ 49.5</a> at T II 797b28, however, agrees with <a href="../../mn/mn9.html">MN 9</a>, listing 痛, 想, 念, 更 樂, 思惟 (adopting a 元 and 明 variant that adds 樂 to 更). Skilling 1993: 158 notes a discourse quotation in Vasubandhu’s Pratītyasamutpāda-vyākhyā that also defines name with the help of the factors listed in <a href="../../mn/mn9.html">MN 9</a>: tshor ba, ’du shes, sems pa, reg pa, yid la byed pa. Ibid. draws attention to Śamathadeva’s commentary on the Abhidharmakośabhāṣya (Abhidh-k-ṭ), which agrees in this respect with <a href="../../parallels/ma29.html">MĀ 29</a>, as it defines “name” to stand for the four immaterial aggregates, cf. D (4094) mngon pa, ju 140a3 or Q (5595) tu 160b8: ming gang zhe na? gzugs can ma yin pa’i phung po bzhi ste. Dharmaskandha fragment 4737 folio 5v4 in Dietz 1984: 33,2 and its Chinese counterpart, T 1537 at T XXVI 507b23, also list the four immaterial aggregates in a definition of nāma.</span></span></span> Although the implications of “name” (nāma) underwent changes during later developments of Buddhist philosophy and came to connote the entire set of the four mental aggregates, in the Pāli discourses “name” does not explicitly include the aggregate of consciousness.<span class="note" id="mn9n221"><span class="details"><span class="p">[n.221] This has been pointed out by, e.g., Harvey 1993: 32, Ñāṇamoli 1994: 56, Ñāṇavīra 1987/2001: 76, and Reat 1996: 45; cf. also Del Toso 2007a: 215. This early meaning of “nāma” is still reflected in Vibh 136,8: vedanākkhandho saññākkhandho saṅkhārakkhandho, idaṃ vuccati nāmaṃ. Even the Visuddhimagga does not include consciousness under “nāma” in the context of dependent arising, Vism 558,23: nāman ti ... vedanādayo tayo khandhā (cf. also the discussion in Vibh-a 169,9, which explains that only the three mental aggregates are mentioned in the context of dependent arising because mentioning consciousness as well would result in the proposition that consciousness conditions consciousness). Only in relation to insight into the nature of mind and matter does the Visuddhimagga employ “nāma” as a covering term for all four immaterial aggregates, cf. Vism 589,6. Ñāṇamoli 1962: 28 note 84/1 draws attention to another coexistence of different usages of nāma found in the Nettipakaraṇa, where Nett 15,20 defines nāma to be phassapañcamakā dhammā, thereby corresponding to the definition given at <a href="../../mn/mn9.html">MN 9</a>, but then Nett 78,2 adds citta to these five, thus counting six factors, and Nett 41,16 identifies nāma with the four immaterial aggregates: nāmakāyo cattāro arūpino khandhā. Windisch 1908: 40 notes that a passage in the Muṇḍaka Upaniṣad 3.2.8 speaks of rivers losing their nāma-rūpa when flowing into the ocean, aptly illustrating the sense of nāma as “name”, cf. Radhakrishnan 1953/1992: 691: yathā nadyas syandamānās samudre astam gacchanti nāma-rūpe vihāya. For a discussion of the pre-Buddhist use of the concept nāma-rūpa cf. also Hamilton 1996: 121-137, Jurewicz 2000: 89-91, Karunaratne 2003b: 125-126, Oldenberg 1881/1961: 377 (note 21), and Wayman 1982/1984; on nāma alone cf. Werner 1977/1998: 56-57. Regarding the sense conveyed by the definition of nāma in <a href="../../mn/mn9.html">MN 9</a> at MN I 53,11, Ñāṇananda 2003: 5 provides the illustrative example of a small child still unable to understand language who, on getting a rubber ball for the first time, will smell it, feel it, perhaps try to bite it, then roll it around and finally understand that it is a toy. He explains that “the child has recognised the rubber ball ... by those factors included under ‘name’ in nāma-rūpa, namely feeling, perception, intention, contact and attention. This shows that the definition of nāma ... takes us back to the most fundamental notion of ‘name’, to something like its prototype”. Reat 1987: 16-17 sums up that nāma-rūpa, as the “objective counterpart of viññāṇa”, stands for “the conceptual and apparitional aspects of any individual object”. Regarding rūpa, de Silva 2004: 56 comments that “rūpa is a mental image associated with kāya, but at the same time distinct from it”, that is, “rūpa is the image, like one’s photograph, kāya is the actual physical body”.</span></span></span></p>
+<p>The Sammādiṭṭhi-sutta and its parallels continue their exposition similarly by relating the three types of formation to the arising and cessation of ignorance, the first link of dependent arising.<span class="note" id="mn9n222"><span class="details"><span class="p">[n.222] <a href="../../mn/mn9.html">MN 9</a> at MN I 54,10, <a href="../../parallels/ma29.html">MĀ 29</a> at T I 464b1, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a27, and S 474 folio 17R11 in Tripāṭhī 1962: 53.</span></span></span> The Pāli version at this point traces the arising of ignorance to the arising of the influxes, followed by relating the arising of the influxes in turn to the arising of ignorance.<span class="note" id="mn9n223"><span class="details"><span class="p">[n.223] <a href="../../mn/mn9.html">MN 9</a> at MN I 54,27: āsavasamudayā avijjāsamudayo, followed at MN I 55,11 by: avijjāsamudayā āsavasamudayo. A similar reciprocal conditional relationship obtains between consciousness and name-andform according to <a href="../../dn/dn15.html">DN 15</a> at DN II 56,23 and its Chinese parallels <a href="../../parallels/da13.html">DĀ 13</a> at T I 61b13, <a href="../../parallels/ma97.html">MĀ 97</a> at T I 579c22, T 14 at T I 243b24, and T 52 at T I 845b11.</span></span></span> As one of the influxes is the influx of ignorance, this reciprocal conditioning of the influxes and ignorance involves some degree of circularity, as in this way the influx of ignorance becomes responsible for ignorance and ignorance becomes responsible for the influx of ignorance. The implication of this presentation could be to highlight the tendency of ignorance to perpetuate itself,<span class="note" id="mn9n224"><span class="details"><span class="p">[n.224] Ñāṇavīra 1987/2001: 36 explains that “avijjā ... can have no anterior term that does not itself involve avijjā”; on avijjā in general cf. also Matilal 1980.</span></span></span> in the sense that the influx of ignorance represents the worldling’s habitual tendency to ignore the true nature of reality, a habit kept alive by its own effects, ignorant thought and action.</p>
+<p>According to the Pāli commentary, the reciprocal conditioning relationship between ignorance and the influxes represents the cyclic nature of saṃsāric existence, where no beginning point can be discerned at which ignorance came into being.<span class="note" id="mn9n225"><span class="details"><span class="p">[n.225] Ps I 224,13.</span></span></span> The impossibility of finding such a beginning point is mentioned in several other discourses.<span class="note" id="mn9n226"><span class="details"><span class="p">[n.226] <a href="../../sn/sn15.1.html">SN 15:1</a> at SN II 178,8, <a href="../../sn/sn22.99.html">SN 22:99</a> at SN III 149,25, and <a href="../../an/an10.61.html">AN 10:61</a> at AN V 113,1. A similar statement recurs also in Sanskrit fragments of two Ekottarika-āgama discourses in Tripāṭhī 1995: 143,5 and 144,8: pūrvā koṭir na prajñāyate duḥkasya, and in the Divyāvadāna, cf. Cowell 1886: 197,17 or Vaidya 1999: 122,19; for a Jain parallel cf. Bollée 1974: 27-28.</span></span></span> One of these discourses indicates that ignorance is conditionally dependent on the hindrances, a proposition similar in kind to the Sammādiṭṭhi-sutta’s tracing of the arising of ignorance to the arising of the influxes.<span class="note" id="mn9n227"><span class="details"><span class="p">[n.227] <a href="../../an/an10.61.html">AN 10:61</a> at AN V 113,3: “a specific condition of ignorance can be made known ... what is the nutriment for ignorance? The five hindrances”, paññāyati idappaccayā avijjā ... ko cāhāro avijjāya? pañca nīvaraṇā. <a href="../../sn/sn35.79.html">SN 35:79</a> at SN IV 50,1 even goes so far as to propose that by eradicating ignorance, ignorance will be eradicated, avijjā ... eko dhammo yassa pahānā ... avijjā pahīyati (Se-SN IV 62,14: pahiyyati); cf. also the comment in Net 79: avijjā avijjāya hetu, as well as in the ‘Path to Liberation’ (Vimuttimagga/解脫道 論), T 1648 at T XXXII 450c2: “just ignorance [itself] is the condition for ignorance”, 唯無明為 無明緣, a proposal then explained at T XXXII 450c4 by quoting the Buddha’s statement that ignorance arises due to the arising of the influxes, 如佛所說, 從漏集起無明集, which Ehara 1961/1995: 261 note 3 relates to the present passage in <a href="../../mn/mn9.html">MN 9</a> (on T 1648 cf., e.g., Anālayo 2009s, Bapat 1934, id. 1936, id. 1937b, id. 1937c, id. 1938/1939, id. 1972, Bechert 1989, Crosby 1999, Endo 1983, Hayashi 2003, id. 2004, id. 2005, Nagai 1919, Norman 1991: 43-44, and Skilling 1994c).</span></span></span></p>
+<p>At an earlier point of their exposition, the Chinese and the Sanskrit versions also relate the arising of the influxes to the arising of ignorance.<span class="note" id="mn9n228"><span class="details"><span class="p">[n.228] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a12, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94c17, and S 474 folio 17V6 in Tripāṭhī 1962: 52 agree on qualifying insight into the influxes as being “in accordance with reality”, 如真, yathābhūta, a qualification absent from the corresponding exposition in <a href="../../mn/mn9.html">MN 9</a> at MN I 55,4. This absence could be significant, as the present exposition is only concerned with the right view of stream-entry. Other Pāli discourses use the qualification yathābhūta when describing the deeper degree of insight into the influxes that leads to full awakening, cf. <a href="../../dn/dn2.html">DN 2</a> at DN I 84,4, <a href="../../dn/dn10.html">DN 10</a> at DN I 209,12, <a href="../../mn/mn4.html">MN 4</a> at MN I 23,17, <a href="../../mn/mn19.html">MN 19</a> at MN I 117,18, <a href="../../mn/mn27.html">MN 27</a> at MN I 183,30, <a href="../../mn/mn36.html">MN 36</a> at MN I 249,10, <a href="../../mn/mn39.html">MN 39</a> at MN I 279,25, <a href="../../mn/mn51.html">MN 51</a> at MN I 348,27, <a href="../../mn/mn65.html">MN 65</a> at MN I 442,14, <a href="../../mn/mn76.html">MN 76</a> at MN I 522,24, <a href="../../mn/mn79.html">MN 79</a> at MN II 38,37, <a href="../../mn/mn94.html">MN 94</a> at MN II 162,9, <a href="../../mn/mn100.html">MN 100</a> at MN II 212,17, <a href="../../mn/mn101.html">MN 101</a> at MN II 227,1, <a href="../../mn/mn112.html">MN 112</a> at MN III 36,21, <a href="../../mn/mn125.html">MN 125</a> at MN III 136,31, <a href="../../an/an3.58.html">AN 3:58</a> at AN I 165,13, <a href="../../an/an4.198.html">AN 4:198</a> at AN II 211,14, <a href="../../an/an5.75.html">AN 5:75</a> at AN III 93,11, and <a href="../../an/an8.11.html">AN 8:11</a> at AN IV 178,32. Although knowledge that is yathābhūta is certainly also relevant to the attainment of stream-entry (cf., e.g., the exposition of dassana suvisuddha in <a href="../../sn/sn35.204.html">SN 35:204</a> at SN IV 192,1, which Spk III 55,8 explains to stand for stream-entry; or the description of diṭṭhipārisuddhi in <a href="../../an/an4.194.html">AN 4:194</a> at AN II 195,28, a description which <a href="../../an/an4.196.html">AN 4:196</a> at AN II 202,22 employs for the sammādiṭṭhi of an ariyasāvaka), it seems that when this qualification is employed in relation to insight into the influxes its implications are full awakening. From this viewpoint, then, the absence of the qualification “in accordance with reality” in the present passage in <a href="../../mn/mn9.html">MN 9</a> would fit the context better than its Chinese and Sanskrit counterparts.</span></span></span> Neither at that point, nor in the present passage, however, do they specify a cause for the arising of ignorance.</p>
+<p>The Madhyama-āgama version concludes its series of questions and answers with a final inquiry into what still needs to be done once ignorance has been eradicated, which meets with the reply that nothing more needs to be done at that point.<span class="note" id="mn9n229"><span class="details"><span class="p">[n.229] <a href="../../parallels/ma29.html">MĀ 29</a> at T I 464b11.</span></span></span> The Saṃyuktaāgama discourse and the Sanskrit version come to a similar conclusion, reporting that once Mahākoṭṭhita was told that formations arise due to ignorance, he kept on asking if there could still be another way of having right view.<span class="note" id="mn9n230"><span class="details"><span class="p">[n.230] <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95b5 and S 474 folio 18V4 in Tripāṭhī 1962: 54.</span></span></span> Sāriputta replied that since at this point ignorance has vanished and knowledge has arisen, Mahākoṭṭhita was pushing his line of questioning too far.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

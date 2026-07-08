@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 47 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 47: Vīmaṃsaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn46comp.html#content"></a><a id="next-sutta" href="./mn48comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn47.html">MN 47</a> / <a href="../../parallels/ma186.html">MĀ 186</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Vīmaṃsaka-sutta, the “discourse on the inquirer”, describes how to undertake a thorough examination of the Buddha’s claim to being an awakened teacher. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn47n131"><span class="details"><span class="p">[n.131] The parallel is <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731a-732a and has the title “discourse on investigating [for the sake of] understanding”, 求解經, a brief survey of <a href="../../mn/mn47.html">MN 47</a> can be found in Anālayo 2009p, a translation of <a href="../../parallels/ma186.html">MĀ 186</a> can be found in id. 2010l. While <a href="../../mn/mn47.html">MN 47</a> takes place at Jeta’s Grove by Sāvatthī, <a href="../../parallels/ma186.html">MĀ 186</a> has Kammāsadhamma in the Kuru country as its location. Skilling 1997a: 341 notes a reference to a version of the present discourse in an uddāna preserved in Śamathadeva’s commentary on the Abhidharmakośabhāṣya at D (4094) mngon pa, ju 235b4 or Q (5595) tu 269a5. This reference has the reading rjes [su] ’brang [ba], which would correspond to anveṣaṇā and thus result in the title of the discourse referring to “investigating”.</span></span></span></p>
+<p>The Vīmaṃsaka-sutta and its parallel begin in similar ways by suggesting that a monk, who does not have telepathic powers,<span class="note" id="mn47n132"><span class="details"><span class="p">[n.132] While Ee-MN I 317,25 reads ājānantena, Be-M I 391,6, Ce-M I 744,9, and Se-M I 576,6 read ajānante- na, which the context indicates to be the preferable reading, pace Premasiri 2006b: 232-234, in fact the corresponding passage in <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731b3 speaks of “not knowing”, 不知.</span></span></span> should examine the Buddha by way of external observation in order to find out if the Buddha’s mental states were defiled, mixed, or pure.<span class="note" id="mn47n133"><span class="details"><span class="p">[n.133] A small difference is that in <a href="../../mn/mn47.html">MN 47</a> until MN I 318,22 the monk refers to the Buddha with the epithet Tathāgata, but from MN I 318,25 onwards he refers to the Buddha as “this venerable one”, ayam āyasma. <a href="../../parallels/ma186.html">MĀ 186</a> is more consistent in this respect, since in its version the monk throughout refers to the Buddha as “this venerable one”, 彼尊者.</span></span></span> According to both versions, the result of such an inquiry will be that only clean states are found in the Buddha.</p>
+<p>The Majjhima-nikāya discourse continues by investigating whether the Buddha had “attained” this wholesome dharma a long time ago or only recently.<span class="note" id="mn47n134"><span class="details"><span class="p">[n.134] <a href="../../mn/mn47.html">MN 47</a> at MN I 318,23: dīgharattaṃ samāpanno ... udāhu ittarasamāpanno ti, which Ps II 382,5 explains to mean “since a long time ... or else ... yesterday”, cirakālato paṭṭhāya ... udāhu ... hiyyo.</span></span></span> The Madhyamaāgama version instead examines whether the Buddha has been “practicing” this dharma for a long time or if he only practices it temporarily.<span class="note" id="mn47n135"><span class="details"><span class="p">[n.135] <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731b19: 為長夜行此法, 為暫行. The use of 行 in <a href="../../parallels/ma186.html">MĀ 186</a> does not seem to be just a free translation of an equivalent to the expression samāpanna found in the Pāli passage, since other occurrences of the verb samāpajjati or its past participle samāpanna in the Majjhima-nikāya have their counterparts in 入 or 得 in their Madhyama-āgama parallels, cf. <a href="../../mn/mn43.html">MN 43</a> at MN I 296,12: samāpanno and <a href="../../parallels/ma210.html">MĀ 210</a> at T I 789a11: 入, <a href="../../mn/mn50.html">MN 50</a> at MN I 333,24: samāpannaṃ and <a href="../../parallels/ma131.html">MĀ 131</a> at T I 620c22: 入, <a href="../../mn/mn79.html">MN 79</a> at MN II 37,26: samāpajjati and <a href="../../parallels/ma208.html">MĀ 208</a> at T I 786a16: 得, <a href="../../mn/mn106.html">MN 106</a> at MN II 262,15: samāpajjati and <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b22: 得, <a href="../../mn/mn136.html">MN 136</a> at MN III 207,14: samāpanno and <a href="../../parallels/ma171.html">MĀ 171</a> at T I 706b22: 入. This suggests that the original on which the translation of <a href="../../parallels/ma186.html">MĀ 186</a> was based had a different verb at this point of its exposition. Hirakawa 1997: 1043 lists a broad range of possible equivalents to 行, which, however, does not comprise samāpad.</span></span></span> Judging from this slightly different formulation, the point at stake in the Madhyama-āgama version would not be how long ago the Buddha had attained awakening, but whether he was consistent in his conduct.</p>
+<p>In fact, the question whether the Buddha is fully awakened or not would not depend on how long he has been awakened. This much can be seen in a discourse found in the Saṃyutta-nikāya, together with its Chinese and Sanskrit parallels. The different versions of this discourse agree that the Buddha once explained to King Pasenadi that the level of realization of even a young monk recently gone forth should not be underestimated.<span class="note" id="mn47n136"><span class="details"><span class="p">[n.136] <a href="../../sn/sn3.1.html">SN 3:1</a> at SN I 69,6 (or SN2 112 at SN2 I 158,12), <a href="../../parallels/sa1226.html">SĀ 1226</a> at T II 335a2, <a href="../../parallels/sa-2.53.html">SĀ2 53</a> at T II 391c17, and the corresponding section from the Saṅghabhedavastu in Gnoli 1977: 182,17.</span></span></span> The reason for this declaration is closely related to the present instance, since Pasenadi had expressed doubts about the Buddha’s claim to be fully awakened, due to the Buddha’s young age at the time when their meeting took place. Thus according to this discourse, to query whether the Buddha had only recently attained awakening would not be a valid criterion for verifying his realization.</p>
+<p>The Vīmaṃsaka-sutta continues by investigating if the Buddha had acquired fame without succumbing to the dangers that result from becoming famous.<span class="note" id="mn47n137"><span class="details"><span class="p">[n.137] <a href="../../mn/mn47.html">MN 47</a> at MN I 318,29.</span></span></span> The Madhyama-āgama version instead indicates that the Buddha’s practice of meditation was not motivated by desire for fame or profit.<span class="note" id="mn47n138"><span class="details"><span class="p">[n.138] <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731b22: 不為名譽, 不為利義, 入此禪.</span></span></span> Hence, although the two versions agree that the Buddha was beyond the attraction of fame, they present this in a slightly different manner, as the Madhyama-āgama version does not even envisage the possibility that the Buddha could succumb to such dangers and instead highlights the meditative life style of the Buddha.</p>
+<p>The two versions continue by indicating that the external behaviour of the Buddha was not influenced by fear, but was an expression of his aloofness from sensuality.</p>
+<p>The Vīmaṃsaka-sutta notes that the Buddha, whether dwelling alone or in company, did not despise anyone, even those who behaved badly and were concerned with material things. In the Madhyama-āgama version this passage appears to have suffered from some transmission or translation error, although it could be based on a similar original.<span class="note" id="mn47n139"><span class="details"><span class="p">[n.139] The passage in <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731c1 refers to those who are “well-gone”, 善逝, which corresponds to sugata at MN I 319,13; it mentions the activity of “teaching”, 化, which could correspond to “those who teach”, anusāsanti, mentioned at MN I 319,13; it refers to “material things”, 食, corresponding to āmisa at MN I 319,14 (cf., e.g., <a href="../../parallels/ma98.html">MĀ 98</a> at T I 583c28, where 食 corresponds to sāmisa in <a href="../../mn/mn10.html">MN 10</a> at MN I 59,16); and it concludes by mentioning “not knowing”, 不知, which could be due to the translator mistaking ava-√jñā <i>“</i>to despise”, at MN I 319,15, for a+√jñā. Hence it seems that the main points made in <a href="../../mn/mn47.html">MN 47</a> can be discerned in the Chinese translation.</span></span></span></p>
+<p>The two versions continue by describing how an investigating monk disciple will directly question the Buddha on the latter’s mental purity. In the Majjhima-nikāya version, the Buddha declares that he does not identify with his purity, a statement not found in the Madhyama-āgama parallel.<span class="note" id="mn47n140"><span class="details"><span class="p">[n.140] <a href="../../mn/mn47.html">MN 47</a> at MN I 319,31: no ca tena tammayo.</span></span></span></p>
+<p>According to the Vīmaṃsaka-sutta and its parallel, the culmination of this inquiry is reached once the disciple acquires direct knowledge of the Dharma, at which point such a disciple will be firmly convinced that the Buddha is indeed fully awakened. Faith rooted in vision in this way, the two versions conclude, cannot be shaken by anyone in the world.<span class="note" id="mn47n141"><span class="details"><span class="p">[n.141] <a href="../../mn/mn47.html">MN 47</a> at MN I 320,18 speaks of “reasonable faith rooted in vision”, ākāravatī saddhā dassanamūlikā, which <a href="../../parallels/ma186.html">MĀ 186</a> at T I 732a5 expresses as “faith rooted in vision that is indestructible [because it is] united with knowledge”, 信見本, 不壞, 智相應.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

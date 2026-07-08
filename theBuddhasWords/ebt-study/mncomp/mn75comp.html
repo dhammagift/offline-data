@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 75 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 75: Māgandiya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn74comp.html#content"></a><a id="next-sutta" href="./mn76comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn75.html">MN 75</a> / <a href="../../parallels/ma153.html">MĀ 153</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Māgandiya-sutta, the “discourse to Māgandiya”, examines the disadvantages of sensual pleasures.<span class="note" id="mn75n89"><span class="details"><span class="p">[n.89] The title Māgandiya-sutta recurs for a discourse in the Sutta-nipāta, Sn 4:9 at Sn 835-847, whose protagonist Māgandiya unsuccessfully attempts to offer his beautiful daughter to the Buddha. Ps III 209,23 explains that the wanderer Māgandiya of <a href="../../mn/mn75.html">MN 75</a> was the nephew of the Māgandiya in Sn 4:9 at Sn 835- 847. According to Pj II 543,2, the Māgandiya in Sn 4:9 was a Brahmin, according to a parallel in the Divyāvadāna in Cowell 1886: 515,14, or in Vaidya 1999: 446,3, this Māgandiya (spelled Mākandika) was also a wanderer; the same holds for a Sanskrit fragment counterpart to Sn 4:9 in Hoernle 1916: 714- 715, where fragment IIIr1 reads māgandikasya parivrājakasya, cf. also fragment IIr5. <a href="../../sn/sn22.3.html">SN 22:3</a> at SN III 12,20 refers to the Sutta-nipāta version of the Māgandiya-sutta as the Māgandiyapañha from the Aṭṭhakavagga.</span></span></span> This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn75n90"><span class="details"><span class="p">[n.90] The parallel is <a href="../../parallels/ma153.html">MĀ 153</a> at T I 670a-673a, which agrees with <a href="../../mn/mn75.html">MN 75</a> on locating the discourse in the Kuru country and also uses the name of the main protagonist as the title, 鬚閑提經, although the Indic name of the visitor to the Buddha would have been different (Pulleyblank 1991: 304, 335, and 348 gives su& γε<i>:n</i> <i>d</i>ε<i>j</i> as the Early Middle Chinese pronunciation of 鬚閑提). For a summary account of the beginning and concluding sections of <a href="../../parallels/ma153.html">MĀ 153</a> cf. Minh Chau 1964/1991: 61-62 and 185.</span></span></span></p>
+<p>The Māgandiya-sutta and its Madhyama-āgama parallel describe in similar ways how the wanderer Māgandiya chanced upon a place prepared for the Buddha to stay overnight. On being told by the Brahmin landlord that this place was meant for the Buddha, Māgandiya expressed his displeasure by calling the Buddha a “destroyer”.<span class="note" id="mn75n91"><span class="details"><span class="p">[n.91] <a href="../../mn/mn75.html">MN 75</a> at MN I 502,15: bhūnahuno (Se-MN II 271,3: bhūnahanassa), a “destroyer of beings” or a “destroyer of growth”, with its counterpart in <a href="../../parallels/ma153.html">MĀ 153</a> at T I 670b17: 壞敗地 (at T I 670b24: 敗壞地); a reference to the present discourse in Mil 314,1 reads bhūtahacco. Bodhi in Ñāṇamoli 1995/2005: 1281 note 740 draws attention to the commentarial gloss at Ps III 211,4 as hatavaḍḍhino, “destroyer of increase”, and mariyādakārakassa, “maker of limitations”, in support of taking bhūnahuno to refer to the destruction of “growth”. According to Barua 1921/1981: 355, “Māgaṇḍiya judged Buddha to be an exterminator of the human race”. Bhagwat 1946: 64 explains that “the word means ‘one who destroys (or suppresses) by his teachings the essential nature of Beings, which consists of their primary and fundamental instincts and emotions’”. Horner 1946: 287 understands the term to refer to “a slayer of creatures, or ‘rigid repressionist’”, Horner 1957/1970: 181 then translates the term as “destroyer of growth”, while Law 1931/2004b: 97 glosses it as a “killer of the embryo” and id. 1933: 141 takes the term as referring to a “repressionist”, as does Chalmers 1926: 354, adding the qualification “rigid”. Saksena 1936: 713 notes that “būnaha most certainly corresponds to Skt. bhrūṇahan-, bhrūṇaghna- ‘the killer of an embryo, one who produces abortion’”; cf. also Alsdorf 1965: 46-47 and Norman 2004: 81. Vetter 2000: 132 note 45 explains bhūnahuno to intend that “the Buddha is ... a person who prevents children from being conceived”. According to Sn 3:10 at Sn 664, the Buddha used the same expression in regard to Kokālika, a follower of Devadatta.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, Māgandiya asserted that he would repeat the same statement in the presence of the Buddha, after which the Brahmin asked Māgandiya’s permission to report the term used by Māgandiya to the Buddha.<span class="note" id="mn75n92"><span class="details"><span class="p">[n.92] <a href="../../mn/mn75.html">MN 75</a> at MN I 502,20.</span></span></span> The Madhyama-āgama discourse adopts the opposite sequence, as in its version the Brahmin first asked Māgandiya if the expression he had used may be reported to the Buddha, in reply to which Māgandiya asserted that he would have no qualms to repeat the same statement himself in the presence of the Buddha.<span class="note" id="mn75n93"><span class="details"><span class="p">[n.93] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 670b21.</span></span></span> A need for the Brahmin to inform the Buddha did anyway not arise, as according to both versions the Buddha had overheard the conversation between Māgandiya and the Brahmin with his divine ear.<span class="note" id="mn75n94"><span class="details"><span class="p">[n.94] While according to <a href="../../parallels/ma153.html">MĀ 153</a> at T I 670c8 the Brahmin simply attributed the Buddha’s telepathic knowledge of the conversation between the Buddha and Māgandiya to the fact that the Buddha was fully awakened, according to <a href="../../mn/mn75.html">MN 75</a> at MN I 503,2 the Brahmin was awe struck and his hair stood on end when the Buddha made it clear that he already knew what had been said. Another difference is that while <a href="../../mn/mn75.html">MN 75</a> at MN I 502,31 simply reports that the Brahmin came to greet the Buddha and then sat down, <a href="../../parallels/ma153.html">MĀ 153</a> at T I 670c1 precedes the same with a description of the beautiful sight of the Buddha, who was just like the moon surrounded by stars, emanating a bright light like a golden mountain, 猶星 中月, 光耀煒曄, 晃若金山. This description is a recurrent pericope in the Madhyama-āgama, found in, e.g., <a href="../../parallels/ma20.html">MĀ 20</a> at T I 445b13 (parallel to <a href="../../sn/sn42.13.html">SN 42:13</a>), <a href="../../parallels/ma28.html">MĀ 28</a> at T I 460b11 (parallel to <a href="../../mn/mn143.html">MN 143</a>), and <a href="../../parallels/ma38.html">MĀ 38</a> at T I 479c18 (parallel to <a href="../../an/an8.21.html">AN 8:21</a>), <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a13 (parallel to <a href="../../mn/mn99.html">MN 99</a>), and as a description of Kassapa Buddha in <a href="../../parallels/ma63.html">MĀ 63</a> at T I 500c21 (parallel to <a href="../../mn/mn81.html">MN 81</a>). Minh Chau 1964/1991: 37 comments that this image “strikes a rather exaggerated note, unknown to the moderate attitude of early Buddhism”. Similar images are a recurrent feature in other texts. Thus, for example, in the Mahāvastu in Basak 1965: 67,8 or in Senart 1890: 47,15 the sight of the young bodhisattva seated in meditation under the Jambu tree with unmoving shadow causes his father to compare the splendour of his son to a moon surrounded by stars, śaśīva nakṣatragaṇāvakīrṇo, differing in so far as instead of a golden mountain, this passage in the Mahāvastu speaks of a sacrificial fire on a mountain top, hutāsano vā girimūrdhanasmiṃ. The Lalitavistara in Hokazono 1994: 542,2 or in Lefmann 1902: 132,13 or in Vaidya 1958b: 92,14 similarly reports that the bodhisattva’s father made use of the image of the moon surrounded by stars and of the fire on a mountain top on that occasion. The Divyāvadāna combines the simile of a sacrificial fire with that of a golden mountain in a series of images to describe the splendour of the Buddha, cf. Cowell 1886: 158,24 or Vaidya 1999: 98,9. The fire imagery recurs in ancient Indian art, where at times the first meditation under the Jambu tree is depicted with a fire representing the bodhisattva, cf. Stache-Weiske 1990: 110. The image of the moon surrounded by stars recurs again in the Mahāvastu in Basak 1965: 274,14 or in Senart 1890: 196,13 as part of a description of the bodhisattva soon after he had set out on his spiritual search, nakṣtrairiva candramāḥ, a verse preceded by comparing him to a golden post, kāṃcanastambhasadṛśo, cf. Basak 1965: 274,11 or Senart 1890: 196,10. The same image can also be found in the Mahāvastu in Basak 1968/2004: 70,23 or in Senart 1897: 115,5 in the context of the first meeting between the Buddha and his father. The image of a golden post occurs also in the Saṅghabhedavastu in Gnoli 1977: 150,1, which compares the outer appearance of the Buddha to a golden sacrificial post, suvarṇayūpam iva śriyā jvalantam, a formulation found similarly in the Divyāvadāna in Cowell 1886: 198,21 and 516,13 or in Vaidya 1999: 123,14 and 446,19.</span></span></span></p>
+<p>Soon after the Buddha had come back to the Brahmin’s place, Māgandiya came to join them. According to both versions, the Buddha inquired whether it was due to his practice of sense-restraint that Māgandiya considered him to be a “destroyer”, which Māgandiya affirmed. In the Majjhima-nikāya version, Māgandiya supported his statement by declaring that this was recorded to be so in the discourses of his tradition,<span class="note" id="mn75n95"><span class="details"><span class="p">[n.95] <a href="../../mn/mn75.html">MN 75</a> at MN I 502,22: “this comes down in our discourses”, evaṃ hi no sutte ocaratī ti (Se-MN II 271,10: evañ hi; on the term ocarati cf. PED p. 562 s.v.). That Māgandiya (spelled Māgaṇḍiya in Be and Se) could have been part of or perhaps even leader of a particular group of wanderers suggests itself from <a href="../../an/an5.298.html">AN 5:298</a> at AN III 276,32, which mentions the Māgaṇḍikas in a listing of contemporary wanderers, comprising also the Nigaṇṭhas, Jaṭilakas, Paribbājakas, etc.</span></span></span> a remark without a parallel in the Madhyama-āgama version. The Pāli commentary explains that Māgandiya made this remark to show that he had some authority on which he could rely when accusing the Buddha of being a “destroyer”.<span class="note" id="mn75n96"><span class="details"><span class="p">[n.96] Ps III 212,3.</span></span></span></p>
+<p>The Māgandiya-sutta and its Madhyama-āgama parallel continue by contrasting the enjoyment of sensual pleasures with the aloofness from their attraction that can be accomplished by going forth and overcoming sensual desire. A difference between the two versions is that the Majjhima-nikāya discourse at this point describes how the bodhisattva used to live in three mansions, spending the rainy season period in the company of female musicians.<span class="note" id="mn75n97"><span class="details"><span class="p">[n.97] <a href="../../mn/mn75.html">MN 75</a> at MN I 504,24. The Mahāvastu in Basak 1965: 161,11 or in Senart 1890: 115,8 describes in detail the furnishings of these three palaces and other supplies meant for the bodhisattva’s entertainment.</span></span></span> Such a way of life not mentioned at all in its Madhyamaāgama parallel, which only reports a statement by the Buddha that in his lay life he had had easy access to the five types of sensual pleasure.<span class="note" id="mn75n98"><span class="details"><span class="p">[n.98] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 671a24: “I obtained the five types of sensual pleasure, which I obtained easily, without difficulty”, 得五欲功德, 易不難得. Bareau 1974a: 214 compares this part of <a href="../../mn/mn75.html">MN 75</a> with <a href="../../parallels/ma153.html">MĀ 153</a> and concludes that <a href="../../parallels/ma153.html">MĀ 153</a> offers the more original presentation.</span></span></span></p>
+<p>The two versions illustrate the Buddha’s disinterest in sensual pleasures with the example of a householder who has been reborn in a celestial realm and enjoys celestial pleasures, thereby automatically losing any interest in the types of sensual pleasure this householder formerly had at his disposal, when he was still a human being.<span class="note" id="mn75n99"><span class="details"><span class="p">[n.99] In his reply to this proposition by the Buddha, according to <a href="../../parallels/ma153.html">MĀ 153</a> at T I 671b13 Māgandiya qualified human sensual pleasures to be “smelly” and “impure”, 臭 and 不淨. This does not seem to fit too well with his earlier criticism of the Buddha, which would have been based on some form of approval of their enjoyment. The same qualification fits, however, as part of the Buddha’s conclusion after the series of similes on sensual pleasures in <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672a25. This suggests that this qualification originally belonged only to the Buddha’s statement. Perhaps due to an error during the process of transmission or at the time of translation, it then also became part of Māgandiya’s statement in <a href="../../parallels/ma153.html">MĀ 153</a> at T I 671b13.</span></span></span></p>
+<p>The Māgandiya-sutta and its Madhyama-āgama parallel continue by illustrating the nature of sensual pleasures with the help of a similar series of similes concerned with a leper, although the two versions differ in regard to the sequence in which they present these similes (see table 8.3).</p>
+<table class="comparative-table">
+<caption>Table 8.3: Similes to Illustrate Sensual Pleasures in <a href="../../mn/mn75.html">MN 75</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn75.html">MN 75</a></th><th><a href="../../parallels/ma153.html">MĀ 153</a></th></tr>
+<tr><td>healed leper does not envy other leper (1)</td><td>leper cauterizes wounds over fire (→ 3)</td></tr>
+<tr><td>healed leper afraid of fire (2)</td><td>king indulges in sense-pleasures (→ 4)</td></tr>
+<tr><td>leper cauterizes wounds over fire (3)</td><td>healed leper does not envy other leper (→ 1)</td></tr>
+<tr><td>king indulges in sense-pleasures (4)</td><td>healed leper afraid of fire (→ 2)</td></tr>
+</table>
+<p>The Madhyama-āgama version begins by describing a leper who scratches his wounds and cauterises them over a fire, even though his wounds will only get worse by being scratched and cauterised. The discourse then compares this behaviour to indulging in sensual pleasures, as indulgence will likewise only increase craving for sensual pleasures. Next the Madhyama-āgama discourse illustrates the same principle with the example of a king. In spite of all the sensual gratification a king has at his command, he will not be able to experience mental peace free from desire for sensual pleasures.</p>
+<p>The Madhyama-āgama account then turns to the case of a leper whose leprosy has been healed. Such a healed leper would lose all interest in the temporary relief experienced by another leper who cauterises his wounds over a fire. Taking up the case of a healed leper again, the Madhyama-āgama version depicts how this leper, on being dragged forcefully close to a fire, will try all he can to avoid the fire.</p>
+<p>In reply to this image, Māgandiya explained that the reason the leper earlier experienced the heat of the fire as pleasant was due to his “distorted perception”.<span class="note" id="mn75n100"><span class="details"><span class="p">[n.100] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672a12: 有顛倒想, corresponding to viparītasaññā in <a href="../../mn/mn75.html">MN 75</a> at MN I 507,21.</span></span></span> In a similar way, the Madhyama-āgama version explains, beings have a distorted perception when they search for happiness through sensual pleasures, as sensual pleasures are in reality painful to touch, impure, and smelly.<span class="note" id="mn75n101"><span class="details"><span class="p">[n.101] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672a25.</span></span></span></p>
+<p>The corresponding similes in the Majjhima-nikāya version begin with the healed leper seeing another leper cauterising his wounds. Next comes the image of the healed leper who is dragged forcefully close to a fire, followed by describing how the leper’s wounds get worse by scratching and cauterising. The last image in the Majjhima-nikāya discourse then is the simile of the king.</p>
+<p>This sequence appears jumbled, since in this way the example of the king comes almost as an anticlimax after the powerful images related to the healed leper. The Madhyama-āgama version, in contrast, presents a logical build-up of the argument, as it begins by clarifying the predicament of the leper, then applies this to beings in general and to a king in particular, followed by turning to a healed leper’s attitude to the fire he had formerly found so attractive, an attitude it presents in an ascending series by proceeding from his disinterest in using the fire for cauterisation to his actual fear of being forcefully dragged to the fire.</p>
+<p>According to both versions, the Buddha concluded his exposition with a stanza in praise of health as the highest gain and Nirvāṇa as the highest happiness.<span class="note" id="mn75n102"><span class="details"><span class="p">[n.102] <a href="../../mn/mn75.html">MN 75</a> at MN I 508,30: ārogya paramā labhā, nibbānaṃ paramaṃ sukhaṃ, <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672a28: 無病第一利, 涅槃第一樂. The same indications recur at the beginning and end of a verse in the Dhammapada, Dhp 204a+d, with parallels in stanza 162a+d of the Gāndhārī Dharmapada in Brough 1962/ 2001: 145, stanza 76 a+d of the Patna Dharmapada in Cone 1989: 123 or in Roth 1980b: 104, verse 26:6 a+d in the Sanskrit and Tibetan Udāna-(varga) in Bernhard 1965: 319 (stanza 355 in Nakatani 1987: 73 has only preserved the second section) and Beckh 1911: 86 or Zongtse 1990: 257; cf. also the first and last lines in the stanzas in T 210 at T IV 573a27, T 212 at T IV 732a13, and T 213 at T IV 790b26.</span></span></span> Māgandiya expressed his approval of the stanza spoken by the Buddha, as this stanza was also known in his tradition. Being asked by the Buddha what he took to be Nirvāṇa, Māgandiya pointed to his body in reply, proclaiming this to be health and Nirvāṇa.<span class="note" id="mn75n103"><span class="details"><span class="p">[n.103] <a href="../../mn/mn75.html">MN 75</a> at MN I 509,10 and <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672b6. This type of view forms the first of a set of five views on “Nirvāṇa here and now” listed in the Brahmajāla-sutta and its parallels, cf. <a href="../../dn/dn1.html">DN 1</a> at DN I 36,23, <a href="../../parallels/da21.html">DĀ 21</a> at T I 93b17, and the Tibetan version in Weller 1934: 58,1.</span></span></span> According to the Majjhima-nikāya version, he explained his proposition further by indicating that he was healthy and happy.<span class="note" id="mn75n104"><span class="details"><span class="p">[n.104] <a href="../../mn/mn75.html">MN 75</a> at MN I 509,11: “this is that Nirvāṇa: I am now healthy and happy, nothing afflicts me”, idaṃ taṃ nibbānaṃ, ahaṃ ... etarahi arogo sukhī, na maṃ kiñci ābādhatī ti (Be-MN II 176,23, Ce-MN II 298,27, and Se-MN II 281,17: idan, Be also: ahañ (hi), Ce: ābādhayatī).</span></span></span></p>
+<p>The Māgandiya-sutta and its Madhyama-āgama parallel report that the Buddha was quick to point out that Māgandiya had misunderstood the nature of Nirvāṇa, a misunderstanding similar to a blind man who has been cheated into wearing a dirty and soiled garment, believing it to be clean and spotless. The Buddha then repeated his stanza on health as the highest gain and Nirvāṇa as the highest happiness together with another stanza, in which he drew attention to the eightfold path as the best of paths, since it will safely lead to the deathless.<span class="note" id="mn75n105"><span class="details"><span class="p">[n.105] <a href="../../mn/mn75.html">MN 75</a> at MN I 510,10: aṭṭhaṅgiko ca maggānaṃ, khemaṃ amatagāminan ti, <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672b24: 諸道八正道, 住安隱甘露 (with a 聖 variant reading 往 instead of 住).</span></span></span></p>
+<p>While in the Madhyama-āgama version this is the first time the Buddha pronounces the second stanza on the eightfold path, according to the Majjhima-nikāya version he had already done so when speaking the stanza on Nirvāṇa as the highest happiness for the first time.</p>
+<p>When evaluating this difference, the reference to the eightfold path would not be required for the first utterance of the stanza on Nirvāṇa as the highest happiness, which led to the discussion with Māgandiya on the nature of Nirvāṇa. If the Buddha had at that point already mentioned the need of the noble eightfold path in order to reach Nirvāṇa, one would not expect Māgandiya to assert self-confidently a type of Nirvāṇa that obviously does not require any such path.</p>
+<p>At the present junction of events, however, when the point is to clarify that Māgandiya’s notion of Nirvāṇa is mistaken, a reference to the noble eightfold path fits the context well, thereby indicating that a path of practice is required to attain this Nirvāṇa. This hint seems to have had its effect, since in both versions Māgandiya requests that the Buddha teaches him how he might get a vision of Nirvāṇa. This request would have been caused by the fact that the Buddha has just highlighted the need for a path to Nirvāṇa. In view of this, the Madhyama-āgama presentation suits the progression of ideas well, in the sense that at first the Buddha only spoke a stanza on Nirvāṇa. When Māgandiya had expressed his misunderstanding of the nature of Nirvāṇa, however, the Buddha also brought up the noble eightfold path.</p>
+<p>If this should be the more original version, then the Majjhima-nikāya version’s presentation could easily be the result of a transmission error, as during the course of oral tradition a reciter might accidentally employ the full version of the stanza at the earlier point, where originally only the lines on Nirvāṇa and health were required.</p>
+<p>The Majjhima-nikāya and Madhyama-āgama versions agree that the Buddha replied to Māgandiya’s request to be led to Nirvāṇa with the simile of a blind man. While the Madhyama-āgama discourse only notes that someone born blind would not be able to see colours, the Majjhima-nikāya presentation of the same simile also describes an unsuccessful attempt to cure the blind man.<span class="note" id="mn75n106"><span class="details"><span class="p">[n.106] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672c8 and <a href="../../mn/mn75.html">MN 75</a> at MN I 509,14. Hoffman 1987: 401 notes that the simile of the blind man who is cheated into accepting something on faith in <a href="../../mn/mn75.html">MN 75</a> at MN I 509,31 shows that from an early Buddhist viewpoint “having saddhā is not always regarded as a good thing”.</span></span></span> The two versions continue by describing a successful attempt to cure the blind man, who once healed will realize that he had been cheated into wearing a dirty and soiled garment, believing it to be clean and spotless.</p>
+<p>The Majjhima-nikāya version applies this image to the five aggregates, indicating that with the vision of Nirvāṇa, Māgandiya would similarly realize that by grasping at the five aggregates he has just been cheating himself, a passage not found in its Madhyama-āgama parallel. Instead, the Madhyama-āgama version notes that the blind man, once he has been healed, would be able to see his dirty garment for what it really is. Similarly, by purifying the noble eye of wisdom, Māgandiya would be able to see Nirvāṇa for himself.<span class="note" id="mn75n107"><span class="details"><span class="p">[n.107] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672c14: 若汝聖慧眼得淨者, 汝便自知 ... 此是涅槃.</span></span></span></p>
+<p>In order for Māgandiya to acquire a vision of Nirvāṇa, according to the Majjhima-nikāya version he should fulfill the following requirements:</p>
+<ul>
+<li>frequent worthy men,</li>
+<li>listen to the Dharma,</li>
+<li>practise accordingly.<span class="note" id="mn75n108"><span class="details"><span class="p">[n.108] <a href="../../mn/mn75.html">MN 75</a> at MN I 512,6: “you should frequent true men ... hear the right Dharma .... [and] practise in accordance with the Dharma”, sappurise bhajeyyāsi ... saddhammaṃ sossasi ... dhammānudhammaṃ paṭipajjissasi.</span></span></span></li>
+</ul>
+<p>The Madhyama-āgama version presents the same in a fourfold manner, as it adds the need for proper attention to the three aspects mentioned in the Majjhima-nikāya version.<span class="note" id="mn75n109"><span class="details"><span class="p">[n.109] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672c28 speaks of 四種法, which are “associating in a respectful and receptive manner with good friends, hearing the good Dharma, giving proper attention, and advancing in the Dharma in accordance with the Dharma”, 親近善知識恭敬承事, 聞善法, 善思惟, 趣向法次法.</span></span></span> Other Pāli discourses similarly stipulate these four requirements for being able to reach various stages of awakening.<span class="note" id="mn75n110"><span class="details"><span class="p">[n.110] <a href="../../dn/dn33.html">DN 33</a> at DN III 227,3, <a href="../../sn/sn55.5.html">SN 55:5</a> at SN V 347,19, <a href="../../sn/sn55.50.html">SN 55:50</a> at SN V 404,10, and <a href="../../sn/sn55.55.html">SN 55:55</a> at SN V 411,1 list association with worthy men, hearing the Dharma, proper attention, and practice in accordance with the Dharma as the four factors that lead to stream-entry. <a href="../../sn/sn55.56.html">SN 55:56</a>-58 at SN V 411 present the same four as the path to the higher stages of awakening. <a href="../../sn/sn55.59.html">SN 55:59</a>-74 at SN V 411-413 indicate that these four factors lead to all types of wisdom, cf. also <a href="../../an/an4.246.html">AN 4:246</a> at AN II 245,22. In contrast to this frequent occurrence of the set of all four, <a href="../../mn/mn75.html">MN 75</a> appears to be the only instance where proper attention, yoniso manasikāra, is not mentioned. A Sanskrit fragment of the Daśottara-sūtra, S 486V4 in Mittal 1957: 32 (cf. also the reconstruction on p. 58), also mentions y[o]niśo manas[i]kāraḥ, although differing in as much as here it forms part of only three factors, the other two being frequenting worthy men and listening to the Dharma. On yoniso manasikāra cf. also Anālayo 2009y.</span></span></span></p>
+<p>According to the Madhyama-āgama account, the Buddha thereon gave an exposition of the four noble truths, during which Māgandiya attained stream-entry.<span class="note" id="mn75n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/ma153.html">MĀ 153</a> at T I 673a16.</span></span></span></p>
+<p>The Majjhima-nikāya version instead reports a teaching given by the Buddha on dependent arising in its cessation mode.<span class="note" id="mn75n112"><span class="details"><span class="p">[n.112] According to <a href="../../mn/mn75.html">MN 75</a> at MN I 512,13, by undertaking practice in accordance with the Dharma, Māgandiya would come to know by himself how the cessation of clinging leads via the cessation of becoming and birth to the cessation of dukkha.</span></span></span> The Majjhima-nikāya version also differs in so far as it does not record that Māgandiya became a stream-enterer during this exposition. The two versions agree, however, that Māgandiya requested ordination,<span class="note" id="mn75n113"><span class="details"><span class="p">[n.113] While in <a href="../../mn/mn75.html">MN 75</a> at MN I 512,26 the Buddha replied to this request by indicating that followers of a different tradition need to undergo a probation period of four months, in <a href="../../parallels/ma153.html">MĀ 153</a> at T I 673a21 the Buddha readily ordained Māgandiya by saying “welcome monk, practise the holy life”, 善來比丘, 修行 梵行. Pāli instances of this short form of ordination, the ehi bhikkhu upasampadā, can be found, for example, in Vin I 12,23 or at <a href="../../tha/tha12.html#p625">Th 625</a>; on such early form of ordination as a combination of what later were the two stages of going forth and higher ordination, cf. also, e.g., Bhagvat 1939: 131, Dhirasekera 1982/2007: 222, Dutt 1924/1996: 147, Gokuldas 1955: 41, Gombrich 1984b: 42, and Upasak 1975: 138. For Māgandiya to have changed his earlier attitude towards the Buddha to such an extent as to request ordination, it would fit the context for him to attain stream-entry during the delivery of the discourse, as reported in <a href="../../parallels/ma153.html">MĀ 153</a>.</span></span></span> and that, after having been ordained, he eventually became an arahant.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

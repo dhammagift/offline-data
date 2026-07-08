@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 69 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 69: Gulissāni-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn68comp.html#content"></a><a id="next-sutta" href="./mn70comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn69.html">MN 69</a> / <a href="../../parallels/ma26.html">MĀ 26</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Gulissāni-sutta, the “discourse to Gulissāni”, records an instruction by Sāriputta on proper behaviour for a forest monk who visits a monastic community. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn69n177"><span class="details"><span class="p">[n.177] The parallel is <a href="../../parallels/ma26.html">MĀ 26</a> at T I 454c-456a. <a href="../../parallels/ma26.html">MĀ 26</a> agrees with <a href="../../mn/mn69.html">MN 69</a> on taking the name of the monk in relation to whom the discourse was spoken as its title, 瞿尼師經, and on locating the discourse in the Squirrels’ Feeding Ground by Rājagaha. The Pāli editions show some variations in regard to the name of this monk. While Ee-MN I 469,3 and Ce-MN II 228,3 introduce him as Gulissāni, Be-MN II 133,5 gives his name as Goliyāni, and Se-MN II 214,3 as Golissāni. Minh Chau 1964/1991: 173-175 offers a comparison of the aspects of conduct listed in <a href="../../mn/mn69.html">MN 69</a> and in <a href="../../parallels/ma26.html">MĀ 26</a>; cf. also Watanabe 1983/1996: 25. De Jong 1988: 12 notes that the present discourse is referred to in the Sarvāstivāda Vinaya, T 1435 at T XXIII 301a27, as: 瞿尼沙修多羅, which he reconstructs as Goniṣādasūtra. A presentation that in some respects has affinities with sections of the Gulissāni-sutta, although being much shorter and without a comparable narrative framework (the discourse is in fact spoken by the Buddha), can be found in <a href="../../parallels/ea20.8.html">EĀ 20.8</a> at T II 600b18. For a discourse quotation in Abhidh-k-ṭ cf. below note 184.</span></span></span></p>
+<p>The Gulissāni-sutta and its Madhyama-āgama parallel relate that the forest dweller Gulissāni, a monk of lax behaviour, had come to visit the monastic community.<span class="note" id="mn69n178"><span class="details"><span class="p">[n.178] The 佛光 Madhyama-āgama edition p. 189 note 1 draws attention to the circumstance that <a href="../../parallels/ma26.html">MĀ 26</a> uses throughout the expression “no thing”, 無事, to render “forest dweller”, araññaka or araṇyaka, yet the preceding discourse <a href="../../parallels/ma25.html">MĀ 25</a> at T I 454a19 employs 阿練若 to render “forest dweller”. This could be the only occurrence of 阿練若 in the Madhyama-āgama, whereas 無事 recurs frequently in Madhyamaāgama discourses to refer to a forest dwelling (occurrences in the whole collection are too numerous to be listed, a few examples are <a href="../../parallels/ma18.html">MĀ 18</a> at T I 442a1, <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444b27, <a href="../../parallels/ma33.html">MĀ 33</a> at T I 473c24, <a href="../../parallels/ma63.html">MĀ 63</a> at T I 500a14). 阿練若 occurs, however, in several Ekottarika-āgama discourses, a collection translated by Zhú Fóniàn (竺佛念), cf. <a href="../../parallels/ea12.5.html">EĀ 12.5</a> at T II 569c14, <a href="../../parallels/ea12.6.html">EĀ 12.6</a> at T II 570a25, <a href="../../parallels/ea13.1.html">EĀ 13.1</a> at T II 571b2, <a href="../../parallels/ea25.6.html">EĀ 25.6</a> at T II 633b16, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a8, <a href="../../parallels/ea38.6.html">EĀ 38.6</a> at T II 721a1, <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734a9, and <a href="../../parallels/ea49.2.html">EĀ 49.2</a> at T II 795a26. The different ways of rendering the “forest dweller”, araññaka or araṇyaka, found in the Madhyama-āgama collection, are noteworthy in so far as they might support the suggestion by Lü 1963: 242 that the extant translation may have incorporated terms from the earlier translation of the Madhyama-āgama by Zhú Fóniàn (竺佛念), in addition to the translation vocabulary employed by Gautama Saṅghadeva (cf. also below p. 617 note 158 and p. 785 note 143). Alternatively, the present could just be an instance of a general pattern, in fact in the Dharmaguptaka Vinaya different renderings of araṇya are also used side by side, cf. Heirman 2003: 10-11.</span></span></span> The Madhyama-āgama version notes that Gulissāni was arrogant and restless, with a mind like a monkey.<span class="note" id="mn69n179"><span class="details"><span class="p">[n.179] <a href="../../parallels/ma26.html">MĀ 26</a> at T I 454c28.</span></span></span> Sāriputta was seated with a group of monks and, on seeing from afar that Gulissāni was approaching them, he took up the opportunity to address the monks on how a visiting forest dweller should behave in order to avoid censure. The theme of the proper conduct to be adopted by a visiting monk is presented in the two versions with several differences (see table 7.6). The Gulissāni-sutta and its Madhyama-āgama parallel agree, however, on the following requirements that a visiting monk should fulfil:</p>
+<ul>
+<li>be respectful,</li>
+<li>behave appropriately in regard to seats,<span class="note" id="mn69n180"><span class="details"><span class="p">[n.180] <a href="../../mn/mn69.html">MN 69</a> at MN I 469,18 indicates that an aspect of proper behaviour in regard to seats is to not “keep off” young monks from their seats, nave ca bhikkhū na āsanena paṭibāhissāmī ti. <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455c8 instead speaks of not “scolding” them, 訶, which could be due to mistaking paṭibāhati or pratibādhate, “to keep off”, for paṭibhāsati or pratibhāṣate, “to retaliate”.</span></span></span></li>
+<li>not enter the village too early or return too late,</li>
+<li>not be arrogant or agitated,<span class="note" id="mn69n181"><span class="details"><span class="p">[n.181] <a href="../../mn/mn69.html">MN 69</a> at MN I 470,9: anuddhatena bhavitabbaṃ acapalena, <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455a11 recommends to “not be agitated”, 不躁擾, and at T I 445a24 to “not be arrogant”, 不憍慠.</span></span></span></li>
+<li>not engage in loose talk,<span class="note" id="mn69n182"><span class="details"><span class="p">[n.182] While <a href="../../mn/mn69.html">MN 69</a> at MN I 470,17 recommends not being gossipy or speaking loosely, amukharena bhavitabbaṃ avikiṇṇavācena, <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455a19 recommends not to engage in “much animal talk”, 多 畜生論者, corresponding to tiracchānakathā.</span></span></span></li>
+<li>keep the senses restrained,</li>
+<li>know moderation with food,</li>
+<li>be energetic,</li>
+<li>be mindful,</li>
+<li>apply himself to the higher doctrine and discipline,<span class="note" id="mn69n183"><span class="details"><span class="p">[n.183] <a href="../../mn/mn69.html">MN 69</a> at MN I 472,5: abhidhamme abhivinaye yogo karaṇīyo, <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455c14: 當學共論律, 阿毘曇.</span></span></span></li>
+<li>apply himself to the immaterial attainments,<span class="note" id="mn69n184"><span class="details"><span class="p">[n.184] A discourse quotation with the description of the peaceful liberations, found in <a href="../../mn/mn69.html">MN 69</a> at MN I 472,14, can be found in Abhidh-k 2:15 and 8:3 in Pradhan 1967: 48,8 and 435,8 (not necessarily stemming specifically from the present discourse); cf. also T 1558 at T XXIX 17a1 and T 1559 at T XXIX 176a28, as well as Abhidh-k-ṭ at D (4094) mngon pa, ju 57a3 or Q (5595) tu 62b3.</span></span></span></li>
+<li>apply himself to the attainment of realization.<span class="note" id="mn69n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn69.html">MN 69</a> at MN I 472,25 refers to “applying oneself to superhuman states”, uttarimanussadhamme yogo karaṇīyo, an expression that would also cover deeper levels of concentration; on the term cf. also Anālayo 2008n. <a href="../../parallels/ma26.html">MĀ 26</a> at T I 456a3 speaks instead of being able to discuss “the higher knowledge of the destruction of the influxes”, 漏盡智通.</span></span></span></li>
+</ul>
+<table class="comparative-table">
+<caption>Table 7.6: Proper Conduct of a Visiting Monk According to <a href="../../mn/mn69.html">MN 69</a> and <a href="../../parallels/ma26.html">MĀ 26</a></caption>
+<tr><th><a href="../../mn/mn69.html">MN 69</a></th><th><a href="../../parallels/ma26.html">MĀ 26</a></th></tr>
+<tr><td>respectful (1)</td><td>respectful (→ 1)</td></tr>
+<tr><td>propriety with seats (2)</td><td>not joking or agitated (→ 5)</td></tr>
+<tr><td>not enter village early or return late (3)</td><td>no irrelevant talk (→ 6)</td></tr>
+<tr><td>not pay visits before or after meal (4)</td><td>not arrogant or chatty (→ 5)</td></tr>
+<tr><td>not arrogant or agitated (5)</td><td>restrain senses (→ 8)</td></tr>
+<tr><td>no loose talk (6)</td><td>moderate with food (→ 9)</td></tr>
+<tr><td>easily spoken to & cultivating good friends (7)</td><td>energetic (→ 11)</td></tr>
+<tr><td>restrain senses (8)</td><td>right mindfulness & comprehension (→ 12)</td></tr>
+<tr><td>moderate with food (9)</td><td>not enter village early or return late (→ 3)</td></tr>
+<tr><td>wakeful (10)</td><td>propriety with seats (→ 2)</td></tr>
+<tr><td>energetic (11)</td><td>Vinaya and higher Dharma (→ 15)</td></tr>
+<tr><td>mindful (12)</td><td>immaterial attainments (→ 16)</td></tr>
+<tr><td>concentrated (13)</td><td>destruction of influxes (→ 17)</td></tr>
+<tr><td>wise (14)</td><td></td></tr>
+<tr><td>higher Dharma and higher Vinaya (15)</td><td></td></tr>
+<tr><td>immaterial attainments (16)</td><td></td></tr>
+<tr><td>superhuman states (17)</td><td>(≠ 4, 7, 10, 13-14)</td></tr>
+</table>
+<p>A difference can be found between the Pāli editions in regard to the need to observe proper behaviour in regard to seats. The Burmese edition presents the need to know proper behaviour as a quality of its own, separate from the need to know proper behaviour in regard to seats,<span class="note" id="mn69n186"><span class="details"><span class="p">[n.186] Be-MN II 133,23 stipulates ābhisamācārikopi dhammo jānitabbo as its third quality, while Ee-MN I 469,22, Ce-MN II 228,16, and Se-MN II 215,3 only use this expression as part of the criticism voiced by other monks in relation to improper behaviour in regard to seats, thereby not presenting it as a separate quality. Due to this difference, the Burmese edition counts eighteen qualities, while the other Pāli editions list only seventeen. The listing in <a href="../../parallels/ma26.html">MĀ 26</a> comprises thirteen qualities.</span></span></span> a way of reckoning that appears to also be reflected in the commentary.<span class="note" id="mn69n187"><span class="details"><span class="p">[n.187] Ps III 184,6, after explaining “being skilled with seats”, turns to examine “proper behaviour”. This way of proceeding suggests that the commentary considered proper behaviour as a quality on its own, similar to the reading now found in the Burmese edition, which reckons “proper behaviour” as a separate quality.</span></span></span> In the other Pāli editions, however, both occur together as a single quality. The Madhyama-āgama version also does not present knowledge of proper behaviour as a quality separate from knowledge of proper behaviour in regard to seats.<span class="note" id="mn69n188"><span class="details"><span class="p">[n.188] <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455c7.</span></span></span></p>
+<p>An aspect of conduct mentioned in the Gulissāni-sutta that is not found in its Madhyama-āgama parallel it to avoid visiting families before and after the meal.<span class="note" id="mn69n189"><span class="details"><span class="p">[n.189] <a href="../../mn/mn69.html">MN 69</a> at MN I 469,34: na purebhattaṃ pacchābhattaṃ kulesu cārittaṃ āpajjitabbaṃ.</span></span></span> That a monk should not visit families before or after the meal might at first sight appear redundant, as both versions already mentioned the need to avoid entering the village too early or return from it too late, which seems to be of similar meaning. A closer examination of the Vinaya accounts of these two stipulations, however, shows that they differ sufficiently to merit separate mention.<span class="note" id="mn69n190"><span class="details"><span class="p">[n.190] According to Vin IV 164,13 (pācittiya rule 85), the problem caused by entering a village at the wrong time was that some unruly monks had gone to the village and participated in all kinds of worldly talk with the villagers, which let to people criticising them for behaving just like householders. Conversely, the regulation on visiting families had a different background, as according to Vin IV 98,3 (pācittiya rule 46) the problem in this case was that a particular monk had spent much time visiting families before the meal. As the host was expecting his arrival, other monks were kept waiting until time had passed and it was too late for them to have their fill. Rebuked by the Buddha, this monk had then taken to visiting families after the meal. As a result, food sent for him and other monks to the monastery could not be used, since he came back too late to be able to accept the food before noon and thereby also deprived the other monks of their share. A perusal of the same two regulations in other Vinayas supports the impression that the issue of entering a village at the wrong time and the issue of visiting families before or after the meal constitute two different aspects of a monk’s improper behaviour. Regulations corresponding to the Theravāda pācittiya rules 46 and 85 are pātayantika rules 42 and 83 in the Dharmaguptaka Vinaya, T 1428 at T XXII 665c1 and T XXII 692c26, rules 80 and 81 in the Kāśyapīya Vinaya, T 1460 at T XXIV 663b27, rules 80 and 81 in the Mahāsāṅghika Vinaya, T 1425 at T XXII 389a7 and T XXII 389c21, rules 82 and 83 in the Mahīśāsaka Vinaya, T 1421 at T XXII 69c14 and T XXII 70a18, rules 80 and 81 in the (Mūla-)Sarvāstivāda Vinaya, T 1442 at T XXIII 864c14 and T XXIII 866b7, and rules 80 and 81 in the Sarvāstivāda Vinaya, T 1435 at T XXIII 123b12 and T XXIII 124b5. Although the stories leading to these regulations differ, these Vinayas agree on presenting these issues as two different matters.</span></span></span></p>
+<p>Another difference is that the Gulissāni-sutta takes up the need for a visiting monk to be concentrated and wise, while the same two qualities are not mentioned in its parallel in the Madhyama-āgama.<span class="note" id="mn69n191"><span class="details"><span class="p">[n.191] <a href="../../parallels/ma26.html">MĀ 26</a> at T I 455b21 at this point only enjoins that such a monk “should train in right mindfulness and clear comprehension”, 當學正念及正智也. <a href="../../mn/mn69.html">MN 69</a> at MN I 471,22+28+34 lists three separate qualities: “established mindfulness should be developed”, upaṭṭhitasatinā bhavitabbaṃ (Be-MN II 136,10: upaṭṭhitassatinā), “[the quality of] being concentrated should be developed”, samāhitena bhavitabbaṃ, and “[the quality of] being wise should be developed”, paññāvatā bhavitabbaṃ.</span></span></span> Their absence from the Madhyama-āgama version does not appear to imply a major difference in perspective, as this version agrees with the Gulissāni-sutta on mentioning the need to apply oneself to the higher doctrine and discipline, to the immaterial attainments,<span class="note" id="mn69n192"><span class="details"><span class="p">[n.192] A quotation that appears to stem from a version of the present passage on the need for a forest monk to be able to discourse on the topic of the immaterial attainments can be found in the Yogācārabhūmi, cf. Delhey 2009a: 148,6 and T 1579 at T XXX 331a13.</span></span></span> and to the attainment of realization. From this perspective, although the listings in the two versions differ in formulation, the need for concentration and wisdom is taken into account in both versions.</p>
+<p>The Gulissāni-sutta and its parallel agree that Mahāmoggallāna intervened at this point and asked Sāriputta if such type of conduct should be expected only of a forest dweller. In reply, Sāriputta clarified that the same certainly applies also to a towndwelling monk.<span class="note" id="mn69n193"><span class="details"><span class="p">[n.193] <a href="../../parallels/ma26.html">MĀ 26</a> at T I 456a17 concludes with a stanza that sums up the qualities to be expected of a visiting monk. Before coming to this stanza, <a href="../../parallels/ma26.html">MĀ 26</a> reports that Sāriputta and Mahāmoggallāna rejoiced in each others’ words and departed, so that the stanza seems to be an uddāna by the reciters of the discourse.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

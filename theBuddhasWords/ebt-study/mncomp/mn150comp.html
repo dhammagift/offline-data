@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 150 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 150: Nagaravindeyya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn149comp.html#content"></a><a id="next-sutta" href="./mn151comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn150.html">MN 150</a> / <a href="../../parallels/sa280.html">SĀ 280</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Nagaravindeyya-sutta, the “discourse to those from Nagaravinda”, sets forth what makes a recluse or a Brahmin worthy of veneration. This discourse has a parallel in the Saṃyukta-āgama.<span class="note" id="mn150n118"><span class="details"><span class="p">[n.118] The parallel is <a href="../../parallels/sa280.html">SĀ 280</a> at T II 76c-77a, which agrees with <a href="../../mn/mn150.html">MN 150</a> on locating the discourse in the Kosala country. Akanuma 1929/1990: 44 gives 頻頭城, the location at which the discourse takes place, as a title for <a href="../../parallels/sa280.html">SĀ 280</a>.</span></span></span> Parts of the Nagaravindeyya-sutta have also been preserved in Sanskrit fragments.<span class="note" id="mn150n119"><span class="details"><span class="p">[n.119] SHT VI 1226 folios 15-18 (pp. 29-31), SHT X 3270+4060 (p. 20), SHT X 3273 (p. 22), and the so far unpublished SHT XI 4759b, identified by Klaus Wille (I am indebted to Klaus Wille for kindly providing me with a draft transliteration of this fragment). The fragments have preserved small parts of the whole discourse.</span></span></span></p>
+<p>The Nagaravindeyya-sutta and its Saṃyukta-āgama parallel begin by relating that the Brahmin householders of Nagaravinda had come to visit the Buddha. While the Saṃyukta-āgama simply explains that they had come because they had heard about the Buddha’s arrival in the vicinity of their village, the Majjhima-nikāya version describes in detail the good report about the Buddha and his teaching that had motivated the householders to come for a visit. The Sanskrit fragments have preserved part of this good report, indicating that the Sanskrit version was in this respect similar to the Pāli discourse.<span class="note" id="mn150n120"><span class="details"><span class="p">[n.120] SHT VI 1226 folio 15Ve: (puruṣada)[m]yasārathi śāstā d[e]va(manuṣyāṇaṃ), corresponding to <a href="../../mn/mn150.html">MN 150</a> at MN III 291,3; SHT VI 1226 folio 15Vf: (svaya)m-abhijñāya sākṣīkṛtv-o[pa]saṃpa(dya), corresponding to <a href="../../mn/mn150.html">MN 150</a> at MN III 291,3; and SHT VI 1226 folio 15Vg: (ādau ka)[ly]āṇaṃ madhye kalyāṇaṃ [pa]r[ya](vasāne kalyāṇaṃ), corresponding to <a href="../../mn/mn150.html">MN 150</a> at MN III 291,3.</span></span></span></p>
+<p>Another correspondence between the Sanskrit fragments and the Pāli version can be found in relation to their description of the behaviour of the Brahmin householders on arriving at the Buddha’s presence. While the Saṃyukta-āgama version simply notes that they bowed at his feet and sat down,<span class="note" id="mn150n121"><span class="details"><span class="p">[n.121] According to <a href="../../parallels/sa280.html">SĀ 280</a> at T II 76c7, the Brahmin householders “went to the Blessed One, bowed down with their head at his feet, and stepped back to sit on one side”, 詣世尊所, 稽首禮足, 退坐一面.</span></span></span> the Pāli version describes a set of different behaviour patterns, with some visitors paying homage to the Buddha, while others exchange greetings, or even just sit down silently. The Sanskrit fragments have preserved part of a description of these behaviour variations, shown by the Buddha’s visitors.<span class="note" id="mn150n122"><span class="details"><span class="p">[n.122] SHT VI 1226 folio 15Rc: t(e)n-āñjali praṇāmya ekānte, corresponding to <a href="../../mn/mn150.html">MN 150</a> at MN III 291,8. On this pericope cf. also above p. 452.</span></span></span></p>
+<p>This is noteworthy in so far as these Sanskrit fragments belong to a set of fragments that have preserved a whole series of discourses whose sequence corresponds closely to this section of the Saṃyukta-āgama.<span class="note" id="mn150n123"><span class="details"><span class="p">[n.123] SHT VI 1226 folios 1-24 (pp. 19-34) have preserved counterparts to <a href="../../parallels/sa273.html">SĀ 273</a>-<a href="../../parallels/sa282.html">SĀ 282</a>. The last line of the fragment parallel to the present discourse, SHT VI 1226 folio 18Rg, has preserved parts of the location given for <a href="../../parallels/sa281.html">SĀ 281</a> at T II 77a29, thereby confirming the sequence.</span></span></span> Variations in the order in which discourses are placed within a Nikāya or Āgama are usually characteristic of different reciter traditions. Thus, judging from this similarity in the sequence of a whole series of discourses, the Sanskrit parallel to the Nagaravindeyya-sutta should belong to a reciter tradition closely related to the reciter tradition whose Saṃyukta-āgama version was eventually translated into Chinese.<span class="note" id="mn150n124"><span class="details"><span class="p">[n.124] For a similar case cf. Waldschmidt 1957/1967: 291 note 2.</span></span></span></p>
+<p>According to the Nagaravindeyya-sutta and its Saṃyukta-āgama parallel, the Buddha told his visitors how they should reply on being asked what kinds of recluse or Brahmin are not worthy of veneration. A minor difference between the two versions is that, according to the Majjhima-nikāya version, those who might put such an inquiry to the householders of Nagaravinda are heterodox wanderers, while the Saṃyukta-āgama discourse attributes such a hypothetical inquiry simply to other people.<span class="note" id="mn150n125"><span class="details"><span class="p">[n.125] <a href="../../mn/mn150.html">MN 150</a> at MN III 291,13: “if, householders, heterodox wanderers should ask you”, sace vo, gahapatayo, aññatitthiyā paribbājakā evaṃ puccheyyuṃ, <a href="../../parallels/sa280.html">SĀ 280</a> at T II 76c8: “if people, asking you, should say”, 若人問汝言. The Pāli version’s reference to heterodox wanderers is to some extent unexpected, as there seems to be no need to bring in the followers of other sects in a situation where a group of householders has approached the Buddha in order to hear a discourse, all the more in view of the behaviour variations exhibited by the visitors according to the Pāli account, which depicts an audience of which a considerable part did apparently not consider themselves disciples of the Buddha. In other discourses, instructions on how to properly answer heterodox wanderers are almost always given to Buddhist monks, in order to prepare them to stand their ground in a debate situation, cf., e.g., <a href="../../dn/dn29.html">DN 29</a> at DN III 130,21, <a href="../../mn/mn11.html">MN 11</a> at MN I 64,2, <a href="../../mn/mn59.html">MN 59</a> at MN I 400,15 (= <a href="../../sn/sn36.19.html">SN 36:19</a> at SN IV 228,13), <a href="../../sn/sn35.151.html">SN 35:151</a> at SN IV 138,5, <a href="../../sn/sn36.20.html">SN 36:20</a> at SN IV 229,11, <a href="../../sn/sn45.41.html">SN 45:41</a>-48 at SN V 27-29, <a href="../../sn/sn54.11.html">SN 54:11</a> at SN V 326,3 (= <a href="../../sn/sn54.12.html">SN 54:12</a> at SN V 328,14), <a href="../../an/an3.68.html">AN 3:68</a> at AN I 199,16, <a href="../../an/an8.83.html">AN 8:83</a> at AN IV 338,9, <a href="../../an/an9.1.html">AN 9:1</a> at AN IV 351,9, and <a href="../../an/an10.58.html">AN 10:58</a> at AN V 106,12. In <a href="../../dn/dn8.html">DN 8</a> at DN I 175,1, such instructions are given to a heterodox wanderer shortly before he declares his wish to go forth as a Buddhist monk. Several discourses report that such encounters had already happened and the monks went back to the Buddha in order to learn how to answer such questions in the future, cf., e.g., <a href="../../mn/mn13.html">MN 13</a> at MN I 85,12 and <a href="../../sn/sn22.86.html">SN 22:86</a> at SN III 118,9 (= <a href="../../sn/sn44.2.html">SN 44:2</a> at SN IV 382,8), <a href="../../sn/sn35.81.html">SN 35:81</a> at SN IV 51,17, <a href="../../sn/sn45.5.html">SN 45:5</a> at SN V 7,8, <a href="../../sn/sn46.52.html">SN 46:52</a> at SN V 109,21, <a href="../../sn/sn46.54.html">SN 46:54</a> at SN V 118,20, and <a href="../../an/an10.27.html">AN 10:27</a> at AN V 50,6. In contrast to such occurrences, it is not clear why the Buddha should feel a need to teach the householders of Nagaravinda, who apparently had not yet become even his lay disciples, how to reply to questions posed by followers of other sects. From this perspective, the reference to people in general in <a href="../../parallels/sa280.html">SĀ 280</a> fits the context better, since to discuss who should be venerated and who should not be venerated could well have been a topic of conversation among laity in general.</span></span></span></p>
+<p>The Nagaravindeyya-sutta and its Saṃyukta-āgama counterpart agree that recluses and Brahmins who are still under the sway of lust in regard to experiences by way of the six senses should not be honoured. The two versions explain that such recluses and Brahmins are not worthy of respect and honour, since they are not superior to householders.<span class="note" id="mn150n126"><span class="details"><span class="p">[n.126] <a href="../../mn/mn150.html">MN 150</a> at MN III 291,18 describes such recluses and Brahmins as not being free from lust, anger, or delusion, avītarāgā avītadosā avītamohā; <a href="../../parallels/sa280.html">SĀ 280</a> at T II 76c11 speaks of them not being free from lust, desires, craving, thirst, and thoughts, 未離貪, 未離欲, 未離愛, 未離渴, 未離念, without mentioning anger or delusion. <a href="../../parallels/sa280.html">SĀ 280</a> at T II 76c26 uses the same set of qualities in its positive mode when describing recluses and Brahmins that are worthy of respect and honour. Only when describing the solitary life style of these recluses and Brahmins does <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a12 also mention their freedom from anger and delusion, 離貪 ... 離恚 ... 離癡 (a description which in <a href="../../mn/mn150.html">MN 150</a> and in <a href="../../parallels/sa280.html">SĀ 280</a> only mentions the five senses, whereas earlier both versions took up all six senses). This might be a remnant of a presentation similar to <a href="../../mn/mn150.html">MN 150</a>, since the reference to lust, anger and delusion comes up first as part of a question asked by others in reply to the earlier exposition, where it would be natural for the question to employ the terms earlier used, instead of switching, without any apparent reason, from an earlier reference to lust and craving, etc., to speaking of lust, anger and delusion. The corresponding parts in the Sanskrit fragments have preserved several expressions that point to a more detailed treatment, similar in this respect to the presentation in <a href="../../parallels/sa280.html">SĀ 280</a>, such as, e.g., SHT VI 1226 folio 16Vd: avigatar[ā](ga) (cf. also SHT X 3270+4060V3), folio 16Re: (a)vigatacchanda (cf. also SHT X 3273R1+3), folio 15Rf: avigatasnehā and folio 16 Vb: avigatapi(pāsa) (cf. also SHT X 3270+4060R4), and SHT X 3270+4060R2: [t](ṛ)ṣṇā aviga[t](a)[pre]mā. Notably, SHT VI 1226 folio 18Vc has also preserved a reference to vigatamoha.</span></span></span> Both versions apply their treatment to the opposite case of recluses and Brahmins that are aloof in regard to experiences through the six senses and thus worthy of honour and worship.</p>
+<p>The two versions reckon a secluded way of life to be a good reason for assuming that a recluse or Brahmin is either free from lust or else is engaging in the practice that leads to such freedom, since objects of the senses that have the potential to arouse lust are not found in secluded dwelling places. The Saṃyukta-āgama version explains that the sense objects absent from secluded dwelling places are in particular those related to association with women,<span class="note" id="mn150n127"><span class="details"><span class="p">[n.127] <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a14 describes how “staying in empty places, at the foot of a tree in a forest, sitting on a low seat of grass, they practise seclusion, keeping away from association with women, they delight in being alone, with their thought collected in meditation”, 在空閑處, 林中樹下, 卑床草蓐, 修行遠離, 離諸女人近, 樂獨人, 同禪思者, followed by explaining that in such places “there are no forms to be seen by the eye that could arouse delight and attachment”, 無眼見色可生樂著, a statement then applied to the other sense-doors.</span></span></span> a way of understanding the implications of the present passage also reflected in the Pāli commentary.<span class="note" id="mn150n128"><span class="details"><span class="p">[n.128] Ps V 105,10, in its gloss on living in seclusion, explains that, although in seclusion there are pleasurable objects of the senses, what the discourse’s description intends is the absence of sense objects related to women, itthirūpādīni pana sandhāy’ etaṃ kathitaṃ.</span></span></span></p>
+<p>According to the Nagaravindeyya-sutta and its Saṃyukta-āgama parallel, the householders expressed their appreciation for the Buddha’s exposition by comparing his teachings to revealing something that was hidden, showing the path to someone who was lost, and holding up a lamp in the dark.<span class="note" id="mn150n129"><span class="details"><span class="p">[n.129] <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a24 differs in regard to the first simile, where it speaks of rescuing someone who is drowning, whereas <a href="../../mn/mn150.html">MN 150</a> at MN III 293,23 describes setting up what had been overthrown.</span></span></span> Before delivering this set of similes, found regularly in the discourses on such occasions, according to the Saṃyukta-āgama account the householders remarked that the Buddha had given a teaching without praising himself or disparaging others.<span class="note" id="mn150n130"><span class="details"><span class="p">[n.130] <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a21: 不自譽, 不毀他. According to <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a23, the householders also remarked that the Buddha had extensively taught them dependent arising, 廣說緣起, a remark that perhaps refers to his clarification of the reasons that make someone worthy of respect and worship (SHT VI 1226 folio 18Re has preserved pratītya, which might reflect a similar statement). A curiosity in this part of <a href="../../parallels/sa280.html">SĀ 280</a> at T II 77a20 is that the speakers are not only the “Brahmin householders”, but also the “recluses”, 沙門, which seems to confound the “recluses and Brahmins” that were the topic of the discourse and the “Brahmin householders” that were listening to the discourse.</span></span></span></p>
+<p>The Pāli version concludes by reporting that the householders took refuge as lay followers. Although the Chinese version does not record that the householders took refuge, the Sanskrit fragments appear to agree with the Pāli account, as the concluding section of the Sanskrit version has preserved part of the formulaic expression used to take refuge.<span class="note" id="mn150n131"><span class="details"><span class="p">[n.131] SHT VI 1226 folio 18Rf: (dha)rmañ-ca bhikṣusaṅgha(ñ-ca).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 81 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 81: Ghaṭīkāra-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn80comp.html#content"></a><a id="next-sutta" href="./mn88comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+		<p class="origin-note"><em>Originally published 2009 under the title "The Bodhisattva and Kassapa Buddha – A Study Based on the Madhyama-āgama Parallel to the Ghaṭikāra-sutta" in the <i>Indian International Journal of Buddhist Studies</i>, 10: 1-33.</em></p>
+<p class="read-links">Read: <a href="../../mn/mn81.html">MN 81</a> / <a href="../../parallels/ma63.html">MĀ 63</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>The present chapter takes up a canonical <i>j</i>ā<i>taka</i> that narrates the tale of two friends, a young brahmin and a potter, who live at the time of the previous Buddha Kassapa. Considerable parts of my original study of this tale have already appeared in a monograph on the genesis of the bodhisattva ideal,<span class="note" id="mn81compn1"><span class="details"><span class="p">[n.1] Anālayo 2010c: 71–84.</span></span></span> hence in what follows I mainly present the translation of the relevant section of the <i>Madhyama-</i>ā<i>gama </i>counterpart to the <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta</i>, followed by a brief survey of the way the <i>j</i>ā<i>taka </i>nature of this tale makes itself felt in the different versions of the present discourse.<span class="note" id="mn81compn2"><span class="details"><span class="p">[n.2] Further parallel versions are the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 317–329; the <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 22–30, with its Tibetan counterpart at D 1 <i>ga</i> 4a to 10a or Q 1030<i> nge </i>3b to 9a; and the tenth tale in an <i>Avad</i>ā<i>na </i>collection preserved in Chinese, 佛說興起行經, T 197 at T IV 172c to 174b. For a comparative study cf. Anālayo 2011a: 441–451.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p>Discourse at Vebhaḷiṅga<span class="note" id="mn81compn3"><span class="details"><span class="p">[n.3] The partially translated text is MĀ 63 at T I 499a9 to 500c12 and again T I 503a3 to 19. MĀ 63 at T I 499a9 gives the title as 鞞婆陵耆, which according to Pulleyblank 1983: 39, 241, 195 and 245 would correspond to the Early Middle Chinese pronunciation <i>p</i>ε<i>j</i>η<i>' ba li</i>η<i> gji</i>, where the last syllable would be closer to the Vaibhiḍiṅgī given as the location in the<i> Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 22,1; D 1 <i>ga</i> 4a1 or Q 1030 <i>nge </i>3b3 reads <i>be’i bhi </i>ṭ<i>ing gi</i>. The <i>Mah</i>ā<i>vastu</i> speaks of Mārakaraṇḍa, formerly called Veruḍiṅga, Senart 1882: 319,8. T 197 at T IV 172c9 has 多獸邑, with a phonetically similar variant reading 多狩邑, which seems to reflect a different name.</span></span></span></p>
+<p>1. Thus have I heard. At one time the Buddha was dwelling in the country of Kosala. At that time, the Blessed One was travelling on a road together with a large company of monks.</p>
+<p>2. On the way, he smiled with delight. The venerable Ānanda, on seeing the Blessed One smile, held his hands together [in homage] towards the Buddha and said: "Blessed One, what is the reason for this smile? Buddhas and Tathāgatas, free from attachment and fully awakened, do not smile arbitrarily and without reason. I would like to hear about the meaning [of this smile]."<span class="note" id="mn81compn4"><span class="details"><span class="p">[n.4] In MN 81 at MN II 45,3 and in the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 317,8, a smile by the Buddha similarly forms the occasion for the delivery of the tale. The <i>Sa</i>ṅ<i>ghabhedavastu </i>and T 197 do not report such a smile.</span></span></span></p>
+<p>3. Then the Blessed One said: "Ānanda, in this place the Tathāgata Kassapa, free from attachment and fully awakened, sat and taught [his] disciples the Dharma.<span class="note" id="mn81compn5"><span class="details"><span class="p">[n.5] The <i>Mah</i>ā<i>vastu</i>, Senart 1882: 318,12, at this point brings in three former Buddhas.</span></span></span></p>
+<p>4. Then the venerable Ānanda quickly prepared a seat in that place and, holding his hands together [in homage] towards the Buddha, said: "Blessed One, may the Blessed One also sit in this place and teach his disciples the Dharma. In this way, this place will have been made use of by two Tathāgatas, free from attachment and fully awakened."</p>
+<p>At that time, the Blessed One sat on the seat that the venerable Ānanda had prepared in that place. Having sat down, he said: "Ānanda, in this place there existed an assembly hall of the Tathāgata Kassapa, free from attachment and fully awakened. Seated in it, the Tathāgata Kassapa, free from attachment and fully awakened, taught his disciples the Dharma.</p>
+<p>5. "Ānanda, in former times in this place there was a town called Vebhaḷiṅga, greatly prosperous and opulent, with many inhabitants. Ānanda, in the town of Vebhaḷiṅga there was an eminent brahmin householder by the name of Non-anger,<span class="note" id="mn81compn6"><span class="details"><span class="p">[n.6] MĀ 63 at T I 499a26: 無恚. The <i>Sa</i>ṅ<i>ghebhedavastu</i>, Gnoli 1978a: 22,3, gives the name of the brahmin as Nyagrodha. Perhaps the rendering employed in MĀ 63 is due to a mistaking of <i>nyagrodha</i> for <i>nis + krodha</i>.</span></span></span> who was very wealthy and opulent, with immeasurable wealth and with livestock and property beyond calculation, [holding a royal] fief endowed with a variety of families, provisions and cities.<span class="note" id="mn81compn7"><span class="details"><span class="p">[n.7] MĀ 63 at T I 499a27: 封戶食邑種種具足, where the intended sense would be similar to a description, found in Pāli discourses, of an eminent brahmin as holding "a royal fief full of living beings, with grass, wood, water, and with grain"; cf., e.g., MN 95 at MN II 164,6.</span></span></span></p>
+<p>"Ānanda, the eminent brahmin householder Non-anger had a son by the name of Uttara,<span class="note" id="mn81compn8"><span class="details"><span class="p">[n.8] MN 81 at MN 46,4 gives the name of the young brahmin as Jotipāla. The <i>Mah</i>ā<i>vastu</i>, Senart 1882: 319,11, similarly speaks of Jyotipāla, whereas the <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 23,1, agrees with MĀ 63 on the name Uttara, with its Tibetan counterpart <i>bla ma</i> in D 1 <i>ga</i> 4a6 or Q 1030 <i>nge</i> 3b8. The Chinese <i>Avad</i>ā<i>na </i>tale, T 197 at T IV 172c13, reads: 火鬘, which according to Akanuma 1930/1994: 251 stands for Jotipāla. A past life of the bodhisattva as a brahmin youth by the name of Uttara who goes forth as a Buddhist monk is also recorded in Bv 12.11 at Bv 53,21 and Jā I 37,31, though with the difference that this past life took place at the time of the former Buddha Sumedha.</span></span></span> a young brahmin (<i>m</i>āṇ<i>ava</i>). He was of pure descent on both the father's and mother's sides for up to seven generations, with uninterrupted continuity of births without blemish. He had learned much and kept it in mind, [being able] to recite it.<span class="note" id="mn81compn9"><span class="details"><span class="p">[n.9] In MN 81 at MN 46,1, neither the father nor the young brahmin's learning are mentioned, in fact the potter is introduced first, and then only his friend is brought in. The same is the case for the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 319,9. The <i>Sa</i>ṅ<i>ghebhedavastu</i>, Gnoli 1978a: 22,3, begins similarly to MĀ 63 by mentioning first the father and describing the young brahmin's learning, before turning to the potter. Notably, the Tibetan version of the <i>Sa</i>ṅ<i>ghebhedavastu</i>, D 1 <i>ga</i> 4a2 or Q 1030 <i>nge</i> 3b4, begins instead with a detailed description of the potter and only after that turns to the brahmin youth, without mentioning his father. The Chinese <i>Avad</i>ā<i>na </i>tale, T 197 at T IV 172c9, proceeds similarly to MĀ 63, as it first takes up the father and then the young brahmin, before mentioning the potter. In its description of the brahmin youth, T 197 at T IV 172c11 mentions that he had thirty of the thirty-two marks (of a great being), 有三十相. Lüders 1913: 883 notes a pictorial representation of the meeting between the Buddha Kassapa and the young brahmin, in which the latter is depicted as a monk endowed with <i>u</i>ṣṇīṣ<i>a </i>and ū<i>r</i>ṇā, two prominent marks (<i>lak</i>ṣ<i>a</i>ṇ<i>a</i>) out of the set of thirty-two; for another representation of this meeting in Gāndhāran sculpture cf. Vogel 1954: 810.</span></span></span> He was a master of the four</p>
+<p>Vedas, being thoroughly proficient in their causes and conditions, with correct phonology and histories as fifth, [being also proficient in] philology and grammar.<span class="note" id="mn81compn10"><span class="details"><span class="p">[n.10] MĀ 63 at T I 499b1: 誦過四典經, 深達因緣, 正文, 戲五, 句, 說. My translation assumes that 過 renders an equivalent to <i>p</i>ā<i>rag</i>ū; 文 corresponds to <i>s</i>ā<i>kkhara[ppabheda]</i>; 戲五 translates an equivalent to <i>[iti] h</i>ā<i>sapañcama </i> (Winternitz 1908: 260 notes that <i>Itih</i>ā<i>sapur</i>āṇ<i>a </i>is reckoned a fifth Veda in <i>Ch</i>ā<i>ndogya Upani</i>ṣ<i>ad </i>7.1.2); 句 corresponds to<i> padaka </i>and 說 to <i>veyy</i>ā<i>ka</i><i>ra</i>ṇ<i>a</i>. Notably, this description refers to four Vedas instead of the three Vedas mentioned in the standard description of a learned brahmin in Pāli discourses; cf., e.g., MN 91 at MN II 133,13.</span></span></span></p>
+<p>"Ānanda, the young brahmin Uttara had a close friend by the name of Nandipāla,<span class="note" id="mn81compn11"><span class="details"><span class="p">[n.11] MN 81 at MN 46,2 gives the name of the potter as Ghaṭikāra, as does the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 319,9. The <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 23,1, reads: <i>nand</i>ī<i>p</i>ā<i>la gha</i>ṭ<i>ik</i>ā<i>ra</i>, with its Tibetan counterpart <i>rdza mkhan dga’ </i> <i>skyong</i> in D 1 <i>ga</i> 4a2 or Q 1030 <i>nge</i> 3b4, a name also reflected in T 197 at T IV 172c13: 難提婆羅瓦師子.</span></span></span> a potter, who always had thoughts of affection towards the young brahmin Uttara. [They] untiringly delighted in seeing each other, without getting weary of it.</p>
+<p>"Ānanda, the potter Nandipāla had taken refuge in the Buddha, the Dharma and the community of monks, he was free from doubts in regard to these three [objects of] veneration and had no perplexity in regard to <i>dukkha</i>, its arising, its cessation and the path [leading to its cessation]. He had attained faith, was keeping the precepts, had heard much, was generous and was accomplished in wisdom.<span class="note" id="mn81compn12"><span class="details"><span class="p">[n.12] MN 81 at MN II 46,5 does not describe the potter's accomplishment or his virtuous conduct at this point, a description it has instead at MN II 51,11 as part of the explanation given by the Buddha Kassapa to the king of Vārāṇasī. In the corresponding section in MĀ 63 at T I 501b11, the Buddha Kassapa repeats word for word the account of the potter's accomplishment and virtues given in the present section.</span></span></span></p>
+<p>"[Ānanda, Nandipāla] abstained from killing and had abandoned killing, having discarded sword and club he had a sense of shame and fear of blame, with a mind [full of] benevolence and compassion for the welfare of all [beings], even insects. He had purified his mind with regard to killing living beings.<span class="note" id="mn81compn13"><span class="details"><span class="p">[n.13] For some comparative remarks on the standard description of virtuous conduct in <i>Madhyama-</i>ā<i>gama </i>discourses in the light of parallel <i>Majjhima</i><i>nik</i>ā<i>ya </i>discourses cf. below page 236ff.</span></span></span></p>
+<p>"Ānanda, the potter Nandipāla abstained from taking what is not given and had abandoned taking what is not given, taking [only] what is given, delighting in taking what is given, always being fond of giving in generosity, rejoicing in [generosity] without stinginess, not expecting a reward. He had purified his mind with regard to taking what is not given.</p>
+<p>"Ānanda, the potter Nandipāla abstained from sexual activity and had abandoned sexual activity, diligently cultivating the practice of celibacy, energetically [practising this] immaculate conduct with unsoiled purity, free from sensual desires, giving up sexual desires. He had purified his mind with regard to sexual activity.</p>
+<p>"Ānanda, the potter Nandipāla abstained from false speech and had abandoned false speech, he spoke the truth, delighting in truth, unshakeably established in speaking truth, being completely trustworthy, not deceiving [anyone in] the world. He had purified his mind with regard to false speech.</p>
+<p>"Ānanda, the potter Nandipāla abstained from divisive speech and had abandoned divisive speech, he engaged in speech that is not divisive, that does not harm others. He did not tell those what he had heard here, out of a wish to harm these; nor did he tell these what he had heard there, out of a wish to harm those. He had the wish to unite those who were divided, delighting in union. He did not create factions, did not delight in the [forming of] factions or praise the [forming of] factions. He had purified his mind with regard to divisive speech.</p>
+<p>"Ānanda, the potter Nandipāla abstained from harsh speech and had abandoned harsh speech. Whatever speech there is that is rough and rude in tone, that sounds offensive and grates on the ear, that beings neither enjoy nor desire, that causes others suffering and vexation and that does not lead to calmness, he had abandoned such speech. Whatever speech there is that is clear, peaceful and gentle, that is pleasant to the ear and touching to the heart, that is enjoyable and desirable, that gives others happiness, words endowed with meaning, that do not make others afraid and that lead to calmness in others, such speech he spoke. He had purified his mind with regard to harsh speech.</p>
+<p>"Ānanda, the potter Nandipāla abstained from frivolous speech and had abandoned frivolous speech. He spoke at the [proper] time, speaking what is true, what is Dharma, what is meaningful, what [leads to] appeasement, delighting in speaking what [leads to the] appeasement of [any] matter, and he would teach well and admonish [others] well in accordance with the [proper] time and in a proper way. He had purified his mind with regard to frivolous speech.</p>
+<p>"Ānanda, the potter Nandipāla abstained from earning profits and had abandoned earning profits, he had discarded weights and measures and did not accept goods [on commission], he did not bind people [with debts], he did not try to cheat with measures, nor did he deceive others for the sake of some small profit. He had purified his mind with regard to earning profits.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting widows or girls and had abandoned accepting widows or girls. He had purified his mind with regard to accepting widows or girls.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting male or female slaves and had abandoned accepting male or female slaves. He had purified his mind with regard to accepting male or female slaves.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting elephants, horses, cows or sheep and had abandoned accepting elephants, horses, cows or sheep. He had purified his mind with regard to accepting elephants, horses, cows or sheep.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting chickens or swine and had abandoned accepting chickens or swine. He had purified his mind with regard to accepting chickens or swine.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting farmlands or marketplaces and had abandoned accepting farmlands or marketplaces.<span class="note" id="mn81compn14"><span class="details"><span class="p">[n.14] MĀ 63 at T I 499c12: 店肆, which according to Hirakawa 1997: 427 can render <i>antar</i>ā<i>pa</i>ṇ<i>a </i>or ā<i>pa</i>ṇ<i>ika</i>.</span></span></span> He had purified his mind with regard to accepting farmlands or marketplaces.</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting uncooked rice, wheat or legumes and had abandoned accepting uncooked rice, wheat or legumes. He had purified his mind with regard to accepting uncooked rice, wheat, or legumes.</p>
+<p>"Ānanda, the potter Nandipāla abstained from alcoholic beverages and had abandoned alcoholic beverages. He had purified his mind with regard to drinking alcoholic beverages.</p>
+<p>"Ānanda, the potter Nandipāla abstained from [reclining on] high and broad beds and had abandoned [reclining on] high and broad beds. He had purified his mind with regard to [reclining on] high and broad beds</p>
+<p>"Ānanda, the potter Nandipāla abstained from [making use of] flower garlands, necklaces, perfumes and cosmetics and had abandoned [making use of] flower garlands, necklaces, perfumes and cosmetics. He had purified his mind with regard to [making use of] flower garlands, necklaces, perfumes and cosmetics</p>
+<p>"Ānanda, the potter Nandipāla abstained from singing, dancing or acting, and from going to see or hear [singing, dancing or acting] and had abandoned singing, dancing or acting, and from going to see or hear [singing, dancing or acting]. He had purified his mind with regard to singing, dancing or acting, and from going to see or hear [singing, dancing or acting]</p>
+<p>"Ānanda, the potter Nandipāla abstained from accepting gold, jewellery and the like and had abandoned accepting gold, jewellery and the like. He had purified his mind with regard to accepting gold, jewellery, and the like.</p>
+<p>"Ānanda, the potter Nandipāla abstained from eating after noon and had abandoned eating after noon. He always took [only] a single meal [per day], not eating at night, training in eating at the [proper] time. He had purified his mind with regard to eating after noon.</p>
+<p>"Ānanda, the potter Nandipāla for his whole life abstained from taking a spade or a shovel in his hand, he did not dig the earth himself [for clay], nor tell another to do so. If water had washed out a bank so that it collapsed, or if a rat had broken up some earth, he would take that and use it to make pots. These he would put on one side and tell customers: 'If you have peas, legumes, rice, wheat, big or small hempseed, castor beans or mustard seed, pour them out [as payment] and take whichever [pot] you wish'.</p>
+<p>"Ānanda, for his whole life the potter Nandipāla was looking after his father and mother. His father and mother were blind, they were entirely dependent on other people. This was the reason why he was looking after them.</p>
+<p>"Ānanda, when the night was over, at dawn, the potter Nandipāla approached the Tathāgata Kassapa, free from attachment and fully awakened, and, having reached him, paid his respects and stepped back to sit to one side.</p>
+<p>"The Tathāgata Kassapa, free from attachment and fully awakened, taught him the Dharma, exhorting, inspiring and thoroughly delighting him. Having taught him the Dharma with innumerable skilful means, having exhorted, inspired and thoroughly delighted him, [the Tathāgata Kassapa] remained silent.</p>
+<p>"Ānanda, then, having been taught the Dharma, having been exhorted, inspired and thoroughly delighted by the Tathāgata Kassapa, free from attachment and fully awakened, the potter Nandipāla got up from his seat, paid his respects at the feet of the Tathāgata Kassapa, free from attachment and fully awakened, circumambulated him three times and left.</p>
+<p>"At that time, when the night was over, at dawn, the young brahmin Uttara, who was riding a chariot [drawn by] white horses and in the company of five hundred young brahmins, had left the town of Vebhaḷiṅga. He was approaching a forest spot with the intention of teaching his disciples, who had come from several different locations in order to recite brahmin hymns.<span class="note" id="mn81compn15"><span class="details"><span class="p">[n.15] MĀ 63 at T I 500a15: 令讀梵志書, literally "in order to read aloud brahmin books", where the counterpart in the <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 23,13 reads: <i>br</i>ā<i>hma</i>ṇ<i>ak</i>ā<i>n mantr</i>ā<i>n v</i>ā<i>cayituk</i>ā<i>ma</i>ḥ, clarifying that oral recitation of hymns and mantras is meant. For other instances where a reference to 'books' should be similarly interpreted cf. Gombrich 1990a: 27.</span></span></span></p>
+<p>"Then the young brahmin Uttara saw from afar that the potter Nandipāla was coming. Having seen him, he asked: 'Nandipāla, where are you coming from?'</p>
+<p>"Nandipāla replied: 'I am coming from having paid respects to the Tathāgata Kassapa, free from attachment and fully awakened. Uttara, you could come with me to approach the Tathāgata Kassapa, free from attachment and fully awakened, to pay respects to him!'<span class="note" id="mn81compn16"><span class="details"><span class="p">[n.16] MN 81 does not report a visit paid by the potter to the Buddha Kassapa, nor does it describe how the young brahmin left town to teach his disciples. Instead, it sets in at MN II 46,5 right away with the potter asking his friend to come along to visit the Buddha Kassapa. The same is the case for the <i>Mah</i>ā-<i>vastu</i>, Senart 1882: 319,17, and the Chinese <i>Avad</i>ā<i>na </i>tale, T 197 at T IV 172c22, whereas the <i>Sa</i>ṅ<i>ghebhedavastu</i>, Gnoli 1978a: 23,2 and D 1 <i>ga</i> 4b4 or Q 1030 <i>nge</i> 4a5, reports that the potter was coming back from having paid a visit to the Buddha Kassapa.</span></span></span></p>
+<p>"Then the young brahmin Uttara replied: 'Nandipāla, I do not want to see [that] bald-headed recluse, <span class="note" id="mn81compn17"><span class="details"><span class="p">[n.17] MĀ 63 at T I 500a21: 我不欲見禿頭沙門. The parallel versions report similar derogatory expressions used by the young brahmin at this point; cf. MN 81 at MN II 46,11; the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 320,3; the <i>Sa</i>ṅ<i>ghebheda</i>-<i>vastu</i>, Gnoli 1978a: 23,19 or D 1 <i>ga</i> 5a4 or Q 1030 <i>nge</i> 4b5; and the Chinese <i>Avad</i>ā<i>na </i>tale, T 197 at T IV 172c23.</span></span></span> [these] baldheaded recluses will not be able to attain awakening, since awakening is to be attained [through what is] difficult.'<span class="note" id="mn81compn18"><span class="details"><span class="p">[n.18] MĀ 63 at T I 500a22: 道難得故, where judging from the counterpart in the <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 23,20: <i>bodhir hi paramadu</i>ṣ<i>kar</i>ā and D 1 <i>ga</i> 5a4 or Q 1030 <i>nge</i> 4b5: <i>byang chub ni mchog tu dka’ ba yin no</i>, the idea could be that awakening should be gained through asceticism. In MN 81 at MN II 46,12 the potter repeats his invitation two times, and once the young brahmin has refused these as well, they go to bathe. After bathing the potter again invites the young brahmin three times, and the latter refuses up to the third time. The <i>Mah</i>ā<i>vastu</i> and the Chinese <i>Avad</i>ā<i>na </i>tale proceed similarly, though they only report a single invitation after the two have taken a bath, Senart 1882: 320,19 and T 197 at T IV 172c27. The <i>Sa</i>ṅ<i>ghebhedavastu</i>, Gnoli 1978a: 23,23 and D 1 <i>ga</i> 5a7 or Q 1030 <i>nge</i> 4b8, only report the first instance with three invitations, without following this with the bathing interlude.</span></span></span></p>
+<p>9. "Then the potter Nandipāla took hold of the topknot of the young brahmin Uttara, forcing him to descend from the chariot.<span class="note" id="mn81compn19"><span class="details"><span class="p">[n.19] MN 81 at MN II 47,12 depicts a gradual build-up of the potter's attempts to convince his friend, whom he at first takes hold off by the belt, only seizing the freshly washed hair of the young brahmin when the latter undoes his belt. The <i>Mah</i>ā<i>vastu </i>proceeds similarly, with the difference that the first attempt does not involve the belt but rather the neck of the young brahmin, Senart 1882: 321,2. In the Chinese <i>Avad</i>ā<i>na </i>tale, T 197 at T IV 173a1, the potter first takes hold of the clothes of his friend, then of the belt and then of the hair. The <i>Sa</i>ṅ<i>ghebhedavastu</i>, Gnoli 1978a: 23,32 and D 1 <i>ga</i> 5a7 or Q 1030 <i>nge</i> 4b8, proceeds similarly to MĀ 63, though without reporting that the potter's action forced his friend to descend from the chariot.</span></span></span> Then the young brahmin Uttara had the thought: 'This potter Nandipāla never makes jokes and he is neither mad nor foolish; there must certainly be a reason why he now takes hold of my topknot.' <span class="note" id="mn81compn20"><span class="details"><span class="p">[n.20] According to MN 81 at MN II 47,28, the young brahmin was surprised that the potter, though of inferior birth, should go so far as to seize a brahmin's freshly washed hair. The <i>Mah</i>ā<i>vastu</i>, Senart 1882: 321,11, also reports the young brahmin reflecting on the lower birth of the potter, a point not made in the <i>Sa</i>ṅ<i>ghabhedavastu</i> or the Chinese <i>Avad</i>ā<i>na </i>tale. On the implications of taking hold of someone's hair in ancient India cf. Hara 1986.</span></span></span> Having thought this, he said:</p>
+<p>'Nandipāla, I will follow you, I will follow you!' Nandipāla was delighted and added: 'To go [with me to visit the Tathāgata Kassapa] is very good.'</p>
+<p>10. "Then the potter Nandipāla and Uttara the young brahmin together approached the Tathāgata Kassapa, free from attachment and fully awakened, and having reached him paid their respects and stepped back to sit to one side. The potter Nandipāla said to the Tathāgata Kassapa, free from attachment and fully awakened:</p>
+<p>"'Blessed One, this is my friend the young brahmin Uttara, who always looks on me with affection and untiringly delights in seeing me. He has no faith and no respect in his mind for the Blessed One.<span class="note" id="mn81compn21"><span class="details"><span class="p">[n.21] Whereas MN 81 and the <i>Mah</i>ā<i>vastu</i> do not explicitly mention that the young brahmin had neither faith nor respect for the Buddha, the <i>Sa</i>ṅ<i>ghabhe</i><i>davastu</i> and the Chinese <i>Avad</i>ā<i>na </i>tale highlight that he had no faith in the Buddha, the Dharma and the Community; cf. Gnoli 1978a: 24,14 and D 1 <i>ga</i> 5b7 or Q 1030 <i>nge</i> 5a8, as well as T 197 at T IV 173a15.</span></span></span> May the Blessed One teach him the Dharma, arousing his delight so that he develops faith and respect in his mind.'</p>
+<p>"Then the Tathāgata Kassapa, free from attachment and fully awakened, taught the Dharma to the potter Nandipāla and to the young brahmin Uttara, exhorting, inspiring and thoroughly delighting them. Having taught the Dharma with innumerable skilful means, having exhorted, inspired and thoroughly delighted them, he remained silent.</p>
+<p>"Then, having been taught the Dharma from the Tathāgata Kassapa, free from attachment and fully awakened, having been exhorted, inspired and thoroughly delighted them, the potter Nandipāla and the young brahmin Uttara got up from their seats, paid their respects at the feet of the Tathāgata Kassapa, free from attachment and fully awakened, circumambulated him three times and left.</p>
+<p>11. "Then, when they had not yet gone far on their return [journey],<span class="note" id="mn81compn22"><span class="details"><span class="p">[n.22] The <i>Sa</i>ṅ<i>ghabhedavastu</i> does not report that the two had left the presence of the Buddha Kassapa. In the <i>Mah</i>ā<i>vastu, </i>however, they had left the presence of the Buddha, in fact after their discussion the young brahmin does not decide right away to become a monk, but only takes this decision a little later, after he has become dissatisfied with the household life, Senart 1882: 322,19.</span></span></span> the young brahmin Uttara asked: 'Nandipāla, having heard the sublime Dharma like this from the Tathāgata Kassapa, free from attachment and fully awakened, why are you intent on remaining at home, unable to leave it and train in the noble path?'</p>
+<p>"Then the potter Nandipāla replied: 'Uttara, you know yourself that for my whole life I am looking after my father and mother, who are blind and entirely dependent on other people. It is because I am supporting and looking after my father and mother [that I cannot leave home].'</p>
+<p>"Then the young brahmin Uttara asked Nandipāla: 'Can I obtain the going forth to train in the path under the Tathāgata Kassapa, free from attachment and fully awakened, can I receive the full ordination, become a monk and practise the holy life?'</p>
+<p>12. "Then the potter Nandipāla and the young brahmin Uttara promptly turned back from there and again approached the Tathāgata Kassapa, free from attachment and fully awakened. Having reached him, they paid their respects and stepped back to sit to one side.</p>
+<p>"The potter Nandipāla said to the Tathāgata Kassapa, free from attachment and fully awakened: 'Blessed One, when we had not yet gone far on our return [journey], this young brahmin Uttara asked me: 'Nandipāla, having heard the sublime Dharma like this from the Tathāgata Kassapa, free from attachment and fully awakened, why are you intent on remaining at home, unable to leave it and train in the noble path?'</p>
+<p>"Blessed One, I replied: 'Uttara, you know yourself that for my whole life I have been looking after my father and mother, who are blind and entirely dependent on other people. It is because I am supporting and looking after my father and mother [that I cannot leave home]'.</p>
+<p>"'Uttara asked me again: 'Can I obtain the going forth to train in the path under the Tathāgata Kassapa, free from attachment and fully awakened, can I receive the full ordination, become a monk and practise the holy life?'</p>
+<p>"'May the Blessed One let him go forth and train in the path by giving him the full ordination [so that he] becomes a monk and practises the holy life.'</p>
+<p>"The Tathāgata Kassapa, free from attachment and fully awakened, accepted Nandipāla's [request] by remaining silent. Then Nandipāla the potter, knowing that the Tathāgata Kassapa, free from attachment and fully awakened, had accepted by remaining silent, got up from his seat, paid his respects with his head at the feet [of the Tathāgata Kassapa], circumambulated him three times and left.</p>
+<p>"Then, soon after Nandipāla had left, the Tathāgata Kassapa, free from attachment and fully awakened, let Uttara go forth and train in the path by giving him the full ordination.</p>
+<p>13. "[After] having [let him] go forth to train in the path and having given him the full ordination, [the Tathāgata Kassapa continued] to stay for a number of days at his discretion in the town of Vebhaḷiṅga. [Then] he took his robes and bowl and with a large company of monks went wandering with the intention of approaching Vārāṇasī, a town in the Kāsī country. Travelling in stages they reached Vārāṇasī, a town in the Kāsī country. In Vārāṇasī he dwelt in the Deer Park, the Place of Seers.</p>
+<p>14.-22. …<span class="note" id="mn81compn23"><span class="details"><span class="p">[n.23] The section of MĀ 63 not translated in the present chapter ranges from T I 500c12 to 503a3, covering approximately half of the entire discourse. Summarized in brief, MĀ 63 continues by describing how, on arrival at Vārāṇasī, the Buddha Kassapa is visited by the local king, to whom he delivers a teaching. At the end of the discourse, the king invites Kassapa and his monks for a meal the next day. The meal is prepared and served, followed by another teaching delivered by Kassapa, after which the king invites Kassapa to stay with him for the rains retreat period, promising abundant support. Kassapa does not accept the invitation. Asked by the saddened king if there is another supporter that equals him, Kassapa mentions the potter Nandipāla, explaining that the potter has full insight into the four noble truths and describing his virtuous conduct in the same way as done in the above translated section of MĀ 63. Kassapa then relates how on two former occasions he helped himself to food in the potter's house, having been invited to do so by the blind parents of Nandipāla, who was away; and how on another occasion Kassapa told his monks to remove the roofing from the potter's workshop to repair his own hut. In all these instances, Nandipāla reacted with joy and delight on finding out what had happened. Having heard this good report of Nandipāla, the king of Vārāṇasī decides to send him abundant food supplies, which the potter, however, politely declines to accept.</span></span></span></p>
+<p>23. The Buddha said to Ānanda: "What do you think? Do you consider the young brahmin Uttara at that time as someone else? Do not think like that. You should know that I was him.<span class="note" id="mn81compn24"><span class="details"><span class="p">[n.24] The identification of the young brahmin as a former life of the Buddha is similarly made in MN 81 at MN II 54,18, in the <i>Mah</i>ā<i>vastu</i>, Senart 1882: 335,5, and in the <i>Sa</i>ṅ<i>ghabhedavastu</i>, Gnoli 1978a: 30,14 and D 1 <i>ga</i> 10a4 or Q 1030 <i>nge </i>9a7. The same is also implicit in the tale given in T 197. After providing this identification, MN 81 at MN II 54,20 concludes with Ānanda's delight in the Buddha's words, so that the remainder of MĀ 63 is without a counterpart in MN 81. The same is also the case for the other versions, which do not have a statement comparable to what comes next in MĀ 63.</span></span></span></p>
+<p>"Ānanda, at that time I was benefiting myself and benefiting others, benefiting many people, [full of] compassion for the world, seeking the advantage and benefit of gods and men, seeking their peace and happiness. At that time in the Dharma that was taught [I] did not reach the ultimate, nor the ultimate purity, nor the ultimate holy life, nor the ultimate completion of the holy life.<span class="note" id="mn81compn25"><span class="details"><span class="p">[n.25] The original actually reads as if the Dharma itself were not conducive to reaching liberation. Thus my supplementation of "[I]" is made in an attempt to make sense out of this passage, which forms a standard pericope in the <i>Madh</i><i>yama-</i>ā<i>gama </i>for past lives of the Buddha spent in a way that was not conducive to awakening. This pericope does not fit the present case, as the Dharma taught by a former Buddha would have been conducive to reaching liberation.</span></span></span> At that time [I] was not able to abandon birth, old age, disease and death, sorrow and grief, sadness and lamentation, [I] was not able to completely overcome <i>dukkha</i>.</p>
+<p>"Ānanda, now I have appeared in the world [as] a Tathāgata, free from attachment, fully awakened, endowed with knowledge and conduct, well gone, knower of the worlds, an unsurpassable person, charioteer of the path of Dharma,<span class="note" id="mn81compn26"><span class="details"><span class="p">[n.26] MĀ 63 at T I 503a12: 無上士, 道法御. Nattier 2003b: 227 explains that "having taken <i>anuttarapuru</i>ṣ<i>a </i>as a separate title ... translators were left to explain the epithet <i>damyas</i>ā<i>rathi</i> on its own. In ... Prakrit languages ... <i>damya </i> would have been written <i>damma</i> ... Ignoring the unaspirated character of the initial <i>d-</i>, this word was apparently read as <i>dhamma</i>, and the resulting *<i>dham</i><i>mas</i>ā<i>rathi</i> interpreted as 'charioteer of the Dharma'"; cf. also Min Chau 1991: 326.</span></span></span> a teacher of gods and men, called a Buddha, an Assembly of Blessings.<span class="note" id="mn81compn27"><span class="details"><span class="p">[n.27] MĀ 63 at T I 503a12: 眾祐. Counterparts to this listing of epithets in Pāli discourses have <i>bhagavant </i>at this juncture; cf., e.g., DN 2 at DN I 49,19. Nattier 2003b: 231 explains that, in its usage by early translators, "眾祐, 'mass of blessings', [is] a rendition which conveys quite well the etymology of the term, which consists of <i>bhaga </i>'blessing, good fortune' plus the suffix <i>-vat</i> 'possessing'". In <i>Madhyama-</i>ā<i>gama </i> discourses, the standard counterpart to <i>bhagavant </i> is 世尊. A perusal of the <i>Madhyama-</i>ā<i>gama</i> gives the distinct impression that Gautama Saṅghadeva aimed at consistency in his translation terminology, unlike other Ā<i>gama </i>translators. Hence one would not expect him to use 眾祐 if the source text had the same term that he elsewhere rendered as 世尊<i>.</i> According to Hirakawa 1997: 1042, 眾祐 can render <i>bhagavat </i>or else <i>lokan</i>ā<i>tha. </i>In the four Pāli <i>Nik</i>ā<i>ya</i>s, the term <i>lokan</i>ā<i>tha </i>seems not to occur, being found only in the <i>Therag</i>ā<i>th</i>ā and <i>Ther</i>ī<i>g</i>ā<i>th</i>ā, Th 921, Thī 229 and Thī 307f. According to von Hinüber 1996/1997: 53, "both collections have been growing over a long period"; cf. also Norman 1983: 73f. Another occurrence can be found in the <i>Vatthug</i>ā<i>th</i>ā of the <i>P</i>ā<i>r</i>ā<i>yanavagga</i>, Sn 995, a section of the <i>Sutta-nip</i>ā<i>ta</i> that appears to be a later addition to this chapter; cf. Jayawickrama 1948: 243–249 and Norman 1983: 69. Thus <i>lokan</i>ā<i>tha</i> does not seem to be part of the earliest layer of Pāli canonical texts.</span></span></span> Now I am benefiting myself and benefiting others,</p>
+<p>benefiting many people, [full of] compassion for the world, seeking the advantage and benefit of gods and men, seeking their peace and happiness. Now I teach a Dharma that reaches the ultimate, the ultimate purity, the ultimate holy life, the ultimate completion of the holy life. Now I have abandoned birth, old age, disease and death, sorrow and grief, sadness and lamentation, I have already completely overcome <i>dukkha</i>."</p>
+<p>The Buddha spoke like this. The venerable Ānanda and the monks, having listened to what the Buddha said, were delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>In a monograph on the genesis of the bodhisattva ideal I already studied several aspects of the various versions of the present discourse that do not fit too well with the identification of the young brahmin as a former life of the Buddha,<span class="note" id="mn81compn28"><span class="details"><span class="p">[n.28] Cf. above note 1.</span></span></span> making it quite possible that this identification is a later element, in line with what appears to be a general tendency of parables becoming <i>j</i>ā<i>taka</i>s.</p>
+<p>In the <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta </i>and its <i>Madhyama-</i>ā<i>gama </i>parallel this young brahmin in fact plays a secondary role, as the main emphasis of the tale is on the potter and his relationship with the former Buddha Kassapa.<span class="note" id="mn81compn29"><span class="details"><span class="p">[n.29] Oldenberg 1912: 189: "auch ist die Erzählung vielmehr der Verherrlichung des Ghaṭīkāra und seiner frommen Intimität mit dem Buddha jenes Weltalters gewidmet, als der Jotipālas".</span></span></span> The central purpose of the <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta</i> thus appears to be to depict the ideal layman, who fulfils his filial duty by supporting his blind parents and at the same time lives a life of such high ethical standard that it corresponds as closely as possible to the life of a monastic. Besides being endowed with the insight of a disciple in higher training, the potter undertakes his livelihood in a way that – by avoiding the harm caused to creatures through digging the ground and by abstaining from selling his products – conforms to the conduct usually only incumbent on and compatible with the life of a monastic.</p>
+<p>The assumption that the present tale only became a <i>j</i>ā<i>taka</i> some time after its original delivery finds further support in the circumstance that a shift of emphasis from the potter to the young brahmin can be observed with the different versions, thereby expressing the increasing interest in the latter protagonist as a stage in the bodhisattva career of the Buddha.</p>
+<p>Whereas in the Pāli discourse the actual tale begins with the potter, the <i>Madhyama-</i>ā<i>gama </i>discourse instead turns first to the young brahmin, offering a rather detailed description that mentions his father and depicts the learning of the young brahmin. While the <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta </i>only notes that the young brahmin is a friend of the potter, the <i>Madhyama-</i>ā<i>gama </i> account introduces him as the son of an immensely wealthy brahmin, of pure descent, accomplished in all those qualities that make a brahmin worthy of respect (such as mastery of the Vedas, etc.) and the teacher of a sizeable group of students.</p>
+<p>This shift of emphasis also finds its expression in the title of the discourse. While the Pāli version is named after the potter, the <i>Madhyama-</i>ā<i>gama </i>account takes the village where the potter and the young brahmin lived as its title, and in the <i>Mah</i>ā<i>vastu</i> the tale is then named after the young brahmin.<span class="note" id="mn81compn30"><span class="details"><span class="p">[n.30] Senart 1882: 335,8: <i>jyotip</i>ā<i>la-s</i>ū<i>tra</i>.</span></span></span></p>
+<p>The <i>Mah</i>ā<i>vastu </i>in fact develops the theme of the young brahmin as a former life of the Buddha further, reporting how he formed the aspiration to become a Buddha himself.<span class="note" id="mn81compn31"><span class="details"><span class="p">[n.31] Senart 1882: 330,1.</span></span></span> Through his telepathic powers the Buddha Kassapa became aware of this aspiration and predicted that the young brahmin was destined to become a Buddha in the future and to set rolling the wheel of the Dharma at the Deer Park at Vārāṇasī.</p>
+<p>Pursuing the same theme in a different mode, the Chinese <i>Avad</i>ā<i>na </i>tale reports how, on meeting the Buddha Kassapa, the young brahmin recognized that the Buddha Kassapa had thirty of the marks of a superior being, and thereon requested to be shown the other two.<span class="note" id="mn81compn32"><span class="details"><span class="p">[n.32] T 197 at T IV 173a19, an account in several respects similar to standard descriptions in the Pāli discourses of how brahmins would ascertain the nature of the Buddha; cf., e.g., MN 91 at MN II 143,1 and its parallel MĀ 161 at T I 688b17.</span></span></span> On ascertaining that the Buddha Kassapa had all thirty-two marks, the young brahmin was filled with faith, whereon the Buddha Kassapa delivered a description of the conduct of a bodhisattva. On hearing this description, the young brahmin confessed that he had not kept up this conduct.</p>
+<p>With these episodes, the shift of emphasis from the tale of the potter to the young brahmin as a step in the bodhisattva career of the future Buddha Gotama becomes ever more evident.</p>
+<p>The same tendency can even be found elsewhere in the Pāli canon, where the <i>Kath</i>ā<i>vatthu</i> attributes a statement to the <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta</i> that is not found in the discourse itself. According to this statement, the Buddha told Ānanda that he lived the monk's life under the Buddha Kassapa for the sake of his future awakening.<span class="note" id="mn81compn33"><span class="details"><span class="p">[n.33] Kv 288,34: <i>kassape aha</i>ṃ<i>, </i>ā<i>nanda, bhagavati brahmacariya</i>ṃ<i> acari</i>ṃ ā<i>ya</i><i>ti</i>ṃ<i> sambodh</i>ā<i>ya</i>. A remark similar to the quotation in Kv, although made by Mahāmaudgalyāyana, can be found in the <i>Sa</i>ṅ<i>ghabhedavastu </i>in Gnoli 1977: 20,17, according to which the <i>bodhisattva </i>lived the holy life under the former Buddha Kāśyapa with the aspiration to reach awakening in the future, <i>k</i>āś<i>yapo </i> <i>n</i>ā<i>ma ... buddho bhagav</i>ā<i>n, yasya antike bodhisattvo bhagav</i>ā<i>n </i>ā<i>yaty</i>āṃ<i> bo</i><i>dh</i>ā<i>ya pra</i>ṇ<i>idh</i>ā<i>ya brahmacarya</i>ṃ<i> caritv</i>ā<i>.</i></span></span></span> In spite of the young brahmin being identified as a former life of the Buddha, the discourse versions do not present his deeds and activities as something undertaken on purpose to promote his progress to Buddhahood.<span class="note" id="mn81compn34"><span class="details"><span class="p">[n.34] In relation to other canonical <i>j</i>ā<i>taka</i>s, Gokuldas 1951: 10 notes that a "significant feature in the early Nikāyas ... lies in the recognition of these births as great kings or sages without ... the implication that these births formed some links in the chain of Bodhisatta evolution".</span></span></span></p>
+<p>In this way, the present discourse testifies to the influence of the evolving bodhisattva conception, whereby the didactic function of the potter as an exemplary lay disciple is increasingly overshadowed by emphasis given to his companion as a former life of the bodhisattva.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn81.html">MN81</a>: Ghaṭīkāra Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

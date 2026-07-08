@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 16 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 16: Cetokhila-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn15comp.html#content"></a><a id="next-sutta" href="./mn17comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn16.html">MN 16</a> / <a href="../../parallels/da10.html">DĀ 10</a> / <a href="../../parallels/ma206.html">MĀ 206</a> / <a href="../../parallels/ea51.4.html">EĀ 51.4</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cetokhila-sutta, the “discourse on mental barrenness”, lists five types of mental barrenness (cetokhila) and five mental bondages (cetaso vinibandha) that prevent one’s growth in the Dharma. This discourse has a Pāli parallel among the tens of the Aṅguttara-nikāya and two Chinese parallels, found in the Madhyama-āgama and in the Ekottarika-āgama.<span class="note" id="mn16n139"><span class="details"><span class="p">[n.139] The parallels are <a href="../../an/an10.14.html">AN 10:14</a> at AN V 17-21, entitled Cetokhila-sutta; <a href="../../parallels/ma206.html">MĀ 206</a> at T I 780b-781b, entitled “discourse on mental defilements”, 心穢經; and <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817a-c. <a href="../../parallels/ma206.html">MĀ 206</a> and <a href="../../parallels/ea51.4.html">EĀ 51.4</a> agree with <a href="../../mn/mn16.html">MN 16</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../an/an10.14.html">AN 10:14</a> does not specify a location. Notably, <a href="../../parallels/ea51.4.html">EĀ 51.4</a> is found among the elevens of the Ekottarika-āgama, even though it expounds only ten items. For remarks on <a href="../../parallels/ma206.html">MĀ 206</a> cf. Minh Chau 1964/1991: 95 and 194.</span></span></span>
+<p>The Majjhima-nikāya version begins by pointing out that a monk who has not abandoned five types of mental barrenness and five types of mental bondage will not be able to develop in the Dharma.<span class="note" id="mn16n140"><span class="details"><span class="p">[n.140] <a href="../../mn/mn16.html">MN 16</a> at MN I 101,7: imasmiṃ dhammavinaye vuddhiṃ virūḷhiṃ vepullaṃ āpajjissatī ti, n’ etaṃ ṭhānaṃ vijjati (Se-MN I 205,7: vuḍḍhiṃ).</span></span></span> The Madhyama-āgama and Ekottarika-āgama versions as well as the Aṅguttara-nikāya discourse have a similar statement, with the difference that they explicitly include the nuns in their treatment.<span class="note" id="mn16n141"><span class="details"><span class="p">[n.141] <a href="../../an/an10.14.html">AN 10:14</a> at AN V 17,16, <a href="../../parallels/ma206.html">MĀ 206</a> at T I 780b17, and <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817a17.</span></span></span> The same three versions also make it clear that these types of mental barrenness and mental bondage not only prevent growth, but spell actual decline.<span class="note" id="mn16n142"><span class="details"><span class="p">[n.142] <a href="../../an/an10.14.html">AN 10:14</a> at AN V 17,17 indicates that “decline in wholesome things is to be expected”, hāni yeva pāṭikaṅkhā kusalesu dhammesu, <a href="../../parallels/ma206.html">MĀ 206</a> at T I 780b19 speaks of “certain deterioration in the Dharma”, 必 退法, and <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817a19 of “decrease in wholesome qualities”, 善法減.</span></span></span></p>
+<p>According to the Majjhima-nikāya and Aṅguttara-nikāya versions, the five types of mental barrenness are:<span class="note" id="mn16n143"><span class="details"><span class="p">[n.143] <a href="../../mn/mn16.html">MN 16</a> at MN I 101,17 and <a href="../../an/an10.14.html">AN 10:14</a> at AN V 18,4.</span></span></span></p>
+<ul>
+<li>having doubts about the teacher,</li>
+<li>having doubts about the Dharma,</li>
+<li>having doubts about the Saṅgha,</li>
+<li>having doubts about the training,</li>
+<li>being angry with one’s companions in the holy life.</li>
+</ul>
+<p>The parallel versions show some variations in their listings of the five types of mental barrenness (see table 2.10), although they agree in as much as lack of confidence in regard to the Buddha and the Dharma are the first two types of mental barrenness in all versions.</p>
+<table class="comparative-table">
+<caption>Table 2.10: Five Types of Mental Barrenness in <a href="../../mn/mn16.html">MN 16</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn16.html">MN 16</a> & <a href="../../an/an10.14.html">AN 10:14</a></th><th><a href="../../parallels/ma206.html">MĀ 206</a></th><th><a href="../../parallels/ea51.4.html">EĀ 51.4</a></th></tr>
+<tr><td>doubt teacher (1)</td><td>doubt Buddha (→ 1)</td><td>doubt Buddha (→ 1)</td></tr>
+<tr><td>doubt Dharma (2)</td><td>doubt Dharma (→ 2)</td><td>doubt Dharma (→ 2)</td></tr>
+<tr><td>doubt Saṅgha (3)</td><td>doubt precepts (→ 4)</td><td>doubt noble Saṅgha (→ 3)</td></tr>
+<tr><td>doubt training (4)</td><td>doubt instruction</td><td>break precepts, no confession</td></tr>
+<tr><td>angry with companions (5)</td><td>doubt companions (→ 3?)</td><td>wish for heavenly rebirth</td></tr>
+<tr><td></td><td>(≠ 5)</td><td>(≠ 4, 5)</td></tr>
+</table>
+<p>Besides these two, the Madhyama-āgama version speaks of lack of confidence in the precepts, in the instructions, and in those fellow monks who have been praised by the Buddha.<span class="note" id="mn16n144"><span class="details"><span class="p">[n.144] <a href="../../parallels/ma206.html">MĀ 206</a> at T I 780b23.</span></span></span> The Ekottarika-āgama account agrees with the Pāli versions on lack of confidence in the Saṅgha as one type of mental barrenness,<span class="note" id="mn16n145"><span class="details"><span class="p">[n.145] <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817a25.</span></span></span> after which it mentions the mental barrenness of breaking one’s precepts and not confessing such a breach, and the mental barrenness of living the holy life with the aspiration of being reborn in a heavenly realm.</p>
+<p>The aspiration to be reborn in a heavenly realm occurs also in the two Pāli versions, where it constitutes one of the five mental bondages.<span class="note" id="mn16n146"><span class="details"><span class="p">[n.146] <a href="../../mn/mn16.html">MN 16</a> at MN I 102,9 and <a href="../../an/an10.14.html">AN 10:14</a> at AN V 18,24; for a similar aspiration cf. the Śrāvakabhūmi in Shukla 1973: 47,8 or ŚSG 1998: 76,16 and T 1579 at T XXX 404a6.</span></span></span> Other discourses qualify this type of aspiration as a way of getting “caught”,<span class="note" id="mn16n147"><span class="details"><span class="p">[n.147] <a href="../../sn/sn35.200.html">SN 35:200</a> at SN IV 180,21 and its parallels <a href="../../parallels/sa1174.html">SĀ 1174</a> at T II 315a2 and <a href="../../parallels/ea43.3.html">EĀ 43.3</a> at T II 759a18 consider the aspiration for a celestial rebirth to be a form of being “caught by non-humans”, amanussaggāho, 非人取者, 非人所捉者.</span></span></span> or else of being “bound”.<span class="note" id="mn16n148"><span class="details"><span class="p">[n.148] <a href="../../an/an7.47.html">AN 7:47</a> at AN IV 56,1 refers to this type of aspiration as being “bound by the bondage of sexuality”, saṃyutto methunena saṃyogena (Se-AN IV 57,15: saññutto and saññogena), the corresponding statement from a parallel found in the Śikṣāsamuccaya in Bendall 1902/1970: 76,14 similarly reads saṃyukto maithunena dharmeṇa; cf. also Hahn 1977: 207.</span></span></span> This terminology would fit a placing of this aspiration under the heading of a mental “bondage”.</p>
+<p>In addition to being found in the Pāli and Chinese versions of the present discourse, the five types of mental barrenness recur in the Saṅgīti-sutta and the Dasuttara-sutta, as well as in their parallels. The Saṅgīti- and Dasuttara-suttas correspond to the presentation found in the two Cetokhila-suttas.<span class="note" id="mn16n149"><span class="details"><span class="p">[n.149] <a href="../../dn/dn33.html">DN 33</a> at DN III 237,23 and <a href="../../dn/dn34.html">DN 34</a> at DN III 278,12.</span></span></span> Sanskrit fragments of the Daśottara-sūtra have only preserved the first and the fifth type of mental barrenness, which are doubt in the teacher and an angry attitude towards one’s fellow monks, thereby agreeing with their Pāli counterparts.<span class="note" id="mn16n150"><span class="details"><span class="p">[n.150] Fragment S 362V7 and R2 in Mittal 1957: 34; cf. also Dietz 2000: 135.</span></span></span> The Chinese Dīrgha-āgama version of the Daśottara-sūtra has the same two types of mental barrenness as its first and fifth, in addition to which it speaks of lack of confidence in the Dharma, in the Saṅgha, and in the precepts.<span class="note" id="mn16n151"><span class="details"><span class="p">[n.151] <a href="../../parallels/da10.html">DĀ 10</a> at T I 53c7.</span></span></span> Thus the Chinese Daśottara-sūtra differs from the Pāli presentations only in that it speaks of confidence in the precepts, instead of confidence in the training.</p>
+<p>In its exposition of such lack of confidence in the precepts, the Chinese Daśottarasūtra refers to bad and defiled conduct and to having no respect for the precepts. This indicates that one who has no confidence in or respect for the precepts will quite probably not adhere to them and indulge in bad conduct. Understood in this way, this passage would offer a way of bringing together the mental barrenness found in the Pāli Cetokhila-suttas as lack of confidence in the training, in the Madhyama-āgama version as lack of confidence in the precepts, and in the Ekottarika-āgama version as breaking one’s precepts and not confessing such a breach. Despite the differences in wording, the parallel versions could thus be seen to agree on the essential implications of this type of mental barrenness.<span class="note" id="mn16n152"><span class="details"><span class="p">[n.152] Although it needs to be noted that lack of confidence in the “training”, sikkhā, in <a href="../../mn/mn16.html">MN 16</a> at MN I 101,17 may not refer only to training in the precepts. According to the commentarial gloss at Ps II 68,33, in the present context the reference to ‘training’ should in fact be understood to encompass the entire path, covering the training in higher moral conduct, adhisīlasikkhā, in higher mental development, adhicittasikkhā, and in higher wisdom, adhipaññāsikkhā.</span></span></span> The different presentations of the five types of mental barrenness could then be summed up as:</p>
+<ul>
+<li>lack of confidence in the three jewels,</li>
+<li>lack of confidence in the precepts together with its resulting bad conduct,</li>
+<li>a type of attitude towards one’s fellow companions in the holy life that is dominated by anger and lack of confidence.</li>
+</ul>
+<p>The first four of these types of mental barrenness would consequently be the direct opposites of the four limbs of stream-entry,<span class="note" id="mn16n153"><span class="details"><span class="p">[n.153] These are perfect confidence in the Buddha, the Dharma, and the Saṅgha, together with unblemished moral conduct, found, e.g., in <a href="../../dn/dn33.html">DN 33</a> at DN III 227,6.</span></span></span> while the fifth mental barrenness would be a type of attitude that prevents a monk from being able to learn from other monks.<span class="note" id="mn16n154"><span class="details"><span class="p">[n.154] An illustrative instance can be found at <a href="../../sn/sn22.90.html">SN 22:90</a> at SN III 134,21 and its parallel <a href="../../parallels/sa262.html">SĀ 262</a> at T II 66c20. These two discourses begin by describing that the monk Channa was unable to accept the instructions given to him by other monks. When he finally visited Ānanda and asked for help, Ānanda replied that Channa, by requesting instruction, had broken his mental barrenness, khilaṃ pabhindi (Be-SN II 110,6 and Se-SN III 164,19: khīlaṃ, Be moreover reads chindi, instead of pabhindi), 破虛偽刺, and thereby become fit to understand the Dharma. Bodhi 2000: 1084 note 182 comments that “Channa’s problem seems to have been the fifth [mental barrenness], anger and contemptuousness towards his fellow monks”. The same topic recurs also in Sn 4:16 at Sn 973, which instructs to “break the mental barrenness” towards one’s companions in the holy life, khilaṃ pabhinde.</span></span></span> This makes it clear why these five qualities are collected together under the heading of “mental barrenness”. After their exposition of the five types of mental barrenness, the Cetokhila-suttas turn to the five mental bondages, which are:</p>
+<ul>
+<li>desire for sensual pleasures,</li>
+<li>desire for the body,</li>
+<li>desire for form,</li>
+<li>over-indulging in food and sleep,</li>
+<li>living the holy life with the aspiration to be reborn in a heavenly realm.<span class="note" id="mn16n155"><span class="details"><span class="p">[n.155] <a href="../../mn/mn16.html">MN 16</a> at MN I 101,27 and <a href="../../an/an10.14.html">AN 10:14</a> at AN V 18,14. The five mental bondages recur also in <a href="../../dn/dn33.html">DN 33</a> at DN III 238,13.</span></span></span></li>
+</ul>
+<p>Being under the influence of desire for the body and for sensual pleasures recur as the first two mental bondages in the Madhyama-āgama version, although in the opposite sequence (see table 2.11). The same discourse continues its exposition of mental bondages by listing:</p>
+<ul>
+<li>lack of interest in instructions pertaining to concentration and wisdom (etc.),</li>
+<li>being confused, arrogant, and given to excessive socialization,</li>
+<li>being content with having attained little, making no effort to progress further.<span class="note" id="mn16n156"><span class="details"><span class="p">[n.156] <a href="../../parallels/ma206.html">MĀ 206</a> at T I 780c8+15+20.</span></span></span></li>
+</ul>
+<p>The Ekottarika-āgama account of the five mental bondages differs considerably from its parallels. It agrees with the Cetokhila-suttas in regard to only one of the mental bondages, namely the bondage of fondness for sleep. The other mental bondages in this version are:</p>
+<ul>
+<li>being lazy,</li>
+<li>being without concentration,</li>
+<li>not keeping one’s sense-organs collected,</li>
+<li>preferring the market to quiet places.<span class="note" id="mn16n157"><span class="details"><span class="p">[n.157] <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817b6+10+12+13.</span></span></span></li>
+</ul>
+<p>In addition to being found in the Cetokhila-sutta and its parallels, the five types of mental barrenness occur twice as independent discourses in different parts of the Aṅguttara-nikāya, notably each time immediately followed by another discourse that takes up the five mental bondages.<span class="note" id="mn16n158"><span class="details"><span class="p">[n.158] These are <a href="../../an/an5.205.html">AN 5:205</a> at AN III 248 and <a href="../../an/an9.71.html">AN 9:71</a> AN IV 460, followed immediately by <a href="../../an/an5.206.html">AN 5:206</a> at AN III 249 and <a href="../../an/an9.72.html">AN 9:72</a> at AN IV 461, respectively. The same two sets are also found together in <a href="../../dn/dn33.html">DN 33</a> at DN III 237,24 and DN III 238,13, as well as in the Saṅgītiparyāya, T 1536 at T XXVI 416b29 and 418a13. For a single occurrence of the five cetokhīlas cf. <a href="../../dn/dn34.html">DN 34</a> at DN III 278,12 (cf. also Sanskrit fragment S 362V7-R2 in Mittal 1957: 34); single occurrences of the five cetasovinibandhas can be found in <a href="../../an/an9.82.html">AN 9:82</a> at AN IV 463,1 and in <a href="../../an/an9.92.html">AN 9:92</a> at AN IV 464,8.</span></span></span> This need not be a matter of mere coincidence, but could point to an inner connection between these two sets of five.</p>
+<table class="comparative-table">
+<caption>Table 2.11: Five Mental Bondages in <a href="../../mn/mn16.html">MN 16</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn16.html">MN 16</a> & <a href="../../an/an10.14.html">AN 10:14</a></th><th><a href="../../parallels/ma206.html">MĀ 206</a></th></tr>
+<tr><td>desire for sensual pleasures (1)</td><td>desire for body (→ 2)</td></tr>
+<tr><td>desire for body (2)</td><td>desire for sensual pleasures (→ 1)</td></tr>
+<tr><td>desire for form (3)</td><td>not interested in instructions</td></tr>
+<tr><td>overeating & sleeping (4)</td><td>confused, arrogant, socializing</td></tr>
+<tr><td>wish for heavenly rebirth (5)</td><td>no effort to progress further</td></tr>
+<tr><td></td><td>(≠ 3-5)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea51.4.html">EĀ 51.4</a></td></tr>
+<tr><td>lazy</td></tr>
+<tr><td>enjoy sleeping (→ 4)</td></tr>
+<tr><td>not concentrated</td></tr>
+<tr><td>not restraining senses</td></tr>
+<tr><td>prefer market to quiet places</td></tr>
+<tr><td>(≠ 1, 2-3, 5)</td></tr>
+</table>
+<p>The five types of mental barrenness are concerned with the affective nature of the mind, exposing the type of attitude that will fail to generate the inspiration and enthusiasm required for progress.<span class="note" id="mn16n159"><span class="details"><span class="p">[n.159] To evoke this negative nuance the term khila appears particularly appropriate, as according to MW: 340 khila stands for a “piece of waste or uncultivated land situated between cultivated fields”.</span></span></span> The five mental bondages (in their Pāli version) are similarly concerned with the affective nature of the mind. Here the problem is, however, not a lack of development, but rather a development in the wrong direction, since the five mental bondages are desire for sensual pleasures, for the body, for forms, for food and sleep, and for the pleasures of a heavenly rebirth.</p>
+<p>Consequently these two sets of five can be brought together as a set of ten types of affective obstruction, being either a lack of developing appropriate sentiments or else misdirected sentiments, each of which will undermine the inspiration and enthusiasm required for progress.</p>
+<p>The Aṅguttara-nikāya version illustrates the detrimental effect of the five types of mental barrenness and of the five mental bondages with the image of the waning moon, which decreases every day in roundness, splendour, and beauty.<span class="note" id="mn16n160"><span class="details"><span class="p">[n.160] <a href="../../an/an10.14.html">AN 10:14</a> at AN V 19,8.</span></span></span> Freedom from these ten obstructions is then comparable to the waxing moon, which every day increases in roundness, splendour, and beauty.</p>
+<p>The Ekottarika-āgama discourse instead compares the detrimental effect of these ten obstructions to a hen that does not properly hatch her eggs, as a result of which the chicks will not come to growth and maturity.<span class="note" id="mn16n161"><span class="details"><span class="p">[n.161] <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817b17. This simile recurs in <a href="../../mn/mn53.html">MN 53</a> at MN I 357,6. Another occurrence is <a href="../../sn/sn22.101.html">SN 22:101</a> at SN III 153,14, with a Gāndhārī discourse parallel in Glass 2007: 137, Senior Kharoṣṭhī fragment 5 lines 40-41, and another parallel in <a href="../../parallels/sa263.html">SĀ 263</a> at T II 67b1. The simile is also found in <a href="../../an/an7.67.html">AN 7:67</a> at AN IV 125,18. Yet another occurrence is <a href="../../an/an8.11.html">AN 8:11</a> at AN IV 176,7, with a parallel in <a href="../../parallels/ma157.html">MĀ 157</a> at T I 679c4.</span></span></span> The case of a hen that properly hatches her eggs then illustrates the case of a monk or a nun who overcomes these obstructions. The Ekottarika-āgama discourse concludes by predicting that a monk or a nun who has overcome the five types of mental barrenness can be sure of a favourable rebirth, either in a heavenly realm or as a human being.<span class="note" id="mn16n162"><span class="details"><span class="p">[n.162] <a href="../../parallels/ea51.4.html">EĀ 51.4</a> at T II 817c13.</span></span></span> MN I While the two versions found in the respective numerical collections, the Aṅguttaranikāya and the Ekottarika-āgama, come to a conclusion at this point, the two middle length versions, found in the Majjhima-nikāya and Madhyama-āgama, continue further.</p>
+<p>These two versions take up five more qualities to be developed: the four ways to [psychic] power (iddhipāda) and exertion.<span class="note" id="mn16n163"><span class="details"><span class="p">[n.163] <a href="../../mn/mn16.html">MN 16</a> at MN I 103,36: ussoḷhi (Be-MN I 149,2 here reads ussoḷhī, but later on twice: ussoḷhi, Ce also shows some variations between these two alternatives) and <a href="../../parallels/ma206.html">MĀ 206</a> at T I 781b8: 堪任.</span></span></span> It is at this point that these two versions also have the simile of the hen and her eggs, explaining that just as the chicks will come to growth when a hen has properly hatched her eggs, so a monk endowed with the four ways to [psychic] power and with exertion will be able to reach awakening.<span class="note" id="mn16n164"><span class="details"><span class="p">[n.164] <a href="../../mn/mn16.html">MN 16</a> at MN I 104,11 and <a href="../../parallels/ma206.html">MĀ 206</a> at T I 781b14.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

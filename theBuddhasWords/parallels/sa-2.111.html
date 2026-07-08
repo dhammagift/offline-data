@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.111 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.111</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 111</span><span class="mirror-right">（一一一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn16.3.html">SN 16.3</a> / <a href="../parallels/sa1136.html">SĀ 1136</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>The Buddha was at the Bamboo Grove in the Kalandaka Park in Rājagṛha. At that time, the World-Honored One told the bhikṣus, &quot;You should all diligently cultivate good practices, gradually increasing them, like the waxing moon.&quot; At that time, there was a bhikṣu who had just received the precepts. He gradually cultivated a sense of shame and guilt, upheld the dignified deportment, traveled among the people, was gentle and respectful, not arrogant, and was able to restrain his body and mind. It was like a person with clear eyes avoiding a deep, empty well and a steep mountain cliff. The bhikṣu was also like this, like the waxing moon, gradually increasing, with good practices becoming new every day. The Buddha further told the bhikṣus, &quot;In this assembly, the bhikṣu Kāśyapa diligently cultivates good practices, like the waxing moon, gradually increasing, gradually cultivating a sense of shame and guilt, traveling among the people, able to restrain his body and mind, being gentle and respectful, never being arrogant. It is like a person with clear eyes being able to avoid a deep well and stay far away from a steep valley. The bhikṣu Kāśyapa is also like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛在王舍城迦兰陀竹林。尔时，世尊告诸比丘：「汝等皆当勤修善行，渐渐增长，如月初生。」时，有比丘初始受戒，渐修惭愧，善持威仪，往返人间，柔和恭顺，不为佷戾，能制身心，如明眼人避深空井，及山峻岸。比丘亦尔，如月初生，渐渐增长，善行日新。佛复告诸比丘：「今此会中，迦叶比丘勤修善行，如月初生，渐渐增长，渐修惭愧，往返人间，能制身心，柔和恭顺，终不佷戾，如明眼人能避深井，远离峻谷，迦叶比丘亦复如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;What kind of bhikṣu is in accord with the Dharma and can go to people&#x27;s homes?&quot; At that time, the bhikṣus said to the Buddha, &quot;World-Honored One! The Tathāgata is the root of all dharmas, the guide of all dharmas, and the basis of all dharmas. Excellent! World-Honored One! Please explain this meaning for us. Having heard it, we will accept and uphold it with utmost sincerity.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「何等比丘与法相应，堪至诸家？」时，诸比丘白佛言：「世尊！如来则是诸法根本，诸法之导，法所依凭。善哉！世尊！愿为我等敷演斯义，我等闻已，至心受持。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha further told the bhikṣus, &quot;Listen attentively! Listen attentively! Remember it well! If there is a bhikṣu who is not attached to anything, does not love or hate, is not bound by the household, does not give rise to increase or decrease, has no resentment in his mind, and is also not jealous. Seeing others&#x27; gains, he gives rise to joy. Seeing others give to others, he is not resentful. He rejoices in the merit-making of others. He does not praise himself for having virtuous practices. Whatever he says is always for the sake of all. Seeing other bhikṣus going to others&#x27; homes together, he never criticizes. He has no high or low thoughts towards himself and others. If the bhikṣus can cultivate good thoughts as explained above, they are then said to be in accord with the Dharma, going back and forth among the people in accordance with the Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告诸比丘：「谛听！谛听！至心忆念。若有比丘，无所染著，不爱缚家，不生增减，心无嫌恨，亦不嫉妬。见他利养，心生欢喜。见他施彼，亦不忿恨。于修福者，咸皆随喜。又不自赞己有德行，诸所言说，恒为一切。见余比丘，同至他家，终不讥毁，于自他所，心无高下。若诸比丘能修善心，如向所说，乃名随顺，如法周旋，往返人间。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One himself moved his hand in the sky and told the bhikṣus, &quot;Now, my hand is not attached to the sky, not bound by the sky, and has no resentment or anger. Is there any binding, attachment, increase or decrease in this hand?&quot; The bhikṣus then said to the Buddha, &quot;World-Honored One! This hand in the sky is not bound, not attached, and has no increase or decrease.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊于虚空中而自运手，告诸比丘：「今我此手，不著于空，不缚于空，无有嫌隙，亦无瞋恚，此手宁有缚著、增减已不？」诸比丘即白佛言：「世尊！此空中手无缚无著，无有增减。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣu, &quot;It is so, it is so. If there is a bhikṣu whose mind is not bound or attached, like moving a hand in the sky, he can then enter and leave, going back and forth to various homes, without giving rise to increase or decrease, without giving rise to regret or distress, and also without jealousy. Seeing others&#x27; gains, he gives rise to joy. Seeing others give to others, not to himself, he is also not resentful. Seeing those who cultivate merit, he rejoices in them all, and even has no high or low thoughts.&quot; The Buddha told the bhikṣu, &quot;The bhikṣu Kāśyapa is also like this, going back and forth among the people, with no bound or attached mind, and even with no high or low thoughts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「如是，如是。若有比丘心无缚著，如空运手，乃可出入，往返诸家，不生增减，不生懊恼，亦不嫉妬。见他利养，心生欢喜。见他布施，不与于己，亦不忿恨。见修福者，普皆随喜，乃至心无高下。」佛告比丘：「迦叶比丘亦复如是，往返人间，心无缚著，乃至心无高下。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again moved his hand in the sky for a second time and told the bhikṣus, &quot;As explained above, even the bhikṣu Kāśyapa is also like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复空中第二运手，告诸比丘：「如上所说，乃至迦叶比丘亦复如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;How do bhikṣus enter and leave various homes to teach the Dharma to people? How can they be called pure Dharma teachers? How can they be called impure?&quot; The bhikṣus said to the Buddha, &quot;World-Honored One! The Tathāgata is the root of all dharmas, guided by the Dharma, relying on the Dharma. Excellent! World-Honored One! Please explain it for us. After we hear it, we will wholeheartedly uphold it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「云何比丘出入诸家，为人说法？云何得名清净说法？云何名为不清净说？」时，诸比丘白佛言：「世尊！如来则是诸法根本，法之所导，法所依凭。善哉！世尊！愿为敷演，我等闻已，至心受持。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;Listen carefully! Listen carefully! Remember it well! If a bhikṣu teaches the Dharma to others, thinking, &#x27;I teach the Dharma for that person, so that person will have faith and respect for me, and be able to give me a lot of food, clothing, and medicine for illness,&#x27; if he speaks like this, it is called impure. If a bhikṣu teaches the Dharma to others, wishing to make the listeners realize and understand the Buddha&#x27;s teachings, eliminate present suffering, and be free from all afflictions, not choosing the time, guiding and showing the good paths, revealing it for them, so that they can know for themselves and not be taught by others, being free from birth, old age, sickness, death, sorrow, lamentation, suffering, and distress, and making the listeners hear what he says and practice according to the Dharma, so that the listeners may attain the Dharma, attain the meaning, attain benefits, and attain peace for a long time, if he speaks like this, it is called the pure teaching of compassion and kindness. It is out of compassion and benefit, wishing to make the true Dharma last long, that he speaks the Dharma like this. This is called pure. Therefore, bhikṣus should think like this when teaching the Dharma to others. They should study like this. The third is also as explained above. Kāśyapa bhikṣu is able to speak like this, wishing to make the listeners realize and understand the Buddha&#x27;s teachings, and so on, up to wishing to make the true Dharma last long, out of compassion and benefit, speaking like this is called pure, in accordance with the Buddha&#x27;s teachings.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告诸比丘：「谛听！谛听！至心忆念。若有比丘为人说法，作如是念：『我为彼人而说于法，当令彼人信敬于我，能多与我饮食、衣服、病瘦医药。』若作是说者，是名不净。若有比丘为人说法，欲令听者证解佛法，除现在苦，离诸热恼，不择时节，导示善趣，为其显现，乃至能令知者自知，不从他教，离] cf.【丽】于生老病死、忧悲苦恼，能令听者闻其所说，如法修行。为令听者于长夜中，得法、得义、得利、得安，如是说者，名为清净慈悲之说。怜愍利益，欲使正法得久住故，如是说法名为清净。是故比丘应作是念，为人说法，当作是学。第三亦如上所说，迦叶比丘能如是说，为令听者证解佛法，乃至欲令正法得久住故，怜愍利益，作如是说，是名清净，称可佛法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said, and joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

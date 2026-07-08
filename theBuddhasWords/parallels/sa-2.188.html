@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.188 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.188</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 188</span><span class="mirror-right">（一八八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an3.127.html">AN 3.127</a> / <a href="../parallels/sa594.html">SĀ 594</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying in the First Grove of the Wilderness Garden. At that time, the elder Shou was afflicted with a serious illness. The World-Honored One, having heard of his illness, put on his robe and took his alms bowl the next morning and went to his house. When the elder Shou saw the Buddha coming from afar, he moved to get up. The Buddha told the elder, &quot;You don&#x27;t need to get up.&quot; The Buddha then inquired, &quot;Can you bear the pain of your illness? Is the treatment effective, not worsening?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在旷野园第一林中。时首长者身遇困疾，尔时，世尊闻其患已，后日晨朝，著衣持钵，往诣其家。时首长者遥见佛来，动身欲起，佛告长者：「不须汝起。」佛即慰问：「汝所患苦，为可忍不？医疗有降，不至增耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said to the Buddha, &quot;Now my illness is extremely difficult to bear. The pain I feel is gradually increasing. The pain is pressing and very loathsome. It is like a strong person pinching and pulling the head of a weak person. My headache is also like this. It is like a butcher using a sharp knife to stir the intestines and stomach of a cow, cutting them into pieces. My abdominal pain is also like this. It is like two strong men holding a weak and sick person and roasting them over a fire, burning their body. The pain of my body being hot is also like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者白佛：「今我患苦，极为难忍，所受痛剧，遂渐增长，苦痛逼切，甚可厌患。譬如有力之人，以手［打－丁＋（稯－禾）］搣无力者头，揉捺牵掣，我患头痛，亦复如是。譬如屠者以彼利刀，挠搅牛腹肠胃寸绝，我患腹痛，亦复如是。譬如二大力人，捉一羸病，向火燺炙，身体焦烂，患体热痛，亦复如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the elder, &quot;You should now generate indestructible faith in the Buddha, the Dharma, the Sangha, and the precepts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者：「汝今，应于佛所生不坏信，法僧及戒，亦当如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said to the Buddha, &quot;As the Buddha has said, I have already fully attained the four indestructible faiths.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者白佛：「如佛所说，四不坏信，我已具得。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the elder, &quot;Based on these four indestructible faiths, you should cultivate the six recollections.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者「依于如是四不坏信，应修六念。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said to the Buddha, &quot;I have already fully cultivated these six recollections.&quot; At that time, the chief elder said to the Buddha, &quot;I only wish that the World-Honored One would take a meal here.&quot; The Buddha silently accepted the invitation. When it was time, the chief elder prepared various delicacies for the Tathāgata, all complete and pure and fragrant. Having made these offerings, he then presented them, joined his palms towards the Buddha, and said, &quot;The World-Honored One&#x27;s appearance in the world is difficult to encounter.&quot; The Buddha spoke various teachings to the elder, showing, teaching, benefiting, and delighting him, then departed from his seat.</p></td><td lang="lzh" class="agama-chi"><p>长者白佛：「如此六念，我已具修。」时首长者即白佛言：「唯愿世尊，在此中食。」佛默然受请。日时已到，彼首长者为于如来设众肴饍，种种备具，清净香洁。设是供已，寻便奉施，合掌向佛，而作是言：「世尊出世，难可值遇。」佛为长者种种说法，示教利喜，从座而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>After the Tathāgata left, the chief elder died that night and was reborn in the Heaven of No Heat. Having been reborn in heaven, he thought, &quot;I should now go to the Buddha.&quot; Having thought this, he came to the Buddha, his radiance and color doubling as usual, illuminating Jetavana, all becoming greatly bright. Having bowed to the Buddha, he sat to one side, his body sinking into the ground, like ghee or oil.</p></td><td lang="lzh" class="agama-chi"><p>时首长者如来去后，寻于其夜，身坏命终，生无热天。既生天已，即作此念：「我于今者，应往佛所。」作是念已，寻来佛所，光色倍常，照于祇洹，悉皆大明，顶礼佛已，却坐一面，身渗入地，譬如苏油。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the celestial being, &quot;You should transform into a coarse body and think of it as dwelling.&quot; At that time, the chief celestial being, having received the Buddha&#x27;s instruction, immediately transformed into a coarse form of the desire realm, no longer sinking.</p></td><td lang="lzh" class="agama-chi"><p>佛告天子：「汝可化为麁身，当作住想。」时首天子受佛勅已，即便化作欲界麁形，不复渗没。佛告首天子言：「汝行几法不生厌足，身坏命终，生无热天？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The chief celestial being said to the Buddha, &quot;I practice three dharmas with an insatiable mind, therefore I am reborn in heaven. Seeing the Buddha, listening to the Dharma, and making offerings to the Sangha, because of being insatiable, I am reborn in the Heaven of No Heat after death.&quot; At that time, the chief celestial being spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>首天白佛：「我行三法，心无厌足，故得生天。见佛，听法，供养众僧，无厌足故，命终得生无热天上。」时首天子即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I delight in always seeing the Buddha, not abandoning listening to the Dharma, making<br/>offerings to the Sangha of bhikṣus, upholding the Dharma of the sages, taming the<br/>mind of greed and jealousy, and being reborn in the Heaven of No Heat.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我乐常见佛，　　不舍于听法，供养比丘僧，　　受持贤圣法，调伏贪嫉心，　　得生无热天。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, after the chief celestial being spoke this verse, he joyfully bowed his head, immediately disappeared from his seat, and returned to the heavenly palace.</p></td><td lang="lzh" class="agama-chi"><p>时首天子说是偈已，欢喜顶礼，即从座没，还于天宫。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

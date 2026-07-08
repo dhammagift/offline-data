@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 42.6 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 42.6</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">42.6</span> <span class="mirror-right">（六）大人八念</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an8.30.html">AN 8.30</a> / <a href="../parallels/ma74.html">MĀ 74</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Venerable Aniruddha was staying in the place where the four Buddhas resided.</p></td><td lang="lzh" class="agama-chi"><p>一时，尊者阿那律游在四佛所居之处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Aniruddha was in a secluded place and had this thought: &quot;Among the disciples of the Buddha Śākyamuni, those who have accomplished the precepts and wisdom all rely on the precepts and are nourished in this true Dharma. Those disciples who are not fully endowed with the precepts are all separated from the true Dharma and do not accord with the precepts. Now, between these two dharmas, the precepts and hearing, which is superior? I should now use this cause and condition to ask the Tathāgata about this matter.&quot; Aniruddha further thought: &quot;This Dharma is practiced by those who are content, not by those who are insatiable; it is practiced by those who have few desires, not by those who have many desires; this Dharma is practiced by those who dwell in seclusion, not by those who are in a noisy crowd; this Dharma is practiced by those who uphold the precepts, not by those who violate the precepts; it is practiced by those who are in samādhi, not by those who are distracted; it is practiced by those who are wise, not by those who are foolish; it is practiced by those who have heard much, not by those who have heard little.&quot; At that time, Aniruddha contemplated these eight thoughts of great people and thought: &quot;Now I should go to where the World-Honored One is and ask about this meaning.</p></td><td lang="lzh" class="agama-chi"><p>是时，阿那律在闲静之处，便作是念：「诸释迦文佛弟子之中，戒德、智慧成就者皆依戒律，于此正法中而得长养；诸声闻之中不具足戒律者，斯等之类皆离正法，不与戒律相应。如今此二法，戒与闻何者为胜？我今可以此因缘之本，往问如来是事如何？」阿那律复作是念：「此法，知足者之所行，非无厌者之所行；少欲者之所行，非为多欲者之所行；此法，应闲居者之所行，非在愦閙之所行；此法，持戒人之所行，非犯戒者之所行；三昧者之所行，非乱者之所行；智慧者之所行，非愚者之所行；多闻者之所行，非少闻者之所行。」是时，阿那律思惟此八大人念：「今我可往至世尊所，而问此义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One was in Śrāvastī, at Anāthapiṇḍada&#x27;s Park in the Jeta Grove. At that time, King Prasenajit invited the Tathāgata and the bhikṣu saṃgha to spend the summer retreat for ninety days. At that time, Aniruddha gradually traveled through the human world, leading five hundred bhikṣus on a tour, and arrived at Śrāvastī, where he went to where the Tathāgata was, bowed his head at the Buddha&#x27;s feet, and sat to one side. At that time, Aniruddha said to the World-Honored One: &quot;When I was in a secluded place, I contemplated this meaning: &#x27;Between the precepts and hearing, which of these two dharmas is superior?&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊在舍卫城祇树给孤独园。是时，王波斯匿请如来及比丘僧，夏坐九十日。是时，阿那律渐渐人间，将五百比丘游化，转至舍卫国，到如来所，头面礼足，在一面坐。时，阿那律白世尊言：「我在闲静之处，思惟此义：『戒与闻，此二法何者最胜乎？』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse to Aniruddha:</p></td><td lang="lzh" class="agama-chi"><p>是时，世尊与阿那律便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Is the precept superior to hearing? You now give rise to doubt<br/>If the precept is superior to hearing, what doubt is there in this?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「戒胜闻胜耶？　　汝今起狐疑。戒胜于闻者，　　于中何狐疑？</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;The reason is this, Aniruddha should know, if a bhikṣu accomplishes the precepts, he will attain samādhi; having attained samādhi, he will attain wisdom; having attained wisdom, he will attain much learning; having attained much learning, he will attain liberation; having attained liberation, he will attain parinirvāṇa without remainder. From this it is clear that the precepts are supreme.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「所以然者，阿那律当知，若比丘戒成就者，便得定意；已得定意，便获智慧；已得智慧，便得多闻；已得多闻，便得解脱；已得解脱，于无余涅槃而取灭度。以此明之，戒为最胜。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Aniruddha spoke to the World-Honored One about these eight thoughts of great people. The Buddha told Aniruddha, &quot;Excellent! Excellent! Aniruddha! What you are thinking now is precisely what great people contemplate. Few desires and contentment, dwelling in secluded places, accomplishing the precepts, accomplishing samādhi, accomplishing wisdom, accomplishing liberation, accomplishing much learning. Now, Aniruddha! You should establish this intention and contemplate the eight thoughts of great people. What are the eight? This is the practice of those who are diligent, not of those who are lazy. The reason is this, Maitreya Bodhisattva will attain unsurpassed, perfect enlightenment in thirty eons. I surpassed him and attained Buddhahood through the power of diligence.</p></td><td lang="lzh" class="agama-chi"><p>是时，阿那律向世尊说此八大人念。佛告阿那律曰：「善哉！善哉！阿那律！汝今所念者，正是大人之所思惟也。少欲知足、在闲居之处、戒成就、三昧成就、智慧成就、解脱成就、多闻成就。汝今，阿那律！当建是意，思惟八大人念。云何为八？此法精进者之所行，非懈怠者之所行。所以然者，弥勒菩萨应三十劫当成无上正真等正觉，我以精进之力超越成佛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Aniruddha should know, all the World-Honored Buddhas are all of the same kind, the same in precepts, liberation, wisdom, and without difference, also the same in emptiness, signlessness, and wishlessness, with the thirty-two marks and eighty minor marks adorning their bodies, seen without satiation, none can see the crown of their heads, all are without difference. Only diligence is not the same. Among the Buddhas of the past and future, in diligence, I am the most superior. Therefore, Aniruddha! This eighth thought of a great person is the most supreme, the most honored, the most noble, and incomparable. Just as from milk there is curd, from curd there is butter, from butter there is ghee, and ghee is the most supreme among them, without comparison. It is also like this, the thought of diligence is the most supreme among the eight thoughts of great people, truly without comparison!</p></td><td lang="lzh" class="agama-chi"><p>「阿那律知之，诸佛世尊皆同一类，同其戒律、解脱、智慧而无有异，亦复同空，无相、愿，有三十二相、八十种好，而庄严其身，视无厌足，无能见顶者，皆悉不异。唯有精进不同，于过去当来诸佛世尊，精进者，吾最为胜。是故，阿那律！此第八大人之念，此为最为上，为尊为贵，为无有喻。犹如由乳有酪，由酪有酥，由酥有醍醐，然复醍醐于中最上，为无有比。此亦如是，精进之念，于八大人念中最上，实无有比！</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Therefore, Aniruddha! You should uphold the eight thoughts of great people and also explain their meaning to the four groups of followers. If the eight thoughts of great people are spread in the world, it will cause my disciples to all attain the path of stream-enterer, the path of once-returner, the path of non-returner, and the path of arahantship. The reason is this, my Dharma is practiced by those of few desires, not by those of many desires; my Dharma is practiced by those who are content, not by those who are insatiable; my Dharma is practiced by those who dwell in seclusion, not by those who are in the midst of the crowd; my Dharma is practiced by those who uphold the precepts, not by those who violate the precepts. My Dharma is practiced by those who are concentrated, not by those who are distracted; my Dharma is practiced by those who are wise, not by those who are foolish; my Dharma is practiced by those who have much learning, not by those who have little learning; my Dharma is practiced by those who are diligent, not by those who are lazy. Therefore, Aniruddha! The four groups of followers should seek skillful means to practice these eight thoughts of great people. Thus, Aniruddha! You should train in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「是故，阿那律！当奉八大人念，亦当与四部众分别其义。设当八大人念流布在世者，令我弟子皆当成须陀洹道、斯陀含道、阿那含道、阿罗汉道。所以然者，我法，少欲者之所行，非多欲者所行也；我法，知足者之所行，非无厌者之所行也；我法，闲居者之所行，非众中者之所行也；我法，持戒者之所行，非犯戒者之所行也。我法，定者之所行，非乱者所行也；我法，智者之所行，非愚者之所行也；我法，多闻者之所行，非少闻者所行也；我法，精进者之所行，非懈怠者所行也。是故，阿那律！四部之众当求方便，行此八大人念。如是，阿那律！当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Aniruddha, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿那律闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

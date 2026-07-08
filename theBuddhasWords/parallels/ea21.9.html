@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 21.9 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 21.9</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">21.9</span> <span class="mirror-right">（九）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn13.html">MN 13</a> / <a href="../parallels/ma99.html">MĀ 99</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, many bhikṣus, having put on their robes and taken their alms bowls, entered the city to beg for food. Then the many bhikṣus had this thought: &quot;The time for begging for food in the city has not yet come. Now we should go together to where the non-Buddhist brāhmaṇas are.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，有众多比丘到时，著衣持钵，入城乞食。是时，众多比丘便生此念：「我等入城乞食，日时犹早，今可相率至外道梵志所。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus went to where the non-Buddhist brāhmaṇas were. Having arrived, they exchanged greetings and sat to one side. Then the brāhmaṇas asked the śramaṇas, &quot;The śramaṇa Gautama always speaks about desire, form, feeling, and perception. What is the difference between these discourses? What we speak about is also what the śramaṇas speak about, and what the śramaṇas speak about is also what we speak about. The Dharma they speak is the same as what we speak, and the teachings they give are the same as what we give.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘便往至异学梵志所。到已，共相问讯，在一面坐。是时，梵志问沙门曰：「瞿昙道士恒说欲论、色论、痛论、想论，如此诸论有何差别？我等所论亦是沙门所说，沙门所说亦是我等所论。说法同我说法，教诲同我教诲。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus, having heard their words, neither said good nor bad, but immediately got up from their seats and left. They all thought, &quot;We should go ask the World-Honored One about this meaning.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，众多比丘闻彼语已，亦不言善，复非言恶，即从坐起而去。并作是念：「我等当以此义往问世尊。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus, after the meal, went to where the World-Honored One was. Having arrived, they bowed their heads at his feet and sat to one side. Then the many bhikṣus, from what they had been asked by the brāhmaṇas, explained the causes and conditions in detail to the World-Honored One.</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘食后便至世尊所。到已，头面礼足，在一面坐。是时，众多比丘从梵志所，问事因缘本末，尽白世尊。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;If those brāhmaṇas ask you this, you should answer their questions with these words: &#x27;What is the taste of desire? What are its faults? One should abandon desire. What is the taste of form? What are its faults? One should abandon form. What is the taste of feeling? What are its faults? One should abandon feeling.&#x27; If you answer their questions with these words, those brāhmaṇas will remain silent and not respond. Even if they do speak, they will not be able to understand this profound meaning, and will only increase their ignorance and fall into extremes. Because this is not their realm. However, bhikṣus! The Māra, Māra&#x27;s heavenly beings, Śakra, Brahmā, the Four Heavenly Kings, śramaṇas, brāhmaṇas, humans, and non-humans are unable to understand this profound meaning, except for the Tathāgata, the Perfectly Enlightened One, and the Tathāgata&#x27;s noble assembly who accept my teachings. This is not to be discussed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「设彼梵志作是问者，汝等当以此义，詶彼来问：『欲有何味？复有何过？当舍离欲。色有何味？复有何过？当舍离色。痛有何味？复有何过？当舍离痛。』汝等设以此语詶彼来问者，彼诸梵志默然不对。设有所说者，亦不能解此深义，遂增愚惑，堕于边际。所以然者，非彼境界。然复，比丘！魔及魔天、释、梵、四天王、沙门、婆罗门、人及非人能解此深义者，除如来、等正觉及如来圣众受吾教者，此即不论。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is the taste of desire? It refers to the five desires. What are the five? The eye sees form and gives rise to eye consciousness, which is greatly loved and cherished, and is enjoyed by the world. If the ear hears sounds, the nose smells fragrances, the tongue tastes flavors, and the body experiences smoothness, it is greatly loved and cherished, and is enjoyed by the world. If one further gives rise to a mind of suffering and happiness within these five desires, this is called the taste of desire.</p></td><td lang="lzh" class="agama-chi"><p>「欲有何味？所谓五欲者是。云何为五？眼见色，为起眼识，甚爱敬念，世人所喜。若耳闻声、鼻嗅香、舌知味、身知细滑，甚爱敬念，世人所喜。若复于此五欲之中，起苦、乐心，是谓欲味。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What are the faults of desire? If a clansman studies various skills to support himself, such as farming, writing, manual labor, calculation, deception, engraving, communication, serving the king, enduring cold and heat, recording, and hard work, not being free to do as one pleases, and obtaining wealth through this hardship, this is considered a great fault of desire. The suffering and distress of this world all arise from desire and love. Moreover, that clansman, through this hard work, does not obtain wealth. He then becomes sorrowful and distressed, beyond description. He thinks to himself: &#x27;I have worked hard and made various plans, but have not obtained wealth. In such cases, I should think of abandoning desire.&#x27; This is called abandoning desire.</p></td><td lang="lzh" class="agama-chi"><p>「云何欲有何过者？若有一族姓子，学诸伎术，而自营己。或学田作，或学书疏，或学佣作，或学算数，或学权诈，或学克镂，或学通信，至彼来此。或学承事王身，不避寒暑，记累懃苦，不自由己，作此辛苦而获财业，是为欲为大过。现世苦恼，由此恩爱，皆由贪欲。然复彼族姓子，作此懃劳，不获财宝，彼便怀愁忧，苦恼不可称记。便自思惟：『我作此功劳，施诸方计，不得财货。如此之比者，当念舍离。』是为当舍离欲。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, that clansman may sometimes obtain wealth through this method, and with the obtained wealth, he widely makes plans, always protecting himself, fearing that the king will confiscate it, that thieves will steal it, that it will be swept away by water, or burned by fire. He further thinks: &#x27;If I bury it, I fear it will be lost later. If I try to make a profit, I fear it will not succeed. Or my family may give birth to a bad child who will squander my wealth.&#x27; This is considered a great affliction of desire, all arising from the basis of desire, leading to these calamities.</p></td><td lang="lzh" class="agama-chi"><p>「复次，彼族姓子或时作此方计而获财货，以获财货，广施方宜，恒自拥护，恐王勅夺，为贼偷窃，为水所漂，为火所烧。复作是念：『正欲藏窖，恐后亡失，正欲出利，复恐不克。或家生恶子，费散吾财。』是为欲为大患，皆缘欲本，致此灾变。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, that clansman always has this thought: &#x27;I want to protect my wealth.&#x27; Later, it is still confiscated by the king, robbed by thieves, swept away by water, or burned by fire; what is buried also does not succeed; even if it is put to use, it is not obtained; a bad child is born in the household, squandering wealth, with ten thousand not obtaining one. He then becomes sorrowful and distressed, beating his chest and crying: &#x27;The wealth I originally obtained is now all lost!&#x27; He becomes foolish and confused, his mind and thoughts disordered. This is considered a great affliction of desire, arising from the basis of desire, not leading to the unconditioned.</p></td><td lang="lzh" class="agama-chi"><p>「复次，族姓子恒生此心，欲拥护财货。后犹复为国王所夺，为贼所劫，为水所漂，为火所烧；所藏窖者亦复不克；正使出利亦复不获；居家生恶子，费散财货，万不获一，便怀愁忧苦恼，椎胸唤呼：『我本所得财货，今尽忘失！』遂成愚惑，心意错乱，是谓欲为大患，缘此欲本，不至无为。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, arising from this basis of desire, they wear armor and take up arms to attack each other. Because of attacking each other, they may be in the front of the elephant troops, in the front of the horse troops, in the front of the infantry, or in the front of the chariot troops. They see horses fighting with horses, elephants fighting with elephants, chariots fighting with chariots, and infantry fighting with infantry, or they slash and shoot each other with spears. Such things are considered great afflictions of desire. Arising from the basis of desire, they lead to these calamities.</p></td><td lang="lzh" class="agama-chi"><p>「复次，缘此欲本，著铠执仗，共相攻伐。以相攻伐，或在象众前、或在马众前、或在步兵前、或在车众前，见马共马鬪、见象共象鬪、见车共车鬪、见步兵共步兵鬪，或相斫射，以矟相斫刺。如此之比，欲为大患。缘欲为本，致此灾变。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, arising from this basis of desire, wearing armor and taking up arms, they may be at the city gate or on the city wall, slashing and shooting each other, or stabbing with spears, or crushing their heads with iron wheels, or pouring molten iron on each other. Suffering these afflictions, many die.</p></td><td lang="lzh" class="agama-chi"><p>「复次，缘此欲本，著铠执仗，或在城门、或在城上，共相斫射，或以矟刺、或以铁轮而轹其头，或消铁相洒。受此苦恼，死者众多。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, desire is also impermanent, constantly changing and transforming, without stopping or ceasing. This impermanence of desire is considered a great affliction.</p></td><td lang="lzh" class="agama-chi"><p>「复次，欲者亦无有常，皆代谢变易，不停不解。此欲变易无常者，此谓欲为大患。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How can one abandon desire? If one can practice to eliminate desire, that is called abandoning desire. That is, those śramaṇas and brāhmaṇas who do not know the great affliction of desire, and also do not know the source of abandoning desire, do not truly know the śramaṇa and the śramaṇa&#x27;s deportment, do not know the brāhmaṇa and the brāhmaṇa&#x27;s deportment, are not śramaṇas or brāhmaṇas, and also cannot attain realization through the body and play within it. That is, those śramaṇas and brāhmaṇas who truly know desire to be a great affliction, are able to abandon desire, and truly and non-erroneously know the śramaṇa and the śramaṇa&#x27;s deportment, know the brāhmaṇa and the brāhmaṇa&#x27;s deportment, have attained realization through the body and play within it, this is called abandoning desire.</p></td><td lang="lzh" class="agama-chi"><p>「云何当舍离欲？若能修行除贪欲者，是谓舍欲。谓诸有沙门、婆罗门，不知欲之大患，亦复不知舍欲之原，如实不知沙门、沙门威仪，不知婆罗门、婆罗门威仪，此非沙门、婆罗门，亦复不能举身作证而自游戏。谓诸沙门、婆罗门审知欲为大患，能舍离欲，如实不虚。知沙门有沙门威仪，知婆罗门有婆罗门威仪，已身作证而自游戯，是为舍离于欲。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is the taste of form? If one sees a kṣatriya girl, a brāhmaṇa girl, or a householder girl, fourteen, fifteen, or sixteen years old, not tall or short, not fat or thin, not white or black, with a beautiful appearance, rare in the world. When one first sees her complexion, one gives rise to a pleasant and joyful thought. This is called the taste of form.</p></td><td lang="lzh" class="agama-chi"><p>「云何色味？设有见刹利女种、婆罗门女种、长者女种，年十四、十五、十六，不长不短，不肥不瘦，不白不黑，端政无双，世之希有。彼最初见彼颜色，起喜乐想，是谓色味。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;What is the great affliction of form? Furthermore, if one later sees that woman, eighty, ninety, or even a hundred years old, with a changed complexion, past youth, missing teeth, white hair, a dirty body, loose skin, wrinkled face, hunched back, groaning, like an old cart, trembling body, walking with a cane. What do you think, bhikṣu? Is it not a great affliction to see the wonderful form at first, and then it changes later?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「云何为色大患？复次。若后见彼女人，年八十、九十，乃至百岁，颜色变异，年过少壮，牙齿缺落，头发皓白，身体垢堺，皮缓面皱，脊偻呻吟，身如故车，形体战掉，扶杖而行。云何，比丘！初见妙色，后复变易，岂非是大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One told the bhikṣus, &quot;This is called the great affliction of form. Furthermore, if one sees that woman with a serious illness, lying on a bed, unable to control her urine and feces, and unable to move. What do you think, bhikṣu? The wonderful form seen before, now causing this affliction, is it not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告诸比丘：「是谓色为大患。复次，此若见彼女人，身抱重患，卧于床褥，失大小便，不能起止。云何，比丘！本见妙色，今致此患，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Bhikṣus! This is called the great affliction of form. Furthermore, bhikṣus! If one sees that woman&#x27;s body broken and life ended, being taken to the charnel ground. What do you think, bhikṣu? The wonderful form seen before, now having changed, seeing it one gives rise to thoughts of suffering and happiness. Is it not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「诸比丘！是谓色为大患。复次，比丘！若见彼女人身坏命终，将诣塜间。云何，比丘！本见妙色，今以变改，于中见起苦乐想，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman, dead for one day, two days, three days, four days, five days, up to seven days, the body bloated, rotten, and stinking, scattered in one place. What do you think, bhikṣu? The wonderful form before, now having changed like this, is it not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人，死经一日、二日、三日、四日、五日，乃至七日，身体胮胀烂臭，散落一处。云何，比丘！本有妙色，今致此变，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman, crows, magpies, vultures, and eagles compete to eat her, or she is eaten by foxes, dogs, wolves, and tigers, or she is eaten by flying insects, crawling creatures, and tiny worms. What do you think, bhikṣu? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is it not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人，乌、鹊、鵄、鹫竞来食噉，或为狐、狗、狼、虎所见食噉，或为蜎飞蠢动、极细蠕虫而见食噉。云何，比丘！彼本有妙色，今致此变，于中起苦、乐想，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s body, half of it eaten by insects and birds, with intestines, stomach, flesh, and blood, filthy and impure. What do you think, bhikṣu? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人身，虫鸟以食其半，肠胃肉血污秽不净。云何，比丘！彼本有妙色，今致此变，于中起苦、乐想，此非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s body, with flesh and blood exhausted, the bones connected. What do you think, bhikṣu? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人身，血肉以尽，骸骨相连。云何，比丘！彼本有妙色，今致此变，于中起苦、乐想，此岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s body, with flesh and blood exhausted, only sinews binding like firewood. What do you think, bhikṣu? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人身，血肉以尽，唯有筋缠束薪。云何，比丘！本有妙色，今致此变，于中起苦、乐想，此非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s body, the bones scattered in different places, the foot bones in one place, the arm bones in one place, the thigh bones in one place, the hip bones in one place, the rib bones in one place, the shoulder bones in one place, the neck bones in one place, and the skull bones in one place. What do you think, bhikṣus? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若复见彼女人身，骸骨散落，各在一处，或脚骨一处，或膊骨一处，或髀骨一处，或𣎑骨一处，或脇肋一处，或肩臂骨一处，或颈骨一处，或髑髅一处。云何，诸比丘！本有妙色，今致此变，于中起苦、乐想，此岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s body, the bones white like a dove&#x27;s color. What do you think, bhikṣus? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人身，骨皓白色，或似鸽色。云何，比丘！本有妙色，今致此变，于中起苦、乐想，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, if one sees that woman&#x27;s skeleton, having passed countless years, either rotten and decayed, the same color as earth. What do you think, bhikṣus? The wonderful form before, now having changed like this, to give rise to thoughts of suffering and happiness in it, is this not a great affliction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，若见彼女人，骸骨经无数岁，或有腐烂坏败，与土同色。云何，比丘！彼本有妙色，今致此变，于中起苦、乐想，岂非大患乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;This is called the great affliction of form. Furthermore, this form is impermanent and changeable, unable to last long, without old or young. This is called the great affliction of form.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「是谓色为大患。复次，此色无常、变易，不得久停，无有老幼，是谓色为大患。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is the way out of form? If one can abandon form and eliminate all confused thoughts, this is called abandoning form. It means that śramaṇas and brāhmaṇas are attached to form and do not know the great affliction, nor do they abandon it. They do not know it as it is. This is not a śramaṇa or brāhmaṇa. They do not know the deportment of a śramaṇa or the deportment of a brāhmaṇa. They are unable to realize it for themselves and play in it. It means that those śramaṇas and brāhmaṇas are not attached to form. They deeply know it to be a great affliction and are able to know and abandon it. This is called knowing the deportment of a śramaṇa and the deportment of a brāhmaṇa. They realize it for themselves and play in it. This is called abandoning form.</p></td><td lang="lzh" class="agama-chi"><p>「云何色为出要？若能舍离于色，除诸乱想，是谓舍离于色。谓诸沙门、婆罗门，于色著色，不知大患，亦不舍离，如实而不知，此非沙门、婆罗门，于沙门不知沙门威仪，于婆罗门不知婆罗门威仪，不能己身作证而自游戏。谓诸有沙门、婆罗门，于色不著色，深知为大患，能知舍离，是谓于沙门知沙门威仪，于婆罗门知婆罗门威仪，己身作证而自游戏，是谓舍离于色。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is the taste of feeling? Here, bhikṣus, when one experiences pleasant feeling, one knows, &#x27;I experience pleasant feeling.&#x27; When one experiences painful feeling, one knows, &#x27;I experience painful feeling.&#x27; When one experiences neither-painful-nor-pleasant feeling, one knows, &#x27;I experience neither-painful-nor-pleasant feeling.&#x27; When one experiences the pleasant feeling of eating, one knows, &#x27;I experience the pleasant feeling of eating.&#x27; When one experiences the painful feeling of eating, one knows, &#x27;I experience the painful feeling of eating.&#x27; When one experiences the neither-painful-nor-pleasant feeling of eating, one knows, &#x27;I experience the neither-painful-nor-pleasant feeling of eating.&#x27; When one experiences the painful feeling of not eating, one knows, &#x27;I experience the painful feeling of not eating.&#x27; When one experiences the pleasant feeling of not eating, one knows, &#x27;I experience the pleasant feeling of not eating.&#x27; When one experiences the neither-painful-nor-pleasant feeling of not eating, one knows, &#x27;I experience the neither-painful-nor-pleasant feeling of not eating.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「云何为名痛味？于是，比丘！得乐痛时，便知我得乐痛；得苦痛时，便知我得苦痛；若得不苦不乐痛时，便知我得不苦不乐痛。若得食乐痛时，便知我得食乐痛；若得食苦痛时，便知我得食苦痛；若得食不苦不乐痛时，便知我得不苦不乐痛。不食苦痛时，便自知我不食苦痛；若不食乐痛时，便自知我不食乐痛；若不食不苦不乐痛时，便自知我不食不苦不乐痛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, when one experiences pleasant feeling, at that time one does not experience painful feeling, nor does one experience neither-painful-nor-pleasant feeling. At that time, one has only pleasant feeling. When one experiences painful feeling, at that time one does not experience pleasant feeling, nor does one experience neither-painful-nor-pleasant feeling. One has only painful feeling. When one experiences neither-painful-nor-pleasant feeling, at that time one does not experience pleasant feeling or painful feeling. One has only neither-painful-nor-pleasant feeling. Furthermore, feeling is impermanent and subject to change. Knowing that feeling is impermanent and subject to change is called the great affliction of feeling.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！若得乐痛，尔时不得苦痛，亦复无不苦不乐痛，尔时我唯有乐痛。若得苦痛时，尔时无有乐痛，亦无不苦不乐痛，唯有苦痛。若复，比丘！得不苦不乐痛时，尔时无有乐痛、苦痛，唯有不苦不乐痛。复次，痛者无常、变易之法，以知痛无常、变易法者，是谓痛为大患。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is the escape from feeling? If one can abandon feeling, eliminate all confused thoughts, this is called abandoning feeling. Those śramaṇas and brāhmaṇas who are attached to feeling, do not know the great affliction, and do not abandon it, do not know it as it really is. They are not śramaṇas or brāhmaṇas. They do not know the deportment of śramaṇas or brāhmaṇas. They cannot realize it with their bodies and play in it. Those śramaṇas and brāhmaṇas who are not attached to feeling, deeply know it as a great affliction, and are able to abandon it, this is called knowing the deportment of śramaṇas and brāhmaṇas. They can realize it with their bodies and play in it. This is called abandoning feeling.</p></td><td lang="lzh" class="agama-chi"><p>「云何痛为出要？若能于痛舍离于痛，除诸乱想，是谓舍离于痛。诸有沙门、婆罗门于痛著痛，不知大患，亦不舍离，如实而不知，此非沙门、婆罗门，于沙门不知沙门威仪，于婆罗门不知婆罗门威仪，不能以身作证而自游戏。诸有沙门、婆罗门于痛不著痛，深知为大患，能知舍离，是谓于沙门知沙门威仪，于婆罗门知婆罗门威仪，以身作证而自游戏，是谓舍离于痛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, if there are śramaṇas and brāhmaṇas who do not know painful feeling, pleasant feeling, or neither-painful-nor-pleasant feeling, and do not know them as they really are, and if they teach others to practice, this is not appropriate. If there are śramaṇas and brāhmaṇas who can abandon feeling, know it as it really is, and encourage others to be far from it, this is appropriate. This is called abandoning feeling.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！若有沙门、婆罗门不知苦痛、乐痛、不苦不乐痛，如实而不知，复教化人使行者，此非其宜。若有沙门、婆罗门能舍离痛，如实而知，复劝教人使远离之，此正其宜，是谓舍离于痛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Now, bhikṣus, I have explained attachment to desire, the taste of desire, and the great affliction of desire, and also the ability to abandon it. I have also explained attachment to form, the taste of form, and the great affliction of form, and the ability to abandon form. I have explained attachment to feeling, the taste of feeling, and the great affliction of feeling, and the ability to abandon feeling. The practices that the Tathāgatas should engage in, namely the establishment of the teachings, I have now completed. You should always remember to sit in meditation and contemplate under trees and in secluded places, without being lazy. This is my instruction.</p></td><td lang="lzh" class="agama-chi"><p>「我今，比丘！以说著欲、味欲，欲为大患，复能舍者；亦说著色、味色，色为大患，能舍离色；以说著痛、味痛，痛为大患，能舍离痛，诸如来所应行者，所谓施设者，我今周讫。常当念在树下空闲之处，坐禅思惟，莫有懈怠，是谓我之教勅。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said, and joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

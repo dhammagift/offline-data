@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 88 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 88: Bāhitika-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn87comp.html#content"></a><a id="next-sutta" href="./mn89comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn88.html">MN 88</a> / <a href="../../parallels/ma214.html">MĀ 214</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bāhitika-sutta, the “discourse on the foreign cloth”, records King Pasenadi’s attempt to ascertain the Buddha’s moral integrity during a discussion with Ānanda. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn88n316"><span class="details"><span class="p">[n.316] The parallel is <a href="../../parallels/ma214.html">MĀ 214</a> at T I 797c-799b, which agrees with <a href="../../mn/mn88.html">MN 88</a> on locating the discourse in Jeta’s Grove by Sāvatthī and on entitling the discourse after the cloth given by Pasenadi to Ānanda, the 鞞訶 提, corresponding to the bāhitikā in <a href="../../mn/mn88.html">MN 88</a>. For a translation of <a href="../../parallels/ma214.html">MĀ 214</a>, together with extracts from the present study, cf. Anālayo 2007h. According to the commentarial explanation at Ps III 347,13, this cloth was called bāhitikā because it came from a foreign country, bāhitiraṭṭha, an explanation followed by Chalmers 1927: 61, who renders the term as “piece of foreign fabric”, and by Horner 1957/1970: 296, who translates it as “foreign cloth”. PED: 486 s.v. bāhitikā, however, derives the word from bāheti, “to ward off”, and suggests it to refer to a mantle or wrapper that “keeps out” the cold or the wind. This bāhitikā was apparently of considerable size, as according to <a href="../../mn/mn88.html">MN 88</a> at MN II 116,30 it measured sixteen by eight, soḷasasamā āyāmena aṭṭhasamā vitthārena. The commentary, Ps III 347,15, explains these measurements to refer to the cubit, an understanding also reflected in <a href="../../parallels/ma214.html">MĀ 214</a> at T I 799a22: 長十六肘, 廣八肘. Hence, this cloth would have been too large for serving as a mantle or wrapper. The same size would, however, suffice for making three robes, for which purpose according to both versions Pasenadi offered it to Ānanda. Therefore it seems to me preferable to follow the commentarial explanation and take bāhitikā to stand for a “foreign cloth”.</span></span></span></p>
+<p>The Bāhitika-sutta and its Madhyama-āgama parallel begin by describing that King Pasenadi saw Ānanda from afar and inquired from his minister if this was indeed the monk Ānanda. In the Madhyama-āgama version, Ānanda in a similar way also inquired from another monk if the person they saw riding an elephant was indeed King Pasenadi, an inquiry not recorded in the Majjhima-nikāya version.</p>
+<p>In relation to this difference, someone not too well acquainted with the Buddhist monk community might indeed be in doubt if a monk he sees at a distance is Ānanda. In contrast, it is more difficult to imagine that anyone could be uncertain about the identity of the king of the country. Even if someone should never have seen King Pasenadi, the very fact that the person he sees is riding an elephant, presumably wears emblems of a king (such as turban, fly whisk, royal umbrella, etc.) and is accompanied by an entourage should make it evident that this is the king of the country.<span class="note" id="mn88n317"><span class="details"><span class="p">[n.317] A relief on a pillar of the Bhārhut Stūpa, reproduced in Cunningham 1879 plate 13 (described on p. 91), shows Pasenadi in a chariot attended by three servants, one of which holds an umbrella over the king while the other holds a chauri (fly whisk). The chariot is preceded by footmen and a horseman, and followed by other men and elephants. Although in this instance Pasenadi rides a chariot and not an elephant, this representation gives some idea of the pomp with which an ancient Indian king like Pasenadi would set out (Barua 1934a: 46 suggests that this relief portrays Pasenadi’s visit to the Buddha described in <a href="../../mn/mn89.html">MN 89</a>). This makes it improbable that someone who met him on the roads of the city could have been in doubts whether the person he saw was the king of the country. In fact, according to information provided by Megasthenes, in ancient India “a private person is not allowed to keep ... an elephant. These animals are held to be the special property of the king”, cf. McCrindle 1877: 90. Independent of the accuracy of this description, the fact that according to both versions Pasenadi was riding an elephant and was in the company of a minister should have been sufficiently clear indications regarding the identity of the elephant’s rider.</span></span></span> Hence, the additional inquiry found in the Madhyama-āgama could be an attempt to counterbalance the loss of status incurred by Ānanda through not being immediately recognized by Pasenadi.</p>
+<p>The two versions’ description of events does in fact show a recurring tendency to enhance Ānanda’s status. Thus according to the Madhyama-āgama account, King Pasenadi simply rode on his elephant close to Ānanda and in polite terms requested a meeting on the bank of the nearby river. According to the Majjhima-nikāya version, however, he at first sent a messenger to tell Ānanda that Pasenadi paid homage to him and asked him to stop. Then Pasenadi came close on his elephant, dismounted the elephant, and approached Ānanda on foot, paid homage, and politely asked for a meeting at the bank of the river nearby. Once Ānanda had expressed his agreement, Pasenadi remounted his elephant to approach the riverbank, where he got down again from the elephant and again paid homage to Ānanda. This procedure seems rather complicated for the simple task of asking a monk for a meeting. The way King Pasenadi acts in the Madhyama-āgama account reads more realistic in comparison.</p>
+<p>The two versions agree that, on reaching the riverbank, Pasenadi offered his elephant rug to Ānanda, which the latter declined to use.<span class="note" id="mn88n318"><span class="details"><span class="p">[n.318] <a href="../../mn/mn88.html">MN 88</a> at MN II 113,27: hatthatthara (Se-MN II 500,3 reads kaṭṭhatthare, using the same term as in the case of <a href="../../mn/mn82.html">MN 82</a>, cf. above p. 461 note 106) and <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798a2: 象韉 (adopting the 元 and 明 variant reading 韉 instead of 薦).</span></span></span> According to the Madhyama-āgama version, Pasenadi repeated this offer three times, so that Ānanda consequently refused three times. While in the Majjhima-nikāya version King Pasenadi simply put his question, according to the Madhyama-āgama account he at first asked permission to pose a question, which Ānanda readily granted.<span class="note" id="mn88n319"><span class="details"><span class="p">[n.319] <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798a9: “I would like to ask a question, will you allow me to ask it”, 欲有所問, 聽我問 耶? Such a formal request for permission to ask a question is a recurrent feature of Madhyama-āgama discourses, whereas it is not found in the corresponding Majjhima-nikāya parallels, cf., e.g., <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475a17 and <a href="../../mn/mn124.html">MN 124</a> at MN III 125,5, <a href="../../parallels/ma79.html">MĀ 79</a> at T I 549c26 and <a href="../../mn/mn127.html">MN 127</a> at MN III 145,28, <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652a12 and <a href="../../mn/mn107.html">MN 107</a> at MN III 1,7, <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654a5 and <a href="../../mn/mn108.html">MN 108</a> at MN III 8,4, <a href="../../parallels/ma150.html">MĀ 150</a> at T I 661a4 and <a href="../../mn/mn96.html">MN 96</a> at MN II 177,21, <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a12 and <a href="../../mn/mn93.html">MN 93</a> at MN II 148,23, <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a17 and <a href="../../mn/mn99.html">MN 99</a> at MN II 197,6, <a href="../../parallels/ma171.html">MĀ 171</a> at T I 706b18 and <a href="../../mn/mn136.html">MN 136</a> at MN III 207,9, <a href="../../parallels/ma173.html">MĀ 173</a> at T I 710a10 and <a href="../../mn/mn126.html">MN 126</a> at MN III 138,10, <a href="../../parallels/ma198.html">MĀ 198</a> at T I 757a9 and <a href="../../mn/mn125.html">MN 125</a> at MN III 128,16, <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788a19 and <a href="../../mn/mn44.html">MN 44</a> at MN I 299,7, <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790b14 and <a href="../../mn/mn43.html">MN 43</a> at MN I 292,8, <a href="../../parallels/ma212.html">MĀ 212</a> at T I 793b15 and <a href="../../mn/mn90.html">MN 90</a> at MN II 126,32, <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802a28 and <a href="../../mn/mn52.html">MN 52</a> at MN I 349,24. Hence the occurrence of this formulaic request in <a href="../../parallels/ma214.html">MĀ 214</a> may just be an instance of a pericope used by the Madhyama-āgama reciters, without necessarily being related to the particular event recorded in <a href="../../parallels/ma214.html">MĀ 214</a>.</span></span></span></p>
+<p>The tendency to enhance the respectful behaviour shown by King Pasenadi towards Ānanda, found in both versions, could be due to what according to tradition forms the background to the question King Pasenadi is about to ask. The Pāli commentary explains that King Pasenadi’s inquiry was related to the murder of the female wanderer Sundarī.<span class="note" id="mn88n320"><span class="details"><span class="p">[n.320] Ps III 346,16: sundarivatthusmiṃ uppannam idaṃ suttaṃ.</span></span></span></p>
+<p>A discourse in the Udāna reports this incident in detail, relating that other wanderers had wanted to discredit the Buddha. For this purpose, they asked the female wanderer Sundarī to visit Jeta’s Grove on frequent occasions. When they knew that her visits had become public knowledge, they killed Sundarī and buried her in Jeta’s Grove. Once her body had been discovered in Jeta’s Grove, the other wanderers went around town, announcing this discovery and accusing the Buddhist monks of having taken their pleasure with Sundarī and then killed her.<span class="note" id="mn88n321"><span class="details"><span class="p">[n.321] Ud 4:8 at Ud 43-45. An account of the same incident in Dhp-a III 474,3 differs in so far as it presents the attempt at defamation as being more directly aimed at the Buddha. According to its presentation, on coming from Jeta’s Grove Sundarī had told people that she had spent the night with the Buddha. Thus, the rumour spread by the wanderers was that the Buddha’s disciples murdered her in order to cover up the Buddha’s misconduct (cf. also Jā II 416,5). A version of this incident in the Chinese counterpart to the Aṭṭhaka-vagga (the Pāli version is only found in the commentary, cf. Pj II 518-519) agrees with Dhpa that the purpose of the plot was to bring the Buddha into disrepute, cf. T 198 at T IV 176c3, translated in Bapat 1945: 156-158; for a parallel in the Udānālaṅkāra, preserved in Tocharian, cf. fragment 16b4- 6 in Sieg 1949: 29. For the plot to be aimed specifically at the Buddha would in fact fit the Bāhitikasutta and its Madhyama-āgama parallel better, as in both versions King Pasenadi inquired about the moral integrity of the Buddha himself, not about the morality of the monks in general. Făxiăn (法顯) and Xuánzàng (玄奘) refer to the place where Sundarī had been buried, cf. T 2085 at T LI 860c17 and T 2087 at T LI 899c20, translated in Legge 1886/1998: 59 and Beal 1884/2001b: 7, for further references cf. Deeg 2005: 307-308 and Lamotte 1944/1981: 507 note 1. Feer 1897: 316 suggests that this tale and the story of Ciñcamāṇavikā may be derivatives of a single event.</span></span></span> People believed this defamation and started to revile the monks.</p>
+<p>The Buddha thereon instructed the monks that they should react to such abuse by pronouncing a stanza on the evil destiny of those who makes false allegations and of those who deny a misdeed they have done.<span class="note" id="mn88n322"><span class="details"><span class="p">[n.322] Dhp 306: “he who speaks falsehood and who disclaims what he has done goes to hell”, abhūtavādī nirayaṃ upeti, yo vā pi katvā na karomi c’ āha (Ce-Dhp 100,14 and Se-Dhp 55,14: karomī ti), a stanza also found in Sn 3:10 at Sn 661 (in relation to the monk Kokālika), in Ud 4:8 at Ud 45,10, and in It 2:11 at It 42,18. Parallels to this stanza can be found in stanza 269 of the Gāndhārī Dharmapada in Brough 1962/2001: 161, stanza 114 of the Patna Dharmapada in Cone 1989: 132 or Roth 1980b: 107, T 210 at T IV 570a7, T 212 at T IV 663c29, T 213 at T IV 781b3, and stanza 8:1 of the Sanskrit and Tibetan Udāna-(varga) in Bernhard 1965: 161 (cf. also stanza 83 in Nakatani 1987: 28 and the study of 8:1c in Schmithausen 1970: 83) and in Beckh 1911: 29 or in Zongtse 1990: 98. Rau 1959: 173 notes that a similar stanza occurs in the Mahābhārata (Mbh 12.197.3). According to the background narration in T 212 at T IV 663c18, the Buddha spoke this stanza in reply to a woman who feigned to be pregnant by tying a piece of wood in front of her belly and then publicly accused him of being responsible for her pregnancy. This account reminds of the story of Ciñcamāṇavikā described at Dhp-a III 178,4 and in Jā 472 at Jā IV 187,3, cf. also the (Mūla-)Sarvāstivāda Vinaya version of this tale in Dutt 1984a: 161. For a more detailed examination of this stanza cf. also Palihawadana 2009 and Silk 2009.</span></span></span> This served its purpose and convinced people of the innocence of the Buddhist monks.</p>
+<p>Against this background, it becomes understandable why the Bāhitika-sutta and its Madhyama-āgama parallel are at pains to show that King Pasenadi did not exhibit any disrespect to Ānanda, even though his mission was to inquire into the moral integrity of Ānanda’s teacher, the Buddha.</p>
+<p>According to both versions, King Pasenadi went about this inquiry by asking Ānanda if the Buddha would undertake a bodily deed censured by other Brahmins and recluses. Ānanda denied this, making a point of qualifying in his answer that the Buddha would not undertake a bodily deed censured by “wise” Brahmins and recluses.<span class="note" id="mn88n323"><span class="details"><span class="p">[n.323] Following Be-MN II 316,6 and Ce-MN II 542,10, where the king spoke only of censure by recluses and Brahmins, samaṇehi brāhmanehi, while Ānanda in his reply spoke of “wise recluses and Brahmins”, samaṇehi brāhmanehi viññūhi. This subtle difference is lost in Ee-MN II 113,33 and in Se-MN II 500,8, as in these editions the king uses the qualification “wise” already in his question, so that the reply he receives corresponds to his question. On this reading, Ānanda’s answer would be formulated exactly as the king’s question, in which case there would be no reason for the king to express his appreciation of Ānanda’s ability to accomplish something with his answer that had not been accomplished in the question, as reported in all editions of <a href="../../mn/mn88.html">MN 88</a> (cf. quote in note 324 below). <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798a12 agrees with the Burmese and Ceylonese editions, as it reports that the king formulated his question by referring only to Brahmins and recluses, whereas Ānanda in his reply additionally brought in the qualification “intelligent and wise”, 聰明智慧.</span></span></span></p>
+<p>The point of this additional qualification appears to be that Ānanda wanted to distinguish between righteous censure by “wise” recluses and Brahmins and unjustified criticism that presumably sometimes had been raised by contemporary recluses and Brahmins against the Buddha. The two versions record that King Pasenadi expressed his appreciation for the finer distinction introduced by Ānanda in this way. The Majjhima-nikāya version reports that the king did this by proclaiming that, what he had not been able to accomplish with his question, Ānanda had accomplished with his reply.<span class="note" id="mn88n324"><span class="details"><span class="p">[n.324] <a href="../../mn/mn88.html">MN 88</a> at MN II 114,7: “what we have not been able to accomplish by [our] question, that the venerable Ānanda has accomplished by answering the question”, yaṃ hi mayaṃ ... nāsakkhimha pañhena paripūretuṃ, taṃ ... āyasmatā ānandena pañhassa veyyākaraṇena paripūritaṃ (Be-MN II 316,14 and Se-MN II 500,16: yañ hi).</span></span></span> According to the Madhyamaāgama version, the king went so far as to repeat his first question, this time with the qualification “wise”, thereby acknowledging that his question should from the outset have been phrased in the way Ānanda had formulated his reply.<span class="note" id="mn88n325"><span class="details"><span class="p">[n.325] <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798a21.</span></span></span></p>
+<p>In both versions, King Pasenadi next inquired about the nature of a censurable deed. This inquiry proceeds, via a series of alternative terms, to the definition of a censurable deed to be a deed that leads to one’s own affliction and to the affliction of others, being a deed that causes an increase of unwholesomeness.</p>
+<p>While the Madhyama-āgama version examines only bodily conduct in this way, the Majjhima-nikāya version applies a similar examination also to verbal and mental conduct.<span class="note" id="mn88n326"><span class="details"><span class="p">[n.326] <a href="../../mn/mn88.html">MN 88</a> at MN II 114,30. When evaluating this difference, the treatment in <a href="../../parallels/ma214.html">MĀ 214</a> would seem sufficient in the present context. The background to the king’s inquiry is an allegation of murder, so that it would be natural for the king to inquire about bodily conduct. A case could still be made for verbal conduct, since the speaking of falsehood in the sense of a denial to have anything to do with the murder could also be pertinent. Once this much has been ascertained, however, to continue examining mental conduct would not add further proof to the king’s inquiry. In the discourses, it is a standard procedure to present conduct from the perspective of its bodily, verbal, and mental aspects, so that it could easily have happened during the process of transmission that an occurrence of bodily conduct on its own, or perhaps of bodily and verbal conduct, was ‘completed’ so as to cover mental conduct as well.</span></span></span></p>
+<p>The Madhyama-āgama version continues to explore the nature of a censurable deed in additional detail, indicating that such a censurable deed obstructs the attainment of Nirvāṇa and prevents one from knowing in accordance with reality what should be done and what should not be done.<span class="note" id="mn88n327"><span class="details"><span class="p">[n.327] This exposition in <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798b4 brings to mind the four ways of undertaking things, examined in <a href="../../mn/mn46.html">MN 46</a> at MN I 310,10.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, King Pasenadi concluded his examination of the nature of unwholesome deeds by inquiring from Ānanda if the Buddha recommended the abandoning of all unwholesome states. His question in the Madhyamaāgama version was instead why the Buddha would not undertake unwholesome conduct.<span class="note" id="mn88n328"><span class="details"><span class="p">[n.328] <a href="../../parallels/ma214.html">MĀ 214</a> at T I 798b21: “what is the reason why the Tathāgata does not undertake such things at all”, 如來何故終不行此法耶?</span></span></span> Both versions report Ānanda replying that the Buddha had eradicated all unwholesomeness and was endowed with wholesome qualities. The Bāhitika-sutta and its parallel continue by applying their respective treatments to the complementary case of wholesome deeds.</p>
+<p>According to both versions, King Pasenadi was so delighted by Ānanda’s exposition that he would have given him even an elephant, a horse, or a village, if such gifts had been allowable to a monk.<span class="note" id="mn88n329"><span class="details"><span class="p">[n.329] While according to <a href="../../parallels/ma214.html">MĀ 214</a> at T I 799a14 the king mentioned an ordinary elephant or horse (and additionally also cattle and sheep, women and gold), <a href="../../mn/mn88.html">MN 88</a> at MN II 116,22 speaks of the hatthiratana and the assaratana, two properties of a wheel-turning king. Since Pasenadi was not a wheel-turning king, for him to proclaim his willingness to make a gift quite evidently beyond his abilities would have to have a symbolic sense. In fact, in <a href="../../sn/sn3.22.html">SN 3:22</a> at SN I 97,6 and its parallel <a href="../../parallels/sa1227.html">SĀ 1227</a> at T II 335b18 he similarly indicates that he would be willing to give away these two treasures if by doing so he could have prevented the passing away of his grandmother. However, in other parallels to <a href="../../sn/sn3.22.html">SN 3:22</a>, <a href="../../parallels/sa-2.54.html">SĀ2 54</a> at T II 392b6, <a href="../../parallels/ea26.7.html">EĀ 26.7</a> at T II 638b24, and T 122 at T II 545b4, what he would be willing to give away seem to be just a normal elephant or horse. Another difference is that in these versions it is the death of his mother that Pasenadi would rather have prevented; cf. also SHT VI 1586 (p. 202).</span></span></span> The two versions agree that Pasenadi offered Ānanda a precious cloth. After initial hesitation Ānanda accepted, convinced by Pasenadi’s dexterous comparison of the nearby river that overflows after a heavy rain to the overflowing of merit that would accrue if Ānanda were to accept the cloth and share his old robes with other monks.</p>
+<p>According to both versions, Ānanda reported the conversation he had with the king to the Buddha. The Majjhima-nikāya version concludes with a proclamation made by the Buddha to the monks, indicating that it was a great gain for King Pasenadi to have met and worshiped Ānanda. The Madhyama-āgama version does not report such a statement. According to its account, after hearing the conversation that had taken place, the Buddha simply concluded that Ānanda had replied in the proper way.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

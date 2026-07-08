@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 6 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 6: Ākaṅkheyya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn5comp.html#content"></a><a id="next-sutta" href="./mn7comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn6.html">MN 6</a> / <a href="../../parallels/ma105.html">MĀ 105</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Ākaṅkheyya-sutta, the “discourse on [what] one may wish”, describes some essential aspects of a monk’s life, the undertaking of which can lead to the fulfilment of a range of wishes. This discourse has a Pāli parallel among the tens of the Aṅguttara-nikāya, and two Chinese parallels found in the Madhyama-āgama and in the Ekottarikaāgama.<span class="note" id="mn6n96"><span class="details"><span class="p">[n.96] <a href="../../an/an10.71.html">AN 10:71</a> at AN V 131-133, <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c-596b, and <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712a-c. <a href="../../an/an10.71.html">AN 10:71</a> and <a href="../../parallels/ma105.html">MĀ 105</a> have the title “discourse on wishes”, Ākaṅkha-sutta/願經. The three parallel versions agree with <a href="../../mn/mn6.html">MN 6</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma105.html">MĀ 105</a> has been studied and translated by Minh Chau 1964/1991: 63, 107, and 223-227. For a discourse quotation in Abhidh-k-ṭ cf. below note 101.</span></span></span></p>
+<p>According to the four parallel versions, a monk may realize various wishes he may have if he observes the disciplinary rules, lives in an empty and secluded place, and develops tranquillity and insight.<span class="note" id="mn6n97"><span class="details"><span class="p">[n.97] <a href="../../mn/mn6.html">MN 6</a> at MN I 33,9, <a href="../../an/an10.71.html">AN 10:71</a> at AN V 131,12, <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c22, and <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712a14. A similar set of conditions leads, according to It 2:2:8 at It 39,15, to non-return or arahant-ship, notably with the difference that instead of mentioning the need to observe the disciplinary rules, It 2:2:8 at It 39,9 speaks of delight in seclusion, paṭisallānārāmā ... viharatha, paṭisallānaratā. <a href="../../mn/mn32.html">MN 32</a> at MN I 213,16 and its parallels <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727b3 and <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 710c24 in a similar vein begin a comparable set of conditions with delight in seclusion, instead of observance of the disciplinary rules. A passage similar to the present reference in <a href="../../mn/mn6.html">MN 6</a> to not neglecting meditation, etc., can be found in the Śrāvakabhūmi in Shukla 1973: 352,17 or ŚSG 2008: 14,7 and T 1579 at T XXX 449a4.</span></span></span></p>
+<p>The Madhyama-āgama discourse records a prelude to this statement. According to its report, an unnamed monk had come to visit the Buddha to convey a reflection that had occurred to him while being in seclusion. This reflection was that the Buddha had taught him the Dharma, and he was now fulfilling the precepts, staying in an empty place, not neglecting jhāna, and being endowed with insight. This reflection of the monk then motivated the Buddha to deliver a more detailed exposition of the same theme.<span class="note" id="mn6n98"><span class="details"><span class="p">[n.98] According to <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c18 the Buddha gave his exposition with regard to this particular monk, 因彼比丘故, 告諸比丘, a context also evident in <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712a12: 世尊知比丘心中所念, 告諸比 丘. According to the Pāli commentarial tradition, however, the Ākankheyya-sutta should be reckoned among discourses delivered by the Buddha of his own accord, Ps I 15,26: attano ajjhāsayen’ eva, i.e. not spoken in relation to a particular situation or due to an external prompting.</span></span></span></p>
+<p>A prelude can also be found in the Ekottarika-āgama version, with the difference that here a monk who was seated in the assembly listening to the Buddha had the wish of being given a teaching by the Buddha.<span class="note" id="mn6n99"><span class="details"><span class="p">[n.99] <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712a11.</span></span></span> The Buddha had become aware of this wish and thereon delivered the discourse.</p>
+<p>Another difference between the parallel versions is that in the Pāli discourses the Buddha starts his exposition by admonishing the monks to observe the precepts scrupulously, seeing danger in the slightest fault, an admonition not found at this junction in their Chinese parallels.<span class="note" id="mn6n100"><span class="details"><span class="p">[n.100] <a href="../../mn/mn6.html">MN 6</a> at MN I 33,5 and <a href="../../an/an10.71.html">AN 10:71</a> at AN V 131,7. The same admonition recurs in <a href="../../an/an4.12.html">AN 4:12</a> at AN II 14,12 and in It 4:12 at It 118,4.</span></span></span></p>
+<p>Out of a range of possible benefits that a monk may expect when undertaking the way of practice described above, the parallels agree on two benefits, which are:</p>
+<ul>
+<li>the ability to attain the four jhānas,</li>
+<li>the ability to reach the destruction of the influxes.</li>
+</ul>
+<p>Other wishes to be fulfilled through such practice vary amongst the four versions (see table 1.6), ranging from comparatively mundane aspirations, such as getting requisites, to various meditative attainments.<span class="note" id="mn6n101"><span class="details"><span class="p">[n.101] A discourse quotation with the description of the peaceful liberations, mentioned as one of the aspirations at <a href="../../mn/mn6.html">MN 6</a> at MN I 33,34, can be found in Abhidh-k 2:15 and 8:3 in Pradhan 1967: 48,8 and 435,8 (not necessarily stemming specifically from the present discourse); cf. also T 1558 at T XXIX 17a1, T 1559 at T XXIX 176a28, and Abhidh-k-ṭ at D (4094) mngon pa, ju 57a3 or Q (5595) tu 62b3.</span></span></span></p>
+<p>On considering the listings of a monk’s wishes in the four versions, it is noteworthy that of the seventeen benefits enumerated in the Ākaṅkheyya-sutta of the Majjhima-nikāya, fifteen recur in its Madhyama-āgama parallel, while only eight of these seventeen benefits can be found in the Aṅguttara-nikāya and Ekottarika-āgama versions.<span class="note" id="mn6n102"><span class="details"><span class="p">[n.102] <a href="../../an/an10.71.html">AN 10:71</a> lists ten benefits, in line with its placing among the tens of the Aṅguttara-nikāya.</span></span></span> Thus the two Pāli discourses differ to a greater extent in regard to the benefits they mention than the Majjhima-nikāya discourse and its Madhyama-āgama parallel.</p>
+<p>According to the two Pāli versions, the Buddha concluded his exposition by repeating his earlier admonition to perfectly observe the precepts, thereby presenting the entire discourse as a detailed explanation of this statement.<span class="note" id="mn6n103"><span class="details"><span class="p">[n.103] <a href="../../mn/mn6.html">MN 6</a> at MN I 36,4: sampannasīlā ... viharatha ... iti yan taṃ vuttaṃ, idam etaṃ paṭicca vuttaṃ, cf. also <a href="../../an/an10.71.html">AN 10:71</a> at AN V 133,5.</span></span></span></p>
+<p>This admonition is absent from the Madhyama-āgama version, although a comparable injunction can be found in the Ekottarika-āgama discourse.<span class="note" id="mn6n104"><span class="details"><span class="p">[n.104] <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712b24 concludes its listing of benefits by referring to “being afraid of a small transgression, what to say of a major one”, 少過常恐, 何況大者.</span></span></span> Thus the Madhyama-āgama discourse does not place any extra emphasis on scrupulous observance of the rules, but rather presents observing the rules together with living in seclusion and developing tranquillity and insight as equally important aspects of a monk’s training.</p>
+<table class="comparative-table">
+<caption>Table 1.6: List of Wishes in <a href="../../mn/mn6.html">MN 6</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn6.html">MN 6</a></th><th><a href="../../an/an10.71.html">AN 10.71</a></th></tr>
+<tr><td>be dear to other monks (1)</td><td>be dear to other monks (→ 1)</td></tr>
+<tr><td>receive requisites (2)</td><td>receive requisites (→ 2)</td></tr>
+<tr><td>supporters gain merits (3)</td><td>supporters gain merits (→ 3)</td></tr>
+<tr><td>relatives gain merits (4)</td><td>relatives gain merits (→ 4)</td></tr>
+<tr><td>bear discontent (5)105</td><td>contentment with requisites</td></tr>
+<tr><td>bear fear (6)</td><td>bear vicissitudes</td></tr>
+<tr><td>4 jhānas (7)</td><td>bear discontent (→ 5)</td></tr>
+<tr><td>immaterial attainments (8)</td><td>bear fear (→ 6)</td></tr>
+<tr><td>stream-entry (9)</td><td>4 jhānas (→ 7)</td></tr>
+<tr><td>once-return (10)</td><td>destroy influxes (→17)</td></tr>
+<tr><td>non-return (11)</td><td></td></tr>
+<tr><td>supernormal powers (12)</td><td></td></tr>
+<tr><td>divine ear (13)</td><td></td></tr>
+<tr><td>read others’ minds (14)</td><td></td></tr>
+<tr><td>recollect past lives (15)</td><td></td></tr>
+<tr><td>divine eye (16)</td><td></td></tr>
+<tr><td>destroy influxes (17)</td><td>(≠ 8-16)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th><a href="../../parallels/ma105.html">MĀ 105</a></th><th><a href="../../parallels/ea37.5.html">EĀ 37.5</a></th></tr>
+<tr><td>be personally taught by Buddha</td><td>be personally taught by Buddha</td></tr>
+<tr><td>relatives gain merits (→ 4)</td><td>receive requisites (→ 2)</td></tr>
+<tr><td>supporters gain merits (→ 3)</td><td>contentment</td></tr>
+<tr><td>bear vicissitudes</td><td>be recognized by 4 assemblies etc.</td></tr>
+<tr><td>bear discontent (→ 5)</td><td>4 jhānas (→ 7)</td></tr>
+<tr><td>bear fear (→ 6)</td><td>4 iddhipādas</td></tr>
+<tr><td>unaffected by evil thoughts</td><td>8 liberations</td></tr>
+<tr><td>4 jhānas (→ 7)</td><td>divine ear (→ 13)</td></tr>
+<tr><td>stream-entry (→ 9)</td><td>read others’ thoughts107</td></tr>
+<tr><td>once-return (→ 10)</td><td>read others’ minds (→ 14)</td></tr>
+<tr><td>non-return (→ 11)</td><td>supernormal powers (→ 12)</td></tr>
+<tr><td>immaterial attainments (→ 8)106</td><td>recollect past lives (→ 15)</td></tr>
+<tr><td>supernormal powers, divine ear, read</td><td>divine eye (→ 16)</td></tr>
+<tr><td>others’ minds, recollect past lives, di-</td><td>destroy influxes (→ 17)</td></tr>
+<tr><td>vine eye, destroy influxes (→ 12-17)</td><td></td></tr>
+<tr><td>(≠ 1-2)</td><td>(≠ 1, 3-6, 8-11)</td></tr>
+</table>
+<p>In a similar vein, the Ekottarika-āgama version places its reference to beware of transgressions within a wider context, as its exposition continues with a listing of the five aggregates of morality, concentration, wisdom, liberation, and knowledge-and-vision of liberation.<span class="note" id="mn6n108"><span class="details"><span class="p">[n.108] <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712b28: 比丘戒身, 定身, 慧身, 解脫身, 解脫知見身具足者 (adopting a 宋, 元, 明, and 聖 variant that adds 身 to 定).</span></span></span></p>
+<p>According to the Pāli commentary, however, the entire Ākaṅkheyya-sutta should be seen as an exposition of the benefits of moral conduct.<span class="note" id="mn6n109"><span class="details"><span class="p">[n.109] Ps I 165,10 speaks of <a href="../../mn/mn6.html">MN 6</a> as a sīlānisaṃsakathā.</span></span></span> This explanation by the Pāli commentary seems to reflect a slight tendency to overrate strict observance of the rules. Although the importance of a sound foundation in moral conduct is certainly seen in the early discourses as an indispensable prerequisite for the gradual training of a monk and thus for all of the various benefits mentioned in the present discourse, the requirements the Ākaṅkheyya-sutta envisages for having one’s wishes fulfilled do not seem to be just strict observance of the rules. Rather, what seems to be required is progressing from a sound foundation in moral conduct to the development of tranquillity and insight, for which purpose one should dwell in seclusion. This becomes particularly evident in the Madhyama-āgama version, which does not have the admonition to observe the precepts perfectly and to see danger in the slightest fault at all, found at the beginning and end of the two Pāli discourses.</p>
+<p>While the Aṅguttara-nikāya version does not have a formal conclusion, the Majjhimanikāya and Ekottarika-āgama versions report the delighted reaction of the monks.<span class="note" id="mn6n110"><span class="details"><span class="p">[n.110] <a href="../../an/an10.71.html">AN 10:71</a> at AN V 133,9, <a href="../../mn/mn6.html">MN 6</a> at MN I 36,8, and <a href="../../parallels/ea37.5.html">EĀ 37.5</a> at T II 712c4.</span></span></span> According to the Madhyama-āgama discourse, the monks were so inspired by this exposition that they immediately went off into seclusion to practise diligently and soon became arahants.<span class="note" id="mn6n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/ma105.html">MĀ 105</a> at T I 596a27.</span></span></span> In this way, the conclusion of the Madhyama-āgama discourse again highlights that the question at stake is not merely observance of the precepts, but rather an integral practice of all aspects of the path.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

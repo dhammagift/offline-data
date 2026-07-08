@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 79 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 79: Cūḷasakuludāyi-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn78comp.html#content"></a><a id="next-sutta" href="./mn80comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn79.html">MN 79</a> / <a href="../../parallels/ma208.html">MĀ 208</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷasakuludāyi-sutta, the “lesser discourse to Sakuludāyī”, examines the way to an entirely happy world. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn79n189"><span class="details"><span class="p">[n.189] The parallel is <a href="../../parallels/ma208.html">MĀ 208</a> at T I 783c-786b, which agrees with <a href="../../mn/mn79.html">MN 79</a> on locating the discourse in the Squirrels’ Feeding Ground at Rājagaha. <a href="../../parallels/ma208.html">MĀ 208</a> has the title 箭毛經, identical to the title of <a href="../../parallels/ma207.html">MĀ 207</a>, cf. above p. 416 note 127.</span></span></span></p>
+<p>The Cūḷasakuludāyi-sutta and its parallel begin by relating that the Buddha had come to visit the wanderer Sakuludāyī.<span class="note" id="mn79n190"><span class="details"><span class="p">[n.190] Minor differences between the two versions in regard to the timing of the Buddha’s visit, how Sakuludāyī behaved, and what mode of address he used, are the same as between <a href="../../mn/mn77.html">MN 77</a> and its parallel <a href="../../parallels/ma207.html">MĀ 207</a>, cf. above p. 416.</span></span></span> According to the Majjhima-nikāya account, Sakuludāyī declared that, although his congregation of wanderers engaged in pointless talk when left to themselves, if he was present they were all keen to listen to him, but once the Buddha was also present, the wanderers and Sakuludāyī were all keen to listen to the Buddha.<span class="note" id="mn79n191"><span class="details"><span class="p">[n.191] <a href="../../mn/mn79.html">MN 79</a> at MN II 30,30.</span></span></span> The Madhyama-āgama version does not record such a remark by Sakuludāyī. The description given by Sakuludāyī in the Majjhima-nikāya version would in fact not correspond to the introductory narration of both discourses, according to which the wanderers had been indulging in pointless talk, even though Sakuludāyī was present.<span class="note" id="mn79n192"><span class="details"><span class="p">[n.192] <a href="../../mn/mn79.html">MN 79</a> at MN II 30,1 and <a href="../../parallels/ma208.html">MĀ 208</a> at T I 783c12. Cf. also above p. 416, where the reference to the pointless talk in which the wanderers were engaged stands in contrast to the narrative flow of the parallel <a href="../../parallels/ma207.html">MĀ 207</a>. Thus <a href="../../mn/mn77.html">MN 77</a> and <a href="../../mn/mn79.html">MN 79</a>, together with their parallels, give the impression that perhaps the reciters just applied the standard description of pointless talk indiscriminately to any company of non- Buddhist wanderers. In fact, if to spend their time in such pointless and trivial chatter had been characteristic of Sakuludāyī and his company, one might also wonder why the Buddha is reported to have repeatedly approached such a company.</span></span></span></p>
+<p>According to the Madhyama-āgama version, after the Buddha had inquired three times about the subject of the conversation interrupted upon his arrival, Sakuludāyī related that they had been discussing another teacher’s claim to omniscience. The topic of a teacher who claimed to be omniscient forms the starting point for the discussion between Sakuludāyī and the Buddha in both versions of the discourse. According to the Madhyama-āgama presentation, then, it was the same topic that Sakuludāyī and his followers had already been talking about.</p>
+<p>The Cūḷasakuludāyi-sutta identifies the teacher who had claimed omniscience to be Nigaṇṭha Nātaputta, whereas according to the Madhyama-āgama discourse all of the six well-known contemporary teachers had made such a claim.<span class="note" id="mn79n193"><span class="details"><span class="p">[n.193] <a href="../../parallels/ma208.html">MĀ 208</a> at T I 784a10+15.</span></span></span> While other Pāli discourses record that Nigaṇṭha Nātaputta had indeed claimed omniscience,<span class="note" id="mn79n194"><span class="details"><span class="p">[n.194] <a href="../../mn/mn14.html">MN 14</a> at MN I 92,36, <a href="../../mn/mn101.html">MN 101</a> at MN II 218,1, <a href="../../an/an3.74.html">AN 3:74</a> at AN I 220,27, <a href="../../an/an9.38.html">AN 9:38</a> at AN IV 429,1, and <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753c8.</span></span></span> and in one instance also attribute a claim to omniscience to Pūraṇa Kassapa,<span class="note" id="mn79n195"><span class="details"><span class="p">[n.195] <a href="../../an/an9.38.html">AN 9:38</a> at AN IV 428,20.</span></span></span> they do not report that Makkhali Gosāla, Ajita Kesakambalī, Pakudha Kaccāyana, or Sañjaya Belaṭṭhiputta had made such a claim.<span class="note" id="mn79n196"><span class="details"><span class="p">[n.196] Another claimant to omniscience occurs in <a href="../../parallels/ma114.html">MĀ 114</a> at T I 603a8, according to which Uddaka Rāmaputta had also claimed to be omniscient. The Divyāvadāna in Cowell 1886: 143,9 or in Vaidya 1999: 89,6 agrees with <a href="../../parallels/ma208.html">MĀ 208</a> that the six teachers had all (mistakenly) claimed omniscience.</span></span></span></p>
+<p>According to the Cūḷasakuludāyi-sutta and its parallel, Sakuludāyī felt confident that the Buddha would be able to answer questions about the past. The Buddha replied that to answer questions about the past or the future would only be fruitful when conversing with someone who was able to recall his past lives and had the divine eye. Sakuludāyī had to admit that he was not even able to recollect events of his present life or to see a spirit, let alone recall past lives or avail himself of the divine eye.<span class="note" id="mn79n197"><span class="details"><span class="p">[n.197] According to <a href="../../parallels/ma208.html">MĀ 208</a> at T I 784a27, the Buddha began his explanation by telling Sakuludāyī that for a follower of a different tradition it was not possible to understand the meaning of what the Buddha had taught. This remark is curious, since the Buddha had not yet delivered any teachings that Sakuludāyī could have misunderstood. The same remark recurs in <a href="../../mn/mn80.html">MN 80</a> at MN II 43,11 and its parallels <a href="../../parallels/ma209.html">MĀ 209</a> at T I 787b2 and T 90 at T I 914b9, where it fits the context much better, as it occurs after the Buddha’s interlocutor had indeed misunderstood a proposition made by the Buddha. <a href="../../parallels/ma208.html">MĀ 208</a> and <a href="../../parallels/ma209.html">MĀ 209</a> are fairly similar, as in both instances the Buddha is in discussion with a wanderer on a similar topic, delivering the same set of similes. Both discourse, moreover, follow each other in the Madhyama-āgama, as is the case for their parallels in the Majjhima-nikāya. Hence, the passage about a follower of a different teaching who is unable to understand may have mistakenly made its way from <a href="../../parallels/ma209.html">MĀ 209</a> to <a href="../../parallels/ma208.html">MĀ 208</a> during the course of the discourse’s transmission.</span></span></span></p>
+<p>According to the Majjhima-nikāya version, the Buddha next gave Sakuludāyī a succinct presentation of the principle of dependent origination, a teaching not recorded in its Madhyama-āgama parallel.<span class="note" id="mn79n198"><span class="details"><span class="p">[n.198] <a href="../../mn/mn79.html">MN 79</a> at MN II 32,5: “let be the past and let be the future, I will teach you the Dharma. When this exists, that comes to be” (etc.), tiṭṭhatu pubbanto tiṭṭhatu aparanto, dhammaṃ te desessāmi, imasmiṃ sati idaṃ hoti (etc.) (Se-MN II 355,8: dhamman te). For the Buddha to come out with a succinct statement on conditionality at this point is unexpected, since Sakuludāyī would hardly have been able to understand what was meant. The Pāli commentary explains that the Buddha knew Sakuludāyī would not be able to understand, but nevertheless wanted to deliver this teaching since it would lead to a wholesome mental impression on Sakuludāyī for the future, Ps III 272,11: “this he will all the more not understand, but seeing that ‘in the future this will be a condition for his mental tendency’, the Blessed One spoke it”, evaṃ pag’ eva na bujjhissati, anāgate pan’ assa vāsanāya paccayo bhavissatī ti disvā bhagavā evam āha. This commentarial explanation revolves around the concept of vāsanā, a mental tendency or impression that leads to a particular interest or way of behaving in the future. The vāsanā theory appears to be comparatively late, as this term is not found in the early discourses except for a single occurrence as part of a compound in the Vatthugāthā of the Pārāyana-vagga, Sn 5:1 at Sn 1009: pubbevāsanavāsitā (where one might even wonder if this could be an error for pubbenivāsa + √vas). On the comparative lateness of the Vatthugāthā in general cf. Jayawickrama 1948: 243-249 and Norman 1983a: 69. Regarding this occurrence of the term vāsanā in Sn 1009, Jayawickrama 1948: 247 comments that “the doctrine of vāsanā is apparently alien to early Buddhism ... this term does not occur in earlier Pāli works. It is probable that the concept of pubbevāsanā was further developed into a fuller theory by the time of the Commentaries”; cf. also Rhys Davids 1930: 83.</span></span></span></p>
+<p>The Cūḷasakuludāyi-sutta and its Madhyama-āgama counterpart continue in similar ways by relating that Sakuludāyī spoke in praise of the “highest splendour”,<span class="note" id="mn79n199"><span class="details"><span class="p">[n.199] <a href="../../mn/mn79.html">MN 79</a> at MN II 32,27: ayaṃ paramo vaṇṇo, ayaṃ paramo vaṇṇo ti, <a href="../../parallels/ma208.html">MĀ 208</a> at T I 784c26: 彼色最勝, 彼色最上.</span></span></span> yet was unable to explain what such “highest splendour” implied. The Buddha then illustrated the futility of such propositions with the image of a man who claims to be in love with a girl he had never seen.<span class="note" id="mn79n200"><span class="details"><span class="p">[n.200] The same simile recurs in <a href="../../dn/dn9.html">DN 9</a> at DN I 193,4 (in the context of a related discussion about the way to an entirely pleasant world) and its parallel <a href="../../parallels/da28.html">DĀ 28</a> at T I 111c16, in <a href="../../dn/dn13.html">DN 13</a> at DN I 241,26 and its parallel <a href="../../parallels/da26.html">DĀ 26</a> at T I 105c4, and in <a href="../../mn/mn80.html">MN 80</a> at MN II 40,19 and its parallel <a href="../../parallels/ma209.html">MĀ 209</a> at T I 786b20. The version of this simile in the Dīrgha-āgama differs in as much as here the man claims to have already had an affair with the girl, a specification not made in a version of this simile in the Pṛṣṭhapāla-sūtra fragment 420v6-8 in Melzer 2006: 272.</span></span></span> When Sakuludāyī compared his “highest splendour” to a shining piece of jewellery,<span class="note" id="mn79n201"><span class="details"><span class="p">[n.201] According to <a href="../../mn/mn79.html">MN 79</a> at MN II 33,28, Sakuludāyī came out with a more explicit formulation of his view, indicating that the “highest splendour” represents the self that survives unimpaired after death, evaṃ vaṇṇo attā hoti arogo paraṃ maraṇā ti (Ce-MN II 382,6: param), a proclamation not found in <a href="../../parallels/ma208.html">MĀ 208</a>. This additional qualification in <a href="../../mn/mn79.html">MN 79</a> suggests Sakuludāyī’s view to correspond to the proposition of a self that survives unimpaired after death, recorded in <a href="../../dn/dn1.html">DN 1</a> at DN I 31,6 (cf. also <a href="../../mn/mn102.html">MN 102</a> at MN II 229,1), a proposition that in the parallels <a href="../../parallels/da21.html">DĀ 21</a> at T I 92b22, T 21 at T I 268b5, and Weller 1934: 48,13 does not specify that the self survives “unimpaired”, aroga, cf. also Skilling 1997a: 480 and below p. 591 note 24. The image of the shining jewel recurs in <a href="../../dn/dn2.html">DN 2</a> at DN I 76,21, <a href="../../dn/dn10.html">DN 10</a> at DN I 208,26, and <a href="../../mn/mn77.html">MN 77</a> at MN II 17,8 to illustrate the nature of consciousness in contrast to the physical body, and in <a href="../../mn/mn120.html">MN 120</a> at MN III 102,3 to describe the splendour of Brahmā.</span></span></span> the Buddha responded with a series of items of increasingly superior splendour, which in both versions cover:</p>
+<ul>
+<li>a glow-worm,</li>
+<li>a lamp,</li>
+<li>a great fire,</li>
+<li>the morning star,</li>
+<li>the full moon,</li>
+<li>the sun.</li>
+</ul>
+<p>At the end of this series, the Buddha proclaimed that he did not speak of the “highest splendour” even in regard to gods whose splendour surpasses the sun, whereon Sakuludāyī had to acknowledge defeat.<span class="note" id="mn79n202"><span class="details"><span class="p">[n.202] According to <a href="../../parallels/ma208.html">MĀ 208</a> at T I 785b22, Sakuludāyī at this point changed from addressing the Buddha by his name Gotama, 瞿曇, used by him so far, to the respectful address “Blessed One”, 世尊, and “Well Gone One”, 善逝, found also in the corresponding passage in <a href="../../mn/mn79.html">MN 79</a> at MN II 35,18. Yet, in <a href="../../parallels/ma208.html">MĀ 208</a> at T I 785b25, i.e., right after this instance of using the respectful mode of address, Sakuludāyī returns to use the address “Gotama”, except for another acknowledgement of defeat at T I 785c14, where he again uses the more respectful way of address. These alternations suggest some textual error has occurred, since if Sakuludāyī had indeed at some point changed to the more respectful form of address, thereby expressing his faith in the Buddha, it would be natural for him to continue in the same manner instead of reverting again to a considerably less respectful form of address. Except for these instances, the two Madhyama-āgama discourses in which Sakuludāyī takes part, <a href="../../parallels/ma207.html">MĀ 207</a> and <a href="../../parallels/ma208.html">MĀ 208</a>, agree that he addressed the Buddha by his name, while in their parallels <a href="../../mn/mn77.html">MN 77</a> and <a href="../../mn/mn79.html">MN 79</a> he throughout uses the more respectful address normally employed by the Buddha’s disciples.</span></span></span></p>
+<p>The discussion in both versions turns to the path that leads to an entirely happy world, which according to Sakuludāyī’s understanding requires abstaining from killing, theft, sexual misconduct, and false speech. According to the Majjhima-nikāya version, Sakuludāyī also mentioned the need to engage in some form of asceticism as part of this path to an entirely happy world, while according to the Madhyama-āgama presentation he additionally mentioned the need to avoid any of the other unwholesome courses of action.<span class="note" id="mn79n203"><span class="details"><span class="p">[n.203] <a href="../../mn/mn79.html">MN 79</a> at MN II 36,1 speaks of undertaking and practising “some kind of asceticism”, aññataraṃ vā pana tapoguṇaṃ. After mentioning the need to abstain from killing, theft, sexual misconduct, and false speech, <a href="../../parallels/ma208.html">MĀ 208</a> at T I 785c4 continues like this: “(up to) abstaining from wrong view he attains right view”, 乃至離邪見得正見, thereby indicating that the other courses of action – abstaining from slander, rough speech, useless chatter, covetousness, and ill will – should be supplemented. Regarding this difference, the presentation in <a href="../../mn/mn79.html">MN 79</a> seems closer to what could be expected from a non-Buddhist wanderer like Sakuludāyī.</span></span></span></p>
+<p>Both versions highlight a contradiction in Sakuludāyī’s proposition, according to which an entirely happy world could be reached by a path that involves the experience of both pleasure and displeasure. They clarify that the path to an entirely happy world is rather to be found in the development of the three jhānas.</p>
+<p>While the Majjhima-nikāya version directly comes out with a description of the three jhānas, its Madhyama-āgama counterpart approaches the same via a description of the gradual path. This description begins with the arising of a Tathāgata and his teaching of the Dharma, followed by depicting how someone goes forth and eventually overcomes the hindrances and attains the three jhānas.<span class="note" id="mn79n204"><span class="details"><span class="p">[n.204] <a href="../../parallels/ma208.html">MĀ 208</a> at T I 785c24.</span></span></span> The Majjhima-nikāya version has a similar description of the gradual path at a later point.<span class="note" id="mn79n205"><span class="details"><span class="p">[n.205] <a href="../../mn/mn79.html">MN 79</a> at MN II 38,4.</span></span></span></p>
+<p>According to the Cūḷasakuludāyi-sutta, the Buddha identified the attainment of the three jhānas as the ‘path’ to an entirely happy world and proposed the fourth jhāna and communion with those devas that dwell in an entirely happy world as the ‘realization’ of an entirely happy world.<span class="note" id="mn79n206"><span class="details"><span class="p">[n.206] <a href="../../mn/mn79.html">MN 79</a> at MN II 37,24; as noted by Masefield 1983: 79, the present passage reflects “the traditional belief that it is possible to make contact with the devas of a particular region of the Brahmaloka through entering into the appropriate jhāna”.</span></span></span> The Madhyama-āgama account, however, presents attainment of the three jhānas as the ‘realization’ of the entirely happy world and communion with devas of the corresponding realms as the ‘path’ to an entirely happy world, thereby perhaps confusing the path with the goal.<span class="note" id="mn79n207"><span class="details"><span class="p">[n.207] <a href="../../parallels/ma208.html">MĀ 208</a> at T I 786a5+17.</span></span></span></p>
+<p>According to the Pāli commentary, the reference to the fourth jhāna points to the need to develop the psychic powers that enable visiting the celestial realm of the Subhakiṇṇa realm.<span class="note" id="mn79n208"><span class="details"><span class="p">[n.208] Ps III 275,15 distinguishes between “realization obtained [on rebirth]”, paṭilābhasacchikiriyā, and “present realization”, paccakkhasacchikiriyā, explaining that for the latter the fourth jhāna is required, so that through the exercise of psychic power, iddhivikubbanā, the Subhakiṇṇa realm can be visited in one’s present life.</span></span></span> From this perspective, the Cūḷasakuludāyi-sutta’s stipulation of attainment of the fourth jhāna for being able to “realize” an entirely happy world would fit better than the third jhāna mentioned in the Madhyama-āgama version, since for developing the psychic power required for celestial travels the fourth jhāna would be required according to the standard presentation of the attainment of supernormal powers in other discourses.</p>
+<p>In both versions, Sakuludāyī inquired whether this entirely pleasant world was the goal of living the holy life as a disciple of the Buddha, which the Buddha denied. In the Madhyama-āgama version, this denial caused an uproar among the followers of Sakuludāyī.<span class="note" id="mn79n209"><span class="details"><span class="p">[n.209] <a href="../../parallels/ma208.html">MĀ 208</a> at T I 786a24.</span></span></span> A similar uproar occurs in the Majjhima-nikāya version at an earlier point, after the Buddha had indicated that even with the third jhāna an entirely pleasant world has not yet been reached.<span class="note" id="mn79n210"><span class="details"><span class="p">[n.210] <a href="../../mn/mn79.html">MN 79</a> at MN II 37,16.</span></span></span></p>
+<p>Hence, although the two versions present this reaction at different junctions of their narration, they agree that the reason for this uproar was that the Buddha had pointed out something that is superior to the third jhāna. This suggests the third jhāna and rebirth in the corresponding celestial realm to have been the goal aspired to by Sakuludāyī and his followers, presumably being the type of experience reckoned by them as the “highest splendour”.</p>
+<p>The Majjhima-nikāya version presents its account of the gradual path at this point, a description that begins with the arising of a Tathāgata and his teaching of the Dharma, which inspires someone to go forth (etc.), eventually culminating in the attainment of the four jhānas and the three higher knowledges.</p>
+<p>This account does not fit its context too well, since the Cūḷasakuludāyi-sutta follows each attainment of a jhāna and of a higher knowledge with the declaration that this is a state superior to the entirely happy world discussed earlier. In this way, it proposes that each of the jhānas mentioned in its description of the gradual path is superior to the four jhānas mentioned in its exposition of the path to an entirely happy world.<span class="note" id="mn79n211"><span class="details"><span class="p">[n.211] <a href="../../mn/mn79.html">MN 79</a> at MN II 38,8: “he dwells having attained the first jhāna. This, Udāyī, is a state superior and more sublime” [than the earlier mentioned four jhānas], paṭhamajjhānaṃ upasampajja viharati. ayam pi kho, udāyi, dhammo uttaritaro ca paṇītataro ca (Be-MN II 229,8, Ce-MN II 388,26, and Se-MN II 363,18: paṭhamaṃ jhānaṃ). An extract from the present discussion already appeared in Anālayo 2005c: 94-95.</span></span></span></p>
+<p>This contradictory presentation suggests that a shift of the description of the gradual path away from its original location may have taken place in the Majjhima-nikāya version. Judging from the Madhyama-āgama discourse, the original location of the gradual path exposition would have been at the outset of the description of the path to an entirely happy world, at which point the practice of the gradual path up to the attainment of the jhānas would come in its proper place.</p>
+<p>The remainder of the gradual path, which describes the development of the three higher knowledges, does, however, stand in its proper place in the present context, where it forms the reply to Sakuludāyī’s question after the goal of the holy life.</p>
+<p>Yet, according to the Madhyama-āgama version at the present junction the Buddha only mentioned the fourth jhāna.<span class="note" id="mn79n212"><span class="details"><span class="p">[n.212] <a href="../../parallels/ma208.html">MĀ 208</a> at T I 786b1.</span></span></span> This could be a loss of text, since it would be unusual for the Buddha to stop short at the fourth jhāna in reply to a question about the goal of living the holy life under him, without bringing in the topic of realization.</p>
+<p>The two versions agree that Sakuludāyī was highly inspired by this discourse,<span class="note" id="mn79n213"><span class="details"><span class="p">[n.213] According to <a href="../../mn/mn79.html">MN 79</a> at MN II 39,18, Sakuludāyī expressed his wish to go forth under the Buddha. <a href="../../parallels/ma208.html">MĀ 208</a> at T I 786b4 does not report him explicitly requesting ordination, although it records that he worshipped the Buddha, at which point his assembled followers told him to behave in accordance with his status as a teacher and asked him whether he intended to become a disciple of the Buddha.</span></span></span> recording in slightly different ways how an intervention by his company of wanderers prevented Sakuludāyī from becoming a disciple of the Buddha.<span class="note" id="mn79n214"><span class="details"><span class="p">[n.214] Ps III 275,29 explains this intervention to be the karmic result of a deed of Sakuludāyī in a former life, when he had encouraged a monk to disrobe in order to inherit this monk’s requisites. Hecker 1972: 179 draws attention to the contrast between <a href="../../mn/mn79.html">MN 79</a> and <a href="../../mn/mn76.html">MN 76</a>, the former depicting the readiness of the wanderer Sakuludāyī to go forth, even though he was a renowned teacher, whereas according to <a href="../../mn/mn76.html">MN 76</a> at MN I 524,6 the wanderer Sandaka was sufficiently convinced by Ānanda’s exposition to recommend his disciples to go forth as Buddhist monks, but was himself too attached to his gains and honours to do the same.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

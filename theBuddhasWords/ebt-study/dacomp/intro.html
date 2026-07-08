@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>Introduction — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">Introduction</h2>
+<div id="nextprev"><a id="next-sutta" href="./early-discourses.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+<div class="comp-body">
+<p>The <i>Dīrgha-āgama </i>preserved in Chinese is the first of the four Chinese<i> Āgama</i>s in the Taishō edition,<span class="note" id="intron1"><span class="details"><span class="p">[n.1] Zacchetti 2016: 83 comments that the expression "the 'Chinese <i>Āgama</i>s' is a designation perhaps more appropriate than generally conceded, for in a sense they are, as a group, an entirely Chinese invention. This is a particularly telling example of the active transformative power generated by the Chinese canon."</span></span></span> just as its Pāli counterpart, the <i>Dīgha-nikāya</i>, is the first discourse collection in the Pāli canon. Although the present book with collected papers on the <i>Dīrgha-āgama </i>is the last of four such publications in terms of date of appearance, I expect and in fact would recommend that the present collection be the first taken up by the interested reader, to be followed by my <i>Madhyama-āgama </i>studies (2012f), <i>Saṃyukta-</i><i>āgama </i>studies (2015j), and <i>Ekottarika-āgama </i>studies (2016b).</p>
+<p>By way of introduction to all four volumes, in what follows I briefly survey the four main Chinese <i>Āgama</i>s.<span class="note" id="intron2"><span class="details"><span class="p">[n.2] What follows is based on extracts from Anālayo 2009n, 2009o, 2014h, and 2015a. In a later chapter I come back to the significance of the term <i>āgama</i> (as well as of the term <i>aṅga</i>) in relation to the formation of the textual collections of the early discourses; cf. below p. 449ff.</span></span></span> In the first of the chapters that follow this introduction, I try to place the early discourses in historical perspective. An assessment of their value as testimonies for early Buddhist thought serves as a foundation for the comparative studies found in this and the other three volumes.</p>
+<h3>The <i>Dīrgha-āgama</i></h3>
+<p>According to the information at our disposal, the <i>Dīrgha-āgama</i> extant in the Taishō edition as entry 1 was translated into Chinese in the year 413 of the present era by Zhú Fóniàn (竺佛念), based on an original recited by Buddhayaśas that appears to have been in a Prakrit and with high probability stems from a Dharmaguptaka line of transmission.<span class="note" id="intron3"><span class="details"><span class="p">[n.3] On the school affiliation of the <i>Dīrgha-āgama </i>collection preserved in Chinese translation as Taishō no. 1 cf., e.g., Przyluski 1926: 355, Lamotte 1949/1981: 811 note 1, Demiéville 1951: 252f, Brough 1962/2001: 50, Lü 1963: 242, de Jong 1962/1979: 290 note 7, Bareau 1966, Waldschmidt 1980: 136, Mayeda 1985: 97, Enomoto 1986: 25, Hirakawa 1987: 513, Schmithausen 1987: 318, Oberlies 2003: 44, Salomon 2007: 354 note 14, and Willemen 2008: 60.</span></span></span> Besides its Pāli parallel in the <i>Dīgha-</i><i>nikāya</i>, large parts of a Sarvāstivāda/Mūlasarvāstivāda collection of long discourses are extant in the form of Sanskrit fragments.<span class="note" id="intron4"><span class="details"><span class="p">[n.4] Surveys of this collection have been provided by Hartmann 2000, 2002, and 2004, and Hartmann and Wille 2014. Editions of discourses from this collection, listed in the order of their canonical placing, are: <i>Govinda-sūtra </i>(14th): Sadakata 1999 and 2006, <i>Prāsādika-sūtra </i>(15th): DiSimone 2016, <i>Prasādanīya-sūtra </i>(16th): Di- Simone 2016, <i>Kāyabhāvanā-sūtra </i>(20th): Liu 2010, <i>Bodha-sūtra </i>(21st): Hartmann 2004 and Silverlock 2009, <i>Śaṃkara-sūtra</i> (22nd): Zhang 2004, <i>Āṭānāta-sūtra </i> (23rd): Sander 2007 and Dietz 2011, <i>Tridaṇḍi-sūtra </i>(25th): Matsuda 2006 and Choi 2015, <i>Piṅgalātreya-sūtra </i>(26th): Matsuda 2006 and Peipina 2008, <i>Lohitya-</i><i>sūtra</i> <i>I</i> (27th): Choi 2015,<i> Lohitya-sūtra</i> <i>II</i> (28th): Choi 2015,<i> Kairvarti-sūtra</i> (29th): Zhou 2008, <i>Kūṭatāṇḍya-sūtra </i>(34th): von Criegern 2002, <i>Ambaṣṭha-sūtra</i> (35th): Melzer 2006, <i>Pṛṣṭhapāla-sūtra</i> (36th): Melzer 2006 and Stuart 2013, <i>Kāraṇavādi-</i><i>sūtra</i> (37th): Melzer 2006, <i>Pudgala-sūtra</i> (38th): Melzer 2006, <i>Śruta-sūtra</i> (39th): Melzer 2006, <i>Mahalla-sūtra</i> (40th): Melzer 2006, and <i>Anyatama-sūtra</i> (41st): Melzer 2006. For a survey of work in progress cf. Hartmann and Wille 2014: 142f.</span></span></span></p>
+<p>Regarding the different Buddhist schools that transmitted these <i>āgama</i>s or <i>nikāya</i>s, it might be opportune to note that each of these discourse collections is not so much the product of a school, but rather the final result of oral transmission over long periods of time by successive generations of Indian reciters, of which only the last generations could be considered members of a particular school. Although school affiliation is certainly a relevant aspect to be taken into consideration, the vicissitudes of oral transmission have affected these discourses right from the time they came into existence, not only since they were transmitted by reciters who considered themselves to be members of one or another of the Buddhist schools. In other words, variations between parallel versions need not invariably be the result of sectarian agendas.</p>
+<p>Besides the three complete <i>Dīgha-nikāya</i>/<i>Dīrgha-āgama </i>collections, individual long discourses are also preserved in Chinese translation (T 2 to T 25), in Indic language fragments that do not belong to the Sarvāstivāda/Mūlasarvāstivāda collection mentioned above, as well as in Tibetan translation.</p>
+<p>The distribution of discourses among the different <i>āgama</i>s/<i>ni</i><i>kāya</i>s according to principles such as length for the purpose of facilitating their memorization has provided reciters of a particular collection with a somewhat specific coverage of topics.</p>
+<p>Such specific coverage appears to be recognized in an explanation given in the Sarvāstivāda *<i>Vinayavibhāṣā</i> that relates the long discourses collected in the <i>Dīrgha-āgama </i>especially to the refutation of heterodox philosophies.<span class="note" id="intron5"><span class="details"><span class="p">[n.5] T 1440 at T XXIII 504a1; cf. also below p. 339f note 31.</span></span></span> This seems to hold also for the <i>Dīgha-nikāya</i>, where the Buddha's ability to convert outsiders and to stand his ground successfully in debate is a prominent theme, together with the inspiration to be gained from the Buddha's exceptional nature and qualities. As debates and eulogies can easily become prolonged, it would only be natural for a collection of long discourses to contain much material of this type.</p>
+<p>The exceptional nature of the Buddha as an important topic in the <i>Dīgha-nikāya</i> seems to be also reflected in the Pāli commentarial tradition, according to which the transmission of this collection was taken up by the disciples of the Buddha's attendant Ānanda.<span class="note" id="intron6"><span class="details"><span class="p">[n.6] Sv I 15,2.</span></span></span> In early Buddhist texts, Ānanda stands representative of a deeply devoted attitude towards the Buddha. From the viewpoint of the commentarial tradition, his personal inclinations (which would presumably have attracted similarly inclined disciples) fit this particular discourse collection. In other words, the collection of long discourses would have a particular appeal for disciples who feel strong devotion towards the Buddha as their teacher, as well as for disciples who are engaged in winning converts to the tradition and disciples who have to defend Buddhist doctrine against other philosophies and beliefs.</p>
+<hr class="chapter-divider">
+<h3>The <i>Madhyama-āgama</i></h3>
+<p>The <i>Madhyama-āgama </i>extant in the Taishō edition as entry 26 appears to have been translated by Gautama Saṅghadeva based on an original that would have been from a Sarvāstivāda line of transmission.<span class="note" id="intron7"><span class="details"><span class="p">[n.7] The general consensus among scholars on the school affiliation of the <i>Madh</i><i>yama-āgama</i> has recently been called into question by Chung and Fukita 2011: 13–34, as well as Chung 2014 and 2017 (cf. also Fukita 2017); for critical replies cf. Anālayo 2012f: 516–521 and 2017c. On the underlying language cf. Karashima 2017.</span></span></span> In addition, middle-length discourses are preserved individually in Chinese translation (T 27 to T 98), a number of <i>Madhyama-āgama </i> discourses are extant in Indic language fragments, and some exist also in Tibetan translation.</p>
+<p>The Pāli <i>Majjhima-nikāya</i> is fairly consistent in adopting a pattern of ten discourses per chapter, the sole exception being its penultimate chapter with twelve discourses. The count of discourses per chapter in the <i>Madhyama-āgama </i>shows greater diversity. Although a grouping of ten is the most common count, the eleventh chapter, for example, entitled the "Great Chapter", has twenty-five discourses. The sequences of the discourses in the two collections have little in common.</p>
+<p>Differences in distribution of discourses over the <i>āgama</i>s/<i>ni</i><i>kāya</i>s appear to be the result of an ongoing process of shifts in location. Apparently even whole groups of discourses were moved from one collection to another.<span class="note" id="intron8"><span class="details"><span class="p">[n.8] Cf. Bucknell 2014 and 2017.</span></span></span> This seems to have happened in the case of the first chapter in the <i>Madhyama-āgama</i>, for example, where all of the ten discourses revolve around the number seven. Most of the discourses in this chapter have their counterparts among the Sevens of the <i>Aṅguttara-nikāya</i>. This gives the impression that these discourses could originally have been assembled as part of a numerical collection of Sevens and were then subsequently inserted at the beginning of the <i>Madhyama-āgama</i>.</p>
+<p>A similar process appears to have happened in the case of the <i>Majjhima-nikāya</i> in relation to its last chapter, which combines discourses that in one way or another deal with the topic of the six senses. Parallels to these discourses are found in the <i>Saṃyukta-</i><i>āgama</i> which, like its Pāli counterpart, the <i>Saṃyutta-nikāya</i>, has an entire section dedicated to the six senses. In this case it seems that ten discourses originally formed a group in a topic-wise collection and subsequently made their way into the <i>Majjhima-nikāya</i>.</p>
+<p>The rationale behind such moves would be to ensure each collection had a good coverage of various aspects of the teachings and thereby counter the somewhat mechanical allocation to collections according to principles like length of a discourse. The attempt to improve the coverage of a particular collection would have led some reciters to want to incorporate material from other collections which they considered important. The same would also explain the not infrequent doubling of discourses, where the same text appears in whole or in part in more than one collection.</p>
+<p>Regarding the somewhat different emphases in the long and middle-length discourse collections, according to the Sarvāstivāda *<i>Vinayavibhāṣā</i> the <i>Madhyama-āgama </i> presents profound doctrines for an intelligent audience.<span class="note" id="intron9"><span class="details"><span class="p">[n.9] T 1440 at T XXIII 503c28.</span></span></span> The Pāli commentarial tradition associates the transmission of the <i>Majjhima-nikāya </i>with the disciples of Sāriputta, who in the tradition represents the quality of wisdom par excellence.<span class="note" id="intron10"><span class="details"><span class="p">[n.10] Sv I 15,5.</span></span></span> The perspectives provided by these two works agree in indicating that the middle-length collections would be of particular relevance for disciples who intend to deepen their understanding of the teachings in order to develop their wisdom.</p>
+<hr class="chapter-divider">
+<h3>The <i>Saṃyukta-āgama</i></h3>
+<p>Three <i>Saṃyukta-āgama </i>collections are extant in Chinese. The first and fairly complete collection now found in the Taishō edition as entry number 99 was based on a Sanskrit original recited by Guṇabhadra and translated by Bǎoyún (寶雲), probably reflecting an original that stemmed from a Mūlasarvāstivāda line of transmission. The manuscript of this discourse collection was apparently acquired in Sri Lanka by the Chinese pilgrim Fǎxiǎn (法顯),<span class="note" id="intron11"><span class="details"><span class="p">[n.11] Glass 2010: 200.</span></span></span> who stayed at the Abhayagiri monastery.</p>
+<p>A partially preserved Chinese translation of a <i>Saṃyukta-āgama</i> collection of uncertain school and translator can be found as entry number 100 in the Taishō edition,<span class="note" id="intron12"><span class="details"><span class="p">[n.12] Cf. the study by Bingenheimer 2011.</span></span></span> followed by another short <i>Saṃ</i><i>yukta-āgama </i>fragment as entry number 101,<span class="note" id="intron13"><span class="details"><span class="p">[n.13] Cf. the study by Harrison 2002.</span></span></span> and by several individually translated <i>Saṃyukta-āgama </i>discourses (T 102 to T 124). Besides Indic language fragments, a considerable number of <i>Saṃ</i><i>yukta-āgama </i>parallels are extant in Tibetan translation. These appear for the most part in Śamathadeva's <i>Upāyikāṭikā</i> on the <i>Abhi</i><i>dharmakośabhāṣya</i>.<span class="note" id="intron14"><span class="details"><span class="p">[n.14] Cf. the studies by Dhammadinnā 2012, 2013a, 2013b, 2014, and 2016b.</span></span></span></p>
+<p>The circumstance that the <i>Saṃyutta-nikāya </i>and the <i>Saṃyukta-</i><i>āgama </i>are arranged according to topics makes it natural that a considerable number of their discourses deal with doctrinal themes like dependent arising, the aggregates, the senses, and aspects of the path. In this way, the two collections provide a range of closely related spotlights following each other in immediate succession on central themes of early Buddhist philosophy and practice. The collection of connected discourses would thus have been of special interest for disciples wishing to develop a comprehensive understanding of specific aspects of the teachings.</p>
+<p>The Sarvāstivāda *<i>Vinayavibhāṣā</i> indicates that the <i>Saṃyukta-</i><i>āgama</i> is particularly appropriate for providing topics for meditation.<span class="note" id="intron15"><span class="details"><span class="p">[n.15] T 1440 at T XXIII 503c29.</span></span></span> The Pāli commentarial tradition associates the transmission of the <i>Saṃyutta-nikāya</i> with the disciples of Mahākassapa,<span class="note" id="intron16"><span class="details"><span class="p">[n.16] Sv I 15,8.</span></span></span> who in the tradition exemplifies the austere forest monk given to ascetic practices, which in turn are often seen as related to intensive meditation. These two works seem to agree in considering the collection arranged topic-wise as providing teachings suitable for meditative reflection, ideally undertaken in seclusion.</p>
+<p>The complete <i>Saṃyukta-āgama</i> (T 99) comes in fifty fascicles, of which only forty-eight correspond to the original text. Owing to a misplacing of fascicles at some time in the past, the order of the collection fell into disarray and two fascicles that do not belong to the <i>Saṃyukta-āgama</i> have been accidentally included.<span class="note" id="intron17"><span class="details"><span class="p">[n.17] Anesaki 1908: 70–74.</span></span></span></p>
+<p>The reconstructed<i> Saṃyukta-āgama</i> follows the same basic fivefold division as the <i>Saṃyutta-nikāya</i>. A difference is that the reconstructed<i> Saṃyukta-āgama</i> has a chapter of sayings by disciples, and a chapter with sayings by the Buddha or Tathāgata. More than two thirds of the discourses in the <i>Saṃyukta-āgama </i> have parallels in the <i>Saṃyutta-nikāya</i>.</p>
+<p>A collection of numerical discourses was translated into Chinese by Zhú Fóniàn (竺佛念) in the year 384 of the present era. The school affiliation of this <i>Ekottarika-āgama </i>has been a subject of ongoing discussion among scholars. A Mahāsāṅghika affiliation of the Indic original seems to be the most probable hypothesis, although for the time being it is probably best to consider as uncertain the provenance of the <i>Ekottarika-āgama </i>in the form in which it is now extant as entry 125 in the Taishō edition.<span class="note" id="intron18"><span class="details"><span class="p">[n.18] Cf. in more detail Anālayo 2016b: 173–178 and 211–214.</span></span></span></p>
+<p>The Chinese canon has also preserved a partial <i>Ekottarika-āgama </i> translation by Ān Shìgāo 安世高 (T 150a),<span class="note" id="intron19"><span class="details"><span class="p">[n.19] Cf. the study by Harrison 1997.</span></span></span> as well as individually translated discourses (T 127 to T 149). Parts of a collection of numerical discourses are extant in Sanskrit,<span class="note" id="intron20"><span class="details"><span class="p">[n.20] Edited by Tripāṭhī 1995.</span></span></span> besides other fragmentary parallels and a few counterparts in Tibetan translation.</p>
+<p>The basic principle adopted in the <i>Aṅguttara-nikāya </i>and the <i>Ekottarika-āgama </i> groups together discourses that are in some way related to a particular number. The numbers taken into consideration proceed one by one, which would have earned the collections their title, beginning with the Ones and coming to a conclusion with the Elevens. Not all numerical topics are necessarily covered, since items like the 'four' noble truths or the 'eight'-fold noble path have found inclusion in the topic-wise arrangement in the <i>saṃyukta </i>collections instead.<span class="note" id="intron21"><span class="details"><span class="p">[n.21] The eightfold path does, however, appear as part of the tenfold path among the Tens, AN 11.113 at AN V 223,3.</span></span></span> The division between the <i>saṃ</i><i>yukta </i>and <i>ekottarika</i> collections is not always clear-cut and at times items are present in both collections.</p>
+<p>As a result of the inclusion of discourses with an emphasis on doctrinal matters in the topic-wise arrangement in the <i>saṃyukta </i> collections, the discourses left for assignment according to the numerical principle tend to cover more practical matters and everyday issues, which makes the numerical collection particularly suited to the concerns of the laity, although the collection also has several passages that are related to monastic discipline. The spiritual and mundane needs of the laity are in fact taken into account in a number of early discourses in the <i>āgama</i>s/<i>nikāya</i>s, clearly indicating that early Buddhist texts are not solely concerned with teaching monastics. A listing of disciples outstanding for particular qualities in the <i>Aṅguttara-nikāya </i>and in the <i>Ekottarika-āgama</i>, for example, covers not only monks and nuns, but also male and female lay disciples.<span class="note" id="intron22"><span class="details"><span class="p">[n.22] Cf. AN 1.14.6 to 1.14.7 at AN I 25,32 and EĀ 6.1 to 7.3 at T II 559c9.</span></span></span></p>
+<p>An emphasis on practical teachings appears to be also reflected in the indication given in the Sarvāstivāda *<i>Vinayavibhāṣā</i> that various teachings for gods and men are assembled in the <i>Ekotta</i><i>rika-āgama</i>.<span class="note" id="intron23"><span class="details"><span class="p">[n.23] T 1440 at T XXIII 503c27.</span></span></span> The Pāli commentarial tradition attributes the transmission of the <i>Aṅguttara-nikāya </i>to the disciples of Anuruddha,<span class="note" id="intron24"><span class="details"><span class="p">[n.24] Sv I 15,10.</span></span></span> who was famous for his exercise of a supernatural ability called the divine eye. According to tradition, with the help of the divine eye a practitioner is able to see events far away and in various heavenly spheres, which would presumably have furnished Anuruddha with the kind of information relevant to the concerns of gods and men.</p>
+<p>The <i>Ekottarika-āgama</i> extant in Chinese appears to have remained open to later influences for a considerably longer time than the other <i>Āgama</i>s; in fact a whole discourse appears to have been added and others seem to have been reworked after the collection had reached China.<span class="note" id="intron25"><span class="details"><span class="p">[n.25] Cf. Anālayo 2013h, 2014/2015, and 2015g.</span></span></span></p>
+<p>The studies in the chapters that follow are revised versions of previously published articles.<span class="note" id="intron26"><span class="details"><span class="p">[n.26] A translation and study not included in the present selection is Anālayo 2016d, which instead has been included in Anālayo 2017b. In relation to the translations found in this and other publications of mine, I would like to mention that I am not a trained Sinologist, wherefore the contribution I am able to make lies predominantly in the study parts and in attempting to understand the development of early Indian Buddhism, for which the translations are meant as a support.</span></span></span> The majority of these studies relate to a <i>Dīrgha-āgama </i>discourse, which is translated either in part or full, followed by an examination of aspects that I felt to be of further interest.</p>
+<p>In the first chapter I begin by exploring the historical value of the Pāli discourses, and by implication of their <i>Āgama </i>parallels. In the next four chapters I take up various aspects related to the <i>Brahmajāla-sutta </i>(DN 1) and its <i>Dīrgha-āgama</i> parallel. Several of these aspects are of general significance for an appreciation of the early discourses, such as oral features discussed in the first two chapters and the nature of the Tathāgata taken up in the third. In the fourth chapter I turn to the <i>Brahmajāla</i>'s analysis of the view-forming process.</p>
+<p>The sixth chapter presents a translation of the <i>Dīrgha-āgama</i> parallel to the <i>Tevijja-sutta </i>(DN 13) and a study of its significance. The next two chapters are based on two extracts from the <i>Dīrgha-āgama</i> parallel to the <i>Mahāparinibbāna-sutta </i>(DN 16), based on which I explore the nature of healing in early Buddhist thought and the account of the Buddha's meditative passing away.</p>
+<p>An extract from the <i>Dīrgha-āgama</i> parallel to the <i>Sakkapañha-</i><i>sutta </i>(DN 21) forms the starting point for a discussion over two chapters of miraculous feats, in particular fire miracles attributed to the Buddha and descriptions of levitation.</p>
+<p>A translation of the <i>Dīrgha-āgama</i> parallel to the <i>Pāyāsi-sutta </i> (DN 23) can be found in the next two chapters, together with a study of its debate character. Then I translate the <i>Dīrgha-āgama</i> version of the Discourse on the Wheel-turning King (DN 26) and examine its prediction of the future Buddha Maitreya.</p>
+<p>The next two chapters offer translations and studies of two <i>Dīrgha-āgama </i>discourses that do not have a Pāli parallel, but which belong to the same genre of listings of doctrinal terms as the <i>Saṅgīti-sutta </i>and the <i>Dasuttara-sutta</i>.</p>
+<p>Complementing the study of orality in the first chapters of this collection, the final three chapters take up aspects of the Pāli oral transmission. These are the significance of the <i>aṅga</i>s, oral features of the Pāli discourses, and the potential of comparative study for improving our understanding of the Pāli discourses, exemplified by cases taken from the <i>Madhyama-āgama</i>. The last of these thereby serves as a lead-over to my <i>Madhyama-āgama </i>studies.<span class="note" id="intron27"><span class="details"><span class="p">[n.27] Anālayo 2012f.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Conventions</h3>
+<p>Since a considerable part of my target audience will be familiar mainly with the Pāli canon, in what follows I employ Pāli terminology, except for anglicized terms like "bodhisattva", "Dharma", or "Nirvāṇa", without thereby intending to take a position on the original language of the <i>Dīrgha-āgama </i>discourses or to suggest that Pāli language is in principle preferable. I hope that this will facilitate access to my studies by those who are more familiar with Pāli terms. For the same reason, I have arranged my studies in the sequence in which the respective discourses are found in the Pāli canon. The original order of the <i>Dīrgha-āgama </i>discourses translated and studied in the present monograph can be seen in table 1 below.</p>
+<p>In the notes to the translations, I discuss selected differences in relation to the Pāli and other parallels. Abbreviations in the translation are usually found as such in the Chinese original. These are reproduced with an ellipsis. Instructions in the original that indicate the need to recite the elided text are given in italics.</p>
+<p>In the translations, I use square brackets [ ] to indicate supplementation and angle brackets ⟨ ⟩ to mark emendation. In order to facilitate cross-referencing, I use square brackets in subscript to provide the pagination of the original Chinese text on which the translation is based and the pagination of the original paper, as well as superscript for its footnote or endnote numbering, whenever these differ from the present annotation.<span class="note" id="intron28"><span class="details"><span class="p">[n.28] Due to revision of the original papers, at times these references to the earlier pagination or footnote numbering are not in sequential order.</span></span></span> When quoting text editions, I have occasionally standardized or adjusted the punctuation.</p>
+<hr class="chapter-divider">
+<h3>Translation Terminology</h3>
+<p>When translating <i>Dīrgha-āgama</i> discourses, I have attempted to stay close to the terminology adopted by Bhikkhu Bodhi in his renderings of the Pāli equivalents, to facilitate comparison. In the case of 苦, equivalent to <i>dukkha</i>, however, I simply keep the Pāli term, which at times does stand for outright "pain", but on many an occasion refers to "unsatisfactoriness", where translations like "suffering" or "pain" fail to convey adequately the sense of the passage in question. The standard rendering of <i>bhagavant</i> in the <i>Ekottarika-</i><i>āgama </i>is 世尊, literally "World Honoured One", in which case I follow Bhikkhu Bodhi's translation of the corresponding Pāli term and adopt the rendering "Blessed One". For 慈 I use the Pāli equivalent <i>mettā</i>, and for 漏, corresponding to <i>āsava</i>, I employ the rendering "influx".<span class="note" id="intron29"><span class="details"><span class="p">[n.29] For a more detailed discussion of the term <i>āsava</i> cf. Anālayo 2012g: 80–82.</span></span></span></p>
+<p>DĀ no.:</p>
+<p>Pāli no.:</p>
+<table class="comparative-table">
+<caption>Table 1: Translated <i>Dīrgha-āgama </i>Discourses<span class="note" id="intron30"><span class="details"><span class="p">[n.30] Of these only DĀ 6, DĀ 7, and DĀ 26 are translated in full; of the others only excerpts are translated. In addition to the discourses mentioned in table 1, the studies also contain translations of shorter excerpts from DĀ 14, DĀ 15, and DĀ 20 (parallels to DN 2, DN 21, and DN 24).</span></span></span></caption>
+<tr><th>DĀ 2</th><th>DN 16</th><th><i>Mahāparinibbāna-sutta</i></th></tr>
+<tr><td>DĀ 6</td><td>DN 26</td><td><i>Cakkavatti-sutta</i></td></tr>
+<tr><td>DĀ 7</td><td>DN 23</td><td><i>Pāyāsi-sutta</i></td></tr>
+<tr><td>DĀ 11</td><td>no parallel</td><td></td></tr>
+<tr><td>DĀ 12</td><td>no parallel</td><td></td></tr>
+<tr><td>DĀ 21</td><td>DN 1</td><td><i>Brahmajāla-sutta</i></td></tr>
+<tr><td>DĀ 26</td><td>DN 13</td><td><i>Tevijja-sutta</i></td></tr>
+</table>
+<p>Pāli title:</p>
+<p>Titles of the original publications: "Āgama and aṅga in the Early Buddhist Oral Tradition" (2016a); cf. below p. 449ff.</p>
+<p>"The Brahmajāla and the Early Buddhist Oral Tradition" (2014a); cf. below p. 51ff.</p>
+<p>"The Brahmajāla and the Early Buddhist Oral Tradition (2)" (2015b); cf. below p. 79ff.</p>
+<p>"Brahmavihāra and Awakening, A Study of the Dīrgha-āgama Parallel to the Tevijja-sutta" (2015c); cf. below p. 179ff.</p>
+<p>"The Buddha's Fire Miracles" (2015d); cf. below p. 249ff.</p>
+<p>"The Buddha's Last Meditation in the Dīrgha-āgama" (2014b); cf. below p. 225ff.</p>
+<p>"Debate with a Sceptic – The Dīrgha-āgama Parallel to the Pāyāsi-sutta (1)" (2012c); cf. below p. 295ff.</p>
+<p>"Debate with a Sceptic – The Dīrgha-āgama Parallel to the Pāyāsi-sutta (2)" (2013b); cf. below p. 321ff.</p>
+<p>"Healing in Early Buddhism" (2015h); cf. below p. 203ff.</p>
+<p>"The Historical Value of the Pāli Discourses" 2012e; cf. below p. 15ff.</p>
+<p>"Levitation in Early Buddhist Discourse" (2016f); cf. below p. 281ff.</p>
+<p>"Maitreya and the Wheel-turning King" (2014e); cf. below p. 349ff.</p>
+<p>"Oral Dimensions of Pāli Discourses: Pericopes, Other Mnemonic Techniques, and the Oral Performance Context" (2007a); cf. below p. 473ff.</p>
+<p>"Selected Madhyama-āgama Discourse Passages and Their Pāli Parallels" (2016h); cf. below p. 501ff.</p>
+<p>"Some Renditions of the Term Tathāgata in the Chinese Āgamas" (2017d); cf. below p. 101ff.</p>
+<p>"Summaries of the Dharma – A Translation of Dīrgha-āgama Discourse No. 12" (2013g); cf. below p. 433ff.</p>
+<p>"Three Chinese Dīrgha-āgama Discourses Without Parallels" (2014h); cf. below p. 393ff.</p>
+<p>"Views and the Tathāgata – A Comparative Study and Translation of the Brahmajāla in the Chinese Dīrgha-āgama" (2009i); cf. below p. 115ff.</p>
+<hr class="chapter-divider">
+<h3>Acknowledgement</h3>
+<p>I am indebted to Marcus Bingenheimer, Bhikkhu Bodhi, Roderick Bucknell, Adam Clarke, Bhikkhunī Dhammadinnā, Stephen A. Evans, Sean Fargo, Rupert Gethin, Michael Hahn, Jens-Uwe Hartmann, Jan Nattier, Michael Running, Lambert Schmithausen, Syinchen Shi, Ken Su, Tilmann Vetter, Oskar von Hinüber, Stefano Zacchetti, and Monika Zin for comments and suggestions made in regard to one or more of the articles collected in this volume, and to the editors of the respective journals and volumes for permission to reprint the material.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a>: Introduction</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

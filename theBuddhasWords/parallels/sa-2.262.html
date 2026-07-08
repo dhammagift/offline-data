@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.262 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.262</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 262</span><span class="mirror-right">（二六二）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn7.14.html">SN 7.14</a> / <a href="../parallels/sa96.html">SĀ 96</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was in Shravasti, at Anathapindika&#x27;s Park in Jeta&#x27;s Grove. In the morning, the World-Honored One put on his robe, took his bowl, and entered the city to beg for alms. He saw an old Brahmin walking with a staff and bowl to beg for alms. The Buddha said to the Brahmin, &quot;You are very old now. Why do you carry a staff and bowl to beg for alms?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，世尊晨朝著衣持钵，入城乞食。有一老婆罗门，捉杖持钵而行乞食，时，佛见已，语婆罗门言：「汝今极老，何以捉杖持钵而行乞食？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Brahmin said, &quot;I have seven sons. Each has married and received an equal share of the wealth. I have no share. My sons drive me to beg for alms.&quot;</p></td><td lang="lzh" class="agama-chi"><p>婆罗门言：「我有七子，各为妻娶，分财等与，我今无分。为子驱故，而行乞食。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to him, &quot;I will now speak a verse for you. Can you recite this verse in the assembly?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之言：「我今为汝说偈，汝能于大众中说此偈不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He replied, &quot;I can.&quot;</p></td><td lang="lzh" class="agama-chi"><p>答言：「我能。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The birth of a son brings great joy, and for him, wealth<br/>is accumulated. Each is married and then drives me away. These have<br/>no filial piety and compassion, and say with their mouths that they<br/>are parents. Like the children of rakshasas, they drive me away when<br/>I am about to die. It is like a horse trough full<br/>of grain, with young horses lacking respect and pushing aside the old<br/>These sons are also like this, lacking a loving and respectful mind<br/>They drive me away to beg, unlike the staff that loves me<br/>I now hold this staff to control dogs, sheep, and horses. When<br/>walking, it assists my strength and is my companion in the dark<br/>night. Pointing to water to know the depth, if I fall, it<br/>supports me to rise. Covered by the staff, it removes much hearing<br/>This staff loves me.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「生子太欢喜，　　为之聚财宝，各为娶妻子，　　而便驱弃我。此等无孝慈，　　口言为父母，如彼罗刹子，　　垂死驱弃我。譬如马槽枥，　　满中置谷［麦＊弋］，少马无敬让，　　驱蹋于老者。此子亦如是，　　无有爱敬心，弃我使行乞，　　不如杖爱我。我今捉此杖，　　御狗及羊马，行则佐我力，　　暗夜为我伴。指水知深浅，　　若趺扶杖起，蒙杖除多闻，　　是杖爱念我。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The brahmin received this verse and recited it to memorize it. At that time, the seven sons were in the great assembly. The brahmin said in the great assembly, &quot;You should now listen to what I say.&quot; The great assembly was silent. He then spoke the above verse. The seven sons were ashamed and stood up to embrace their father. They took their father home and placed him in his original seat. The sons each took out two fine woolen blankets and offered them to their father.</p></td><td lang="lzh" class="agama-chi"><p>婆罗门受此偈已，诵读使利。尔时，七子在大会中，时，婆罗门于大众中而作是言：「汝等今当听我所说。」大众默然，即说上偈。七子惭愧，起来抱父各共修敬，将父归家，置本坐处，诸子各出妙［叠＊毛］二张，奉上于父。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brahmin thought, &quot;I now obtain happiness, which is due to Gautama&#x27;s power. Gautama is my teacher. According to the brahmin&#x27;s Dharma, one should make offerings to the teacher and preceptor.&quot; He selected the best robe and went to where the Buddha was. After greeting the Buddha, he sat to one side and said to the Buddha, &quot;World-Honored One! I now obtain all kinds of benefits and happiness at home, which is due to your kindness. In my scriptures, it is said: &#x27;The teacher should be given the teacher&#x27;s share. The preceptor should be given the preceptor&#x27;s share.&#x27; Gautama! You are now my teacher. Please have compassion on me and accept this robe.&quot; At that time, the World-Honored One accepted the robe out of compassion.</p></td><td lang="lzh" class="agama-chi"><p>时婆罗门即作是念：「我今得乐，是瞿昙力，瞿昙即是我阿阇梨。婆罗门法，法应供养和上阿阇梨。」选最好衣往至佛所，问讯佛已，在一面坐，白佛言：「世尊！我今家中得诸利乐，是汝之恩，我经书中说：『阿阇梨者，应与阿阇梨分。和上者，应与和上分。』瞿昙！汝今是我阿阇梨，应怜愍我，受我此衣。」尔时，世尊以怜愍故，为受是衣。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The brahmin was overjoyed. He rose from his seat and departed happily.</p></td><td lang="lzh" class="agama-chi"><p>婆罗门踊跃，从座而起，欢喜而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

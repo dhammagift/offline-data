@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 139 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 139: Araṇavibhaṅga-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn138comp.html#content"></a><a id="next-sutta" href="./mn140comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn139.html">MN 139</a> / <a href="../../parallels/ma169.html">MĀ 169</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Araṇavibhaṅga-sutta, the “discourse on an analysis of non-conflict”, examines various ways of avoiding conflict. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn139n173"><span class="details"><span class="p">[n.173] The parallel is <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701b-703c and has the title “discourse [spoken among] the Kurus on [the subject of] non-conflict”, 拘樓瘦無諍經. While <a href="../../mn/mn139.html">MN 139</a> takes place in Jeta’s Grove by Sāvatthī, <a href="../../parallels/ma169.html">MĀ 169</a> takes place among the Bhaggās at Kammāsadhamma, a town of the Kurus, T I 701b24: 婆奇瘦, 劍磨瑟曇, 拘樓都邑. As the Bhaggā country was to the east of Sāvatthī, whereas the Kuru country was to its west, <a href="../../parallels/ma169.html">MĀ 169</a> seems to have conflated two locations. The Vyākhyāyukti in Lee 2001: 102,15 refers to the present discourse as nyon mongs pa med pa’i mdo, which Skilling 2000b: 340 indicates to correspond to Araṇa-sūtra, thereby agreeing with <a href="../../mn/mn139.html">MN 139</a> on taking the main topic of the discourse as its title. For discourse quotations in Abhidh-k-ṭ and in the Vyākhyāyukti cf. below note 187.</span></span></span> A section of this discourse has also been preserved in a Sanskrit fragment.<span class="note" id="mn139n174"><span class="details"><span class="p">[n.174] The fragment is SHT II 163a (p. 15), which has preserved part of the examination of different language usages found in <a href="../../mn/mn139.html">MN 139</a> at MN III 234,31.</span></span></span></p>
+<p>The Araṇavibhaṅga-sutta and its Madhyama-āgama parallel begin by examining the need to avoid both the pursuit of sensual pleasures and the practice of self-mortification, recommending the noble eightfold path as the middle path that is aloof from these two extremes.<span class="note" id="mn139n175"><span class="details"><span class="p">[n.175] <a href="../../mn/mn139.html">MN 139</a> at MN III 230,22 and <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701c7.</span></span></span></p>
+<p>The two versions reckon the pursuit of sensual pleasures to be a low practice of the commoner, while the practice of self-mortification is according to them ignoble and not beneficial.<span class="note" id="mn139n176"><span class="details"><span class="p">[n.176] <a href="../../mn/mn139.html">MN 139</a> at MN III 230,22+24 and <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701c7+8.</span></span></span> The Majjhima-nikāya discourse notes that the pursuit of sensual pleasures and the practice of self-mortification are both beset by dukkha, vexation, despair, and fever, and thus are both the wrong path.<span class="note" id="mn139n177"><span class="details"><span class="p">[n.177] <a href="../../mn/mn139.html">MN 139</a> at MN III 230,28 and MN III 231,4: “this state is beset by dukkha, vexation, despair, and fever, it is the wrong path”, sadukkho eso dhammo sa-upaghāto sa-upāyāso sapariḷāho micchāpaṭipadā.</span></span></span></p>
+<p>The qualification of the pursuit of sensual pleasures and self-mortifications as wrong paths beset by dukkha is also found in both versions as part of their examination of the next topic, the need to avoid praising and disparaging in order to properly teach the Dharma.</p>
+<p>At this point, the Madhyama-āgama version also explains the reasons for coming to the conclusion that the pursuit of sensual pleasures and the pursuit of self-mortification are both wrong paths and beset by dukkha. According to its explanation, both are seen to be the wrong path and beset by dukkha once one realizes that sensual pleasures are impermanent, unsatisfactory, and bound to change,<span class="note" id="mn139n178"><span class="details"><span class="p">[n.178] <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701c22: “sensual pleasures are impermanent, dukkha, of a nature to be worn away”, 欲者無常, 苦, 磨滅法.</span></span></span> and once one sees how recluses and Brahmins inflict pain on themselves even though they would (by nature) be averse to pain.<span class="note" id="mn139n179"><span class="details"><span class="p">[n.179] <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701c27: “recluses and Brahmins who would be afraid of pain ... on going forth from home into homelessness to practise the path, these recluses and Brahmins then embrace this pain”, 沙門, 梵志, 所可畏苦 ... 捨家, 無家, 學道者, 彼沙門, 梵志, 復抱此苦.</span></span></span></p>
+<p>The Araṇavibhaṅga-sutta and its Madhyama-āgama parallel take up the eradication of the fetter to existence as a third instance in regard to which one should avoid praising and disparaging. Both versions explain that, as long as this fetter is not eradicated, existence has not been transcended.<span class="note" id="mn139n180"><span class="details"><span class="p">[n.180] In the subsequent treatment of this topic, Ee-MN III 232,8 and Ce-MN III 486,30 actually contrast the fetter to existence that has not been eradicated with the fetter of “non-existence” that has been eradicated, vibhavasaṃyojanaṃ pahīnaṃ. Later on, however, Ee-MN III 233,5 and Ce-MN III 488,20, speak of the eradicated fetter to existence, bhavasaṃyojanaṃ pahīnaṃ, a reading found throughout in the Burmese and Siamese editions and also in the corresponding sections in <a href="../../parallels/ma169.html">MĀ 169</a> at T I 702a7 and T I 702b8: 有結盡.</span></span></span></p>
+<p>The Madhyama-āgama discourse comes out with a fourth instance for avoiding praising and disparaging. This fourth instance takes up the search for happiness within,<span class="note" id="mn139n181"><span class="details"><span class="p">[n.181] <a href="../../parallels/ma169.html">MĀ 169</a> at T I 702a9: 求內樂.</span></span></span> pointing out that one should not proclaim that those, who do not search for happiness within, are all on the wrong path and beset by dukkha, as in this way one would be blaming others.</p>
+<p>By taking up the topic of searching for happiness within, the Madhyama-āgama parallel offers a lead over to the subsequent topic in both versions, which is indeed the pursuit of happiness within. Before, however, taking up this topic, the two versions conclude their examination of praising and disparaging by explaining how to properly teach the Dharma.</p>
+<p>According to the Majjhima-nikāya version’s presentation, to teach the Dharma instead of praising and disparaging takes place when a statement is not formulated by stating that “all those” who engage in the pursuit of sensual pleasures, etc., are on the wrong path. Instead, to properly teach the Dharma is to simply speak of the pursuit as such.<span class="note" id="mn139n182"><span class="details"><span class="p">[n.182] E.g., in relation to the pursuit of sensual pleasures, <a href="../../mn/mn139.html">MN 139</a> at MN III 232,17+13 recommends to teach the Dharma by making a statement in this manner: “this pursuit ... is the wrong path”, anuyogo ... micchāpaṭipadā ti, instead of proclaiming that “those who engage in this pursuit ... they all are ... on the wrong path”, ye ... anuyutta ... sabbe te ... micchāpaṭipannā ti.</span></span></span> The Madhyama-āgama version makes the same point.</p>
+<p>In relation to the pursuit of happiness within, the Araṇavibhaṅga-sutta and its Madhyama-āgama parallel recommend in similar terms that the ignoble pleasure of the senses should be avoided and the inner happiness of the jhānas should be developed.<span class="note" id="mn139n183"><span class="details"><span class="p">[n.183] <a href="../../mn/mn139.html">MN 139</a> at MN III 233,22 qualifies sensual happiness not only as worldly and ignoble, but also as mīḷhasukha, literally “dung [type of] happiness” (for the term cf. also the dung beetle in <a href="../../sn/sn17.5.html">SN 17:5</a> at SN II 228,24, or the manure mountain in <a href="../../an/an5.196.html">AN 5:196</a> at AN III 241,20). Chalmers 1927: 288 renders mīḷhasukha as “foul ... ease”, Horner 1959: 281 has: “vile happiness”, and Ñāṇamoli 1995/2005: 1083 as “filthy pleasure”, whereas Neumann 1896/1995: 1020 opts for a literal translation as “kotiges Wohl”; cf. also Hare 1961: 242, who renders another occurrence of the same expression as “dung-like ease”, as well as the similar rendering as “dung-like happiness” in Masefield 1986: 7). <a href="../../parallels/ma169.html">MĀ 169</a> at T I 702c4 also lists the worldly and ignoble happiness, followed by explaining that this type of happiness is “rooted in disease and in [being like] a carbuncle”, 病本, 癰本, but does not have a counterpart to mīḷhasukha.</span></span></span></p>
+<p>The two versions continue by examining what types of speech should better not be employed. They agree that:</p>
+<ul>
+<li>untrue and unbeneficial words should under all circumstances be avoided,</li>
+<li>true but unbeneficial worlds are also better not spoken,</li>
+<li>true and beneficial words can be spoken at the right time.<span class="note" id="mn139n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn139.html">MN 139</a> at MN III 234,4 mentions not speaking secret words, rahovādaṃ na bhāseyya (which according to Ps V 30,17 refers to malicious speech), nor speaking roughly when face to face, sammukhā na khīṇaṃ bhane ti (Se-MN III 428,16: nātikhīnaṃ), and then continues to examine these two alternatives from the perspective of the three types of speech (i.e. untrue and unbeneficial, true and unbeneficial, true and beneficial). <a href="../../parallels/ma169.html">MĀ 169</a> at T I 702c17 instead instructs: “do not speak in an insinuating [manner] and also do not extol [someone] to [his] face”, 莫相導說, 亦莫面前稱譽者 (with 道 as a 宋, 元, 明, 德, and 聖 variant reading instead of 導, a reading adopted in the 佛光 Madhyama-āgama edition vol. 3 p. 1517). The first part of this instruction could be similar to <a href="../../mn/mn139.html">MN 139</a>, in the sense of envisaging some indirect form of communication, while the second part is exactly the opposite of <a href="../../mn/mn139.html">MN 139</a>, which refers to rough speech when being in front of someone else, not praise. <a href="../../parallels/ma169.html">MĀ 169</a> then takes up the first case of 相導說, from the same three perspectives, but does not apply this threefold treatment to the other case of “extolling [someone] to [his] face”.</span></span></span></li>
+</ul>
+<p>Yet another perspective on speech is that, according to both versions, hurried speech should be avoided. The reason is that speaking hastily will tire body and mind, moreover, what is said in such a manner will be unclear and therefore difficult to understand.<span class="note" id="mn139n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn139.html">MN 139</a> at MN III 234,20 contrasts “unhurriedly”, ataramāna, with “hurriedly”, taramāna, <a href="../../parallels/ma169.html">MĀ 169</a> at T I 702c26: “speak regularly and restrained, do not speak irregularly and unrestrained”, 齊限說, 莫不齊限者.</span></span></span></p>
+<p>The Araṇavibhaṅga-sutta and its Madhyama-āgama parallel next take up dogmatic insistence on local dialects.<span class="note" id="mn139n186"><span class="details"><span class="p">[n.186] <a href="../../mn/mn139.html">MN 139</a> at MN III 235,1 and <a href="../../parallels/ma169.html">MĀ 169</a> at T I 703a4; cf. also the Abhidharmasamuccaya in Pradhan 1950: 83,5. Kalupahana 1999: 50 highlights the emphasis in this passage on the “practical and communicative value of concepts”, instead of grasping them as in any way ultimate. Norman 1992: 234 takes up the present passage as an example for dialect variations and comments that the Buddha “in the course of his preaching tours ... varied his language to suit his audience ... it can be assumed, therefore, that from the beginning the teachings of the Buddha ... were not restricted to a single dialect or language”; on the term janapadanirutti cf. also Norman 1980/1991: 129 and Ruegg 2000: 288 note 14.</span></span></span> Parts of this topic have also been preserved in the Sanskrit fragment and in Śamathadeva’s commentary on the Abhidharmakośabhāṣya.<span class="note" id="mn139n187"><span class="details"><span class="p">[n.187] Abhidh-k-ṭ at D (4094) mngon pa, ju 46a5 or Q (5595) tu 50a2; cf. also Abhidh-k 1:43 in Ejima 1989: 49,17 or Pradhan 1967: 31,14, paralleling <a href="../../mn/mn139.html">MN 139</a> at MN III 234,30, with its Chinese parallels in T 1558 at T XXIX 11b5 and T 1559 at T XXIX 171a24. For counterparts to <a href="../../mn/mn139.html">MN 139</a> at MN III 230,15-17 in Vyākhyāyukti literature cf. Skilling 2000b: 340.</span></span></span> The parallel versions agree in listing various terms for a bowl to illustrate variations between different local dialects in ancient India. The Sanskrit fragment and the discourse quote in the commentary on the Abhidharmakośabhāṣya not only list various words for a “bowl”, but also illustrates language variations with the example of different terms employed to refer to a “person”.<span class="note" id="mn139n188"><span class="details"><span class="p">[n.188] SHT II 163aA3: “a ‘living being’, or a ‘man’, or a ‘human being’, or a ‘person’, or a ‘human’”, (jīv)[o] vā jantur-vā [poṣo] vā pudgalo vā manujo; cf. also Abhidh-k-ṭ at D (4094) mngon pa, ju 46b2 or Q (5595) tu 50a7. Other examples of such listings can be found, e.g., in the Pṛṣṭhapāla-sūtra, fragment 423r6 in Melzer 2006: 284, in the Dharmaskandha, fragment 4737 folio 19v10 to 20r1 in Dietz 1984: 81,1, in the Mahāvyutpatti, no. 4668-4676 in Sakaki 1926: 311-312, and in the Saṅghabhedavastu in Gnoli 1977: 157,24. A series of different terms used to refer to a being are also listed in the Jain Viyāhapaṇṇatti 2.14 in Lalwani 1973b: 149,22.</span></span></span> The Araṇavibhaṅga-sutta and its Madhyama-āgama parallel recapitulate their exposition by taking up the topics covered so far from the perspective of whether such conduct leads to conflict or to absence of conflict.<span class="note" id="mn139n189"><span class="details"><span class="p">[n.189] The recapitulations in each of the two versions do not seem to take into account all the subjects mentioned earlier, since <a href="../../mn/mn139.html">MN 139</a> does not mention the topic of the fetter to existence, although both versions covered this topic earlier and <a href="../../parallels/ma169.html">MĀ 169</a> at T I 703a26 does include it in its recapitulation. <a href="../../parallels/ma169.html">MĀ 169</a> in turn does not mention the topic of praising and blaming, although both versions took up this topic earlier and <a href="../../mn/mn139.html">MN 139</a> at MN III 236,6 includes it in its recapitulation.</span></span></span> The two versions conclude with the Buddha encouraging the monks to undertake what leads to the absence of conflict, praising Subhūti as exemplary in this respect.<span class="note" id="mn139n190"><span class="details"><span class="p">[n.190] <a href="../../parallels/ma169.html">MĀ 169</a> at T I 703c10 adds to this a verse in praise of Subhūti, according to which he practised true emptiness, 行真實空. References to Subhūti’s qualities recur in other discourses, although with some differences in the qualities that are highlighted. The list of outstanding disciples in <a href="../../an/an1.14.html">AN 1:14</a> at AN I 24,8 takes up Subhūti’s excellence in dwelling free from conflict, to which it adds his worthiness in receiving gifts; cf. also Maithrimurthi 2004: 205. Ud 6:7 at Ud 71,10 records the Buddha praising Subhūti for his meditative abilities, in particular for his removal of thoughts and his ability to attain the perception of the immaterial. According to <a href="../../tha/tha1.html#p1">Th 1</a>, in what tradition reckons to be his own verse, Subhūti highlights his liberated and concentrated state of mind. The listing of outstanding disciples in <a href="../../parallels/ea4.8.html">EĀ 4.8</a> at T II 558b15 extols Subhūti for his continuous delight in emptiness concentration and his ability to discriminate properly the meaning of emptiness, 恒樂空定, 分別空義, followed by praising him for his resolution on being established in the peace of emptiness and his sublime and virtuous actions, 志在空寂, 微妙德業. Subhūti’s understanding of emptiness comes up for praise again in <a href="../../parallels/ea22.3.html">EĀ 22.3</a> at T II 663a4 and in <a href="../../parallels/ea46.3.html">EĀ 46.3</a> at T II 795c24. Subhūti’s being outstanding for his worthiness to receive gifts recurs in the *Karmavibhaṅgopadeśa in Lévi 1932a: 161,17, while his excellence in living without conflict is mentioned in the Avadānaśataka in Speyer 1909/1970: 131,6 or in Vaidya 1958a: 232,23, in the Vajracchedikā Prajñāpāramitā, cf. the Sanskrit version in Conze 1957: 35,8 and its Chinese translations in T 220 at T VII 981b17, T 235 at T VIII 749c10, T 236a at T VIII 753c18, T 237 at T VIII 763a16 (= T 236b at T VIII 758b8), T 238 at T VIII 768a14, and T 239 at T VIII 772c23, and in the Aṣṭasāhasrikā Prajñāpāramitā, cf. the Sanskrit version in Mitra 1888: 20,8 and its Chinese translation in T 227 at T VIII 538b9; cf. also T 223 at T VIII 234a12 and T VIII 238b21.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

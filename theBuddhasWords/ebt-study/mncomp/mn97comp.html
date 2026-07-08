@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 97 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 97: Dhānañjāni-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn96comp.html#content"></a><a id="next-sutta" href="./mn98comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn97.html">MN 97</a> / <a href="../../parallels/ma27.html">MĀ 27</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Dhānañjāni-sutta, the “discourse to Dhānañjāni”, records Sāriputta’s instructions to the Brahmin Dhānañjāni. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn97n191"><span class="details"><span class="p">[n.191] The parallel is <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456a-458b and agrees with <a href="../../mn/mn97.html">MN 97</a> on locating the discourse in the Squirrels’ Feeding Ground by Rājagaha. <a href="../../parallels/ma27.html">MĀ 27</a> agrees with <a href="../../mn/mn97.html">MN 97</a> on using the name of its Brahmin protagonist as its title, given in the form 陀然, with the additional specification that he was a Brahmin, 梵志陀然經. Comments on <a href="../../parallels/ma27.html">MĀ 27</a> can be found in Minh Chau 1964/1991: 37, 73-74, 102, and 207.</span></span></span></p>
+<p>The Dhānañjāni-sutta and its Madhyama-āgama parallel begin by describing that a monk, who had just come from Rājagaha, visited Sāriputta.<span class="note" id="mn97n192"><span class="details"><span class="p">[n.192] While <a href="../../mn/mn97.html">MN 97</a> at MN II 184,28 notes that Sāriputta was in the company of a great number of monks, <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456a25 reports the Buddha to have been in the company of a large group of monks. Another minor difference is that Sāriputta initiated the conversation by asking the monk where he came from, <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456b2. This seems a reasonable beginning of their conversation, as due to the presumably itinerant life style of the early generations of Buddhist monks it would have been difficult to know where a newly arrived monk had just come from, making it only natural to begin a conversation with such a question.</span></span></span> According to the Dhānañjāni-sutta, Sāriputta asked the monk about the welfare of the Buddha, of other monks and of the Brahmin Dhānañjāni.</p>
+<p>The Madhyama-āgama parallel reports that Sāriputta also inquired about the wellbeing of the nuns and the laity. He, moreover, not only wanted to know if they were keeping well, but also if they were eager to see the Buddha and delighted in hearing the Dharma.<span class="note" id="mn97n193"><span class="details"><span class="p">[n.193] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456b8: “the monk community and the nun community ... the community of male lay followers and the community of female lay followers ... do they wish to frequently see the Buddha and delight in hearing the Dharma”, 比丘眾, 比丘尼眾 ... 優婆塞眾, 優婆夷眾 ... 欲數見佛, 樂聞法耶? According to <a href="../../parallels/ma27.html">MĀ 27</a>, Sāriputta repeated the same question also in relation to recluses and Brahmins.</span></span></span> According to the Madhyama-āgama discourse, Sāriputta also indicated that Dhānañjāni was an old friend of his from the time before he had gone forth.<span class="note" id="mn97n194"><span class="details"><span class="p">[n.194] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456b25: “he is an old friend of mine [from the time] when I had not yet gone forth”, 是我 昔日未出家友.</span></span></span> This would explain Sāriputta’s concern for Dhānañjāni, a concern evident in both discourses.</p>
+<p>In the Madhyama-āgama version Sāriputta inquires after Dhānañjāni in the same manner as he had inquired after the monks, the nuns, and the laity. The Majjhima-nikāya presentation, however, gives the impression that Sāriputta is already aware of the fact that something might be going wrong, since in addition to inquiring if Dhānañjāni was well, he also wants to know if Dhānañjāni is diligent.<span class="note" id="mn97n195"><span class="details"><span class="p">[n.195] <a href="../../mn/mn97.html">MN 97</a> at MN II 185,14: kacci ... dhānañjāni brāhmaṇo appamatto ti? On hearing from the other monk about Dhānañjāni’s conduct, according to <a href="../../mn/mn97.html">MN 97</a> at MN II 185,21 Sāriputta voiced his disappointment and reflected that he should meet Dhānañjāni, a reaction not described in <a href="../../parallels/ma27.html">MĀ 27</a>.</span></span></span> Diligence in the present context seems to refer specifically to moral conduct, in fact both versions indicate that Dhānañjāni’s lack of diligence was that he engaged in larceny, due to the bad influence of his new wife.<span class="note" id="mn97n196"><span class="details"><span class="p">[n.196] While in <a href="../../mn/mn97.html">MN 97</a> at MN II 185,19 the role played by the wife is mentioned in the other monk’s description of Dhānañjāni’s conduct, in <a href="../../parallels/ma27.html">MĀ 27</a> at T I 457b28 it is Dhānañjāni himself who, on being taken to task by Sāriputta, attributes his unrighteous conduct to the influence of his wife.</span></span></span></p>
+<p>Sāriputta eventually came to Rājagaha and visited Dhānañjāni.<span class="note" id="mn97n197"><span class="details"><span class="p">[n.197] <a href="../../mn/mn97.html">MN 97</a> at MN II 186,2 narrates that, when Sāriputta arrived, Dhānañjāni was at his cowshed getting his cows milked, gāvo goṭṭhe dohāpeti (Be-MN II 396,18 and Se-MN II 624,13: duhāpeti). <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c10 instead reports that he was “punishing residents”, 苦治居民. The idea of “punishing”, literally “inflicting pain”, could be due to mistaking √duh, “to milk”, for √dru, “to harm” or “to hurt”. The occurrence of “residents” is less easily explained, although perhaps the idea that someone is being harmed or hurt might have led to a misinterpretation of goṭṭha or goṣṭha, “cow-pen”, for gotta or gotra, “clan”. Alternatively, the reference to the “residents” could be a gloss introduced by the translator. A mistaking of √duh for √dru could occur more easily in a Prākrit in which, like in Pāli, the two forms are not distinguishable by the occurrence of an r in the latter (cf. PED: 328 s.v. duhati “to milk”, s.v. duhana “one who injures”), whereas such a mistaking would be less probable had the original been in Sanskrit.</span></span></span> When taken to task by Sāriputta,<span class="note" id="mn97n198"><span class="details"><span class="p">[n.198] While according to <a href="../../mn/mn97.html">MN 97</a> at MN II 186,19 Sāriputta asked Dhānañjāni if he was diligent, according to <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c21 Sāriputta right away accused him of his larceny. This stands to some extent in contrast to the standard procedure depicted in the discourse for investigating the misdoings of someone, which is to ascertain first with the culprit if, what has been reported about his misdoings, is correct, cf., e.g., <a href="../../mn/mn21.html">MN 21</a> at MN I 123,11 or <a href="../../mn/mn22.html">MN 22</a> at MN I 132,9 and their parallels <a href="../../parallels/ma193.html">MĀ 193</a> at T I 744a23 and <a href="../../parallels/ma200.html">MĀ 200</a> at T I 763c5. The same is also a standard procedure in the Vinaya. This type of approach appears to have been part of common etiquette and a generally approved way of going about a rumour or an allegation. In view of this, for Sāriputta to straightaway rebuke Dhānañjāni, without any inquiry, as reported in <a href="../../parallels/ma27.html">MĀ 27</a>, strikes an unfamiliar note.</span></span></span> Dhānañjāni excused himself by explaining that, being a householder, he had to look after others. The two versions agree that Dhānañjāni mentioned the need to look after:</p>
+<ul>
+<li>his parents,</li>
+<li>his wife and children,</li>
+<li>his slaves,</li>
+<li>his departed ancestors,</li>
+<li>the gods,</li>
+<li>the king.</li>
+</ul>
+<p>The Majjhima-nikāya version points out that he also had to look after friends, relatives, and guests (see table 10.3).<span class="note" id="mn97n199"><span class="details"><span class="p">[n.199] <a href="../../mn/mn97.html">MN 97</a> at MN II 186,23.</span></span></span> Instead of friends, relatives and guests, the Madhyama-āgama mentions his need to support recluses and Brahmins.<span class="note" id="mn97n200"><span class="details"><span class="p">[n.200] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c25: “giving gifts to recluses and Brahmins”, 布施沙門梵志.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 10.3: Householder’s Cares in <a href="../../mn/mn97.html">MN 97</a> and <a href="../../parallels/ma27.html">MĀ 27</a><span class="note" id="mn97n201"><span class="details"><span class="p">[n.201] Particularly noteworthy is that <a href="../../mn/mn97.html">MN 97</a> at MN II 186,27 puts the care to be given by Dhānañjāni to himself as the last in its list, while <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c23 has the same as the first in its presentation.</span></span></span></caption>
+<tr><th><a href="../../mn/mn97.html">MN 97</a></th><th><a href="../../parallels/ma27.html">MĀ 27</a></th></tr>
+<tr><td>parents (1)</td><td>oneself (→ 10)</td></tr>
+<tr><td>wife and children (2)</td><td>parents (→ 1)</td></tr>
+<tr><td>slaves (3)</td><td>wife and children (→ 2)</td></tr>
+<tr><td>friends (4)</td><td>slaves (→ 3)</td></tr>
+<tr><td>relatives (5)</td><td>king (→ 9)</td></tr>
+<tr><td>guests (6)</td><td>gods (→ 8)</td></tr>
+<tr><td>dead ancestors (7)</td><td>dead ancestors (→ 7)</td></tr>
+<tr><td>gods (8)</td><td>recluses and Brahmins</td></tr>
+<tr><td>king (9)</td><td></td></tr>
+<tr><td>oneself (10)</td><td>(≠ 4-6)</td></tr>
+</table>
+<p>To look after one’s friends fits the present context just as well as the need to support recluses, since in both versions Dhānañjāni had been quite eager to offer food to Sāriputta,<span class="note" id="mn97n202"><span class="details"><span class="p">[n.202] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c11+16 depicts Dhānañjāni’s attempt to offer food in a particularly respectful manner, relating that, on seeing Sāriputta, the Brahmin arranged his clothes so as to uncover one shoulder, held his palms together in respect to welcome him and then took a golden vessel in an attempt to offer food to Sāriputta, an attempt he repeated three times.</span></span></span> thereby showing his willingness to support a recluse, an action which at the same time would also have been an act of looking after an old friend. On being questioned by Sāriputta, in both versions Dhānañjāni had to admit that, on being reborn in hell due to evil conduct, he would not stand a chance to get respite by explaining that he had acted for the sake of others. The Dhānañjāni-sutta adds that not only would he not be able to get away with such a request, but even those for whose sake he undertook unwholesome deeds would not be able to intervene on his behalf.<span class="note" id="mn97n203"><span class="details"><span class="p">[n.203] Except for the last case in <a href="../../mn/mn97.html">MN 97</a> at MN II 188,10, which takes up the case of evil deeds undertaken for one’s own sake. In this case, an intervention by those for whose sake the evil was done is evidently out of question. The corresponding passage in <a href="../../parallels/ma27.html">MĀ 27</a> at T I 456c29 does not cover the case of doing evil for one’s own sake at all, which fits the context well, since to do evil for one’s own sake would be a rather lame excuse when confronted with the wardens of hell.</span></span></span></p>
+<p>According to both versions, Sāriputta explained that it was possible for Dhānañjāni to fulfil his responsibilities by earning his livelihood in a righteous manner.<span class="note" id="mn97n204"><span class="details"><span class="p">[n.204] <a href="../../mn/mn97.html">MN 97</a> at MN II 188,21 precedes this with a question and answer exchange, during which Sāriputta questions Dhānañjāni if it were better to support his parents, etc., in a righteous or in an unrighteous manner, a catechism not found in <a href="../../parallels/ma27.html">MĀ 27</a>. A quotation in the Karmavibhaṅga in Kudo 2004: 108,4 or in Lévi 1932a: 55,19 on properly supporting one’s parents without doing evil appears to be taken from the present context. The Karmavibhaṅga refers to its source as the Dhanaṃjaya-sūtra.</span></span></span> Dhānañ- jāni was delighted by Sāriputta’s exposition, according to the Madhyama-āgama version this was the case to such an extent that he formerly took refuge and declared himself a lay disciple.<span class="note" id="mn97n205"><span class="details"><span class="p">[n.205] According to <a href="../../parallels/ma27.html">MĀ 27</a> at T I 457c1, Dhānañjāni wanted to take refuge with Sāriputta, who told him that he should rather take refuge with the Buddha.</span></span></span></p>
+<p>The Dhānañjāni-sutta and its Madhyama-āgama parallel record that on a later occasion Dhānañjāni fell sick.<span class="note" id="mn97n206"><span class="details"><span class="p">[n.206] While according to <a href="../../mn/mn97.html">MN 97</a> at MN II 191,34 Dhānañjāni sent a messenger to inform Sāriputta of his condition, according to the <a href="../../parallels/ma27.html">MĀ 27</a> at T I 457c20 Sāriputta was told by another monk who had just come from Rājagaha that, although Dhānañjāni was now eager to see the Buddha and delighted in hearing the Dharma, he was not well. This passage thus comes as a counterpart to the earlier instance in <a href="../../parallels/ma27.html">MĀ 27</a>, when a monk from Rājagaha had informed Sāriputta that Dhānañjāni was well, but was not eager to see the Buddha and did not delight in hearing the Dharma.</span></span></span> When Sāriputta came to visit him,<span class="note" id="mn97n207"><span class="details"><span class="p">[n.207] According to <a href="../../parallels/ma27.html">MĀ 27</a> at T I 457c27, on seeing Sāriputta approach, Dhānañjāni tried to get up from his bed, but was told by Sāriputta to remain where he was.</span></span></span> Dhānañjāni illustrated his headache with the image of his head being split by a strong man with a sword, or a strap being tightened around his head, followed by comparing his stomach pains to the belly of an ox that is carved up by a butcher, and his fever to a man who is being roasted by two other men over hot coals or a fire.<span class="note" id="mn97n208"><span class="details"><span class="p">[n.208] A minor difference is that, according to <a href="../../mn/mn97.html">MN 97</a> at MN II 193,2+14, the first three similes illustrate the action of violent winds, adhimattā vātā, in Dhānañjāni’s head and belly. In <a href="../../parallels/ma27.html">MĀ 27</a>, however, they illustrate his pain, as instead of winds <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458a6 simply speaks of his “headache”, 頭痛, and <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458a9 of his “abdominal pain”, 腹痛. According to ancient India medicine, particular ‘winds’ are responsible for the different motions that take place within the body. <a href="../../mn/mn62.html">MN 62</a> at MN I 422,30 refers to such winds as “up-going winds”, uddhaṅgamā vātā, and “down-going winds”, adhogamā vātā, which according to an explanation given in Vism 350,22 are responsible for upwards motions such as vomiting and belching, and for downward motions such as the expelling of excrements and urine. Ñāṇamoli 1987: 98 note 24 explains that such winds refer to “motion or driving force rather than what moves or is moved”. From the perspective of ancient Indian medicine, an imbalance in these winds causes disease. An example of this can be found in Vin I 205,1, which reports that the monk Pilindavaccha was afflicted by wind, vātābādho hoti. He was given an oil decoction as remedy, which suggests his disease to have been a problem related to the stomach and/or digestion. Vin I 205,17+24 records that Pilindavaccha also had winds in his limbs and joints, aṅgavāta and pabbavāta, which according to Horner 1951/1982: 278-279 could refer to rheumatism. On these cases of affliction by “wind” cf. also Zysk 1991: 92-96.</span></span></span></p>
+<p>According to the Dhānañjāni-sutta and its Madhyama-āgama parallel, Sāriputta described to Dhānañjāni an ascending series of prospective rebirths, ranging from hell to the Brahmā world. On hearing Sāriputta speak of rebirth in the Brahmā world, in both versions Dhānañjāni expressed his enthusiasm for such a prospect.<span class="note" id="mn97n209"><span class="details"><span class="p">[n.209] While in <a href="../../mn/mn97.html">MN 97</a> at MN II 194,24 Dhānañjāni twice exclaims that Sāriputta had mentioned the “Brahmā world”, brahmaloko ti, in <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458a26 he twice proclaims “the Brahmā world is supreme”, 梵天 最勝.</span></span></span> According to the Majjhima-nikāya version, on seeing Dhānañjāni’s reaction, Sāriputta reflected that he would show Dhānañjāni the way to rebirth in the Brahmā world, a reflection not recorded in the Madhyama-āgama version.</p>
+<p>Both versions report that Sāriputta taught Dhānañjāni the practice of the four brahmavihāras as a boundless radiation in all directions. The Madhyama-āgama version makes explicit what is only implicit in the Majjhima-nikāya version, as it states that Dhānañjāni put Sāriputta’s instructions into practice and developed the four brahmavihāras.<span class="note" id="mn97n210"><span class="details"><span class="p">[n.210] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458b12: “he practised the four divine abodes, abandoned sensuality and cast aside thoughts of sensuality, and on the breaking up of the body with the ending of life he was born in the Brahmā heaven”, 修習四梵室, 斷欲捨欲念, 身壞命終生梵天中.</span></span></span> The two versions agree that, after Sāriputta had left, Dhānañjāni passed away and was reborn in the Brahmā world.<span class="note" id="mn97n211"><span class="details"><span class="p">[n.211] According to <a href="../../mn/mn97.html">MN 97</a> at MN II 195,16, Dhānañjāni asked Sāriputta to pay homage to the Buddha on his behalf, a detail not found in <a href="../../parallels/ma27.html">MĀ 27</a>.</span></span></span></p>
+<p>The Dhānañjāni-sutta and its parallel continue with a somewhat different evaluation of the teachings given by Sāriputta to Dhānañjāni. In the Majjhima-nikāya version, the reciters themselves voice their disapproval of Sāriputta’s act as part of their narrative presentation. They indicate that Sāriputta had left after establishing Dhānañjāni in the “inferior Brahmā world”, even though “there still was more to be done by him”.<span class="note" id="mn97n212"><span class="details"><span class="p">[n.212] <a href="../../mn/mn97.html">MN 97</a> at MN II 195,20: sati uttarikaraṇīye, hīne brahmaloke patiṭṭhāpetvā (Ce-MN II 698,9: uttariṃ karaṇīye).</span></span></span></p>
+<p>The Majjhima-nikāya account continues by reporting that the Buddha expressed the same disapproval in front of other monks as soon as he saw Sāriputta approaching from afar.<span class="note" id="mn97n213"><span class="details"><span class="p">[n.213] <a href="../../mn/mn97.html">MN 97</a> at MN II 195,25.</span></span></span></p>
+<p>Once Sāriputta had arrived, according to the Majjhima-nikāya version the Buddha asked him directly why he had only established Dhānañjāni in the inferior Brahmā world and left when there was still more to be done, a question implying a reproach.<span class="note" id="mn97n214"><span class="details"><span class="p">[n.214] <a href="../../mn/mn97.html">MN 97</a> at MN II 196,1. While <a href="../../mn/mn97.html">MN 97</a> ends after Sāriputta’s reply without the standard conclusion to a discourse, <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458b26 indicates that Sāriputta delighted in what the Buddha had said, adding to this the delight experienced by innumerable hundreds of thousands of beings, 無量百千眾. Minh Chau 1964/1991: 37 cites this conclusion as an example for Madhyama-āgama passages that “strike a rather exaggerated note, unknown to the moderate attitude of early Buddhism”.</span></span></span> In this way, the Majjhima-nikāya version expresses disapproval of Sāriputta’s action three times.</p>
+<p>According to the Madhyama-āgama account, when the Buddha saw Sāriputta from afar he rather praised Sāriputta’s wisdom.<span class="note" id="mn97n215"><span class="details"><span class="p">[n.215] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458b16 attributes to Sāriputta a series of different types of wisdom, similar to <a href="../../mn/mn111.html">MN 111</a> at MN III 25,5.</span></span></span> After praising Sāriputta’s wisdom, the Buddha explained to the other assembled monks that Sāriputta had successfully taught Dhānañjāni the path to the Brahmā world, adding that if Sāriputta had continued to teach the Brahmin further, Dhānañjāni would have understood the Dharma.<span class="note" id="mn97n216"><span class="details"><span class="p">[n.216] <a href="../../parallels/ma27.html">MĀ 27</a> at T I 458b19: “if [Sāriputta] had continued to teach him higher, he would have quickly known the Dharma”, 若復上化者, 速知法.</span></span></span></p>
+<p>Similar to the Majjhima-nikāya version, the Buddha then asked Sāriputta why he had not taught Dhānañjāni something higher than rebirth in the Brahmā world. As in the Majjhima-nikāya version, Sāriputta explained that he had adapted his teaching to the natural inclination of Dhānañjāni.</p>
+<p>Hence both versions make essentially the same point, in the sense that it would have been possible to lead Dhānañjāni to a higher attainment. Yet, the way they go about making this point is markedly different. The Buddha’s remark and subsequent question in the Majjhima-nikāya version imply a reproach, as Sāriputta is presented as someone who has failed to do his duty. In the Madhyama-āgama version, however, instead of reproaching Sāriputta for not having done his duty, the Buddha much rather praises Sāriputta’s wisdom.</p>
+<p>Thus, while the Madhyama-āgama version even gives praise to Sāriputta, the reciters of the Majjhima-nikāya version consider his teachings to Dhānañjāni blameworthy to such an extent that, in addition to recording how the Buddha expressed his disapproval to the other monks and also directly reproached Sāriputta, they present the same criticism as part of their narrative description. This occurs only rarely in the discourses, where the sections spoken by the narrator usually serve to introduce or conclude events by relating circumstances or supplying additional information, but normally do not present explicit evaluations in the way this is done in the present instance.</p>
+<p>This is noteworthy, since in the Theravāda tradition Sāriputta is usually held in high regard.<span class="note" id="mn97n217"><span class="details"><span class="p">[n.217] Minh Chau 1964/1991: 21 contrasts the eminent position held by Sāriputta in the Theravāda tradition with the high esteem of Mahākassapa prevalent in the Sarvāstivāda tradition.</span></span></span> His teaching of the path to rebirth in the Brahmā world also does not seem to be particularly objectionable, since the next but one discourse in the Majjhima-nikāya, the Subha-sutta, reports that the Buddha did exactly the same.<span class="note" id="mn97n218"><span class="details"><span class="p">[n.218] <a href="../../mn/mn99.html">MN 99</a> at MN II 207,14 and its parallel <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669c5. The circumstance that the Buddha did not teach Subha something higher suggests that, unlike Dhānañjāni, Subha may not have had the potential to understand higher teachings. Moreover, Subha was still young and not on his deathbed, which would leave open the possibility that on a later occasion he might be given further instructions. Nevertheless, the fact that the Buddha only taught Subha the path to rebirth in the Brahmā world shows that to teach this path is not necessarily seen as objectionable in itself.</span></span></span></p>
+<p>In this way, the present difference between the Dhānañjāni-sutta and its Madhyamaāgama parallel confirms a point made already earlier, in that differences and variations between Pāli and Chinese versions of the same discourse need not be expressions of sectarian bias.<span class="note" id="mn97n219"><span class="details"><span class="p">[n.219] Cf. above p. 381 note 211, Anālayo 2007i: 37, and id. 2008a: 16. With this I do not intend to rule out sectarian influence, in fact a probable instance of such influence can be seen right away in my next study of <a href="../../mn/mn99.html">MN 99</a>, cf. below p. 573 the discussion regarding the reference to vibhajjavāda. My point is only that sectarian influence is not the sole way how differences between orally transmitted texts can come about.</span></span></span> If the school affiliation of the Dhānañjāni-sutta had influenced the present passage, the Theravāda version should have avoided putting any blame on him. Thus, when evaluating such differences, it needs to be taken into consideration that variations need not invariably reflect sectarian concerns.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.154 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.154</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 154</span><span class="mirror-right">（一五四）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an8.25.html">AN 8.25</a> / <a href="../parallels/sa929.html">SĀ 929</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was in the Niṣadha Grove in the country of Kapilavastu. Then Śrīmān went to where the Buddha was, paid his respects, sat to one side, and said to the Buddha, &quot;World-Honored One! What is meant by an upāsaka with the spirit of a man? As explained above. How does one fulfill all practices?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在迦毘罗卫国尼拘陀林。时释摩男往诣佛所，修敬已毕，在一面坐，而白佛言：「世尊！云何名优婆塞具丈夫志？广说如上。复当云何满足诸行？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Mahānāman, &quot;Although an upāsaka may have faith, if he does not have the precepts, he is said to have faith but not the precepts. If he wishes to be complete in faith and precepts, he should diligently seek to be complete. This is called an upāsaka who is complete in faith and precepts.&quot; The Buddha further told Mahānāman, &quot;Although an upāsaka may have faith and precepts, if he abandons them and is not complete, he should diligently cultivate means to be complete.</p></td><td lang="lzh" class="agama-chi"><p>佛告摩诃男：「优婆塞虽具足信，未具禁戒，是名有信，不具于戒。欲求具足信戒之者，当勤方便，求使具足，是名信戒满足优婆塞。」佛复告摩诃男：「优婆塞虽具信戒，舍不具足，为具足故，勤修方便，令得具足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāman said to the Buddha, &quot;World-Honored One! I now have faith, precepts, and renunciation, and am complete in the three branches.</p></td><td lang="lzh" class="agama-chi"><p>时，摩诃男白佛言：「世尊！我于今者，具信、戒、舍，具足三支。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Mahānāman, &quot;Although you have the three things, if you do not often go to the monastery, this is a cause and condition for being incomplete. You should diligently cultivate means to often go to the monastery.</p></td><td lang="lzh" class="agama-chi"><p>佛告摩诃男：「虽具三事，然不数往僧坊精舍，以是因缘，名不具足，应勤方便，数往塔寺。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāman said to the upāsakas, &quot;I should now be complete in faith, precepts, and the mind of renunciation, and go to the monastery.</p></td><td lang="lzh" class="agama-chi"><p>时，摩诃男言诸优婆塞：「我今应当具足信戒，及以舍心，诣于塔寺。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Mahānāman, &quot;If one can be complete in faith, precepts, and the mind of renunciation, and often go to the monastery to be close to the Sangha, this is called being complete.</p></td><td lang="lzh" class="agama-chi"><p>佛告摩诃男：「若能具足信、戒、舍心，数诣塔寺，亲近众僧，是名具足。」佛告摩诃男：「虽复具足如上四事，若不听法，名不具足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahānāman said, &quot;I can listen to the Dharma.</p></td><td lang="lzh" class="agama-chi"><p>摩诃男言：「我能听法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Mahānāman, &quot;Although one can listen to the sutras, if one does not uphold them, it is also called incomplete. Although one can uphold them, if one does not understand their meaning, it is also called incomplete. Although one understands their meaning, if one is unable to practice according to the teachings, it is also called incomplete. If one can be complete in faith, precepts, and the mind of renunciation, often go to the monastery to listen to the Dharma, uphold and understand its meaning, and practice according to the teachings, then this is called the complete practice. Although Mahānāman may be complete in faith, precepts, and the mind of renunciation, and often go to the monastery to be close to the Sangha, if one is still unable to listen to the Dharma with single-minded focus, this is also called incomplete practice. For this reason, one should skillfully focus on listening to the Dharma. Although one can listen to the Dharma, if one does not uphold it, it is also called incomplete, so one should uphold the true Dharma. Although one can uphold it, if one does not understand its meaning, it is also called incomplete, so one should understand its meaning. Although one understands its meaning, if one is still unable to practice according to the teachings, it is also called incomplete, so one should practice according to the teachings. If one can be complete in faith, precepts, and the mind of renunciation, often go to the monastery, listen to the Dharma with single-minded focus, uphold it without forgetting, understand its meaning, have faith, precepts, and the mind of renunciation, go to the monastery, listen to and receive the sutras, uphold them without forgetting, and understand their meaning, but still cannot practice according to the teachings, this is also called incomplete. Mahānāman! Because lay followers have faith, they can uphold the precepts. Because they uphold the precepts, they can be complete in the mind of renunciation. Because they are complete in the mind of renunciation, they can go to the monastery. Because they go to the monastery, they can listen to the Dharma with single-minded focus. Because they listen to the Dharma with single-minded focus, they can uphold it. Because they can uphold it, they understand its meaning. Because they understand its meaning, they can practice according to the teachings. Because they can practice according to the teachings, they diligently make efforts to be complete.</p></td><td lang="lzh" class="agama-chi"><p>佛复告摩诃男：「虽能听经，若不受持，亦名不具。虽能受持，不解其义，亦名不具。虽解义趣，而未能得如说修行，亦名不具。若能具足信、戒、舍心，数往塔寺听法，受持、解其义趣，如说修行，是则名为满足之行。摩诃男虽复具足信、戒、舍心，数诣塔寺，亲近众僧，然犹未能专心听法，是亦名为行不具足。以斯义故，应当方便专心听法。虽能听法，若不受持，亦名不具，是故应当受持正法。虽能受持，若不解义，亦名不具，是故应当解其言趣。虽解义味，若复不能如说修行，亦名不具，是故应当如说修行。若能具足信心，持戒及舍心等，数往僧坊，专心听法，受持莫忘，解其义趣，信戒舍心，往诣塔寺，听受经法，受持不忘，解其义趣。若复不能如说修行，是亦名为不具足也。摩诃男！优婆塞以信心故，则能持戒。以持戒故，能具舍心。具舍心故，能往诣僧坊。往诣僧坊故，能专心听法。专心听法故，则能受持。能受持故，解其义趣。解其义趣，能如说修行。能如说修行故，勤作方便，能令满足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāman again addressed the Buddha, saying, &quot;World-Honored One! How many factors are complete for an upāsaka to benefit himself and not benefit others?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时摩诃男复白佛言：「世尊！云何优婆塞具足几支，自利未利于他？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Mahānāman, &quot;One who is complete in eight factors can benefit oneself but not others. What are the eight? An upāsaka himself has faith but cannot teach others. He himself upholds pure precepts but cannot teach others to uphold precepts. He himself cultivates renunciation but cannot teach others to practice giving. He himself goes to monasteries and temples to be close to bhikṣus but cannot teach others to go to monasteries and temples to be close to bhikṣus. He himself can listen to the Dharma but cannot teach others to listen to the true Dharma. He himself can uphold it but cannot teach others to uphold it. He himself can understand the meaning but cannot teach others to understand the meaning. He himself can practice according to the teachings but does not teach others to practice according to the teachings. This is called being complete in eight factors, only able to benefit oneself but not others.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告摩诃男：「具足八支能自利益，未利于他。何等为八？优婆塞自己有信，不能教他。自持净戒，不能教人令持禁戒。自修于舍，不能教人令行布施。自往诣塔寺，亲近比丘，不能教人往诣塔寺，亲近比丘。自能听法，不能教人令听正法。自能受持，不能教人受持。自能解义，不能教人令解其义。自能如说修行，不教他人如说修行。是名具足八支，唯能自利不能利他。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāman again addressed the Buddha, saying, &quot;How many dharmas are complete to be able to benefit oneself and also benefit others?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时摩诃男复白佛言：「具足几法，能自利益，亦利于他？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;If one can be complete in sixteen factors, such a person can benefit oneself and others. One generates faith oneself and teaches others to attain it. One upholds it oneself and teaches others to uphold it. One cultivates renunciation oneself and also teaches others to practice renunciation. One goes to monasteries and temples oneself and also teaches others to go to monasteries and temples to be close to bhikṣus. One can listen to the Dharma oneself and also teaches others to listen to the true Dharma. One can uphold it oneself and also teaches others to uphold the Dharma. One understands the meaning oneself and also teaches others to understand the meaning. One practices according to the teachings oneself and also teaches others to practice according to the teachings. If one can be complete in sixteen factors, this is called benefiting oneself and others. Such a person, whether in the assembly of kṣatriyas, brāhmaṇas, householders, or śramaṇas, wherever they go, can be a great illumination for the assembly, like the sunlight dispelling all darkness. Know that such a person is very rare.&quot; Having said this, Śrī Mahānāman bowed to the Buddha and departed.</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「若能具足十六支者，如是之人，能自他利。自生信心，教人令得。自行受持，教人受持。自行舍心，亦复教人令行舍心。身自往诣僧坊塔寺，亦复教人往诣僧坊，亲近比丘。自能听法，亦复教人令听正法。自能受持，亦复教人令受持法。自解义趣，亦复教人解其义味。自如说行，亦复教人如说修行。若能具足十六支，此则名为自利利他。如斯之人，若在刹利众，若婆罗门众，若居士众，若沙门众，随所至处，能为此众作大照明，犹如日光，除诸暗冥，当知是人，甚为希有。」佛说是已，释摩男礼佛而退。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>时诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

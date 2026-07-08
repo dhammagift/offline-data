@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.325 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.325</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 325</span><span class="mirror-right">（三二五）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn10.12.html">SN 10.12</a> / <a href="../snp/snp1.10.html">Snp 1.10</a> / <a href="../parallels/sa603.html">SĀ 603</a> / <a href="../parallels/sa1326.html">SĀ 1326</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was traveling in the country of Magadha, and he went to the palace of the yaksha in the wilderness to spend the night. At that time, the yaksha was not in his own palace, but had gone to a meeting with other yaksas elsewhere. There was a yaksha named Donkey Colt who saw the Tathāgata staying in the palace of the wilderness yaksha. He went to the wilderness ghost and said, &quot;You have gained great benefit. The Tathāgata, the Arhat, the Perfectly Enlightened One is staying in your palace.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时佛游摩竭提国，往至于彼旷野夜叉所住之宫，于夜止宿。时彼夜叉与诸夜叉余处聚会，不在己宫。时有夜叉名曰驴驹，见于如来在旷野宫宿，即往于彼旷野鬼所，而语之言：「汝获大利，如来、至真、等正觉在汝宫宿。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The wilderness yaksha replied, &quot;How can that person stay in my palace?&quot;</p></td><td lang="lzh" class="agama-chi"><p>旷野答言：「彼人云何在我宫宿？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yaksha Donkey Colt then said to him, &quot;Although he is a human, he is actually the Tathāgata, the Arhat, the Perfectly Enlightened One.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时驴驹夜叉复语之言：「虽是人类，实是如来、至真、等正觉。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The wilderness yaksha then said, &quot;Are you truly the Tathāgata, the Arhat, the Perfectly Enlightened One, or not?&quot; At that time, the wilderness yaksha had finished his assembly and returned to his palace. Seeing the Buddha, he said, &quot;Get out, monk!&quot; At that time, the Tathāgata left according to his words, because that was his dwelling place. He then said to the Buddha, &quot;Monk, come back in.&quot; The Buddha, having cut off pride, entered again according to his words. The second and third times, the Buddha entered and left according to his words. The fourth time, he also said, &quot;Monk, get out!&quot; The Buddha said, &quot;You have already invited me three times. I will not leave for you now.&quot;</p></td><td lang="lzh" class="agama-chi"><p>旷野复言：「汝审真实，是如来、至真、等正觉？为非是耶？」尔时，旷野聚会已讫，还于己宫，既见佛已，而作是言：「出去！沙门。」如来尔时以彼住处故，随语出。复语佛言：「沙门还入。」佛断我慢，复随语入。第二第三，语佛出入，佛悉随之。第四亦言：「沙门出去。」佛言：「汝已三请，我于今者，不为汝出。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The wilderness yaksha then said, &quot;I want to ask questions. If you can explain them, I will let you sit down; if you cannot answer me, I will make your mind confused, break your heart, and make hot boiling blood come out of your face. I will pull your arms and throw you onto the bank of the Vagai River.&quot;</p></td><td lang="lzh" class="agama-chi"><p>旷野即言：「我欲问难，汝若解释，当听汝坐；若不答我，当令汝心意倒错，又破汝心，使热沸血从面而出，挽汝之膊，掷置婆耆河岸。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;In the world, whether it be gods, demons, Brahmas, monks, or Brahmins, none can speak to me as you do. If you want to ask, ask as you please.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「不见世间若天、若魔、若梵、沙门、婆罗门，有能以我如汝语者。汝欲问者，随汝所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the wilderness yaksha spoke a verse,</p></td><td lang="lzh" class="agama-chi"><p>时旷野鬼即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Among all wealth and treasures, which is the most<br/>excellent? What good practices lead to pleasant rewards? Among<br/>all delicious flavors, which is the most excellent? Among<br/>all life spans, which life span is the most excellent?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「一切财宝中，　　何者最为胜？修行何善行，　　能招于乐报？于诸美味中，　　何者最为胜？于诸寿命中，　　何者寿命胜？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Among all human wealth, the wealth of faith is the<br/>most excellent. Practicing the Dharma can attain happiness. Truth is<br/>the most delicious flavor, and wisdom is the most excellent life span.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「于诸人中财，　　信财第一胜。修行于法者，　　能得于快乐。实语最美味，　　智慧寿命胜。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Yaksha of the Wilderness again spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>时旷野夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Who can cross the swift current? Who can cross the<br/>great ocean? Who can abandon suffering? Who can attain purity?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「谁渡于驶流？　　谁渡于大海？谁能舍离苦？　　谁得于清净？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Faith can cross the swift current, non-distraction can cross<br/>the ocean, diligence can abandon suffering, wisdom can purify.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「信能渡驶流，　　不放逸渡海，精进能离苦，　　智慧能清净。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Yaksha of the Wilderness also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>旷野夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How can one attain faith? How can one attain wealth?<br/>How can one attain fame? How can one attain good friends?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「云何能得信？　　云何能得财？云何得名称？　　云何得善友？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复以偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Arhats attain faith, and by practicing the Dharma, attain nirvana. Following<br/>what should be done, diligently accumulating wealth. Truthful speech is known<br/>far and wide, and extensive giving brings close friends. You should<br/>extensively ask the śramaṇas and brāhmaṇas, from whom can one attain<br/>truthful speech? Apart from me, who has the Dharma? Among the<br/>ninety-six kinds of paths, you should observe and ask carefully, who<br/>has a Dharma that is harmless and can fully tame and subdue?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「阿罗汉得信，　　行法得涅槃，顺行所应作，　　精勤能聚财。实语名远闻，　　广施得亲友，汝可广请问，　　沙门婆罗门，谁边得实语？　　离我谁有法？九十六种道，　　汝观察谛问，谁法有不害，　　能具调顺者？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Kṣāntivādi also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，旷野复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Why ask the śramaṇas and brāhmaṇas further? The greatly<br/>diligent one reveals and skillfully distinguishes the Dharma. I<br/>now remember your kindness, because you showed me, causing<br/>me to now see the unsurpassed great leader. From<br/>today onwards, wherever I go, in cities and villages<br/>I will always take refuge in the Buddha, who<br/>reveals the true Dharma.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「何须更问彼？　　沙门婆罗门，大精进显示，　　善分别说法。我今念汝恩，　　由汝示我故，令我今得见，　　无上大商主。我从于今日，　　随所行来处，城邑及聚落，　　常当归命佛，显示于正法。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Kṣāntivāda yakṣa heard the Buddha&#x27;s teaching, rejoiced and leaped for joy, took refuge in the Three Jewels, and received the precepts as a Buddha disciple.</p></td><td lang="lzh" class="agama-chi"><p>时旷野夜叉闻佛所说，欢喜踊跃，归依三宝，并受禁戒为佛弟子。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

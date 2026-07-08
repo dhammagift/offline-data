@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 119 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 119: Kāyagatāsati-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn118comp.html#content"></a><a id="next-sutta" href="./mn120comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn119.html">MN 119</a> / <a href="../../parallels/ma81.html">MĀ 81</a> / <a href="../../parallels/ma98.html">MĀ 98 (~)</a> / <a href="../../parallels/ea12.1.html">EĀ 12.1 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Kāyagatāsati-sutta, the “discourse on mindfulness of the body”, describes the development and benefits of mindfulness of the body. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn119n153"><span class="details"><span class="p">[n.153] The parallel is <a href="../../parallels/ma81.html">MĀ 81</a> at T I 554c-557c, which agrees with <a href="../../mn/mn119.html">MN 119</a> on the title (念身經) and takes place at the village Āpaṇa in the Aṅga country, whereas <a href="../../mn/mn119.html">MN 119</a> takes place in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma81.html">MĀ 81</a> has been translated by Kuan 2007, for remarks on <a href="../../parallels/ma81.html">MĀ 81</a> cf. Minh Chau 1964/1991: 107, 108, and 145. For a discourse quotation in Abhidh-k-ṭ cf. below note 156.</span></span></span></p>
+<p>The Kāyagatāsati-sutta and its Madhyama-āgama parallel begin by reporting that the Buddha visited a group of monks,<span class="note" id="mn119n154"><span class="details"><span class="p">[n.154] According to <a href="../../parallels/ma81.html">MĀ 81</a> at T I 554c22, the Buddha had overheard the discussion of the monks with his divine ear and thereon decided to approach them.</span></span></span> who had just been conversing on the Buddha’s disclosure of the benefits of mindfulness of the body.<span class="note" id="mn119n155"><span class="details"><span class="p">[n.155] While <a href="../../mn/mn119.html">MN 119</a> at MN III 88,22 simply qualifies mindfulness of the body to be of great fruit and benefit, mahapphala mahānisaṃsa, <a href="../../parallels/ma81.html">MĀ 81</a> at T I 554c20 speaks of it being of “great fruit, [leading to] attaining vision, to being endowed with the ‘eye’ that sees the highest benefit”, 大果報, 得眼, 有目見 第一義.</span></span></span> In both versions, the Buddha then gave a full exposition of this topic, an exposition that covers the exercises listed under contemplation of the body in the Satipaṭṭhāna-sutta and its Madhyama-āgama parallel.<span class="note" id="mn119n156"><span class="details"><span class="p">[n.156] <a href="../../mn/mn119.html">MN 119</a> takes up mindfulness of breathing (without the turner simile found in <a href="../../dn/dn22.html">DN 22</a> and <a href="../../mn/mn10.html">MN 10</a>), the four postures, various activities, the anatomical parts of the body, the four elements, and the cemetery contemplations. Similar to <a href="../../parallels/ma98.html">MĀ 98</a> (the parallel to <a href="../../mn/mn10.html">MN 10</a>), <a href="../../parallels/ma81.html">MĀ 81</a> takes up mindfulness of the four postures, various activities, overcoming unwholesome states of mind, forceful control of the mind, mindfulness of breathing, the physical experience of the four jhānas, development of awareness of light, attending to the sign of [reviewing] contemplation, the anatomical parts of the body, the six elements, and the cemetery contemplations. For a more detailed examination of the differences between these two expositions of body contemplation cf. above p. 80. A discourse quotation with the listing of anatomical parts (not necessarily specific to the present instance) can be found in Abhidh-k 7:27 in Pradhan 1967: 411,5, paralleling <a href="../../mn/mn119.html">MN 119</a> at MN III 90,14, with its Chinese counterparts in T 1558 at T XXIX 140a14 and T 1559 at T XXIX 291a9; cf. also Abhidh-k-ṭ at D (4094) mngon pa, nyu 58a4 or Q (5595) thu 100b1.</span></span></span></p>
+<p>In addition to the contemplations found in the Satipaṭṭhāna-sutta, the Kāyagatāsatisutta and its parallel also examine the effect of the four jhānas on the body.<span class="note" id="mn119n157"><span class="details"><span class="p">[n.157] <a href="../../mn/mn119.html">MN 119</a> at MN III 92,24 and <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555b18, a treatment found also in the parallel to <a href="../../mn/mn10.html">MN 10</a>, <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582c20.</span></span></span> While the Kāyagatāsati-sutta at first describes the attainment of each jhāna, before turning to the effect of the jhāna on the body, its Madhyama-āgama parallel dispenses with this description and directly takes up the effect each jhāna has on the body. This mode of approach makes it quite clear that it is not the attainment of jhāna as such, but rather the bodily experience caused by a jhāna that comes under the heading of mindfulness of the body.</p>
+<p>The Kāyagatāsati-sutta and its Madhyama-āgama parallel illustrate the bodily experience of the four jhānas with the same set of similes. In regard to the simile employed for the second jhāna, which describes a lake that does not receive any water from outside and is fed only by water that wells up from within the lake itself, the Madhyamaāgama version additionally mentions that this lake is fed by a pure mountain spring.<span class="note" id="mn119n158"><span class="details"><span class="p">[n.158] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555b29: “a mountain spring, completely pure and clean”, 山泉, 極淨澄清. The same image can also be found in version of this simile in <a href="../../parallels/da20.html">DĀ 20</a> at T I 85b21: “like a clear spring of water at the top of a mountain”, 如山頂涼泉水. A version of this simile in the Saṅghabhedavastu and in an individual translation similarly speaks of a pond that is located on top of a mountain, cf. Gnoli 1978a: 243,18: “a pond at the top of a mountain”, upariparvataṃ ... udakahrado (cf. also fragment 512v1 in Wille 1990: 125) and T 13 at T I 234c1: “a spring water pond on top of a hillside”, 阪頭泉水池. The specification of the lake’s location on a mountaintop clarifies why such a lake would not receive any water from outside, but is only fed by a mountain spring from inside. At the same time, this specification highlights the aloofness reached by attaining the second jhāna, an experience of non-sensual pleasure born not only of seclusion but of concentration proper, resulting in a unified and totally tranquil state of mind. Although the first jhāna is already aloof through being “secluded from sensuality”, vivicc’ eva kāmehi, it nevertheless is an experience which due to is proximity to sensuality has not yet reached total aloofness. This can be seen in <a href="../../sn/sn40.1.html">SN 40:1</a> at SN IV 263,16, according to which Mahāmoggallāna’s attainment of the first jhāna was disturbed by the “arising of attention to perceptions related to sensuality”, kāmasahagatā saññā manasikārā samudācaranti. With the attainment of the second jhāna, the level of concentration is not only “born of seclusion”, but additionally “born of concentration” proper, samādhijaṃ pītisukhaṃ, a state of “mental unification that is internally tranquil”, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ and thereby more decisively aloof from any disturbance than the first jhāna (cf. <a href="../../mn/mn119.html">MN 119</a> at MN III 93,5). The image of a pure lake on top of a mountain, self-sufficient and independent of any external source, aptly conveys such aloofness and tranquillity. According to the Path to Liberation (Vimuttimagga/解脫道論), the same is also implicit in the reference to the absence of any inflow of water from the outside, which stands representative for the absence of initial and sustained application of the mind in the second jhāna, T 1648 at T XXXII 418c27. The same work explains that the welling up of water from within, which causes no waves, illustrates the welling up of happiness and joy born of concentration that completely pervade body and mind without causing any mental agitation. The Path to Liberation also offers helpful comments on the simile used to illustrate the first jhāna. According to T 1648 at T XXXII 417b8, bath powder in its natural state can easily be scattered by the wind (here it needs to be kept in mind that in ancient India bathing usually would have been undertaken out in the open, such as by the side of a river, cf., e.g., <a href="../../mn/mn81.html">MN 81</a> at MN II 46,21 or <a href="../../mn/mn93.html">MN 93</a> at MN II 151,19). Similarly, a mind without joy and concentration will easily be scattered by the ‘wind’ of the five hindrances. Thus joy, happiness, and concentration are to the mind what water is to the bath powder, whose kneading is comparable to the action of initial and sustained application of the mind.</span></span></span></p>
+<p>A minor difference can also be found in relation to the fourth jhāna simile, which describes a man seated and covered from head to toe with a cloth. The Madhyama-āgama version indicates that the cloth used to cover the man is seven or eight cubits long, without, however, describing the colour of the cloth.<span class="note" id="mn119n159"><span class="details"><span class="p">[n.159] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555c19: “clothes/robes of seven units length or clothes/robes of eight units length”, 七肘 衣, 或八肘衣. <a href="../../parallels/da30.html">DĀ 30</a> at T I 133a12 uses the same measurement given in <a href="../../parallels/ma81.html">MĀ 81</a> and explains that seven units length corresponds to the average height of a person, 人身長七肘. The character 衣 in the Āgamas usually refers to “robes”, although in the present instance it could also stand for “clothing” in general. Hirakawa 1997: 1048 lists cīvara, vastra, cela, paṭa as equivalents for 衣, a character translated by Soothill 1937/2000: 222 as “clothes, especially a monk’s robes”. The measurements given in <a href="../../parallels/ma81.html">MĀ 81</a> would roughly correspond to the size of a monk’s robe, cf. pācittiya rule 92 at Vin IV 173,24, according to which the proper size for a robe is less than six sugata spans by nine sugata spans (on the sugata span, sugatavidatthi, cf. also Sp III 567,21 and Thanissaro 1994/2007: 565-566). The idea behind this image could thus be taken from actual experience, as at times an itinerant monk who sits down to meditate may cover himself in this way with his robes as a protection against flies and mosquitoes; cf., e.g., <a href="../../sn/sn7.9.html">SN 7:9</a> at SN I 167,27 (or SN2 195 at SN2 I 359,7) and Sn 3:4 at Sn p. 80,2, which, together with their parallels <a href="../../parallels/sa1184.html">SĀ 1184</a> at T II 320b24 and <a href="../../parallels/sa-2.99.html">SĀ2 99</a> at T II 408c28, describe the Buddha seated in meditation with his head covered with his robe. <a href="../../parallels/sa1184.html">SĀ 1184</a> and <a href="../../parallels/sa-2.99.html">SĀ2 99</a> explain that the Buddha had just shaved his head, so that he may indeed have covered himself with his robe in order to protect his freshly shaven head. The image of such protection against external disturbances by being totally covered with a robe would well illustrate the mental state of imperturbability that is reached through attaining the fourth jhāna. Just as by covering himself with his robe a monk would create the suitable conditions for developing his meditation practice, so by attaining the fourth jhāna he would create the suitable condition for developing various supernormal powers and higher meditative attainments. Although Ps II 323,3 does not bring in flies and mosquitoes, it also takes the point of the image of the cloth to be related to the body, as it explains that the man’s body is kept warm by the cloth. T 1648 at T XXXII 420c2 similarly understands the image to imply protection from heat or cold through being completely covered by the white cloth.</span></span></span></p>
+<p>The Majjhima-nikāya version does not give the size of the cloth, but notes that it is of white colour.<span class="note" id="mn119n160"><span class="details"><span class="p">[n.160] <a href="../../mn/mn119.html">MN 119</a> at MN III 94,17 speaks of a “white cloth”, odāta vattha, thereby making it clear that from its perspective this would not be a monk’s robe.</span></span></span> An individual translation of the Saṅgīti-sutta also gives the size of the cloth, in addition to which it indicates that this cloth is white, a colour also mentioned in a Dīrgha-āgama version of this simile.<span class="note" id="mn119n161"><span class="details"><span class="p">[n.161] T 13 at T I 234c14 illustrates the effect of the fourth jhāna with the example of a member of any of the four classes who covers himself with a white cloth that is eight to nine units long (T 12 uses 丈, which according to Mathews 1963: 21 stands for “a measure of ten feet”. Applying this measurement would result in a huge cloth, so that in the present context 丈 is perhaps best taken to refer to a unit of length corresponding approximately to 肘). <a href="../../parallels/da20.html">DĀ 20</a> at T I 85c4 speaks of “using a new white piece of cloth to cover the body”, 以新白疊被覆其身, without giving any measurements.</span></span></span> According to the Yogācārabhūmi, the whiteness of the cloth in this simile stands representative for the mental purity reached with the fourth jhāna.<span class="note" id="mn119n162"><span class="details"><span class="p">[n.162] T 1579 at T XXX 339c8. The purity reached with this deep level of concentration is explicitly mentioned in the standard descriptions of the fourth jhāna as upekhāsatipārisuddhi, cf., e.g., <a href="../../mn/mn119.html">MN 119</a> at MN III 94,11, a qualification referred to in Madhyama-āgama discourses as 捨念清淨, e.g., <a href="../../parallels/ma2.html">MĀ 2</a> at T I 422b22. In its description of the effect of the fourth jhāna on the body, <a href="../../mn/mn119.html">MN 119</a> at MN III 94,13 describes this purity in terms of the pure mind that pervades the whole body, parisuddhena cetasā ... pharitvā, an experience which <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555c18 depicts in the following terms: “in regard to this body, he dwells having accomplished its complete pervasion within by means of purity of the mind and mental understanding”, 於此身中以清淨心意解遍滿成就遊. Thus the image used to illustrate the fourth jhāna in <a href="../../mn/mn119.html">MN 119</a> and <a href="../../parallels/ma81.html">MĀ 81</a> may convey the idea of protecting the body just as it may exemplify mental purity (yet another interpretation is suggested by Schlingloff 1962b: 62, who takes the image of the white cloth that completely covers the meditator to represent the brilliancy and clarity of the heavenly spheres). It is noteworthy that according to the explanation given in the Pāli commentary the cloth protects the body, an idea that also suggests itself from the wording of the Madhyama-āgama simile, whereas the explanation offered in the Yogācārabhūmi fits well with the simile found in the Majjhima-nikāya.</span></span></span></p>
+<p>After each of the body contemplations, the Kāyagatāsati-sutta explains that practising diligently in this manner will lead to overcoming thoughts related to the household life and to concentrating the mind.<span class="note" id="mn119n163"><span class="details"><span class="p">[n.163] <a href="../../mn/mn119.html">MN 119</a> at MN III 89,21: “by dwelling diligently, ardently, and resolutely in this way, memories and intentions related to the household life are abandoned, and with their abandoning the mind becomes internally ... concentrated”, evam appamattassa ātāpino pahitattassa viharato ye ... gehasitā sarasaṅkappā te pahīyanti, tesaṃ pahānā ajjhattam eva cittaṃ ... samādhiyati.</span></span></span> Its Madhyama-āgama counterpart similarly speaks of practising diligently in order to develop concentration, without, however, mentioning the removal of thoughts related to the household life.<span class="note" id="mn119n164"><span class="details"><span class="p">[n.164] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555a15: “in this way, dwelling alone in a secluded spot, with a mind that is not negligent he practises energetically, removes distress from the mind, and attains concentration of the mind; having attained concentration of the mind, he knows the above [i.e. what has been mentioned earlier] as it really is”, 如是 在遠離獨住, 心無放逸, 修行精勤, 斷心諸患而得定心, 得定心已, 則知上如真. Notably, both discourses apply this description to all of the body contemplations in their respective lists, and thereby also to the bodily experience of the four jhānas. In <a href="../../parallels/ma81.html">MĀ 81</a> this is less problematic, since this application results only in the proposition that diligent practice of the four jhānas will develop concentration, although it would perhaps have been more natural to propose that the diligent practice of concentration will lead to developing the four jhānas. In the case of <a href="../../mn/mn119.html">MN 119</a>, this passage becomes considerably more puzzling, since the Pāli discourse follows the attainment of each of the four jhānas by describing how, by abiding in this way, thoughts related to the household life can be overcome, whose removal then leads to settling and concentrating the mind. Yet, to attain the jhānas would require that the mind has already been settled and concentrated and that thoughts related to the household have long been left behind. Thus, <a href="../../mn/mn119.html">MN 119</a> seems to present a stage of practice preliminary to jhāna attainment as if it were an outcome of jhāna attainment. This suggests that perhaps at some comparatively early stage during the discourse’s transmission the description of diligent practice was added to the treatment of each of the jhānas, even though this description does not fit too well with the content of the passage to which it was appended. From the perspective of the dynamics of oral transmission, it could easily be imagined how the description of diligent practice, which anyway was to be repeated after each of the other body contemplations, was accidentally also applied to the treatment of the jhānas during recitation.</span></span></span></p>
+<p>The Kāyagatāsati-sutta next highlights that mindfulness of the body includes all wholesome things, which it compares to developing an awareness that encompasses the whole ocean, in the sense that such awareness would automatically include all the rivers that flow into the ocean.<span class="note" id="mn119n165"><span class="details"><span class="p">[n.165] <a href="../../mn/mn119.html">MN 119</a> at MN III 94,25. As an illustration of mindfulness of the body, this simile recurs in <a href="../../an/an1.21.html">AN 1:21</a> at AN I 43,13. Kuan 2008: 131 points out that the image of the ocean as the converging point of all waters can also be found in the Bṛhadāraṇyaka Upaniṣad 2.4.11, cf. Radhakrishnan 1953/1992: 199: sarvāsām apām samudra ekāyanam.</span></span></span> The Madhyama-āgama version makes a similar proclamation, differing in so far as it describes how on flowing into the great ocean all rivers become parts of it, without mentioning any awareness of the ocean.<span class="note" id="mn119n166"><span class="details"><span class="p">[n.166] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 556c11: “just like the great ocean, all the small rivers completely enter the ocean”, 猶如大海, 彼諸小河盡在海中.</span></span></span> The two versions agree in illustrating the ability to withstand Māra, once one is established in mindfulness of the body, with a set of similes that contrast:</p>
+<ul>
+<li>throwing a heavy ball at a wet mud wall with throwing a light ball at a door panel,</li>
+<li>trying to light a fire with dry wood with attempting to do the same with wet wood,</li>
+<li>pouring water into an empty jug with attempting to do the same with a full jug.</li>
+</ul>
+<p>They differ, however, in the sequence of their presentation (see table 12.8).<span class="note" id="mn119n167"><span class="details"><span class="p">[n.167] The pair-wise arrangement in <a href="../../parallels/ma81.html">MĀ 81</a> thus provides the contrast to each image immediately.</span></span></span> The <i>Majjhima-nikāya</i> version continues with another set of three similes, which describe the ability of reaching any attainment based on mindfulness of the body to being able to tip over a full water jug, to loosen the embankment of a full pond so that water will flow out, and to drive a chariot wherever one wishes.<span class="note" id="mn119n168"><span class="details"><span class="p">[n.168] The same similes recur in <a href="../../an/an5.28.html">AN 5:28</a> at AN III 27,26, where they illustrate how, based on developing five types of right concentration, any attainment can be reached. The image of driving a chariot recurs in <a href="../../mn/mn21.html">MN 21</a> at MN I 124,18 to illustrate the willingness of the early generation of monks to follow the Buddha's instructions, while in <a href="../../sn/sn35.198.html">SN 35:198</a> at SN IV 176,16 the same image illustrates control of the senses.</span></span></span> These three similes are not found in the <i>Madhyama-āgama </i>version (see table 12.8).</p>
+<table class="comparative-table">
+<caption>Table 12.8: Similes in <a href="../../mn/mn119.html">MN 119</a> and <a href="../../parallels/ma81.html">MĀ 81</a></caption>
+<tr><th><a href="../../mn/mn119.html">MN 119</a></th><th><a href="../../parallels/ma81.html">MĀ 81</a></th></tr>
+<tr><td>all rivers flow into ocean (1)</td><td>all rivers flow into ocean (→ 1)</td></tr>
+<tr><td>throw heavy ball at mud (2)</td><td>pour water into empty jug (→ 4)</td></tr>
+<tr><td>make fire with dry wood (3)</td><td>pour water into full jug (→ 7)</td></tr>
+<tr><td>pour water into empty jug (4)</td><td>throw heavy ball at mud (→ 2)</td></tr>
+<tr><td>throw light ball at panel (5)</td><td>throw light ball at panel (→ 5)</td></tr>
+<tr><td>make fire with wet wood (6)</td><td>make fire with dry wood (→ 3)</td></tr>
+<tr><td>pour water into full jug (7)</td><td>make fire with wet wood (→ 6)</td></tr>
+<tr><td>tip over full jug (8)</td><td></td></tr>
+<tr><td>loosen embankment of pond (9)</td><td></td></tr>
+<tr><td>drive chariot at one's wish (10)</td><td>(≠ 8-10)</td></tr>
+</table>
+<p>The two versions conclude by listing the benefits to be reached through mindfulness of the body (see table 12.9).<span class="note" id="mn119n169"><span class="details"><span class="p">[n.169] A listing of the benefits to be obtained through developing mindfulness of the body can also be found in <a href="../../an/an1.21.html">AN 1:21</a> at AN I 43-46.</span></span></span> They agree in listing the abilities to conquer:</p>
+<ul>
+<li>discontent,<span class="note" id="mn119n170"><span class="details"><span class="p">[n.170] In relation to discontent, it is perhaps noteworthy that <a href="../../mn/mn119.html">MN 119</a> at MN III 97,20 speaks of conquering discontent and delight, <i>aratiratisaho</i>, but then treats only the topic of discontent. <a href="../../parallels/ma81.html">MĀ 81</a> at T I 557b13 consistently speaks only of discontent: “he bears discontent, if discontent arises, the mind nevertheless does not hold on to it”, 堪耐不樂, 若生不樂, 心終不著. For a similar case cf. above p. 47 note 105.</span></span></span> fear, the vicissitudes of climate and hunger, etc. the <i>jhāna</i>s, the supernormal knowledges, the destruction of the influxes.</li>
+</ul>
+<p>A benefit of mindfulness of the body mentioned only in the <i>Madhyama-āgama</i> account is that the three types of unwholesome intention will not be able to overwhelm the mind.<span class="note" id="mn119n171"><span class="details"><span class="p">[n.171] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 577b17.</span></span></span> Other benefits of a higher nature, found in both versions, are that mindfulness of the body enables attaining:</p>
+<table class="comparative-table">
+<caption>Table 12.9: Benefits of Body Contemplation According to <a href="../../mn/mn119.html">MN 119</a> and <a href="../../parallels/ma81.html">MĀ 81</a></caption>
+<tr><th><a href="../../mn/mn119.html">MN 119</a></th><th><a href="../../parallels/ma81.html">MĀ 81</a></th></tr>
+<tr><td>conquer discontent (1)</td><td>bear cold, heat, hunger, thirst, etc. (→ 3)</td></tr>
+<tr><td>conquer fear (2)</td><td>endure discontent (→ 1)</td></tr>
+<tr><td>bear cold, heat, hunger, thirst, etc. (3)</td><td>endure fear (→ 2)</td></tr>
+<tr><td>four <i>jhāna</i>s (4)</td><td>not be overwhelmed by unwholesome thoughts</td></tr>
+<tr><td>supernormal powers (5)</td><td>4 <i>jhāna</i>s (→ 4)</td></tr>
+<tr><td>divine ear (6)</td><td>stream-entry</td></tr>
+<tr><td>know others' minds (7)</td><td>once-return</td></tr>
+<tr><td>recollect past lives (8)</td><td>non-return</td></tr>
+<tr><td>divine eye (9)</td><td>immaterial attainments</td></tr>
+<tr><td>destruction of influxes (10)</td><td>supernormal powers, divine ear, know others'</td></tr>
+<tr><td></td><td>minds, recollect past lives, know re-arising of</td></tr>
+<tr><td></td><td>beings, destroy influxes (→ 5, 6, 7, 8, 9, 10)</td></tr>
+</table>
+<p>To the destruction of the influxes, the <i>Madhyama-āgama </i>version adds the other three stages of awakening (which would be implicit in the <i>Majjhima-nikāya</i> version).<span class="note" id="mn119n172"><span class="details"><span class="p">[n.172] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 557b22. Due to these additional five benefits and because of considering each of the four <i>jhāna</i>s as a single benefit, <a href="../../parallels/ma81.html">MĀ 81</a> at T I 557b9 counts eighteen benefits, 十八德, whereas <a href="../../mn/mn119.html">MN 119</a> at MN III 97,18 counts ten benefits, <i>dasa ānisaṃsā</i>.</span></span></span> In addition to the four <i>jhāna</i>s, the <i>Madhyama-āgama </i>discourse also mentions the immaterial attainments.<span class="note" id="mn119n173"><span class="details"><span class="p">[n.173] <a href="../../parallels/ma81.html">MĀ 81</a> at T I 577c2. In its description of the attainment of the immaterial spheres, MĀ 81at T I 557c3 already refers to the destruction of the influxes, which reads as if instead of the immaterial spheres it were to be taking up the attainment of cessation. <a href="../../parallels/ma81.html">MĀ 81</a>, moreover, presents the four immaterial attainments as a single benefit, whereas it earlier reckoned the four <i>jhāna</i>s as four benefits. These irregularities suggest that a textual error may have occurred in this passage.</span></span></span> Thus, with some differences in their respective listings, the two versions agree that a broad range of benefits can be expected from diligent undertaking of mindfulness of the body.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

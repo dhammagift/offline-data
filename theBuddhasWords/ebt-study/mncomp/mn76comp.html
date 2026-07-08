@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 76 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 76: Sandaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn75comp.html#content"></a><a id="next-sutta" href="./mn77comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn76.html">MN 76</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sandaka-sutta, the “discourse to Sandaka”, presents an examination by Ānanda of what renders going forth meaningless or fruitless. This discourse does not have a parallel in the Chinese Āgamas.<span class="note" id="mn76n114"><span class="details"><span class="p">[n.114] Akanuma 1929/1990: 167 identifies <a href="../../parallels/sa973.html">SĀ 973</a> at T II 251b-c and <a href="../../parallels/sa-2.207.html">SĀ2 207</a> at T II 451a-b as parallels to <a href="../../mn/mn76.html">MN 76</a>. These two discourses report Ānanda explaining the need to overcome lust, anger, and delusion, followed by pointing out the noble eightfold path as the means to achieve this. Thus, these discourses would rather be parallels to <a href="../../an/an3.71.html">AN 3:71</a> at AN I 215-217. Moreover, according to <a href="../../parallels/sa973.html">SĀ 973</a> at T II 251b22 Ānanda’s interlocutor was a heterodox wanderer called 栴陀, whom the Taishō edition p. 251 note 7 and the 佛光 Saṃyukta-āgama edition p. 1463 note 5 identify to be Channa, the same person featuring in <a href="../../an/an3.71.html">AN 3:71</a> at AN I 215,24 as the one whose visit caused Ānanda to deliver the discourse. Possibly the fact that <a href="../../parallels/sa973.html">SĀ 973</a> and <a href="../../parallels/sa-2.207.html">SĀ2 207</a> take place at Ghosita’s park in Kosambī, the location of <a href="../../mn/mn76.html">MN 76</a>, may have led Akanuma to consider these two discourses as parallels to <a href="../../mn/mn76.html">MN 76</a>. <a href="../../an/an3.71.html">AN 3:71</a> differs in fact in this respect from <a href="../../parallels/sa973.html">SĀ 973</a> and <a href="../../parallels/sa-2.207.html">SĀ2 207</a>, since <a href="../../an/an3.71.html">AN 3:71</a> at AN I 215,23 has the standard reference to sāvatthi nidānaṃ, which may indicate the location of the discourse or else, according to a suggestion made by Rhys Davids in Woodward 1924/1975: xi-xii, this standard reference might refer to the place where the discourses were collected. The examination of a teacher’s claim to omniscience in <a href="../../mn/mn76.html">MN 76</a> at MN I 519,13 has a counterpart in <a href="../../parallels/ma188.html">MĀ 188</a> at T I 734b18, although here the criticism of such a claim is voiced by a heterodox recluse, instead of being spoken by Ānanda.</span></span></span> A few parts of this discourse have, however, been preserved in Sanskrit fragments.<span class="note" id="mn76n115"><span class="details"><span class="p">[n.115] The Sanskrit fragments are SHT III 886 (p. 136, identified in SHT VIII p. 183, cf. also p. 184), SHT III 942 (pp. 204-205), and fragment Or. 15003/53 from the Hoernle collection, edited in Wille 2006: 83. SHT III 886A5-B8 parallels part of the introductory narration at MN I 513,20; SHT III 942 parallels the exposition of the first type of “holy life without consolation” (anassāsika brahmacariya) described at MN I 519,13; and the Hoernle fragment has preserved a few words of the exposition of the third type of “holy life without consolation”, found at MN I 520,19. The as yet unpublished fragment 149/160 of the Hoernle collection parallels, according to Hartmann 1992: 47, the beginning part of <a href="../../mn/mn76.html">MN 76</a> from MN I 513,13 to MN I 514,26. A discourse quotation paralleling the view described in <a href="../../mn/mn76.html">MN 76</a> at MN I 515,4 can be found in Abhidh-k 4:78 in Pradhan 1967: 247,20; cf. also T 1558 at T XXIX 88b14 and T 1559 at T XXIX 243b25.</span></span></span> Although these fragments do not suffice for a full comparative study, two points can be made from a comparative perspective.</p>
+<p>The first of these two points concerns the fourth of the ways that negate living the holy life. According to the Sandaka-sutta’s presentation, this fourth way occurs when a teacher proposes a theory of seven immutable bodies, proclaiming that purification comes about through a predetermined and fixed saṃsāric process. While the Sandakasutta presents this as one coherent view, in the Sāmaññaphala-sutta the same position amounts to two different views, as this discourse attributes the theory of seven immutable bodies to Pakudha Kaccāyana, whereas the doctrine of a fixed saṃsāric process of purification was, according to the Sāmaññaphala-sutta, a teaching propounded by Makkhali Gosāla.<span class="note" id="mn76n116"><span class="details"><span class="p">[n.116] <a href="../../dn/dn2.html">DN 2</a> at DN I 56,20 and DN I 53,32.</span></span></span></p>
+<p>The Sāmaññaphala-sutta reports Makkhali Gosāla’s view to have been that the purification of beings happens without any cause.<span class="note" id="mn76n117"><span class="details"><span class="p">[n.117] <a href="../../dn/dn2.html">DN 2</a> at DN I 53,25: “there is no cause or condition for the purification of beings, beings are purified without cause or condition” n’ atthi hetu n’ atthi paccayo sattānaṃ visuddhiyā, ahetu apaccayā sattā visujjhanti. A similar proposition is attributed to him in the Saṅghabhedavastu in Gnoli 1978a: 221,29, according to which he proclaimed that nāsti hetuḥ nāsti pratyayaḥ, sattvāḥ viṣuddhyante, ahetvapratyayaṃ sattvā viśudhyante (with the decisive difference that the Saṅghabhedavastu does not combine this view with the proposal of the fixed saṃsāric process of purification). As already noted by Barua 1921/ 1981: 304, the Jain Viyāhapaṇṇatti (quoted with translation in Basham 1951: 219), also attributes a theory of natural transformation to Makkhali Gosāla.</span></span></span> Such a denial of causality would not fit too well with the remainder of the theory attributed to him in the Sāmaññaphalasutta, since the idea of a fixed saṃsāric process of purification proposes a cause for the purification of beings, namely repeated rebirths.<span class="note" id="mn76n118"><span class="details"><span class="p">[n.118] This difficulty had already been noted by Law 1919: 133. According to Harvey 2007: 43, however, the two positions can be seen to harmonize, if one interprets the denial of causality to refer only to the absence of any “cause within the current control of a person”.</span></span></span></p>
+<p>The theory of this fixed saṃsāric process of purification proposes a staggering number of fixed principles, describing a set number of actions, a set number of types of abode, a set number of elements, etc. Prominent among these classifications are analyses involving sets of sevens. A theory of a fixed process of purification based on fixed principles and making frequent usage of the number seven would fit Pakudha Kaccāyana’s theory of seven immutable bodies well, as his theory does involve static principles and makes much use of the number seven. It would certainly fit his theory better than Makkhali Gosāla’s denial of causality.<span class="note" id="mn76n119"><span class="details"><span class="p">[n.119] A closer examination of the presentation of Makkhali Gosāla’s view in <a href="../../dn/dn2.html">DN 2</a> at DN I 53,29 further supports the possibility that the theory of saṃsāric purification and the denial of causality may not belong to the same teacher. Franke 1913a: 56 note 5 notes several occurrences of -e terminations for nominative singular masculine and neuter, which are found predominantly in the later part of the statement attributed to Makkhali Gosāla, cf. also Lüders 1954: 16. Based on these occurrences, Basham 1951: 24 and Vogel 1970: 23 note 20 suggest that the view attributed to Makkhali Gosāla may be a composite of what originally were two different passages. According to Bechert 1957: 74, however, the -e forms could be Sinhalisms. Yet, Norman 1976: 120 draws attention to a similar fluctuation between -o and -e terminations in a Jain text that also takes up views of other teachers, which obviously could not be due to any Sinhalisms. This makes it improbable that similar fluctuations in Pāli descriptions of the views of other teachers should be due to the influence of the Sinhalese reciters.</span></span></span></p>
+<p>The Sāmaññaphala-sutta stands in fact alone in its presentation, as neither its Chinese parallels nor a version of this discourse preserved in the Saṅghabhedavastu of the (Mūla-)Sarvāstivāda Vinaya attribute the teaching of a fixed saṃsāric process of purification to Makkhali Gosāla.<span class="note" id="mn76n120"><span class="details"><span class="p">[n.120] The Chinese parallels are <a href="../../parallels/da27.html">DĀ 27</a> at T I 108b13, <a href="../../parallels/ea43.7.html">EĀ 43.7</a> at T II 763b17, and T 22 at T I 271c9. The relevant part from the Saṅghabhedavastu version can be found in Gnoli 1978a: 221,27.</span></span></span> One of the Chinese parallels to the Sāmaññaphala-sutta even attributes the theory of a fixed saṃsāric process of purification to Pakudha Kaccāyana.<span class="note" id="mn76n121"><span class="details"><span class="p">[n.121] T 22 at T I 272a6.</span></span></span></p>
+<p>Thus this Chinese discourse, as well as the Sandaka-sutta, combine the idea of a fixed saṃsāric process of purification with the theory of seven immutable bodies and thereby treat them as one coherent view. A combination of these two views can also be found in the Pravrajyāvastu and the Saṅghabhedavastu, although these texts attribute this view to Ajita Kesakambalī.<span class="note" id="mn76n122"><span class="details"><span class="p">[n.122] The Pravrajyāvastu fragments folio 10r10-v6 in Vogel 1984: 306-307 and the corresponding section in the Saṅghabhedavastu in Gnoli 1978a: 224,2.</span></span></span></p>
+<p>Other Pāli discourses show some inconsistencies in their presentation of Makkhali Gosāla’s views, indicating that some degree of confusion about what view(s) should be attributed to him may already have been present at an early stage of their transmission,<span class="note" id="mn76n123"><span class="details"><span class="p">[n.123] Cf. <a href="../../sn/sn22.60.html">SN 22:60</a> at SN III 69,3, which puts the view that according to <a href="../../dn/dn2.html">DN 2</a> at DN I 53,25 was held by Makkhali Gosāla into the mouth of Pūraṇa Kassapa, or <a href="../../an/an3.135.html">AN 3:135</a> at AN I 286,24, which seems to confuse Makkhali Gosāla with Ajita Kesakambalī. As noted by Olivelle 1974: 30, Makkhali Gosāla’s “views are no doubt distorted in Buddhist literature”.</span></span></span> a confusion that might also have affected the Sāmaññaphala-sutta. Although the Sandaka-sutta does not mention Makkhali Gosāla or any of the other six teachers by name, its combination of the theory of seven immutable principles with a fixed saṃsāric process of purification may, after all, be a more coherent presentation.</p>
+<p>The other point that can be made from a comparative perspective in regard to the Sandaka-sutta concerns a teacher’s claim to omniscience. This claim occurs as the first of the four types of holy life without consolation. Parts of the examination of the first type of such a holy life without consolation have been preserved in one of the Sanskrit fragments, which offers additional examples that render such a teacher’s claim to omniscience self-contradictory. The Sanskrit fragment agrees with the Sandaka-sutta in describing how a supposedly omniscient teacher enters an empty house (presumably in search of alms), comes across a wild animal, or has to ask for someone’s name or for the way. In addition, the Sanskrit fragment depicts how such a teacher falls into a pond, a sewer, or a cesspool,<span class="note" id="mn76n124"><span class="details"><span class="p">[n.124] SHT III 942R3: palvalaṃ prapā[ta]ṃ syandanikāṃ gūtho[ḍ]igallaṃ.</span></span></span> or even bangs (his head) on a door.<span class="note" id="mn76n125"><span class="details"><span class="p">[n.125] SHT III 942R4: kavātaṃ vā [ma]r[date].</span></span></span> These additional descriptions further enhance the absurd situation that can result from claiming omniscience.</p>
+<p>The agreement between the Pāli and Sanskrit presentations on the predicament caused by such claims makes it rather improbable that such a claim had already been attributed to the Buddha at the time when the Sandaka-sutta came into being.<span class="note" id="mn76n126"><span class="details"><span class="p">[n.126] On the probably late nature of the attribution of omniscience to the Buddha cf., e.g., Anālayo 2006b, Gombrich 2007: 205-207, Jain 1972: 278-282, Jaini 1974, Jayatilleke 1963/1980: 376-381, Kariyawasam 1990, id. 2002, Karunaratna 2004a, Katz 1982/1989: 132, Nāgapriya 2006, Naughton 1991: 37, Tilakaratne 1997: 602-603, and Warder 1970/1991: 135-137.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

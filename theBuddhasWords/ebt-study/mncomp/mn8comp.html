@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 8 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 8: Sallekha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn7comp.html#content"></a><a id="next-sutta" href="./mn9comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn8.html">MN 8</a> / <a href="../../parallels/ma91.html">MĀ 91</a> / <a href="../../parallels/ea47.9.html">EĀ 47.9 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sallekha-sutta, the “discourse on effacement”, expounds what constitutes real effacement. This discourse has a parallel in the Madhyama-āgama and another parallel in the Ekottarika-āgama.<span class="note" id="mn8n160"><span class="details"><span class="p">[n.160] The parallels are <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573b-574b and <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a-c. <a href="../../parallels/ma91.html">MĀ 91</a> is entitled “discourse on Cunda’s inquiry [about] views”, 周那問見經. While <a href="../../mn/mn8.html">MN 8</a> has Jeta’s Grove at Sāvatthī as its location, <a href="../../parallels/ma91.html">MĀ 91</a> takes place at the Ghositārāma, a monastery in Kosambī, and <a href="../../parallels/ea47.9.html">EĀ 47.9</a> is located in the Squirrels’ Feeding Ground at Rājagaha.</span></span></span></p>
+<p>The Sallekha-sutta and its parallels begin with Mahācunda asking the Buddha how to go beyond speculative views.<span class="note" id="mn8n161"><span class="details"><span class="p">[n.161] <a href="../../mn/mn8.html">MN 8</a> at MN I 40,16 refers to such speculative views as “views related to doctrines about the self or the world”, attavādapaṭisaṃyuttā vā lokavādapaṭisaṃyuttā vā. <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573b18 speaks of “views that keep on arising, namely speculations about the existence of a self, speculations about the existence of a being, about the existence of humans, about the existence of a person (puggala), about the existence of life (jīvita), about the existence of the world”, 諸見生而生, 謂計有神, 計有眾生, 有人, 有壽, 有命, 有世 (in my translation I follow a suggestion made by Zacchetti 2005: 1269, who explains that in early translations of the second to sixth century, if 壽 occurs in a passage together with 命, it probably renders puggala or pudgala). <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a11 simply mentions “all those views, related to past and future”, 此諸 見, 前後相應.</span></span></span> In the Majjhima-nikāya version, the Buddha replies by recommending insight into the not-self nature of the very place where such views arise (i.e., one’s own mind).<span class="note" id="mn8n162"><span class="details"><span class="p">[n.162] <a href="../../mn/mn8.html">MN 8</a> at MN I 40,21: “where those views arise, where they underlie, where they occur, when seeing that with proper wisdom and in accordance with reality as: ‘this is not mine, this is not I, this is not my self’ ... then those views are abandoned”, yattha c’ etā diṭṭhiyo uppajjanti, yattha ca anusenti, yattha ca samudācaranti, taṃ n’ etaṃ mama, n’ eso ’ham asmi, na me ’so attā ti evam etaṃ yathābhūtaṃ sammappaññāya passato ... evam etāsaṃ diṭṭhīnaṃ paṭinissaggo hoti (Ce-MN I 94,3 c’ etā instead of ca for both instances). Ps I 182,22 explains that the expression “where they arise”, yattha uppajjanti, refers to the five aggregates.</span></span></span> The Pāli commentary explains that this recommendation points to the attainment of stream-entry, with which such views will be left behind.<span class="note" id="mn8n163"><span class="details"><span class="p">[n.163] According to Ps I 183,16, the expression “seeing with proper wisdom”, sammappaññāya passato, is a reference to the wisdom of stream-entry.</span></span></span> The commentarial understanding of the implication of the present passage receives confirmation from the Madhyama-āgama version, according to which the Buddha explained that the experience of the cessation of phenomena (viz. Nirvāṇa) leads beyond speculative views, an implicit reference to stream-entry.<span class="note" id="mn8n164"><span class="details"><span class="p">[n.164] <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573b23: “the complete and remainderless cessation of all phenomena, knowing like this and seeing like this brings those views to extinction”, 諸法滅盡無餘者, 如是知, 如是見, 令此見得滅.</span></span></span> The Ekottarika-āgama version instead recommends insight into the place where such views arise and cease as being impermanent, dukkha, and empty.<span class="note" id="mn8n165"><span class="details"><span class="p">[n.165] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a12: “the sphere where these views emerge and arise, and where they cease, all that is impermanent, dukkha, and empty”, 此見所出興所滅之處, 皆是無常, 苦, 空 (adopting the 宋, 元, 明, and 聖 variant 興 instead of 與).</span></span></span></p>
+<p>The Ekottarika-āgama version continues differently from the other two discourses, as it refers to the sixty-two types of view (presumably intending the listing of grounds for views given in the Brahmajāla-sutta and its parallels) and then recommends becoming established in the ten wholesome courses of action to go beyond such views.</p>
+<p>According to the Sallekha-sutta and its Madhyama-āgama parallel, the four jhānas or the four immaterial attainments do not qualify as “effacement”.<span class="note" id="mn8n166"><span class="details"><span class="p">[n.166] “Effacement”, sallekha, in <a href="../../mn/mn8.html">MN 8</a> at MN I 40,30, has its counterpart in 漸損 in <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573b25, literally “gradual reducing [faults]” (following the explanation in the 佛光 Madhyama-āgama edition p. 787 note 8, which glosses 漸損 as 漸漸削減過失).</span></span></span> Rather, effacement requires refraining from what is unwholesome even when faced with others who are indulging in it.</p>
+<p>The list of unwholesome qualities in regard to which such effacement should be practised differs in the parallel versions.<span class="note" id="mn8n167"><span class="details"><span class="p">[n.167] The respective listings begin in <a href="../../mn/mn8.html">MN 8</a> at MN I 42,3 and in <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c7.</span></span></span> The Ekottarika-āgama version lists only the ten unwholesome courses of action.<span class="note" id="mn8n168"><span class="details"><span class="p">[n.168] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a16.</span></span></span></p>
+<p>Although the main part of its presentation is based on these ten, the final part of the Ekottarika-āgama discourse nevertheless refers to several other qualities mentioned also in the Sallekha-sutta and its Madhyama-agama parallel.<span class="note" id="mn8n169"><span class="details"><span class="p">[n.169] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784c5 mentions praising oneself and disparaging others, not being of few wishes, breaches of morality, laziness, not developing concentration, and not developing wisdom.</span></span></span> This internal inconsistency, as well as the overall somewhat unclear progression of ideas in the Ekottarika-āgama version, give the impression that this discourse has suffered from error(s) during its transmission and/or translation.</p>
+<p>Although the Sallekha-sutta and its Madhyama-agama parallel resemble each other to a greater extent, they also show some differences. Thus, while the Sallekha-sutta includes wrong manifestations of the factors of the tenfold noble path, none of these form part of the listing in the Madhyama-āgama version. Nor is the last item in the Sallekha-sutta’s list, dogmatic adherence to one’s views, found in its Madhyama-āgama parallel (see table 1.9). Thus the three discourses agree on including unwholesome conduct or attitudes in the form of:</p>
+<ul>
+<li>killing,</li>
+<li>stealing,</li>
+<li>breaches of celibacy,</li>
+<li>the four types of wrong speech,</li>
+<li>covetousness.</li>
+</ul>
+<p>The Sallekha-sutta and the Ekottarika-āgama version agree on continuing their listing by also mentioning the remaining two unwholesome courses of action, namely:</p>
+<ul>
+<li>ill will,</li>
+<li>wrong view.</li>
+</ul>
+<p>Unlike the Ekottarika-āgama discourse, the Sallekha-sutta and its Madhyama-āgama parallel list various mental defilements and unwholesome qualities, such as:</p>
+<ul>
+<li>anger,</li>
+<li>deceit,</li>
+<li>pride,</li>
+<li>faithlessness,</li>
+<li>shamelessness,</li>
+<li>little learning,</li>
+<li>laziness,</li>
+<li>lack of mindfulness,</li>
+<li>lack of wisdom.</li>
+</ul>
+<p>To the last group, the Madhyama-āgama version adds being without concentration.<span class="note" id="mn8n170"><span class="details"><span class="p">[n.170] <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c20.</span></span></span> The Sallekha-sutta and its Madhyama-āgama also agree on listing only three hindrances – sloth-and-torpor, restlessness, and doubt – out of the standard set of five hindrances.<span class="note" id="mn8n171"><span class="details"><span class="p">[n.171] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,31 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c11.</span></span></span> The Pāli commentary explains that the first two hindrances were not mentioned since they had already been mentioned earlier, although under a different name.<span class="note" id="mn8n172"><span class="details"><span class="p">[n.172] Ps I 189,13, an explanation related to the occurrence of abhijjhālu and byāpanna-citta in <a href="../../mn/mn8.html">MN 8</a> at MN I 42,15+16. The same argument would also hold true for MĀ 91at T I 573c7+8, which begins its list by referring to “sensual thoughts”, 念欲, followed by “anger”, 瞋, so that here equivalents to the first two hindrances have also been mentioned already.</span></span></span> Judging from this pattern, described in the commentary, one would expect that the Sallekha-sutta’s list of defilements is built up in an economical way, in the sense that it does not repeat any item that has already been mentioned. Closer inspection shows that, while this does hold for the case of wrong view, the same pattern has not been applied consistently throughout the listing.</p>
+<table class="comparative-table">
+<caption>Table 1.9: Unwholesome Qualities in <a href="../../mn/mn8.html">MN 8</a> and <a href="../../parallels/ma91.html">MĀ 91</a></caption>
+<tr><th><a href="../../mn/mn8.html">MN 8</a></th><th><a href="../../parallels/ma91.html">MĀ 91</a></th></tr>
+<tr><td>harmfulness (1)</td><td>evil desires and sensual thoughts</td></tr>
+<tr><td>killing (2)</td><td>harmfulness and anger (→ 1)</td></tr>
+<tr><td>stealing (3)</td><td>killing (→ 2)</td></tr>
+<tr><td>breach of celibacy (4)</td><td>stealing (→ 3)</td></tr>
+<tr><td>falsehood (5)</td><td>breach of celibacy (→ 4)</td></tr>
+<tr><td>malicious speech (6)</td><td>covetousness (→ 9)</td></tr>
+<tr><td>harsh speech (7)</td><td>fault finding</td></tr>
+<tr><td>useless speech (8)</td><td>sloth-and-torpor (→ 21)</td></tr>
+<tr><td>being covetous (9)</td><td>restlessness (→ 22)</td></tr>
+<tr><td>ill will (10)</td><td>arrogance</td></tr>
+<tr><td>wrong view (11)</td><td>doubt (→ 23)</td></tr>
+<tr><td>wrong intention (12)</td><td>bondage of anger (→ 24)</td></tr>
+<tr><td>wrong speech (13)</td><td>flattery</td></tr>
+<tr><td>wrong action (14)</td><td>deceit (→ 31)</td></tr>
+<tr><td>wrong livelihood (15)</td><td>shamelessness (→ 38)</td></tr>
+<tr><td>wrong effort (16)</td><td>recklessness (→ 39)</td></tr>
+<tr><td>wrong mindfulness (17)</td><td>pride</td></tr>
+<tr><td>wrong concentration (18)</td><td>excessive pride (→ 33)</td></tr>
+<tr><td>wrong knowledge (19)</td><td>lack of learning (→ 40)</td></tr>
+<tr><td>wrong liberation (20)</td><td>not contemplating what is wholesome</td></tr>
+<tr><td>sloth-and-torpor (21)</td><td>unlawful conduct</td></tr>
+<tr><td>restless (22)</td><td>falsehood (→ 5)</td></tr>
+<tr><td>doubt (23)</td><td>malicious speech (→ 6)</td></tr>
+<tr><td>angry (24)</td><td>harsh speech (→ 7)</td></tr>
+<tr><td>malicious (25)</td><td>useless speech (→ 8)</td></tr>
+<tr><td>contemptuous (26)</td><td>evil habits</td></tr>
+<tr><td>domineering (27)</td><td>lack of faith (→ 37)</td></tr>
+<tr><td>envious (28)</td><td>laziness (→ 41)</td></tr>
+<tr><td>avaricious (29)</td><td>lack of mindfulness (→ 42)</td></tr>
+<tr><td>fraudulent (30)</td><td>lack of concentration (→ 18?)</td></tr>
+<tr><td>deceitful (31)</td><td>lack of wisdom (→ 43)</td></tr>
+<tr><td>obstinate (32)</td><td></td></tr>
+<tr><td>excessively proud (33)</td><td></td></tr>
+<tr><td>difficult to admonish (34)</td><td></td></tr>
+<tr><td>have bad friends (35)</td><td></td></tr>
+<tr><td>negligent (36)</td><td></td></tr>
+<tr><td>lack of faith (37)</td><td></td></tr>
+<tr><td>shamelessness (38)</td><td></td></tr>
+<tr><td>recklessness (39)</td><td></td></tr>
+<tr><td>lack of learning (40)</td><td></td></tr>
+<tr><td>laziness (41)</td><td></td></tr>
+<tr><td>lack of mindfulness (42)</td><td></td></tr>
+<tr><td>lack of wisdom (43)</td><td></td></tr>
+<tr><td>being dogmatic (44)</td><td>(≠ 10-17, 19-20, 25-30, 32, 34-36, 44)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th><a href="../../parallels/ea47.98.html">EĀ 47.98</a></th></tr>
+<tr><td>killing (→ 2)</td></tr>
+<tr><td>stealing (→ 3)</td></tr>
+<tr><td>breach of celibacy (→ 4)</td></tr>
+<tr><td>falsehood (→ 5)</td></tr>
+<tr><td>malicious speech (→ 6)</td></tr>
+<tr><td>useless speech (→ 8)</td></tr>
+<tr><td>harsh speech (→ 7)</td></tr>
+<tr><td>being covetous (→ 9)</td></tr>
+<tr><td>ill will (→ 10)</td></tr>
+<tr><td>wrong view (→ 11)</td></tr>
+<tr><td>self-praise, disparaging others (→ 26?)</td></tr>
+<tr><td>not being of few wishes</td></tr>
+<tr><td>breaches of morality</td></tr>
+<tr><td>laziness (→ 41)</td></tr>
+<tr><td>not developing concentration (→ 18?)</td></tr>
+<tr><td>not developing wisdom (→ 43)</td></tr>
+<tr><td>(≠ 1, 12-17, 19-25, 27-40, 42, 44)</td></tr>
+</table>
+<p>Wrong view, which constitutes the eleventh item in the list (11), constitutes at the same time the last of the ten unwholesome courses of action and the first of the ten wrong path factors. Hence, in keeping with the patter suggested by the commentary, wrong view is only mentioned once (see above table 1.9).<span class="note" id="mn8n173"><span class="details"><span class="p">[n.173] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,18. An application of the same principle would also serve to explain why concentration does not occur in the list given in <a href="../../mn/mn8.html">MN 8</a>, since wrong concentration is mentioned as one of the wrong path factors, so that the list in <a href="../../mn/mn8.html">MN 8</a> has in this way already covered this topic. In <a href="../../parallels/ma91.html">MĀ 91</a>, however, an explicit mentioning of concentration is required, since this version does not include the wrong path factors in its exposition.</span></span></span></p>
+<p>Yet, the same principle has not been consistently applied to the entire list of defilements, as an instance of overlap can be found, for example, between killing (2), stealing (3) and breach of celibacy (4) on the one hand and wrong action (14) on the other,<span class="note" id="mn8n174"><span class="details"><span class="p">[n.174] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,5: pāṇātipātī ... adinnādāyī ... abrahmacārī, and then <a href="../../mn/mn8.html">MN 8</a> at MN I 42,22: micchākammantā.</span></span></span> since wrong action covers precisely these three.<span class="note" id="mn8n175"><span class="details"><span class="p">[n.175] <a href="../../mn/mn117.html">MN 117</a> at MN III 74,23: pāṇātipāto, adinnādānaṃ, kāmesu micchācāro, ayaṃ ... micchākammanto (when applied to monks, as in <a href="../../mn/mn8.html">MN 8</a>, kāmesu micchācāra becomes abrahmacariya).</span></span></span></p>
+<p>Another overlap exists between falsehood (5), malicious speech (6), harsh speech (7) and useless speech (8) on the one hand and the path factor of wrong speech (13) on the other,<span class="note" id="mn8n176"><span class="details"><span class="p">[n.176] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,10: musāvādī ... pisuṇāvācā ... pharusāvācā ... samphappalāpī (Be-MN I 51,3, Ce-MN I 96,32, and Se-MN I 75,10: pisuṇavācā, Be-MN I 51,5 and Se-MN I 75,11: pharusavācā), and then <a href="../../mn/mn8.html">MN 8</a> at MN I 42,20: micchāvāca.</span></span></span> since here, too, the standard definition of wrong speech lists precisely these four types of speech.<span class="note" id="mn8n177"><span class="details"><span class="p">[n.177] <a href="../../mn/mn117.html">MN 117</a> at MN III 73,29: musāvādo, pisuṇā vācā, pharusā vācā, samphappalāpo, ayaṃ ... micchāvācā (Ce-MN III 216,1: pisunā).</span></span></span></p>
+<p>Another at least partial overlap can be found between covetousness (9) and ill will (10) on the one side and wrong intention (12) on the other,<span class="note" id="mn8n178"><span class="details"><span class="p">[n.178] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,15: abhijjhālū ... byāpannacittā, and then <a href="../../mn/mn8.html">MN 8</a> at MN I 42,19: micchāsaṅkappā.</span></span></span> since according to the standard definition wrong intentions are intentions of sensuality, ill will and cruelty.<span class="note" id="mn8n179"><span class="details"><span class="p">[n.179] <a href="../../mn/mn117.html">MN 117</a> at MN III 73,2: kāmasaṅkappo, vyāpādasaṅkappo, vihiṃsāsaṅkappo, ayaṃ ... micchāsaṅkappo.</span></span></span> Without these three types of intention, these three unwholesome mental qualities would have no scope to arise. Moreover, the mentioning of wrong effort (16), wrong mindfulness (17) and wrong knowledge (19) would have much in common with the later mentioned qualities of being lazy (41), unmindful (42) and lacking wisdom (43).<span class="note" id="mn8n180"><span class="details"><span class="p">[n.180] <a href="../../mn/mn8.html">MN 8</a> at MN I 42,24: micchāvāyāmā ... micchāsatī ... micchāñāṇī, and then <a href="../../mn/mn8.html">MN 8</a> at MN I 43,19: kusītā ... muṭṭhassatī ... duppaññā.</span></span></span></p>
+<p>Thus, on the basis of the commentarial suggestion, it seems as if several of the wrong path factors are redundant. As the Madhyama-āgama discourse does not mention any of the wrong path factors (nor are these found in the Ekottarika-āgama version), perhaps the ten wrong path factors originally did not form part of the discourse. The occurrence of wrong view as the last of the ten unwholesome courses of action could easily have caused the reciter(s) to continue with wrong intention, wrong speech, etc., thereby, perhaps even unintentionally, adding a listing of then ten wrong path factors to the exposition.<span class="note" id="mn8n181"><span class="details"><span class="p">[n.181] Von Hinüber 1996/1997: 31 explains that “pieces of texts known by heart may intrude into almost any context once there is a corresponding key word”.</span></span></span></p>
+<p>The Sallekha-sutta and its Madhyama-āgama parallel continue by pointing out that even just to arouse the mind to train in wholesomeness is of much benefit, a maxim that depicts the type of repeated mental training that will enforce one’s resolve to avoid any of the unwholesome qualities listed in the parallel versions.<span class="note" id="mn8n182"><span class="details"><span class="p">[n.182] <a href="../../mn/mn8.html">MN 8</a> at MN I 43,26 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c21.</span></span></span> A later part of the Ekottarika-āgama version has a presentation that appears to form a counterpart to this part of the Sallekha-sutta and its Madhyama-āgama parallel.<span class="note" id="mn8n183"><span class="details"><span class="p">[n.183] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784b29 takes up the case of killing and stealing, recommending to be firm in one’s mind, without wavering, regarding not engaging in such conduct, followed by turning to the remainder of the ten unwholesome courses of action. Although this presentation is considerably different from the section on inclination of the mind in <a href="../../mn/mn8.html">MN 8</a> and <a href="../../parallels/ma91.html">MĀ 91</a>, it nevertheless appears to be making the same basic point.</span></span></span></p>
+<p>As a third aspect, the Sallekha-sutta brings up the simple but effective point that just as one can avoid an uneven path by taking an even path (or a wrong path by taking a right path according to the Madhyama-āgama presentation), so too all these unwholesome qualities can be avoided by cultivating their wholesome counterparts.<span class="note" id="mn8n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn8.html">MN 8</a> at MN I 43,35 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 574a8.</span></span></span> This principle is also expounded in the Ekottarika-āgama version.<span class="note" id="mn8n185"><span class="details"><span class="p">[n.185] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a19, after which <a href="../../parallels/ea47.9.html">EĀ 47.9</a> continues directly with the simile about one who is drowning himself and thus unable to help others cross.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, the fourth aspect to be contemplated in regard to these unwholesome qualities is that unwholesome things lead downward, while wholesome things lead upward.<span class="note" id="mn8n186"><span class="details"><span class="p">[n.186] <a href="../../mn/mn8.html">MN 8</a> at MN I 44,32.</span></span></span> While the Ekottarika-āgama version does not have a counterpart to this fourth aspect, the Madhyama-āgama version similarly contrasts dark things, which have dark results and lead to an evil destination, with bright things, which have bright results and which lead upward.<span class="note" id="mn8n187"><span class="details"><span class="p">[n.187] <a href="../../parallels/ma91.html">MĀ 91</a> at T I 574a19: 或有法黑, 有黑報, 趣至惡處, 或有法白, 有白報, 而得昇上.</span></span></span> The Sallekha-sutta and its Madhyama-āgama parallel highlight the benefits that result from avoiding what is unwholesome.</p>
+<p>A fifth point, made in all versions, is to extinguish any of these unwholesome qualities within oneself. This appears to form a warning against premature attempts to set oneself up as a guide for others.<span class="note" id="mn8n188"><span class="details"><span class="p">[n.188] Ñāṇaponika 1964/1988: 29.</span></span></span> The three versions illustrate the situation of someone, who attempts to discipline another while being himself or herself still undisciplined, with the example of drowning or sinking in the mud, yet attempting to pull out another who is in the same predicament.<span class="note" id="mn8n189"><span class="details"><span class="p">[n.189] <a href="../../mn/mn8.html">MN 8</a> at MN I 45,3, <a href="../../parallels/ma91.html">MĀ 91</a> at T I 574b3, and <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784a20. A discourse quotation on the need to tame oneself before taming others, presumably from the present discourse, can be found in T 212 at T IV 712c9, which at T IV 723b16 also quotes the simile of pulling someone out of the mud. Mahāsi 1981/ 2006b: 34-35 explains that “only the man who has disciplined himself ... and extinguished the fires of defilements will be able to help another man in regard to discipline ... and extinction of defilements”, “just as a fire cannot be used for putting out another fire, so also a defilement cannot neutralize another defilement”.</span></span></span></p>
+<p>The five stages of effacement in the Sallekha-sutta and its Madhyama-āgama parallel thus involve the following main points:</p>
+<ul>
+<li>refrain even if others indulge,</li>
+<li>incline the mind to wholesomeness,</li>
+<li>avoid uneven and wrong through what is even and right,</li>
+<li>develop what leads upward,</li>
+<li>extinguish own faults first.</li>
+</ul>
+<p>The Sallekha-sutta and its Madhyama-āgama parallel conclude with the Buddha proclaiming that he had done his task as a teacher, exhorting the monks to meditate and not be negligent.<span class="note" id="mn8n190"><span class="details"><span class="p">[n.190] <a href="../../mn/mn8.html">MN 8</a> at MN I 46,6 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 574b22.</span></span></span></p>
+<p>The Ekottarika-āgama version proceeds differently, as here the Buddha takes up different speculative views, followed by a set of stanzas.<span class="note" id="mn8n191"><span class="details"><span class="p">[n.191] The listing of these views in <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784b2 proceeds from the existence of the self to a standard set of views (nature of the world as eternal or finite, identity of soul and body, destiny of a tathāgata after death), followed by also mentioning views on the creator of the world.</span></span></span> The Ekottarika-āgama account concludes with Mahācunda withdrawing into seclusion and eventually becoming an arahant.<span class="note" id="mn8n192"><span class="details"><span class="p">[n.192] <a href="../../parallels/ea47.9.html">EĀ 47.9</a> at T II 784c10.</span></span></span></p>
+<p>While the Sallekha-sutta only notes that Mahācunda rejoiced at the end of the discourse, the Madhyama-āgama version records that other monks also rejoiced in the Buddha’s exposition.</p>
+<p>According to an opinion reported in the Pāli commentary, Mahācunda’s initial question about views was aimed at some of his disciples, who had been overestimating themselves, believing that they had already gone beyond such views.<span class="note" id="mn8n193"><span class="details"><span class="p">[n.193] Ps I 182,16. This explanation fits well with the way other Pāli discourses present Mahācunda. In <a href="../../mn/mn144.html">MN 144</a> at MN III 266,4 (= <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 59,7), he gives an instruction to the monk Channa, an instruction whose wording suggests that Mahācunda thought Channa was overestimating his level of attainment. In <a href="../../an/an6.46.html">AN 6:46</a> at AN III 355,6, Mahācunda criticizes the conceited attitude of some monks, who because of their theoretical knowledge or else because of their meditation practice speak disparagingly of other monks. <a href="../../an/an10.24.html">AN 10:24</a> at AN V 42,3 and <a href="../../an/an10.85.html">AN 10:85</a> at AN V 157,25 report two occasions when Mahācunda examines the false claims made by monks who overestimate their achievements. These passages thus present the curbing of conceit and overestimation of other monks as a particular concern of Mahācunda.</span></span></span> Judging from this explanation, a group of other monks should have been present during this discourse, as recorded explicitly in the Madhyama-āgama discourse’s conclusion.</p>
+<p>In fact, the Buddha’s final exhortation to meditate in the Sallekha-sutta is formulated in the plural, indicating that, although the conclusion only mentions Mahācunda explicitly, the presence of other monks is implicitly covered.<span class="note" id="mn8n194"><span class="details"><span class="p">[n.194] <a href="../../mn/mn8.html">MN 8</a> at MN I 46,9: jhāyatha, cunda, mā pamādattha, mā pacchā vippaṭisārino ahuvattha.</span></span></span> The same pattern recurs in other Pāli discourses, which indicates that, even though a conclusion may mention only the most prominent person rejoicing, the rejoicing of everyone else present should be understood to be implicit in the same statement.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

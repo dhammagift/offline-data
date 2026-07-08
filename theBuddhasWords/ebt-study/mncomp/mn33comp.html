@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 33 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 33: Mahāgopālaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn32comp.html#content"></a><a id="next-sutta" href="./mn34comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn33.html">MN 33</a> / <a href="../../parallels/sa1249.html">SĀ 1249</a> / <a href="../../parallels/ea49.1.html">EĀ 49.1</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāgopālaka-sutta, the “greater discourse on the cowherd”, compares qualities needed by a cowherd to the qualities required for progress in the Dharma. This discourse has four parallels: one of these is a Pāli parallel among the elevens of the Aṅguttara-nikāya,<span class="note" id="mn33n64"><span class="details"><span class="p">[n.64] The Pāli parallel is <a href="../../an/an11.18.html">AN 11:18</a> at AN V 347-353, entitled “the cowherd”, gopāla, according to Be-AN III 546,19 and Ce-AN VI 674,31, as well as according to the summary verses (uddāna) in Ee-AN V 358,31 and Se-AN V 390,19.</span></span></span> while the other three are Chinese parallels, found in the Saṃyukta-āgama, among the elevens of the Ekottarika-āgama, and in the form of an individual translation.<span class="note" id="mn33n65"><span class="details"><span class="p">[n.65] <a href="../../parallels/sa1249.html">SĀ 1249</a> at T II 342c-343b, <a href="../../parallels/ea49.1.html">EĀ 49.1</a> at T II 794a-795a, and T 123 at T II 546a-547b. A translation of <a href="../../parallels/sa1249.html">SĀ 1249</a> can be found in Anālayo 2010d. According to the information given in the Taishō edition, T 123 was translated by Kumārajīva. Akanuma 1929/1990: 111 suggests “cowherd”, 牧牛者, as a tentative title for <a href="../../parallels/sa1249.html">SĀ 1249</a>. T 123 has the title “discourse spoken by the Buddha on the cowherd”, 佛說放牛經. The three Chinese versions agree with the Mahāgopālaka-sutta on locating the discourse in Jeta’s Grove near Sāvatthī; <a href="../../an/an11.18.html">AN 11:18</a> does not specify a location.</span></span></span> Besides these full parallels, a few sections of a version of the present discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn33n66"><span class="details"><span class="p">[n.66] These are the so far unpublished fragments no. 2380/50b, 2380/51a, and 2380/51b of the Schøyen collection, identified by Klaus Wille, cf. also Chung 2008: 205 (I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of these fragments). The fragments parallel the exposition of the bad qualities of a monk found at MN I 220-222.</span></span></span> Moreover, a passage similar to the exposition in the Mahāgopālaka-sutta can also be found in the *Mahāprajñāpāramitā- (upadeśa-)śāstra.<span class="note" id="mn33n67"><span class="details"><span class="p">[n.67] T 1509 at T XXV 74a-b, translated in Lamotte 1944/1981: 149-152. The setting of this version differs from the Pāli and Chinese discourses, as it depicts cowherds approaching the Buddha for advice on how to properly carry out their work. While Lamotte reconstructs 大智度論 as Mahāprajñāpāramitā-śāstra, Demiéville 1950/1973: 470 note 1 points out that Mahāprajñāpāramitā-upadeśa-śāstra might be more appropriate, hence I refer to the work as *Mahāprajñāpāramitā-(upadeśa-)śāstra.</span></span></span></p>
+<p>The Mahāgopālaka-sutta and its parallels enumerate eleven qualities of a cowherd and then apply these eleven qualities to a monk, first presenting the whole set from the perspective of detrimental qualities and then from the complementary perspective of the corresponding beneficial counterparts (see table 4.5).<span class="note" id="mn33n68"><span class="details"><span class="p">[n.68] The image of a cowherd is of course a familiar one in Indian thought, on its relation to the Kṛṣṇa legend cf., e.g., Vaudeville 1975. For another listing of eleven qualities of a cowherd cf. T 201.61 at T IV 317b21 and Lévi 1908: 140-144.</span></span></span></p>
+<p>The Pāli and Chinese versions agree that the first five of these qualities stand for:</p>
+<ul>
+<li>knowing that the material body is made up of the four elements, knowing the difference between foolishness and wisdom, overcoming unwholesome thoughts, practising sense-restraint, teaching or explaining the Dharma.<span class="note" id="mn33n69"><span class="details"><span class="p">[n.69] Fragment no. 2380/50bc of the Schøyen collection differs from the other versions in as much as it lists evil friendship as one of the bad qualities of a monk: bhikṣuḥ pāpamitro bhavati pāpasahāyo. Fragment no. 2380/51ac-d of the Schøyen collection does, however, agree with the other versions on the overall count of eleven qualities.</span></span></span></li>
+</ul>
+<p>Another quality in the Pāli versions is the need to approach learned monks. A difference in this case is that while in the Majjhima-nikāya and Aṅguttara-nikāya versions the learned monks to be approached are well versed in the discourses, the Vinaya and the “summaries” (mātikā),<span class="note" id="mn33n70"><span class="details"><span class="p">[n.70] <a href="../../mn/mn33.html">MN 33</a> at MN I 221,22 and <a href="../../an/an11.18.html">AN 11:18</a> at AN V 349,16. T 1509 at T XXV 74a28 only refers to these elder monks as “expounders of the Dharma”, 說法者.</span></span></span> the Saṃyukta-āgama version speaks of being knowledgeable oneself, and that in regard to the discourses, the Vinaya, and the Abhidharma.<span class="note" id="mn33n71"><span class="details"><span class="p">[n.71] <a href="../../parallels/sa1249.html">SĀ 1249</a> at T II 343a11: 阿毘曇. <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 794b14 instead lists the twelve aṅgas. Notably, the *Mahāprajñāpāramitā-(upadeśa-)sāstra has a version of this quality that is close to the presentation in the Pāli discourses, T 1509 at T XXV 74a28: “[he] is able to approach learned monks to inquire about the Dharma”, 能至多聞比丘所問法.</span></span></span> This is not an isolated instance, as Chinese Āgama discourses tend to speak of Abhidharma on instances where Pāli discourses refer to “summaries” (mātikā).<span class="note" id="mn33n72"><span class="details"><span class="p">[n.72] Other occurrences of the term mātikā can be found in <a href="../../dn/dn16.html">DN 16</a> at DN II 125,7, <a href="../../an/an3.20.html">AN 3:20</a> at AN I 117,29, <a href="../../an/an4.160.html">AN 4:160</a> at AN II 147,29, <a href="../../an/an4.180.html">AN 4:180</a> at AN II 169,18, <a href="../../an/an5.156.html">AN 5:156</a> at AN III 179,2, <a href="../../an/an6.51.html">AN 6:51</a> at AN III 361,24, <a href="../../an/an10.11.html">AN 10:11</a> at AN V 16,1, and <a href="../../an/an11.18.html">AN 11:18</a> at AN V 349,16. In regard to these occurrences, if there are Chinese parallels at all, these do not mention the term mātikā. This finding may at first sight seem to corroborate the remark made by Anesaki 1901: 898 that “we find no mention of this term in the Chinese Āgamas”. This does, however, not appear to be entirely the case, as the parallels to <a href="../../mn/mn104.html">MN 104</a>, <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755a17 and T 85 at T I 906a18, do refer to the mātikās as 母者 and 摩怛里迦, although in this case mātikās are not mentioned in the Pāli version. It would be easily understandable if Anesaki should have overlooked this instance, since on coming across the expression 母者, literally “mother”, one would hardly expect it to render whatever equivalent to mātika was found in the original text; cf. also Bapat 1968: 364. Apart from the Āgamas, the mātikās or mātṛkās occur regularly in the (Mūla-)Sarvāstivāda Vinaya, cf. Dutt 1984b: 173,8, id. 1984c: 122,4, id. 1984d: 97,13, Gnoli 1978b: 3,19, 44,16, and 71,6, translated in Schopen 2000: 101 as “summary”, T 1451 at T XXIV 408b6: 摩窒里迦, and its Tibetan counterpart ma lta bu in Waldschmidt 1951: 243,5, as is also the case for the Divyāvadāna in Cowell 1886: 18,15 and 333,7 or Vaidya 1999: 11,17 and 206,10 (notably, a reference to the eight mātṛkāpadāni in the Kaṭhinavastu in Chang 1957: 58,8 has as its Chinese counterpart in T 1449 at T XXIV 98c11 just 相, while the Tibetan translation reads ma mo’i gzhi; cf. Chang 1957: 114,21). Hirakawa 1993/1998: 142 explains that “the term ‘mātṛkā’ is still preserved in the treatises of the Theravāda Abhidhammapiṭaka, but it has been expunged from the Sarvāstivāda Abhidharmapiṭaka and the Śāriputrābhidharmaśāstra, and [has been] replaced with the term ‘abhidharma’”.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 4.5: Qualities of a Monk in <a href="../../mn/mn33.html">MN 33</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn33.html">MN 33</a> & <a href="../../an/an11.18.html">AN 11:18</a></th><th><a href="../../parallels/sa1249.html">SĀ 1249</a></th></tr>
+<tr><td>knows 4 elements (1)</td><td>knows 4 elements (→ 1)</td></tr>
+<tr><td>knows actions of fool and wise (2)</td><td>knows actions of fool and wise (→ 2)</td></tr>
+<tr><td>removes unwholesome states (3)</td><td>removes unwholesome states (→ 3)</td></tr>
+<tr><td>restrains senses (4)</td><td>restrains senses (→ 4)</td></tr>
+<tr><td>teaches Dharma to others (5)</td><td>explains Dharma to others (→ 5)</td></tr>
+<tr><td>questions others (6)</td><td>knows eightfold path (→ 8)</td></tr>
+<tr><td>is inspired by the Dharma (7)</td><td>is inspired by the Dharma (→7)</td></tr>
+<tr><td>knows eightfold path (8)</td><td>questions others (→ 6)</td></tr>
+<tr><td>knows 4 satipaṭṭhānas (9)</td><td>knows 4 satipaṭṭhānas (→ 9)</td></tr>
+<tr><td>is moderate with requisites (10)</td><td>is moderate with requisites (→ 10)</td></tr>
+<tr><td>practises mettā towards elders (11)</td><td>is respectful towards elders (→ 11)</td></tr>
+<tr><td><a href="../../parallels/ea49.173.html">EĀ 49.173</a></td><td>T 123</td></tr>
+<tr><td>knows 4 elements (→ 1)</td><td>knows 4 elements (→ 1)</td></tr>
+<tr><td>knows actions of fool and wise (→ 2)</td><td>knows conditions of fool and wise (→ 2)</td></tr>
+<tr><td>removes unwholesome states (→ 3)</td><td>removes unwholesome states (→ 3)</td></tr>
+<tr><td>restrains senses (→ 4)</td><td>restrains senses (→ 4)</td></tr>
+<tr><td>teaches Dharma to others (→ 5)</td><td>teaches Dharma (→ 5)</td></tr>
+<tr><td>knows eightfold path (→ 8)</td><td>practises eightfold path (→ 8)</td></tr>
+<tr><td>is inspired by the Dharma (→ 7)</td><td>is inspired by the Dharma (→ 7)</td></tr>
+<tr><td>knows 12 aṅgas</td><td>knows 4 noble truths</td></tr>
+<tr><td>knows 4 satipaṭṭhānas (→ 9)</td><td>knows 4 satipaṭṭhānas (→ 9)</td></tr>
+<tr><td>is moderate with requisites (10)</td><td>is moderate with requisites (10)</td></tr>
+<tr><td>is respectful towards elders (→ 11)</td><td>is respectful towards elders (→ 11)</td></tr>
+<tr><td>(≠ 6)</td><td>(≠ 6)</td></tr>
+</table>
+<p>This difference in terminology need not imply a major difference in meaning, since the development of the Abhidharma might be related to such “summaries”, in the sense of collections of key terminology for the purpose of memorizing and deepening one’s understanding of the Dharma.<span class="note" id="mn33n74"><span class="details"><span class="p">[n.74] On the relation of the mātikās to the Abhidharma cf., e.g., Anacker 1975: 59-60, Bronkhorst 1985, Buswell 1996: 84-89, Cox 1995: 8, Frauwallner 1971b: 116-117, Gethin 1992b: 158-162, Gómez 1987/ 2005: 1270, Hofinger 1946: 230, Horner 1941: 292, Hirakawa 1993/1998: 140-142, Jaini 1977: 45, Migot 1952: 524-530, Muck 1980: 15-16, Norman 1997: 51, Przyluski 1926: 334-335, Ronkin 2005: 27-30, Warder 1961a, Watanabe 1983/1996: 42-45, and Yìnshùn 1971/1983: 252.</span></span></span> The nucleus of such summaries could have been the mental qualities and practices that were later on known under the heading of the “thirtyseven requisites to awakening” (bodhipakkhiyā dhammā), to which other categories were added over the course of time.<span class="note" id="mn33n75"><span class="details"><span class="p">[n.75] This seems to be suggested by <a href="../../mn/mn103.html">MN 103</a> at MN II 238,26, which lists the thirty-seven bodhipakkhiyā dharmas and then at MN II 239,4 continues to speak, in apparent reference to this list, of ‘abhidharma’. Cf. also the definition of mātika found in the (Mūla-)Sarvāstivāda Vinaya in T 1451 at T XXIV 408b6, which begins with the set of thirty-seven dharmas and then lists such items as, e.g., the four types of fearlessness, the four fruits of recluse-ship, the three samādhis, tranquillity and insight, etc.; cf. also Cox 2004a: 2, who explains that “the need to memorize the teaching obviously promoted the use of categorizing lists as a mnemonic device”.</span></span></span> According to the Pāli commentaries, however, the expression mātikā stands for two mātikās, namely the code of rules for monks and nuns, the two pātimokkhas.<span class="note" id="mn33n76"><span class="details"><span class="p">[n.76] This is the gloss given at Mp II 189,23 on the expression mātikādharā in <a href="../../an/an3.20.html">AN 3:20</a> at AN I 117,29 as dvemātikādharā, the implication of which become clear in Mp III 382,11 (which comments on another occurrence of the same expression in <a href="../../an/an6.51.html">AN 6:51</a> at AN III 361,24): mātikādharā ti dvepātimokkhadharā; cf. also Be-Sp-ṭ III 39: dve mātikā ti bhikkhumātikā bhikkhunīmātikā ca and Be-Kkh-pṭ 126: ubhayāni pātimokkhāni, dve mātikā ti attho. According to von Hinüber 1994c: 115-117, the term mātikā may have originally referred to the pātimokkha and the Vinaya methodology implicit in this term, in the sense of listings of terms or sentences, and would then have been applied to the nascent Abhidharma literature (ibid. pp. 120-121); cf. also Hu-von Hinüber 1994: 230-231. On the Vinaya mātṛkās (using the term in a more general sense) cf. also Sung 1999, on their importance for understanding the structural development of the different Vinayas cf. Clarke 2004.</span></span></span> In a way, the pātimokkha is a “summary” of proper monastic conduct, just as the requisites to awakening are a “summary” of the path of meditative practice, hence these two senses of mātikā seem not to be too different from each other.</p>
+<p>Be that as it may, the Pāli and Chinese versions also highlight the importance of the following qualities:</p>
+<ul>
+<li>feeling inspired when the Buddha teaches the Dharma,<span class="note" id="mn33n77"><span class="details"><span class="p">[n.77] A minor difference in terminology is that while <a href="../../mn/mn33.html">MN 33</a> at MN I 221,29 speaks of the dhamma-vinaya, the Chinese parallels mention only the Dharma, cf. <a href="../../parallels/sa1249.html">SĀ 1249</a> at T II 343a8, which speaks of the “Dharma known to the Tathāgata”, 如來所知法; <a href="../../parallels/ea49.1.html">EĀ 49.1</a> at T II 794c26, which refers to the “Dharma treasure proclaimed by the Tathāgata”, 如來所說法寶; T 123 at T II 547a11, which mentions the “proclamation of the Dharma treasure”, 說法寶; and T 1509 at T XXV 74a26, which has the “proclamation of the Buddha-Dharma”, 說佛法. In other Pāli discourses, the compound dhamma-vinaya often stands for a system of teaching in its entirety and is used as such in relation to other teachers, such as the dhammavinaya of Āḷāra Kālāma and Uddaka Rāmaputta in <a href="../../mn/mn26.html">MN 26</a> at MN I 163,35 and MN I 165,18, or the dhammavinaya of each of the six heretical teachers in <a href="../../mn/mn77.html">MN 77</a> at MN II 3,24; cf. also Geiger 1920: 56. Carter 1978: 69 suggests that “in the early period ... this compound was probably a tappurisa in locative relation, meaning ‘training in dhamma’ and ... later, as the training became more thoroughly formulated, the compound might have lent itself to being interpreted as dhamma and discipline”; on the compound dhamma-vinaya cf. also Bechert 1997: 61.</span></span></span></li>
+<li>understanding the noble eightfold path,</li>
+<li>being skilled in the four satipaṭṭhānas,</li>
+<li>being moderate when accepting requisites.</li>
+</ul>
+<p>The quality mentioned last in all versions is to accord proper respect to elder monks of long standing. While the Chinese versions only mention the need for respectful behaviour in regard to these elders,<span class="note" id="mn33n78"><span class="details"><span class="p">[n.78] <a href="../../parallels/sa1249.html">SĀ 1249</a> at T II 343a21, <a href="../../parallels/ea49.1.html">EĀ 49.1</a> at T II 794b21, T 123 at T II 546c3, and T 1509 at T XXV 74b13.</span></span></span> the Pāli versions highlight the importance of developing loving kindness by way of body, speech, and mind towards them.<span class="note" id="mn33n79"><span class="details"><span class="p">[n.79] <a href="../../mn/mn33.html">MN 33</a> at MN I 222,9 and <a href="../../an/an11.18.html">AN 11:18</a> at AN V 350,13.</span></span></span></p>
+<p>This emphasis on the need to develop mettā in the Pāli versions and the absence of such a treatment in the Chinese versions is noteworthy.<span class="note" id="mn33n80"><span class="details"><span class="p">[n.80] <a href="../../mn/mn33.html">MN 33</a> and <a href="../../an/an11.18.html">AN 11:18</a> are thus instances where Pāli discourses lay more stress on the practice of the brahmavihāras than their Chinese parallels, in contrast to the opposite tendency noticed in relation to <a href="../../mn/mn25.html">MN 25</a>, cf. above p. 169.</span></span></span> At an earlier point the two Pāli versions, in agreement with their Chinese parallels, also reckoned teaching the Dharma to others as an important aspect of a monk’s progress.<span class="note" id="mn33n81"><span class="details"><span class="p">[n.81] According to <a href="../../mn/mn33.html">MN 33</a> at MN I 222,17, a monk who does not develop these eleven qualities, one of which is to teach others, will be “unable to come to growth, increase, and fulfilment in this Dharma and discipline”, abhabbo imasmiṃ dhammavinaye vuddhiṃ virūḷhiṃ vepullaṃ āpajjituṃ (Se-MN I 413,17: vuḍḍhiṃ), cf. also <a href="../../an/an11.8.html">AN 11:8</a> at AN V 350,22. <a href="../../parallels/sa1249.html">SĀ 1249</a> at T II 342c19 indicates that such a monk will “not be able to pacify himself, nor [be able] to pacify others”, 不能自安, 亦不安他; according to <a href="../../parallels/ea49.1.html">EĀ 49.1</a> at T II 794b24 he will be “unable to get much benefit in this Dharma”, 不能於此法中多所饒益; and according to T 123 at T II 546a27 such a monk will not only be unable to grow in the Dharma, but will even “fall into the three evil paths after death”, 死墮三惡道. T 1509 examines only the positive case of a monk who is endowed with all eleven qualities and therefore does not describe the result of being without them.</span></span></span></p>
+<p>Such concern for others is not an exceptional case, since a passage in the Aṅguttaranikāya shows a similar attitude. This passage contrasts those who are only concerned with their own welfare with those who are concerned with their own welfare and the welfare of others. According to this discourse, those who are only concerned with their own welfare are “blameworthy” on that account, whereas those who are concerned with their own and others’ welfare are “praiseworthy” by comparison.<span class="note" id="mn33n82"><span class="details"><span class="p">[n.82] <a href="../../an/an7.64.html">AN 7:64</a> at AN IV 116,22+23, using the terms gārayha and pāsaṃsa. It is noteworthy that the Chinese parallels to this discourse treat the case of one who acts only for his or her own benefit with much softer criticism, as <a href="../../parallels/ma1.html">MĀ 1</a> at T I 422a6 and T 27 at T I 810b22 merely indicate that those who also benefit others are superior and more excellent than those who are only concerned with their own benefit (a third parallel, <a href="../../parallels/ea39.1.html">EĀ 39.1</a> at T II 728b-729b, does not cover this case at all). A study of the different versions of this discourse can be found in Schmithausen 2004.</span></span></span></p>
+<p>In line with this stipulation on being intent on one’s own and others’ welfare, the Mahāgopālaka-sutta and its Aṅguttara-nikāya parallel make it clear that concern for others, represented by the quality of loving kindness towards elders and by the willingness to teach the Dharma, should not be neglected. At the same time, by presenting these qualities within a context of other qualities aimed at one’s own meditative development, such concern for others is put within proper perspective, suggesting that it should not be allowed to overshadow the other qualities, but should be subordinated to the principal task of progress towards liberation.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

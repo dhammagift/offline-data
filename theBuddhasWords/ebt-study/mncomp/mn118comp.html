@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 118 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 118: Ānāpānasati-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn117comp.html#content"></a><a id="next-sutta" href="./mn119comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn118.html">MN 118</a> / <a href="../../parallels/sa803.html">SĀ 803</a> / <a href="../../parallels/sa815.html">SĀ 815</a> / <a href="../../parallels/sa-3.15.html">SĀ³ 3.15 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Ānāpānasati-sutta, the “discourse on mindfulness of breathing in and out”, offers a detailed exposition of mindfulness of breathing and of its relation to the four satipaṭṭhānas, to the seven factors of awakening, and to knowledge and liberation. This discourse has a parallel in the Saṃyukta-āgama.<span class="note" id="mn118n120"><span class="details"><span class="p">[n.120] The parallel is <a href="../../parallels/sa815.html">SĀ 815</a> at T II 209b-210a and takes place in Jeta’s Grove, while <a href="../../mn/mn118.html">MN 118</a> takes place in the Hall of Migāra’s Mother in the same Sāvatthī. Akanuma 1929/1990: 77 gives “observance day”, 布薩, as a tentative title for <a href="../../parallels/sa815.html">SĀ 815</a>. According to ibid. p. 169, another parallel should be the individual translation T 96 at T I 919a-b. Apart from a single sentence that relates the practice of mindfulness of breathing to the acquisition of knowledge and liberation, however, this discourse has nothing in common with <a href="../../mn/mn118.html">MN 118</a>. Zürcher 1995: 166 note 8 comments that T 96 “appears to be an independent treatise ... not based upon the prototype of the Pali ānāpāna-sati-sutta”. For a Sanskrit fragment with instructions on mindfulness of breathing cf. below note 140.</span></span></span></p>
+<p>The Ānāpānasati-sutta and its Saṃyukta-āgama counterpart begin with an introductory narration, according to which senior monks were instructing junior monks in various ways.<span class="note" id="mn118n121"><span class="details"><span class="p">[n.121] An introductory narration that is similar in several respects can be found in <a href="../../an/an4.190.html">AN 4:190</a> at AN II 183,16. According to <a href="../../mn/mn118.html">MN 118</a> at MN III 79,2, Ānanda was among the monks present on this occasion (<a href="../../parallels/sa815.html">SĀ 815</a> does not list the elders that were present). In <a href="../../sn/sn54.13.html">SN 54:13</a>-14 at SN V 328-334 and <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a-c, Ānanda receives the same instruction on mindfulness of breathing on yet another occasion. Since according to <a href="../../sn/sn54.13.html">SN 54:13</a> and <a href="../../parallels/sa810.html">SĀ 810</a> the instruction was prompted by an inquiry by Ānanda, it should presumably be considered earlier than the exposition in <a href="../../mn/mn118.html">MN 118</a>, since if Ānanda had already heard the exposition given in <a href="../../mn/mn118.html">MN 118</a>, he would not have needed to request another exposition of the same matter on a subsequent occasion. In contrast, his mere presence as a member of a group of monks to whom <a href="../../mn/mn118.html">MN 118</a> was delivered would not conflict with him having personally received the same exposition already on an earlier occasion.</span></span></span> According to the Majjhima-nikāya account, the Buddha expressed his appreciation of the serious practice of the monks by stating that they were worthy of respect and offerings. The Saṃyukta-āgama version reports him expressing his appreciation by declaring that the monk disciples of former and future Buddhas had practised and will practise in the same way.<span class="note" id="mn118n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/sa815.html">SĀ 815</a> at T II 209c17.</span></span></span></p>
+<p>The two versions differ to some degree in their description of the distinctions attained and the practices undertaken by the members of the assembled community of monks (see table 12.7). They agree that each of the four stages of awakening had been reached by some of the monk disciples present on this occasion. The Saṃyukta-āgama discourse indicates that some of the monks had also attained:</p>
+<ul>
+<li>the jhānas,</li>
+<li>the immaterial attainments,</li>
+<li>the supernormal knowledges (abhiññā).</li>
+</ul>
+<p>In addition to listing their attainments, the Ānāpānasati-sutta and its parallel also describe the meditation practices undertaken by some of the monks, who were engaged in practising:</p>
+<ul>
+<li>the brahmavihāras,<span class="note" id="mn118n123"><span class="details"><span class="p">[n.123] While <a href="../../mn/mn118.html">MN 118</a> at MN III 81,30 describes monks undertaking each of the four brahmavihāras, <a href="../../parallels/sa815.html">SĀ 815</a> at T II 209c29 only mentions their practice of loving kindness. In its earlier description of the attainments of the monks, however, <a href="../../parallels/sa815.html">SĀ 815</a> at T II 209c21 mentions all four brahmavihāras. As this implies that the monks must have been undertaking the respective brahmavihāra practices, the two versions seem to agree that some monks were developing each of the four brahmavihāras.</span></span></span></li>
+<li>meditation on the impure,</li>
+<li>perception of impermanence,</li>
+<li>mindfulness of breathing.</li>
+</ul>
+<p>The Saṃyukta-āgama discourse also explains the purpose of these practices, indicating that the monks undertook contemplation of the impure to counter sensual desire, meditation on loving kindness to counter anger, perception of impermanence to counter conceit, and mindfulness of breathing to counter (distracting) thoughts and perceptions.<span class="note" id="mn118n124"><span class="details"><span class="p">[n.124] A similar correlation of these meditation practices with these mental obstructions can be found in other Pāli discourses, with the minor difference that, whereas according to <a href="../../parallels/sa815.html">SĀ 815</a> at T II 210a1 mindfulness of breathing “removes thoughts and perceptions”, 斷覺想, <a href="../../an/an9.1.html">AN 9:1</a> at AN IV 353,11 (cf. also Ud 4:1 at Ud 37,17) does not mention perceptions and only indicates that mindfulness of breathing leads to “cutting of thoughts”, vitakkūpacchedāya (Be-AN III 165,14: vitakkupacchedāya, Ce-AN V 370,18: vitakkapacchedāya).</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 12.7: Qualities of the Assembled Monks in <a href="../../mn/mn118.html">MN 118</a> and <a href="../../parallels/sa815.html">SĀ 815</a></caption>
+<tr><th><a href="../../mn/mn118.html">MN 118</a></th><th><a href="../../parallels/sa815.html">SĀ 815</a></th></tr>
+<tr><td>full awakening (1)</td><td>1st, 2nd, 3rd, 4th absorption, loving kindness, compas-</td></tr>
+<tr><td>non-returning (2)</td><td>sion, sympathetic joy, equanimity, 1st, 2nd, 3rd, 4th</td></tr>
+<tr><td>once-returning (3)</td><td>immaterial attainment (→ 12, 13, 14, 15)</td></tr>
+<tr><td>stream-entry (4)</td><td>stream-entry (→ 4)</td></tr>
+<tr><td>4 satipaṭṭhānas (5)</td><td>once-returning (→ 3)</td></tr>
+<tr><td>4 right efforts (6)</td><td>non-returning (→ 2)</td></tr>
+<tr><td>4 bases of power (7)</td><td>supernormal powers, divine ear, know others’ minds,</td></tr>
+<tr><td>5 faculties (8)</td><td>recollect past lives, know re-arising of beings, de-</td></tr>
+<tr><td>5 powers (9)</td><td>stroy influxes (→ 1)</td></tr>
+<tr><td>7 factors of awakening (10)</td><td>contemplation of impurity, loving kindness, percep-</td></tr>
+<tr><td>noble eightfold path (11)</td><td>tion of impermanence, mindfulness of breathing</td></tr>
+<tr><td>loving kindness (12)</td><td>(→ 16, 17, 18)</td></tr>
+<tr><td>compassion (13)</td><td></td></tr>
+<tr><td>sympathetic joy (14)</td><td></td></tr>
+<tr><td>equanimity (15)</td><td></td></tr>
+<tr><td>impurity (16)</td><td></td></tr>
+<tr><td>perception of impermanence (17)</td><td></td></tr>
+<tr><td>mindfulness of breathing (18)</td><td>(≠ 5-11)</td></tr>
+</table>
+<p>According to the Majjhima-nikāya version, some monks were also engaged in practising each of the different sets of mental qualities and practices that make up the thirty-seven requisites to awakening (bodhipakkhiyā dhammā). None of these is mentioned in the Saṃyukta-āgama version. The way the requisites to awakening are introduced in the Ānāpānasati-sutta appears to be modelled on the description of the different levels of attainments mentioned earlier, even though this mode of description does not fit a listing of the requisites of awakening too well.<span class="note" id="mn118n125"><span class="details"><span class="p">[n.125] E.g., the description in <a href="../../mn/mn118.html">MN 118</a> at MN III 81,25 that there were monks who practised the noble eightfold path, santi ... bhikkhū imasmiṃ bhikkhusaṅghe ariyassa aṭṭhaṅgikassa maggassa bhāvanānuyogam anuyuttā viharanti, reads almost as if other monks present on this occasion did not develop the eightfold noble path. Judging from the way the whole company of monks has just been praised, this would hardly have been the case, giving rather the impression that all of them would have been engaged in developing the noble eightfold path.</span></span></span> This, together with the absence of this whole passage from the parallel version, suggests the possibility that the requisites to awakening might not have been part of the original exposition.</p>
+<p>The Ānāpānasati-sutta and its parallel take up the practice of mindfulness of breathing in sixteen steps, which they correlate with the four satipaṭṭhānas.<span class="note" id="mn118n126"><span class="details"><span class="p">[n.126] <a href="../../parallels/sa815.html">SĀ 815</a> at T II 210a2 has abbreviated this whole section, which thus needs to be supplemented with the full treatment given in <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a-208c (translated in Anālayo 2007d), a discourse that parallels <a href="../../sn/sn54.13.html">SN 54:13</a> at SN V 328-333. The initial exposition of the sixteen steps of mindfulness of breathing in <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a23 is again abbreviated, and thus needs to be supplemented with the full treatment given in <a href="../../parallels/sa803.html">SĀ 803</a> at T II 206a27. Judging from the abbreviation in <a href="../../parallels/sa815.html">SĀ 815</a>, however, it seems as if only the treatment of the sixteen steps found in <a href="../../parallels/sa803.html">SĀ 803</a> should be supplemented, not the relation of these sixteen steps to the seven awakening factors and to knowledge and liberation given in <a href="../../parallels/sa810.html">SĀ 810</a>. For a comparative study of the sixteen steps in a range of sources cf. Dhammajoti 2008. A discourse quotation on mindfulness of breathing as a mode of practising the four satipaṭṭhānas can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 134b18.</span></span></span> A minor but noteworthy difference in relation to the third step of mindfulness of breathing is that whereas the Majjhima-nikāya instructions speak of experiencing the “whole body”,<span class="note" id="mn118n127"><span class="details"><span class="p">[n.127] <a href="../../mn/mn118.html">MN 118</a> at MN III 83,26: sabbakāyapaṭisaṃvedī.</span></span></span> its Saṃyukta-āgama counterpart speaks of experiencing “all bodily formations”.<span class="note" id="mn118n128"><span class="details"><span class="p">[n.128] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a25: 一切身行覺知. Listings of the sixteen steps of mindfulness of breathing in other meditation treatises preserved in Chinese, T 602 at T XV 165a12 and T 606 at T XV 216a15, speak in this context of knowing the “bodily motions”, 動身. The Śrāvakabhūmi, Shukla 1973: 230,3 or ŚSG 2007: 96,3 and T 1579 at T XXX 432b2, which otherwise agrees closely with the presentation in <a href="../../parallels/sa810.html">SĀ 810</a>, instructs to experience the whole body, sarvakāyapratisaṃvedī/了遍身, thereby corresponding to the Pāli instructions for this third step of mindfulness of breathing. The same is also the case for the corresponding instruction in the Mahāvyutpatti no. 1177 in Sakaki 1926: 89, according to which this step of practice is concerned with the “body”, sarvakāyapratisaṃvedya, and the bodily formations occur only in the next step, prasrabhya kāyasaṃskārān. Sanskrit fragments of a meditation treatise that contains instructions on mindfulness of breathing, the “Yogalehrbuch”, also do not seem to have brought in formations in their description of this third step of mindfulness of breathing, cf. fragment 118V4: sarvak[ā](yapratisaṃvedanāyām) and fragment 122R5: (sarvakā)yapratisaṃ(vedanāyām) in Schlingloff 1964: 69 and 75. The *Mahāprajñāpāramitā(-upadeśa)-śāstra, T 1509 at T XXV 138a11, also follows awareness of long and short breaths with awareness of the whole body, although in its presentation this forms the fourth step of practice. Of interest in relation to this third step of mindfulness of breathing is also the 坐禪三昧經, T 614 at T XV 275b26, which describes how awareness during this third step of mindfulness of breathing “pervades and reaches inside the body up to the toes and the fingers, pervading every pore [of the body]”, 覺知遍至身中乃至足指遍諸毛孔, “being aware from the feet to the hair”, 覺知從足至髮, a practice it compares to water entering sand, 如水入沙. A more detailed discussion of this instruction in the light of modern day meditation practice can be found in Anālayo 2006a.</span></span></span></p>
+<p>The Majjhima-nikāya instructions for the third step of mindfulness of breathing can be interpreted in different ways, as they could be taken to refer to the ‘body’ of the breath, or else to the whole physical body.<span class="note" id="mn118n129"><span class="details"><span class="p">[n.129] Cf. the discussion above p. 351 and Anālayo 2007d: 144-146.</span></span></span> Since other Pāli and Chinese discourses identify the breath as a “bodily formation”,<span class="note" id="mn118n130"><span class="details"><span class="p">[n.130] <a href="../../sn/sn41.6.html">SN 41:6</a> at SN IV 293,22: assāsapassāsā ... kāyasaṅkhāro and <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150a24: 出息入息名為 身行.</span></span></span> the formulation in the Saṃyukta-āgama presentation fits the interpretation according to which the breath is the exclusive object of mindfulness at this stage, instead of awareness encompassing the breath together with the physical body.</p>
+<p>In regard to another instance of this instruction in the Mahārāhulovāda-sutta, however, the corresponding Ekottarika-āgama version directs awareness to the “body”,<span class="note" id="mn118n131"><span class="details"><span class="p">[n.131] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582b1: “completely contemplate the physical body [when] breathing in, [when] breathing out, coming to know it entirely”, 盡觀身體入息, 出息, 皆悉知之.</span></span></span> as does a Madhyama-āgama parallel to another instance of this instruction in the Satipaṭṭhāna-sutta.<span class="note" id="mn118n132"><span class="details"><span class="p">[n.132] <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582c16: “he trains [to experience] the whole body [when] he breathes in, he trains [to experience] the whole body [when] he breathes out”, 學一切身息入, 學一切身息出.</span></span></span> Another Saṃyukta-āgama discourse speaks also just of the “body” in its instructions for the third step of mindfulness of breathing, thereby agreeing with the way this instruction is formulated in the Pāli discourses as well as in the Madhyamaāgama and the Ekottarika-āgama.<span class="note" id="mn118n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/sa807.html">SĀ 807</a> at T II 207a19 agrees closely with the presentation in <a href="../../mn/mn118.html">MN 118</a>, as it proceeds from “experiencing the whole body”, 一切身覺, to “calming the bodily formations”, 身行休息.</span></span></span></p>
+<p>Thus, the formulation of the third step of mindfulness of breathing in the Saṃyuktaāgama counterpart to the Ānāpānasati-sutta could be the result of a transmission or translation error, where the reference to bodily formations in the fourth step of the sixteen-fold scheme influenced the formulation of the third step.<span class="note" id="mn118n134"><span class="details"><span class="p">[n.134] This possibility suggests itself from <a href="../../parallels/sa803.html">SĀ 803</a> at T II 206a28, which instructs to “experience and know the whole body”, 覺知一切身, followed by instructing to “experience and know all bodily formations”, 覺知一切身行. As <a href="../../parallels/sa803.html">SĀ 803</a> does not refer to the fourth step of calming bodily formations at all, it seems as if some confusion during transmission or translation has occurred. Thus <a href="../../parallels/sa807.html">SĀ 807</a> could still preserve the original version, <a href="../../parallels/sa803.html">SĀ 803</a> shows what could be a transitional stage, where the original and the changed instruction stand side by side, while in <a href="../../parallels/sa810.html">SĀ 810</a> only the altered instruction is found.</span></span></span></p>
+<p>Another difference in regard to this first tetrad of mindfulness of breathing is that the Majjhima-nikāya version uses the injunction “to know” in relation to the first two steps, after which it enjoins “to train” in relation to the remaining steps.<span class="note" id="mn118n135"><span class="details"><span class="p">[n.135] <a href="../../mn/mn118.html">MN 118</a> at MN III 82,28-32 uses the expression “he knows”, pajānāti, in relation to the first two steps of being mindful of the breath as long or short, but then uses the expression “he trains”, sikkhati, from step three onwards during the remainder of its exposition. The instructions in the Path to Liberation (Vimuttimagga/解脫道論), T 1648 at T XXXII 429c28, are similar to <a href="../../mn/mn118.html">MN 118</a>. Buddhadāsa 1971/1976: 63 explains this change of terminology to imply that “from stage 3 onwards we are concerned with the real practice, the training proper”, whereas “stages 1 and 2 are just preliminaries”. The Arthaviniścayasūtra in Samtani 1971: 43-45 (cf. also T 763 at T XVII 657b29), however, does not use “training” in relation to any of the sixteen steps.</span></span></span> The Saṃyukta-āgama version instead speaks of “training” throughout.<span class="note" id="mn118n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a24 enjoins to “train”, 學, already in relation to the preliminary step of just knowing in- and out-breaths. The Śrāvakabhūmi, Shukla 1973: 230,1 or ŚSG 2007: 96,1 and T 1579 at T XXX 432a29, agrees in this respect with <a href="../../parallels/sa810.html">SĀ 810</a>, as it also speaks of “training”, śikṣate/學, right away from the preliminary step of just knowing in- and out-breaths. Nevertheless, from the perspective of textual transmission it seems more likely that the detail of not applying the expression ‘training’ to the first and second phases of practice was subsequently forgotten, instead of imagining that it could have been introduced at a later stage.</span></span></span></p>
+<p>Yet another difference can be found in regard to the final four steps of mindfulness of breathing. In the Ānāpānasati-sutta, these final four steps proceed from contemplating impermanence to contemplating fading away, cessation, and relinquishment.<span class="note" id="mn118n137"><span class="details"><span class="p">[n.137] <a href="../../mn/mn118.html">MN 118</a> at MN III 84,28: aniccānupassī ... virāgānupassī ... nirodhānupassī ... paṭinissaggānupassī.</span></span></span> The Saṃyukta-āgama version instead follows contemplation of impermanence with contemplating eradication, fading away, and cessation.<span class="note" id="mn118n138"><span class="details"><span class="p">[n.138] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b10: 觀無常, 斷, 無欲, 滅.</span></span></span> While the sequence found in the Ānāpānasati-sutta recurs in the Arthaviniścaya-sūtra and in the Path to Liberation (Vimuttimagga),<span class="note" id="mn118n139"><span class="details"><span class="p">[n.139] The Arthaviniścaya-sūtra in Samtani 1971: 45,1, with its Chinese counterpart in T 763 at T XVII 658a1, and the Path to Liberation (Vimuttimagga/解脫道論) in T 1648 at T XXXII 430a5; cf. also the 坐禪三昧經, T 614 at T XV 275c24 (on this work cf. Deleanu 1992: 48).</span></span></span> the sequence adopted in the Saṃyukta-āgama version recurs in the Śrāvakabhūmi and in the so-called Yogalehrbuch.<span class="note" id="mn118n140"><span class="details"><span class="p">[n.140] The Śrāvakabhūmi, Shukla 1973: 231,6 or ŚSG 2007: 96,14 and T 1579 at T XXX 432b21, proceeds from anityānudarśī/無常 to prahāṇānudarśī/斷, virāgānudarśī/離欲, and nirodhānudarśī/滅. The relevant parts in the so-called Yogalehrbuch in Schlingloff 1964: 82-83 are fragment 128V1: prahāṇānu [pa]śyanāyām and 128V2: (vi)rāgānupaśya[n](āyām), followed by nirodhānupaśyanāyām. For a reference to a[ni](tyānupaśyī) in the context of instructions on mindfulness of breathing cf. SHT IX 3091Rz (p. 348). A comparable sequence can also be found in <a href="../../dn/dn33.html">DN 33</a> at DN III 251,9, <a href="../../dn/dn34.html">DN 34</a> at DN III 291,9, <a href="../../sn/sn46.71.html">SN 46:71</a>-76 at SN V 132-133, <a href="../../sn/sn55.3.html">SN 55:3</a> at SN V 345,23, <a href="../../an/an6.35.html">AN 6:35</a> at AN III 334,6, <a href="../../an/an6.123.html">AN 6:123</a> at AN III 452,12, <a href="../../an/an10.56.html">AN 10:56</a> at AN V 105,24, and <a href="../../an/an10.217.html">AN 10:217</a> at AN V 309,19, which proceed from aniccānupassī or aniccasaññā (via the interim steps of anicce dukkhasaññā and dukkhe anattasaññā) to pahānasaññā, virāgasaññā, and nirodhasaññā, although these instances are not related to mindfulness of breathing.</span></span></span></p>
+<p>The Ānāpānasati-sutta and its parallel agree that the first four steps of mindfulness of breathing fulfil the first satipaṭṭhāna of body contemplation, as by undertaking them one contemplates something that pertains to the body.<span class="note" id="mn118n141"><span class="details"><span class="p">[n.141] <a href="../../mn/mn118.html">MN 118</a> at MN III 83,32: “I call this a certain body among bodies, namely breathing in and out”, kāyesu kāyaññatarāhaṃ ... etaṃ vadāmi yadidaṃ assāsapassāsaṃ (Be-MN III 126,11 and Ce-MN III 230,18: assāsapassāsā) and <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a29: “at that time [in regard to] the body he contemplates the body with mindfulness established on a certain kind of body”, 爾時身身觀念住異於身者 (my translation is based on assuming that 異於身者 renders an expression similar to kāyaññatara). A difference in regard to the description of this and subsequent tetrads is that <a href="../../mn/mn118.html">MN 118</a> in each case indicates that such contemplation is undertaken with diligence, clear comprehension, mindfulness, and while being free from desires or discontent in regard to the world, MN III 83,35: ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ, a specification not made in <a href="../../parallels/sa810.html">SĀ 810</a>.</span></span></span></p>
+<p>According to both versions, the next four steps of mindfulness of breathing correspond to the second satipaṭṭhāna, mindfulness of feelings. The Majjhima-nikāya version explains that the second tetrad of mindfulness of breathing fulfils the second satipaṭṭhāna because to give close attention to the breath should be understood as a certain feeling among feelings.<span class="note" id="mn118n142"><span class="details"><span class="p">[n.142] <a href="../../mn/mn118.html">MN 118</a> at MN III 84,9: “I call this a certain feeling among feelings, namely giving close attention to breathing in and out”, vedanāsu vedanāññatarāhaṃ ... vadāmi yadidaṃ assāsapassāsānaṃ sādhukaṃ manasikāraṃ (Ce-MN III 230,28: vedanaññatarāhaṃ). This explanation is puzzling, since it reckons attention as a feeling. Although paying close attention to the breath would lead to deeper concentration and therewith to the arising of pleasant feelings, to speak of attention to the breaths as a type of feeling does not seem to fit too well with the usage of the term “attention”, manasikāra, in other discourses. Ps IV 140,14 recognizes the difficulty with this passage and explains that it is just a figurative way of speech and does not intend “attention”, manasikāra, itself, but only its objects.</span></span></span> The Saṃyukta-āgama version instead explains that practice of the second tetrad involves giving attention to a type of feeling. It thus continues with the same mode of explanation that both versions had adopted in their earlier correlation between the first tetrad of mindfulness of breathing and the first satipaṭṭhāna.<span class="note" id="mn118n143"><span class="details"><span class="p">[n.143] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b4: “at that time [in regard to] feelings he contemplates feelings with mindfulness established on what is also a certain kind of feeling”, 爾時受受觀念住若復異受者 (adopting the 元 and 明 variant reading 隨受 instead of 受隨身, in analogy to the formulation found in <a href="../../parallels/sa810.html">SĀ 810</a> for contemplation of the mind and contemplation of dharmas). This explanation seems quite straightforward, since just as by being aware of the breath one is mindful of an aspect of the body, so too by being aware of feelings of joy and happiness and by calming such feelings during the second tetrad of mindfulness of breathing one is indeed mindful of feelings.</span></span></span></p>
+<p>According to the Majjhima-nikāya version, the third tetrad of mindfulness of breathing corresponds to contemplation of the mind because mindfulness of breathing cannot be properly developed without mindfulness and clear comprehension.<span class="note" id="mn118n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn118.html">MN 118</a> at MN III 84,23: “I do not say that there is development of mindfulness of breathing for someone who is without mindfulness and clear comprehension”, nāhaṃ ... muṭṭhassatissa asampajānassa ānāpānasatibhāvanaṃ vadāmi (Be-MN III 127,4: ānāpānassatiṃ, Se-MN III 197,1: ānāpānasatiṃ). This explanation is also to some extent puzzling, since one may wonder why the need for mindfulness and clear comprehension qualifies the third tetrad of mindfulness of breathing as an equivalent to contemplation of the mind. In fact, mindfulness and clear comprehension would already be required during the preceding steps of mindfulness of breathing. Although their presence at the present juncture might be particularly called for, so as to enable undertaking the more subtle contemplation of the mind, their presence would similarly be required when undertaking the final tetrad of mindfulness of breathing. That is, the statement that mindfulness and clear comprehension are required to develop mindfulness of breathing would apply to the entire set of sixteen steps and does not really explain why the third tetrad should be reckoned as an instance of contemplation of the mind in particular. Ps IV 141,23 explains that, even though the sign of breathing in and breathing out is the object, when a meditator establishes mindfulness and clear comprehension on the object of the mind, this form of practice should be reckoned as contemplation of the mind. This is certainly true, but then the same could be said for the preceding and subsequent steps of mindfulness of breathing as well, as these similarly require mindfulness and clear comprehension, but would nevertheless not be reckoned as instances of contemplation of the mind.</span></span></span> The Saṃyuktaāgama version simply explains that practice undertaken in this way is to give attention to the mind, thereby continuing with the type of explanation that it had for the earlier two tetrads.<span class="note" id="mn118n145"><span class="details"><span class="p">[n.145] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b8: “at that time [in regard to] the mind he contemplates the mind with mindfulness established on what is a certain [state of] mind”, 爾時心心觀念住若有異心者. In this case, too, the Saṃyukta-āgama version’s explanation seems quite straightforward, as by experiencing, gladdening, concentrating, and liberating the mind, this particular way of developing mindfulness of breathing becomes indeed an instance of contemplation of the mind.</span></span></span></p>
+<p>In regard to the final four steps of mindfulness of breathing, the Majjhima-nikāya version explains that this tetrad should be reckoned as contemplation of dharmas because at this stage a meditator has seen with wisdom that desires and discontent have been overcome and inspects properly and with equanimity.<span class="note" id="mn118n146"><span class="details"><span class="p">[n.146] <a href="../../mn/mn118.html">MN 118</a> at MN III 84,34: yaṃ taṃ abhijjhādomanassānaṃ pahānaṃ taṃ paññāya disvā sādhukaṃ ajjhupekkhitā hoti (Se-MN III 197,10: yan taṃ and pahānaṃ paññāya, without taṃ). According to the commentarial gloss, Ps IV 142,4, the reference to desires and discontent in this explanation intends the five hindrances, which form the beginning of contemplation of dharmas in <a href="../../mn/mn10.html">MN 10</a>. Yet, while <a href="../../mn/mn118.html">MN 118</a> speaks of desires and discontent being overcome, in the case of contemplation of the hindrances in <a href="../../mn/mn10.html">MN 10</a> at MN I 60,11 the hindrances have not yet been overcome, santaṃ vā ajjhattaṃ kāmacchandaṃ ... iti ajjhattaṃ vā dhammesu dhammānupassī viharati. Thus if, in accordance with the specification in <a href="../../mn/mn118.html">MN 118</a>, it were characteristic of contemplation of dharmas that desires have already been overcome, then contemplation of the hindrances, or at the very least of the first hindrance of sensual desire, should not be part of contemplation of dharmas in <a href="../../mn/mn10.html">MN 10</a>. Instead of taking the absence of desires and discontent to be characteristic of the fourth satipaṭṭhāna, perhaps their absence may better be understood to characterize a more advanced stage of practice, a stage that could be based on having developed any of the four satipaṭṭhānas. In fact, <a href="../../mn/mn10.html">MN 10</a> at MN I 56,4 presents freedom from desires and discontent, vineyya loke abhijjhādomanassaṃ, as something relevant to all four satipaṭṭhānas, so that their absence need not be confined to contemplation of dharmas. The need to stay aloof from abhijjhādomanassa recurs also in the standard description of the practice of sense-restraint, cf., e.g., <a href="../../mn/mn39.html">MN 39</a> at MN I 273,6, a practice that would also be relevant to all four satipaṭṭhānas. Besides, to identify abhijjhādomanassa with all five hindrances seems questionable, as according to <a href="../../mn/mn44.html">MN 44</a> at MN I 304,1 some types of domanassa are free from the underlying tendency to aversion, so that these might not be identifiable with the hindrance of ill will. The general usage of domanassa in the discourses also does not give the impression as if this term implicitly stands for the hindrance of ill will, except for a single occurrence in Sn 5:14 at Sn 1106. In addition, one might also wonder why the present passage does not simply mention the remaining three hindrances of sloth-and-torpor, restlessness-and-worry, and doubt, if to refer to them had been the original intention. However, at least in as much as the first hindrance of sensual desire is concerned, the identification made by the commentary finds support in a good number of discourses that use abhijjhā instead of the more common kāmacchanda to refer to the first hindrance, cf. <a href="../../dn/dn2.html">DN 2</a> at DN I 71,20, <a href="../../dn/dn10.html">DN 10</a> at DN I 207,17, <a href="../../dn/dn25.html">DN 25</a> at DN III 49,13, <a href="../../mn/mn27.html">MN 27</a> at MN I 181,16, <a href="../../mn/mn38.html">MN 38</a> at MN I 269,28, <a href="../../mn/mn39.html">MN 39</a> at MN I 274,35, <a href="../../mn/mn51.html">MN 51</a> at MN I 347,1, <a href="../../mn/mn94.html">MN 94</a> at MN II 162,9, <a href="../../mn/mn101.html">MN 101</a> at MN II 226,8, <a href="../../mn/mn107.html">MN 107</a> at MN III 3,27, <a href="../../mn/mn112.html">MN 112</a> at MN III 35,25, <a href="../../mn/mn125.html">MN 125</a> at MN III 135,28, <a href="../../an/an4.198.html">AN 4:198</a> at AN II 210,34, A 5:75 at AN III 92,24, <a href="../../an/an5.76.html">AN 5:76</a> at AN III 100,11, <a href="../../an/an9.40.html">AN 9:40</a> at AN IV 437,5, <a href="../../an/an10.99.html">AN 10:99</a> at AN V 207,7, and It 4:12 at It 118,13.</span></span></span> The Saṃyukta-āgama parallel does not mention desires and discontent when relating the fourth tetrad of mindfulness of breathing to the fourth satipaṭṭhāna. Instead, this version simply explains that practice undertaken in this way is to give attention to dharmas, thereby continuing with the same type of explanation that it had adopted for the previous three tetrads.<span class="note" id="mn118n147"><span class="details"><span class="p">[n.147] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b11: “at that time [in regard to] dharmas he contemplates dharmas with mindfulness established on a certain kind of dharma, that is indeed [how] he gives attention in accordance with dharmas”, 爾時法法觀念住異於法者, 亦隨法比思惟. Thus in the present case, as well as in the case of the correlation of the second and third tetrad of mindfulness of breathing with the second and third satipaṭṭhāna, the explanations in <a href="../../parallels/sa810.html">SĀ 810</a> seem more straightforward than their counterparts in <a href="../../mn/mn118.html">MN 118</a>.</span></span></span></p>
+<p>The Ānāpānasati-sutta and its Saṃyukta-āgama parallel continue by describing how, once mindfulness becomes well established through satipaṭṭhāna, the development of mindfulness as an awakening factor takes place. The two versions continue by indicating that the remaining awakening factors arise in conditional dependence on each other, leading from investigation-of-dharmas,<span class="note" id="mn118n148"><span class="details"><span class="p">[n.148] A minor difference is that, in its description of the investigating and scrutinizing activity of the dhammavicayasambojjhaṅga, <a href="../../mn/mn118.html">MN 118</a> at MN III 85,16 explicitly refers to the presence of wisdom, taṃ dhammaṃ paññāya pavicinati pavicarati parivīmaṃsaṃ āpajjati (Be-MN III 128,1 and Ce-MN III 232,22: pavicayati), while <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b17 does not mention wisdom, reading only: “he discriminates and examines the Dharma”, 於法選擇思量. The association of the awakening factor dhammavicaya with wisdom is highlighted in particular in the Abhidharma, cf., e.g., Dhs 62,24, which includes this awakening factor in its definition of the faculty of wisdom, paññindriya, or Vibh 229,26, which in its abhidhammabhājaniya equates the awakening factor dhammavicaya with various paññā synonyms. Notably, Nett 82,26 includes not only the awakening factor dhammavicaya, but also the awakening factor of equanimity, upekkhāsambojjhaṅga, in a listing of paññā synonyms. Vibh-a 313,5 relates dhammavicayasambojjhaṅga to insight knowledge, vipassanañāṇa. Ps IV 143,8 explains that dhammavicayasambojjhaṅga stands for knowledge conjoined with the development of mindfulness, satiyā sampayuttaṃ ñāṇaṃ dhammavicayasambojjhaṅgo. Peṭ 187,3 sums up: “what understands in accordance with reality [when being] concentrated, that is the awakening factor of investigation-of-dharmas”, yaṃ samāhito yathābhūtaṃ pajānāti, ayaṃ dhammavicayasambojjhaṅgo. According to Mil 83,23, realization takes place through this particular awakening factor and is impossible without it, ekena ... bojjhaṅgena bujjhati, dhammavicayasambojjhaṅgena ... dhammavicayasambojjhaṅgena vinā chahi bojjhaṅgehi na bujjhati. Another noteworthy point in relation to the description of the activity of the dhammavicayasambojjhaṅga, given in <a href="../../mn/mn118.html">MN 118</a> at MN III 85,16, is that dhamma here stands in the singular, which suggests an inquiry into the Dharma as the “teaching”. Such an understanding finds support in <a href="../../sn/sn46.3.html">SN 46:3</a> at SN V 67,27, which describes the development of this awakening factor based on having heard, remembered, and reflected on the teaching, dhammaṃ sutvā ... taṃ dhammaṃ anussarati anuvitakketi. An examination of the development of the same awakening factor in <a href="../../sn/sn46.52.html">SN 46:52</a> at SN V 111,1 speaks instead of contemplating dharmas internally and externally, ajjhattaṃ dhammesu and bahiddhā dhammesu, where the plural form conveys the sense of “phenomena” in general; cf. also the discussion in Gethin 1992a: 147-154. The Chinese counterpart to <a href="../../sn/sn46.52.html">SN 46:52</a>, <a href="../../parallels/sa713.html">SĀ 713</a> at T II 191b25, confirms this, as according to its presentation the task of this particular awakening factor is to distinguish between wholesome phenomena and unwholesome phenomena, 善法 and 不善法. <a href="../../sn/sn56.51.html">SN 56:51</a> at SN V 104,8 also reflects this function of the awakening factor dhammavicaya, which it expresses by presenting proper attention, yoniso manasikāra, in regard to wholesome and unwholesome things as the nutriment for dhammavicayasambojjhaṅga. This sets a direct contrast to the hindrance of doubt, since according to <a href="../../sn/sn56.51.html">SN 56:51</a> at SN V 106,11 proper attention in regard to wholesome and unwholesome things is the antidote (literally “anti-nutriment”, anāhāra) to doubt. That is, from an early Buddhist perspective the way to overcome doubt requires the type of investigation that corresponds to the development of the dhammavicayasambojjhaṅga.</span></span></span> to energy, rapture,<span class="note" id="mn118n149"><span class="details"><span class="p">[n.149] <a href="../../mn/mn118.html">MN 118</a> at MN III 85,33 qualifies this rapture to be “non-worldly”, nirāmisa, a qualification not made in <a href="../../parallels/sa810.html">SĀ 810</a>.</span></span></span> tranquillity, concentration, and equanimity.</p>
+<p>According to the Majjhima-nikāya presentation, the last step in this sequence, concerned with progressing from concentration to equanimity, requires to inspect with equanimity the concentrated state of mind.<span class="note" id="mn118n150"><span class="details"><span class="p">[n.150] <a href="../../mn/mn118.html">MN 118</a> at MN III 86,16: tathāsamāhitaṃ cittaṃ sādhukaṃ ajjhupekkhitā hoti.</span></span></span> The Saṃyukta-āgama account explains that due to having overcome desires and discontent the mind at this stage reaches balance and equanimity.<span class="note" id="mn118n151"><span class="details"><span class="p">[n.151] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b26: 貪憂則滅, 得平等捨. In this way, <a href="../../parallels/sa810.html">SĀ 810</a> explicitly presents the absence of desires and discontent as characteristic for the progression to the seventh awakening factor, which indeed marks an advanced level of practice. This further supports my earlier suggestion that contemplation of dharmas in itself need not imply the absence of desires and discontent, nor does the absence of desires and discontent need to be restricted to the fourth satipaṭṭhāna. In fact, even though the seven awakening factors come under the fourth satipaṭṭhāna in <a href="../../mn/mn10.html">MN 10</a> at MN I 61,32, <a href="../../mn/mn118.html">MN 118</a> explicitly relates their development to each of the four satipaṭṭhānas. This goes to show that the advanced stages of practice, when desires and discontent are overcome and the awakening factor of equanimity becomes well established, need not be confined to contemplation of dharmas, but can take place with each satipaṭṭhāna.</span></span></span></p>
+<p>The Ānāpānasati-sutta and its Saṃyukta-āgama parallel conclude their presentation by indicating that the awakening factors lead to knowledge and liberation when they are developed in dependence on seclusion, dispassion, and cessation, thereby culminating in relinquishment or letting go.<span class="note" id="mn118n152"><span class="details"><span class="p">[n.152] <a href="../../mn/mn118.html">MN 118</a> at MN III 88,3: vivekanissitaṃ, virāganissitaṃ, nirodhanissitaṃ, vossaggapariṇāmiṃ, and <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208c3: 依遠離, 依無欲, 依滅, 向於捨.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 1 (Part 3) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 1: Brahmajāla-sutta (Part 3 of 4)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn1comp_2.html#content"></a><a id="next-sutta" href="./dn1comp_4.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2017 under the title "Some Renditions of the Term Tathāgata in the Chinese Āgamas" in the <i>Annual Report of the International </i> <i>Research Institute for Advanced Buddhology at Soka University</i>, 20: 11–21.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn1.html">DN 1</a> / <a href="../../parallels/da21.html">DĀ 21</a></p>
+<p class="read-links">Read: <a href="./dn1comp_1.html">Part 1</a> / <a href="./dn1comp_2.html">Part 2</a> / <a href="./dn1comp_4.html">Part 4</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>Whereas in the previous two chapters I explored various aspects of oral transmission in relation to the <i>Brahmajāla</i>, in the present chapter I turn to its main protagonist, the Tathāgata. My interest in what follows is to explore the significance of the term in its doctrinal context and in comparison with its Chinese renderings. In the first part of the chapter I take up the <i>Brahmajāla </i>itself. Then I discuss passages related to the Tathāgata in the 'other' <i>Saṃ</i><i>yukta-āgama</i> and an individual translation, in the <i>Ekottarika-āgama</i>, and in the <i>Madhyama-āgama</i>.</p>
+<hr class="chapter-divider">
+<h3>The Tathāgata in the <i>Brahmajāla </i></h3>
+<p>The exposition in the <i>Brahmajāla</i> revolves around the Tathāgata, this being the term that in the early discourses the Buddha is shown to use when referring to himself. The introductory narration of the <i>Brahmajāla</i> depicts a wanderer and his disciple speaking the one disparagingly and the other in praise of the Buddha, the Dharma, and the Community. This prompts the Buddha to expound matters of morality for which others might praise the Tathāgata. The exposition of matters of morality leads on to a penetrative analysis of the grounds for various views as something the Tathāgata has realized and which is considerably more profound than his moral conduct. The finale of the <i>Brahmajāla</i> then throws into relief the transcendence of the Tathāgata in contrast to those still subject to entanglement in views.</p>
+<p>When faced with the task of rendering the term Tathāgata into other languages, translators had to decide between taking it to imply <i>tathā āgata</i>, "thus come", or <i>tathā gata</i> "thus gone".<span class="note" id="dn1comp_3n1"><span class="details"><span class="p">[n.1] [2] Chalmers 1898: 113 proposes still another derivation: "Tathāgata, in my opinion, is derived from the adjective <i>tatha </i>and <i>āgata</i>, and means 'one who has come at the real truth'." Gombrich 2009: 151 rather suggests that "the word <i>gata</i> when it occurs as the second member of a compound of this type often loses its primary meaning and means simply 'being' … so the Buddha is referring to himself as 'the one who is like that'."</span></span></span> Translators of the <i>Brahmajāla</i> into Tibetan could preserve the ambiguity of the Indic term with the stock expression <i>de bzhin gshegs pa</i>,<span class="note" id="dn1comp_3n2"><span class="details"><span class="p">[n.2] [3] Weller 1934: 10,34 (§16) and D 4094<i> ju </i>142a1 or Q 5595<i> tu </i>163a3. Translations of the term <i>tathāgata</i> into Khotanese convey the meaning "gone"; cf. Degener 1989: 348f and Skjærvø 2004: lxxvii. The standard Mongolian and Uighur renditions instead opt for the nuance "come"; cf. Sárközi and Szerb 1995: 3 (§1.3 in the Mongolian <i>Mahāvyutpatti</i>) and Röhrborn 2015: 158,12.</span></span></span> where <i>gshegs pa</i> can mean either "one who has come" or "one who has gone". The translators of the <i>Brahmajāla</i> into Chinese unsurprisingly opted for the standard rendering 如來, "thus come".<span class="note" id="dn1comp_3n3"><span class="details"><span class="p">[n.3] [4] DĀ 21 at T I 88b23, T 21 at T I 266a2, and T 1548 at T XXVIII 656b21.</span></span></span></p>
+<p>How far does this reflect the import of the term in its doctrinal setting in the <i>Brahmajāla</i>? Closer inspection gives the impression that the notion of being someone who has "thus come" is not relevant to the <i>Brahmajāla</i>, whose exposition is rather concerned with highlighting the transcendent nature of the Tathāgata as one who has not only gone beyond all views, but also gone beyond the prospect of future birth.<span class="note" id="dn1comp_3n4"><span class="details"><span class="p">[n.4] [5] DN 1 at DN I 46,9, Weller 1934: 64,17 (§218), DĀ 21 at T I 94a7, T 21 at T I 270c13, and D 4094 <i>ju </i>153b2 or Q 5595<i> tu </i>177a4 (T 1548 does not have a corresponding statement, since it only quotes the exposition on views and not the entire discourse).</span></span></span></p>
+<p>In this way the <i>Brahmajāla </i>presents a perspective on views complementary to that found, for example, in the <i>Aṭṭhakavagga</i> of the <i>Sutta-nipāta </i>and its Chinese parallel.<span class="note" id="dn1comp_3n5"><span class="details"><span class="p">[n.5] [6] Sn 766 to 975 and T 198 at T IV 174b8 to 189c23.</span></span></span> Although some scholars have seen a substantial difference between the rejection of views in this text and the remainder of the early discourses,<span class="note" id="dn1comp_3n6"><span class="details"><span class="p">[n.6] [7] Cf., e.g. Gómez 1976, Vetter 1990: 44–52, and Burford 1991: 45–70.</span></span></span> the <i>Brahmajāla </i>is a good example of a similar attitude, with the difference that the dangers of being entangled in views are not expressed poetically, but rather in the form of an analytical examination.<span class="note" id="dn1comp_3n7"><span class="details"><span class="p">[n.7] [8] Norman 2003: 519 concludes that "there is, however, no reason whatsoever for believing that the form of Buddhism taught in the [Aṭṭhaka-]vagga represents the whole of Buddhism at the time of its composition, and that everything not included in it must be a later addition"; cf. also the discussion in Fuller 2005: 148–153, for an appraisal of the philosophy underlying the <i>Aṭṭha</i><i>kavagga</i> Jayawickrama 1948/1978: 45–57 and Premasiri 1972, and on its poetic nature Shulman 2012/2013.</span></span></span></p>
+<p>Needless to say, there is no <i>a priori</i> reason for assuming that poetry must be earlier than analysis, in fact some degree of analytical presentation is a typical feature of oral transmission and as such can be expected to have been part of the early Buddhist tradition from its outset. As far as I can see, there is no sound basis for assuming that the <i>Aṭṭhakavagga</i> must be reflecting an earlier and substantially different type of Buddhism than that found in the <i>Brahmajāla </i>and other such discourses.</p>
+<p>In relation to the term 如來, the overall theme and culmination point of the <i>Brahmajāla </i>would be in line with considering the Buddha to be a "thus gone" one, gone beyond the entanglement of views and gone beyond rebirth. At least at the explicit level the point at stake does not appear to be his supposedly long preparation during past lives for becoming a Tathāgata.<span class="note" id="dn1comp_3n8"><span class="details"><span class="p">[n.8] [9] For a study of the gradual evolution of the bodhisattva ideal cf. Anālayo 2010b and 2017a.</span></span></span> Thus, although the choice of 如來 by the translators of the Chinese parallels to the <i>Brahmajāla</i> reflects the established translation terminology, it does not reflect the contents of the translated text too well.</p>
+<p>Whereas 如來 appears to have been pervasive in Chinese translations of Buddhist texts, even within the small corpus of <i>Āgama</i> translations a few variations can be found. In what follows I turn to one such variation in the partly preserved <i>Saṃyukta-āgama </i>(T 100).<span class="note" id="dn1comp_3n9"><span class="details"><span class="p">[n.9] [10] On this collection cf. Bingenheimer 2011.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>The Tetralemma on a Tathāgata's Existence after Death</h3>
+<p>The discourse from the partly preserved <i>Saṃyukta-āgama </i>(T 100) to be taken up here is a parallel to the <i>Aggivacchagotta-sutta</i> of the <i>Majjhima-nikāya</i>. Together with parallels in the nearly complete <i>Saṃyukta-āgama </i>(T 99) and in the <i>Abhidharmakośopāyika-</i> <i>ṭīkā</i>, the discourse reports that a wanderer had approached the Buddha and requested him to take a position in relation to what are known as the undeclared questions, a standard set of propositions that the early discourses present as a topic of frequent interest and discussion among non-Buddhist practitioners.<span class="note" id="dn1comp_3n10"><span class="details"><span class="p">[n.10] [11] For a comparative study of the parallel versions cf. Anālayo 2011b: 389–393.</span></span></span> These are not so much questions, properly speaking, but rather a set of proposals to which one is expected to react by affirming one of the alternatives they posit. The standard response by the Buddha is to refuse to affirm any of the proposed positions.<span class="note" id="dn1comp_3n11"><span class="details"><span class="p">[n.11] [12] The reason(s) for the Buddha's refusal to take up any of these positions has been a recurrent topic of scholarly discussion; cf., e.g., Oldenberg 1881/1961: 256–263, Schrader 1904/1905, Beckh 1919: 118–121, Keith 1923/1979: 62– 67, Thomas 1927/2003: 201f, de La Vallée Poussin 1928, Organ 1954, Murti 1955/2008: 36–50, Nagao 1955/1992: 38, Frauwallner 1956/2003a: 141f, Jayatilleke 1963/1980: 470–476, Smart 1964/1976: 34f, Kalupahana 1975: 177f, Lamotte 1976: 2003–2005, Collins 1982: 131–138, Pannikar 1989/1990: 61–76, Tilakaratne 1993: 109–121, Harvey 1995: 84–87, Vélez de Cea 2004, Manda 2005, Karunadasa 2007 and 2013: 129–149.</span></span></span></p>
+<p>Besides affirmations about the eternity and finiteness of the world and the identity of body and soul, these undeclared questions involve four possible descriptions of the fate of a Tathāgata after death. In such contexts the term Tathāgata stands for a fully awakened one in general and is not restricted in meaning to the Buddha. The four propositions are that after death a Tathāgata:</p>
+<p>• exists,</p>
+<p>• does not exist,</p>
+<p>• both exists and does not exist,</p>
+<p>• neither exists nor does not exist.</p>
+<p>According to the tetralemma of ancient Indian logic, these four possibilities exhaust the pronouncements one could possibly make on this matter. The <i>Aggivacchagotta-sutta </i>employs the term Tathāgata in its description of this tetralemma, which has as its counterparts 如來 in the nearly complete <i>Saṃyukta-āgama </i>(T 99) and <i>de </i> <i>bzhin gshegs pa</i> in the discourse quotation in the <i>Abhidharma</i><i>kośopāyika-ṭīkā</i>.<span class="note" id="dn1comp_3n12"><span class="details"><span class="p">[n.12] [13] MN 72 at MN I 484,27, SĀ 962 at T II 245c5, and D 4094 <i>ju </i>157a6 or Q 5595 <i>tu </i>181b1.</span></span></span> The relevant part of the partly preserved <i>Saṃ</i><i>yukta-āgama</i> proceeds as follows:<span class="note" id="dn1comp_3n13"><span class="details"><span class="p">[n.13] [14] The translated part is taken from SĀ2 196 at T II 445a18f, which continues with the additional option "nor does it not exist, nor does it not not exist", 非 非有, 非非無; this appears to be a textual error.</span></span></span></p>
+<p class="quote-block">The self of living beings which, on passing away here, is born there: does it exist, does it not exist, does it exist as well as not exist, does it neither exist nor not exist?</p>
+<p>A reference to the self, 神我, of living beings would have been easily intelligible to the average readership in ancient China.<span class="note" id="dn1comp_3n14"><span class="details"><span class="p">[n.14] [15] On 神 in pre-Buddhist China cf., e.g., Andreini 2011 and Park 2012: 166f, and on 識神/神識 Radich 2016.</span></span></span> One might only doubt whether this expression would have been understood to function as a gloss on the term Tathāgata. In relation this gloss, the Pāli commentarial tradition offers additional information. The commentaries understand the term Tathāgata, when used as part of the undeclared question, to refer to a living being, <i>satta</i>.<span class="note" id="dn1comp_3n15"><span class="details"><span class="p">[n.15] [16] Sv I 118,1, Ps III 141,21, Spk II 201,4, and Mp IV 37,22; on this commentarial gloss cf. also Gnanarama 1997b: 236f, Manda 2005, and Karunadasa 2007: 7–12.</span></span></span> This commentarial gloss intends to explain why the Buddha refused to take any of the four positions on the destiny of a Tathāgata, namely because each position is based on misconceiving a Tathāgata to be an actual living being in the sense of a self.</p>
+<p>The basic reason for such rejection can be seen similarly in the refusal to affirm whether the world is eternal or not eternal. In view of the all-pervasive scope of the teaching on impermanence in early Buddhist thought, one would not expect the Buddha to be depicted as having any qualms in stating that the world is not eternal. Therefore the reason for his reported refusal to take a position in this respect suggests that the term "world" in these undeclared questions is employed with implicit assumptions that from a Buddhist viewpoint are misconceived. That is, the world is conceived of as an independently existing world outside, about which predications can be made, whereas from the perspective of early Buddhist thought the term world has its significance only as a referent to experience arisen in dependence on the six senses.<span class="note" id="dn1comp_3n16"><span class="details"><span class="p">[n.16] [17] Cf., e.g., SN 35.68 at SN IV 39,28 and its parallel SĀ 230 at T II 56a27.</span></span></span></p>
+<p>The same principle holds for proposals about the identity or difference of body and soul. Given that from the early Buddhist perspective there is no soul in the first place, it is hardly possible to make a meaningful statement about its association with or dissociation from the body.</p>
+<p>Returning to the Pāli commentarial gloss, if a Tathāgata is understood in these questions to be an actual living being, a <i>satta</i> or 眾生, in the sense of a self, then it indeed does not make much sense to take up any of these alternative proposals, as the very concept they employ is misguided.<span class="note" id="dn1comp_3n17"><span class="details"><span class="p">[n.17] [18] Harvey 1983: 48 concludes that "views on a Tathagata after death … are set aside because they contain misapprehensions as to what a Tathagata is."</span></span></span></p>
+<p>Besides the <i>Aggivacchagotta-sutta</i> and its parallels, another case that also involves the tetralemma on a Tathāgata occurs in a discourse translated individually into Chinese, a parallel to the <i>Cūḷamāluṅkya-sutta</i>. In this discourse, for a change, it is one of the Buddha's monastic disciples who insists on being given an answer to these undeclared questions. <span class="note" id="dn1comp_3n18"><span class="details"><span class="p">[n.18] [19] MN 63 at MN I 426,13, which has another parallel in MĀ 221 at T I 804a27 that employs the standard 如來; for a comparative study cf. Anālayo 2011b: 353–355.</span></span></span> The individually translated discourse apparently renders the term Tathāgata in this context just as 如此, "like this".<span class="note" id="dn1comp_3n19"><span class="details"><span class="p">[n.19] [20] The whole tetralemma in T 91 at T I 917b20f proceeds like this: 有如此命 終, 無有命終, 有此, 無有此, 無有命終 (although attributed to Ān Shìgāo (安 世高), T 91 is not included in the list of works that can safely be attributed to him by Zürcher 1991: 297, Nattier 2008: 46, Zacchetti 2010a, and Vetter 2012: 7). The way of rendering Tathāgata in this discourse is reminiscent of the interpretation proposed by Gombrich 2009: 151, cited above p. 102 note 1.</span></span></span></p>
+<p>Other monastic disciples are also on record for not having always handled the tetralemma on a Tathāgata in the proper manner. One discourse reports a monk flatly stating that a fully awakened one will be annihilated at death. Being taken to task by Sāriputta for this statement, this monk has to admit that he is not able to identify a Tathāgata even while alive with the five aggregates, leaving little ground for him to make any prediction about a Tathāgata after death.<span class="note" id="dn1comp_3n20"><span class="details"><span class="p">[n.20] [21] SN 22.85 at SN III 112,5 and its parallel SĀ 104 at T II 31b1; translated in Anālayo 2014g: 14.</span></span></span> This confirms that the reason for refusing to take up any of the possibilities envisaged in the tetralemma reflects indeed the need to clarify first of all what the term Tathāgata stands for.</p>
+<p>In the context of the tetralemma, the term Tathāgata concerns a "thus gone" one, as the whole point of the discussion is about the future destiny of such a fully awakened one, about whether a Tathāgata "goes" somewhere or not. Here, too, the translation 如 來 found most frequently for this type of discussion is not the best choice for this context.</p>
+<hr class="chapter-divider">
+<h3>The Tathāgata's Emergence in the <i>Ekottarika-āgama </i></h3>
+<p>The passage to be taken up next is part of a relatively short discourse in the <i>Ekottarika-āgama</i>, parallel to an even shorter discourse (if it can even be called such) in the <i>Aṅguttara-nikāya</i>. The Chinese <i>Ekottarika-āgama</i> in general has a rather chequered history and it seems clear that material was added in China and the whole collection underwent considerable reworking.<span class="note" id="dn1comp_3n21"><span class="details"><span class="p">[n.21] [22] On the addition of a whole discourse cf. Anālayo 2013h, on instances reflecting Mahāyāna thought Anālayo 2013d, and on reworking of material by merging together what originally would have been individual discourses cf. Anālayo 2014/2015 and 2015g. The stimulating research by Palumbo 2013 has not yet been able to present a reconstruction of the history of the translation of this collection that can explain such findings; cf. in more detail Anālayo 2015g: 23–31.</span></span></span> The present discourse, however, does not seem to exhibit evident markers of reworking or addition of later material and thus might represent one of the parts of the collection that still reflect the Indic original, within the limits of the abilities of its translator. Of particular interest in this case is the use of two alternative ways of 'translating' the term Tathāgata. In order to draw attention to these, in my rendering of the discourse I add in brackets the Chinese for occurrences of the term Tathāgata.<span class="note" id="dn1comp_3n22"><span class="details"><span class="p">[n.22] [23] The translated discourse is EĀ 8.2 at T II 561a8 to 561a16, parallel to AN 1.13.1 at AN I 22,1 to 22,6.</span></span></span></p>
+<p class="quote-block">Thus have I heard. At one time the Buddha was staying at Sāvatthī in Jeta's Grove, the Park of Anāthapiṇḍika. At that time the Blessed One said to the monks:</p>
+<p class="quote-block">"If one person emerges in the world, he will greatly benefit people and comfort living beings, out of pity for the creatures of the world wishing to cause <i>deva</i>s and humans to obtain merits.<span class="note" id="dn1comp_3n23"><span class="details"><span class="p">[n.23] [24] AN 1.13.1 does not mention a wish for <i>deva</i>s and humans to obtain merits.</span></span></span> Who is that one person? That is, it is the Tathāgata (多薩阿竭), the arhat, the fully awakened one. This is reckoned to be the one person whose emergence in the world greatly benefits people and comforts living beings, who out of pity for the creatures of the world wishes to cause <i>deva</i>s and humans to obtain merits.</p>
+<p class="quote-block">"For this reason, monks, constantly arouse reverence towards the Tathāgata (如來). For this reason, monks, you should train yourselves in this."</p>
+<p class="quote-block">At that time the monks, hearing what the Buddha had said, were delighted and received it respectfully.</p>
+<p>This passage complements the depiction of the exalted nature of the Tathāgata in the <i>Brahmajāla</i>, highlighting the beneficial effects and compassionate nature of his teaching activity. Noteworthy in the passage translated above is the change between two modes of translating what in the Indic original would have been the same term, namely 多薩阿竭 and the standard 如來. The expression 多薩阿竭 occurs also in other <i>Ekottarika-āgama </i>discourses.<span class="note" id="dn1comp_3n24"><span class="details"><span class="p">[n.24] [25] A search in the CBETA edition brings up nineteen occurrences, of which eleven are in the same chapter in which EĀ 8.2 is found, the rest occur singly (EĀ 12.3, EĀ 25.3, EĀ 29.3, EĀ 35.10, EĀ 42.3, and EĀ 49.2), except for one case where the phrase appears in two consecutive discourses (EĀ 20.6 and EĀ 20.7).</span></span></span> This is remarkable not only in terms of a lack of consistency of translation terminology, but also inasmuch as in this instance the idea of having thus come, 如來, fits the context better than in the examples surveyed so far.</p>
+<p>A similar alternation between 如來 and 多薩阿竭 can also be found in the 菩薩從兜術天降神母胎說廣普經 (T 384),<span class="note" id="dn1comp_3n25"><span class="details"><span class="p">[n.25] [26] T 384 at T XII 1023b12. The same pattern can be seen in T 622 at T XV 346a26, which refers to the 如來 and right away in the next line to the 多薩阿 竭, and in T 623 at T XV 348b15, where both expressions are in the same line. A single occurrence of 多薩阿竭 can also be found, e.g., in the Sarvāstivāda <i>Vinaya</i>, T 1435 at T XXIII 333c20, with the variant 多陀阿竭; this is the main reading at T XXIII 327a6, with the variant 多陀阿伽 (which occurs also, e.g., in SĀ2 208 at T II 451c3 in direct juxtaposition with 如來).</span></span></span> whose translation is attributed to Zhú Fóniàn (竺佛念) who also translated the <i>Ekottarika-āgama</i>.<span class="note" id="dn1comp_3n26"><span class="details"><span class="p">[n.26] [27] For evidence that the <i>Ekottarika-āgama </i>extant in the Taishō edition as entry no. 125 with high probability was not the result of a translation undertaken by Gautama Saṅghadeva cf. Hung and Anālayo 2017 and Radich and Anālayo 2017, and for its attribution to Zhú Fóniàn (竺佛念) Radich 2017.</span></span></span> This gives the impression that perhaps Zhú Fóniàn had a penchant for introducing the phrase 多薩 阿竭.<span class="note" id="dn1comp_3n27"><span class="details"><span class="p">[n.27] [28] Regarding such a penchant in general, Zacchetti 2016: 87 explains that "earlier translations constituted, in effect, a 'canon' to which one could refer for rendering terminology and stock phrases when producing new translations, even of different scriptures. This <i>modus operandi</i> may have ultimately contributed to the habit of conserving early translations in the later canon."</span></span></span></p>
+<p>Such a penchant could have been inspired by occurrences of the comparable phrase 怛薩阿竭 in earlier translations by Dharmarakṣa, Mokṣala, and Lokakṣema.<span class="note" id="dn1comp_3n28"><span class="details"><span class="p">[n.28] [29] T 222 at T VIII 151c11 = Zacchetti 2005: 200 (§2.1), T 221 at T VIII 18b27, and T 224 at T VIII 429a27; another example would be T 816 at T XVII 813a16, attributed to 安法欽 (Ān Fǎqīn).</span></span></span> Karashima (2010: 98) explains that 怛薩阿竭 is "a transliteration of Gāndhārī *<i>tasa-agada </i>(< Skt. *<i>tathā-āgata</i>); cf. Gāndhārī <i>tasagada</i> (< Skt. <i>tathāgata</i>)".<span class="note" id="dn1comp_3n29"><span class="details"><span class="p">[n.29] [30] Cf. also Karashima 2006: 356f.</span></span></span> The change of the first character from 怛 to 多 might in turn have been inspired by occurrences of such alternative phrases as 多阿 竭 and 多訶竭 in translations by Dharmarakṣa.<span class="note" id="dn1comp_3n30"><span class="details"><span class="p">[n.30] [31] T 222 at T VIII 148b18 = Zacchetti 2005: 163 (§1.81) (an occurrence of 多 阿竭 at 150c24 has the variants 多呵竭 and 多訶竭; Zacchetti 2005: 192 (§1.171) adopts the first of the two) and T VIII 151a28; cf. also the discussion in Karashima 2006: 357 note 6.</span></span></span></p>
+<p>From the viewpoint of the semantic polyvalence of the term, transliterations like 多薩阿竭 share with the Tibetan <i>de bzhin </i> <i>gshegs pa</i> the advantage that they carry the same ambiguity as the Indic term and thus do not require taking a decision between <i>tathā </i> <i>āgata</i> and <i>tathā gata</i>. A drawback of the same usage is that the expression 多薩阿竭 would hardly have been intelligible to the average Chinese reader unfamiliar with the term, unless already habituated to this or similar transliterations from their usage in other texts.</p>
+<hr class="chapter-divider">
+<h3>Praises of the Tathāgata in the <i>Madhyama-āgama </i></h3>
+<p>My last example stems from the <i>Madhyama-āgama</i>, which offers the only translation of the term Tathāgata among those selected for study in the present chapter that follows the alternative meaning <i>tathā gata</i>, "thus gone".<span class="note" id="dn1comp_3n31"><span class="details"><span class="p">[n.31] [32] Needless to say, with the present study I do not intend to present a comprehensive survey of Chinese translations of the term Tathāgata; on which cf. also, e.g., Nattier 2003b: 210f and Radich 2011/2012: 254 note 108.</span></span></span></p>
+<p>The <i>Madhyama-āgama </i>discourse in question is a parallel to the <i>Upāli-sutta </i>of the <i>Majjhima-nikāya</i>.<span class="note" id="dn1comp_3n32"><span class="details"><span class="p">[n.32] [33] For a comparative study cf. Anālayo 2011b: 320–333.</span></span></span> According to the narration that leads up to the relevant passage, a lay follower of the Jains by the name of Upāli had gone to debate with the Buddha. During the ensuing discussion he was converted and attained stream-entry. Back home he told his doorkeeper that Jain mendicants were no longer to be admitted to his house.</p>
+<p>On hearing this unexpected turn of events, the leader of the Jains comes himself for a visit. Upāli behaves somewhat disrespectfully and proclaims that the teachings of the Jains do not withstand closer scrutiny, comparable to a monkey which will not survive being pounded in order to make its hide shiny. When asked by the exasperated leader of the Jains whom he considers his teacher, Upāli breaks out into a series of impromptu verses in praise of the Buddha. One of these reads as follows in the <i>Madh</i><i>yama-āgama</i> version:<span class="note" id="dn1comp_3n33"><span class="details"><span class="p">[n.33] [34] MĀ 133 at T I 632c4 to 632c6.</span></span></span></p>
+<p class="quote-block">With craving eradicated, incomparably awakened, He is without 'smoke' and has no 'flame' [of defilement]. The Tathāgata (如去) is the Well-gone One Incomparable and without equal. He is praised for having attained what is right And Upāli is the Buddha's disciple.</p>
+<p>The corresponding verse in the <i>Upāli-sutta</i> refers to the Tathāgata, as is the case for a Sanskrit fragment parallel.<span class="note" id="dn1comp_3n34"><span class="details"><span class="p">[n.34] [35] MN 56 at MN I 386,28 and Waldschmidt 1979: 12 (§95).</span></span></span> This makes it safe to conclude that the rendering 如去 in the verse above indeed translates this term.</p>
+<p>The same line also carries a rendering of another recurrent epithet of the Buddha as the "Well-gone One", <i>sugata</i>, translated as 善逝. A discourse in the <i>Aṅguttara-nikāya</i> identifies the two terms with each other.<span class="note" id="dn1comp_3n35"><span class="details"><span class="p">[n.35] [36] AN 4.160 at AN II 147,3.</span></span></span> In reply to a query "who is a <i>sugata</i>?", this <i>Aṅguttara-nikāya</i> discourse has the standard formulation of the arising of a Tathāgata in the world and then concludes that such a one is called <i>sugata</i>.</p>
+<p>Norman (1990/1993a: 163) comments on the term Tathāgata that one can "assume that -<i>gata</i> is used in the same way as in <i>su</i><i>gata</i> and <i>duggata</i>".<span class="note" id="dn1comp_3n36"><span class="details"><span class="p">[n.36] [37] On the remainder of the comment made by Norman cf. Griffiths 1994: 210 note 5, and for discussions of the term <i>tathāgata</i> in general (in addition to the references above p. 104 note 11) cf., e.g., Chalmers 1898, Senart 1898, Shawe 1898, de Harlez 1899, Hopkins 1911, Franke 1913a: 287–297, Anesaki 1921, Walleser 1930, Thomas 1933/2004: 151f and 1936, Coomaraswamy 1938 (or 1939: 140), Horner 1938/1982: lvi, Lamotte 1944/1981: 126 note 1, Dutt 1960/ 1971: 295–304, Bodhi 1978, Carter 1978: 70–72 note 31, Harvey 1983, Habito 1988: 136 note 30, Norman 1990/1993a: 162f, Griffiths 1994: 60f, Endo 1997/ 2002: 195–206, Gnanarama 1997a: 196–209, Saibaba 2005: 129, Anālayo 2008c, Gombrich 2009: 151, Meisig 2010: 67, and Skilling 2013a: 3f.</span></span></span> On the assumption that this would indeed have been a prominent sense of the term in its early usage as reflected in <i>Āgama</i> and <i>Nikāya </i>discourses, the present instance of the translation 如去, which in the <i>Madhyama-āgama </i>occurs only in this one passage instead of the otherwise frequently used 如來, is at the same time the only of the alternatives surveyed in this chapter that fully conveys this meaning of a "thus gone" one.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn1.html">DN1</a>: Brahmajāla Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

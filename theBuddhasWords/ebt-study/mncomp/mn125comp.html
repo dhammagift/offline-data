@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 125 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 125: Dantabhūmi-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn124comp.html#content"></a><a id="next-sutta" href="./mn126comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn125.html">MN 125</a> / <a href="../../parallels/ma198.html">MĀ 198</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Dantabhūmi-sutta, the “discourse on the [progressive] stages of [being] tamed”, compares the gradual training of a monk to the gradual taming of a wild elephant. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn125n156"><span class="details"><span class="p">[n.156] The parallel is <a href="../../parallels/ma198.html">MĀ 198</a> at T I 757a-759a and agrees with <a href="../../mn/mn125.html">MN 125</a> on location and title (調御地經). A translation of <a href="../../parallels/ma198.html">MĀ 198</a>, together with extracts from the present study, can be found in Anālayo 2006c.</span></span></span> A small section of the present discourse has also a counterpart in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn125n157"><span class="details"><span class="p">[n.157] Abhidh-k-ṭ at D (4094) mngon pa, nyu 40b3-41b1 or Q (5595) thu 79a5-80a7, which corresponds to <a href="../../mn/mn125.html">MN 125</a> at MN III 135,20 to MN III 136,19; cf. also Abhidh-k 6:70 in Pradhan 1967: 384,22, paralleling <a href="../../mn/mn125.html">MN 125</a> at MN III 136,15, with its Chinese counterparts in T 1558 at T XXIX 133a5 and T 1559 at T XXIX 284b2.</span></span></span></p>
+<p>According to the Dantabhūmi-sutta and its Madhyama-āgama parallel, the novice Aciravata had unsuccessfully attempted to explain to Prince Jayasena how a monk by dint of diligent practice could reach unification of the mind. As his explanation had not met with the prince’s approval, Aciravata approached the Buddha to report what had happened.</p>
+<p>The two versions record that the Buddha replied by pointing out that it was impossible for Prince Jayasena, who was living immersed in sensual pleasures, to come to know what can be realized only by renouncing sensual pleasures. By way of illustration, the Buddha contrasted tamed animals with their untamed counterparts.<span class="note" id="mn125n158"><span class="details"><span class="p">[n.158] <a href="../../mn/mn125.html">MN 125</a> at MN III 130,2 contrasts two tamed elephants, two tamed horses, and two tamed oxen with two untamed elephants, two untamed horses, and two untamed oxen. <a href="../../parallels/ma198.html">MĀ 198</a> at T I 757b13 instead mentions four tameable beings, namely an elephant, a horse, an ox, and a man. Out of these four, it then contrasts two untamed beings with two tamed beings. A similar pattern can be found in <a href="../../parallels/ma212.html">MĀ 212</a> at T I 794a29, which also has men in addition to the elephants, horses, and oxen mentioned in its counterpart <a href="../../mn/mn90.html">MN 90</a> at MN II 129,4, cf. above p. 522 note 388.</span></span></span> Another example to illustrate the same point depicts a man who takes his friend to the top of a mountain in order to show him the scenery that lies on the other side of the mountain, a scenery whose existence the friend earlier, before getting on top of the mountain, had put into doubt.<span class="note" id="mn125n159"><span class="details"><span class="p">[n.159] A minor difference between the otherwise fairly similar presentations of this image in the two versions is that, according to <a href="../../mn/mn125.html">MN 125</a> at MN III 131,19, the Buddha explained that the mass of ignorance covering Prince Jayasena was even greater than the mountain described in the simile, a remark not found in <a href="../../parallels/ma198.html">MĀ 198</a>.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, the Buddha told Aciravata that, if he had used these two similes, he would have fared better in his meeting with Prince Jayasena. Aciravata replied that he had never heard these similes before, hence, he could not have been able to make use of them. This exchange is not found in the Madhyama-āgama version.</p>
+<p>The Dantabhūmi-sutta and its Madhyama-āgama parallel continue by comparing the gradual training of a disciple to the gradual taming of a forest elephant.<span class="note" id="mn125n160"><span class="details"><span class="p">[n.160] A minor difference is that in <a href="../../mn/mn125.html">MN 125</a> at MN III 132,2+15 the king gives detailed instructions to the elephant trainer on how he should undertake the task of catching and taming the elephant, whereas in <a href="../../parallels/ma198.html">MĀ 198</a> at T I 757c14+20 the king merely tells the elephant tamer to catch an elephant and to tame it, without getting involved in the details of how this should be done. For a description given by Arrian of the procedure adopted in ancient India to catch wild elephants cf. McCrindle 1877: 213-216.</span></span></span> The two versions agree in comparing the moment when the disciple decides to go forth to the moment when the forest elephant has been caught and is brought out of the forest into the open.<span class="note" id="mn125n161"><span class="details"><span class="p">[n.161] <a href="../../mn/mn125.html">MN 125</a> at MN III 134,4 and <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758a26.</span></span></span></p>
+<p>The Dantabhūmi-sutta next mentions the need to observe the rules and see danger in the slightest transgression,<span class="note" id="mn125n162"><span class="details"><span class="p">[n.162] <a href="../../mn/mn125.html">MN 125</a> at MN III 134,8: “seeing fear in the slightest fault, train [by way of] having undertaken the training rules”, aṇumattesu vajjesu bhayadassāvī, samādāya sikkhassu sikkhāpadesu.</span></span></span> while its Madhyama-āgama counterpart simply instructs to purify body, speech, and mind.<span class="note" id="mn125n163"><span class="details"><span class="p">[n.163] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758a29.</span></span></span></p>
+<p>This in itself relatively minor difference is part of a recurring pattern, where the Pāli discourses appear to have a predilection for the injunction to scrupulously observe the rules, while their Madhyama-āgama counterparts place more emphasis on the purpose of observing the rules in terms of the need to develop bodily, verbal, and mental purity.<span class="note" id="mn125n164"><span class="details"><span class="p">[n.164] The same difference of emphasis recurs between <a href="../../mn/mn6.html">MN 6</a> at MN I 33,5 and its parallel <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c19, cf. above p. 47, and between <a href="../../mn/mn107.html">MN 107</a> at MN III 2,7 and its parallel <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b1, cf. above p. 618.</span></span></span></p>
+<p>The Majjhima-nikāya version continues by taking up the practices of:</p>
+<ul>
+<li>sense-restraint,</li>
+<li>moderation with food,</li>
+<li>wakefulness,</li>
+<li>mindfulness and clear comprehension,</li>
+<li>the removal of the five hindrances,</li>
+<li>the four satipaṭṭhānas.</li>
+</ul>
+<p>The Madhyama-āgama version instead directly turns to the four satipaṭṭhānas, without mentioning any of the other practices of the gradual path (see table 13.4). The discourse quotation in Śamathadeva’s commentary, however, precedes its description of the four satipaṭṭhānas with an account of the removal of the five hindrances.<span class="note" id="mn125n165"><span class="details"><span class="p">[n.165] D (4094) mngon pa, nyu 40b6 or Q (5595) thu 79a8. According to <a href="../../mn/mn10.html">MN 10</a> at MN I 60,11 (or <a href="../../dn/dn22.html">DN 22</a> at DN II 300,10) and <a href="../../parallels/ma98.html">MĀ 98</a> at T I 584a24, awareness of the presence of the five hindrances is a task that forms part of satipaṭṭhāna, so that satipaṭṭhāna practice would not necessarily require the previous removal of the five hindrances; cf. also <a href="../../an/an9.64.html">AN 9:64</a> at AN IV 458,5, which presents satipaṭṭhāna as the tool for overcoming the five hindrances. Nevertheless, for advanced stages of satipaṭṭhāna practice the removal of the five hindrances would be required.</span></span></span></p>
+<p>From the perspective of textual transmission, it would be easier to imagine that a reference to the arising of a Tathāgata caused the reciters to supplement a full account of the gradual path of practice, detailing the undertaking of sense-restraint, moderation with food, wakefulness etc., than to assume that considerable parts of an account of the gradual path have been lost. On the hypothesis that the other practices of the gradual path may have been added to an originally briefer account during the transmission of the Pāli version, it would be quite understandable how satipaṭṭhāna was consequently displaced from its original location and came to stand after the removal of the five hindrances and thereby in a position that would better fit the attainment of the jhānas.</p>
+<table class="comparative-table">
+<caption>Table 13.4: Gradual Training in <a href="../../mn/mn125.html">MN 125</a> and <a href="../../parallels/ma198.html">MĀ 198</a></caption>
+<tr><th><a href="../../mn/mn125.html">MN 125</a></th><th><a href="../../parallels/ma198.html">MĀ 198</a></th></tr>
+<tr><td>moral restraint (1)</td><td>purity of body, speech, mind (→ 1)</td></tr>
+<tr><td>sense-restraint (2)</td><td>satipaṭṭhāna, no household thoughts (→ 7)</td></tr>
+<tr><td>moderation with food (3)</td><td>satipaṭṭhāna without any thought (→ 8)</td></tr>
+<tr><td>wakefulness (4)</td><td>1st to 4th jhāna (→ 9)</td></tr>
+<tr><td>clear comprehension of activities (5)</td><td></td></tr>
+<tr><td>removal of 5 hindrances (6)</td><td></td></tr>
+<tr><td>satipaṭṭhāna, no household thoughts (7)</td><td></td></tr>
+<tr><td>satipaṭṭhāna without any thought (8)</td><td></td></tr>
+<tr><td>2nd to 4th jhāna (9)</td><td></td></tr>
+<tr><td>recollection of past lives (10)</td><td></td></tr>
+<tr><td>divine eye (11)</td><td></td></tr>
+<tr><td>destruction of influxes (12)</td><td>(≠ 2-6, 10-12)</td></tr>
+</table>
+<p>The Pāli, Chinese, and Tibetan versions agree in comparing the practice of satipaṭṭhāna to a strong post to which the elephant trainer binds the forest elephant, explaining that the function of the four satipaṭṭhānas is to overcome thoughts related to the household life. This specification further supports the Madhyama-āgama version’s presentation, since if the practice of satipaṭṭhāna were to take place after the five hindrances have already been removed, there would be little need for it to perform the function of overcoming thoughts related to the household life.<span class="note" id="mn125n166"><span class="details"><span class="p">[n.166] Ps IV 199,12 explains that the expression “habits [related to] the household life” (cf. <a href="../../mn/mn125.html">MN 125</a> at MN III 136,16) refers to habits based on the [enjoyment of] the five sensual pleasures, gehasitasīlānan ti pañ- cakāmaguṇanissitasīlānaṃ. With the removal of the hindrances, such concern with the five types of sensual pleasure would have been already left behind.</span></span></span></p>
+<p>The Dantabhūmi-sutta and its Madhyama-āgama parallel continue with satipaṭṭhāna practice undertaken without thinking certain thoughts. The Pāli editions differ on the nature of these thoughts, as some editions speak of not thinking thoughts related to sensuality, while others instruct not to think thoughts related to the four objects of satipaṭṭhāna practice, that is, body, feelings, mental states, and dharmas.<span class="note" id="mn125n167"><span class="details"><span class="p">[n.167] Ee-MN III 136,21 and Se-MN III 269,16 instruct, in relation to contemplation of the body: “do not think a thought related to the body”, mā ca kāyūpasaṃhitaṃ vitakkaṃ vitakkesi, and continue in the same way for the remaining three satipaṭṭhānas by enjoining mā vedanūpasaṃhitaṃ vitakkaṃ ... mā cittūpasaṃhitaṃ vitakkaṃ ... mā dhammūpasaṃhitaṃ vitakkaṃ vitakkesi. Be-MN III 175,20 and Ce-MN III 316,16 instead instruct in all four cases: “do not think a thought related to sensuality”, mā ca kāmūpasamhitaṃ vitakkaṃ vitakkesi. The Pañcaviṃśatisāhasrikā Prajñāpāramitā in Dutt 1934/2000: 204,2 has preserved a similar instruction, which describes an undertaking of body contemplation without forming any thoughts associated with the body, na ca kāyasahagatān vitarkān vitarkayati; cf. also the Pratyutpannabuddhasaṃmukhāvasthitasamādhi-sūtra, Harrison 1978b: 130,13 (cf. also p. 155,22), translated in Harrison 1990: 125 (cf. also p. 144), which applies the instruction not to think any thoughts to all four smṛtyupasthānas.</span></span></span></p>
+<p>The Madhyama-āgama version instructs to avoid thoughts related to sensuality when contemplating the body and to avoid thoughts that are “against the Dharma” or perhaps “not rightful”, adharma, when contemplating dharmas.<span class="note" id="mn125n168"><span class="details"><span class="p">[n.168] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b15: 莫念欲相應念, 乃至觀覺, 心, 法如法, 莫念非法相應念. This instruction recurs in <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b7, parallel to <a href="../../mn/mn107.html">MN 107</a>, cf. above p. 620 note 174. An extract from the present discussion already appeared in Anālayo 2005c: 103-104.</span></span></span> Unfortunately, the instructions for contemplation of feelings and states of mind are only abbreviated in the Chinese version, so that in these two cases it remains open to conjecture what type of thoughts are better avoided.</p>
+<p>The need to avoid sensual thoughts would fit the context in the Madhyama-āgama version well, where satipaṭṭhāna comes right after the disciple has established a basis of moral purity. Thus, from the perspective of the Madhyama-āgama account, the present stage would be a further development of satipaṭṭhāna contemplation with particular emphasis given to overcoming any trace of sensuality.<span class="note" id="mn125n169"><span class="details"><span class="p">[n.169] Such practice could then be understood to lead up to satipaṭṭhāna being “well-established” (supatiṭṭhita) to such an extent that sensual thoughts no longer arise, cf., e.g., <a href="../../sn/sn22.80.html">SN 22:80</a> at SN III 93,21 and its parallel <a href="../../parallels/sa272.html">SĀ 272</a> at T II 72a24.</span></span></span></p>
+<p>In the Majjhima-nikāya version, in contrast, the injunction to avoid sensual thoughts seems a little out of place, as here satipaṭṭhāna takes place after the five hindrances, including the first hindrance of sensual desire, have already been removed. For satipaṭṭhāna to take place at such a point, the injunction to avoid any type of thought in relation to the object of satipaṭṭhāna practice would fit the context better, thereby leading to a level of thought-free mindfulness that can serve as a foundation for the subsequent development of the jhānas.</p>
+<p>The Madhyama-āgama version compares this stage of satipaṭṭhāna to the elephant trainer’s instruction to the forest elephant to lie down and get up, to go forward and backward, to take something up and put it down.<span class="note" id="mn125n170"><span class="details"><span class="p">[n.170] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b20: 臥起, 去來, 取捨, which it follows with the order to bend and stretch, 屈伸, two activities not mentioned in <a href="../../mn/mn125.html">MN 125</a>. By including bending and stretching, <a href="../../parallels/ma198.html">MĀ 198</a> provides an even closer relation between these instructions to the elephant and the satipaṭṭhāna practice of being aware and pratising clear comprehension in relation to bodily activities, described in <a href="../../mn/mn10.html">MN 10</a> at MN I 57,5 (or <a href="../../dn/dn22.html">DN 22</a> at DN II 292,25) and <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582b25, which in addition to mentioning the activities of going forward and backward, abhikkante paṭikkante/出入, of carrying (a bowl, etc.), dhāraṇe/ 著, and of sitting and lying down, nisinne sutte/坐臥, also take up the activities of bending and stretching, samiñjite pasārite/屈伸.</span></span></span> Although this stage of taming the forest elephant is also depicted in the Dantabhūmi-sutta, the Majjhima-nikāya discourse does not relate this stage of the elephant’s training to any of the stages of the gradual path.<span class="note" id="mn125n171"><span class="details"><span class="p">[n.171] In <a href="../../mn/mn125.html">MN 125</a> at MN III 133,7+10+14 the elephant trainer tells the elephant to take something up and put it down, to go forward and back, to get up and sit down, ādissa bho, nikkhipa bho ... abhikkama bho, paṭikkama bho ... uṭṭhaha bho, nisīda bho (Be-MN III 173,16 and Ce-MN III 310,23 read ādiya instead of ādissa, Se-MN III 266,19 reads nipajja instead of nisīda). Since the interrelation between the image of taming a forest elephant and the gradual path is a central topic of both discourses, it seems probable that <a href="../../mn/mn125.html">MN 125</a> lost this interrelation during the process of transmission.</span></span></span></p>
+<p>The two versions continue with the attainment of the four jhānas. While the Majjhima-nikāya discourse directly approaches the second jhāna, without mentioning the first jhāna,<span class="note" id="mn125n172"><span class="details"><span class="p">[n.172] <a href="../../mn/mn125.html">MN 125</a> at MN III 136,26. Notably, Ee also does not mention the fourth jhāna, although the same is found in Be-MN III 175,25, Ce-MN III 316,20, and Se-MN III 269,20.</span></span></span> the Madhyama-āgama version takes the first jhāna into account (see above table 13.4).<span class="note" id="mn125n173"><span class="details"><span class="p">[n.173] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b25.</span></span></span></p>
+<p>In relation to this difference, it strikes an unfamiliar note when the Dantabhūmi-sutta presents a progression of practice that leads from satipaṭṭhāna meditation directly to the second jhāna, without prior attainment of the first jhāna. Although satipaṭṭhāna can serve as a foundation for the development of the jhānas,<span class="note" id="mn125n174"><span class="details"><span class="p">[n.174] The foundational role of satipaṭṭhāna for deeper levels of concentration can be seen, e.g., in <a href="../../dn/dn18.html">DN 18</a> at DN II 216,12, <a href="../../sn/sn52.6.html">SN 52:6</a> at SN V 299,19, and <a href="../../sn/sn52.11.html">SN 52:11</a>-24 at SN V 303-305.</span></span></span> in itself it does not constitute a form of jhāna practice. Perhaps the occurrence of the word vitakka in the passage on satipaṭṭhāna without thought has led to a lapse on the part of the reciter(s) of the discourse, who continued straight away with the calming of vitakka (vitakka-vicārānaṃ vūpasamā), mentioned at the outset of the second jhāna formula, thereby unintentionally dropping the first jhāna in between.<span class="note" id="mn125n175"><span class="details"><span class="p">[n.175] For a similar case cf. above p. 140; cf. also Anālayo 2012d.</span></span></span></p>
+<p>The Madhyama-āgama version indicates that, by attaining the four jhānas, the disciple has reached a level of mental imperturbability that is comparable to the stage of imperturbability reached in the training of the elephant.<span class="note" id="mn125n176"><span class="details"><span class="p">[n.176] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b29.</span></span></span> The Majjhima-nikāya version does not relate this stage of the gradual path to the training of the elephant, even though it earlier explicitly introduced this part of the elephant’s taming as a training in “imperturbability”, a stage of training during which, according to the description given in both versions, the elephant has to remain unmoved even when being put in a situation that resembles an actual fight.<span class="note" id="mn125n177"><span class="details"><span class="p">[n.177] <a href="../../mn/mn125.html">MN 125</a> at MN III 133,16: “the elephant trainer makes him furthermore perform the task called imperturbability”, tam enaṃ hatthidamako uttariṃ ānejjaṃ nāma kāraṇaṃ karoti (Be-MN III 173,24, Ce-MN III 310,31, and Se-MN III 267,2 read āneñjaṃ nāma kāraṇaṃ, Be also reads uttari), <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758a8: “I will now train you in imperturbability, you must not move”, 我今治汝令不移動治, 汝勿動搖!</span></span></span></p>
+<p>The Madhyama-āgama version explains that the imperturbability reached by the disciple also covers external circumstances, such as being able to bear hunger and thirst, mosquitoes and gadflies, the vicissitudes of the climate, unpleasant words, and disease,<span class="note" id="mn125n178"><span class="details"><span class="p">[n.178] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758c8 differs from the Pāli version in as much as it also envisages the possibility that the disciple may be attacked with sticks, 捶杖.</span></span></span> just as the elephant, on reaching imperturbability, was able to endure the blows and noise of a battle situation. The Dantabhūmi-sutta later on does take up the disciple’s ability in endurance, although without relating it to the elephant’s endurance.<span class="note" id="mn125n179"><span class="details"><span class="p">[n.179] <a href="../../mn/mn125.html">MN 125</a> at MN III 136,32.</span></span></span></p>
+<p>The Madhyama-āgama discourse concludes by declaring that a disciple, who in this way patiently bears up with difficulties, has reached a superb degree of taming and become a supreme field of merit, comparable to an elephant who, by reaching a superb degree of taming, has become worthy of being put into service by a king.</p>
+<p>In its account of the training of the elephant, the Majjhima-nikāya version similarly indicates that after mastering the stage of imperturbability the elephant has become worthy of being put into service by a king.<span class="note" id="mn125n180"><span class="details"><span class="p">[n.180] <a href="../../mn/mn125.html">MN 125</a> at MN III 133,28: rājaraho rājabhoggo.</span></span></span> Otherwise, the Majjhima-nikāya discourse proceeds quite differently, since before turning to the disciple’s ability to bear up with various vicissitudes, it describes how the disciple attains the three higher knowledges (see above table 13.4).<span class="note" id="mn125n181"><span class="details"><span class="p">[n.181] In regard to this difference, it does strike a somewhat unusual note to find <a href="../../parallels/ma198.html">MĀ 198</a> praising the disciple’s superior degree of taming without in any way relating such taming to the development of liberating wisdom. From this perspective, <a href="../../mn/mn125.html">MN 125</a> would be more in accord with the general tendency of an account of the disciple’s training in the discourses to culminate in awakening. In the present case, however, the topic of both versions is how a disciple by dint of diligent practice reaches unification of the mind. From this perspective, it would make sense to only give an account of the disciple’s training until the attainment of the fourth jhāna, with which the development of unification of the mind has been accomplished. The presentation in <a href="../../parallels/ma198.html">MĀ 198</a> would also receive support from <a href="../../an/an4.114.html">AN 4:114</a> at AN II 117,31 and <a href="../../an/an5.140.html">AN 5:140</a> at AN III 163,28, which compare qualities of a trained elephant to qualities of a disciple. These two discourses describe how a disciple overcomes unwholesome thoughts and develops the ability to bear patiently the vicissitudes of climate, etc., an ability they compare to an elephant’s ability to bear patiently a battle situation. <a href="../../an/an4.114.html">AN 4:114</a> and <a href="../../an/an5.140.html">AN 5:140</a> continue by comparing a disciple who swiftly approaches liberation to the elephant’s ability to approach swiftly any place that the trainer wants it to go to. From the perspective of these two discourses, the stages of taming an elephant described in <a href="../../mn/mn125.html">MN 125</a> and its parallel only illustrate the stages that lead up to the point when the disciple is ready to approach liberation, but do not correspond to his actual attainment of awakening. The actual attainment of realization, judging from <a href="../../an/an4.114.html">AN 4:114</a> and <a href="../../an/an5.140.html">AN 5:140</a>, would correspond to the elephant swiftly going to whatever place he is being told to go, something not mentioned in the description of the elephant’s training in <a href="../../mn/mn125.html">MN 125</a> or <a href="../../parallels/ma198.html">MĀ 198</a>. From the perspective of transmission, it could more easily be imagined that a reciter supplied the ‘missing’ attainment of the three higher knowledges to an account of the gradual path, than to assume that the higher knowledges were lost. Since already at an earlier point <a href="../../mn/mn125.html">MN 125</a> appears to have been expanded along the lines of a full account of the gradual path, it would not be surprising if the same should have happened also at this point.</span></span></span></p>
+<p>The Dantabhūmi-sutta and its Madhyama-āgama parallel agree in concluding their account by comparing a young, middle aged, or elder monk, who passes away untamed, to a young, middle aged, or old elephant, who passes away untamed, followed by applying the same image to the corresponding cases of tamed monks or elephants.<span class="note" id="mn125n182"><span class="details"><span class="p">[n.182] Wayman 1982: 282 notes that the image of passing away untamed or tamed recurs in a listing of six types of death in the Yogācārabhūmi, T 1579 at T XXX 776c14: 不調伏死, 調伏死.</span></span></span> In keeping with the different compass of the training of the disciple in each version, the Madhyama-āgama version simply speaks of a disciple who is well trained,<span class="note" id="mn125n183"><span class="details"><span class="p">[n.183] <a href="../../parallels/ma198.html">MĀ 198</a> at T I 759a6: 少 ... 中 ... 老聖弟子善調御.</span></span></span> while the Majjhima-nikāya version speaks of a disciple who has destroyed the influxes.<span class="note" id="mn125n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn125.html">MN 125</a> at MN III 137,24: thero ... majjhimo ... navo ... bhikkhu khīṇāsavo.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

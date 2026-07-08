@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 40.9 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 40.9</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">40.9</span> <span class="mirror-right">（九）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn93.html">MN 93 (~)</a> / <a href="../parallels/ma151.html">MĀ 151 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit ordered his ministers, &quot;Quickly prepare a jeweled chariot with feathered wheels. I wish to go to where the World-Honored One is to pay respects and inquire about his well-being.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王即勅群臣：「速严宝羽之车，吾欲往世尊所，礼拜问讯。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great king left the city and went to where the World-Honored One was. He bowed his head at the Buddha&#x27;s feet and sat to one side. At that time, the Tathāgata was surrounded by countless people and was teaching the Dharma. At that time, the seven Nigantha disciples, the seven naked ascetics, the seven black Brahmins, and the seven naked Brahmins passed by not far from the World-Honored One.</p></td><td lang="lzh" class="agama-chi"><p>是时，大王即出城至世尊所，头面礼足，在一面坐。尔时，如来与无央数之众，围遶说法。是时，七尼健子，复有七裸形人，复有七黑梵志，复有七裸形婆罗门，去世尊不远而过。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit saw these people passing by not far from the World-Honored One. He then said to the Buddha, &quot;Looking at these people passing by without stopping, they all have few desires and are content. They have no family or occupation. In this world, the arhats are the foremost. The reason is that among the people, they practice extreme asceticism and do not crave material gain.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，波斯匿王见此诸人去世尊不远而过，即白佛言：「观此诸人经过不住，皆是少欲知足，无有家业。今此世间阿罗汉者，此人最为上首。所以然者，于众人中极为苦行，不贪利养。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great King! You have not yet recognized the true arhat. Being naked and exposed does not mean one is an arhat. Great King! You should know that these are not true practices. You should contemplate the changes of the past. You should also contemplate who is worthy of intimacy, who is intimate, who is worthy of closeness, and who is close. The reason is that in the distant past, there were seven Brahmins who studied together in one place. They were very old and wore grass as clothing. They ate fruits and nuts. They gave rise to various wrong views and each thought, &#x27;By upholding this practice of asceticism, we will become great kings in the future, or seek to be Śakra, Brahmā, or the Four Heavenly Kings.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！竟未识真人罗汉，不以裸形露体名为阿罗汉。大王当知，此皆非真实之行，当念观察久远来变。又复当观可亲、知亲、可近、知近。所以然者，过去久远世时有七梵志，在一处学，年极衰弊，以草为衣裳，食以菓蓏，起诸邪见，各生此念：『我等持此苦行之法，使后作大国王，或求释、梵、四天王。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, there was a teacher named Asita, who was the grandfather of these Brahmins. Knowing the thoughts in the minds of these Brahmins, he descended from the Brahma Heaven and came to where the seven Brahmins were. At that time, the teacher Asita removed his heavenly attire, took on the form of a Brahmin, and was walking in the open air. At that time, the seven Brahmins saw Asita walking from afar. They were filled with anger and said, &#x27;What kind of lustful person is this, walking in front of us Brahmins who practice purity? We should now use ash to curse him and destroy him.&#x27; The seven Brahmins then scooped up water with their hands and sprinkled it on him. The Brahmin cursed, &#x27;You should now quickly become ash and earth!&#x27; However, the Brahmin became even more angry, and the teacher&#x27;s complexion became even more dignified. The reason is that compassion can extinguish anger. At that time, the seven Brahmins then thought, &#x27;Are we not going to regress from our precepts? When we just gave rise to anger, that person became even more dignified on his own.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「尔时，有阿私陀天师，是诸婆罗门祖父，知彼梵志心中所念，即从梵天上没，来至七婆罗门所。是时，阿私陀天师去天服饰，作婆罗门形，在露地经行。是时，七梵志遥见阿私陀经行，各怀瞋恚，而作是语：『此是何等著欲之人，在我等梵行人前行，今当呪灰灭之。』是七梵志即手掬水洒彼，梵志呪曰：『汝今速为灰土！』然婆罗门遂怀瞋恚，天师颜色倍更端政。所以然者，慈能灭瞋。是时，七梵志便作是念：『我等将不为禁戒退转乎？我等正起瞋恚，彼人便自端政。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the seven people then spoke this verse to the teacher of the gods:</p></td><td lang="lzh" class="agama-chi"><p>「尔时，七人与天师便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Are you a god, a gandharva, a rakshasa, or<br/>a ghost? What is your name? We wish to know.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『为天干沓和，　　罗刹鬼神乎？是时名何等，　　我等欲知之。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the teacher Asita immediately replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>「是时，阿私陀师即时报偈曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I am not a god, gandharva, rakshasa, or ghost<br/>I am the celestial teacher Asita. This is my body.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『非天干沓和，　　非鬼罗刹神，天师阿私陀，　　今我身是也。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;I know what you are thinking in your heart, so I have come down from the Brahma Heaven. The Brahma Heaven is extremely far from here, and the body of Sakra is also like that. The Wheel-Turning Sage King is also unattainable. You cannot become Sakra, Brahma, or the Four Heavenly Kings through this ascetic practice.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「『我今知汝心中所念，故从梵天上来下耳。梵天去此极为玄远，彼帝释身亦复如是，转轮圣王亦不可得，不可以此苦行作释、梵、四天王。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the celestial teacher Asita spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>「是时，天师阿私陀便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The mind has various thoughts, and the external appearance is coarse and<br/>rough. But diligently cultivate right views and stay away from evil paths<br/>The mind precepts are pure in practice, and the oral conduct is<br/>also so. Stay away from evil thoughts, and you will definitely be<br/>reborn in heaven.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『心内若干念，　　外服而麁犷，但勤修正见，　　远离于恶道。心戒清净行，　　口行亦复然，远离于恶念，　　必当生天上。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the seven Brahmins asked the celestial teacher, &#x27;Are you really the celestial teacher?&#x27; He replied, &#x27;Yes. But now Brahmins do not attain rebirth in heaven by going naked; they may not attain rebirth in the Brahma heaven by practicing austerities. Also, it is not by exposing the body and practicing various austerities that one is reborn there; one is reborn in heaven by concentrating the mind and not letting it move. You cannot be reborn there by what you practice.&#x27; &#x27;Great King! Consider this meaning. It is not by going naked that one is called an Arhat. Ordinary people who want to know the true person, this is not the case. However, the true person can distinguish the practices of ordinary people. Also, ordinary people cannot know the practices of ordinary people, but the true person can know the practices of ordinary people. But you, Great King, should know that you should know this by skillful means, not just now. You should observe it like this. Thus, Great King! You should learn it by skillful means.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「是时，七梵志白天师曰：『审是天师乎？』报曰：『是也。但今梵志不以裸形得生天上；未必修此苦行，得生梵天之处，又非露暴形体，作若干苦行，得生彼处；能摄心意，使不移动，便生天上。不可以卿等所习得生彼处。』大王！观察此义，不以裸形名为阿罗汉，其凡夫之人欲知真人者，此事不然，然复真人能分别所习凡夫之行。又复凡夫之人不能知凡夫之行，真人便能知凡夫之行。但大王知之，当方便知久远已来，非适今也。当以观之。如是，大王！当以方便学之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit said to the World-Honored One, &quot;What the Tathāgata has said is indeed wonderful! It is not something that ordinary people can understand. However, there are many affairs of state, and I wish to return to my abode.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王白世尊言：「如来所说甚为快哉！非世人所能晓了。然国事猥多，欲还所止。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the king, &quot;The king should know the right time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「王宜知时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the king immediately rose from his seat, bowed at the feet of the World-Honored One, and then withdrew.</p></td><td lang="lzh" class="agama-chi"><p>尔时，王即从坐起，礼世尊足，便退而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

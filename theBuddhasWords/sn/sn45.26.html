@@ -13,20 +13,17 @@
  	<link rel="stylesheet" href="../css/menu.css">
  	<script src="../js/jquery-1.10.2.min.js"></script>
  	<script src="../js/controlpanel.js"></script>
- 	<script src="../js/mousetrap.min.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
  </head>
  <body class="container">
  <div class="header-background">
  <!-- Header -->
  <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
- 	<div class="centered">
- 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
- 			<span></span>
- 			<span></span>
- 		</button>
- 		<span class="box-lbl">Light/Dark</span>
- 	</div> <!-- Centered -->
- 		<a href="../index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
  		<div class="w3-bar bwcontainer">
  			<div id="searchlinks">
  			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
@@ -41,7 +38,7 @@
  	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
- 				<li class="topfirst" id="home"><a href="../index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
@@ -90,6 +87,15 @@
  			</ul>
  			</div>
  		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
 
 <!-- Sidebar (hidden by default) -->
  <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
@@ -128,7 +134,7 @@
 
 <div id="metaarea">
  <ul class="translator">
- <li><a class="dg-link" href="/r/?q=sn45.26">DG</a> <a class="dg-link" href="/b/?q=sn45.26">BB</a> <a href="https://thebuddhaswords.net/./sn/sn45.26.html">TBW</a> <a href="https://suttacentral.net/sn45.26">SC</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <li><a class="dg-link" href="/r/?q=sn45.26">DG</a> <a class="dg-link" href="/b/?q=sn45.26">BB</a> <a href="https://thebuddhaswords.net/./sn/sn45.26.html">TBW</a> &copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
  <a href="../home/copyright.html#wp">(More copyright information)</a>
  </li>
  </ul>
@@ -167,11 +173,12 @@
 <div id="nextprev"><a id="previous-sutta" href="./sn45.25.html#content"></a><a id="next-sutta" href="./sn45.27.html#content"></a></div>
 </div>  <!--End Content -->
 </div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
 <div class="w3-white bwcontainer2"> <!-- Footer div -->
 <!-- Footer -->
 		<footer>
 			<div id="breadcrumbs"> 
-<a href="../index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn45.html">Connected Discourses on the Path</a>SN45:2. The Inferior Person (2)
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn45.html">Connected Discourses on the Path</a>SN45:2. The Inferior Person (2)
 </div>
 	
  	<div class="bottomlinks">
@@ -208,36 +215,37 @@
  		document.getElementById("mySidebar").style.display = "none";
  	}
  </script>
- <script>
- 		var app = document.getElementsByTagName("BODY")[0];
- 		if (localStorage.lightMode == "dark") {
- 			app.setAttribute("light-mode", "dark");
- 	}
- </script>
+  
  
- <script>
- 		function toggle_light_mode() {
- 			var app = document.getElementsByTagName("BODY")[0];
- 				if (localStorage.lightMode == "dark") {
- 			localStorage.lightMode = "light";
- 			app.setAttribute("light-mode", "light");
- 		} else {
- 					localStorage.lightMode = "dark";
- 					app.setAttribute("light-mode", "dark");
- 	}
- 		}
- 
- 		window.addEventListener("storage", function () {
- 			if (localStorage.lightMode == "dark") {
- 				app.setAttribute("light-mode", "dark");
- 				} else {
- 				app.setAttribute("light-mode", "light");
- 		}
- 		}, false);
- 
- </script>
+  
  <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
- <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+
 <script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
  </body>
  </html>

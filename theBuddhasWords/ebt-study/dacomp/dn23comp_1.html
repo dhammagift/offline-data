@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 23 (Part 1) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 23: Pāyāsi-sutta (Part 1 of 2)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn21comp_2.html#content"></a><a id="next-sutta" href="./dn23comp_2.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2012 under the title "Debate with a Sceptic – The Dīrgha-āgama Parallel to the Pāyāsi-sutta (1)" in the <i>Indian International </i> <i>Journal of Buddhist Studies</i>, 13: 1–26.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn23.html">DN 23</a> / <a href="../../parallels/da7.html">DĀ 7</a> / <a href="../../parallels/ma71.html">MĀ 71</a></p>
+<p class="read-links">Read: <a href="./dn23comp_2.html">Part 2</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>In the present and the next chapter I translate and study the <i>Dīrgha-āgama</i> parallel to the <i>Pāyāsi-sutta</i> of the <i>Dīgha-nikāya</i> and their report of how the monk Kumārakassapa faced a debate with a sceptic by the name of Pāyāsi.<span class="note" id="dn23comp_1n1"><span class="details"><span class="p">[n.1] DN 23 at DN II 316,1 to 358,3. Another well-known description of a Buddhist monk debating a sceptical attitude towards religious claims is the <i>Milindapañha</i>; for a survey of editions and translations of this work cf. Skilling 2010: 14–18.</span></span></span> In addition to the <i>Dīrgha-</i><i>āgama</i> version,<span class="note" id="dn23comp_1n2"><span class="details"><span class="p">[n.2] DĀ 7 at T I 42b24 to 47a12.</span></span></span> the <i>Pāyāsi-sutta</i> has another two Chinese parallels, which are found in the <i>Madhyama-āgama</i> and in an individual translation.<span class="note" id="dn23comp_1n3"><span class="details"><span class="p">[n.3] MĀ 71 at T I 525a10 to 532b22 and T 45 at T I 831a6 to 835c7.</span></span></span></p>
+<p>Besides these four Buddhist discourse versions, another parallel occurs in the <i>Rājapraśnīya</i>, the second <i>Upāṅga</i> of the Śvetāmbara canon.<span class="note" id="dn23comp_1n4"><span class="details"><span class="p">[n.4] Bollée 2002.</span></span></span> Although the Buddhist and Jain traditions share a range of similarities in general,<span class="note" id="dn23comp_1n5"><span class="details"><span class="p">[n.5] On similarities between the Buddhist and the Jain tradition cf., e.g., Jacobi 1880, Bohn 1921: 25–32, Jain 1926, Bapat 1928, von Glasenapp 1951, Jain 1966 and 1972, Jaini 1974, Tatia 1980, Nakamura 1983, Tatia 1983, Norman 1989/ 1993, Bronkhorst 1993/2000, Tatia 1993, Chaudhary 1994, Gombrich 1994, Bronkhorst 1999, Balbir 2000, Caillat 2003, Jaini 2003, and Watanabe 2003.</span></span></span> for them to have parallel versions of a discourse is remarkable.<span class="note" id="dn23comp_1n6"><span class="details"><span class="p">[n.6] A comparison of the Buddhist and Jain versions of the present discourse can be found in Leumann 1885: 470–539 and Ruben 1935: 143–151; cf. also Frauwallner 1956/2003b: 192–194.</span></span></span></p>
+<p>In what follows, I translate and briefly study the first part of the <i>Dīrgha-āgama </i>version. A translation of the remainder of the <i>Dīrgha-āgama </i>version, together with a study of the overall significance of the discourse, can be found in the next chapter.</p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p class="quote-block">Discourse to Pāyāsi (first part)<span class="note" id="dn23comp_1n7"><span class="details"><span class="p">[n.7] The translated part of DĀ 7 is found at T I 42b24 to 45a28, which has been translated into English by Ichimura 2015: 245–259. In the notes to my translation, here and in the next chapter, I record only a few significant variations found in comparison with the Pāli parallel, the <i>Pāyāsi-sutta </i>(DN 23), the <i>Madh</i><i>yama-āgama </i>parallel (MĀ 71), and the individually translated discourse (T 45), as to attempt a comprehensive survey of the extant variations would go beyond the bounds of what is feasible in the context of these two chapters.</span></span></span></p>
+<p class="quote-block">At one time Kumārakassapa,<span class="note" id="dn23comp_1n8"><span class="details"><span class="p">[n.8] DĀ 7 at T I 42b25 introduces Kassapa as 童女, which would render <i>kumārī</i>. T 45 at T I 831a10 employs the more appropriate expression 童子.</span></span></span> who was sojourning together with five hundred monks in the country of Kosala, had arrived by stages at the brahmin village of Setavyā.<span class="note" id="dn23comp_1n9"><span class="details"><span class="p">[n.9] DĀ 7 at T I 42b26: 斯波醯 (or 斯婆醯), identified by Akanuma 1930/1994: 612 as a rendering of Setavyā.</span></span></span> Then Kumārakassapa stayed in a <i>siṃsapā</i> grove north of the village of Setavyā.<span class="note" id="dn23comp_1n10"><span class="details"><span class="p">[n.10] On the pericope description of a <i>siṃsapā </i>grove located to the north of a village cf. above p. 180 note 4.</span></span></span></p>
+<p class="quote-block">At that time a brahmin by the name of Pāyāsi was staying in the village of Setavyā.<span class="note" id="dn23comp_1n11"><span class="details"><span class="p">[n.11] DĀ 7 at T I 42b28: 弊宿 (or 蔽宿), identified by Akanuma 1930/1994: 501 as a rendering of Pāyāsi.</span></span></span> This village was rich and delightful, [inhabited] by many people, with abundant timber. King Pasenadi had granted this village as a special fief to the brahmin Pāyāsi, as a sacred allotment.</p>
+<p class="quote-block">The brahmin Pāyāsi kept holding a peculiar view, telling people that: "There is no other world, there is no rebirth, and there is no result of good and evil."<span class="note" id="dn23comp_1n12"><span class="details"><span class="p">[n.12] The view held by Pāyāsi in DN 23 at DN II 316,12 denies another world, the existence of spontaneously arisen beings (<i>sattā opapātikā</i>), and the results of good and bad deeds. A denial of the good and bad deeds is not mentioned in the other two versions, according to which Pāyāsi only rejects the existence of another world and of living beings that are reborn or spontaneously arisen; cf. MĀ 71 at T I 525b16: 無有後世, 無眾生生 and T 45 at T I 831b24: 無有來世, 復無有人亦無化生.</span></span></span></p>
+<p class="quote-block">At that time, the people from the village of Setavyā heard that Kumārakassapa, together with five hundred monks, had by stages come through the country of Kosala and arrived at this <i>siṃsapā</i> grove. They said among themselves:</p>
+<p class="quote-block">"This Kumārakassapa has a great reputation for having become an arahant, being a senior elder who is widely learned, intelligent, and wise, eloquent and capable at replying, skilful at discussions. To get to see him now, will that not be good?" Then, day after day, the people of the village went in regular order to visit Kassapa.</p>
+<p class="quote-block">At that time, Pāyāsi was upstairs in his palace. He saw the village people following each other in groups without knowing where they were going.<span class="note" id="dn23comp_1n13"><span class="details"><span class="p">[n.13] The counterpart to the notion of "following each other in groups" in DN 23 at DN II 317,12 reads <i>saṃghā saṃghī gaṇībhūtā </i>(Be, Ce, and Se read <i>saṅgha</i><i>saṅghī</i>), which Rhys Davids 1910: 350 note 1 qualifies as "somewhat ambiguous". According to MĀ 71 at T I 525a24, the inhabitants of Setavyā were walking in groups, brahmins with brahmins, householders with householders, 梵志, 居士, 各與等類相隨而行, a formulation that helps to make sense of the succinct indications in the other versions.</span></span></span> He asked the attendant who was holding his umbrella: "Why do those people follow each other in groups?"</p>
+<p class="quote-block">The attendant replied: "I heard that Kumārakassapa, at the head of five hundred monks, has been travelling in the country of Kosala and has arrived at the <i>siṃsapā</i> grove. I further heard that this man has a great reputation for having become an arahant, a senior elder who is widely learned, intelligent, and wise, eloquent and capable at replying, skilful at discussions. Those people, who follow each other in groups, wish to approach Kassapa and meet with him together."</p>
+<p class="quote-block">Then the brahmin Pāyāsi told the attendant: "You quickly go and tell those people: 'Just wait, we shall all go together to approach and meet him. Why is that? That person is a fool, he deceives [people in] the world by saying that there is another world, saying that there is rebirth, and saying that there is a result of good and evil. Yet, in reality there is no other world, there is no rebirth, and there is no result of good and evil.'"</p>
+<p class="quote-block">Then, having received these instructions, the messenger went to tell those people from the village of Setavyā: "The brahmin [Pāyāsi] says: 'Just wait, we shall all approach and meet him together.'"</p>
+<p class="quote-block">The village people replied: "It is well, it is well, if he can come, we shall all go together."</p>
+<p class="quote-block">The messenger returned and said: "Those people have stopped; you can go with those who are going."</p>
+<p class="quote-block">Then the brahmin went downstairs from his palace, told his attendant to harness the chariot and, surrounded by the village people, approached the <i>siṃsapā</i> grove. On arriving, he descended from the chariot and approached Kassapa on foot, exchanged friendly greetings, and sat to one side.</p>
+<p class="quote-block">Of the village people – the brahmins and the householders – some worshipped Kassapa and then sat down, some exchanged friendly greetings and sat down, some [introduced themselves] by announcing their names and sat down, some</p>
+<p class="quote-block">held their hands [in a gesture of respect] and sat down, and some sat down silently.<span class="note" id="dn23comp_1n14"><span class="details"><span class="p">[n.14] For a discussion of the pericope description of behavioural variations and the significance of sitting down silently cf. Anālayo 2011b: 452f.</span></span></span></p>
+<p class="quote-block">Then the brahmin Pāyāsi said to Kumārakassapa: "Now I would like to ask you some questions. Would you be free and willing to listen to them?"</p>
+<p class="quote-block">Kassapa replied: "Ask according to your [wish], having heard it I shall know [what you are asking about]."</p>
+<p class="quote-block">The brahmin said: "Now I hold this doctrine: 'There is no other world, there is also no rebirth, and there is no result of good and evil.' What is your doctrine?"</p>
+<p class="quote-block">Kassapa replied: "I shall now ask you, answer according to your understanding. Now the sun and the moon above us, are they of this world or of another world? Are they human or celestial?"</p>
+<p class="quote-block">The brahmin replied: "The sun and the moon are of another world, not of this world. They are celestial, they are not human."</p>
+<p class="quote-block">Kassapa replied: "From this you can understand that there certainly is another world, there is also rebirth, and there is a result of good and evil."</p>
+<p class="quote-block">The brahmin said: "Although you say there is another world, there is rebirth, and there is a result of good and evil, according to my understanding all these do not exist."<span class="note" id="dn23comp_1n15"><span class="details"><span class="p">[n.15] DĀ 7 at T I 43a7: 汝雖云有他世, 有更生及善惡報, 如我意者, 皆悉無有, which Ichimura 2015: 247 translates as "although you assert that there is another world, rebirth, and reward and retribution of good and bad, my reply to your previous question, that the sun and moon belong to the other world, leads to my theory that these three (i.e., afterlife, rebirth, and reward or retribution for good and bad) are impossible." This exemplifies a general tendency by Ichimura to add in his translations material that is not found in the Chinese original, such as the part beginning with "my reply to your previous question". The same is also evident to a lesser extent in the next statement by the brahmin, DĀ 7 at T I 43a10: 有緣, which Ichimura 2015: 247 translates as "I have some reason for ascertaining my theory", where the "ascertaining my theory" could have been marked in some way so as to signal that it is not found in the Chinese text.</span></span></span></p>
+<p class="quote-block">Kassapa asked: "Is there a reason enabling you to know that there is no other world, there is no rebirth, and there is no result of good and evil?"</p>
+<p class="quote-block">The brahmin replied: "There is such a reason." Kassapa asked: "What is the reason for proclaiming that there is no other world?"</p>
+<p class="quote-block">The brahmin said: "Kassapa, I had a relative and friend who had contracted an illness and become very sick. I approached him and said: 'Recluses and brahmins each keep holding a peculiar view, saying that whoever kills living beings, steals, commits sexual misconduct, has a divisive tongue, says what is evil, speaks falsehood,<span class="note" id="dn23comp_1n16"><span class="details"><span class="p">[n.16] [15] The sequence of the four verbal deeds is unexpected, as the standard listings in other discourses usually begin with falsehood.</span></span></span> gossips, is covetous, has aversion,<span class="note" id="dn23comp_1n17"><span class="details"><span class="p">[n.17] [16] DĀ 7 at T I 43a14: 嫉妬, which according to Hirakawa 1997: 367 can, besides its more common sense of <i>īrṣyā </i>or <i>mātsarya</i>, also render <i>vidveṣa</i>. Judging from the standard listings of the ten unwholesome <i>karmapatha</i>, this would be more appropriate in the present context.</span></span></span> and has wrong view, with the breaking up of the body at death these will all go to hell.</p>
+<p class="quote-block">"'From the outset I did not believe this. The reason is that so far I never saw the dead come back and tell me that they reached such a place. If people were to come and tell me that they have reached such a place, I would certainly accept and believe it.</p>
+<p class="quote-block">"'Now you, who are my relative, are in possession of these ten evils. If it is as those recluses say, on passing away you will certainly enter the great hell. Now I have full confidence in you, from you I can certainly accept it. If on examination</p>
+<p class="quote-block">you find that there really is a hell, you should come back to tell me and let me know, afterwards I shall believe it.'</p>
+<p class="quote-block">"Kassapa, he has passed away but up to now has not come. He is my relative; he would not deceive me and, [in spite of] having promised, just not come. Hence there certainly is no other world."</p>
+<p class="quote-block">Kassapa explained: "Wise ones understand with the help of a simile, so I will now explain it to you so that you understand. It is just like, for example, a robber, who is constantly intent on wickedness and deceit, who violates the law of the king. He has been caught by the inspectors and is led to the king with the words:<span class="note" id="dn23comp_1n18"><span class="details"><span class="p">[n.18] DĀ 7 at T I 43a24: 伺察所得, 將詣王所白言. Here and on subsequent occasions, Ichimura 2015: 248 translates this expression as "when such a person is caught redhanded, with clear evidence, he is brought before the king and charged", where the reference to being caught "redhanded, with clear evidence" appears to be a gloss not marked as such.</span></span></span> 'This man is a thief, may your majesty punish him.'</p>
+<p class="quote-block">"The king tells his attendants: 'Take that man, bind him, parade him through the streets and alleys and then take him out of town and hand him over to the executioner.' Then, when the attendants are leading that thief to the executioner, that thief says with gentle words to his watchmen: 'Could you let me go, so that I can see my relatives and neighbours and say farewell to them? After that I will come back.' How is it brahmin, would the watchmen be willing to let him go?"</p>
+<p class="quote-block">The brahmin replied: "No, they would not do it."</p>
+<p class="quote-block">Kassapa said further: "These are fellow human beings, all are in this present world, yet they will not let him go. Let alone your relative [being allowed to go] who, being fully in possession of the ten evils, at the death of the body, with the end of life, certainly went to hell. The spirits of hell have no be-</p>
+<p class="quote-block">nevolence, they are not of the same species [as humans], the world of the dead and of the living are different. If [your relative] speaks with gentle words to those hell spirits, beseeching them: 'You set me free temporarily so that I can return to the world, see my relatives and say farewell to them. After that I will come back.' Would he get to be set free?"</p>
+<p class="quote-block">The brahmin replied: "No, he would not."<span class="note" id="dn23comp_1n19"><span class="details"><span class="p">[n.19] [17] In DN 23 at DN II 322,12 Pāyāsi is not made to acknowledge that his relatives would not stand a chance of coming back, as instead of asking such a question Kassapa directly presses his point that there is another world (etc.). MĀ 71 at T I 526a17 and T 45 at T I 832a14 proceed similarly to DĀ 7 in this respect, but then continue with Kumārakassapa explaining to Pāyāsi how a recluse who develops the divine eye is able to know about rebirth (etc.), an argument found in DN 23 at DN II 329,15 at the conclusion of a subsequent exchange (after the parable of the blind man). This argument has been raised in T 45 at T I 831c4 already at the outset, right after Kassapa had mentioned the existence of the sun and the moon.</span></span></span></p>
+<p class="quote-block">Kassapa said further: "With the help of this analogy, you can fully understand it by yourself. Why keep confusing yourself by giving rise to wrong view?"<span class="note" id="dn23comp_1n20"><span class="details"><span class="p">[n.20] [18] In the corresponding sections in the parallel versions, Kumārakassapa does not explicitly indicate that Pāyāsi is confused or that his view is wrong.</span></span></span></p>
+<p class="quote-block">The brahmin said: "Although you give this explanation, saying that there is another world, I still say that there is none."</p>
+<p class="quote-block">Kassapa said again: "Is there still another reason enabling you to know that there is no other world?"</p>
+<p class="quote-block">The brahmin explained: "There is still another reason for me to know that there is no other world."</p>
+<p class="quote-block">Kassapa asked: "What is the reason for you to know that?"</p>
+<p class="quote-block">The brahmin replied: "Kassapa, I had a relative who had contracted an illness and become seriously sick. I approached him and said: 'Recluses and brahmins each keep holding a peculiar view, saying that there is another world, saying that</p>
+<p class="quote-block">whoever does not kill, does not steal, does not engage in sexual misconduct, does not deceive, does not have a divisive tongue, does not say what is evil, does not speak falsehood, does not gossip, is not covetous, has no aversion, and does not have wrong view, with the breaking up of the body at death these will all be reborn in the higher heavens.</p>
+<p class="quote-block">"'From the outset I did not believe this. The reason is that so far I never saw the dead come back and tell me that they reached such a place. If people were to come and tell me that they have reached such a rebirth, I would certainly believe it.</p>
+<p class="quote-block">"'Now you, who are my relative, are in possession of the ten wholesome [deeds]. If it is as those recluses say, at the end of life you will certainly be reborn in the higher heavens. Now I have full confidence in you, from you I can certainly accept it. If on examination you find that there really is such a heavenly reward, you should certainly come back to tell me and let me know, afterwards I shall believe it.'</p>
+<p class="quote-block">"Kassapa, he has passed away but up to now has not come. He is my relative; he would not deceive me and, [in spite of] having promised, just not come. Hence there certainly is no other world."</p>
+<p class="quote-block">Kassapa said: "Wise ones understand with the help of a simile, so I will now again deliver a simile to you. It is just like, for example, a man who has fallen into a deep cesspit, with his body submerged in it up to the head. The king tells his attendants: 'Take this man out, take a bamboo spatula and scrape his body three times, bathe him with [bathing] powder and clean ashes. Having properly washed him, use fragrant liquid to bathe his body, apply fine powder of various fragrances to his body, and order the master barber to clean his beard and hair.'</p>
+<p class="quote-block">"On being told, the attendants [of the king] respectfully lead [the man] to be washed like this three times, then they bathe him with fragrant liquid and apply fragrant powder, dress him in</p>
+<p class="quote-block">reputable clothes, adorn his body, offer him hundreds of sweet delicacies to fill his mouth as he likes, and lead him to a palace where he can enjoy himself with the five cords of sense pleasures. Would that man be willing to return and enter the cesspit again?"</p>
+<p class="quote-block">[The brahmin] replied: "He would not be willing. That place is evil and stinky, how could he return and enter it?"</p>
+<p class="quote-block">Kassapa said: "For <i>deva</i>s it is also like that, this Jambudīpa is stinky, dirty, and impure.<span class="note" id="dn23comp_1n21"><span class="details"><span class="p">[n.21] [19] On the term Jambudvīpa cf. Wujastyk 2004.</span></span></span> For those <i>deva</i>s dwelling up high, they smell the stench of humans from afar, up to a hundred leagues' distance, [like] a very dirty cesspit. Brahmin, your relative and friend, who was in possession of the ten wholesome [deeds], was certainly reborn in heaven, enjoying himself with the five cords of sense pleasures, thoroughly enjoying himself. Would he be willing to come back again to this cesspit[-like] Jambudīpa?"</p>
+<p class="quote-block">[The brahmin] replied: "No, he would not."</p>
+<p class="quote-block">Kassapa said further: "With the help of this analogy, you can fully understand it by yourself. Why keep confusing yourself by giving rise to wrong view?"</p>
+<p class="quote-block">The brahmin said: "Although you give this explanation, saying that there is another world, I still say that there is none."</p>
+<p class="quote-block">Kassapa said again: "Is there still another reason enabling you to know that there is no other world?"</p>
+<p class="quote-block">The brahmin explained: "There is still another reason for me to know that there is no other world."</p>
+<p class="quote-block">Kassapa asked: "What is the reason for you to know that?" The brahmin replied: "Kassapa, I had a relative who had contracted an illness and become seriously sick.<span class="note" id="dn23comp_1n22"><span class="details"><span class="p">[n.22] [20] This argument seems to have been lost in T 45, which at T I 832b16 continues from the previous topic directly with Kassapa's argument about the length of life in heaven (introduced with 復次, corresponding to <i>puna ca paraṃ</i>), without this exposition being prompted by a corresponding argument by Pāyāsi.</span></span></span> I approached</p>
+<p class="quote-block">him and said: 'Recluses and brahmins each keep holding a peculiar view, saying that there is another world, saying that who does not kill, does not steal, does not engage in sexual misconduct, does not deceive, does not drink liquor, with the breaking up of the body at death these will all be reborn in the Heaven of the Thirty-three.<span class="note" id="dn23comp_1n23"><span class="details"><span class="p">[n.23] Adopting a correction in the CBETA edition of 懷 to read 壞.</span></span></span></p>
+<p class="quote-block">"'I also do not believe this. The reason is that so far I never saw the dead come back and tell me that they reached such a place. If people were to come and tell me that they have reached such a place, I will certainly believe it.</p>
+<p class="quote-block">"Now you, who are my relative, are in possession of these five moral observances. With the breaking up of the body at death you should certainly be reborn in the higher Heaven of the Thirty-three. Now I have full confidence in you, from you I can certainly accept it. If on examination you find that there really is such a fortunate heaven, you should come back to tell me and let me know, afterwards I shall believe it.'<span class="note" id="dn23comp_1n24"><span class="details"><span class="p">[n.24] [21] In MĀ 71 at T I 527a3 Pāyāsi further tells his relatives that he will give them wealth if they come back, forestalling that they might lack an incentive to come back and inform him.</span></span></span></p>
+<p class="quote-block">"Kassapa, he has passed away but up to now has not come. He is my relative; he would not deceive me and, [in spite of] having promised, just not come. Hence there certainly is no other world."</p>
+<p class="quote-block">Kassapa replied: "What here is a hundred years equals one day and night up in the Heaven of the Thirty-three. Thirty days like this make one month, twelve months make a year like this, and the life span of those <i>deva</i>s is a thousand years. How is it, brahmin? The relative of yours, who was in possession of the</p>
+<p class="quote-block">five moral observances, at the breaking up of the body, at death, was certainly reborn up in the Heaven of the Thirty-three. Being reborn as a <i>deva</i>, he thought: 'I have just been reborn here. I shall for two or three days enjoy myself.' After that he comes down to tell you. Would you get to see him?"</p>
+<p class="quote-block">[The brahmin] replied: "No, I would not. I would already have passed away, how could I meet and see him?" The brahmin said [further]: "I do not believe you. Who has come and told you that the <i>deva</i>s of the Thirty-three have a lifespan like that?"</p>
+<p class="quote-block">Kassapa said: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. It is just like, for example, a man who has been blind since birth, who does not distinguish the five colours of blue, yellow, red, and white,<span class="note" id="dn23comp_1n25"><span class="details"><span class="p">[n.25] [22] Even though DĀ 7 speaks of five colours, it only lists four (Ichimura 2015: 252 adds "black", which is not found in the Chinese original). The listings of colours in the parallel versions show some variations: MĀ 71 at T I 527a24 mentions only two colours, black and white. T 45 at T I 832b28 lists four colours: blue, yellow, red, and white. DN 23 at DN II 328,4 also lists four colours, but without mentioning white: blue, yellow, red, and crimson. Elsewhere in the Pāli discourses the same listing of four colours recurs as part of the simile of a blind man in MN 75 at MN I 509,15 and MN 99 at MN II 201,14, and again in relation to dying a cloth in MN 7 at MN I 36,17. In addition to these four, Vin I 25,31 lists the colour of crystal (<i>phalika</i>). A description of perception in MN 43 at MN I 293,16 mentions the ability to perceive blue, yellow, red, and white (<i>odāta</i>). The same four recur in listings of the spheres of transcendence, <i>abhibhāyatana</i>s, and in listings of <i>kasiṇa</i>s, cf., e.g., MN 77 at MN II 13,28 and MN II 14,33.</span></span></span> [does not distinguish] what is gross or subtle, what is long or short, and who also has not seen the sun, the moon, the constellation of the stars,<span class="note" id="dn23comp_1n26"><span class="details"><span class="p">[n.26] [23] Adopting the variant 像 instead of 象.</span></span></span> hills and valleys. Another person asks him: 'Are blue, yellow, red, and white the five colours?' The blind man answers: 'There are no five colours' …<i> in the </i></p>
+<p class="quote-block"><i>same way for</i> … what is gross or subtle, what is long or short, the sun, the moon, the constellation of the stars, hills and valleys – of all of these, he says that they do not exist. How is it, brahmin? Is the reply given by the blind man correct?"</p>
+<p class="quote-block">[The brahmin] replied: "No, it is not. The reason is that in the world there are the five colours of blue, yellow, red, and white; there is what is gross or subtle, what is long or short; there are the sun, the moon, the constellation of the stars; there are hills and valleys, even though he says they do not exist."</p>
+<p class="quote-block">[Kassapa said]: "Brahmin, you are also like that [blind man], the lifespan of the <i>deva</i>s of the Thirty-three really exists, it is not a vain [assertion]. Because you do not see it yourself, you say that it does not exist."</p>
+<p class="quote-block">The brahmin said: "Although you say that this exists, I still do not believe it."<span class="note" id="dn23comp_1n27"><span class="details"><span class="p">[n.27] [24] In MĀ 71 at T I 527b9 and T 45 at T I 832c6 Pāyāsi remonstrates with Kassapa for being compared to a blind man.</span></span></span></p>
+<p class="quote-block">Kassapa said again: "Is there yet another reason that makes you know that this does not exist?"</p>
+<p class="quote-block">[The brahmin] replied: "Kassapa, in the village that is my fief a person committed thievery.<span class="note" id="dn23comp_1n28"><span class="details"><span class="p">[n.28] [25] The next topic taken up in DN 23 at DN II 330,7 is why well-behaved recluses and brahmins do not commit suicide. A similar argument is made in MĀ 71 at T I 527b11 in terms of Pāyāsi himself committing suicide, i.e., if he knew that on doing good he would definitely go to heaven, he would now do good and then kill himself. In T 45 at T I 832c8 and 832c25 Pāyāsi makes a comparable argument twice.</span></span></span> The inspectors caught him, led him to me, and told me: 'This man is a thief, may you punish him.' I replied: 'Take that man, bind him and put him into a big cauldron, cover it with soft leather and with a thick layer of mud, so that [the covering] is firm and thick, let there be no leak. Dispatch people to surround [the cauldron] and boil it over fire.'</p>
+<p class="quote-block">"Then I wanted to observe and come to know whether that spirit comes out at some place. Leading my retinue we surrounded the cauldron and watched, but none of us saw that spirit come or go at any place. We again opened the cauldron to look and did not see the spirit coming or going at any place. For this reason I know that there is no other world."</p>
+<p class="quote-block">Kassapa said: "I now ask you, you can reply according to your understanding. Brahmin, at the time when you lie down to sleep in your palace,<span class="note" id="dn23comp_1n29"><span class="details"><span class="p">[n.29] [26] In T 45 at T I 833c6 the person asleep is not Pāyāsi himself, but just a man in general. The argument that develops out of this also differs, as the point made by Kassapa is that what the man has seen in his dreams is unreal.</span></span></span> do you then in your dream see mountains and forests, rivers, pleasure gardens, ponds and pools, countries and cities, streets and alleys?"</p>
+<p class="quote-block">[The brahmin] replied: "I have seen these in my dream."</p>
+<p class="quote-block">[Kassapa] asked: "Brahmin, at the time when you were dreaming, did the family dependants that stay in your house guard you?"</p>
+<p class="quote-block">[The brahmin] replied: "They guarded me." [Kassapa] asked: "Brahmin, did those family dependants see your consciousness go out or come in?"<span class="note" id="dn23comp_1n30"><span class="details"><span class="p">[n.30] [27] DĀ 7 at T I 44a22 refers to the consciousness that goes out or comes in as 識神, on which cf. Zacchetti 2010b: 173 note 87 and Radich 2016.</span></span></span></p>
+<p class="quote-block">[The brahmin] replied: "They did not see it."</p>
+<p class="quote-block">Kassapa said: "Now, while you were still alive, the consciousness went in and out and yet could not be seen, let alone [be seen] when one has passed away. You cannot observe with [normal] eyes such matters [even] in living beings right in front of you.</p>
+<p class="quote-block">"Brahmin, there are monks who get rid of and discard slothand-torpor during the first and last watch of the night,<span class="note" id="dn23comp_1n31"><span class="details"><span class="p">[n.31] [28] Adopting the variant 損 instead of 捐.</span></span></span> engag-</p>
+<p class="quote-block">ing in mindfulness of the factors pertaining to the path with diligence, without remiss, who through the power of concentration develop the pure divine eye.<span class="note" id="dn23comp_1n32"><span class="details"><span class="p">[n.32] [29] The corresponding section in DN 23 at DN II 334,2 does not refer to the development of the divine eye. The divine eye is, however, found in MĀ 71 at T I 528c15 and T 45 at T I 833c12, where the same point has already been made earlier; cf. above p. 302 note 19.</span></span></span> Through the power of the divine eye they observe how living beings on passing away here are reborn there, and from there are reborn here, with long or short lifespan, beautiful or ugly complexion, receiving results according to their actions in good and evil destinies. They completely know and see all that.</p>
+<p class="quote-block">"With the turbid and polluted eye of the flesh you are really unable to see the destiny of living beings and then you say that it does not exist. Brahmin, from this you can understand that there certainly is another world."</p>
+<p class="quote-block">The brahmin said: "Although you give this explanation, saying that there is another world, according to my view, there still is none."</p>
+<p class="quote-block">Kassapa said again: "Is there yet another reason for you to know that there is no other world?"</p>
+<p class="quote-block">The brahmin said: "There is!"</p>
+<p class="quote-block">Kassapa said: "What is the reason for you to know that?"</p>
+<p class="quote-block">The brahmin replied: "In the village that is my fief a person committed thievery. The inspectors caught him, led him to me, and told me: 'This man is a thief, may you punish him.' I told my attendants to take and bind that man, take off his skin while he is alive and seek the consciousness, yet we all did not see it. I again told my attendants to cut off the meat and seek the consciousness, yet we still did not see it. I again told my attendants to sever the tendons and veins and seek the consciousness between the bones, yet we still did not see it. I again told</p>
+<p class="quote-block">my attendants to break the bones and extract the marrow to seek the consciousness among the marrow, yet we still did not see it. Kassapa, for this reason I know that there is no other world."</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. In the distant past, a long time ago, a country had become ruined, it had been deserted and had not recovered. Then five hundred merchants were passing through that territory in their chariots.</p>
+<p class="quote-block">"There was a brahmin fire worshipper who was staying in a forest. Then all the merchants, who had stayed overnight, left at dawn. Then the fire-worshipping brahmin thought: 'There, in this forest, merchants stayed overnight and now they have left. Perhaps they forgot something, let me go and have a look.'</p>
+<p class="quote-block">"He went there to look all over the place and saw nothing except for a small child of just one year old, sitting there alone.<span class="note" id="dn23comp_1n33"><span class="details"><span class="p">[n.33] [30] MĀ 71 at T I 529a4 explains that the merchants had set out in haste and therefore forgotten the small child.</span></span></span> The brahmin further thought: 'Can I now bear to see this small child die in front of me? I would rather lead this small child to where I stay and nourish it!' He took the small child in his arms, went towards the place where he was staying and brought it up. The child in turn grew up until it was over ten years old.</p>
+<p class="quote-block">"Then for some minor reason the brahmin wished to go among people. He told the child: 'For some minor reason I wish to leave temporarily. You should guard this fire well, take care that it does not go out. If the fire goes out, you should use fire-sticks and wood to get the fire burning.' Having thoroughly instructed him, he went out of the forest to travel.</p>
+<p class="quote-block">"After the brahmin had left, the small child desired to play and did not keep looking after the fire. The fire in turn went</p>
+<p class="quote-block">out. The small child came back from playing and saw that the fire had gone out. He felt remorseful and said: 'I have done what I should not have done. When my father left, he thoroughly instructed me to guard this fire, taking care that it does not go out. My desire to play resulted in the fire going out. Now what should I do?'</p>
+<p class="quote-block">"Then the small child blew the ashes, trying to get fire, but could not get any.<span class="note" id="dn23comp_1n34"><span class="details"><span class="p">[n.34] [31] The parallel versions do not mention any blowing on the ashes, which would show at least some degree of familiarity with making a fire.</span></span></span> He took an axe in turn and chopped up the fire wood, trying to get fire, but still could not get it. He further chopped the fire wood and put it into a mortar, pounding it with a pestle, trying to get fire, but still could not get it.</p>
+<p class="quote-block">"At that time, the brahmin came back from having been among people. Arriving in the forest, he asked the small child: 'Earlier I told you to guard the fire. Did the fire not go out?'</p>
+<p class="quote-block">"The small child replied: 'I went out to play without paying attention or looking after it in time, and now the fire has already gone out.'</p>
+<p class="quote-block">"[The brahmin] asked the small child again: 'With what means did you try to get fire?'</p>
+<p class="quote-block">"The small child explained: 'As fire comes out of wood, I took an axe and chopped up the fire wood, trying to get fire, but did not get fire. I further chopped it into pieces and put them into a mortar, pounding it with a pestle, trying to get fire, but still could not get it.'</p>
+<p class="quote-block">"Then the brahmin took the fire-sticks and wood to make fire appear.<span class="note" id="dn23comp_1n35"><span class="details"><span class="p">[n.35] [32] DN 23 at DN II 341,26 and MĀ 71 at T I 529a27 report a reflection by the brahmin that the child is foolish to have acted like this, something which in T 45 at T II 834a20 he even tells the child.</span></span></span> He added more fire wood until it was burning. He told the small child: 'That is the proper method, like this, if</p>
+<p class="quote-block">one wishes to get fire. One should not break up the fire wood or pound it with a pestle, trying to get it.'<span class="note" id="dn23comp_1n36"><span class="details"><span class="p">[n.36] [33] Adopting the variant 薪 instead of 析.</span></span></span></p>
+<p class="quote-block">"Brahmin, like this you are also without the [proper] means when you search for the consciousness by skinning a dead person. You cannot observe with [normal] eyes such matters [even] in living beings right in front of you.</p>
+<p class="quote-block">"Brahmin, there are monks who get rid of and discard slothand-torpor during the first and last watches of the night, engaging in mindfulness of the factors pertaining to the path with diligence, without remiss, who through the power of concentration develop the pure divine eye. Through the power of the divine eye they observe how living beings on passing away here are reborn there, and from there are reborn here, with long or short lifespan, beautiful or ugly complexion, receiving results according to their actions in good and evil destinies. They completely know and see all that.</p>
+<p class="quote-block">"With the turbid and polluted eye of the flesh you are unable really to see the destiny of living beings, and then say what does not exist. Brahmin, from this you can understand that there certainly is another world."</p>
+<p class="quote-block">The brahmin said: "Although you give this explanation, saying that there is another world, according to my view, there still is none."</p>
+<p class="quote-block">Kassapa said again: "Is there yet another reason for you to know that there is no other world?"</p>
+<p class="quote-block">The brahmin explained: "There is!"</p>
+<p class="quote-block">Kassapa asked: "What is the reason for you to know that?"</p>
+<p class="quote-block">The brahmin said: "In the village that is my fief a person committed thievery. The inspectors caught him, led him to me, and told me: 'This man is a thief, may you punish him.' I told</p>
+<p class="quote-block">my attendants: 'Take that man and weigh him.' My attendants took him while he was alive and weighed him. Then I told the attendants: 'You take this man and slowly kill him without damaging his skin or flesh.' They followed my instruction and killed him without any damage.<span class="note" id="dn23comp_1n37"><span class="details"><span class="p">[n.37] [34] In DN 23 at DN II 334,19 and MĀ 71 at T I 528b2 they strangle him.</span></span></span> I again told my attendants: 'Again weigh him.' He was heavier than before.</p>
+<p class="quote-block">"Kassapa, we weighed that man when he was alive, when his consciousness was still there, his complexion was pleasing,</p>
+<p class="quote-block">he was still able to speak and his body was light. When he was dead we weighed him again, when his consciousness had become extinct, he had lost his complexion, was unable to speak, and his body had become heavy. For this reason I know that there is no other world."</p>
+<p class="quote-block">Kassapa said to the brahmin: "I now ask you, reply to me according to your understanding. When a man weighs iron, first having weighed it when it is cold and then weighing it later again when it is hot – when is it brighter, more supple, and light; when is it without brightness, hard, and heavy?"</p>
+<p class="quote-block">The brahmin said: "When the iron is hot it has colour, is supple, and light, when the iron is cold it has no colour, is hard, and heavy."</p>
+<p class="quote-block">Kassapa said: "People are just like that, when they are alive they have complexion, are supple, and light, when they are dead they have no complexion, are stiff, and heavy. From this you can understand that there certainly is another world."</p>
+<p class="quote-block">The brahmin said: "Although you give this explanation, saying that there is another world, according to my view, there certainly is none."</p>
+<p class="quote-block">Kassapa said: "Is there yet another reason for you to know that there is no other world?"</p>
+<p class="quote-block">[The brahmin explained: "There is!"</p>
+<p class="quote-block">Kassapa asked: "What is the reason for you to know that?"]</p>
+<p class="quote-block">The brahmin replied: "I had a relative who had contracted an illness and become seriously sick.<span class="note" id="dn23comp_1n38"><span class="details"><span class="p">[n.38] [35] In the corresponding argument in DN 23 at DN II 336,7, the one who is put from one side to the other (etc.) is a thief who is half dead due to the punishment inflicted on him. In MĀ 71 at T I 527c25 and in T 45 at T I 833a2 Pāyāsi just describes relatives who earlier spoke with him, but no longer do that after having passed away.</span></span></span> Then I approached him and told [my assistants to help the sick relative change sides]: 'Take this sick man and put him on his right side.' [The sick person] bent and stretched, looked around and spoke, as always. Then I told them to put him on his left side. Again and again we turned him round. He bent and stretched, looked around and spoke, as usual.</p>
+<p class="quote-block">"When he had in turn died, I again told my people to turn him around, put him on his left and right side, again and again carefully observing him. He no longer bent and stretched, or looked around, or spoke. For this reason I know that there is no other world."</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now explain it to you. In the past there was a country where people had never heard the sound of a conch. Then a man who was skilled at blowing a conch came to that country. He entered a village, took the conch, and blew it three times. Then he placed it on the ground.</p>
+<p class="quote-block">"Then the village people, men and women, heard the sound and were startled. They all came close and asked: 'What sound is this, so lovely and clear like this?' That man pointed with his fingers at the conch and said: 'This thing makes the sound.' Then the village people touched the conch with their hands and said:</p>
+<p class="quote-block">'You, make a sound, you, make a sound!'<span class="note" id="dn23comp_1n39"><span class="details"><span class="p">[n.39] [36] In the parallels they take stronger action, such as hitting the conch in various ways, DN 23 at DN II 337,25, or kicking it with their feet, MĀ 71 at T I 528a9, in order to get sound. In T 45 at T I 833a13 they threaten to smash the conch to get it make sound.</span></span></span> The conch did not make any sound.</p>
+<p class="quote-block">"The owner took the conch, blew it three times and placed it on the ground. The village people said: 'Earlier, the beautiful sound was not due to the power of the conch. It is by putting one's hand and mouth and by blowing air that afterwards it makes a sound.'</p>
+<p class="quote-block">"Human beings are like that. When the life faculty and consciousness are there, they breathe in and out, are able to bend and stretch, to look around and speak. When the life faculty and consciousness are no longer there, they do not breathe in and out, do not bend and stretch, do not look around or speak."</p>
+<p class="quote-block">He further told the brahmin: "You should now give up this evil and wrong view, let it not for a long time increase suffering and vexation for yourself." (To be continued in the next chapter).</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>The basic pattern of arguments and counterarguments in the above translated <i>Dīrgha-āgama </i>discourse and its parallels proceeds similarly, with some variations in sequence (a natural feature of orally transmitted material).<span class="note" id="dn23comp_1n40"><span class="details"><span class="p">[n.40] [37] Cf. in more detail Anālayo 2011b: 874–876.</span></span></span> In what follows, I survey the progression of the debate up to the present point, in order to appreciate its overall dynamics. I add numbers to the different arguments in preparation for a survey of the whole discussion in the next chapter.<span class="note" id="dn23comp_1n41"><span class="details"><span class="p">[n.41] Cf. below p. 336.</span></span></span></p>
+<p>1) The debate begins with Pāyāsi's basic claim that there is no other world (etc.), presented without further argument in order to see how Kassapa will respond to this proposition. Kassapa reacts by pointing out that the sun and the moon clearly do exist. That is to say, he immediately turns to something evidently visible as a proof that there are things beyond this world.</p>
+<p>By in this way presenting Pāyāsi with an argument based on evidence of an empirical type, Kassapa puts himself at the level of his visitor and replies in a way that someone sceptical of religious claims cannot easily dismiss and thus has to take seriously.</p>
+<p>Needless to say, Pāyāsi would have been well aware of the existence of the sun and the moon. The point of bringing these up in the present context is thus not a logical proof, as it does not follow from the existence of the sun and the moon that there is rebirth and a result of good and evil. Instead, the reference to the sun and the moon as a self-evident instance of the existence of "another world" shows Kassapa's debating skill in quickly devising an argument that his opponent cannot easily dismiss.</p>
+<p>2) Being in this way pressed for some evidence that supports his position, Pāyāsi comes out with the story of someone who did evil but never came back to tell him about their rebirth in hell. Kassapa quickly dismisses Pāyāsi's argument with the example of a culprit on his way to execution who will not get respite to visit and greet others.</p>
+<p>3) Pāyāsi right away turns to what appears to be an opportunity afforded by the reply given by Kassapa, coming out with another example for which Kassapa's argument will not work: someone reborn in heaven. In such a case Kassapa will no longer be able to argue that, like a culprit led to execution, such a person will be prevented by some heavenly wardens from coming to visit Pāyāsi.</p>
+<p>Kassapa meets this challenge by changing track and delivering another argument, describing how someone who has been rescued from a cesspit and thoroughly cleaned will have no wish to return to that cesspit. Hence it is quite understandable that those heavenly beings did not wish to come back to the filthy and inferior earth in order to deliver their message to Pāyāsi.</p>
+<p>4) Pāyāsi is not willing to let the opportunity he has seen pass without another try and thus keeps pressing the same issue with a slightly different example based on the same principle of heavenly rebirth, this time in terms of rebirth in the Heaven of the Thirtythree as the recompense for keeping the moral precepts. The point here could be that by highlighting the keeping of the precepts of the one who passed away it becomes a little less credible that he would not keep his promise just because coming to earth is for him like approaching a cesspit.</p>
+<p>Kassapa meets this variation with the argument that time in heaven is different from time on earth. This reply invalidates the idea that the person who passed away either should already have come or else must have broken his promise, as by the time he keeps his promise Pāyāsi would no longer be around. By highlighting the relativity of the perception of time Kassapa seems to hint at the problem of drawing definite conclusions based on one's own limited perceptual appraisal of a situation, the very reason that apparently led Pāyāsi to upholding his view.</p>
+<p>5) Pāyāsi right away notices that Kassapa has switched from using similes to making affirmations about the nature of heavenly existence. He therefore immediately quips back by pointing out that Kassapa's reply is not based on verifiable information, questioning the sources on which Kassapa bases his knowledge of the conditions in the Heaven of the Thirty-three. Kassapa is not short of a reply, illustrating with the simile of a blind man the fact that not having direct experience of something need not mean that this does not exist.</p>
+<p>At this point a difference in sequence occurs between the parallel versions. The <i>Dīrgha-āgama </i> discourse does not continue with an argument by Pāyāsi, found in the other versions, that those who do good deeds might as well kill themselves to get the good fruits that are to be expected of such conduct. The same argument is raised only in a later part of the <i>Dīrgha-āgama </i>version, translated in the next chapter.</p>
+<p>In the other versions, Kassapa replies to this challenge with the simile of a pregnant woman who cuts up her belly to see if the child she has is male and will become the heir to the family property. As a result of her foolish action, she and the foetus pass away. With this parable Kassapa drives home the fact that the maturation of fruits is something best left to time, instead of being something one can forcefully try to interfere with.</p>
+<p>6) The next arguments made by Pāyāsi are related to various punishments inflicted on a thief. The description of boiling a thief in a tightly closed cauldron without being able to see the consciousness emerging finds its match in Kassapa's description of the mind's journeys during a dream, which are also not externally visible.<span class="note" id="dn23comp_1n42"><span class="details"><span class="p">[n.42] [38] MĀ 71 and T 45 do not have this as the first in their series of illustrations related to a thief, but only as their second.</span></span></span></p>
+<p>7) In reply to Kassapa's illustration of the inability to see the mind travelling, in the <i>Dīrgha-āgama </i>version Pāyāsi next comes out with a closely related example, only that now the body of the culprit is cut to pieces. Kassapa replies with a longer story about a child that foolishly tries to make a fire by cutting the firewood to pieces.</p>
+<p>The <i>Dīgha-nikāya </i>version adopts a slightly different sequence in its series of arguments. In reply to Kassapa's reference to the theme of visibility, Pāyāsi comes back at him by taking up the example of an executed criminal who is weighed. He thereby tackles the same issue in a way that does not require the consciousness to be visible. This is the next argument raised in the <i>Dīrgha-āgama </i> discourse.</p>
+<p>8) Pāyāsi describes the difference between a living person and a corpse in terms of their bodily condition and weight. The point behind this argument seems to be that, since Kassapa denies the possibility that the consciousness to be reborn can be seen, there should at least be some other evidence for it, such as weight. That is, if something was there during life and has left the body at death, why is the body heavier now than before?</p>
+<p>Kassapa again shows himself master of the situation, this time by coming up with a scientific comparison, namely the difference in weight between heated iron and cold iron.</p>
+<p>9) The next argument raised by Pāyāsi compares the reactions of a living person to the condition of a corpse. The parallel versions show some differences in their presentation of this case.<span class="note" id="dn23comp_1n43"><span class="details"><span class="p">[n.43] [39] Cf. above p. 314 note 38.</span></span></span> Judging from the Pāli version, the point of Pāyāsi's argument might be that the corpse is no longer able to act even though no soul has been seen departing from it.<span class="note" id="dn23comp_1n44"><span class="details"><span class="p">[n.44] [40] DN 23 at DN II 336,9 makes the additional specification that the moving around of the person in various ways is done so as to see his soul emerging, <i>appeva nām' assa jīvaṃ nikkhamantaṃ passeyyāmā ti</i>.</span></span></span> Kassapa in reply compares Pāyāsi's condition to that of people who have never heard a conch being blown and therefore search for the sound in a foolish manner.</p>
+<p>The overall dynamic of the exchange up to this point gives the impression that Kassapa is slowly gaining the upper hand, as his similes become more elaborate and he is confident enough to challenge Pāyāsi directly for being a fool. This impression finds confirmation in what follows, as from now on Pāyāsi simply refuses to accept Kassapa's presentation, but is no longer able to come up with counterarguments.</p>
+<p>Already with the part translated above it becomes clear that the present discourse portrays a rather entertaining debate in which the two opponents use all their skill, eloquence, and fantasy in order to trump the other. The appeal of the present description of how a sceptic is thoroughly defeated in debate would account for its popularity in the Buddhist as well as the Jain traditions.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn23.html">DN23</a>: Pāyāsi Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

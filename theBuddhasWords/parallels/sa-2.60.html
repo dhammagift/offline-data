@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.60 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.60</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 60</span><span class="mirror-right">（六〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn3.20.html">SN 3.20</a> / <a href="../parallels/sa1233.html">SĀ 1233</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, there was a great elder in the city named Mahānāman. He had no son and died of illness. At that time, according to the law of the country, if one did not have a son, after death, the family property would be confiscated by the state. For this reason, all the property of Mahānāman should have been taken by the king. At that time, King Prasenajit, with his body covered in dust, went to where the Buddha was. After paying homage, he sat to one side. The Buddha said to the king, &quot;Why is it that today your body is covered in dust, your countenance changed, and you have come here?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，城中有大长者，名摩诃男。无有子胤，遇患命终。尔时，国法若不生男，命终之后，家财入官。以是之故，摩诃南所有财产，应入国主。时，波斯匿王身体坌尘，往诣佛所，既顶礼已，却坐一面。佛告王曰：「今日何故，身体坌尘，颜容改常，而来至此？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit said to the Buddha, &quot;World-Honored One! In the city of Śrāvastī, there was a great elder named Mahānāman who died yesterday. Since he had no son, all his wealth and treasures were confiscated by the palace. I went to see his wealth and treasures, and that is why my body is covered in dust.&quot;</p></td><td lang="lzh" class="agama-chi"><p>波斯匿王白佛言：「世尊！舍卫城中，有大长者，名摩诃南，昨日命终，以无子故，所有财宝，税入于宫，视其财宝，冒涉风尘，是以坌身。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha asked the king, &quot;Was Mahānāman really very wealthy?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛问王曰：「摩诃南实巨富耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king replied, &quot;Indeed, World-Honored One! How was he wealthy? He had thousands of millions of gold, silver, and precious treasures, beyond measure. Not to mention other wealth. Although he had precious treasures and many stored goods, due to his stinginess and greed, he was reluctant to eat them. What he ate was coarse and rough millet mixed with chaff. When making soup, he would cook a piece of ginger and then take it out to sell for money. What he wore was only coarse hemp cloth, and he used coarse and worn-out cloth as his inner garment. He rode a dilapidated cart, and used a tree leaf as an umbrella. I have never seen him perform even a little giving to śramaṇas, brāhmaṇas, the poor, or beggars.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王即答言：「实尔！世尊。云何大富？金银珍宝数千亿万，不可称计，况复余财。虽有珍宝，多诸储积，以悭贪故，惜不噉食，所可食者，秕稗杂糠，极为麁澁。若作羹时，煮姜一罢，煮已还取，卖为财用。所可著者，唯衣麁布，五总麁弊，以为内衣。乘朽故车，连] cf.【丽】缀树叶，以为繖盖。未曾见其修少布施沙门、婆罗门、贫穷乞儿。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Such a foolish person is not a good man. Why? Although he has wealth and treasures, he cannot open his mind and enjoy it righteously. He also cannot make offerings to his parents, wife, and children, or give to his servants and maids. He does not give to śramaṇas and brāhmaṇas from time to time, and he also does not seek the good rewards of rebirth in heaven.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「如此愚人，非善丈夫。何以故？虽有财宝，不能开意正直受乐，又复不能供养父母及与妻子，亦不赐与奴婢仆使，不时时施与沙门及婆罗门，亦复不求生天善报。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;This Mahānāma has already planted some good roots with the Pratyekabuddha Tagarasikhin in the past. At that time, he gave food and drink, but he did not give with a sincere mind, he did not give with faith, he did not give with his own hands, he did not give with respect, and he threw it to them. After giving, he regretted it and thought, &#x27;How can I give my food and drink to this shaven-headed śramaṇa? It would be better to give it to the servants in my own home.&#x27; When he died, he was reborn in the home of a great and wealthy elder in Śrāvastī. Although he was reborn in the home of a wealthy elder, because he had regretted giving food in the past, he naturally did not like to wear fine clothes, he also did not like to eat fine food, and he did not enjoy carriages and horses or adornments. Great King, you should know that in the past, Mahānāma&#x27;s family was wealthy. For the sake of money and wealth, he killed his half-brother. Because of this, he entered hell and suffered various torments for countless years. Because of this, his wealth was confiscated by the government seven times. Mahānāma gave food to the Pratyekabuddha Tagarasikhin. Because of this, his blessings were exhausted. Like a great criminal, after he died, he entered hell. Mahānāma&#x27;s death was also like this. He entered the great wailing hell.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「此摩诃南乃往昔时，已曾于多伽罗瑟辟支佛所，种少善根。尔时布施饮食，不至心施，不信心施，不手自施，不恭敬施，撩掷而与。布施已讫，后复生悔，作是念言：『我之饮食，云何与此剃头沙门？不如自与家中仆使。』于其舍身，得生舍卫城第一巨富大长者家。虽复生彼富长者家，由先施食有悔心故，自然不憙著好衣裳，亦复不喜食于美食，鞍马车乘严饰之具，悉不喜乐。大王当知，摩诃南于昔往日，其家豪富，为钱财故，杀异母弟，以是因缘，入于地狱，无量年岁受诸苦恼，由是之故，钱财七返，常没于官。摩诃南于多伽罗瑟辟支佛所，施食因缘，受福已尽，如大罪人，舍身之后，入于地狱，摩诃南舍身，亦复如是，入大叫唤地狱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit again said to the Buddha, &quot;World-Honored One! Did Mahānāma really enter the great wailing hell after his death?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，波斯匿王复白佛言：「世尊！彼摩诃南舍身实入大叫唤地狱耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;He really did enter.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「实入。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, upon hearing this, the king wept with tears streaming down. He adjusted his robes, bared his right shoulder, joined his palms, and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时，王闻已，悲泣流泪，王整衣服，偏袒右肩，合掌说偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Wealth, grain, silk, and precious treasures, slaves, servants, and attendants, none of them<br/>follow or can take even a small portion. When death overtakes and one<br/>abandons the corpse, all the wealth and treasures, though arrayed, are not stored<br/>at all, and one cannot take even a little with one. What is<br/>the thing that follows a person, like a shadow following its form? The<br/>retribution of good and evil is certainly not lost, and only this follows<br/>a person like a shadow.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「钱财谷帛并珍宝，　　奴婢仆使及眷属，一切无随无随者，　　亦不能取其少分。为死所侵舍故尸，　　一切财宝虽罗列，都无一物是储有，　　亦复不能持少去。为有何物随逐人，　　譬如有影随其形，善恶受报必不失，　　唯此随人犹如影。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Good and evil follow a person, like a shadow following a<br/>form, wherever they go, they never part. It is like having<br/>little provisions, crossing a dangerous path, increasing suffering. Practicing evil is<br/>also like this, unable to reach the good path. It is<br/>like having abundant provisions, happily crossing a dangerous path. Cultivating merit<br/>is also like this, peacefully reaching a good place. It is<br/>like being separated for a long time, arriving at a distant<br/>place, safely returning home, the mind is very joyful, with wife<br/>children, and relatives, joyfully extremely happy. Cultivating goodness is also like<br/>this, good karma comes to welcome. It is also like being<br/>separated from relatives, meeting and being joyful. Therefore, one should accumulate<br/>goodness, for the sake of the next life. If one wishes<br/>for blessings in the next life, one should practice the right<br/>way. Not being criticized now, one will experience happiness in the future.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「善恶随逐人，　　譬如影随形，随其所趣向，　　未曾相舍离。譬如少资粮，　　越险增苦恼，行恶亦如是，　　不能至善径。譬如丰资粮，　　安乐越险道，修福者亦尔，　　安隐至善处。譬如久别离，　　至于旷远处，安隐得还家，　　其心甚悦豫，妻子及眷属，　　欢喜极快乐。修善者亦尔，　　善业来迎接，亦如离眷属，　　会合得欢喜，是以应积善，　　当为后世故。欲得后世福，　　应修行正行，今不被讥呵，　　后受于快乐。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. The bhikṣus, having heard the Buddha&#x27;s teaching, rejoiced and practiced accordingly.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

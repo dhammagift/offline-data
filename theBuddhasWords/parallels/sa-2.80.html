@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.80 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.80</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 80</span><span class="mirror-right">（八〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn7.12.html">SN 7.12</a> / <a href="../parallels/sa1157.html">SĀ 1157</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. In the morning, the World-Honored One put on his robes, took his alms bowl, and entered Śrāvastī to beg for alms. He arrived at the house of the great brāhman Brahmāyus. At that time, the brāhman washed his hands and took the Buddha&#x27;s bowl, filling it with delicious rice and offering it to the World-Honored One. On the second and third days, he also went begging for alms in succession, arriving at Brahmāyus&#x27; house. The brāhman thought, &quot;This shaven-headed monk comes to beg for alms often. He seems to be an old acquaintance of mine.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，世尊于其晨朝，著衣持钵，入舍卫城，次第乞食，次到婆罗突逻阇大婆罗门家。时，婆罗门清净澡手，即取佛钵，盛满美饭，以奉世尊。于第二日及第三日，亦次乞食，至婆罗突逻阇。婆罗门作是念：「今此剃发沙门数来乞食，似我知旧。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Buddha knew what the brāhman was thinking and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>佛于尔时知婆罗门心之所念，即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The rain falls again and again, the five grains ripen again and again<br/>the mendicants beg again and again, the donors give again and again. Again<br/>and again one is born in heaven, again and again one experiences the<br/>fruits of retribution. Women conceive again and again, give birth to children again<br/>and again. Again and again they milk cows, again and again they obtain<br/>butter and curds. Again and again they experience birth, again and again they<br/>are exhausted. Again and again they come to death, again and again they<br/>grieve and suffer. They are also burned again and again, buried in tombs<br/>again and again. If one attains the path that cuts off future existence<br/>then it stops again and again. If one is not born again and<br/>again, one does not die again and again. One does not experience sorrow<br/>again and again, nor does one wail again and again.&quot; At that time<br/>the brāhman, having heard this verse, gave rise to the utmost faith, leaping<br/>with great joy. He then took the World-Honored One&#x27;s bowl, filled it with<br/>various foods, and wished to offer it to the Buddha, but the Buddha<br/>did not accept it. The reason for not accepting it was to speak<br/>a verse of the Dharma.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「天雨数数降，　　五谷数数熟，道人数数乞，　　檀越数数与。数数生天上，　　数数受果报，妇女数怀妊，　　数数生子息。数数［（壳－一）／牛］牛乳，　　数数得酥酪，数数受于生，　　数数消灭尽。数数至于死，　　数数悲苦恼，亦复数数烧，　　数数埋冢墓。得断后有道，　　则止不数数，若不数数生，　　亦不数数死，得不数数忧，　　亦不数号哭。」尔时婆罗门，　　闻说是偈已，心生最上信，　　踊跃甚欢喜，即取世尊钵，　　盛满种种食，欲以授与佛，　　佛不为其受。所以不受者，　　为说法偈故。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman said to the Buddha, &quot;World-Honored One! The food I offer to the Tathāgata, the World-Honored One does not accept. To whom should I give it?&quot; The Buddha said, &quot;I do not see any śramaṇa, brāhman, Māra, Brahmā, or anyone who can digest this food in accordance with the Dharma.&quot; The Buddha further said, &quot;This food should be placed in water without insects or grass without insects.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门白佛言：「世尊！我于今者所施之食，奉上如来，世尊不受，当以与谁？」佛言：「我不见沙门婆罗门，若魔若梵，若食此食，有能如法得消化者。」佛复言：「此食宜应若置无虫水中，无虫草中。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman followed the Buddha&#x27;s instructions and placed the food in water without insects. It immediately blazed with smoke and flames, crackling and popping with a loud sound. The brāhman said, &quot;The supernatural powers performed by Śramaṇa Gautama are truly rare! Even with little food, he can still perform such transformations.&quot; Having seen this, the brāhman went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, and said to the Buddha, &quot;I only wish that the World-Honored One would allow me to go forth and become a monk.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门承佛教勅，寻以此食置无虫水中。即时炽然烟炎俱出，［淴－勿＋（句－口＋夕）］［淴－勿＋（句－口＋夕）］振爆声大叫裂。婆罗门作是言：「沙门瞿昙所为神足，实为希有！于少食中，尚作此变。」婆罗门见斯事已，即诣佛所，顶礼佛足，白佛言：「唯愿世尊听我出家。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Welcome, monk! Your beard and hair fall out by themselves, and the Dharma robes appear on your body.&quot; He immediately became a monk and received the full precepts. This noble son, having faith in leaving home life for the monastic life, practiced diligently day and night, with right mindfulness and wisdom leading the way. His resolve was firm, his work was done, his practice was established. He personally realized and attained, not experiencing rebirth again, becoming an arhat, his mind well liberated.</p></td><td lang="lzh" class="agama-chi"><p>佛言：「善来比丘！须发自落，法衣著身。」便成沙门，获具足戒。此族姓子，信家非家，出家修道，昼夜精勤，正念觉意，在前志念坚固，所作已办，梵行已立，自身取证，不受后有，成阿罗汉，心善得解脱。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

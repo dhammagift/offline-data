@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.127 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.127</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 127</span><span class="mirror-right">（一二七）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn42.12.html">SN 42.12</a> / <a href="../parallels/sa912.html">SĀ 912</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在瞻波国竭城祇池岸。时，聚落主号王顶发，来诣佛所，顶礼尊足，在一面坐。佛告之曰：「此世间中，多有众生依二种法：一贪欲乐，二名习于无益。身事非圣之法，徒受无益损减。习于欲乐，是名下贱系累之法。受欲乐者，凡有三种。云何为三？一者、聚非法财，残害物命，自乐己身，而为己身作正乐因，此亦不名供养父母，亦不名与妻子及其僮仆，亦非亲友、知识、眷属、辅弼己者，亦复不名为供养供给沙门、婆罗门，诸福田等。若如是者，不修上道，不作乐因，不得乐报，是名第一欲乐。设受欲乐，或时如法，或不如法，或为残害，或不残害，以乐己身，安乐父母、妻子、僮仆、亲友、眷属、辅弼己者，悉皆供养供给，与正安乐，然不施与沙门、婆罗门，及诸福田，亦复不修正道，不作乐因，不求乐报，不作生天因缘，是名第二欲乐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha further told the village headman, &quot;If one accumulates wealth and treasures, in accordance with the Dharma, and harms others, because of being in accordance with the Dharma, one does not create harm. Cultivating one&#x27;s own body, rightly experiencing pleasure, is also called rightly making offerings to one&#x27;s parents, and giving to one&#x27;s wife, children, servants, friends, relatives, and assistants. It is called rightly giving peace and happiness, and rightly serving. Sometimes making offerings to śramaṇas, brāhmaṇas, and establishing fields of merit, cultivating the higher path, planting the cause for pleasure, seeking the reward of pleasure, and making the cause and condition for rebirth in heaven. This is called the third kind of experiencing pleasure. I now speak the same for all those who experience pleasure. Even if one experiences pleasure, I say it is lowly. Even if one experiences pleasure, I say it is middling. Even if one experiences pleasure, I say it is superior. What is lowly? Accumulating wealth unlawfully, and also not accumulating wealth unlawfully, enjoying oneself for one&#x27;s own body, and making it the cause for right pleasure. This is also not making offerings, and is not called giving to one&#x27;s wife, children, servants, friends, relatives, and assistants. It is also not timely making offerings to śramaṇas, brāhmaṇas, and fields of merit. Not cultivating the higher path, not making the cause for pleasure, not obtaining the reward of pleasure, and not making the cause and condition for rebirth in heaven. This is called lowly. What is middling? Even if one experiences pleasure, sometimes in accordance with the Dharma, sometimes not in accordance with the Dharma, sometimes harming, enjoying oneself for one&#x27;s own body, and also bringing peace and happiness to one&#x27;s parents, wife, children, servants, relatives, and so forth, up to not making the cause and condition for rebirth in heaven. This is called middling. What is superior? Namely, accumulating wealth in accordance with the Dharma, not harming others, the body rightly experiencing pleasure, rightly making offerings to one&#x27;s parents and giving to one&#x27;s wife, children, servants, friends, and so forth, up to being able to make the cause and condition for rebirth in heaven. This is called superior.</p></td><td lang="lzh" class="agama-chi"><p>佛复告聚落主：「若有集于财宝，如法而聚，而为残害，以如法故，不造残恶故，修自己身，正受其乐，亦名正理供养父母，及与妻子、僮仆、亲友、眷属、辅成己者，皆名正与安乐，正事给养。时时供养沙门、婆罗门，修立福田，修于上道，种于乐因，求乐果报，作生天因缘，是名第三受于欲乐。我今为诸受欲乐者，皆悉同说。设受欲乐，我说下贱。设受欲乐，我说为中。设受欲乐，我说为上。何者下贱？非法聚财，又不非法聚财，自乐己身，而为己身作正乐因，此亦不供养，亦不名与妻子、僮仆、亲友、眷属，亦不随时供养沙门、婆罗门诸福田等，不修上道，不作乐因，不得乐报，不作生天因缘，是名为下。何等名中？设受欲乐，或时如法，或不如法，或为残害，以自乐身，亦复安乐父母、妻子、僮仆、亲属，乃至不作生天因缘，是名为中。云何名上？所谓如法聚财，不作残害，身正受乐，正理供养父母及与妻子、僮仆、亲友，乃至能作生天因缘，是名为上。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What are the three kinds of suffering that are useless? Namely, suffering that is not the Dharma of the sages, and is meaningless. If one suffers physically, the mind is already corrupted. First, violating the precepts, the body and mind are hot inside and outside, and one constantly thinks of this matter without ever leaving it. In this present world, one does not leave the heat and cannot attain the Dharma beyond the ordinary. This is called the first useless suffering of the body. If there is someone who, although not violating the precepts, the mind is also not corrupted, but still praises the two karmas of body and mind, both inside and outside, and cultivates this matter, in this present world, one does not leave afflictions and cannot attain the Dharma beyond the ordinary. This is called the second useless suffering of the body. Furthermore, if there is someone who, although not violating the precepts, the mind is not corrupted, but still praises the two karmas of body and mind, both inside and outside, and cultivates this matter, in this present world, one does not leave the heat and has some progress in the Dharma beyond the ordinary, or attains some wisdom, or sees the Dharma, or some dhyāna concentration. This is called the third useless suffering of the body.</p></td><td lang="lzh" class="agama-chi"><p>「何等无益三种苦身？所谓苦非圣法，无有义利，若有苦身，心已变坏。初犯禁戒，身心内外一切俱热，追念此事，无时暂离。现在之世，不离烦热，终不能得过人之法，是名初无益苦身法。若复有人，虽不犯戒，心亦不变，然复称于身心二业，内外俱适，修学是事，现在之世，不离烦恼，终不能得过人之法，是名第二无益苦身。复次若更有人，虽不犯戒，心不变异，然复称于身心二业，内外俱适，修念此事，现在之世，不离恼热，有少增进过人之法，或得少智，或得见法，或少禅定，是名第三无益苦身。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Village headman! I also do not say that all useless suffering practices are of one kind. There is one suffering practice called inferior, there is also a suffering practice called middling, and there is also a suffering practice called superior. What is called inferior? When one first violates the precepts, the mind is already corrupted, and the body and mind are hot inside and outside. One constantly thinks of this matter without ever leaving it. In this present world, one does not leave afflictions and cannot attain the Dharma beyond the ordinary. This is called inferior. What is called middling? If there is someone who, although not violating the precepts, the mind is also not corrupted, but still praises the two karmas of body and mind, both inside and outside, and cultivates this matter, in this present world, one does not leave afflictions and cannot attain the Dharma beyond the ordinary. This is called middling. What is called superior? If there is someone who, although not violating the precepts, the mind is not corrupted, but still praises the two karmas of body and mind, both inside and outside, and cultivates this matter, in this present world, one cannot permanently eliminate all afflictions, but has some progress in the Dharma beyond the ordinary, or attains some wisdom, or sees the Dharma, or touches the bliss of dhyāna. This is called superior.</p></td><td lang="lzh" class="agama-chi"><p>「聚落主！我亦不说无益苦行都为一种，有一苦行名为下品，复有苦行名为中品，又有苦行名为上品。云何名下？初毁戒时，心已变坏，身心内外一切俱热，追念此事，无时暂离，于现在世，不离烦恼，终不能得过人之法，是名为下。云何名中？若复有人，虽不犯戒，心亦不变，然复称于身心二业，内外俱适，修学此事，于现在世，不离恼热，亦不能得过人之法，是名为中。云何名上？若更有人，虽不犯戒，心不变异，然复称于身心二业，内外俱适，修学此事，于今现在，不能永断一切烦恼，有少增进过人之法，或得少智，或得见法，或触禅乐，是名为上。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Village headman! Abandoning these two extremes, one should follow the path, namely the three kinds of sensual pleasures and the three kinds of useless suffering of the body, and follow the middle way. What is meant by abandoning the three kinds of sensual pleasures and the three kinds of useless suffering of the body and following the middle way? Village headman! Sensual desires not only afflict oneself, but also afflict others, afflicting both self and others. In the present world, one accumulates all evils, and in the future world, one also accumulates all evils. For this reason, one&#x27;s mind is troubled and sorrowful, and one suffers from all kinds of afflictions. Even if one exhausts the bonds of desire, one does not afflict oneself, nor does one afflict others, nor does one have the suffering of self and others. In the present world, one does not accumulate all suffering, and in the future world, one also does not accumulate all suffering. For this reason, one attains present happiness, is free from all afflictions, does not choose the time, and approaches nirvāṇa. In the present world, one can attain the fruit of the path. The wise know for themselves clearly and without obstruction, and do not follow the teachings of others. This is called the middle way in the beginning. Village headman! There is also a middle way that is free from afflictions, does not choose the time, and approaches nirvāṇa. The wise know for themselves and do not follow the teachings of others. Namely, right view, right speech, right action, right livelihood, right concentration, right effort, right intention, and right mindfulness. This is called the second middle way.&quot; When this teaching was spoken, the village headman Wang Dingfa was far removed from defilements and attained the purity of the Dharma eye.</p></td><td lang="lzh" class="agama-chi"><p>「为，聚落主！除是二边，趣向于道，所谓三种欲乐，及以三种无益苦身，趣向中道。何等名为舍于三种欲乐之事，及以三种无益苦身，向中道耶？聚落主！贪染欲乐，恼害自身] cf.【丽】，亦恼害他，自他俱害，现集诸恶，于当来世，亦集诸恶。以此因缘，心烦悲忧，受诸苦恼。设尽欲结，亦无自苦，亦不苦他，亦复无有自他之苦，现在之世，不集诸苦，于未来世，亦复不集一切众苦，以是义故，得现法乐，离众恼热，不择时节，得近涅槃。于现在世，能得道果，智者自知，明了无滞，不随他教，是名初中道。聚落主！复有中道，离于恼热，不择时节，得近涅槃，智者自知，不随他教，所谓正见、正语、正业、正命、正定、正方便、正志、正念，是名第二中道。」说是法时，王顶发聚落主远尘离垢，得法眼净。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman Wang Dingfa knew the Dharma, saw the Dharma, attained the Dharma, crossed the shore of doubt, was free from doubt and hesitation, did not follow the teachings of others, did not accept different views, and attained self-mastery in the Buddha&#x27;s teachings. He then rose from his seat, adjusted his robes, joined his palms towards the Buddha, and said to the Buddha, &quot;World-Honored One! I have now attained liberation. I take refuge in the Buddha, and also take refuge in the Dharma and the Sangha. I uphold the precepts of an upāsaka. From now until the end of my life, I take refuge in the Three Jewels.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，王顶发聚落主知法、见法、得法，度疑彼岸，离于疑惑，不随他教，不受异见，于佛法中，得自在辩。即从坐起，整衣服，合掌向佛，白佛言：「世尊！我于今日，已得出过，归依于佛，亦复归依法僧二宝，我持优婆塞戒，从今尽寿，归依三宝。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman Wang Dingfa, having heard the Buddha&#x27;s teaching, was overjoyed. He bowed his head to the Buddha&#x27;s feet and departed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，王顶发聚落主闻佛所说，欢喜踊跃，顶礼而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

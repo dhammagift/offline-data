@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 77 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 77: Mahāsakuludāyi-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn76comp.html#content"></a><a id="next-sutta" href="./mn78comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn77.html">MN 77</a> / <a href="../../parallels/ma207.html">MĀ 207</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāsakuludāyi-sutta, the “greater discourse to Sakuludāyī”, sets forth those qualities of the Buddha that cause his disciples to respect him. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn77n127"><span class="details"><span class="p">[n.127] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781b-783c, which agrees with <a href="../../mn/mn77.html">MN 77</a> on the location. The title of <a href="../../parallels/ma207.html">MĀ 207</a> is 箭毛經, literally “discourse to Arrow Hair”. Minh Chau 1964/1991: 378 and the Taishō edition p. 781 note 18 indicate that 箭毛 corresponds to Sakuludāyī. 箭毛 recurs in <a href="../../parallels/sa-2.323.html">SĀ2 323</a> at T II 481c15 to render Sūciloma (cf. also the more fitting rendering of this name as 針毛, “Needle Hair”, in <a href="../../parallels/sa1324.html">SĀ 1324</a> at T II 363c1). Throughout <a href="../../parallels/ma207.html">MĀ 207</a> the Buddha in fact addresses 箭毛 as 優陀夷, Udāyī, which supports the Taishō edition’s suggestion that in <a href="../../parallels/ma207.html">MĀ 207</a> 箭毛 does stand for Sakuludāyī, although the reasoning behind the choice of this rendering by the translator(s) remains unclear to me. For remarks on <a href="../../parallels/ma207.html">MĀ 207</a> see Minh Chau 1964/1991: 71-72; a translation of <a href="../../parallels/ma207.html">MĀ 207</a>, together with extracts from the present discussion, can be found in Anālayo 2009d. A discourse quotation paralleling the description of the abhibhāyatanas in <a href="../../mn/mn77.html">MN 77</a> at MN II 13,16 (not necessarily specific to the present discourse) can be found in Abhidh-k 8:35 in Pradhan 1967: 457,2, cf. also T 1558 at T XXIX 151c14 and T 1559 at T XXIX 303b1.</span></span></span></p>
+<p>The Mahāsakuludāyi-sutta and its Madhyama-āgama parallel begin by relating that the Buddha went to visit the wanderer Sakuludāyī.<span class="note" id="mn77n128"><span class="details"><span class="p">[n.128] While according to <a href="../../mn/mn77.html">MN 77</a> at MN II 1,8 the Buddha went to the Peacock’s Sanctuary to visit Sakuludāyī because it was yet too early to beg alms in Rājagaha, <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c3 reports that after completing his alms round and taking his meal the Buddha took his sitting mat and approached the Peacock’s Sanctuary where Sakuludāyī was staying.</span></span></span> During the ensuing conversation, Sakuludāyī contrasted the disrespectful behaviour of the disciples of six other wellknown contemporary teachers with the respectful behaviour of the Buddha’s disciples. Although the main thread of presentation in this part of the two discourses is the same, the two versions exhibit a few minor but noteworthy differences.</p>
+<p>Both discourses describe that just before the Buddha’s arrival, Sakuludāyī and his assembly had been engaging in various types of pointless talk.<span class="note" id="mn77n129"><span class="details"><span class="p">[n.129] <a href="../../mn/mn77.html">MN 77</a> at MN II 1,15 and <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c8 speak literally of “various animal talk”, anekavihitaṃ tiracchānakathaṃ, 種種畜生之論. Bodhi in Ñāṇamoli 1995/2005: 1282 note 748 explains that “tiracchāna means literally ‘going horizontally’, and although this term is used as a designation for animals, ... [the commentary] explains that in the present context it means talk that goes ‘horizontally’ or ‘perpendicularly’ to the path”. Norman 1993/1994: 91 suggests that “tiracchāna kathā was at one time one example of ... gossip, ‘talk about animals’, on the same lines as ‘talk about kings’, etc., and it then became used in a generic sense, to stand for all such talk”; on the significance of the topics listed in such descriptions cf. also Law 1918: 402. The instances listed in the standard Pāli and Chinese descriptions of such ‘pointless talk’ are fairly similar. A noteworthy difference is that while <a href="../../mn/mn77.html">MN 77</a> at MN II 1,19 speaks merely of “talk about women”, itthikathā (Se-MN II 310,17: itthīº), <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c9 lists “talk about married women”, “talk about girls” and “talk about adulterous women”, 論婦人, 論童女, 論婬女. This presentation puts the heterodox wanderers in an even more unfavourable light than in <a href="../../mn/mn77.html">MN 77</a>. “Talks with or about women”, itthīkahā, was also censured among Jain monks, cf. Balbir 2002: 72 and Ṭhāṇaṅga 4.282 in Jambūvijaya 1985: 111,15, which distinguishes between four types of talk about women, namely their caste, their families, their beauty and their adornments; cf. also Ṭhāṇaṅga 4.284 in Jambūvijaya 1985: 113,15, which indicates that monastics do not indulge in talk about women, and Ṭhāṇaṅga 7.569 in Jambūvijaya 1985: 234,7 for a listing of seven unbefitting types of talk.</span></span></span> On arrival, the Buddha politely inquired after the topic of the conversation that had been interrupted by his arrival. According to the Majjhima-nikāya version, in reply Sakuludāyī explained that it had been a conversation of little interest, after which he turns to what seems to be a different topic, namely a former discussion on the behaviour of the disciples of other teachers.<span class="note" id="mn77n130"><span class="details"><span class="p">[n.130] <a href="../../mn/mn77.html">MN 77</a> at MN II 2,19.</span></span></span> According to the Madhyama-āgama report, however, the Buddha had asked up to three times to be informed about the conversation that had been going on, thereby finally prompting Sakuludāyī to explain that he and his disciples had been reviewing a former discussion on the behaviour of the disciples of other teachers.<span class="note" id="mn77n131"><span class="details"><span class="p">[n.131] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c23.</span></span></span></p>
+<p>In both versions, this topic regarding the behaviour of the disciples of other teachers then forms the beginning point of the ensuing discussion between Sakuludāyī and the Buddha. Thus, whereas in the Majjhima-nikāya version the behaviour of the disciples of other teachers constitutes a change of topic from what Sakuludāyī and his disciples had been conversing about, in the Madhyama-āgama version it was just this subject that they had been discussing.</p>
+<p>Although the Madhyama-āgama presentation fits the narrative flow well, it stands in contrast to the earlier indication, made in both discourses, that Sakuludāyī and his assembly had been engaged in various types of pointless talk. Such descriptions of pointless talk form a standard pericope in the discourses in order to depict the behaviour of heterodox wanderers. If it were not for this description, the Madhyama-āgama version’s presentation would present a meaningful sequence of events, where Sakuludāyī and his disciples are engaged in discussing a topic that is interrupted by the Buddha’s arrival, but then is taken up again on the Buddha’s repeated request.<span class="note" id="mn77n132"><span class="details"><span class="p">[n.132] A similar description of Sakuludāyī’s congregation of wanderers engaged in pointless talk can be found in <a href="../../mn/mn79.html">MN 79</a> at MN II 30,1 and its parallel <a href="../../parallels/ma208.html">MĀ 208</a> at T I 783c12; cf. also below p. 432 note 192.</span></span></span></p>
+<p>The Madhyama-āgama version also differs from the Mahāsakuludāyi-sutta as it reports that at that time the Buddha was living in the company of one-thousand-two-hundred-and-fifty monks.<span class="note" id="mn77n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781b29.</span></span></span> In general, the early discourses use the number five hundred in such circumstances. Both numbers are not to be taken too literal, as they often appear to have a predominantly symbolic value,<span class="note" id="mn77n134"><span class="details"><span class="p">[n.134] The number five hundred seems to derive its significance from the number five, which in turn is taken from the number of the fingers of a hand and thus in the early discourses represents a basic unit, cf. Rhys Davids 1937: 410, who explains that the number five is “a comprehensive unit in Indian thought ... probably derived from the pañcaṅgulika formation of the human hand”. Multiplying five with ten times ten (= both hands) makes ‘five hundred’ and stands for a ‘large group’. PED: 388 s.v. pañca explains that the number five hundred has lost its “original numerical significance ... psychologically five hundred is to be explained as a ‘great hand’, i.e. the five fingers magnified to the 2nd decade, and is equivalent to an expression like ‘a lot’”, a number found “especially frequent in recording a company of men, a host of servants, animals in a herd, etc., wherever the single constituents form a larger ... whole”. The idea of a ‘very large group’ could then be arrived at by five times five times five times ten, which results in the number ‘one-thousand-two-hundred-fifty’; cf. also Deeg 1995: 77-78 and Yuyama 1992.</span></span></span> that is, the number “five hundred” usually stands representative for “a great number”.<span class="note" id="mn77n135"><span class="details"><span class="p">[n.135] Bareau 1971a: 80-81 takes the number five hundred to represent “many” (beaucoup), PED: 388 s.v. pañca similarly explains five hundred to correspond to “a lot”, and Wagle 1966: 16 speaks of “a sizable group”; cf. also Feer 1884b: 114 and Wiltshire 1990: 176.</span></span></span> Such a symbolic use of numbers is one of the characteristics of oral traditions in general, where numbers tend to be stereotyped and to be used in a predominantly allegorical way.<span class="note" id="mn77n136"><span class="details"><span class="p">[n.136] Vansina 1985: 171 explains that numbers “are both abstract and repetitive so that they fare badly in all [oral] traditions and are stereotyped to numbers meaning ‘perfect’, ‘many’, ‘few’”.</span></span></span> Besides, in ancient India numbers would have still possessed a significance on their own, beyond their function as devices for mathematical operations.<span class="note" id="mn77n137"><span class="details"><span class="p">[n.137] Syrkin 1983: 156 speaks of “an archaic and universal tendency to describe the world with the help of definite number complexes ... manifoldly reflected in the Pali canon”.</span></span></span></p>
+<p>A count of five hundred occurs also in the Madhyama-āgama discourse, namely as the number of disciples of Sakuludāyī and of the six other teachers. In this way, the numbering of the Buddha’s disciples as one-thousand-two-hundred-and-fifty stands in a favourable contrast to the other teachers, indicating that they were not able to command a following as large as the Buddha.<span class="note" id="mn77n138"><span class="details"><span class="p">[n.138] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c6 counts Sakuludāyī’s followers and <a href="../../parallels/ma207.html">MĀ 207</a> at T I 782a4+9 counts the followers of the other six teachers as five hundred, 五百, while according to <a href="../../parallels/ma207.html">MĀ 207</a> at T I 782a13 (cf. also T I 781b29) the Buddha had one-thousand-two-hundred-fifty followers, 千二百五十. Manné 1990: 49 comments that in discourses that have a debate character and feature a meeting with an opponent “the description of the size of the following around each of the opponents ... serves to enhance, or otherwise, the importance of each adversary”.</span></span></span></p>
+<p>Examining descriptions of the Buddha’s disciples in other discourses brings to light that the number one-thousand-two-hundred-and-fifty occurs only sporadically in the Pāli Nikāyas,<span class="note" id="mn77n139"><span class="details"><span class="p">[n.139] <a href="../../dn/dn2.html">DN 2</a> at DN I 47,4, <a href="../../dn/dn14.html">DN 14</a> at DN II 6,11, <a href="../../sn/sn8.8.html">SN 8:8</a> at SN I 192,10 (or SN2 216 at SN2 I 414,5), and Sn 3:7 at Sn p. 102,20 (= <a href="../../mn/mn92.html">MN 92</a>) depict the Buddha in the company of one-thousand-two-hundred-and-fifty monks. The parallels to <a href="../../dn/dn2.html">DN 2</a>, <a href="../../parallels/da27.html">DĀ 27</a> at T I 107a22, <a href="../../parallels/ea43.7.html">EĀ 43.7</a> at T II 762a8, and T 22 at T I 271a2, agree with <a href="../../dn/dn2.html">DN 2</a> on the number of monks present. The parallels to <a href="../../dn/dn14.html">DN 14</a> agree with the Pāli account on the number of monks, cf. Sanskrit fragment S 360 folio 11(7)V4 in Fukita 2003: 4 or in Waldschmidt 1953: 15 and the Chinese parallels <a href="../../parallels/da1.html">DĀ 1</a> at T I 2c1, <a href="../../parallels/ea48.4.html">EĀ 48.4</a> at T II 791a3, T 2 at T I 151c28, and T 4 at T I 160a22. A parallel to <a href="../../sn/sn8.8.html">SN 8:8</a>, <a href="../../parallels/sa1219.html">SĀ 1219</a> at T II 332b2, records only the presence of one-thousand monks. A parallel to Sn 3:7, <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798a26, reports that only five hundred monks were present.</span></span></span> in the Madhyama-āgama, and in the Saṃyukta-āgama.<span class="note" id="mn77n140"><span class="details"><span class="p">[n.140] <a href="../../parallels/ma207.html">MĀ 207</a> appears to be the only discourse in the Madhyama-āgama to portray the Buddha with a congregation of one-thousand-two-hundred-and-fifty monks, just as <a href="../../parallels/sa914.html">SĀ 914</a> at T II 230b4 appears to be the only discourse in the Saṃyukta-āgama to depict him with such a large following. Nakamura 2000a: 306 suggest that this number may represent the converted disciples of the three Kassapa brothers (five hundred + three hundred + two hundred, cf. Vin I 24,13) and the converted disciples of Sañjaya (twohundred-and-fifty, cf. Vin I 39,24), which together would amount to a following of one-thousand-twohundred-and-fifty monks.</span></span></span> A considerably more frequent use is made of this number, however, in discourses from the Ekottarika-āgama.<span class="note" id="mn77n141"><span class="details"><span class="p">[n.141] The presence of one-thousand-two-hundred-and-fifty disciples or listeners is recorded in <a href="../../parallels/ea26.9.html">EĀ 26.9</a> at T II 639a15, <a href="../../parallels/ea30.3.html">EĀ 30.3</a> at T II 660a2, <a href="../../parallels/ea36.5.html">EĀ 36.5</a> at T II 708a26, <a href="../../parallels/ea43.7.html">EĀ 43.7</a> at T II 762a8, <a href="../../parallels/ea45.7.html">EĀ 45.7</a> at T II 773c21, <a href="../../parallels/ea48.2.html">EĀ 48.2</a> at T II 787b5, <a href="../../parallels/ea48.4.html">EĀ 48.4</a> at T II 791a3, and <a href="../../parallels/ea50.4.html">EĀ 50.4</a> at T II 806c22.</span></span></span> In the Dīrgha-āgama, then, the number one-thousand-two-hundred-andfifty is standard in the description of the congregation of the Buddha’s monk disciples in the introductory narration to a discourse, only on rare occasions giving way to the less impressive number of five hundred disciples.<span class="note" id="mn77n142"><span class="details"><span class="p">[n.142] Nearly all of the thirty discourses found in the Dīrgha-āgama report the Buddha to be in the presence of one-thousand-two-hundred-and-fifty disciples, cf. <a href="../../parallels/da1.html">DĀ 1</a> at T I 1b13, <a href="../../parallels/da2.html">DĀ 2</a> at T I 11a9, <a href="../../parallels/da3.html">DĀ 3</a> at T I 30b12, <a href="../../parallels/da4.html">DĀ 4</a> at T I 34b6, <a href="../../parallels/da5.html">DĀ 5</a> at T I 36c1, <a href="../../parallels/da6.html">DĀ 6</a> at T I 39a23, <a href="../../parallels/da8.html">DĀ 8</a> at T I 47a19, <a href="../../parallels/da9.html">DĀ 9</a> at T I 49b28, <a href="../../parallels/da10.html">DĀ 10</a> at T I 52c19, <a href="../../parallels/da11.html">DĀ 11</a> at T I 57b27, <a href="../../parallels/da12.html">DĀ 12</a> at T I 59b16, <a href="../../parallels/da13.html">DĀ 13</a> at T I 60b1, <a href="../../parallels/da15.html">DĀ 15</a> at T I 66a11, <a href="../../parallels/da16.html">DĀ 16</a> at T I 70a21, <a href="../../parallels/da17.html">DĀ 17</a> at T I 72c14, <a href="../../parallels/da18.html">DĀ 18</a> at T I 76b25, <a href="../../parallels/da20.html">DĀ 20</a> at T I 82a8, <a href="../../parallels/da21.html">DĀ 21</a> at T I 88b14, <a href="../../parallels/da22.html">DĀ 22</a> at T I 94a20, <a href="../../parallels/da23.html">DĀ 23</a> at T I 96c18, <a href="../../parallels/da24.html">DĀ 24</a> at T I 101b16, <a href="../../parallels/da25.html">DĀ 25</a> at T I 102c26, <a href="../../parallels/da26.html">DĀ 26</a> at T I 104c18, <a href="../../parallels/da27.html">DĀ 27</a> at T I 107a22, <a href="../../parallels/da28.html">DĀ 28</a> at T I 109c24, <a href="../../parallels/da29.html">DĀ 29</a> at T I 112c22, and <a href="../../parallels/da30.html">DĀ 30</a> at T I 114b9.</span></span></span></p>
+<p>The comparatively high number of references to one-thousand-two-hundred-and-fifty disciples in the Dīrgha-āgama could be related to the circumstance that this collection appears to have been transmitted within the Dharmaguptaka tradition, which tends to give a particular emphasis to the superior qualities of the Buddha.</p>
+<p>The tendency to exalt the Buddha’s status as a teacher is, however, not confined to the Dharmaguptaka tradition, in fact the Madhyama-āgama parallel to the Mahāsakuludāyi-sutta carries its numerological conceptions even further. When relating the Buddha’s delivery of teachings on a former occasion, according to the Madhyama-āgama version his audience amounted to “innumerable hundred-thousands”, <span class="note" id="mn77n143"><span class="details"><span class="p">[n.143] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 782b17: 無量百千.</span></span></span> whereas the Majjhima-nikāya version only records the comparatively less impressive presence of “several hundreds” of listeners during this teaching.<span class="note" id="mn77n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn77.html">MN 77</a> at MN II 4,34: anekasata.</span></span></span></p>
+<p>The Madhyama-āgama discourse’s tendency to exalt the Buddha can also be seen in its description of how Sakuludāyī rose up on seeing the Buddha come, arranged his robe over one shoulder and greeted the Buddha with palms together, a behaviour not recorded in the Majjhima-nikāya version.<span class="note" id="mn77n145"><span class="details"><span class="p">[n.145] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c16: 從坐起, 偏袒著衣, 叉手向佛. This description is a pericope used frequently in the Madhyama-āgama to depict the attitude of disciples who are in discussion with the Buddha, so that its occurrence in the present context may simply be due to the application of a stereotype.</span></span></span> Since, according to both discourses, Sakuludāyī was a famous teacher,<span class="note" id="mn77n146"><span class="details"><span class="p">[n.146] <a href="../../mn/mn77.html">MN 77</a> at MN II 1,5 specifies that Sakuludāyī was one out of several “well-known wanderers”, abhiñ- ñātā abhiññātā paribājakā, and <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c5 indicates that he was “of great fame”, 有大名譽. <a href="../../an/an4.30.html">AN 4:30</a> at AN II 29,24 and <a href="../../an/an4.185.html">AN 4:185</a> at AN II 176,10 also report that Sakuludāyī was a famous wanderer.</span></span></span> such outward display of humility and respect in the presence of his own disciples, when being visited by another teacher, seems a little out of proportion.</p>
+<p>The same Madhyama-āgama version, however, reports that Sakuludāyī addressed the Buddha by his name Gotama, a not particularly respectful way of behaviour.<span class="note" id="mn77n147"><span class="details"><span class="p">[n.147] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 781c21: 瞿曇.</span></span></span> According to the Majjhima-nikāya version, however, Sakuludāyī rather used the respectful address “Blessed One” and “venerable sir”.<span class="note" id="mn77n148"><span class="details"><span class="p">[n.148] <a href="../../mn/mn77.html">MN 77</a> at MN II 2,11: bhante bhagavā.</span></span></span> In this respect, then, the Madhyama-āgama presentation would correspond more closely to the way other discourses depict the common usage among wanderers.</p>
+<p>The respectful address “venerable sir”, in contrast, is in the discourses usually employed by disciples towards their teacher, or by laity when speaking with monks and wanderers, while the address “Blessed One” seems to be used mainly by followers of the Buddha. Although Sakuludāyī may have felt respect and sympathy for the Buddha, it strikes an unusual note for a teacher and leader of a congregation of non-Buddhist wanderers like Sakuludāyī to be depicted as adopting the behaviour of a faithful Buddhist disciple.<span class="note" id="mn77n149"><span class="details"><span class="p">[n.149] Allon 1997a: 121 explains (in relation to another similar instance) that “the use of bhante ‘venerable sir’ is particularly unusual as a form of address used by an ascetic towards the Buddha, as is the ascetic referring to the Buddha as Bhagavā”.</span></span></span></p>
+<p>That the Majjhima-nikāya version might have suffered from some confusion in regard to modes of address becomes evident at a later point, when both versions take up the respect the Buddha’s disciples had for their teacher. While in the Madhyama-āgama account the Buddha describes how his disciples would refer to him as “our Blessed One”, in the corresponding Majjhima-nikāya passage he indicates that his disciples would use the expression “recluse Gotama” to refer to him, an expression that in other discourses is regularly employed by outsiders that do not consider themselves disciples of the Buddha.<span class="note" id="mn77n150"><span class="details"><span class="p">[n.150] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 782c24 and T I 783a1+6+11+17: “our Blessed One”, 我世尊, and <a href="../../mn/mn77.html">MN 77</a> at MN II 7,2+18 and MN II 8,1+17+34: “recluse Gotama”, samaṇo gotamo. According to Wagle 1966: 56, the address “samaṇa, although a term of respect, denotes a certain indifference”.</span></span></span> Hence, according to the Mahāsakuludāyi-sutta Sakuludāyī used what the disciples should have used, while the disciples used the address to be expected of Sakuludāyī. This presentation may be the outcome of a mix up during the process of transmission.</p>
+<p>The two versions agree that none of the six teachers was able to silence his disciples in order to be able to reply to a question asked by his visitors. The Majjhima-nikāya discourse describes that these disciples even openly proclaimed that their teacher did not know how to reply, telling the visitors that it would be better to ask them instead of asking their teacher.<span class="note" id="mn77n151"><span class="details"><span class="p">[n.151] <a href="../../mn/mn77.html">MN 77</a> at MN II 3,17.</span></span></span> This presents the followers of the other six teachers in a more unfavourable light than the Madhyama-āgama version. If the disciples of the six teachers had indeed been as disrespectful as reported in the Mahāsakuludāyi-sutta, it would be difficult to conceive of these teachers being held in as high an esteem by their contemporaries as reported in both versions of the present discourse.</p>
+<p>In relation to the behaviour of the disciples of the Buddha, the Mahāsakuludāyi-sutta and its Madhyama-āgama parallel relate an instance when a disciple made some noise while the Buddha was giving a talk. Whereas according to the Majjhima-nikāya account the disciple had merely cleared his throat, according to its Madhyama-āgama parallel he had actually fallen asleep and was snoring, a not too flattering description of what can happen when the Buddha delivers a talk.<span class="note" id="mn77n152"><span class="details"><span class="p">[n.152] <a href="../../mn/mn77.html">MN 77</a> at MN II 4,35: ukkāsi, <a href="../../parallels/ma207.html">MĀ 207</a> at T I 782b18: 鼾眠作聲. The description of a disciple who is admonished for clearing his throat recurs in <a href="../../mn/mn89.html">MN 89</a> at MN II 122,10, where the parallel <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797a18 again suggests that the disciple was actually snoring, while a parallel to the same discourse in the (Mūla-)Sarvāstivāda Vinaya, T 1451 at T XXIV 238a26, agrees with the Pāli version that he merely cleared his throat; cf. below p. 515 note 348. Another such case appears to be found in T 212 at T IV 700b18. According to a description of the conduct of ancient Indian śramaṇas by Megasthenes, during the delivery of a discourse “the hearer is not allowed to speak or even to cough, and much less to spit, and if he offends in any of these ways he is cast out ... as being a man who is wanting in self-restraint”, cf. McCrindle 1877: 99. According to <a href="../../parallels/ea38.5.html">EĀ 38.5</a> at T II 718c19, on another occasion Anuruddha fell asleep while the Buddha was giving a teaching to a vast assembly, and according to <a href="../../parallels/ea30.2.html">EĀ 30.2</a> at T II 659c2 on yet another occasion an elderly monk even stretched out his feet towards the Buddha and took a nap while the Buddha was giving a talk to a vast assembly.</span></span></span></p>
+<p>The Majjhima-nikāya version, moreover, reports that, whenever the Buddha taught, the assembled audience was totally intent on what he said.<span class="note" id="mn77n153"><span class="details"><span class="p">[n.153] <a href="../../mn/mn77.html">MN 77</a> at MN II 5,5. This depiction of an invariably attentive assembly would stand in contrast to <a href="../../mn/mn65.html">MN 65</a> at MN I 445,31 and its parallel <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749b3, according to which a monk met with rebuke for not paying attention when the Buddha taught the Dharma.</span></span></span> The Mahāsakuludāyi-sutta also notes that even those who give up the life of a Buddhist monk and return to lay life will nevertheless praise the Buddha and his teaching. The Madhyama-āgama discourse does not report the attentive behaviour of the assembly, nor does it take up the issue of monks disrobing. In fact, its description of a monk who falls asleep and is snoring would not fit the Mahāsakuludāyi-sutta’s account of the attentive behaviour of the Buddha’s audience.</p>
+<p>Looking back on these variations between the Mahāsakuludāyi-sutta and its Madhyama-āgama parallel, it seems that both versions are under the influence of the same tendency to enhance the status and position of the Buddha, although this tendency manifests in different ways in each of the two versions.</p>
+<p>The Mahāsakuludāyi-sutta and its parallel continue by reporting five reasons that Sakuludāyī thought to be responsible for the respect shown by the Buddha’s disciples to their teacher. Although differing in the sequence (see table 8.4), the two versions agree on these five reasons being the taking of little food, contentment with any robe, any alms food, and any dwelling place, and a secluded life-style.</p>
+<p>In reply to this proposition, according to both versions the Buddha pointed out that some of his disciples surpassed him in regard to each of these qualities, so that these five reasons would not suffice for instilling respect in his disciples.<span class="note" id="mn77n154"><span class="details"><span class="p">[n.154] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783a4 contrasts the Buddha’s partaking of a single or even half a beluva fruit with his disciples who take a single or half a cup full of food. Since the point of the whole exposition in both versions is to show that some of the disciples surpassed the Buddha in regard to each of the five qualities, this part of <a href="../../parallels/ma207.html">MĀ 207</a> appears to have suffered from a confusion during its transmission or translation. In the corresponding passage in <a href="../../mn/mn77.html">MN 77</a> at MN II 6,34, the beluva fruit and the cup full of food are both part of the depiction of the small amounts taken by disciples, in contrast to which the Buddha is said to sometimes take a whole bowl full of food, or even more.</span></span></span> Instead, he explained, his disciples respected him for five other qualities.</p>
+<table class="comparative-table">
+<caption>Table 8.4: Five Outward Qualities of the Buddha in <a href="../../mn/mn77.html">MN 77</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn77.html">MN 77</a></th><th><a href="../../parallels/ma207.html">MĀ 207</a></th></tr>
+<tr><td>taking little food (1)</td><td>contentment with robes (→ 2)</td></tr>
+<tr><td>contentment with robes (2)</td><td>contentment with food (→ 3)</td></tr>
+<tr><td>contentment with food (3)</td><td>taking little food (→ 1)</td></tr>
+<tr><td>contentment with dwelling place (4)</td><td>contentment with dwelling place (→ 4)</td></tr>
+<tr><td>living in seclusion (5)</td><td>living in seclusion (→ 5)</td></tr>
+</table>
+<p>With some differences in sequence (see table 8.5 below), the Mahāsakuludāyi-sutta and its parallel agree that the first four of these five qualities are:</p>
+<ul>
+<li>higher virtue, knowledge-and-vision, higher wisdom, teaching the four noble truths.<span class="note" id="mn77n155"><span class="details"><span class="p">[n.155] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783b2+5 has these qualities in a slightly different order, as it first takes up “unsurpassable wisdom”, 無上智慧, and then “unsurpassable knowledge and vision”, 無上知見, whereas in <a href="../../mn/mn77.html">MN 77</a> at MN II 9,22 “knowledge-and-vision”, ñāṇadassana, precedes “higher wisdom”, adhipaññā.</span></span></span></li>
+</ul>
+<p>In regard to the Buddha’s higher virtue, while the Majjhima-nikāya version does not offer further information on this quality, the Madhyama-āgama discourse explains that the Buddha’s higher virtue was such that he spoke as he acted and acted as he spoke.<span class="note" id="mn77n156"><span class="details"><span class="p">[n.156] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783a25: 如所說所作亦然, 如所作所說亦然, similar to a qualification of the Buddha as one who speaks as he acts and acts as he speaks, yathāvādī tathākārī, yathākārī tathāvādī, in <a href="../../dn/dn19.html">DN 19</a> at DN II 224,3, <a href="../../dn/dn29.html">DN 29</a> at DN III 135,15, <a href="../../an/an4.23.html">AN 4:23</a> at AN II 24,7, and It 4:13 at It 122,2.</span></span></span> This specification sets a meaningful contrast to the type of more external virtuous conduct envisaged as praiseworthy by Sakuludāyī. In regard to higher wisdom, the Majjhima-nikāya account points out that it was due to the confidence of his disciples in his wisdom that they would not interrupt the Buddha when he was teaching.</p>
+<p>The Majjhima-nikāya presentation continues by noting that the Buddha did not expect teachings from his disciples, but they expected teachings from him.<span class="note" id="mn77n157"><span class="details"><span class="p">[n.157] <a href="../../mn/mn77.html">MN 77</a> at MN II 10,11: na kho panāhaṃ ... sāvakesu anusāsaniṃ paccāsiṃsāmi, aññadatthu mamaṃ yeva sāvakā anusāsaniṃ paccāsiṃsanti (Be-MN II 202,22: paccāsīsāmi, paccāsīsanti, and mama, Se- MN II 323,7: aññadatthuṃ). A related statement ca be found in the Saṅghabhedavastu in Gnoli 1978a: 78,15, according to which the Buddha did not expect his disciples to protect his proclamation of Dharma and Vinaya, nor did it occur to them to do so, na māṃ śrāvakāḥ svākhyātadharmavinayato ’nurakṣitavyaṃ manyante, nāhaṃ śrāvakāṇām antikāt svākhyātadharmavinayatyānurakṣaṇaṃ pratyāśaṃsāmi, a statement similarly made for the Buddha’s śila, ājīva, jñānadarśana and vyākaraṇa.</span></span></span> These specifications, which are not found in the Madhyama-āgama parallel, explain why the Buddha’s disciples would display a type of behaviour different from the behaviour of the disciples of the other teachers.</p>
+<table class="comparative-table">
+<caption>Table 8.5: Five Inner Qualities of the Buddha in <a href="../../mn/mn77.html">MN 77</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn77.html">MN 77</a></th><th><a href="../../parallels/ma207.html">MĀ 207</a></th></tr>
+<tr><td>higher virtue (1)</td><td>supreme virtue (→ 1)</td></tr>
+<tr><td>knowledge and vision (2)</td><td>supreme wisdom (→ 3)</td></tr>
+<tr><td>higher wisdom (3)</td><td>supreme knowledge and vision (→ 2)</td></tr>
+<tr><td>teaching of four noble truths (4)</td><td>teaching of four noble truths (→ 4)</td></tr>
+<tr><td>teaching ways of development (5)</td><td>teaching higher knowledge (→ 5)</td></tr>
+</table>
+<p>In regard to the fifth inner quality of the Buddha, the Madhyama-āgama presentation takes up his teaching of the recollection of past lives and of the eradication of the influxes. The Madhyama-āgama version concludes that his disciples had confidence in the Buddha because through these teachings they were able to go beyond doubt and reach the other shore.<span class="note" id="mn77n158"><span class="details"><span class="p">[n.158] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783b16. <a href="../../parallels/ma207.html">MĀ 207</a> precedes this description by referring to the Buddha’s ability to teach the four noble truths, found in similar terms in <a href="../../mn/mn77.html">MN 77</a> at MN II 10,20. An extract from the present discussion already appeared in Anālayo 2005c: 95-96.</span></span></span> The Majjhima-nikāya version differs considerably, as it instead presents a detailed exposition of various aspects of the Buddhist path that covers the following topics:</p>
+<ul>
+<li>the four satipaṭṭhānas,</li>
+<li>the four right efforts,</li>
+<li>the four ways to [psychic] power (iddhipāda),</li>
+<li>the five faculties,</li>
+<li>the five powers,</li>
+<li>the seven awakening factors,</li>
+<li>the noble eightfold path,</li>
+<li>the eight liberations (vimokkha),</li>
+<li>the eight bases for transcendence (abhibhāyatana),</li>
+<li>the ten kasiṇas,</li>
+<li>the four jhānas,</li>
+<li>insight into the nature of body and consciousness,<span class="note" id="mn77n159"><span class="details"><span class="p">[n.159] A parallel to the simile of the reed, used to illustrate this particular insight, can be found in the Kaṭha Upaniṣad 2.3.17. Another parallel occurs in the Jain Sūyagaḍa 2.1.16 in Bollée 1977b: 25,23, translated ibid. p. 140, preceded by the simile of drawing a sword from its scabbard; cf. also the Śatapatha Brāhmaṇa 4.3.3.16, on which cf. Chaudhary 1994e: 161 and Norman 1976/1991: 101-102.</span></span></span></li>
+<li>production of a mind-made body (manomaya kāya),</li>
+<li>supernormal powers (iddhi),</li>
+<li>the divine ear,</li>
+<li>telepathic knowledge of the minds of others,</li>
+<li>recollection of past lives,</li>
+<li>the divine eye,</li>
+<li>the destruction of the influxes.<span class="note" id="mn77n160"><span class="details"><span class="p">[n.160] <a href="../../mn/mn77.html">MN 77</a> at MN II 11,3 to MN II 22,15. Eimer 1976: 53 notes that the first part of this listing, up to the ten kasiṇas, follows a numerical ascending order, while the items listed after the ten kasiṇas no longer follow this order, but instead come in the same sequence as found in <a href="../../dn/dn2.html">DN 2</a> at DN I 73,23 to DN I 84,12. This suggests that two originally independent listings have been combined in the present instance.</span></span></span></li>
+</ul>
+<p>When considering this exposition in the light of its Madhyama-āgama parallel, the Buddha’s ability to teach the path to the eradication of the influxes would suffice in order to explain what really makes him worthy of respect. The long exposition given in the Mahāsakuludāyi-sutta appears somewhat out of proportion, as after announcing an exposition of five qualities it takes up the first four qualities only in brief but then delivers a disproportionally long exposition of the fifth quality. Due to this detailed exposition, the Mahāsakuludāyi-sutta has become a rather long discourse that would perhaps find a more fitting placement in the Dīgha-nikāya, instead of being included among discourses of “middle length”. In sum, this whole exposition in the Mahāsakuludāyi-sutta gives the impression of being an expansion of what originally would have only been a reference to the destruction of the influxes or to the three higher knowledges.</p>
+<p>While the Majjhima-nikāya version ends with Sakuludāyī’s delight in the Buddha’s exposition, according to the Madhyama-āgama account Sakuludāyī took refuge and asked to be accepted as a lay follower.<span class="note" id="mn77n161"><span class="details"><span class="p">[n.161] <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783b28: “may the Blessed One accept me as a lay follower from now on”, 唯願世尊受 我為優婆塞, 從今日始. Notably, at this point Sakuludāyī switches from the address “ascetic Gotama” to the address “Blessed One”, as demanded by the situation.</span></span></span> For him to become a lay follower would, however, seem a rather unexpected course of action. Had Sakuludāyī really been ready to formally become a disciple of the Buddha, it would have been more appropriate for him to request ordination as a Buddhist monk. This ending in the Madhyama-āgama version may thus be another instance of the tendency to exalt the Buddha by depicting the effect his teaching had on his listeners, a tendency which in its various manifestations can be seen to be at work in both versions of the present discourse.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+<script>document.addEventListener("click",e=>{if(e.target.closest("a.dg-link")){e.preventDefault();const s=new URLSearchParams(window.location.search).get("s");window.location.href=e.target.closest("a").href+(s?`&s=${encodeURIComponent(s)}`:"");}})</script>
+</body>
+ </html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 115 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 115: Bahudhātuka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn114comp.html#content"></a><a id="next-sutta" href="./mn116comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn115.html">MN 115</a> / <a href="../../parallels/ma181.html">MĀ 181</a> / <a href="../../parallels/sa451.html">SĀ 451 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bahudhātuka-sutta, the “discourse on many elements”, examines various sets of elements, the sense-spheres, dependent arising (paṭicca samuppāda), and what is possible or impossible.<span class="note" id="mn115n45"><span class="details"><span class="p">[n.45] The last of these four topics, the exposition of impossibilities, recurs in <a href="../../an/an1.15.html">AN 1:15</a> at AN I 26-30.</span></span></span> This discourse has two Chinese parallels, one of which is found in the Madhyama-āgama, while the other is an individual translation.<span class="note" id="mn115n46"><span class="details"><span class="p">[n.46] The Chinese parallels are <a href="../../parallels/ma181.html">MĀ 181</a> at T I 723a-724c and T 776 at T XVII 712b-714a, both of which agree with <a href="../../mn/mn115.html">MN 115</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma181.html">MĀ 181</a> also agrees with <a href="../../mn/mn115.html">MN 115</a> on the title (多界經), while T 776 has the title “discourse spoken by the Buddha with a Dharma instruction in four parts”, 佛說四品法門經, a title reconstructed by Nanjio 1883/1989: 219 as *Buddhabhāṣita-caturvarga-dharmaparyāya-sūtra. Apart from being found in the title, the expression “four parts”, 四品, recurs in T 776 at T XVII 712c7, where it stands for the four topics taught, namely the elements, the sense-spheres, dependent arising, and what is possible or impossible. According to the information given in the Taishō edition, T 776 was translated by Făxián (法賢). For remarks on <a href="../../parallels/ma181.html">MĀ 181</a> cf. Minh Chau 1964/1991: 26, 65, and 115-117. A quotation from the present discourse in the *Mahāpraj- ñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 237a16, gives the discourse’s title as “many elements”, 多性 (Hirakawa 1997: 475 lists dhātu as one of the equivalents to 性). For a reference to a version of the present discourse in Vyākhyāyukti literature cf. Skilling 2000b: 342.</span></span></span> In addition to these two Chinese parallels, the Bahudhātuka-sutta also has a parallel in a Tibetan discourse,<span class="note" id="mn115n47"><span class="details"><span class="p">[n.47] The Tibetan parallel is the khams mang po pa’i mdo, D (297) mdo sde, sha 297a2-301b2 or Q (963) lu 325b2-330b1, which agrees with <a href="../../mn/mn115.html">MN 115</a> on the location of the discourse and also takes the “many elements” as its title, although when quoting the Indic original it has these two words in the reverse sequence, cf. D (297) mdo sde, sha 297a2 or Q (963) lu 325b3: rgya gar skad du dhā tu ba hu ta ka sū tra (I am indebted to Peter Skilling for kindly allowing me to consult his unpublished translation and edition of the Tibetan discourse and the quote in Abhidh-k-ṭ for my present study). Skilling 1994b: 772 notes several editions whose title corresponds to the sequence found in the Pāli title and suggests that “dhātubahutaka must be a reconstruction”. Ibid. p. 774 points out that most colophons do not record the translator of this discourse, while the Phu brag manuscript of the Kanjur lists *Surendrabodhi and Ye shes sde, translators active during the early 9th century. Skilling (unpubl.) also notes the following partial quotations, which due to their shortness have not found a place in my present study: D (4092) mngon pa, gu 50b4 or Q (5593) cu 58b7 and D (4069) sems tsam, si 273b1 or Q (5570) i 157a8.</span></span></span> and in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn115n48"><span class="details"><span class="p">[n.48] Abhidh-k-ṭ at D (4094) mngon pa, ju 28b2-33b4 or Q (5595) tu 31b1-36b6, which gives the title as khams mang po pa’i mdo, “the discourse on many elements”; cf. also Abhidh-k 1:28 in Pradhan 1967: 18,7, paralleling <a href="../../mn/mn115.html">MN 115</a> at MN III 62,10, with its Chinese counterparts in T 1558 at T XXIX 6c2 and in T 1559 at T XXIX 166c24. For the full quote cf. below note 61; for further discourse quotations in Abhidh-k-ṭ cf. below notes 69, 71, 76.</span></span></span> The same discourse recurs, moreover, as a discourse quotation in the Dharmaskandha of the Sarvāstivāda Abhidharma collection.<span class="note" id="mn115n49"><span class="details"><span class="p">[n.49] This discourse quotation comes at the outset of chapter 20 in T 1537 at T XXVI 501b25-502c18 and is in several respects close to the Tibetan version.</span></span></span></p>
+<p>The Bahudhātuka-sutta begins with the Buddha explaining to his monk disciples that fears and troubles arise due to a fool, not due to a wise person. The Chinese and Tibetan parallels attribute this thought instead to Ānanda, who had this reflection while being alone in seclusion. According to the parallels versions, Ānanda then approached the Buddha to report what he had been thinking about.</p>
+<p>In the Pāli version, the Buddha compared the danger caused by a fool to a fire, which might start from a grass and twig hut but eventually can burn down a whole house.<span class="note" id="mn115n50"><span class="details"><span class="p">[n.50] <a href="../../mn/mn115.html">MN 115</a> at MN III 61,13; an image that occurs again in order to illustrate the same predicament in <a href="../../an/an3.1.html">AN 3:1</a> at AN I 101,9.</span></span></span> The same image recurs with minor variations in the other versions.<span class="note" id="mn115n51"><span class="details"><span class="p">[n.51] <a href="../../parallels/ma181.html">MĀ 181</a> at T I 723a22 and the Dharmaskandha, T 1537 at T XXVI 501c2, are similar to the Pāli version. The Tibetan discourse at D (297) mdo sde, sha 297b2 or Q (963) lu 326a3 describes how fire may burn down a house made of dry reeds or a house thatched with dry grass, or a heap of dry straw, thereby not mentioning that such a fire can affect a bigger building. The same is the case for the discourse quotation in the Abhidh-k-ṭ, D (4094) mngon pa, ju 29a1 or Q (5595) tu 32a1. T 776 at T XVII 712b26 only describes how a man piles up reed and makes a fire, without mentioning a house affected by this fire at all.</span></span></span> The Chinese and Tibetan versions additionally highlight that fear due to a fool arises not only at present, but also in the past and in the future.<span class="note" id="mn115n52"><span class="details"><span class="p">[n.52] <a href="../../parallels/ma181.html">MĀ 181</a> at T I 723a25, T 776 at T XVII 712b28, D (297) mdo sde, sha 297b4 or Q (963) lu 326a5, and T 1537 at T XXVI 501c4. A difference is that <a href="../../parallels/ma181.html">MĀ 181</a> throughout distinguishes between “foolishness”, 愚癡, and “wisdom”, 智慧, while the other versions contrast a fool with a wise one.</span></span></span></p>
+<p>According to all versions, Ānanda inquired how to become a wise person.<span class="note" id="mn115n53"><span class="details"><span class="p">[n.53] <a href="../../mn/mn115.html">MN 115</a> at MN III 62,2 stands alone in qualifying the wise person to be a monk and an “inquirer”, vīmaṃsaka (a qualification not found in the preceding injunction by the Buddha in Se-MN III 166,20). In <a href="../../parallels/ma181.html">MĀ 181</a> at T I 723b8, T 776 at T XVII 712c5, D (297) mdo sde, sha 298a3 or Q (963) lu 326b4, and D (4094) mngon pa, ju 29b1 or Q (5595) tu 32b1 Ānanda also asks for a definition of a fool, which the Buddha explains to be one who does not have knowledge of the elements, of the sense-spheres, of dependent arising, and of what is possible and impossible. <a href="../../parallels/ma181.html">MĀ 181</a> at T I 723b7 precedes its treatment of foolishness by reporting that Ānanda was so affected by what the Buddha had said that he was in tears, 悲泣淚出.</span></span></span> The Buddha replied by listing knowledge of:</p>
+<ul>
+<li>the elements</li>
+<li>the sense-spheres,</li>
+<li>dependent arising (paṭicca samuppāda),</li>
+<li>what is possible and what is impossible.</li>
+</ul>
+<p>A difference in this respect can be found in the discourse quotation in Śamathadeva’s commentary and in the Dharmaskandha, which include knowledge of the five aggregates in their definition of what makes the difference between a fool and a wise person (see table 12.3).<span class="note" id="mn115n54"><span class="details"><span class="p">[n.54] D (4094) mngon pa, ju 29b1 or Q (5595) tu 32b1 lists the aggregates first, whereas in T 1537 at T XXVI 501c11 they occur in the third place.</span></span></span> The Dharmaskandha also gives a full exposition to this topic.<span class="note" id="mn115n55"><span class="details"><span class="p">[n.55] T 1537 at T XXVI 502a13. This exposition is without a counterpart in the discourse quotation in Abhidh-k-ṭ, which thus appears to present an intermediate stage, where a reference to the five aggregates has already become part of the definition of a wise or a fool, but this reference has not yet led to a full exposition, such as found in the Dharmaskandha.</span></span></span></p>
+<p>This reference to the five aggregates causes their overall presentation to become fivefold, which does not fit their own qualification of the discourse as being a fourfold presentation, literally “four turnings”, a qualification made in all versions.<span class="note" id="mn115n56"><span class="details"><span class="p">[n.56] D (4094) mngon pa, ju 33b3 or Q (5595) tu 36b5: le’u bzhi pa and T 1537 at T XXIV 502c17: 四轉, similar to the fourfold pattern mentioned in the other versions, cf. <a href="../../mn/mn115.html">MN 115</a> at MN III 67,30: catuparivaṭṭo, <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724c2: 四品, T 776 at T XVII 713c27: 四品法門, and D (297) mdo sde, sha 301a7 or Q (963) lu 330a8: le’u bzhi pa. Abhidh-k-ṭ, however, has also an alternative title that would reflect a five-fold presentation, as it speaks of the “five[-fold] deathless”, D (4094) mngon pa, ju 33b3 or Q (5595) tu 36b5: bdud rtsi lnga.</span></span></span> This makes it probable that the reference to the five aggregates, which, moreover, occurs in the two versions at different places, is a later addition.</p>
+<table class="comparative-table">
+<caption>Table 12.3: Requirements for Wisdom According to <a href="../../mn/mn115.html">MN 115</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn115.html">MN 115</a> & <a href="../../parallels/ma181.html">MĀ 181</a> & T 776 & D 297/Q 963</th></tr>
+<tr><td>elements (1)</td></tr>
+<tr><td>sense-spheres (2)</td></tr>
+<tr><td>dependent arising (3)</td></tr>
+<tr><td>possible and impossible (4)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>Abhidh-k-ṭ</td><td>T 1537</td></tr>
+<tr><td>aggregates</td><td>elements (→ 1)</td></tr>
+<tr><td>elements (→ 1)</td><td>sense-spheres (→ 2)</td></tr>
+<tr><td>sense-spheres (→ 2)</td><td>aggregates</td></tr>
+<tr><td>dependent arising (→ 3)</td><td>dependent arising (→ 3)</td></tr>
+<tr><td>possible and impossible (→ 4)</td><td>possible and impossible (→ 4)</td></tr>
+</table>
+<p>The Bahudhātuka-sutta and its parallels agree in expounding knowledge of the elements by listing:</p>
+<ul>
+<li>the eighteen elements related to the senses,</li>
+<li>the six elements of earth, water, fire, etc.,</li>
+<li>the six elements related to pleasure and pain, etc.,<span class="note" id="mn115n57"><span class="details"><span class="p">[n.57] While T 776 has the same sequence as <a href="../../mn/mn115.html">MN 115</a>, the six elements related to sensual desire and ill will precede the six elements related to pleasure and pain in <a href="../../parallels/ma181.html">MĀ 181</a>, in the Tibetan versions, and in the Dharmaskandha, cf. table 12.4.</span></span></span></li>
+<li>the six elements related to sensual desire and ill will, etc.,</li>
+<li>the three elements of what belongs to the sensual, to form, and to formlessness,</li>
+<li>the two elements of what is conditioned and unconditioned.<span class="note" id="mn115n58"><span class="details"><span class="p">[n.58] In the Pāli discourses, the eighteen elements can be found, e.g., in <a href="../../sn/sn14.1.html">SN 14:1</a> at SN II 140,11 and <a href="../../sn/sn41.2.html">SN 41:2</a> at SN IV 285,3, where they represent the “diversity of elements”, dhātunānatta. The six elements of earth, etc., occur repeatedly, e.g., in the Majjhima-nikāya in <a href="../../mn/mn112.html">MN 112</a> at MN III 31,15, and <a href="../../mn/mn140.html">MN 140</a> at MN III 240,18. The six elements related to sensual desire and ill will are listed in <a href="../../dn/dn33.html">DN 33</a> at DN III 215,15 and in <a href="../../an/an6.111.html">AN 6:111</a> at AN III 447,15, with a more detailed treatment provided in <a href="../../sn/sn14.12.html">SN 14:12</a> at SN II 151,16. The triplet sense, form, formless can be found in <a href="../../dn/dn33.html">DN 33</a> at DN III 215,19. The doublet conditioned/unconditioned occurs in <a href="../../dn/dn34.html">DN 34</a> at DN III 274,14. Five of the six elements related to pleasure and pain recur under the heading of “five faculties”, e.g., in <a href="../../dn/dn33.html">DN 33</a> at DN III 239,12, <a href="../../sn/sn36.22.html">SN 36:22</a> at SN IV 232,4, and <a href="../../sn/sn48.31.html">SN 48:31</a>-40 at SN V 207-216, expositions which, however, do not include the sixth element mentioned in <a href="../../mn/mn115.html">MN 115</a> at MN III 62,31, the “element of ignorance”, avijjādhātu. The elements listed in <a href="../../mn/mn115.html">MN 115</a> recur also in the Vibhaṅga, where the eighteen elements can be found at Vibh 87-90, the three sets of six elements at Vibh 82-87, the triplet sense, form, and formless at Vibh 409-420, and the conditioned as against the unconditioned element at Vibh 421,31.</span></span></span></li>
+</ul>
+<p>The Chinese and Tibetan discourses and the Dharmaskandha also mention:</p>
+<ul>
+<li>four elements, namely the four mental aggregates,</li>
+<li>three elements, which cover what is inferior, middle, and superior,</li>
+<li>three elements, namely what is wholesome, unwholesome, and indeterminate,</li>
+<li>three elements, which comprise the disciple in higher training (sekha), the one beyond training (asekha), and the one who is neither,</li>
+<li>two elements, namely what is with influxes and what is free from the influxes.<span class="note" id="mn115n59"><span class="details"><span class="p">[n.59] A difference in regard to the exposition of the elements is that, according to <a href="../../mn/mn115.html">MN 115</a> at MN III 62,19+ 26+33 and MN III 63,4+10, after each set of elements Ānanda inquires if there is still another way to be skilled or knowledgeable in the elements, siyā pana, bhante, añño pi pariyāyo? The parallel versions do not record any intervention by Ānanda, so that their exposition of the elements comes as one continuous explanation by the Buddha.</span></span></span></li>
+</ul>
+<p>The Madhyama-āgama and Tibetan discourses and the Dharmaskandha also take up:</p>
+<ul>
+<li>the three elements of form, formlessness, and cessation,</li>
+<li>the three elements of past, present, and future times.<span class="note" id="mn115n60"><span class="details"><span class="p">[n.60] The additional elements covered in the Chinese and Tibetan versions can also be found in other Pāli discourses. The four elements occur in an analysis of deeper levels of concentration into its constituent elements under the heading of the four mental aggregates given in <a href="../../mn/mn64.html">MN 64</a> at MN I 436,21+29, which enjoins to develop insight in regard to “whatever there is of feeling, perception, volitional formations, and consciousness”, yad eva tattha hoti vedanāgataṃ saññāgataṃ saṅkhāragataṃ viññāṇagataṃ. The additional element triplets found in the Chinese and Tibetan versions recur in <a href="../../dn/dn33.html">DN 33</a> at DN III 215,20+22, DN III 216,16, DN III 217,24, and DN III 218,1, which has the triplet form, formless, and cessation as its entry 3:14; what is inferior, middle, and superior as its entry 3:15; past, future, and present as its entry 3:24; meritorious, demeritorious, and indeterminate formations as its entry 3:35; and the trainee, the one beyond training, and the one who is neither as its entry 3:36. The first of these triplets, covering form, formlessness, and cessation, occurs also in its Chinese parallel <a href="../../parallels/da9.html">DĀ 9</a> at T I 50a28. Finally the distinction between what is with influxes and what is free from the influxes is applied in <a href="../../dn/dn28.html">DN 28</a> at DN III 112,7 to supernormal powers (iddhi), in <a href="../../mn/mn117.html">MN 117</a> at MN III 72,6 to the factors of the noble eightfold path, in <a href="../../an/an2.7.html">AN 2:7</a> at AN I 81,1 to happiness, and in <a href="../../an/an10.133.html">AN 10:133</a> at AN V 275,20 to the ten courses of action.</span></span></span></li>
+</ul>
+<p>These differences result in different numbers of elements being taken into account in the respective listings (see below table 12.4):</p>
+<ul>
+<li>the Majjhima-nikāya discourse lists forty-one elements,</li>
+<li>the individual translation takes up fifty-six elements,</li>
+<li>the other versions cover sixty-two elements.<span class="note" id="mn115n61"><span class="details"><span class="p">[n.61] A listing of sixty-two elements is explicitly associated with the present discourse in the *Mahāvibhāṣā, T 1545 at T XXVII 367c4: 多界經中說界差別有六十二 (cf. also Buddhavarman’s Vibhāṣā translation, T 1546 at T XXVIII 279b24), and in the Abhidharmakośabhāṣya, Abhidh-k 1:28 in Pradhan 1967: 18,7: bahudhātuke ’pi dvāṣaṣṭirdhātavo deśitāḥ, with its Chinese counterparts in T 1558 at T XXIX 6c2: 多界 經說界差別有六十二 and T 1559 at T XXIX 166c24: 於多界經中, 佛說有六十二); cf. also T 1552 at T XXVIII 874a6 and T 1828 at T XLII 657b17.</span></span></span></li>
+</ul>
+<p>The Bahudhātuka-sutta and its Chinese and Tibetan parallels examine the next two major topics, the six senses-spheres and the twelve links of dependent arising, in similar ways.</p>
+<table class="comparative-table">
+<caption>Table 12.4: Survey of Elements in <a href="../../mn/mn115.html">MN 115</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn115.html">MN 115</a></th></tr>
+<tr><td>18 elements: 6 senses, 6 objects, 6 consciousness (1)</td></tr>
+<tr><td>6 elements: earth, water, fire, wind, space, consciousness (2)</td></tr>
+<tr><td>6 elements: pleasure, pain, joy, grief, equanimity, ignorance (3)</td></tr>
+<tr><td>6 elements: sensual desire, ill will, cruelty, & absence of each (4)</td></tr>
+<tr><td>3 elements: sensual, form, formless (5)</td></tr>
+<tr><td>2 elements: conditioned, unconditioned (6)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>T 776</td></tr>
+<tr><td>18 elements: 6 senses, 6 objects, 6 consciousness (→ 1)</td></tr>
+<tr><td>6 elements: earth, water, fire, wind, space, consciousness (→ 2)</td></tr>
+<tr><td>6 elements: pleasure, joy, pain, equanimity, grief, ignorance (→ 3)</td></tr>
+<tr><td>6 elements: sensual desire, ill will, cruelty, & absence of each (→ 4)</td></tr>
+<tr><td>4 elements: feeling, perception, formations, consciousness</td></tr>
+<tr><td>3 elements: sensual, form, formless (→ 5)</td></tr>
+<tr><td>3 elements: inferior, middle, superior</td></tr>
+<tr><td>3 elements: wholesome, unwholesome, neither</td></tr>
+<tr><td>3 elements: sekha, asekha, neither</td></tr>
+<tr><td>2 elements: with influxes, without influxes</td></tr>
+<tr><td>2 elements: conditioned, unconditioned (→ 6)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ma181.html">MĀ 181</a>, D 297/Q 963, Abhidh-k-ṭ, T 1537</td></tr>
+<tr><td>18 elements: 6 senses, 6 objects, 6 consciousness (→ 1)</td></tr>
+<tr><td>6 elements: earth, water, fire, wind, space, consciousness (→ 2)</td></tr>
+<tr><td>6 elements: sensual desire, ill will, cruelty, & absence of each (→ 4)</td></tr>
+<tr><td>6 elements: pleasure, pain, joy, grief, equanimity, ignorance (→ 3)</td></tr>
+<tr><td>4 elements: feeling, perception, formations, consciousness</td></tr>
+<tr><td>3 elements: sensual, form, formless (→ 5)</td></tr>
+<tr><td>3 elements: form, formless, cessation</td></tr>
+<tr><td>3 elements: past, future, present</td></tr>
+<tr><td>3 elements: inferior, middle, superior</td></tr>
+<tr><td>3 elements: wholesome, unwholesome, neither</td></tr>
+<tr><td>3 elements: sekha, asekha, neither</td></tr>
+<tr><td>2 elements: with influxes, without influxes</td></tr>
+<tr><td>2 elements: conditioned, unconditioned (→ 6)</td></tr>
+</table>
+<p>As the last aspect in their examination of what makes the difference between a wise and a fool, the Bahudhātuka-sutta and its Chinese and Tibetan parallels turn to the topic of what is possible and what is impossible.</p>
+<p>Somewhat similar to the case of the elements, which constitutes the first of the main themes in the Bahudhātuka-sutta and nearly all of its parallels, in the case of this last topic of examination, regarding what is possible and what is impossible, substantial variations between the Pāli, Chinese, and Tibetan versions can again be found (see below table 12.5).</p>
+<table class="comparative-table">
+<caption>Table 12.5: Impossibilities in <a href="../../mn/mn115.html">MN 115</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn115.html">MN 115</a></th><th><a href="../../parallels/ma181.html">MĀ 181</a></th></tr>
+<tr><td>regard formations as permanent (1)</td><td>2 wheel-turning kings at same time (→ 11)</td></tr>
+<tr><td>regard formations as satisfying (2)</td><td>2 Tathāgatas at same time (→ 10)</td></tr>
+<tr><td>regard formations as self (3)</td><td>kill father, kill mother, kill arahant, create</td></tr>
+<tr><td>kill mother (4)</td><td>schism, harm Tathāgata (→ 4-8)</td></tr>
+<tr><td>kill father (5)</td><td>give up precepts and the path</td></tr>
+<tr><td>kill arahant (6)</td><td>consider outsiders field of merit</td></tr>
+<tr><td>harm Tathāgata (7)</td><td>consider outsiders as awakened (→ 9?)</td></tr>
+<tr><td>create schism (8)</td><td>faith in divination</td></tr>
+<tr><td>follow other teacher (9)</td><td>inquire about auspicious signs from outsiders</td></tr>
+<tr><td>2 Buddhas at same time (10)</td><td>search way out of dukkha from outsiders (→ 9?)</td></tr>
+<tr><td>2 wheel-turning kings at same time (11)</td><td>be reborn 8th existence</td></tr>
+<tr><td>female Buddha (12)</td><td>evil conduct (body/speech/mind) leads to good</td></tr>
+<tr><td>female wheel-turning king (13)</td><td>rebirth (→ 23-25)</td></tr>
+<tr><td>female Sakka (14)</td><td>good conduct (body/speech/mind) leads to evil</td></tr>
+<tr><td>female Māra (15)</td><td>rebirth (→ 26-28)</td></tr>
+<tr><td>female Brahmā (16)</td><td>evil conduct (body/speech/mind) has good re-</td></tr>
+<tr><td>evil conduct (body/speech/mind) has good re-</td><td>sults (→ 17-19)</td></tr>
+<tr><td>sults (17-19)</td><td>good conduct (body/speech/mind) has evil re-</td></tr>
+<tr><td>good conduct (body/speech/mind) has evil re-</td><td>sults (→ 20-22)</td></tr>
+<tr><td>sults (20-22)</td><td>satipaṭṭhāna without overcoming hindrances</td></tr>
+<tr><td>evil conduct (body/speech/mind) leads to good</td><td>bojjhaṅga without satipaṭṭhāna, etc.</td></tr>
+<tr><td>rebirth (23-25)</td><td>awakening without bojjhaṅga, etc.</td></tr>
+<tr><td>good conduct (body/speech/mind) leads to evil</td><td>end dukkha without awakening, etc.</td></tr>
+<tr><td>rebirth (26-28)</td><td>(≠ 1-3, 12-16)</td></tr>
+<tr><td>T 776</td><td>D 297/Q 963</td></tr>
+<tr><td>evil conduct (body/speech/mind) has good re-</td><td>evil conduct (body/speech/mind) has good re-</td></tr>
+<tr><td>sults (→ 17-19)</td><td>sults (→ 17-19)</td></tr>
+<tr><td>good conduct (body/speech/mind) has evil re-</td><td>good conduct (body/speech/mind) has evil re-</td></tr>
+<tr><td>sults (→ 20-22)</td><td>sults (→ 20-22)</td></tr>
+<tr><td>evil conduct (body/speech/mind) leads to good</td><td>evil conduct (body/speech/mind) leads to good</td></tr>
+<tr><td>rebirth (→ 23-25)</td><td>rebirth (→ 23-25)</td></tr>
+<tr><td>good conduct (body/speech/mind) leads to evil</td><td>good conduct (body/speech/mind) leads to evil</td></tr>
+<tr><td>rebirth (→ 26-28)</td><td>rebirth (→ 26-28)</td></tr>
+<tr><td>2 Buddhas at same time (→ 10)</td><td>2 Buddhas at same time (→ 10)</td></tr>
+<tr><td>2 wheel-turning kings at same time (→ 11)</td><td>2 wheel-turning kings at same time (→ 11)</td></tr>
+<tr><td>female wheel-turning king, heavenly king,</td><td>female wheel-turning king, Sakka, Brahmā,</td></tr>
+<tr><td>Sakka, Brahmā, Paccekabuddha, Buddha</td><td>Māra, Paccekabuddha, Buddha (→ 12-16)</td></tr>
+<tr><td>(→ 12-14, 16)</td><td>kill father, kill mother, kill arahant, create</td></tr>
+<tr><td>kill father, kill mother, kill arahant, create</td><td>schism, harm Tathāgata (→ 4-8)</td></tr>
+<tr><td>schism, harm Tathāgata (→ 4-8)</td><td>kill living being, give up training, hold outsid-</td></tr>
+<tr><td>violate precepts, follow other teacher, etc. (→ 9)</td><td>ers to be worthy, think outsiders are awak-</td></tr>
+<tr><td>satipaṭṭhāna without overcoming hindrances</td><td>ened, believe in divination, accept view of</td></tr>
+<tr><td>bojjhaṅga without satipaṭṭhāna, etc.</td><td>outsiders, be reborn 8th existence (→ 9)</td></tr>
+<tr><td>awakening / end dukkha without bojjhaṅga, etc.</td><td>satipaṭṭhāna without overcoming hindrances</td></tr>
+<tr><td></td><td>bojjhaṅga without satipaṭṭhāna, etc.</td></tr>
+<tr><td></td><td>awakening without bojjhaṅga, etc.</td></tr>
+<tr><td>(≠ 1-3, 15)</td><td>(≠ 1-3)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th>T 1537</th><th>Abhidh-k-ṭ</th></tr>
+<tr><td>evil conduct (body/speech/mind) has good re-</td><td>evil conduct (body/mind/speech) has good re-</td></tr>
+<tr><td>sults (→ 17-19)</td><td>sults (→ 17-19)</td></tr>
+<tr><td>good conduct (body/speech/mind) has evil re-</td><td>good conduct (body/mind/speech) has evil re-</td></tr>
+<tr><td>sults (→ 20-22)</td><td>sults (→ 20-22)</td></tr>
+<tr><td>evil conduct (body/speech/mind) leads to good</td><td>evil conduct (body/speech/mind) leads to good</td></tr>
+<tr><td>rebirth (→ 23-25)</td><td>rebirth (→ 23-25)</td></tr>
+<tr><td>good conduct (body/speech/mind) leads to evil</td><td>good conduct (body/speech/mind) leads to evil</td></tr>
+<tr><td>rebirth (→ 26-28)</td><td>rebirth (→ 26-28)</td></tr>
+<tr><td>2 wheel-turning kings at same time (→ 11)</td><td>2 wheel-turning kings at same time (→ 11)</td></tr>
+<tr><td>2 Tathāgatas at same time (→ 10)</td><td>2 Tathāgatas/Buddhas at same time (→ 10)</td></tr>
+<tr><td>female wheel-turning king, Sakka, Māra,</td><td>female wheel-turning king (→ 13)</td></tr>
+<tr><td>Brahmā, Paccekabuddha, Buddha (→ 12-</td><td>female heavenly king, Sakka, Brahmā, Pacce-</td></tr>
+<tr><td>16)</td><td>kabuddha, Buddha (→ 12, 14-16)</td></tr>
+<tr><td>kill father, kill mother, kill arahant, create</td><td>kill mother (→ 4)</td></tr>
+<tr><td>schism, harm Tathāgata (→ 4-8)</td><td>kill father, kill arahant, create schism, harm</td></tr>
+<tr><td>kill living being</td><td>Tathāgata (→ 5-8)</td></tr>
+<tr><td>give up training</td><td>kill living being, give up training, hold outsid-</td></tr>
+<tr><td>seek teacher or field of merit among outsiders,</td><td>ers to be worthy, think outsiders are awak-</td></tr>
+<tr><td>hold outsiders to be worthy, practice divi-</td><td>ened, believe in divination, be reborn 8th</td></tr>
+<tr><td>nation, be reborn 8th existence (→ 9)</td><td>existence (→ 9)</td></tr>
+<tr><td>satipaṭṭhāna without overcoming hindrances</td><td>satipaṭṭhāna without overcoming hindrances</td></tr>
+<tr><td>bojjhaṅga without satipaṭṭhāna, etc.</td><td>bojjhaṅga without satipaṭṭhāna, etc.</td></tr>
+<tr><td>awakening without bojjhaṅga, etc.</td><td>end dukkha without bojjhaṅga, etc.</td></tr>
+<tr><td></td><td>awakening without bojjhaṅga, etc.</td></tr>
+<tr><td>(≠ 1-3)</td><td>(≠ 1-3)</td></tr>
+</table>
+<p>The Pāli version begins this examination by explaining that a person endowed with view,<span class="note" id="mn115n62"><span class="details"><span class="p">[n.62] <a href="../../mn/mn115.html">MN 115</a> at MN III 64,17: diṭṭhisampanno puggalo, which Ps IV 107,1 explains to be “the noble disciple who has attained the stream and is endowed with the view of the path”, maggadiṭṭhiyā sampanno sotāpanno ariyasāvako.</span></span></span> an expression implying attainment of stream-entry, will be incapable of considering anything as permanent, satisfactory, or a self.<span class="note" id="mn115n63"><span class="details"><span class="p">[n.63] The exposition of impossibilities in <a href="../../mn/mn115.html">MN 115</a> recurs in <a href="../../an/an1.15.html">AN 1:15</a> at AN I 26-30 and in Vibh 335,35, which takes up the same topics in the same sequence; cf. also <a href="../../an/an6.92.html">AN 6:92</a>-95 at AN III 439,1 for further indications on what is impossible for a person endowed with view, and <a href="../../dn/dn19.html">DN 19</a> at DN II 225,3 on the impossibility that two Buddhas could appear at the same time within a single world system, cf. also below note 69.</span></span></span> These three impossibilities are not mentioned in the other versions. The parallel versions agree that for a person endowed with view it is impossible to kill his or her mother or father, to kill an arahant, to maliciously shed the blood of a Tathāgata, to create a schism in the monastic community, or to follow another teacher.<span class="note" id="mn115n64"><span class="details"><span class="p">[n.64] While in the listing in <a href="../../mn/mn115.html">MN 115</a> at MN III 65,3 shedding the blood of a Tathāgata precedes schism, the opposite sequence can be found in <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724a3, T 776 at T XVII 713b27, D (297) mdo sde, sha 300b2 or Q (963) lu 329a8, D (4094) mngon pa, ju 32a5 or Q (5595) tu 35a7, and T 1537 at T XXVI 502b21 (on this type of variation cf. also Silk 2007b: 254-255). According to <a href="../../an/an5.129.html">AN 5:129</a> at AN III 146,23, the first five of these actions lead straight to hell, to which <a href="../../an/an6.87.html">AN 6:87</a> at AN III 436,16 adds that the same five and foolishness as sixth prevent entering the path of assurance even when one hears the Dharma.</span></span></span> The Tibetan versions and the Dharmaskandha add that a person endowed with view is also incapable of intentionally killing a living being.<span class="note" id="mn115n65"><span class="details"><span class="p">[n.65] D (297) mdo sde, sha 300b3 or Q (963) lu 329b1 and T 1537 at T XXVI 502b23.</span></span></span></p>
+<p>While the Pāli version simply notes that a person endowed with view is incapable of following another teacher,<span class="note" id="mn115n66"><span class="details"><span class="p">[n.66] <a href="../../mn/mn115.html">MN 115</a> at MN III 65,11: “that he should proclaim another teacher, that is impossible”, aññaṃ satthāraṃ uddiseyya, n’ etaṃ ṭhānaṃ vijjatī ti, which Ps IV 113,21 explains to mean that he would not “take the founder of another sect as ‘this is the teacher’”, aññatitthakaraṃ ayaṃ satthā ti evaṃ gaṇheyya.</span></span></span> the Chinese and Tibetan versions take up the same topic from several perspectives. The individual translation explains that it is impossible for a person endowed with right view to commit a breach of the precepts and then slander his teacher and search for another teacher by approaching other recluses or Brahmins.<span class="note" id="mn115n67"><span class="details"><span class="p">[n.67] T 776 at T XVII 713c1.</span></span></span> According to the Madhyama-āgama and the Tibetan discourse, such a person is not able to give up the training, to rely on omens and divination, or to think that a non-Buddhist recluse or Brahmin could have a true vision of reality.<span class="note" id="mn115n68"><span class="details"><span class="p">[n.68] <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724a6 and D (297) mdo sde, sha 300b4 or Q (963) lu 329b2.</span></span></span></p>
+<p>The parallel versions continue their examination of impossibilities by pointing out that two Buddhas or two wheel-turning kings cannot arise in the same world.<span class="note" id="mn115n69"><span class="details"><span class="p">[n.69] The impossibility of two Buddhas arising at the same time recurs also in <a href="../../dn/dn19.html">DN 19</a> at DN II 225,3, together with its counterparts in <a href="../../parallels/da3.html">DĀ 3</a> at T I 31a15 and in the Mahāvastu in Basak 1968/2004: 121,18 or in Senart 1897: 199,10. Other occurrences can be found in <a href="../../dn/dn28.html">DN 28</a> at DN III 114,23 and its parallel <a href="../../parallels/da18.html">DĀ 18</a> at T I 79a7, as well as in <a href="../../an/an1.15.html">AN 1:15</a> at AN I 27,36. The same impossibility also occurs in a discourse quotation from the present discourse in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 237a22, cf. Lamotte 1970a: 1524, as well as in a discourse quotation in Abhidh-k 3:96 in Pradhan 1967: 184,17, paralleling <a href="../../mn/mn115.html">MN 115</a> at MN III 65,14; cf. also T 1558 at T XXIX 64c9, T 1559 at T XXIX 222b22, and Abhidh-k-ṭ at D (4094) mngon pa, ju 188b3 or Q (5595) tu 215b2. Vetter 2001: 67 note 32 points out that “the statement that it is impossible for two Buddhas to arise at the same time ... finds a context only in DN II 224 (Mahāgovindasutta)”.</span></span></span></p>
+<p>The Bahudhātuka-sutta next takes up the impossibility that a female could be any of the following:<span class="note" id="mn115n70"><span class="details"><span class="p">[n.70] On the negative attitude towards women that underlies this stipulation of impossibilities cf., e.g., Barnes 1987: 114, Bentor 2008: 126, Gross 1993: 42, and Rajapakse 1992: 72. This inability does not imply, however, that women are not capable of reaching liberation, as assumed by An 2002: 11.</span></span></span> a Buddha, a wheel-turning king, Sakka, Māra, Brahmā.<span class="note" id="mn115n71"><span class="details"><span class="p">[n.71] The impossibility for a woman to be a Buddha is also mentioned in T 60 at T I 858a2 and T 397 at T XIII 14c14. A discourse quotation paralleling the stipulation that it is impossible for a woman to be a Brahmā can be found in Abhidh-k 2:12 in Pradhan 1967: 46,24, paralleling <a href="../../mn/mn115.html">MN 115</a> at MN III 66,7; cf. also T 1558 at T XXIX 16c1, T 1559 at T XXIX 175c28, and Abhidh-k-ṭ at D (4094) mngon pa, ju 56b3 or Q (5595) tu 62a3.</span></span></span></p>
+<p>Instead of Māra, the individual translation and Śamathadeva’s commentary speak of being one of the four heavenly kings.<span class="note" id="mn115n72"><span class="details"><span class="p">[n.72] T 776 at T XVII 713b21 and D (4094) mngon pa, ju 32a3 or Q (5595) tu 35a5.</span></span></span> Another difference is that the individual translation, the Tibetan versions, and the Dharmaskandha add to the above set the impossibility that a woman could attain the awakening of a Paccekabuddha.<span class="note" id="mn115n73"><span class="details"><span class="p">[n.73] T 776 at T XVII 713b22: 成緣覺, D (297) mdo sde, sha 300b1 or Q (963) lu 329a6: rang byang chub mngon du byed par ’gyur ba, D (4094) mngon pa, ju 32a4 or Q (5595) tu 35a5: rang sangs rgyas kyi byang chub mngon du byed pa, and T 1537 at T XXVI 502b17: 證獨覺菩提. The same notion appears to be found also in later texts of the Theravāda tradition. Cooray 2004: 244 draws attention to the Apadāna tale of Mahāpaduma, Be-Ap-a 161 on stanza 95, who made the aspiration to become a Paccekabuddha when being a woman, but realized this aspiration only after being reborn as a male. Cooray concludes that from the perspective of later Theravāda tradition, “women may ... aspire for paccekabodhi, though they must undergo a change of sex if their aspirations are to be realized”.</span></span></span></p>
+<p>The Madhyama-āgama discourse, however, does not take up the subject of what is impossible for a woman at all.<span class="note" id="mn115n74"><span class="details"><span class="p">[n.74] This has already been noted by Nagata 2002: 282-283.</span></span></span> Although from the perspective of transmission this absence could be a loss of material, it could very well be that this particular set of impossibilities was not originally part of the present discourse.<span class="note" id="mn115n75"><span class="details"><span class="p">[n.75] For a more detailed discussion of this possibility cf. Anālayo 2009b; cf. also, e.g., Hae-ju 1999: 129-131, and Kajiyama 1982: 55-58.</span></span></span></p>
+<p>The Bahudhātuka-sutta and its parallels also mention that it is not possible for bad conduct to ripen in pleasant experience or rebirth in heaven, just as it is not possible for good conduct to ripen in unpleasant experiences or rebirth in hell.<span class="note" id="mn115n76"><span class="details"><span class="p">[n.76] In relation to the topic of rebirth, the Tibetan discourse at an earlier point additionally mentions that it is impossible for a person endowed with view to come to an eighth existence, D (297) mdo sde, sha 300b5 or Q (963) lu 329b3: srid pa brgyad pa mngon par ’grub par ’gyur ba ’di ni gnas ma yin no, a point made also in <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724a28: 受八有者, and in the Dharmaskandha, T 1537 at T XXVI 502b29: 或受 第八有. The same impossibility recurs, e.g., in Sn 2:1 at Sn 230 and as a discourse quotation in Abhidhk 6:34 in Pradhan 1967: 356,10, paralleling <a href="../../mn/mn115.html">MN 115</a> at MN III 64,16; cf. also T 1558 at T XIX 123b13, T 1559 at T XIX 275b15, and Abhidh-k-ṭ at D (4094) mngon pa, nyu 22a6 or Q (5595) thu 57a5.</span></span></span></p>
+<p>While the Bahudhātuka-sutta’s account of impossibilities ends at this point, the other versions continue by exploring the following impossibilities:</p>
+<ul>
+<li>being well established in satipaṭṭhāna without having overcome the hindrances,<span class="note" id="mn115n77"><span class="details"><span class="p">[n.77] This stipulation to remove the five hindrances refers to being fully and well established in satipaṭṭhāna, cf. <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724b13: “a mind properly established in the four satipaṭṭhānas”, 心正立四念處者, T 776 at T XVII 713c12: “being well able to completely understand the four satipaṭṭhānas”, 善能了解四 念處, D (297) mdo sde, sha 301a1 or Q (963) lu 329b5: “dwelling with the mind firmly established in the four satipaṭṭhānas”, dran pa nye bar gzhag pa bzhi dag la sems shin tu nye bar bzhag nas gnas par ’gyur ba (D: phar), D (4094) mngon pa, ju 32b3 or Q (5595) tu 35b4: “a mind well established in the four satipaṭṭhānas”, dran pa nye bar bzhag pa bzhi rnams la sems legs par gnas shing, and the Dharmaskandha in T 1537 at T XXVI 502c3: “a mind well settled in the four satipaṭṭhānas”, 心善安住四念住. In other words, the stipulation made in these versions refers to the more developed stages of mindfulness practice. That during well-established satipaṭṭhāna practice unwholesome thoughts no longer have a scope to arise is also mentioned in <a href="../../sn/sn22.80.html">SN 22:80</a> at SN III 93,20. In contrast, the instructions given in <a href="../../mn/mn10.html">MN 10</a> at MN I 60,11 (or <a href="../../dn/dn22.html">DN 22</a> at DN II 300,10) and their parallel <a href="../../parallels/ma98.html">MĀ 98</a> at T I 584a24 for satipaṭṭhāna practice in general direct mindfulness to the presence of the five hindrances in the mind. This formulation makes it clear that satipaṭṭhāna contemplation can be undertaken while the hindrances are present. In fact, <a href="../../an/an9.64.html">AN 9:64</a> at AN IV 458,4 presents satipaṭṭhāna as the tool to overcome the five hindrances, so that their overcoming could obviously not be a prerequisite for satipaṭṭhāna practice in general.</span></span></span></li>
+<li>developing the awakening factors without being well established in satipaṭṭhāna,</li>
+<li>reaching awakening without having developed the awakening factors.<span class="note" id="mn115n78"><span class="details"><span class="p">[n.78] The relation of satipaṭṭhāna to the development of the awakening factors and the need to develop the awakening factors for reaching awakening are common themes in other Pāli discourses, cf., e.g., <a href="../../dn/dn16.html">DN 16</a> at DN II 83,18, <a href="../../dn/dn28.html">DN 28</a> at DN III 101,10, and <a href="../../sn/sn47.12.html">SN 47:12</a> at SN V 160,27, or the more detailed treatments in <a href="../../mn/mn118.html">MN 118</a> at MN III 85,7 and <a href="../../sn/sn54.13.html">SN 54:13</a> at SN V 331,6. <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724b23 adds one further step by indicating that, without attaining supreme and complete awakening, it will not be possible to go beyond dukkha, 不得無上正盡覺, 盡苦邊者, 終無是處. As full awakening equals the eradication of dukkha, this additional proposal seems to some degree redundant.</span></span></span></li>
+</ul>
+<p>The Bahudhātuka-sutta and its parallels conclude with the Buddha giving various names to the present discourse, such as “four turnings”, “mirror of the Dharma”, “drum of the deathless”, and also the name used as the title in the Majjhima-nikāya, Madhyama-āgama, and Tibetan versions, the discourse on “many elements”.<span class="note" id="mn115n79"><span class="details"><span class="p">[n.79] <a href="../../mn/mn115.html">MN 115</a> at MN III 67,30 lists bahudhātuko ... catuparivaṭṭo ... dhammādāso ... amatadundubhī ti, with counterparts in T 776 at T XVII 713c27: 四品法門 ... 法鏡 ... 甘露鼓 ... 多界, in D (297) mdo sde, sha 301a7 or Q (963) lu 330a8: le’u bzhi pa ... chos kyi me long ... bdud rtsi’i rnga bo che (thereby qualifying the drum of the deathless as “great”) ... khams mang po, in T 1537 at T XXVI 502c17: 四轉 ... 大 法鏡 (qualifying the mirror of the Dharma as “great”) ... 甘露鼓 ... 多界, and in D (4094) mngon pa, ju 33b3 or Q (5595) tu 36b5: le’u bzhi pa ... chos kyi me long ... bdud rtsi lnga (speaking of a “five[-fold] deathless” instead of the “drum of the deathless”) ... khams mang po. In addition to these, <a href="../../mn/mn115.html">MN 115</a> at MN III 67,32 also mentions the “unsurpassable victory in battle”, anuttaro saṅgāmavijayo, an expression not found in the parallel versions. The same title recurs in a listing of five alternative titles for the Brahmajāla-sutta, <a href="../../dn/dn1.html">DN 1</a> at DN I 46,24, where it is also absent from the Chinese and Tibetan counterparts, cf. <a href="../../parallels/da21.html">DĀ 21</a> at T I 94a13, T 21 at T I 270c20, and Weller 1934: 64. <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724c1 also has additional titles for the present discourse, namely the “Dharma element”, 法界, the “deathless element”, 甘露界, the “many drums”, 多鼓, and the “Dharma drum”, 法鼓.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 85 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 85: Bodhirājakumāra-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn84comp.html#content"></a><a id="next-sutta" href="./mn86comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn85.html">MN 85</a> / <a href="../../parallels/ma204.html">MĀ 204 (~)</a> / <a href="../../parallels/ea19.1.html">EĀ 19.1</a> / <a href="../../parallels/ea24.5.html">EĀ 24.5 (~)</a> / <a href="../../parallels/t210.22.html">T 210.22 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bodhirājakumāra-sutta, the “discourse to Prince Bodhi”, records a meeting between the Buddha and Prince Bodhi.<span class="note" id="mn85n186"><span class="details"><span class="p">[n.186] While the Mahīśāsaka Vinaya T 1421 at T XXII 74b13 gives the name of the prince as 菩提, corresponding to the name Bodhi used in the parallel passage in the Theravāda Vinaya at Vin II 127,20, most Sanskrit fragments refer to the protagonist of the present discourse as Prince Bodha, cf., e.g., SHT IV 33 folio 21V3, SHT IV 180 folio 1R3, SI B/14 2A3 in Bongard-Levin 1989: 510, or folio 342V3 in Hartmann 2004b: 129. An exception to this pattern is SHT IV 160 folio 20Rc, which reads Bodhi. The uddāna in folio 299V3 in Hartmann 2004b: 123 reads bodhaḥ, suggesting the title Bodhaḥ-sūtra. Alternatively, the uddāna may have abbreviated the title, which in analogy to the Pāli version could also have been Bodharājakumāra-sūtra.</span></span></span> Although this discourse does not have a parallel in the Chinese Āgamas, parts of a version of this discourse have been preserved in Sanskrit fragments.<span class="note" id="mn85n187"><span class="details"><span class="p">[n.187] The fragments from the newly discovered Dīrgha-āgama are folios 342-343 in Hartmann 2004b: 129- 131, with the complete version covering folios 340-344 in Silverlock 2009. Other fragments are SHT III 997 B (p. 259), SHT IV 33 folios 17-28 and 35 (pp. 162-170 and 174, the last identified in SHT VIII p. 162, cf. also SHT VIII p. 161-162 and SHT IX p. 369), SHT IV 165 folios 20-24 (pp. 194-198, cf. also SHT IX p. 378), SHT IV 180 folios 1-2 (pp. 211-213, cf. also SHT VII p. 247), SHT VI 1361 (pp. 96-97), SHT VI 1373a (p. 103), SHT IX 2063d (p. 80), the so far unpublished SHT XI 4573, identified by Klaus Wille (I am indebted to Klaus Wille for kindly providing me with a draft transliteration of this fragment), Hoernle fragment 149/280, edited as no. 12 in Hartmann 1991: 77 (corresponding to Or. 15009/106 in Kudo 2009: 172-173), fragment SI B/14 1-3 in Bongard-Levin 1989, Hoernle fragment Or. 15004/76 in Wille 2009: 91, Or. 15009/187 in Melzer 2009: 220. Of these, SHT III 997B, SHT 33 IV folios 17-18, SHT IV 165 folios 20-22, SHT VI 1361, SHT VI 1373a, SHT XI 4573, Hoernle fragment Or. 15004/76, Or. 15009/187, and fragment SI B/14 1B correspond to the beginning of the discourse and the invitation of the Buddha at MN II 91-92. SHT IV 33 folios 21-22 and SHT IV 165 folio 23 report the offering of the meal described at MN II 93. SHT IV 33 folios 23-24, SHT IV 180 folios 1- 2, Hoernle fragment 149/280 V or Or. 15009/106, fragment SI B/14 2-3, and folios 342-344 of the Dīrgha-āgama fragment parallel the exposition of the five factors of striving found at MN II 94-96. SHT IV 33 folios 24+28, SHT IV 165 folio 24, SHT IV 180 folios 1-2, and Hoernle fragment 149/280R record the prince’s taking of refuge, described at MN II 97.</span></span></span> Versions of the introductory narration to the Bodhirājakumāra-sutta, which reports how Prince Bodhi invited the Buddha to a meal, can also be found in the Theravāda and the Mahīśāsaka Vinayas,<span class="note" id="mn85n188"><span class="details"><span class="p">[n.188] Vin II 127-129 and T 1421 at T XXII 74b-c.</span></span></span> and in the Dhammapada commentary.<span class="note" id="mn85n189"><span class="details"><span class="p">[n.189] Dhp-a III 136,1.</span></span></span></p>
+<p>The Bodhirājakumāra-sutta, the Sanskrit fragments, and the two Vinayas report in similar terms that Prince Bodhi invited the Buddha for a meal to his newly built palace.<span class="note" id="mn85n190"><span class="details"><span class="p">[n.190] SHT IV 33 folio 17V2 and R6, SHT IV 165 folio 20Vc and folio 22V7, and folio 340R2-3 in Silverlock 2009: 73 note that the Buddha was staying in the Bhīṣaṇakā or Bhīṣaṇikā Grove on Mount Śiṃśumāra or Śiśumāra, a location given in <a href="../../mn/mn85.html">MN 85</a> at MN II 91,2 as the Bhesakaḷā Grove on Mount Suṃsumāra.</span></span></span> On arrival, the Buddha refused to enter the palace, as the steps had been covered with cloth. Ānanda told Prince Bodhi to remove the cloth, as the Buddha would not step on it.</p>
+<p>According to the Bodhirājakumāra-sutta, the reason given by Ānanda for the Buddha’s reluctance was that the Buddha “looked after future generations”.<span class="note" id="mn85n191"><span class="details"><span class="p">[n.191] <a href="../../mn/mn85.html">MN 85</a> at MN II 93,3: “the Tathāgata looks after future generations”, pacchimaṃ janataṃ tathāgato apaloketi. While Ce-MN II 482,23 and Se-MN II 442,19 agree with Ee on the reading apaloketi, Be-MN II 279,8 reads anukampati instead, a reading also followed by the Majjhima-nikāya commentary Ps III 323,10, whereas the Dhammapada commentary, Dhp-a III 136,12, quotes the same passage with the reading oloketi.</span></span></span> The Theravāda and Mahīśāsaka Vinayas as well as the Sanskrit fragments speak of his “compassion for future generations”.<span class="note" id="mn85n192"><span class="details"><span class="p">[n.192] Vin II 128,30: “the Tathāgata has compassion for future generations”, pacchimaṃ janataṃ tathāgato anukampatī ti, with a similarly worded counterpart in fragment 341v8 in Silverlock 2009: 76: paścimā[ṃ] janatām anukaṃpamāno and in T 1421 at T XXII 74b29: 愍後世故.</span></span></span></p>
+<p>The commentary explains that Prince Bodhi was childless and had spread the cloth with the aspiration that, if the Buddha should step on it, his wish to have a child would be fulfilled.<span class="note" id="mn85n193"><span class="details"><span class="p">[n.193] Ps III 322,3.</span></span></span> The Buddha, however, knew that in retribution for an evil deed done in a past life Prince Bodhi was destined to remain childless, wherefore the Buddha refused to step on the cloth. The commentary further explains that at the Buddha’s time many monks had supernormal powers and were able to find out if someone was destined to remain childless. Based on such knowledge, the monks were able to decide if it was opportune to step on a cloth on such occasions. In later times, however, monks who would not have such supernormal powers might not know if it was opportune to step on a cloth in similar circumstances. If they should step on a cloth and then the couple were to remain childless, this would cause people to look down on the monks. In order to prevent this from happening, the Buddha remained silent, out of compassion.</p>
+<p>This commentarial explanation does not really help to explain the situation. If the Buddha knew that Prince Bodhi was to remain childless, that would be sufficient for not stepping on the cloth, without any need to have concern or compassion for future generations.</p>
+<p>The expression used in this context in the Theravāda Vinaya and in the Sanskrit fragment recurs in several other Pāli discourses, occurrences that suggest compassion for future generations to stand for acting as a model to be emulated.<span class="note" id="mn85n194"><span class="details"><span class="p">[n.194] According to <a href="../../mn/mn4.html">MN 4</a> at MN I 23,35 (cf. also <a href="../../an/an2.9.html">AN 2:3:9</a> at AN I 61,1), the Buddha lived a secluded life style out of compassion for future generations, pacchimañ ca janataṃ anukampamāno ti. Another example can be found in <a href="../../sn/sn16.5.html">SN 16:5</a> at SN II 203,5, which reports that Mahākassapa continued to undertake ascetic practices in spite of his advanced age for the same reason, further explained to imply that in this way he hoped to set a model to be emulated by others, app’ eva nāma pacchimā janatā diṭṭhanugatiṃ āpajjeyyuṃ (Be-SN I 405,26, Ce-SN II 310,7 and Se-SN II 339,7: diṭṭhānugatiṃ, Ce and Se: āpajjeyya).</span></span></span> From this perspective, then, the present passage might simply intend that the Buddha did not step on a cloth in order to set an example that discourages the keen interest his Indian contemporaries apparently had in such supposedly auspicious actions.</p>
+<p>This would be in keeping with a general tendency that manifests repeatedly in the early discourses, where the search for externals and auspicious tokens is redirected towards inner purification of the mind.<span class="note" id="mn85n195"><span class="details"><span class="p">[n.195] Cf., e.g., <a href="../../mn/mn7.html">MN 7</a> at MN I 39,13 and its parallels <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575c23, <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321b4, <a href="../../parallels/sa-2.98.html">SĀ2 98</a> T II 408c3, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574c15, and T 51 at T I 844a21, which contrast external purification by bathing in sacred rivers with internal purification of the mind. Witanachchi 2005b: 549 comments that the commentarial explanation, according to which the Buddha did not step on the cloth “because he knew that the prince’s wish for a child will not be fulfilled, seems to be completely off the mark. If that were so, there was no reason for the Buddha to have laid down a rule restraining his disciples from following the practice”.</span></span></span> In fact, according to the Theravāda Vinaya account the Buddha took the present instance as the occasion to promulgate a rule against stepping on cloth.<span class="note" id="mn85n196"><span class="details"><span class="p">[n.196] Vin II 129,3. When, however, the demands of the laity to have monks step on cloth became too pressing, this rule was amended. Granoff 2002/2003: 200 note 39 comments that “a monk may step on the cloth offered by a woman who has just had a miscarriage ... behind this might lie a belief in the fructifying power of the monk’s touch”.</span></span></span></p>
+<p>The Mahīśāsaka Vinaya differs from the Theravāda Vinaya, as it does not relate the present event to a regulation about stepping on cloth. According to the Mahīśāsaka Vinaya, the problem that arose was rather that the monks made a mess when partaking of the food offered by Prince Bodhi. This behaviour caused the laity to criticize the monks and led the Buddha to lay down a regulation that food should be received and partaken of in a proper manner.<span class="note" id="mn85n197"><span class="details"><span class="p">[n.197] T 1421 at T XXII 75c9.</span></span></span></p>
+<p>The story of how Prince Bodhi wanted the Buddha to step on a cloth recurs also in the Dhammapada commentary. According to the Dhammapada commentary, Prince Bodhi in fact asked the Buddha why he was not willing to step on the cloth. In reply, the Buddha explained that the prince was destined to remain childless, followed by giving an account of Prince Bodhi’s former evil deed that was responsible for his present childlessness.<span class="note" id="mn85n198"><span class="details"><span class="p">[n.198] Dhp-a III 137,2. Dhp-a III 139,7 concludes this tale by reporting that Prince Bodhi attained stream-entry at the end of the Buddha’s exposition.</span></span></span> The evil deed was that Prince Bodhi and his wife in a former life had survived on eggs and birds, after being shipwrecked, without feeling any remorse at killing living beings. The Buddha concluded his explanation to Prince Bodhi with a stanza – the stanza the Dhammapada commentary’s tale is intended to explain – highlighting the need to protect oneself and to remain wakeful during the three watches of the night.<span class="note" id="mn85n199"><span class="details"><span class="p">[n.199] Dhp 157: “holding oneself dear, one should well protect oneself, the wise should keep watchful during any of the three watches of the night”, attānañce piyaṃ jaññā, rakkheyya naṃ surakkhitaṃ, tiṇṇaṃ añ- ñataraṃ yāmaṃ, paṭijaggeyya paṇḍito, with counterparts in stanza 312 in the Patna Dharmapada in Cone 1989: 185 or in stanza 313 in Roth 1980b: 125, and in stanza 5:15 in the Sanskrit Udāna-(varga) in Bernhard 1965: 143, with its Tibetan counterpart in stanza 5:16 in Beckh 1911: 22 or in Zongtse 1990: 79. Similar stanzas found in T 196 at T IV 161a7, T 210 at T IV 565c21, T 211 at T IV 593b16, T 212 at T IV 652b11, and T 213 at T IV 780a17 differ in their second part and do not refer to the three watches. T 211 embeds its version of this stanza into a different story, which describes a monk on the verge of suicide out of desperation at his inability to learn the Dharma. T 211 at T IV 593b24 concludes by reporting that, stirred by the verses spoken by the Buddha, this monk soon enough became an arahant; cf. also Willemen 1999: 121-123. Some elements of this story are similar to the tale of Cūḷapanthaka at Dhp-a I 239,14, although Cūḷapanthaka was not on the verge of suicide, but only about to leave the order.</span></span></span></p>
+<p>Whatever may be the final word on the reasons why the Buddha refused to step on the cloth, the Bodhirājakumāra-sutta reports that, during the conversation that ensued after the completion of the meal, the Buddha gave an autobiographical account of his striving for awakening.<span class="note" id="mn85n200"><span class="details"><span class="p">[n.200] This account combines the information given in <a href="../../mn/mn26.html">MN 26</a> at MN I 163-173 and <a href="../../mn/mn36.html">MN 36</a> at MN I 240-249. The Sanskrit fragment does not present this account in full, but indicates that it should be supplemented from the preceding discourse, the Kāyabhāvanā-sūtra (parallel to <a href="../../mn/mn36.html">MN 36</a>), cf. folio 342R7 in Hartmann 2004b: 129 or Silverlock 2009: 77. Ee similarly gives this account only in an abbreviated manner, indicating that it should be supplemented, while Be-MN II 279-297, Ce-MN II 484-508, and Se-MN II 443- 470 give it in full.</span></span></span></p>
+<p>At the end of this account, according to the Bodhirājakumāra-sutta Prince Bodhi asked the Buddha how long it would take a disciple to reach the final goal. According to the Sanskrit fragment, however, he asked how many qualities were required to reach the final goal.<span class="note" id="mn85n201"><span class="details"><span class="p">[n.201] <a href="../../mn/mn85.html">MN 85</a> at MN II 94,8: “how long”, kīva cirena?, whereas according to folio 342V2 in Hartmann 2004b: 129 he inquired “endowed with how many qualities, venerable sir”, k(a)tibhi[r bhadaṃ]tāṃgaiḥ sama[nv]āgata?; cf. also Silverlock 2009: 78.</span></span></span> The Pāli and Sanskrit versions agree that the Buddha replied with a counterquestion,<span class="note" id="mn85n202"><span class="details"><span class="p">[n.202] Since according to both versions the Buddha used a counter-question, the Pāli version of Prince Bodhi’s inquiry might fit the context better. If Prince Bodhi had asked about the qualities required to reach liberation, there would have been no need to reply with a counter-question, as the Buddha could just have listed the five qualities straightaway. A counter-question usually occurs in reply to a type of question that cannot be answered straightaway, but needs to be tackled by asking a question in return (that is, this would be an instance of the paṭipucchā vyākaraṇīya pañha, in contrast to the ekaṃsa vyākaraṇīya pañha, cf. <a href="../../an/an3.67.html">AN 3:67</a> at AN I 197,20). This is indeed the case for the prince’s question in the Pāli version, as the time period required to reach the goal cannot be simply stated, since this time period depends on the qualities of the practitioner.</span></span></span> asking Prince Bodhi if he could impart his knowledge to a man with the following qualities:</p>
+<ul>
+<li>faithless,</li>
+<li>ill,</li>
+<li>deceitful,</li>
+<li>lazy,</li>
+<li>stupid.<span class="note" id="mn85n203"><span class="details"><span class="p">[n.203] <a href="../../mn/mn85.html">MN 85</a> at MN II 94,18. SHT IV 180 V3-5 has preserved being faithless, ill, and stupid, and at V8-9 mentions the positive qualities of being honest and energetic, thereby accounting for all five qualities mentioned in <a href="../../mn/mn85.html">MN 85</a>. Similarly, the fragments SI B/14 2A4+B2 and SI B/14 3A1+B4 in Bongard- Levin 1989: 510-512 mention the positive qualities of faith, health, honesty, energy, and wisdom. Folio 342V7-8 in Hartmann 2004b: 129-130 or Silverlock 2009: 78 only mentions being faithless, deceitful, and stupid, which Hartmann 2004b: 132 note 34 suggests to be “most likely due to a haplography in this highly repetitive passage”. Parts of a description of the five factors of striving, mentioned in the present discourse, have also been preserved in the Sanskrit fragments of the Daśottara-sūtra, cf. fragment S 493cR2-5 in Mittal 1957: 34.</span></span></span></li>
+</ul>
+<p>According to the Majjhima-nikāya version, the Buddha illustrated his reply with the example of Prince Bodhi teaching someone how to ride an elephant. The Sanskrit fragment version takes up also other abilities that could be taught by Prince Bodhi, such as elephant and horse riding, driving a chariot, fencing and archery, as well as writing and calculation.<span class="note" id="mn85n204"><span class="details"><span class="p">[n.204] Folio 342V6 in Hartmann 2004b: 129 or Silverlock 2009: 78: hastigrīvāyām aśvapṛṣthe rathe sarau dhanuṣy ... lipigaṇananyasanasaṃkhyāmudrāyāṃ, SHT IV 180 folio 1V1 (cf. also SHT VII p. 247): (hatigrīvā)[y](ā)m-aśvapṛṣṭe rathe tsaro dhanuṣi, and SHT IV 33 folio 23R1: lipigaṇanāsaṃ[kh]y.</span></span></span></p>
+<p>To bring in several crafts fits the context well, since such variety illustrates that the task of leading a monk to liberation requires training him in various abilities, instructing him in proper conduct, in the development of concentration, and in the development of insight,<span class="note" id="mn85n205"><span class="details"><span class="p">[n.205] The image of an elephant to illustrate the training of a monk recurs in <a href="../../mn/mn125.html">MN 125</a> at MN III 132,2, which compares the practice of the gradual path to an elephant trainer who catches and trains a wild elephant. The image used in <a href="../../mn/mn125.html">MN 125</a> differs from <a href="../../mn/mn85.html">MN 85</a> at MN II 94,13, where the task is only to teach someone how to ride an elephant. To ride an elephant (that would have already been tamed and trained by someone else) would be considerably less demanding than having to catch and tame a wild elephant.</span></span></span> just as a prince would not only need to be able to ride an elephant, but also to ride a horse, to drive a chariot, to fence, and to perform archery.<span class="note" id="mn85n206"><span class="details"><span class="p">[n.206] A list of the abilities of a king in <a href="../../mn/mn82.html">MN 82</a> at MN II 69,8 mentions riding a horse, driving a chariot, archery, and fencing, together with riding an elephant; cf. also <a href="../../an/an5.135.html">AN 5:135</a> at AN III 152,29, where these recur as the learning curriculum of a prince.</span></span></span></p>
+<p>In the case of calculation and writing, the situation appears less straightforward. Other Pāli passages indicate that calculation was a specific profession in ancient India, yet perhaps some basic training in this art would be appropriate in the case of someone who in future hopes to become a king.<span class="note" id="mn85n207"><span class="details"><span class="p">[n.207] <a href="../../dn/dn1.html">DN 1</a> at DN I 11,10 mentions muddā, gaṇanā, and saṅkhāna as forms of livelihood. Vin IV 7,5 includes gaṇanā together with muddā (Se-Vin II 166,4: muddhā) in a listing of various types of craft (on gaṇanā and muddā cf. also Franke 1913a: 18 note 9+10 and Rhys Davids 1899: 21 note 4 and ibid. p. 22 note 1).</span></span></span></p>
+<p>The Lalitavistara,<span class="note" id="mn85n208"><span class="details"><span class="p">[n.208] The Lalitavistara in Hokazono 1994: 526,13 or in Lefmann 1902: 126,2 or in Vaidya 1958b: 88,13 lists various types of scripts, including the script of the devas, etc., which are absent from a list of Indian scriptures given in the Mahāvastu in Basak 1963a: 160,6 or in Senart 1882a: 135,5 (on the significance of this listing cf. also the comments in Harrison 2003: 115-116).</span></span></span> the Mahāvastu, and the (Mūla-)Sarvāstivāda Vinaya in fact include the art of writing in the curriculum of a prince,<span class="note" id="mn85n209"><span class="details"><span class="p">[n.209] The Mahāvastu in Basak 1965: 570,14 or in Senart 1890: 423,15, and in Basak 1968/2004: 112,27 or in Senart 1897: 184,6, a (Mūla-)Sarvāstivāda Pravrajyāvastu fragment folio 2r2 in Vogel 1992: 71, and the Saṅghabhedavastu in Gnoli 1977: 58,2 and in Gnoli 1978a: 119,30 and 179,11; cf. also the Divyāvadāna in Cowell 1886: 58,16 or in Vaidya 1999: 35,24. For a Gandhāran sculpture that depicts the bodhisattva at school, holding a writing slate, cf. Dehejia 1997: 203; for another Gandhāran sculpture with three monks holding writing scrolls cf. plate IIb in Taddei 1983; on this and additional instances cf. also Salomon 1999: 103-104.</span></span></span> while a description of the training of a prince given in a discourse in the Madhyama-āgama does not mention accounting or writing.<span class="note" id="mn85n210"><span class="details"><span class="p">[n.210] <a href="../../parallels/ma72.html">MĀ 72</a> at T I 534a5.</span></span></span></p>
+<p>The Pāli and Sanskrit versions agree that in reply to the Buddha’s exposition of these five detrimental qualities, Prince Bodhi remarked that even the presence of one of these qualities would inhibit someone from being able to learn.<span class="note" id="mn85n211"><span class="details"><span class="p">[n.211] <a href="../../mn/mn85.html">MN 85</a> at MN II 94,28 and folio 342V8 and 343R1 in Hartmann 2004b: 130 or Silverlock 2009: 78-79. A minor difference between the two versions is that in <a href="../../mn/mn85.html">MN 85</a> the Buddha presents all five qualities and then asks Prince Bodhi if such a person would be able to learn, while in the Sanskrit fragment the Buddha poses the same question after each of the five qualities, each time Prince Bodhi replying that someone with this quality would not be able to learn from him.</span></span></span></p>
+<p>The Bodhirājakumāra-sutta and its Sanskrit parallel repeat their respective treatment for the complementary positive case of someone who has faith and is healthy, honest, energetic, and wise. According to both versions, Prince Bodhi remarked that even one of these five positive qualities would make it easy to teach such a person.<span class="note" id="mn85n212"><span class="details"><span class="p">[n.212] <a href="../../mn/mn85.html">MN 85</a> at MN II 95,12: ekam ekena pi, bhante, aṅgena samannāgato so puriso mama santike ... sippaṃ sikkheyya, ko pana vādo pañcah’ aṅgehī ti (Be-MN II 298,22: ekenā), folio 343R5-6 in Hartmann 2004b: 130 or Silverlock 2009: 79: ekaikena tāvad bhadanta ito ’ṅgena samanvāgatena tena puruṣeṇa sukaraṃ mamāntikād anyatamānyatamac chilpasthānakarmasthāna samanvāgamayituṃ, kaḥ punar vādaḥ sarvair; cf. also SHT IV 33 folio 24V2-3 and fragment SI B/14 3A3 in Bongard-Levin 1989: 511.</span></span></span></p>
+<p>This statement seems to stand to some extent in logical contrast to the earlier statement, according to which even one of the negative qualities would render such a person incapable of learning. The logical consequence of the earlier statement would be that all five positive qualities are required for being able to learn, not just one of them. That is, in order to be able to learn someone would need to be not only healthy, for example, but also should have faith and be free from deceit, laziness, and stupidity.</p>
+<p>Perhaps the formulation found in both versions is the outcome of stereotyping during the course of transmission, due to which the pattern of the treatment used for the negative case was applied in an identical manner to the positive case, without noting that this creates an inner inconsistency.</p>
+<p>The Pāli version illustrates the first quality of faith with the example of a monk’s confidence in the awakening of the Tathāgata, described with the standard formula for recollecting the Buddha.<span class="note" id="mn85n213"><span class="details"><span class="p">[n.213] <a href="../../mn/mn85.html">MN 85</a> at MN II 95,17: iti pi so bhagavā arahaṃ sammāsambuddho vijjācaraṇasampanno.</span></span></span> The Sanskrit fragment speaks instead of a noble disciple whose faith is firmly established so that it cannot be shaken by anyone in the world.<span class="note" id="mn85n214"><span class="details"><span class="p">[n.214] Folio 343R7-8 in Hartmann 2004b: 130 or Silverlock 2009: 79 describes that the noble disciple’s faith has become “rooted and established”, mūlajātā pratiṣṭhitā. In other Pāli discourses, such unshakeable faith appears to be a quality of those who have reached stream-entry. Thus, e.g., <a href="../../dn/dn27.html">DN 27</a> at DN III 84,21 indicates that those whose faith is firm, mūlajātā patiṭṭhitā, can claim to be “born from the mouth” of the Blessed One, mukhato jāto, an expression the commentary Sv III 865,7 explains to imply that they have reached the paths and fruits, maggaphalesu patiṭṭhitattā oraso mukhato jāto. <a href="../../mn/mn47.html">MN 47</a> at MN I 320,12 speaks of the same firm faith once a monk can claim that he has “through direct knowledge come to a conclusion in regard to a certain teaching among the teachings”, abhiññāya idh’ ekaccaṃ dhammaṃ dhammesu niṭṭham agamaṃ (Se-MN I 580,6: niṭṭhaṅgamaṃ). The commentary Ps II 388,23 explains that the firm faith of stream-entry is intended here, mūlajātā ti sotāpattimaggavasena sañjātamūlā. <a href="../../mn/mn70.html">MN 70</a> at MN I 478,32 qualifies the saddhāvimutta, a person who is at least a stream-enterer, to be endowed with such firm faith, saddhā niviṭṭhā hoti mūlajātā patiṭṭhitā. <a href="../../sn/sn48.42.html">SN 48:42</a> at SN V 219,2 indicates that the Brahmin Uṇṇābha had reached firm faith, saddhā niviṭṭhā mūlajātā patiṭṭhitā, followed by noting that this Brahmin will not be reborn in this world, which the commentary Spk III 246,24 explains to imply that he was a stream-enterer and a jhāna attainer. These passages indicate that references to such firm faith usually imply at least stream-entry. The same would, however, not work so well for the Sanskrit version, as this would imply turning the fruit of progress on the path into a requirement for being taught the path.</span></span></span></p>
+<p>The Pāli and Sanskrit versions agree in explaining that to be energetic is to make a steadfast effort to develop what is wholesome. To this the Sanskrit fragment adds the determination not to slacken in energy even if the flesh and blood of the body should dry up and only skin, sinews, and bones remain.<span class="note" id="mn85n215"><span class="details"><span class="p">[n.215] Folio 343V4-5 in Hartmann 2004b: 131 or Silverlock 2009: 80: kāmam tvak snāyv asthi cāvatiṣṭhatāṃ pariśuṣyatu śarīrān māṃsaśoṇitam. While <a href="../../an/an2.5.html">AN 2:1:5</a> at AN I 50,8 relates this type of determination to the Buddha’s breakthrough to awakening, other discourses use the same expression in the context of a general definition of energetic practice, cf., e.g., <a href="../../mn/mn70.html">MN 70</a> at MN I 481,1, <a href="../../sn/sn12.22.html">SN 12:22</a> at SN II 28,23, <a href="../../sn/sn21.3.html">SN 21:3</a> at SN II 276,11, and <a href="../../an/an8.13.html">AN 8:13</a> at AN IV 190,8, similar to the way this determination occurs in the Sanskrit fragment.</span></span></span></p>
+<p>The Pāli version continues by specifying the time period within which a disciple may reach realization, a time period that ranges from seven years at most to a single dayand-night at least.<span class="note" id="mn85n216"><span class="details"><span class="p">[n.216] <a href="../../mn/mn85.html">MN 85</a> at MN II 96,16 speaks of realising the goal within a period that ranges from seven years to a single day-and-night, ekaṃ rattindivaṃ. For practice that takes place only from morning to evening or from evening to morning, <a href="../../mn/mn85.html">MN 85</a> at MN II 96,19 indicates that “distinction” can be reached, visesaṃ adhigamissati. The proclamation in <a href="../../mn/mn85.html">MN 85</a> that practice can lead to realization within a single day-andnight appears to be unique in the Pāli discourses for envisaging such a short time period. A similar position is taken in <a href="../../parallels/sa703.html">SĀ 703</a> at T II 189a24 and in <a href="../../parallels/sa1121.html">SĀ 1121</a> at T II 297c19, however, discourses otherwise not related to <a href="../../mn/mn85.html">MN 85</a>.</span></span></span> Instead of listing various time periods, the Sanskrit discourse only explains that realization can be reached “quickly”.<span class="note" id="mn85n217"><span class="details"><span class="p">[n.217] Folio 343V8 in Hartmann 2004b: 131 or Silverlock 2009: 80: kṣipram. Consequently the two versions also differ on the reason for Prince Bodhi’s appreciation of the Buddha’s teaching, which according to <a href="../../mn/mn85.html">MN 85</a> at MN II 96,23 was the ability of the Dharma to lead to distinction within a period of twelve hours, while according to the Sanskrit fragment folio 344R2 in Hartmann 2004b: 131 or Silverlock 2009: 80 his appreciation was due to the potential of the five factors of striving to lead quickly to the destruction of the influxes.</span></span></span> A listing of time periods within which realization can be attained is also found in the two (Mahā-)Satipaṭṭhāna-suttas and in the Udumbarikasīhanāda-sutta, which, however, reckon a minimum of seven days to be necessary for reaching full awakening.<span class="note" id="mn85n218"><span class="details"><span class="p">[n.218] <a href="../../dn/dn22.html">DN 22</a> at DN II 314,11 (= <a href="../../mn/mn10.html">MN 10</a> at MN I 62,35) and <a href="../../dn/dn25.html">DN 25</a> at DN III 55,21 list time periods that range from seven years to seven days for reaching realization. The prediction in the parallel to <a href="../../mn/mn10.html">MN 10</a>, <a href="../../parallels/ma98.html">MĀ 98</a> at T I 584b24, corresponds to <a href="../../mn/mn85.html">MN 85</a> in as much as it envisages realization for a period of practice (of the four satipaṭṭhānas) from seven years down to a single day-and-night, followed by indicating that by undertaking practice from morning to evening or from evening to morning, “progress”, 昇進, can be reached (Hirakawa 1997: 596 gives parā-√kram and ā-√kram as possible equivalents for 昇進, a similar description, found in fragment 421r7 of the Pṛṣṭhapāla-sūtra in Melzer 2006: 274, speaks of reaching viśeṣa if practice is undertaken from evening to morning or from morning to evening). An example for the possibility of reaching realization within a very short time can be found in Ud 1:10 at Ud 8,13, which reports that Bāhiya, a non-Buddhist ascetic, reached full awakening during his very first meeting with the Buddha, right after receiving a short but penetrative instruction.</span></span></span></p>
+<p>The Bodhirājakumāra-sutta and the Sanskrit fragments agree that Prince Bodhi expressed his appreciation and took refuge.<span class="note" id="mn85n219"><span class="details"><span class="p">[n.219] According to the Sanskrit fragments, the prince employed a golden pitcher when taking refuge, apparently pouring out water in a ceremonial gesture, cf. folio 344R8 in Silverlock 2009: 80, SHT IV 33 folio 28V4 and SHT IV 165 folio 24V5-6. A golden pitcher occurs in a similar contexts in the Saṅghabhedavastu, cf. Gnoli 1978a: 25,39, where at the conclusion of a meal offering to the Buddha Kāśyapa the king of the country invites the Buddha and the monks for the rains residence, Gnoli 1977: 166,10, where King Bimbisāra offers the Squirrels’ Feeding Ground, and Gnoli 1977: 180,26, where Anāthapiṇḍada offers Jeta’s Grove.</span></span></span> Both versions note that refuge had already been taken on his behalf when he was in his mother’s womb and when he was an infant.<span class="note" id="mn85n220"><span class="details"><span class="p">[n.220] According to <a href="../../mn/mn85.html">MN 85</a> at MN II 97,2+10, when the prince’s mother was pregnant with him, she took refuge in his name when visiting the Buddha in the Ghositārāma at Kosambī, and later on his nurse took refuge in his name when the Buddha was staying in the Bhesakaḷā Grove at Mount Suṃsumāra, the same location where <a href="../../mn/mn85.html">MN 85</a> takes place. The Sanskrit fragments give one location of taking refuge as the Ghoṣilārāma in Kauśāmbī, cf. folio 344R5 in Silverlock 2009: 80, SHT IV 33 folio 24R6a; cf. also SHT IV 165 folio 24V2 and the Hoernle fragment 149/280R6, no. 12 in Hartmann 1991: 77. The other location is the Badarikārāma, Badārikārāma, or Batarikārāma, cf. folio 344R7 in Silverlock 2009: 80, SHT IV 33 folio 24R4, SHT IV 180 folio 1R6, and Hoernle fragment 149/280R4, no. 12 in Hartmann 1991: 77 (compared to <a href="../../mn/mn85.html">MN 85</a>, SHT IV 33 folio 24 and the Hoernle fragments refer to these two locations in the opposite sequence). This grove would have been close to the Ghositārāma, as in <a href="../../sn/sn22.89.html">SN 22:89</a> at SN III 126-132 a discussion between the monk Khemaka and a group of monks takes place by way of sending a messenger back and forth between these two places.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

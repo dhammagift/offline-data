@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 52.7 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 52.7</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">52.7</span> <span class="mirror-right">（七）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an1.56.html">AN 1.56 (~)</a> / <a href="../an/an1.57.html">AN 1.57 (~)</a> / <a href="../dhp/dhp1-20.html">Dhp 1–20</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. King Prasenajit then said to the World-Honored One, &quot;For those who give, where should they give?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王往至世尊所，头面礼足，在一面坐。是时，波斯匿王白世尊言：「夫施之家当施何处？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One told the king, &quot;Give wherever your heart delights.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告王：「随心所欢，便于彼施。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king then said to the Buddha, &quot;Where should one give to obtain great merit?&quot;</p></td><td lang="lzh" class="agama-chi"><p>王复白佛：「为施何处，得大功德？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;You asked where to give, and now you ask about the merit obtained.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「汝所问当施何处，今复问获福功德。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;I now ask the Tathāgata where to give to obtain merit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「我今问如来为施何处，获其功德？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;I now ask you in return. You can answer as you please. What do you think, great king? If a kṣatriya prince comes, or a brahmin prince comes, but they are foolish and ignorant, their minds confused and always uncertain, and they come to the king and ask, &#x27;We will respectfully serve the sage king and provide for your needs at all times,&#x27; what do you think, great king? Do you need such people by your side?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「吾今还问，王随所乐，还报吾。云何？大王！若有刹利子来，婆罗门子来，然愚惑无所知，心意错乱，恒不一定，来至王所，而问王言：『我等当恭奉圣王，随时所须。』云何？大王！须此人在左右乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;No, World-Honored One! The reason is that those people are not wise, their minds are uncertain, and they are not suitable for dealing with external enemies.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「不须也。世尊！所以然者，由彼人无有黠慧，心识不定，不堪候外敌之所致也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;What do you think, great king? If kṣatriyas and brahmins have many skillful means, are not afraid or fearful, and can eliminate external enemies, and they come to the king and say, &#x27;We will serve the sage king at all times. We only hope for your gracious acceptance,&#x27; what do you think, great king? Would you accept such people?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「云何？大王！若刹利、婆罗门种多诸方便，无有恐难，亦不畏惧，能除外敌，来至王所，而白王言：『我等随时瞻奉圣王，唯愿恩垂当见纳受。』云何？大王！当受斯人不。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;Yes, World-Honored One! We should accept such people. The reason is that those people are capable of dealing with external enemies, are not afraid or fearful.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「唯然，世尊！我等当纳受斯人，所以然者，由彼人堪任候外敌，无有畏难，亦不恐惧。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;Now, bhikṣus are also like this. They have complete faculties, abandon five and accomplish six, protect one and subdue four. Giving to such people brings the greatest merit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「今比丘亦复如是，诸根完具，舍五成六，护一降四，施此之人，获福最多。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;How do bhikṣus abandon five and accomplish six, protect one and subdue four?&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「云何比丘舍五成六，护一降四？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;In this way, bhikṣus abandon the hindrances of greed, anger, sleepiness, agitation, and doubt. This is called abandoning five. How do bhikṣus accomplish six? King, you should know that if bhikṣus see forms, they do not give rise to form-thoughts. Relying on this, they guard the eye faculty, removing evil and unwholesome thoughts to guard the eye faculty. If they hear sounds, smell fragrances, taste flavors, touch tangibles, or have mental consciousness, they do not give rise to mental consciousness-thoughts to guard the mental faculty. In this way, bhikṣus accomplish six. How do bhikṣus guard one? In this way, bhikṣus focus their attention in front. In this way, bhikṣus guard one. How do bhikṣus subdue four? In this way, bhikṣus subdue the demon of the body, the demon of desire, the demon of death, and the demon of the gods, all of which they subdue. In this way, bhikṣus subdue the four. In this way, great king! Abandoning five and accomplishing six, guarding one and subduing four, giving to such people brings immeasurable merit. Great king! Those with wrong views and extreme views, giving to such people is in vain.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「于是，比丘舍贪欲盖、瞋恚盖、睡眠、调、疑，如是，比丘！名为舍五。云何比丘成就六？王当知之，若比丘见色已，不起色想，缘此护眼根，除去恶不善念而护眼根，若耳、鼻、口、身、意不起意识而护意根，如是，比丘成就六。云何比丘而护一，于是，比丘系念在前，如是，比丘而护一。云何比丘而降四？于是，比丘降身魔、欲魔、死魔、天魔，皆悉降伏，如是，比丘降伏于四。如是，大王！舍五就六，护一降四，施如此之人，获福难量。大王！邪见与边见相应，如斯之人施盖无益。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the king said to the Buddha, &quot;So it is, World-Honored One! Giving to such people brings immeasurable merit. If bhikṣus accomplish one Dharma, the merit is still immeasurable, let alone the others. What is the one Dharma? It is mindfulness of the body. The reason is that Nirgrantha Jñātiputra always considers bodily and mental actions, not verbal actions.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，王白佛言：「如是，世尊！施斯之人其福难量，若比丘成就一法，福尚难量，何况余者。云何为一法？所谓身念是也。所以然者，尼乾子恒计身行、意行，不计口行。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;Nirgrantha Jñātiputra is foolish and deluded, his mind is always confused and his consciousness is unstable. This is because that is the teaching of his teacher. The retribution of his bodily actions is nothing to speak of, but mental actions are formless and invisible.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「尼乾子者愚惑，意常错乱，心识不定，是彼师法故，致斯言耳。彼受身行之报，盖不足言，意行无形而不可见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;Among these three actions, which is the heaviest? Bodily action, verbal action, or mental action?&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「此三行中何者最重？身行耶？口行耶？意行？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;Among these three actions, mental action is the heaviest. Verbal and bodily actions are nothing to speak of.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「此三行中意行最重，口行、身行盖不足言。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;For what reason do you say that mindfulness is the foremost?&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「复何因缘故，说念意最为第一？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;When a person acts, they first think in their mind, then speak with their mouth. After speaking, they may then commit killing, stealing, or sexual misconduct with their body. The tongue faculty is unstable and has no fixed course. Even if that person were to die, their body faculty and tongue faculty would remain. Great King! Why would that person&#x27;s body and mouth not be able to act?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「夫人所行，先意念，然后口发，口已发，便身行杀、盗、婬，舌根不定，亦无端绪，正使彼人命终，身根、舌根在。大王！彼人何以故身、口不有所设耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;It is because that person lacks the mind faculty that this transformation occurs.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「彼人以无意根故，致斯变耳。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;You should know that the mind faculty is the heaviest, while the other two are lighter.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「当以此方便，知意根最为重，余二者轻。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The mind is the root of phenomena, the mind<br/>is supreme, the mind commands. If one thinks evil<br/>with the mind, one will act and give rise<br/>to it, and experience suffering, like being crushed by<br/>a wheel. The mind is the root of phenomena<br/>the mind is supreme, the mind commands. If one<br/>thinks good with the mind, one will act and<br/>accomplish it, and receive its good rewards, like a<br/>shadow following a form.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「心为法本，　　心尊心使，　　心之念恶，即行即施，　　于彼受苦，　　轮轹于辙。心为法本，　　心尊心使，　　中心念善，即行即为，　　受其善报，　　如影随形。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit said to the World-Honored One, &quot;So it is, Tathāgata! For those who do evil, their physical actions are evil, and they follow their actions to fall into evil destinies.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王白世尊言：「如是，如来！为恶之人，身行恶，随行堕恶趣。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the king, &quot;What meaning are you observing that you come to ask me, &#x27;For whom is the merit of giving greater?&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王言：「汝为观何等义，而来问我为施何人，获福益多？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;I once went to the Nigantha Nataputta and asked him, &#x27;Where should I give alms?&#x27; When the Nigantha heard my question, he discussed other matters and did not answer. At that time, the Nigantha said to me, &#x27;The śramaṇa Gautama says that giving to me brings great merit, while others have no merit. You should give to my disciples, not to others. If people give to my disciples, their merit is immeasurable.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「我昔至尼乾子所，问尼揵子曰：『当于何处惠施？』尼乾子闻我所问已，更论余事，亦不见报。时尼乾子语我言：『沙门瞿昙作是说，施我得福多，余者无福，当施我弟子，不应施余人，其有人民施我弟子者，其福不可量也。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the king, &quot;How did you answer him at that time?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「尔时，为云何报之？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The king said to the Buddha, &quot;At that time, I thought, &#x27;Perhaps it is true that giving to the Tathāgata brings immeasurable merit.&#x27; I now ask the World-Honored One, &#x27;Where is the merit immeasurable?&#x27; But now the World-Honored One does not praise himself or disparage others.&quot;</p></td><td lang="lzh" class="agama-chi"><p>王白佛言：「时我便作是念：『或有斯理，惠施如来，其福难量。』今故问佛：『为与何处，其福难量？』然今世尊不自称誉，亦不毁人。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the king, &quot;I do not say that giving to me brings more merit than others. But what I say today is that the remaining food in the bowl given to others brings immeasurable merit. With a pure mind, placed in clean water, universally giving rise to this thought, the countless forms that benefit from it, not to mention human form. But, great king! What I say now is that giving to those who uphold the precepts brings immeasurable merit, while giving to those who violate the precepts is not worth mentioning.</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「我口不作是说，施我得福多，余者不得福。但我今日所说，钵中遗余，持与人者，其福难量，以清净之心，著净水中，普生斯念，斯中有形之类，蒙祐无量，何况人形。但，大王！我今所说施持戒人，其福难量，与犯戒人者，盖不足言。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Great King, you should know that it is like a farmer who well cultivates his fields, removing impurities, and sows good seeds in good fields, reaping countless seeds; it is also like that farmer who does not cultivate the fields, does not remove impurities, and sows seeds, the harvest is not worth mentioning. Now the bhikṣus are also like this. If bhikṣus abandon the five and take the six, protect one and subdue four, such people, those who give to them, their merit is immeasurable; giving to those with wrong views is not worth mentioning. It is like, great king! The kṣatriya and brāhmaṇa castes, with no doubts or difficulties, can subdue external enemies, should be viewed as arhat people. Those brāhmaṇa castes with undistracted minds should be viewed as those with wrong views.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「大王当知，如田家子善治其地，除去秽恶，以好谷子著良田中，于中获子无有限量；亦如彼田家子不修治地，亦不除去秽恶而下谷子，所收盖不足言。今比丘亦复如是，若比丘舍五就六，护一降四，如斯之人，其施惠者，其福无量；与邪见之人，盖不足言。犹如，大王！刹利种、婆罗门种，意无疑难，能降外敌，当观亦如罗汉之人，彼婆罗门种意不专定者，观当如邪见之人。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit said to the World-Honored One, &quot;Giving to those who uphold the precepts brings immeasurable merit. From now on, if anyone comes to ask for something, I will never go against their wishes. If the four groups of followers come to ask for something, I will also not go against their wishes. I will provide them with clothing, food and drink, bedding and furnishings, and also give them to the practitioners of the Brahma-way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，波斯匿王白世尊言：「施持戒之人，其福难量。自今已后，其有来求索者，终不违逆。若复四部之众，有所求索者，亦不逆之。随时给与衣被、饮食、床卧具，亦复施与诸梵行者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;Do not say that. The reason is that giving to the animal realm brings immeasurable merit, let alone to a human body. But what I am saying today is that giving to those who uphold the precepts is immeasurable, not to those who violate the precepts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「勿作是说。所以然者，施畜生之类，其福难量，况复人身乎。但我今日所说者，施持戒人难计，非犯戒人。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit said to the Buddha, &quot;I now take refuge in you again. But the World-Honored One is so earnest, even to the point of praising those heretics who slander the World-Honored One. And the World-Honored One always praises those people. The heretics are attached to material gain, and the Tathāgata is not attached to material gain. There are many affairs of state, and I wish to return to my abode.&quot;</p></td><td lang="lzh" class="agama-chi"><p>波斯匿王白佛言：「我今重复自归，然世尊殷勤，乃至于斯外道异学传诽世尊，又且世尊恒叹誉彼人，外道异学贪著利养，又复如来不贪利养。国事多猥，欲还所止。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;It is time for you to know.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「宜知是时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 18 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 18: Madhupiṇḍika-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn17comp.html#content"></a><a id="next-sutta" href="./mn19comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn18.html">MN 18</a> / <a href="../../parallels/ma115.html">MĀ 115</a> / <a href="../../parallels/sa304.html">SĀ 304 (~)</a> / <a href="../../parallels/ea40.10.html">EĀ 40.10</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Madhupiṇḍika-sutta, the “discourse on the honey ball”, records Mahākaccāna giving a detailed explanation of an enigmatic statement by the Buddha. This discourse has two Chinese parallels, found in the Madhyama-āgama and in the Ekottarika-āgama.<span class="note" id="mn18n173"><span class="details"><span class="p">[n.173] The parallels are <a href="../../parallels/ma115.html">MĀ 115</a> at T I 603b-605a, entitled “discourse on the simile of the honey ball”, 蜜丸喻 經, and <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743a-c, which concludes with the Buddha giving the discourse the title “the taste of the ambrosial Dharma”, T II 743c28: 甘露法味. The three versions agree on locating the discourse at Kapilavatthu in the Sakyan country. <a href="../../parallels/ma115.html">MĀ 115</a> has been studied and translated by Minh Chau 1964/1991: 29, 59 and 233-239.</span></span></span>
+<p>The Madhupiṇḍika-sutta and its parallels begin by reporting that the Sakyan Daṇḍapāṇi visited the Buddha and inquired after the kind of a teaching the Buddha had proclaimed.<span class="note" id="mn18n174"><span class="details"><span class="p">[n.174] Mahāvaṃsa 2:19 at Be-Mhv 9 indicates that Daṇḍapāṇi was a brother of Suppabuddha, the Buddha’s father-in-law. According to the Lalitavistara in Hokazono 1994: 592,16 or Lefmann 1902: 157,3 or Vaidya 1958b: 108,19 (on the Chinese versions cf. Peri 1918: 11), and according to the Saṅghabhedavastu in Gnoli 1977: 62,1, however, he was himself the Buddha’s father-in-law. All versions depict Daṇḍapāṇi holding onto his stick while questioning the Buddha, which conveys a somewhat arrogant or even provocative attitude; cf. the regulation at Vin IV 200,25 against teaching the Dharma to someone who is holding a stick. Rahula 1981: 160 remarks on the present passage that “the attitude of Daṇḍa-pāṇi ... was surely haughty”, and Ireland 1992: 116 goes so far as to liken Daṇḍapāṇi’s attitude and behaviour to Māra. His arrogant or even provocative attitude could be an expression of his disapproval at the going forth of his son-in-law or nephew.</span></span></span> In the Majjhima-nikāya and the Madhyama-āgama versions, the Buddha’s reply indicates his teaching to be of such a nature that it leads to the absence of quarrelling with anyone in the world and to freedom from sensual desires and craving.<span class="note" id="mn18n175"><span class="details"><span class="p">[n.175] <a href="../../mn/mn18.html">MN 18</a> at MN I 108,26 and <a href="../../parallels/ma115.html">MĀ 115</a> at T I 603b19. After pointing out that the Buddha’s teaching is beyond the ken of devas, nāgas, and other spirits, <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743a10 indicates that it leads to the absence of attachment to the world and to not being established in the world, 非著世, 復非住世.</span></span></span> Daṇḍapāṇi thereupon left, according to the Majjhima-nikāya version expressing his bewilderment by wagging his tongue and raising his eyebrows.<span class="note" id="mn18n176"><span class="details"><span class="p">[n.176] <a href="../../mn/mn18.html">MN 18</a> at MN I 109,1.</span></span></span></p>
+<p>The Buddha then related his encounter with Daṇḍapāṇi to the monks. When one of the monks asked the Buddha to elucidate the statement made earlier to Daṇḍapāṇi, according to the Pāli account the Buddha made a somewhat enigmatic statement about not delighting in perceptions and notions that arise due to conceptual proliferation (papañ- casaññāsaṅkha), explaining that in this way freedom from the underlying tendencies and from quarrels, false speech, and evil states can be reached.<span class="note" id="mn18n177"><span class="details"><span class="p">[n.177] <a href="../../mn/mn18.html">MN 18</a> at MN I 109,34.</span></span></span> According to the Madhyama-āgama version, the Buddha spoke in praise of detachment in regard to past, present, and future phenomena, explaining that such detachment will lead to freedom from the underlying tendencies, from quarrelling, and from other evil states.<span class="note" id="mn18n178"><span class="details"><span class="p">[n.178] <a href="../../parallels/ma115.html">MĀ 115</a> at T I 603c12. According to <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743a20, the Buddha’s reply was concerned with the absence of attachment to the world, freedom from sensuality, and overcoming doubt. Part of this passage in <a href="../../parallels/ea40.10.html">EĀ 40.10</a> is a repetition of the Buddha’s earlier statement to Daṇḍapāṇi at T II 743a10 (cf. above note 175), nevertheless the present repetition differs from the earlier statement found just a few lines before in <a href="../../parallels/ea40.10.html">EĀ 40.10</a>. Moreover, when it comes to Mahākaccāna repeating the Buddha’s statements before beginning his own exposition (T II 743b11 and T II 743c10), the statements quoted by him differ again from what is found in the present instance. Such irregularities seem to be a recurrent feature in Ekottarika-āgama discourses.</span></span></span></p>
+<p>The Madhupiṇḍika-sutta and its parallels agree that the Buddha retired without further explanations, upon which the monks approached Mahākaccāna for a clarification of the Buddha’s statement.<span class="note" id="mn18n179"><span class="details"><span class="p">[n.179] According to Ps III 319,7, Mahākaccāna was the son of the chaplain of Ujjenī, the capital of Avanti. The Mahāvastu in Basak 1968/2004: 231,16+25 or in Senart 1897: 386,8+17 and the Saṅghabhedavastu in Gnoli 1977: 57,3+7, however, identify him with Nālaka/Nālada (cf. the protagonist of the Nālakasutta, Sn 3:11 at Sn 679-723).</span></span></span> The three versions report in similar terms how Mahākaccāna rebuked the monks for approaching him instead of directly asking the Buddha, which he compared to someone in need of heartwood who takes only the branches and leaves of a tree.<span class="note" id="mn18n180"><span class="details"><span class="p">[n.180] <a href="../../mn/mn18.html">MN 18</a> at MN I 111,6, <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604a14, and <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743a29. When speaking in praise of the Buddha during this reply, according to <a href="../../mn/mn18.html">MN 18</a> at MN I 111,13 Mahākaccāna referred to the Buddha with the epithet brahmabhūto, literally “become Brahmā”, an expression without an equivalent in <a href="../../parallels/ma115.html">MĀ 115</a> or <a href="../../parallels/ea40.10.html">EĀ 40.10</a>. The same epithet recurs in <a href="../../mn/mn133.html">MN 133</a> at MN III 195,6 and in <a href="../../mn/mn138.html">MN 138</a> at MN III 224,28, where in both cases it is also absent from their Chinese parallels <a href="../../parallels/ma165.html">MĀ 165</a> and <a href="../../parallels/ma164.html">MĀ 164</a>. Pérez-remón 1980: 115 suggests that the epithet brahmabhūto and the preceding dhammabhūto could be later additions, “because what follows such dithyrambic epithets seems to be an anticlimax”, as “dhammabhūto, where the Buddha is shown as dhamma personified” is followed by “dhammassāmī, where he appears merely as the lord of dhamma”.</span></span></span> MN I As an explanation of the Buddha’s enigmatic statement, according to the Pāli version Mahākaccāna described how based on each sense-organ and its object the related type of consciousness arises. With the coming together of the three there is contact, which leads to feeling, perception, thought, and conceptual proliferation (papañca), followed in turn by the arising of notions and perceptions due to conceptual proliferation in regard to past, present, and future times.<span class="note" id="mn18n181"><span class="details"><span class="p">[n.181] <a href="../../mn/mn18.html">MN 18</a> at MN I 111,35. For an insightful examination of this passage cf. Ñāṇananda 1971/1986: 2-10. Regarding the arising of consciousness in dependence on sense and object cf. also the discussion in Wijesekera 1964: 254-255.</span></span></span> The explanations in the Chinese versions proceed similarly, although with the difference that their descriptions of the stages that follow the arising of thought employ different terminology.<span class="note" id="mn18n182"><span class="details"><span class="p">[n.182] <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604b4 refers in this context to “thoughts” and “discriminations”, 念 and 分別, while <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743b21 mentions “mental determinations” and “perceptions with attachment that lead to thoughts”, 稱量 and 想著之念.</span></span></span> The basic import of the passage nevertheless appears to be alike in the three versions. MN I The Madhupiṇḍika-sutta and its parallels continue with Mahākaccāna explaining that this conditional sequence does not take place in the absence of the sense-organs, their objects, and the corresponding type of consciousness, but only happens when these are present.<span class="note" id="mn18n183"><span class="details"><span class="p">[n.183] <a href="../../mn/mn18.html">MN 18</a> at MN I 112,14, <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604b17, and <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743b28. <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604b17 agrees with <a href="../../mn/mn18.html">MN 18</a> at MN I 112,15 on speaking of “designation”, paññatti/施設, in regard to contact and the subsequent stages.</span></span></span> They differ in the sequence in which they present these two cases (see table 2.13).</p>
+<table class="comparative-table">
+<caption>Table 2.13: Analysis of the Perceptual Process in <a href="../../mn/mn18.html">MN 18</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn18.html">MN 18</a></th><th><a href="../../parallels/ma115.html">MĀ 115</a> & <a href="../../parallels/ea40.10.html">EĀ 40.10</a></th></tr>
+<tr><td>presence of sense & object & consc. (1)</td><td>absence of sense & object & consc. (→ 2)</td></tr>
+<tr><td>absence of sense & object & consc. (2)</td><td>presence of sense & object & consc. (→ 1)</td></tr>
+</table>
+<p>In all versions, Mahākaccāna tells the monks that they may report his explanation to the Buddha. When the monks follow this suggestion, the Buddha expresses his approval of Mahākaccāna’s exposition.<span class="note" id="mn18n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn18.html">MN 18</a> at MN I 114,3, <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604c17, and <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743c20.</span></span></span> MN I In the Pāli account, Ānanda comes out with a simile at this point, comparing the delight to be derived from examining this exposition to a hungry man who comes upon a ball of honey.<span class="note" id="mn18n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn18.html">MN 18</a> at MN I 114,9. The same simile recurs in <a href="../../an/an5.194.html">AN 5:194</a> at AN III 237,19. Regarding Ānanda’s use of similes in general, a survey of the four Pāli Nikāyas brings to light that in most of the close to forty discourses attributed to him he does not use a simile at all. In ten discourses, Ānanda makes use of a simile that is, however, also found elsewhere: <a href="../../dn/dn10.html">DN 10</a> at DN I 204-210 reports Ānanda giving an account of the gradual path together with the same similes used in the preceding DN discourses as part of the same type of exposition given by the Buddha. In <a href="../../mn/mn53.html">MN 53</a> at MN I 357,6 Ānanda uses the simile of a hen hatching eggs, a simile delivered by the Buddha according to <a href="../../mn/mn16.html">MN 16</a> at MN I 104,3, <a href="../../sn/sn22.101.html">SN 22:101</a> at SN III 154,10, <a href="../../an/an7.67.html">AN 7:67</a> at AN IV 125,18, and <a href="../../an/an8.11.html">AN 8:11</a> at AN IV 176,7. Four discourses, <a href="../../sn/sn35.116.html">SN 35:116</a> at SN IV 94,24, <a href="../../sn/sn35.117.html">SN 35:117</a> at SN IV 99,27, <a href="../../sn/sn35.193.html">SN 35:193</a> at SN IV 167,29, and <a href="../../an/an10.115.html">AN 10:115</a> at AN V 226,18 report Ānanda using the simile of someone in search for heartwood, a simile often associated with the Buddha and in some instances also with Mahākaccāna, cf., e.g., <a href="../../mn/mn18.html">MN 18</a> at MN I 111,6, <a href="../../mn/mn133.html">MN 133</a> at MN III 194,32, <a href="../../mn/mn138.html">MN 138</a> at MN III 224,21, and <a href="../../an/an10.172.html">AN 10:172</a> at AN V 256,22. In <a href="../../sn/sn35.192.html">SN 35:192</a> at SN IV 166,1, Ānanda uses the simile of two oxen, a simile attributed to Sāriputta in <a href="../../sn/sn35.191.html">SN 35:191</a> at SN IV 163,12 and to Citta in <a href="../../sn/sn41.1.html">SN 41:1</a> at SN IV 282,32. In <a href="../../an/an10.5.html">AN 10:5</a> at AN V 6,12 and <a href="../../an/an11.5.html">AN 11:5</a> at AN V 316,4, Ānanda uses the simile of a tree without branches, found in similar terms as a simile delivered by the Buddha in <a href="../../an/an5.24.html">AN 5:24</a> at AN III 19,29, <a href="../../an/an6.50.html">AN 6:50</a> at AN III 360,9, <a href="../../an/an7.61.html">AN 7:61</a> at AN IV 99,9, <a href="../../an/an8.81.html">AN 8:81</a> at AN IV 336,13, <a href="../../an/an10.3.html">AN 10:3</a> at AN V 4,14, and <a href="../../an/an11.3.html">AN 11:3</a> at AN V 314,8, and also by Sāriputta in <a href="../../an/an5.168.html">AN 5:168</a> at AN III 200,12, <a href="../../an/an10.4.html">AN 10:4</a> at AN V 5,16, and <a href="../../an/an11.4.html">AN 11:4</a> at AN V 315,16. <a href="../../an/an10.95.html">AN 10:95</a> at AN V 194,23 reports Ānanda using the simile of a guarded city, used Sāriputta according to <a href="../../dn/dn16.html">DN 16</a> at DN II 83,8, <a href="../../dn/dn28.html">DN 28</a> at DN III 100,25, and <a href="../../sn/sn47.12.html">SN 47:12</a> at SN V 160,17. Only two discourses depict Ānanda coming out with a simile unique to the respective occasion: <a href="../../mn/mn76.html">MN 76</a> at MN I 523,20 and <a href="../../sn/sn51.15.html">SN 51:15</a> at SN V 272,30. In sum, the Pāli discourses do not present the deliverance of impromptu similes as a typical trait of Ānanda, whereas the Buddha is shown to deliver an inexhaustible wealth of similes. An extract from the present discussion already appeared in Anālayo 2005b: 7-8 and id. 2007i: 25-27.</span></span></span> The Ekottarika-āgama version also attributes the simile to Ānanda,<span class="note" id="mn18n186"><span class="details"><span class="p">[n.186] <a href="../../parallels/ea40.10.html">EĀ 40.10</a> at T II 743c24, which speaks of ambrosia, 甘露, instead of a honey ball.</span></span></span> while in the Madhyama-āgama version it is the Buddha himself who comes out with the simile.<span class="note" id="mn18n187"><span class="details"><span class="p">[n.187] <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604c22. A similar case can be found in relation to <a href="../../dn/dn4.html">DN 4</a> at DN I 124,5, where a simile that illustrates the relationship between morality and wisdom with two hands washing each other is attributed in the Pāli version to a Brahmin visitor, whereas in the Chinese parallel, <a href="../../parallels/da22.html">DĀ 22</a> at T I 96b18 (translated in Meisig 1991: 57), the Buddha himself comes out with the simile. Gombrich 1984a: 99 comments on this simile that its presentation of morality and wisdom as complementary factors stands “in stark contrast to the Hindu view that the disciplines of work and of gnosis are hierarchically related alternatives”. This might make it more fitting for the simile to be attributed to the Buddha, instead of to a non-Buddhist Brahmin who had just attempted to uphold Brahminical views in front of the Buddha. Another statement attributed to the Buddha reflects in fact a similar interrelationship (although expressed in terms of Dharma and Vinaya), cf. <a href="../../an/an5.79.html">AN 5:79</a> at AN III 106,13: dhammasandosā vinayasandoso, vinayasandosā dhammasandoso, cf. also SHT X 2272 (p. 274) Vc and Rb.</span></span></span></p>
+<p>Another difference is that while the Majjhima-nikāya version of the simile describes a man who is hungry and comes upon a ball of honey, according to the Madhyama-āgama version the point made by this simile is that just as one will get a sweet taste from any morsel of a ball of honey, so too one can get the taste of this teaching by contemplating any of the six sense-doors, be it the eye, the ear, the nose, the tongue, the body, or the mind.<span class="note" id="mn18n188"><span class="details"><span class="p">[n.188] <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604c22.</span></span></span></p>
+<p>When comparing these two versions of the simile of the honey ball, the Majjhimanikāya version’s simile does not appear to stand in a particular relation to the Madhupiṇḍika-sutta’s exposition, since it merely portrays how Mahākaccāna was able to assuage the ‘hunger’ of the monks for a more detailed exposition of a short saying by the Buddha. The Madhupiṇḍika-sutta is, however, not the only such case, since other discourses similarly report how Mahākaccāna delivered a more detailed exposition of an enigmatic statement by the Buddha.<span class="note" id="mn18n189"><span class="details"><span class="p">[n.189] <a href="../../mn/mn133.html">MN 133</a> at MN III 195,24, <a href="../../mn/mn138.html">MN 138</a> at MN III 225,11, and <a href="../../an/an10.172.html">AN 10:172</a> at AN V 257,19.</span></span></span> Hence the simile of the hungry man who comes across a honey ball would fit those other instances just as well as the Madhupiṇḍikasutta.</p>
+<p>The Madhyama-āgama presentation of the same simile suits the penetrative analysis of the perceptual process given by Mahākaccāna well and thus is more closely related to the actual content of the discourse. It also brings out the simile of the honey ball with increased clarity, indicating that the penetrative analysis of the perceptual process offered in this discourse can lead to realization when applied to any sense-door, just as a honey ball is sweet wherever one may bite it.</p>
+<p>While the other two versions conclude at this point, the Madhyama-āgama version continues with an exhortation by the Buddha on the importance of this discourse and on the need to keep it in mind.<span class="note" id="mn18n190"><span class="details"><span class="p">[n.190] <a href="../../parallels/ma115.html">MĀ 115</a> at T I 604c29. As a little postscript to Mahākaccāna’s depiction of how in the absence of contact the above described sequence of the perceptual process does not occur, <a href="../../parallels/sa273.html">SĀ 273</a> at T II 72c8 (translated in Choong 1999: 39) would be of interest, a discourse that does not have a parallel in the Pāli Nikāyas. <a href="../../parallels/sa273.html">SĀ 273</a> also presents contact as the coming together of sense-organ, object, and consciousness, which in turn leads to feeling, perception, and thought, followed by comparing such coming together of sense and object to the sound caused by clapping both hands. Applying this simile to the absence of contact described in Mahākaccāna’s exposition might provide a hint at the implications of the famous kōan (公案) that inquires after the sound of the clapping of a single hand, devised by the Japanese Zen master Hakuin Ekaku (1685-1768 or 1686-1769).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

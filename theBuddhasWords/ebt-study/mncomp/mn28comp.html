@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 28 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 28: Mahāhatthipadopama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn27comp.html#content"></a><a id="next-sutta" href="./mn29comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn28.html">MN 28</a> / <a href="../../parallels/ma30.html">MĀ 30</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāhatthipadopama-sutta, the “greater discourse on the simile of the elephant’s footprint”, presents a detailed investigation of the four noble truths, given by Sāriputta. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn28n256"><span class="details"><span class="p">[n.256] The parallel is <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464b-467a, which agrees with <a href="../../mn/mn28.html">MN 28</a> on locating the discourse at Jeta’s Grove by Sāvatthī and also has the similar title “discourse on the simile of the elephant’s footprint”, 象 跡喻經, thereby differing from <a href="../../mn/mn28.html">MN 28</a> only in that it does not use the specification “greater”. A study and partial translation of <a href="../../parallels/ma30.html">MĀ 30</a> can be found in Minh Chau 1964/1991: 113-114. For a discourse quotation in Abhidh-k-ṭ cf. below note 259. For a counterpart to MN I 191,18-19 in Vyākhyāyukti literature cf. Skilling 2000b: 343.</span></span></span></p>
+<p>The Mahāhatthipadopama-sutta and its Madhyama-āgama counterpart begin by comparing the role of the four noble truths in regard to all wholesome (or skilful) states to the footprint of an elephant, which due to its size comprises the footprints of all other animals.<span class="note" id="mn28n257"><span class="details"><span class="p">[n.257] In regard to this simile, Cousins 1996a: 146 comments that “when ... Sāriputta tells us that all skilful dhammas are included in the four noble truths, we should ... interpret skilful dhammas here as referring to meditational states”. According to Ñāṇaponika 1966/1981: 2, the image in <a href="../../mn/mn28.html">MN 28</a> intends to convey that “the Four Noble Truths comprise ... all that is beneficial, i.e. all that is truly worth knowing and following after”. On the term kusala and its implications cf. also Adam 2005, Carter 1984, Collins 1998: 154, Del Toso 2007b, Nanayakkara 1999, and Premasiri 1976. Franke 1906: 368 notes that a counterpart to the simile of the elephant’s footprint can be found in the Mahābhārata, where it illustrates the importance of non-violence, ahiṃsā; cf. also Neumann 1896/1995: 1141 note 451. The simile of the elephant’s footprint recurs in <a href="../../sn/sn48.54.html">SN 48:54</a> at SN V 231,2 to highlight the importance of the faculty of wisdom, paññindriya. Since insight into the four noble truths is reckoned a manifestation of the faculty of wisdom (cf. <a href="../../sn/sn48.10.html">SN 48:10</a> at SN V 199,2), the use of this simile in <a href="../../sn/sn48.54.html">SN 48:54</a> is similar to its implications in <a href="../../mn/mn28.html">MN 28</a>. The simile of the elephant’s footprint can also be found in <a href="../../sn/sn3.7.html">SN 3:7</a> at SN I 86,29 (or SN2 128 at SN2 I 195,16) and its parallel <a href="../../parallels/ma141.html">MĀ 141</a> at T I 647c6, <a href="../../sn/sn45.140.html">SN 45:140</a> at SN V 43,13, <a href="../../an/an6.53.html">AN 6:53</a> at AN III 364,21, <a href="../../an/an10.15.html">AN 10:15</a> at AN V 21,18, <a href="../../parallels/sa882.html">SĀ 882</a> at T I 222a5, and <a href="../../parallels/sa-2.66.html">SĀ2 66</a> at T II 396b27. In each of these cases, the simile illustrates the importance of diligence, appamāda. Another occurrence of the same simile is <a href="../../parallels/sa270.html">SĀ 270</a> at T II 70c15, where it illustrates the importance of perception of impermanence.</span></span></span></p>
+<p>The Mahāhatthipadopama-sutta and its parallel proceed from the topic of the four noble truths to the first noble truth, then to the five aggregates mentioned in the first noble truth, then to the aggregate of form, and then to the four elements as the basic constituents of form.<span class="note" id="mn28n258"><span class="details"><span class="p">[n.258] A minor difference in regard to the definition of the first noble truth is that “disease” and “association with what is disliked” together with “dissociation from what is liked” are only mentioned in <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464b29, while “sorrow, lamentation, pain, grief, and despair” are only mentioned in <a href="../../mn/mn28.html">MN 28</a> at MN I 185,4 (cf. also above p. 69).</span></span></span></p>
+<p>Taking up the earth element, the parallel versions distinguish between its internal and external manifestations, followed by defining the internal earth element by way of the solid parts of the human body.<span class="note" id="mn28n259"><span class="details"><span class="p">[n.259] A discourse quotation in Abhidh-k 3:28 in Pradhan 1967: 136,19 and 137,2 parallels the listing of hair, etc., as manifestations of the earth element in <a href="../../mn/mn28.html">MN 28</a> at MN I 185,15; with its counterparts in T 1558 at T XXIX 50a14, T 1559 at T XXIX 207a7, and Abhidh-k-ṭ at D (4094) mngon pa, ju 140b6 or Q (5595) tu 161b5, cf. also Mejor 1991: 73.</span></span></span></p>
+<p>The Majjhima-nikāya version explains that the internal and the external earth element should be contemplated as “not mine, not I, not my self”, in order to develop disenchantment.<span class="note" id="mn28n260"><span class="details"><span class="p">[n.260] <a href="../../mn/mn28.html">MN 28</a> at MN I 185,23.</span></span></span> The Madhyama-āgama version does not have such an instruction at this point, although the same theme is taken up later on in both versions (see table 3.5).</p>
+<p>The two versions continue by turning to the destruction of the whole earth, which according to Indian cosmology occurs periodically. Both versions conclude that once even the great earth is impermanent, the physical body must be of the same nature.</p>
+<p>While the Majjhima-nikāya version highlights that it is meaningless to identify with the impermanent body,<span class="note" id="mn28n261"><span class="details"><span class="p">[n.261] <a href="../../mn/mn28.html">MN 28</a> at MN I 185,32: “how [could there] be [notions of] ‘I’, ‘mine’, or ‘I am’ in regard to this body”, kiṃ pan’ imassa ... kāyassa ... ahan ti vā maman ti vā asmī ti vā (Ce-MN I 450,10: kim)?</span></span></span> the Madhyama-āgama version tackles the same theme by contrasting an unlearned worldling, who identifies with the body, with a learned disciple, who is aloof from such identification.<span class="note" id="mn28n262"><span class="details"><span class="p">[n.262] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464c15.</span></span></span></p>
+<p>The Mahāhatthipadopama-sutta and its parallel continue by examining the case of a monk who meets with abuse, recommending the reflection that such unpleasant experiences arise in dependence on contact, which, just as the four immaterial aggregates, is impermanent. In both versions, such reflection leads to mental steadiness.<span class="note" id="mn28n263"><span class="details"><span class="p">[n.263] According to <a href="../../mn/mn28.html">MN 28</a> at MN I 186,4, the mind “goes forward and become satisfied, steadied, and determined”, pakkhandati pasīdati santiṭṭhati adhimuccati (Se-M I 351,5 reads vimuccati, instead of adhimuccati, a reading that, as Ñāṇaponika 1966/1981: 22 notes, is also found in the subcommentary Be-Pspṭ II 169; on alternations between these two terms cf. Lévi 1929: 44 and Wynne 2007: 79; cf. also below p. 685 note 14). <a href="../../parallels/ma30.html">MĀ 30</a> at T I 465a3 instead speaks of the “tranquil, concentrated, and unified mind”, 安定一心.</span></span></span></p>
+<p>While the Majjhima-nikāya version only takes up the case of abuse, the Madhyamaāgama discourse also examines the case of experiencing pleasant speech, recommending the same type of reflection (see table 3.5).<span class="note" id="mn28n264"><span class="details"><span class="p">[n.264] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464c22.</span></span></span> In this way, the Madhyama-āgama version commends mental steadiness not only when a monk is confronted with abuse, but also when he meets with pleasant words, in which case reflecting on their impermanent nature would prevent the arising of pride and conceit.</p>
+<p>Both versions turn to the case of being physically attacked, recommending the reflection that to come into contact with physical harm is simply the nature of this body. The two versions continue by quoting the simile of the saw as a reminder for the need for patience in case one is physically attacked.<span class="note" id="mn28n265"><span class="details"><span class="p">[n.265] <a href="../../mn/mn28.html">MN 28</a> at MN I 186,11 and <a href="../../parallels/ma30.html">MĀ 30</a> at T I 465a6.</span></span></span> The Madhyama-āgama version stands alone in following the simile with instructions on the development of loving kindness as a boundless radiation in all directions (see table 3.5).<span class="note" id="mn28n266"><span class="details"><span class="p">[n.266] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 465a12. <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464c11, T I 465b1, T I 465c20, and T I 466b13 also appears to provide a relation between the practice of the four brahmavihāras and the earlier contemplation of the elements, since it qualifies each element to be “without hostility”, 不憎惡. This could be similar to an exposition found in <a href="../../mn/mn62.html">MN 62</a> at MN I 423,20, where the way each element patiently bears with whatever dirt is put on or into it functions as an inspirational example for developing the brahmavihāras.</span></span></span> The Kakacūpama-sutta and its parallel, from which the simile originates, also follow their exposition of the simile with such instructions.<span class="note" id="mn28n267"><span class="details"><span class="p">[n.267] <a href="../../mn/mn21.html">MN 21</a> at MN I 129,15 and <a href="../../parallels/ma193.html">MĀ 193</a> at T I 746a13.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 3.5: Reflections on the Elements in <a href="../../mn/mn28.html">MN 28</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn28.html">MN 28</a></th><th><a href="../../parallels/ma30.html">MĀ 30</a></th></tr>
+<tr><td>internal element (1)</td><td>internal element (→ 1)</td></tr>
+<tr><td>reflection on not-self (2)</td><td>external element destroyed (→ 3)</td></tr>
+<tr><td>external element destroyed (3)</td><td>body is not-self (→ 4)</td></tr>
+<tr><td>body is not-self (4)</td><td>facing abusive speech (→ 5)</td></tr>
+<tr><td>facing abusive speech (5)</td><td>facing pleasant speech</td></tr>
+<tr><td>facing being attacked (6)</td><td>facing being attacked (→ 6)</td></tr>
+<tr><td>simile of the saw (7)</td><td>simile of the saw (→ 7)</td></tr>
+<tr><td>simile of daughter-in-law (8)</td><td>brahmavihāra practice</td></tr>
+<tr><td></td><td>simile of daughter-in-law (→ 8)</td></tr>
+<tr><td></td><td>(≠ 2)</td></tr>
+</table>
+<p>The Mahāhatthipadopama-sutta and its parallel agree that recollecting the simile of the saw is an instance of recollection of the Buddha, the Dharma, and the Saṅgha. By undertaking such recollection, a monk should be able to establish himself in equanimity, failing which he should arouse a sense of urgency. Such arousal is illustrated in both versions with the urgency experienced by a daughter-in-law in regard to her new family members, such as her father-in-law, or else her husband.<span class="note" id="mn28n268"><span class="details"><span class="p">[n.268] Coomaraswamy 1943: 174 takes up this simile as one of the illustrations of saṃvega, which he explains to stand for a “state of shock, agitation, fear, awe, wonder or delight induced by some physically or mentally poignant experience” (p. 176).</span></span></span></p>
+<p>Both versions apply the same treatment and reflections to the other three elements of water, fire, and wind. While the Mahāhatthipadopama-sutta and its parallel proceed along similar lines when depicting the internal manifestations of each element, they differ in regard to the external manifestations of the four elements (see table 3.6).</p>
+<table class="comparative-table">
+<caption>Table 3.6: Destruction of the Four Elements in <a href="../../mn/mn28.html">MN 28</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn28.html">MN 28</a></th><th><a href="../../parallels/ma30.html">MĀ 30</a></th></tr>
+<tr><td>water element disturbed, earth disappears (1)</td><td>water calamity destroys earth element (→ 1)</td></tr>
+<tr><td>water element disturbed, destroys villages,</td><td>fire calamity destroys water element (→ 2)</td></tr>
+<tr><td>etc., then dries up (2)</td><td>fire arises and destroys villages, etc., reaches</td></tr>
+<tr><td>fire element disturbed, destroys villages,</td><td>road or water and runs out of fuel (→ 3)</td></tr>
+<tr><td>etc., then runs out of fuel (3)</td><td>wind arises and destroys houses, trees, etc.,</td></tr>
+<tr><td>wind element disturbed, destroys villages,</td><td>reaches mountain and stops (→ 4)</td></tr>
+<tr><td>etc., then disappears (4)</td><td></td></tr>
+</table>
+<p>When taking up the destruction of the external earth element, the Pāli version describes how the water element, on being disturbed, destroys the earth element.<span class="note" id="mn28n269"><span class="details"><span class="p">[n.269] <a href="../../mn/mn28.html">MN 28</a> at MN I 185,28: bāhirā āpodhātu pakuppati.</span></span></span> When turning to the external water element, however, the Mahāhatthipadopama-sutta again speaks of the water element being disturbed, a disturbance that results in the destruction of villages and whole countries through floods.<span class="note" id="mn28n270"><span class="details"><span class="p">[n.270] <a href="../../mn/mn28.html">MN 28</a> at MN I 187,15: bāhirā āpodhātu pakuppati.</span></span></span> The Pāli account continues its treatment of the external water element by describing how the water of the great ocean dries up in stages until none is left.</p>
+<p>When it comes to the external fire element and the external wind element, the Mahāhatthipadopama-sutta describes the effects of a disturbance of the fire element and then of the wind element, so that in these two cases, just as in the case of water, it attributes the destruction of a particular element to a disturbance of the same element.<span class="note" id="mn28n271"><span class="details"><span class="p">[n.271] <a href="../../mn/mn28.html">MN 28</a> at MN I 188,16: bāhirā tejodhātu pakuppati and MN I 189,1: bāhirā vāyodhātu pakuppati.</span></span></span></p>
+<p>In this way, the Pāli presentation speaks twice of a disturbance of the water element and does not mention a disturbance of the earth element.<span class="note" id="mn28n272"><span class="details"><span class="p">[n.272] Be-MN I 243,30 records a variant reading according to which the destruction of the earth is not due to a disturbance of the water element, but to a disturbance of the earth element (reading pathavīdhātu pakuppati instead of āpodhātu pakuppati). On this reading, the presentation would become more uniform, with a disturbance of each element being responsible for its own destruction. Horner 1954/1967: 232 note 1 suggests a similar emendation for this passage. The commentary, Ps II 224,8, however, glosses the destruction of the earth by describing how the earth is flooded and submerged in water, an explanation clearly based on the reading that the water element is disturbed. If the reading known to the commentators had been a disturbance of the earth element, one would expect the commentary to describe earthquakes, etc. That the commentarial tradition did not conceive of a disturbance of the earth element can also be seen in Vism 414,13, which explains that a world contraction can be due to water, fire, and wind, āposaṃvaṭṭo, tejosaṃvaṭṭo, vāyosaṃvaṭṭo, thereby not taking account the possibility that such a contraction might occur due to the earth element.</span></span></span> Its exposition of the earth element is, moreover, rather brief and differs from the way the other three elements are treated, where in each case the Pāli version offers a detailed description of the destruction caused by the disturbance of this element, followed by depicting the disappearance of the respective element.</p>
+<p>The Chinese version differs in as much as it attributes the destruction of each element to another element, although here, too, the exposition of the destruction of the first two elements is rather brief. It agrees with the Pāli presentation that the external earth element is destroyed by water, but then continues by describing that the external water element dries up due to a fire. The external fire element comes to an end when a fire conflagration reaches a road or water and runs out of fuel. A storm as a manifestation of the external wind element comes to an end on reaching the mountains, representative of the earth element.<span class="note" id="mn28n273"><span class="details"><span class="p">[n.273] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 464c12, T I 465b2, T I 465c20, and T I 466b14.</span></span></span></p>
+<p>The Chinese version’s attribution of the destruction of the external water element to the impact caused by fire reminds of a discourse from the Aṅguttara-nikāya which, together with its parallels in the Madhyama-āgama and the Ekottarika-āgama, describes the gradual drying up of the great ocean in similar terms as the Mahāhatthipadopamasutta.<span class="note" id="mn28n274"><span class="details"><span class="p">[n.274] <a href="../../an/an7.62.html">AN 7:62</a> at AN IV 101,19, <a href="../../parallels/ma8.html">MĀ 8</a> at T I 429a2, and <a href="../../parallels/ea40.1.html">EĀ 40.1</a> at T II 736b13; cf. also SHT VII 1678aR, a Schøyen fragment, and a Tibetan parallel (from Śamathadeva’s commentary on the Abhidharmakośabhāṣya) in Dietz 2007. A similar description can also be found in the Śikṣāsamuccaya in Bendall 1902/ 1970: 247,10.</span></span></span> According to these discourses, the cause for such a drying up of the ocean is the arising of several suns, an event which would be a manifestation of the fire element.</p>
+<p>Yet another discourse from the Aṅguttara-nikāya attributes even a drought to a disturbance of the fire element. This discourse lists five causes for drought, one of which is when the element of fire in the sky is disturbed, whereby the clouds are dispersed and there will be no rain.<span class="note" id="mn28n275"><span class="details"><span class="p">[n.275] <a href="../../an/an5.197.html">AN 5:197</a> at AN III 243,4+8 uses the same verb pakuppati, “to disturb”, as <a href="../../mn/mn28.html">MN 28</a> at MN I 185,28. The other four causes are a disturbance of the wind element, interference by the asura king, indolence of the devas responsible for rain, and evil conduct among humans.</span></span></span> These passages accord with the attribution of the destruction of the external water element to the impact caused by fire, proposed in the Madhyama-āgama parallel to the Mahāhatthipadopama-sutta.</p>
+<p>The Mahāhatthipadopama-sutta and its parallel continue by comparing the nature of the body to a house, explaining that both are merely space, the one enclosed by skin and bones and the other enclosed by timber and clay.<span class="note" id="mn28n276"><span class="details"><span class="p">[n.276] <a href="../../mn/mn28.html">MN 28</a> at MN I 190,15 and <a href="../../parallels/ma30.html">MĀ 30</a> at T I 466c29; cf. also the Śrāvakabhūmi in Shukla 1973: 386,13 or ŚSG 2009: 40,7 and T 1579 at T XXX 454c25.</span></span></span></p>
+<p>The two versions next turn to the dependent nature of consciousness, which arises in dependence on a sense-base and its object. The Madhyama-āgama discourse takes up two cases, where either consciousness arises or, lacking the required conditions, does not arise.<span class="note" id="mn28n277"><span class="details"><span class="p">[n.277] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 467a3. In its examination of the second case, <a href="../../parallels/ma30.html">MĀ 30</a> at T I 467a12+14 shows some internal inconsistencies, as in relation to the sense-objects (of the ear, nose, tongue, body, and mind) it speaks of their being illuminated by light, 光明所照, thereby repeating the description used earlier in relation to visual forms, the only instance where this description seems appropriate. Another puzzling passage occurs in <a href="../../parallels/ma30.html">MĀ 30</a> at T I 467a15, where the internal mind-sphere, its objects, and mind-consciousness that is aware of forms are reckoned together as belonging to the aggregate of form, 內意處及法, 意識 知外色法, 是屬色陰.</span></span></span> The Majjhima-nikāya account examines three cases by differentiating the case that consciousness does not arise into two possibilities, where either no objects are present or else no contact is established.<span class="note" id="mn28n278"><span class="details"><span class="p">[n.278] <a href="../../mn/mn28.html">MN 28</a> at MN I 190,20.</span></span></span> In both instances, lacking one of the required conditions, consciousness does not arise.</p>
+<p>The two versions relate the dependent arising of consciousness to the five aggregates, followed by quoting a statement by the Buddha that one who sees dependent arising sees the Dharma, and one who sees the Dharma sees dependent arising.<span class="note" id="mn28n279"><span class="details"><span class="p">[n.279] <a href="../../mn/mn28.html">MN 28</a> at MN I 190,37: yo paṭiccasamuppādaṃ passati so dhammaṃ passati, yo dhammaṃ passati so paṭiccasamuppādaṃ passatī ti and <a href="../../parallels/ma30.html">MĀ 30</a> at T I 467a9: 若見緣起便見法, 若見法便見緣起.</span></span></span></p>
+<p>The Majjhima-nikāya version concludes by explaining that clinging to the aggregates corresponds to the origin of dukkha, while to remove desire for them equals the cessation of dukkha, thereby coming round to its point of departure, the four noble truths.<span class="note" id="mn28n280"><span class="details"><span class="p">[n.280] <a href="../../mn/mn28.html">MN 28</a> at MN I 191,30.</span></span></span> The Madhyama-āgama version instead concludes by indicating that detachment from past, present, and future manifestations of the five aggregates will lead to awakening.<span class="note" id="mn28n281"><span class="details"><span class="p">[n.281] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 467a21.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

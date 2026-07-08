@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>MĀ 111 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>MĀ 111</h2>
+<div class="mirror hgroup">
+<p class="division">
+<span class="mirror-left latin">Madhyamāgama</span>
+<span class="mirror-right">中阿含经</span></p>
+<p class="mirror-row">
+<span class="mirror-left latin">Chapter 10</span>
+<span class="mirror-right">林品</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">111. </span>
+<span class="mirror-right">（一一一）达梵行经</span></h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an6.63.html">AN 6.63</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>I have heard thus:</p></td><td lang="lzh" class="agama-chi"><p>我闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was wandering in Kuru and stayed at the city of Kumbhahattha in Kuru.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游拘楼瘦，在剑磨瑟昙拘楼都邑。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;I will teach you the Dharma, which is wonderful in the beginning, wonderful in the middle, and wonderful in the end, with meaning and expression, complete and pure, revealing the holy life, called &#x27;attaining the holy life, able to exhaust all taints.&#x27; Listen carefully and keep it in mind.&quot; At that time, the bhikṣus accepted the teaching and listened.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「我当为汝说法，初妙、中妙、竟亦妙，有文有义，具足清净，显现梵行，谓名达梵行，能尽诸漏。汝等谛听，善思念之。」时，诸比丘受教而听。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;You should know the taints, know the causes of the taints, know the results of the taints, know the superiority of the taints, know the complete cessation of the taints, and know the path to the cessation of the taints. You should know the perceptions, know the causes of the perceptions, know the results of the perceptions, know the superiority of the perceptions, know the complete cessation of the perceptions, and know the path to the cessation of the perceptions. You should know the thoughts, know the causes of the thoughts, know the results of the thoughts, know the superiority of the thoughts, know the complete cessation of the thoughts, and know the path to the cessation of the thoughts. You should know the desires, know the causes of the desires, know the results of the desires, know the superiority of the desires, know the complete cessation of the desires, and know the path to the cessation of the desires. You should know the actions, know the causes of the actions, know the results of the actions, know the superiority of the actions, know the complete cessation of the actions, and know the path to the cessation of the actions. You should know the suffering, know the causes of the suffering, know the results of the suffering, know the superiority of the suffering, know the complete cessation of the suffering, and know the path to the cessation of the suffering.</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「汝等当知漏，知漏所因生，知漏有报，知漏胜如，知漏灭尽，知漏灭道。汝等当知觉，知觉所因生，知觉有报，知觉胜如，知觉灭尽，知觉灭道。汝等当知想，知想所因生，知想有报，知想胜如，知想灭尽，知想灭道。汝等当知欲，知欲所因生，知欲有报，知欲胜如，知欲灭尽，知欲灭道。汝等当知业，知业所因生，知业有报，知业胜如，知业灭尽，知业灭道。汝等当知苦，知苦所因生，知苦有报，知苦胜如，知苦灭尽，知苦灭道。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know the taints? There are three taints: the outflow of desire, the outflow of existence, and the outflow of ignorance. This is called knowing the taints. How does one know the causes of the taints? It is ignorance. Because of ignorance, there are then taints. This is called knowing the causes of the taints. How does one know the results of the taints? Those who are bound by ignorance are soaked by the taints. Because of this, they receive results, either in good realms or bad realms. This is called knowing the results of the taints. How does one know the superiority of the taints? Some taints lead to birth in hell, some taints lead to birth as an animal, some taints lead to birth as a hungry ghost, some taints lead to birth in the heavens, and some taints lead to birth as a human. This is called knowing the superiority of the taints. How does one know the complete cessation of the taints? When ignorance ceases, the taints also cease. This is called knowing the complete cessation of the taints. How does one know the path to the cessation of the taints? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of the taints. If a bhikṣu knows the taints in this way, knows the causes of the taints, knows the results of the taints, knows the superiority of the taints, knows the complete cessation of the taints, and knows the path to the cessation of the taints, this is called attaining the holy life, able to exhaust all taints.</p></td><td lang="lzh" class="agama-chi"><p>「云何知漏？谓有三漏：欲漏、有漏、无明漏，是谓知漏。云何知漏所因生？谓无明也。因无明则便有漏，是谓知漏所因生。云何知漏有报？谓无明缠者，为诸漏所渍，彼因此受报，或得善处，或得恶处，是谓知漏有报。云何知漏胜如？谓或有漏生地狱中，或有漏生畜生中，或有漏生饿鬼中，或有漏生天上，或有漏生人间，是谓知漏胜如。云何知漏灭尽？谓无明灭，漏便灭，是谓知漏灭尽。云何知漏灭道？谓八支圣道，正见乃至正定为八，是谓知漏灭道。若比丘如是知漏，知漏所因生，知漏受报，知漏胜如，知漏灭尽，知漏灭道者，是谓达梵行，能尽一切漏。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know the perceptions? There are three perceptions: the perception of pleasure, the perception of pain, and the perception of neither pleasure nor pain. This is called knowing the perceptions. How does one know the causes of the perceptions? It is contact. Because of contact, there are then perceptions. This is called knowing the causes of the perceptions. How does one know the results of the perceptions? It is craving. Craving is the result of the perceptions. This is called knowing the results of the perceptions. How does one know the superiority of the perceptions? When a bhikṣu perceives a pleasant perception, he knows he perceives a pleasant perception. When he perceives a painful perception, he knows he perceives a painful perception. When he perceives a neither pleasant nor painful perception, he knows he perceives a neither pleasant nor painful perception. He knows a pleasant body, a painful body, and a neither pleasant nor painful body. He knows a pleasant mind, a painful mind, and a neither pleasant nor painful mind. He knows a pleasant feeling, a painful feeling, and a neither pleasant nor painful feeling. He knows a pleasant non-feeling, a painful non-feeling, and a neither pleasant nor painful non-feeling. He knows a pleasant desire, a painful desire, and a neither pleasant nor painful desire. He knows a pleasant non-desire, a painful non-desire, and a neither pleasant nor painful non-desire. When he perceives a neither pleasant nor painful non-desire, he knows he perceives a neither pleasant nor painful non-desire. This is called knowing the superiority of the perceptions. How does one know the complete cessation of the perceptions? When contact ceases, the perceptions also cease. This is called knowing the complete cessation of the perceptions. How does one know the path to the cessation of the perceptions? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of the perceptions. If a bhikṣu knows the perceptions in this way, knows the causes of the perceptions, knows the results of the perceptions, knows the superiority of the perceptions, knows the complete cessation of the perceptions, and knows the path to the cessation of the perceptions, this is called attaining the holy life, able to exhaust all perceptions.</p></td><td lang="lzh" class="agama-chi"><p>「云何知觉？谓有三觉：乐觉、苦觉、不苦不乐觉，是谓知觉。云何知觉所因生？谓更乐也。因更乐则便有觉，是谓知觉所因生。云何知觉有报？谓爱也。爱为觉报，是谓知觉有报。云何知觉胜如？谓比丘者，觉乐觉时便知觉乐觉，觉苦觉时便知觉苦觉，觉不苦不乐觉时便知觉不苦不乐觉，乐身、苦身、不苦不乐身，乐心、苦心、不苦不乐心，乐食、苦食、不苦不乐食，乐无食、苦无食、不苦不乐无食，乐欲、苦欲、不苦不乐欲，乐无欲、苦无欲觉、不苦不乐无欲觉时，便知觉不苦不乐无欲觉，是谓知觉胜如。云何知觉灭尽？谓更乐灭，觉便灭，是谓知觉灭尽。云何知觉灭道？谓八支圣道，正见乃至正定为八，是谓知觉灭道。若比丘如是知觉，知觉所因生，知觉有报，知觉胜如，知觉灭尽，知觉灭道者，是谓达梵行，能尽一切觉。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know the conceptualizations? There are four conceptualizations. A bhikṣu knows the small conceptualization, the great conceptualization, the immeasurable conceptualization, and the conceptualization of the sphere of nothingness. This is called knowing the conceptualizations. How does one know the causes of the conceptualizations? It is contact. Because of contact, there are then conceptualizations. This is called knowing the causes of the conceptualizations. How does one know the results of the conceptualizations? It is speech. According to the conceptualizations, one speaks. This is called knowing the results of the conceptualizations. How does one know the superiority of the conceptualizations? Some conceptualizations conceptualize form, some conceptualizations conceptualize sound, some conceptualizations conceptualize smell, some conceptualizations conceptualize taste, and some conceptualizations conceptualize touch. This is called knowing the superiority of the conceptualizations. How does one know the complete cessation of the conceptualizations? When contact ceases, the conceptualizations also cease. This is called knowing the complete cessation of the conceptualizations. How does one know the path to the cessation of the conceptualizations? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of the conceptualizations. If a bhikṣu knows the conceptualizations in this way, knows the causes of the conceptualizations, knows the results of the conceptualizations, knows the superiority of the conceptualizations, knows the complete cessation of the conceptualizations, and knows the path to the cessation of the conceptualizations, this is called attaining the holy life, able to exhaust all conceptualizations.</p></td><td lang="lzh" class="agama-chi"><p>「云何知想？谓有四想。比丘者，小想亦知，大想亦知，无量想亦知，无所有处想亦知，是谓知想。云何知想所因生？谓更乐也。因更乐则便有想，是谓知想所因生。云何知想有报？谓说也。随其想便说，是谓知想有报。云何知想胜如？谓或有想想色，或有想想声，或有想想香，或有想想味，或有想想触，是谓知想胜如。云何知想灭尽？谓更乐灭想便灭，是谓知想灭尽。云何知想灭道？谓八支圣道，正见乃至正定为八，是谓知想灭道。若比丘如是知想，知想所因生，知想有报，知想胜如，知想灭尽，知想灭道者，是谓达梵行，能尽一切想。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know the desires? There are five kinds of desirable, delightful, beautiful, desirable, and very enjoyable objects. What are the five? The eye knows forms, the ear knows sounds, the nose knows smells, the tongue knows tastes, and the body knows touches. This is called knowing the desires. How does one know the causes of the desires? It is contact. Because of contact, there are then desires. This is called knowing the causes of the desires. How does one know the results of the desires? It is according to the kind of desire, one delights in and abides in attachment. Because of this, one receives the results of the meritorious, unmeritorious, and immovable realms. This is called knowing the results of the desires. How does one know the superiority of the desires? Some desires desire form, some desires desire sound, some desires desire smell, some desires desire taste, and some desires desire touch. This is called knowing the superiority of the desires. How does one know the complete cessation of the desires? When contact ceases, the desires also cease. This is called knowing the complete cessation of the desires. How does one know the path to the cessation of the desires? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of the desires. If a bhikṣu knows the desires in this way, knows the causes of the desires, knows the results of the desires, knows the superiority of the desires, knows the complete cessation of the desires, and knows the path to the cessation of the desires, this is called attaining the holy life, able to exhaust all desires.</p></td><td lang="lzh" class="agama-chi"><p>「云何知欲？谓有五欲功德，可爱、可喜、美色、欲想应、甚可乐。云何为五？眼知色，耳知声，鼻知香，舌知味，身知触，是谓知欲。云何知欲所因生？谓更乐也。因更乐则便有欲，是谓知欲所因生。云何知欲有报？谓随欲种爱乐著而住彼，因此受报有福处、无福处、不动处，是谓知欲有报。云何知欲胜如？谓或有欲欲色，或有欲欲声，或有欲欲香，或有欲欲味，或有欲欲触，是谓知欲胜如。云何知欲灭尽？谓更乐灭欲便灭，是谓知欲灭尽。云何知欲灭道？谓八支圣道，正见乃至正定为八，是谓知欲灭道。若比丘如是知欲，知欲所因生，知欲受报，知欲胜如，知欲灭尽，知欲灭道者，是谓达梵行，能尽一切欲。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know the actions? There are two kinds of actions: intended actions and already intended actions. This is called knowing the actions. How does one know the causes of the actions? It is contact. Because of contact, there are then actions. This is called knowing the causes of the actions. How does one know the results of the actions? There are actions that are black with black results, actions that are white with white results, actions that are black and white with black and white results, and actions that are neither black nor white with no results, and actions that are exhausted. This is called knowing the results of the actions. How does one know the superiority of the actions? Some actions lead to rebirth in hell, some actions lead to rebirth as an animal, some actions lead to rebirth as a hungry ghost, some actions lead to rebirth in the heavens, and some actions lead to rebirth as a human. This is called knowing the superiority of the actions. How does one know the complete cessation of the actions? When contact ceases, the actions also cease. This is called knowing the complete cessation of the actions. How does one know the path to the cessation of the actions? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of the actions. If a bhikṣu knows the actions in this way, knows the causes of the actions, knows the results of the actions, knows the superiority of the actions, knows the complete cessation of the actions, and knows the path to the cessation of the actions, this is called attaining the holy life, able to exhaust all actions.</p></td><td lang="lzh" class="agama-chi"><p>「云何知业？谓有二业：思、已思业，是谓知业。云何知业所因生？谓更乐也。因更乐则便有业，是谓知业所因生。云何知业有报？谓或有业黑、有黑报，或有业白、有白报，或有业黑白、黑白报，或有业不黑不白、无报，业业尽，是谓知业有报。云何知业胜如？谓或有业生地狱中，或有业生畜生中，或有业生饿鬼中，或有业生天上，或有业生人间，是谓知业胜如。云何知业灭尽？谓更乐灭业便灭，是谓知业灭尽。云何知业灭道？谓八支圣道，正见乃至正定为八，是谓知业灭道。若比丘如是知业，知业所因生，知业有报，知业胜如，知业灭尽，知业灭道者，是谓达梵行，能尽一切业。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does one know suffering? It is the suffering of birth, old age, sickness, death, being with what is disliked, being separated from what is loved, not getting what one desires, and the suffering of the five aggregates. This is called knowing suffering. How does one know the causes of suffering? It is craving. Because of craving, there is suffering. This is called knowing the causes of suffering. How does one know the results of suffering? There is suffering that is slight and slow to cease, suffering that is slight and quick to cease, suffering that is intense and slow to cease, and suffering that is intense and quick to cease. The end of suffering is called knowing the results of suffering. How does one know the superiority of suffering? It is that the ignorant and foolish common person, not encountering a good friend, not practicing the holy Dharma, experiences the most intense and heavy suffering in the body, and is about to die. They come out of this and seek it elsewhere. There are śramaṇas and brāhmaṇas who uphold one mantra, or two, three, four, or many mantras, or uphold a hundred mantras. They treat my suffering like this. Seeking suffering in this way, practicing suffering in this way, the end of suffering is called knowing the superiority of suffering. How does one know the complete cessation of suffering? When craving ceases, suffering also ceases. This is called knowing the complete cessation of suffering. How does one know the path to the cessation of suffering? It is the eightfold noble path, namely right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration. This is called knowing the path to the cessation of suffering. If a bhikṣu knows suffering in this way, knows the causes of suffering, knows the results of suffering, knows the superiority of suffering, knows the complete cessation of suffering, and knows the path to the cessation of suffering, this is called attaining the holy life, able to exhaust all suffering.</p></td><td lang="lzh" class="agama-chi"><p>「云何知苦？谓生苦、老苦、病苦、死苦、怨憎会苦、爱别离苦、所求不得苦、略五盛阴苦，是谓知苦。云何知苦所因生？谓爱也。因爱生苦，是谓知苦所因生。云何知苦有报？谓或有苦微迟灭，或有苦微疾灭，或有苦盛迟灭，或有苦盛疾灭，苦苦尽，是谓知苦有报。云何知苦胜如？谓不多闻愚痴凡夫，不遇善知识，不御圣法法，身生觉极苦甚重苦，命将欲绝，出此从外，更求于彼。或有沙门、梵志，持一句呪，或二、三、四、多句呪，或持百句呪，彼治我苦，如是因求生苦，因习生苦，苦灭，是谓知苦胜如。云何知苦灭尽？谓爱灭苦便灭，是谓知苦灭尽。云何知苦灭道？谓八支圣道，正见乃至正定为八，是谓知苦灭道。若比丘如是知苦，知苦所因生，知苦有报，知苦胜如，知苦灭尽。知苦灭道者，是谓达梵行，能尽一切苦。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. Those bhikṣus, having heard the Buddha&#x27;s words, rejoiced and practiced accordingly.</p></td><td lang="lzh" class="agama-chi"><p>佛说如是。彼诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Madhyamāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

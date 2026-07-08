@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.48 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.48</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 48</span><span class="mirror-right">（四八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn11.7.html">SN 11.7</a> / <a href="../parallels/sa1120.html">SĀ 1120</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, Śakra, King of the Devas, came to where the Buddha was. When he was about to return, he requested to receive one precept. What was this one precept? &quot;If I return to my palace and see my enemies, even if they come to harm me, I will never harm them in return.&quot; When Vimalamitra heard that Śakra had taken such a precept, he took a sharp sword and waited for him on the road. When Śakra heard that the asura was waiting for him on the road with a sword, he said to the asura from afar, &quot;Stop! Stop! You are now binding yourself.&quot; Vimalamitra said to Śakra, &quot;You have taken a precept from the Buddha, saying: &#x27;If I return to my palace and see my enemies, even if they harm me, I will never do evil to them in return.&#x27; How can you not take such a precept?&quot; Śakra replied, &quot;Although I have taken the precept, I said to you to stop and you are now binding yourself. These words do not violate the precept.&quot; Vimalamitra said, &quot;Kauśika, let me go!&quot; Śakra said, &quot;You must make an oath that you will not be hostile towards me again, and then I will let you go.&quot; Vimalamitra then made an oath, saying:</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，帝释来诣佛所，将欲还时，请受一戒。何谓一戒？「若我还宫，见诸怨憎，设来害我，我于彼所，终不加害。」毘摩质多罗既闻帝释持如是戒，便捉利剑，于路而待。时，释提桓因闻阿修罗在于路侧捉剑而待，遥语阿修罗言：「止！止！汝今自缚。」毘摩质多语帝释言：「汝于佛所，受一戒言：『若我还宫，见诸怨憎，设彼害我，我于彼所，终不加恶，岂可不受如是戒耶？』」帝释答言：「我虽受戒，语汝住住，汝今自缚。如是之言，于戒无犯。」毘摩质多罗言：「憍尸迦放我！」帝释语言：「汝作呪誓，更于我所，不为怨疾，我当放汝。」毘摩质多罗即说誓言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Greed, anger, false speech, and slandering the sages - may I receive such evil retribution.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「贪瞋妄语谤贤圣，　　如是恶报使我得。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, King of the Devas, heard this oath and said to Vimalamitra, &quot;I will now let you go.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，帝释闻斯誓已，即语毘摩质多罗言：「我今放汝。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śakra, King of the Devas, returned to where the Buddha was, bowed his head at the Buddha&#x27;s feet, and said to the Buddha, &quot;World-Honored One! Vimalamitra heard me accept the precepts and immediately took a sharp sword, waiting on the side of the road, intending to harm me. At that time, I spoke to the asura from afar, saying, &#x27;Stop! Stop! You are now binding yourself.&#x27; Vimalamitra then said to me, &#x27;If I return to the palace and see those I hate, and they come to harm me, I will not retaliate against them. How could I not accept such precepts?&#x27; I then replied, &#x27;Although I have accepted the precepts, I was only telling you to stop. You are now binding yourself. Such words do not violate the precepts.&#x27; Vimalamitra then said to me, &#x27;Kauśika! Release me!&#x27; I then said to him, &#x27;You should make a solemn vow, never to give rise to hatred towards me again, and I will release you.&#x27; At that time, Vimalamitra, having heard my words, made a solemn vow, saying:</p></td><td lang="lzh" class="agama-chi"><p>释提桓因还至佛所，顶礼佛足，白佛言：「世尊！毘摩质多罗闻我受戒，即捉利剑，在于路侧，伺图于我。时，我遥语阿修罗言：『止！止！汝今自缚。』毘摩质多即语我言：『汝于佛所受于一戒，若我还宫，见有怨憎，设来害我，我于彼所，终不加恶，岂可不受如是戒耶？』我即答言：『我虽受戒，但语汝住，汝今自缚。如是之言，于戒无犯。』毘摩质多罗即语我言：『憍尸迦！放我！』我即语言：『汝可重誓，更于我所，莫生憎疾，我当放汝。』时，毘摩质多罗闻我语已，即说誓言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Greed, anger, false speech, and slandering the sages - may I receive such evil retribution.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『贪瞋妄语谤贤圣，　　如是恶报使我得。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I heard his vow and immediately released him.&quot; Śakra, King of the Devas, further addressed the Buddha, saying, &quot;This asura, having made a solemn vow, will he not give rise to hatred and enmity from now on?&quot; The Buddha told Śakra, King of the Devas, &quot;Even if the asura had not made a vow, he would still not do evil, let alone after making a vow.</p></td><td lang="lzh" class="agama-chi"><p>「我闻其誓，即放令去。」帝释复白佛言：「此阿修罗作重誓已，从今已后，更不作于怨憎恶耶？」佛告帝释：「阿修罗设不作誓，犹不为恶，况作誓已？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, King of the Devas, having heard the Buddha&#x27;s teaching, was overjoyed. He immediately disappeared from his seat and returned to his heavenly palace.</p></td><td lang="lzh" class="agama-chi"><p>尔时，帝释闻佛所说，踊跃欢喜，即于坐没，寻还天宫。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>MĀ 212 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>MĀ 212</h2>
+<div class="mirror hgroup">
+<p class="division">
+<span class="mirror-left latin">Madhyamāgama</span>
+<span class="mirror-right">中阿含经</span></p>
+<p class="mirror-row">
+<span class="mirror-left latin">Chapter 18</span>
+<span class="mirror-right">例品</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">212. </span>
+<span class="mirror-right">（二一二）一切智经</span></h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn90.html">MN 90</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>omniscience, adornment of the Dharma, Vihāra<br/>first, love, birth, and eight cities<br/>Aniruddha, two, views, arrow, and simile proportion, last</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>一切智、法严　　鞞诃、第一得爱生、及八城　　阿那律陀二诸见、箭与喻　　比例最在后</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I have heard thus:</p></td><td lang="lzh" class="agama-chi"><p>我闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was traveling in Uttarakuru, staying in a forest of thorns.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游欝头随若，在普棘刺林。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit of Kosala heard that the Śramaṇa Gautama was traveling in Uttarakuru, staying in a forest of thorns. Having heard this, King Prasenajit of Kosala told a man, &quot;Go to where the Śramaṇa Gautama is and ask on my behalf about his well-being, health, freedom from illness, lightness of rising, and strength. Say this: &#x27;King Prasenajit of Kosala asks about your well-being, health, freedom from illness, lightness of rising, and strength.&#x27; Also say this: &#x27;King Prasenajit of Kosala wishes to come and see you.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，拘萨罗王波斯匿，闻沙门瞿昙游欝头随若，在普棘刺林，拘萨罗王波斯匿闻已，告一人曰：「汝往诣沙门瞿昙所，为我问讯圣体康强，安快无病，起居轻便，气力如常耶？作如是语：『拘萨罗王波斯匿问讯圣体康强，安快无病，起居轻便，气力如常耶？』又复语曰：『拘萨罗王波斯匿欲来相见。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>That man, having received the instruction, went to where the Buddha was and exchanged greetings. He then sat to one side and said, &quot;Gautama! King Prasenajit of Kosala asks about your well-being, health, freedom from illness, lightness of rising, and strength. King Prasenajit of Kosala wishes to come and see you.&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼人受教，往诣佛所，共相问讯，却坐一面，白曰：「瞿昙！拘萨罗王波斯匿问讯圣体康强，安快无病，起居轻便，气力如常耶？拘萨罗王波斯匿欲来相见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Now King Prasenajit of Kosala is at ease and happy. Gods, humans, asuras, gandharvas, rākṣasas, and other beings are all at ease and happy. If King Prasenajit of Kosala wishes to come, he may do so at his convenience.&quot; At that time, the messenger heard what the Buddha said, accepted and memorized it well, rose from his seat, circumambulated three times, and departed.</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「今拘萨罗王波斯匿安隐快乐，今天及人、阿修罗、揵塔和、罗刹及余若干身安隐快乐。拘萨罗王波斯匿若欲来者，自可随意。」彼时，使人闻佛所说，善受持诵，即从坐起，绕三匝而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda was standing behind the World-Honored One, holding a whisk to attend to the Buddha. After the messenger left, the World-Honored One turned around and said, &quot;Ānanda! Come, let us go to the large eastern building. Open the windows, close the doors, and stay in that secluded place. Today King Prasenajit of Kosala is single-minded and undisturbed, wishing to listen to and receive the Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者阿难住世尊后，执拂侍佛。使人去后，于是世尊回顾告曰：「阿难！汝来共诣东向大屋，开窓闭户，住彼密处。今日拘萨罗王波斯匿一心无乱，欲听受法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Yes, World-Honored One.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难白曰：「唯然。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then the World-Honored One led Venerable Ānanda to that large eastern building. He opened the windows, closed the doors, arranged a seat in a secluded place, spread out his sitting mat, and sat cross-legged.</p></td><td lang="lzh" class="agama-chi"><p>于是，世尊将尊者阿难至彼东向大屋，开窓闭户，密处布座，敷尼师檀，结跏趺坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the messenger returned to King Prasenajit of Kosala and said, &quot;Your Majesty! I have already informed Śramaṇa Gautama. Śramaṇa Gautama is now waiting for Your Majesty. I only wish that Your Majesty will know the time yourself.&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼时，使人还诣拘萨罗王波斯匿所，白曰：「天王！我已通沙门瞿昙！沙门瞿昙今待天王，唯愿天王自当知时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala told his charioteer, &quot;You should prepare the carriage. I now wish to go and see Śramaṇa Gautama.&quot; The charioteer received the order and immediately prepared the carriage.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿告御者曰：「汝可严驾，我今欲往见沙门瞿昙。」御者受教，即便严驾。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, when the sisters Xian and Yue were having a meal with King Prasenajit of Kosala, they heard that King Prasenajit of Kosala was going to see the Buddha today. They said, &quot;Great King! If you are going to see the World-Honored One today, please bow on our behalf and ask about the well-being of the World-Honored One&#x27;s body, whether it is healthy, strong, without illness, and whether he is at ease. Please say this: &#x27;The sisters Xian and Yue bow to the World-Honored One and ask about the well-being of the World-Honored One&#x27;s body, whether it is healthy, strong, without illness, and whether he is at ease.&#x27;&quot; King Prasenajit of Kosala silently accepted the request of the sisters Xian and Yue.</p></td><td lang="lzh" class="agama-chi"><p>尔时，贤及月姉妹与拘萨罗王波斯匿共坐食时，闻今日拘萨罗王波斯匿当往见佛，白曰：「大王！若今往见世尊者，愿为我等稽首世尊，问讯圣体康强，安快无病，起居轻便，气力如常耶？作如是语：『贤及月姉妹稽首世尊，问讯圣体康强，安快无病，起居轻便，气力如常耶？』」拘萨罗王波斯匿为贤及月姉妹默然而受。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the charioteer had finished preparing the carriage and said, &quot;Your Majesty! The carriage is ready. Please do as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼时，御者严驾已讫，白曰：「天王！严驾已办，随天王意。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the king, having heard this, immediately mounted the carriage and left Utpala Grove, going to the forest of thorns.</p></td><td lang="lzh" class="agama-chi"><p>时，王闻已，即便乘车，从欝头随若出，往至普棘刺林。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, outside the forest of thorns, many bhikṣus were walking in the open air. King Prasenajit of Kosala went to where the bhikṣus were and asked, &quot;Venerable ones! Where is the śramaṇa Gautama now? I wish to go and see him.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，普棘刺林门外众多比丘露地经行，拘萨罗王波斯匿往诣诸比丘所，问曰：「诸贤！沙门瞿昙今在何处？我欲往见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Great King! The large eastern building has windows open and doors closed. The World-Honored One is inside. If the Great King wishes to see him, he may go to that building. After standing outside, he may cough and knock on the door. If the World-Honored One hears, he will surely open the door.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘答曰：「大王！彼东向大屋开窓闭户，世尊在中，大王欲见者，可诣彼屋，在外住已，謦欬敲户，世尊闻者，必为开户。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala then got off the carriage, surrounded by his retinue, and walked to the large eastern building. After arriving, he stood outside, coughed, and knocked on the door. The World-Honored One heard and immediately opened the door. King Prasenajit of Kosala then entered the building, went before the Buddha, and said, &quot;Gautama! The virtuous sister Candrā and her sister pay homage to the World-Honored One, inquiring about the well-being of the holy body, whether it is strong, healthy, free from illness, and whether the daily activities are light and the strength is as usual?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿即便下车，眷属围绕，步往至彼东向大屋，到已住外，謦欬敲户，世尊闻已，即为开户，拘萨罗王波斯匿便入彼屋，前诣佛所，白曰：「瞿昙！贤及月姉妹稽首世尊，问讯圣体康强，安快无病，起居轻便，气力如常耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One asked the king, &quot;Are there no other messengers for the virtuous sister Candrā and her sister?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊问王：「贤及月姉妹更无人使耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala said, &quot;Gautama! You should know that today the virtuous sister Candrā and her sister ate with me. When they heard that I was about to go see the Buddha, they said, &#x27;Great King! If you go to see the Buddha, please pay homage to the World-Honored One on our behalf and inquire about the well-being of the holy body, whether it is strong, healthy, free from illness, and whether the daily activities are light and the strength is as usual.&#x27; That is why I said to the World-Honored One, &#x27;The virtuous sister Candrā and her sister pay homage to the World-Honored One, inquiring about the well-being of the holy body, whether it is strong, healthy, free from illness, and whether the daily activities are light and the strength is as usual.&#x27; Gautama! The virtuous sister Candrā and her sister pay homage to the World-Honored One, inquiring about the well-being of the holy body, whether it is strong, healthy, free from illness, and whether the daily activities are light and the strength is as usual.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿白曰：「瞿昙！当知今日贤及月姉妹我共坐食，闻我今当欲往见佛，便白曰：『大王！若往见佛者，当为我等稽首世尊！问讯圣体康强，安快无病，起居轻便，气力如常耶？』故如是白世尊：『贤及月姉妹稽首世尊，问讯圣体康强，安快无病，起居轻便，气力如常耶？』瞿昙！彼贤及月稽首世尊，问讯圣体康强，安快无病，起居轻便，气力如常耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great King! The virtuous sister Candrā and her sister are now at peace and happy, as are the gods, asuras, gandharvas, rākṣasas, and other beings of various forms.</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！今贤及月姉妹安隐快乐，今天及人、阿修罗、揵塔和、罗刹及余若干身安隐快乐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then King Prasenajit of Kosala exchanged greetings with the Buddha and sat to one side. He said, &quot;Gautama! I have a question I would like to ask. Please allow me to speak.&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，拘萨罗王波斯匿与佛共相问讯，却坐一面，白曰：「瞿昙！我欲有所问，听乃敢陈？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great King! Ask whatever you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问者，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala then asked, &quot;Gautama! I have heard the śramaṇa Gautama say, &#x27;In the past there was not, in the future there will not be, and in the present there is not. If there are any other śramaṇas or brāhmaṇas who know everything and see everything,&#x27; Gautama! Do you remember saying this?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿便问曰：「瞿昙！我闻沙门瞿昙作如是说：『本无，当不有，今现亦无，若有余沙门、梵志一切知、一切见者。』瞿昙！忆如是说耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great King! I do not remember saying, &#x27;In the past there was not, in the future there will not be, and in the present there is not. If there are any other śramaṇas or brāhmaṇas who know everything and see everything.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！我不忆作如是说：『本无，当不有，今现亦无，若有余沙门、梵志一切知、一切见者。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, General Vīra was standing behind King Prasenajit of Kosala, holding a whisk to fan the king. Then King Prasenajit of Kosala turned to General Vīra and said, &quot;The other day when the king was sitting with the assembly, who was the first to say that the śramaṇa Gautama said, &#x27;In the past there was not, in the future there will not be, and in the present there is not. If there are any other śramaṇas or brāhmaṇas who know everything and see everything&#x27;?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，鞞留罗大将住在拘萨罗王波斯匿后，执拂拂王，于是拘萨罗王波斯匿回顾告鞞留罗大将曰：「前日王共大众坐，谁最前说沙门瞿昙作如是说：『本无，当不有，今现亦无，若有余沙门、梵志一切知、一切见者。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>General Vīra replied, &quot;Your Majesty! The young man Kīrti was the first to say that.</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将答曰：「天王！有想年少吉祥子前作是说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala told someone, &quot;Go to the young man Kīrti and tell him, &#x27;King Prasenajit of Kosala summons you!&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，告一人曰：「汝往至想年少吉祥子所，作如是语：『拘萨罗王波斯匿呼汝！』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The man, having received the order, went to the young man Kīrti and said, &quot;Young man! King Prasenajit of Kosala summons you.&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼人受教，即往想年少吉祥子所，作如是语：「年少！拘萨罗王波斯匿呼汝。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>After the man left, King Prasenajit of Kosala said to the World-Honored One, &quot;Shakyamuni, are there different teachings and understandings? Does Shakyamuni remember what was said?&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼人去后。于是，拘萨罗王波斯匿白世尊曰：「沙门瞿昙！颇有异说异受？沙门瞿昙忆所说耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great King! I remember saying this: &#x27;In the past, there was not, in the future, there will not be, and in the present, there is not. If there were other shamans and brahmans who knew everything at once and saw everything at once.&#x27; Great King! I remember saying this.</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！我忆曾如是说：『本无，当不有，今现亦无，若有余沙门、梵志一时知一切，一时见一切。』大王！我忆如是说也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala exclaimed, &quot;The teachings of Shakyamuni are like those of a teacher, the teachings of Shakyamuni are like those of a good teacher. I wish to ask further questions. May I ask them?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「沙门瞿昙所说如师，沙门瞿昙所说如善师。欲更有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great King! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! Are there distinctions among the four classes of kshatriyas, brahmins, vaishyas, and shudras?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！此有四种，刹利、梵志、居士、工师，为有胜如、有差别耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;There are distinctions among the four classes of kshatriyas, brahmins, vaishyas, and shudras. The kshatriya and brahmin classes are the most virtuous among humans, while the vaishya and shudra classes are the least virtuous. These are the distinctions among the four classes of kshatriyas, brahmins, vaishyas, and shudras.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「此有四种，刹利、梵志、居士、工师，此有胜如、有差别也。刹利、梵志种，此于人间为最上德，居士、工师种，此于人间为下德也。此有四种，刹利、梵志、居士、工师，是谓胜如、是谓差别。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala, having heard this, exclaimed, &quot;The words of the śramaṇa Gautama are like those of a teacher, the words of the śramaṇa Gautama are like those of a good teacher.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「沙门瞿昙所说如师，沙门瞿昙所说如善师。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala said, &quot;Gautama! I not only ask about the meaning of the present world, but also about the meaning of the next world. May I ask?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿白曰：「瞿昙！我不但问于现世义，亦复欲问于后世义，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great King! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! Are there distinctions among the four classes - kshatriyas, brahmins, vaishyas, and shudras - in the next world?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！此有四种，刹利、梵志、居士、工师，此有胜如、有差别于后世耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;There are distinctions among the four classes - kshatriyas, brahmins, vaishyas, and shudras - in the next world. If the four classes - kshatriyas, brahmins, vaishyas, and shudras - accomplish these five factors of cessation, they will definitely attain the good teacher, the Tathāgata, the Arhat, the Perfectly Enlightened One, and will definitely attain what is agreeable, without what is disagreeable, and will also attain meaning, benefit, peace, and happiness for a long time. What are the five? The noble disciple of much learning has faith in the Tathāgata, which is firmly established and cannot be taken away by any shramanas, brahmins, gods, demons, Brahmas, or others in the world. This is called the first factor of cessation. Furthermore, great king! The noble disciple of much learning has little illness and is healthy, with a balanced diet, neither hot nor cold, and is comfortable and non-contentious. This is called the second factor of cessation. Furthermore, great king! The noble disciple of much learning is without deceit and guile, straightforward, and appears as he truly is to the World-Honored One and the virtuous practitioners. This is called the third factor of cessation. Furthermore, great king! The noble disciple of much learning always practices diligence, abandoning evil and unwholesome things, cultivating wholesome dharmas, always arousing his own mind, single-mindedly and firmly, for the sake of wholesome roots, not abandoning skillful means. This is called the fourth factor of cessation. Furthermore, great king! The noble disciple of much learning cultivates wisdom, observing the arising and ceasing of dharmas, attaining such wisdom, with the illumination of noble wisdom, discerning and understanding, with the right ending of suffering. This is called the fifth factor of cessation. If the four classes - kshatriyas, brahmins, vaishyas, and shudras - accomplish these five factors of cessation, they will definitely attain the good teacher, the Tathāgata, the Arhat, the Perfectly Enlightened One, and will definitely attain what is agreeable, without what is disagreeable, and will also attain meaning, benefit, peace, and happiness for a long time. This is the distinction among the four classes - kshatriyas, brahmins, vaishyas, and shudras - in the next world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「此有四种，刹利、梵志、居士、工师，此有胜如、有差别谓后世也。此有四种，刹利、梵志、居士、工师，若成就此五断支，必得善师如来、无所著、正尽觉，必得可意，无不可意，亦于长夜得义饶益，安隐快乐。云何为五？多闻圣弟子信著如来，根生定立，无能夺者，谓沙门、梵志、天及魔、梵及余世间，是谓第一断支。复次，大王！多闻圣弟子少病无病，成就等食道，不热不冷，正乐不诤，谓食饮消、正安隐消，是谓第二断支。复次，大王！多闻圣弟子无谄无诳、质直，现如真世尊及诸梵行，是谓第三断支。复次，大王！多闻圣弟子常行精进，断恶不善，修诸善法，恒自起意，专一坚固，为诸善本，不舍方便，是谓第四断支。复次，大王！多闻圣弟子修行智慧，观兴衰法，得如此智，圣慧明达，分别晓了，以正尽苦，是谓第五断支。此有四种，刹利、梵志、居士、工师，彼若成就此五断支，必得善师如来、无所著、正尽觉，必得可意，无不可意，亦于长夜得义饶益，安隐快乐，此有四种，刹利、梵志、居士、工师，是谓胜如、是谓差别于后世也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala, having heard this, exclaimed, &quot;The words of the śramaṇa Gautama are like those of a teacher, the words of the śramaṇa Gautama are like those of a good teacher. I wish to ask further, may I ask?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「沙门瞿昙所说如师，沙门瞿昙所说如善师。欲更有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great king! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! There are these four castes: kshatriyas, brahmins, vaishyas, and shudras. Are there distinctions in their practice of the path?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！此有四种，刹利、梵志、居士、工师，此有胜如、此有差别于断行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;There are these four castes: kshatriyas, brahmins, vaishyas, and shudras. There are distinctions in their practice of the path. Great king! What do you think? If what is to be eliminated by faith is eliminated by lack of faith, it is impossible. If what is to be eliminated by few illnesses is eliminated by many illnesses, it is impossible. If what is to be eliminated by non-deceitfulness and non-deceptiveness is eliminated by deceitfulness and deceptiveness, it is impossible. If what is to be eliminated by diligence is eliminated by laziness, it is impossible. If what is to be eliminated by wisdom is eliminated by ignorance, it is impossible.</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「此有四种，刹利、梵志、居士、工师，此有胜如、此有差别于断行也。大王！于意云何？若信者所断，是不信断者，终无是处。若少病者所断，是多病断者，终无是处。若不谄不诳者所断，是谄诳断者，终无是处。若精勤者所断，是懈怠断者，终无是处。若智慧者所断，是恶慧断者，终无是处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>It is like the four kinds of drivers: elephant drivers, horse drivers, ox drivers, and human drivers. Among them, two kinds of drivers are untamable and unmanageable, while two kinds are tamable and manageable. Great king! What do you think? If those two untamable and unmanageable drivers were to come and tame and manage the land, and accept the duties of driving, it is impossible. If those two tamable and manageable drivers were to come and tame and manage the land, and accept the duties of driving, it is possible. In this way, great king! What do you think? If what is to be eliminated by faith is eliminated by lack of faith, it is impossible. If what is to be eliminated by few illnesses is eliminated by many illnesses, it is impossible. If what is to be eliminated by non-deceitfulness and non-deceptiveness is eliminated by deceitfulness and deceptiveness, it is impossible. If what is to be eliminated by diligence is eliminated by laziness, it is impossible. If what is to be eliminated by wisdom is eliminated by ignorance, it is impossible.</p></td><td lang="lzh" class="agama-chi"><p>「犹如四御，象御、马御、牛御、人御，彼中二御不可调、不可御，二御可调、可御。大王！于意云何？若此二御不可调、不可御，彼来调地、御地，受御事者，终无是处。若彼二御可调、可御，来至调地、御地，受御事者，必有是处。如是，大王！于意云何？若信者所断，是不信断耶？终无是处。若少病者所断，是多病断耶？终无是处。若不谄不诳者所断，是谄诳断耶？终无是处。若精勤者所断，是懈怠断耶？终无是处。若智慧者所断，是恶慧断耶？终无是处。如是此四种，刹利、梵志、居士、工师，是谓胜如、是谓差别于断行也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala, having heard this, exclaimed, &quot;The words of the ascetic Gotama are like those of a teacher, the words of the ascetic Gotama are like those of a good teacher. I wish to ask further questions. May I ask them?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「沙门瞿昙所说如师，沙门瞿昙所说如善师。欲更有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great king! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! Are there four kinds of people - kshatriyas, brahmins, householders, and artisans - who are superior to each other and have differences in terms of cutting off?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！此有四种，刹利、梵志、居士、工师，此有胜如、此有差别，谓断耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;There are four kinds of people - kshatriyas, brahmins, householders, and artisans - they are equal in cutting off, there is no superiority or inferiority, no difference in cutting off. Great king! It is like a kshatriya youth coming from the east, taking dry sandalwood wood as kindling, rubbing it to produce fire; a brahmin youth coming from the south, taking dry sandalwood wood as kindling, rubbing it to produce fire; a householder youth coming from the west, taking dry sandalwood wood as kindling, rubbing it to produce fire; a craftsman youth coming from the north, taking dry palmyra wood as kindling, rubbing it to produce fire. What do you think, great king? If those people of various kinds take various kinds of wood as kindling and rub them to produce fire, and then someone puts dry grass and wood on it, causing smoke, flames, and color to arise, great king! What differences can be said about the smoke, flames, and color?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「此有四种，刹利、梵志、居士、工师，彼等等断，无有胜如、无有差别于断也。大王！犹如东方刹利童子来，彼取干娑罗木作火母，攒攒生火；南方梵志童子来，彼取干娑罗木作火母，钻攒生火；西方居士童子来，彼取干栴檀木作火母，钻攒生火；北方工师童子来，彼取干钵投摩木作火母，钻攒生火。大王！于意云何？谓彼若干种人持若干种木作火母，钻攒生火，彼中或有人著燥草木，生烟、生焰、生色。大王！于烟烟、焰焰、色色，说何等差别耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala replied, &quot;Gautama! If those people of various kinds take various kinds of wood as kindling and rub them to produce fire, and then someone puts dry grass and wood on it, causing smoke, flames, and color to arise, Gautama! I do not say that there are differences in the smoke, flames, and color.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿答曰：「瞿昙！谓彼若干种人取若干种木作火母，攒攒] cf.［丽】生火，彼中或有人著燥草木，生烟、生焰、生色。瞿昙！我不说烟烟、焰焰、色色有差别也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;So it is, great king! There are four kinds of people - kshatriyas, brahmins, householders, and artisans - they are all equal in cutting off, there is no superiority or inferiority, no difference in cutting off.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「如是。大王！此有四种，刹利、梵志、居士、工师，彼一切等等断，无有胜如、无有差别于断也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala exclaimed, &quot;What the śramaṇa Gautama says is like a teacher, what the śramaṇa Gautama says is like a good teacher. I wish to ask something further, may I ask?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「沙门瞿昙所说如师，沙门瞿昙所说如善师。欲更有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great king! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! Are there gods?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！有天耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One asked, &quot;Great king! Why do you ask about the existence of gods?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊问曰：「大王！何意问有天耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala replied, &quot;Gautama! If there are gods who quarrel and enjoy quarreling, they should come here. If there are gods who are free from quarreling and do not enjoy quarreling, they should not come here.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿答曰：「瞿昙！若有天有诤、乐诤者，彼应来此间。若有天无诤、不乐诤者，不应来此间。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general Vīra was standing behind King Prasenajit of Kosala, holding a whisk to fan the king. The great general Vīra said, &quot;Gautama! If there are gods who are free from quarreling and do not enjoy quarreling and do not come here, let us set aside those gods. If there are gods who quarrel and enjoy quarreling and come here, the śramaṇa Gautama will certainly say that those gods have superior merit and superior practice, and that these gods can defeat and expel those gods.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，鞞留罗大将住在拘萨罗王波斯匿后，执拂拂王，鞞留罗大将白曰：「瞿昙！若有天无诤、不乐诤者不来此间，且置彼天。若有天诤、乐诤来此间者，沙门瞿昙必说彼天福胜、梵行胜，此天得自在退彼天、遣彼天也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda was standing behind the World-Honored One, holding a whisk to attend to the Buddha. Then Venerable Ānanda thought, &quot;This great general Vīra is the son of King Prasenajit of Kosala, and I am the son of the World-Honored One. Now is the right time for sons to discuss together.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者阿难在世尊后，执拂侍佛。于是，尊者阿难作是念：「此鞞留罗大将是拘萨罗王波斯匿子，我是世尊子，今正是时，子子共论。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then Venerable Ānanda said to the great general Vīra, &quot;I want to ask you, please answer as you see fit. General! What do you think? Within the realm of King Prasenajit of Kosala, where his orders reach, is it because King Prasenajit of Kosala has superior merit and superior practice that he can defeat and expel others?&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，尊者阿难语鞞留罗大将曰：「我欲问汝，随所解答。大将！于意云何？拘萨罗王波斯匿所有境界，教令所及，拘萨罗王波斯匿福胜、梵行胜故，宁得自在退去、遣去耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The great general Vīra replied, &quot;Monk! If within the realm of King Prasenajit of Kosala, where his orders reach, it is because King Prasenajit of Kosala has superior merit and superior practice that he can defeat and expel others.&quot;</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将答曰：「沙门！若拘萨罗王波斯匿所有境界，教令所及，拘萨罗王波斯匿福胜、梵行胜故，得自在退去、遣去也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;General! What do you think? If it is not within the realm of King Prasenajit of Kosala, where his orders do not reach, can King Prasenajit of Kosala, because of his superior merit and superior practice, defeat and expel others by his own will?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「大将！于意云何？若非拘萨罗王波斯匿境界，教令所不及。拘萨罗王波斯匿福胜、梵行胜故，意得自在退彼、遣彼耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The great general Vīra replied, &quot;Monk! If it is not within the realm of King Prasenajit of Kosala, where his orders do not reach, it is because King Prasenajit of Kosala has superior merit and superior practice that he cannot defeat and expel others by his own will.&quot;</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将答曰：「沙门！若非拘萨罗王波斯匿境界，教令所不及，拘萨罗王波斯匿福胜、梵行胜故，不得自在退彼、遣彼也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda further asked, &quot;General! Have you heard of the Thirty-three Heavens?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难复问曰：「大将！颇闻有三十三天耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The great general Vīra replied, &quot;When King Prasenajit of Kosala was playing, he heard of the Thirty-three Heavens.&quot;</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将答曰：「我拘萨罗王波斯匿游戏时，闻有三十三天。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;General! What do you think? Because King Prasenajit of Kosala has greater merit and greater virtuous practice, can he freely defeat the Thirty-three Heavens and expel the Thirty-three Heavens?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「大将！于意云何？拘萨罗王波斯匿福胜、梵行胜故，宁得自在退彼三十三天，遣彼三十三天耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The great general Vīra replied, &quot;Monk! King Prasenajit of Kosala cannot even see the Thirty-three Heavens, let alone defeat and expel them. It is impossible to defeat and expel the Thirty-three Heavens.&quot;</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将答曰：「沙门！拘萨罗王波斯匿尚不能得见三十三天，况复退遣耶？退遣彼三十三天者，终无是处。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;It is the same, General! If there are gods who are free from disputes, who do not enjoy disputes, and do not come here, then those gods have greater merit and greater virtuous practice. If there are gods who are disputatious, who enjoy disputes, and come here, then those gods cannot even see those gods, let alone be expelled by those gods. It is impossible to expel them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「如是，大将！若有天无诤、不乐诤不来此间者，此天福胜、梵行胜。若有此天诤、乐诤来此间者，此天于彼天尚不能得见，况复天天遣退耶？若退遣彼者，终无是处。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then King Prasenajit of Kosala asked, &quot;Gautama! What is the name of this monk?&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，拘萨罗王波斯匿问曰：「瞿昙！此沙门名何等耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great King! This monk is named Ānanda, he is my attendant.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！此比丘名阿难，是我侍者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala exclaimed, &quot;What Ānanda has said is like the teacher, what Ānanda has said is like the good teacher. I wish to ask further, may I ask?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「阿难所说如师，阿难所说如善师。欲更有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Great King! Ask as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「大王！欲问，恣意所问。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Gautama! Is there a Brahma?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「瞿昙！颇有梵耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One asked, &quot;Great King! Why do you ask if there is a Brahma? Great King! If I were to establish the existence of Brahma, that Brahma would be pure.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊问曰：「大王！何意问有梵耶？大王！若我施设有梵，彼梵清净。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>While the World-Honored One was discussing this matter with King Prasenajit of Kosala, the messenger brought the young man Bhadra to King Prasenajit of Kosala and said, &quot;Your Majesty! The young man Bhadra has come here.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊与拘萨罗王波斯匿于其中间论此事时，彼使人将想年少吉祥子来还，诣拘萨罗王波斯匿所，白曰：「天王！想年少吉祥子已来在此。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala asked the young man Bhadra, &quot;Yesterday, when the king was sitting with the assembly, who spoke first about the śramaṇa Gautama saying, &#x27;There was no past, there will be no future, and there is nothing present. If there are any other śramaṇas or brāhmaṇas who know everything and see everything,&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，问想年少吉祥子曰：「前日王共大众会坐，谁最前说沙门瞿昙如是说：『本无，当不有，今现亦无，若有余沙门、梵志一切知、一切见。』耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The young man Bhadra replied, &quot;Your Majesty! The general Vīra spoke first.&quot;</p></td><td lang="lzh" class="agama-chi"><p>想年少吉祥子答曰：「天王！鞞留罗大将前说也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, the general Vīra said, &quot;Your Majesty! The young man Bhadra spoke first.&quot;</p></td><td lang="lzh" class="agama-chi"><p>鞞留罗大将闻已，白曰：「天王！此想年少吉祥子前说也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Thus, those two continued to argue back and forth. In the meantime, the charioteer prepared the chariot and went to King Prasenajit of Kosala, saying, &quot;Your Majesty! The chariot is ready. Please know the time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>如是彼二人更互共诤此论，于其中间彼御者即便严驾，至拘萨罗王波斯匿所，白曰：「天王！严驾已至，天王当知时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala said to the World-Honored One, &quot;I asked Gautama about all matters, and Gautama answered me about all matters. I asked Gautama about the four kinds of purity, and Gautama answered me about the four kinds of purity. I asked Gautama about what he had attained, and Gautama answered me about what he had attained. I asked Gautama about the existence of Brahma, and Gautama answered me about the existence of Brahma. If I were to ask about other matters, Gautama would certainly answer me about other matters. Gautama! I have many affairs now and wish to take my leave.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，白世尊曰：「我问瞿昙一切知事，沙门瞿昙答我一切知事。我问沙门瞿昙四种清净，沙门瞿昙答我四种清净。我问沙门瞿昙所得，沙门瞿昙答我所得。我问沙门瞿昙有梵，沙门瞿昙答我有梵。若我更问余事者，沙门瞿昙必答我余事。瞿昙！我今多事，欲还请辞。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;Great King! You will know the time yourself.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「大王！自当知时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard what the World-Honored One had said, King Prasenajit of Kosala accepted it well, recited it, rose from his seat, circumambulated the World-Honored One three times, and departed.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻世尊所说，善受持诵，即从座起，绕世尊三匝而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. King Prasenajit of Kosala, Venerable Ānanda, and all the great assembly, having heard the Buddha&#x27;s words, rejoiced and upheld them.</p></td><td lang="lzh" class="agama-chi"><p>佛说如是。拘萨罗王波斯匿、尊者阿难及一切大众，闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Madhyamāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

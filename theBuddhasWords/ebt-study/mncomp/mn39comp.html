@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 39 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 39: Mahā-assapura</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn38comp.html#content"></a><a id="next-sutta" href="./mn40comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn39.html">MN 39</a> / <a href="../../parallels/ma182.html">MĀ 182</a> / <a href="../../parallels/ea49.8.html">EĀ 49.8</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahā-assapura-sutta, the “greater discourse at Assapura”, explains what makes a monk a true “recluse”. This discourse has two Chinese parallels, found in the Madhyama-āgama and in the Ekottarika-āgama.<span class="note" id="mn39n253"><span class="details"><span class="p">[n.253] The parallels are <a href="../../parallels/ma182.html">MĀ 182</a> at T I 724c-725c and <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 801c-802b. <a href="../../parallels/ma182.html">MĀ 182</a> and <a href="../../parallels/ea49.8.html">EĀ 49.8</a> agree with <a href="../../mn/mn39.html">MN 39</a> on the location where the discourse was spoken. <a href="../../parallels/ma182.html">MĀ 182</a> has the title “discourse at Horse City”, 馬邑經, and thus agrees with <a href="../../mn/mn39.html">MN 39</a>, although without qualifying this discourse to be a “greater” one. A counterpart to the first section of <a href="../../mn/mn39.html">MN 39</a> can be found in a discourse quotation in the Chinese Udāna collection, T 212 at T IV 681a22. Skilling 1997a: 339 notes a reference to a version of the present discourse by the title dge sbyong, “recluse”, found in an uddāna preserved in Śamathadeva’s commentary on the Abhidharmakośabhāṣya at D (4094) mngon pa, ju 235b4 or Q (5595) tu 269a4.</span></span></span> A few lines of this discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn39n254"><span class="details"><span class="p">[n.254] SHT I 562 (p. 250, identified in Schlingloff 1967: 422; cf. also SHT VIII p. 176), and SHT VI 1392 (p. 113; cf. also SHT VIII p. 204). SHT I 562 parallels the assumption that nothing more needs to be done, found at MN I 271,26; SHT VI 1392 parallels the instruction to purify mental conduct at MN I 272,20; SHT I 562 and SHT VI 1392 also parallel part of the description of sense-restraint at MN I 273,3. For a discourse quotation in Abhidh-k-ṭ cf. below note 274.</span></span></span></p>
+<p>The three parallel versions agree in listing the qualities that make monks true recluses, although with some differences (see table 4.10). The Mahā-assapura-sutta begins by stipulating a sense of shame and fear of wrongdoing,<span class="note" id="mn39n255"><span class="details"><span class="p">[n.255] <a href="../../mn/mn39.html">MN 39</a> at MN I 271,22: hirottappena samannāgatā bhavissāmā ti.</span></span></span> a quality not mentioned in its parallels.<span class="note" id="mn39n256"><span class="details"><span class="p">[n.256] Another difference is that while in <a href="../../mn/mn39.html">MN 39</a> at MN I 271,13 and <a href="../../parallels/ma182.html">MĀ 182</a> at T I 724c23 the Buddha approaches this topic directly by telling the monks how their claim to being a recluse will not be in vain and offerings given to them will be fruitful, in <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 801c19 he instead differentiates between two types of recluse, the “practising recluse”, 習行沙門, and the “confirmed recluse”, 誓願沙門 (I follow the indication by Hirakawa 1997: 1077 that 誓願 can render <i>pratijñā</i>, which seems to fit the present case, as this recluse represents an arahant), after which Ānanda requests that the Buddha gives further explanations.</span></span></span> The Majjhima-nikāya version continues by highlighting the need to develop pure physical, verbal, and mental conduct, as well as pure livelihood. These four qualities recur also in the <i>Madhyama-āgama</i> parallel.<span class="note" id="mn39n257"><span class="details"><span class="p">[n.257] <a href="../../parallels/ma182.html">MĀ 182</a> at T I 724c28. For a discussion of the reference to pure mental conduct in this context cf. below p. 427 note 173.</span></span></span> The next quality in the Pāli version is the need to develop restraint of the sense-doors,<span class="note" id="mn39n258"><span class="details"><span class="p">[n.258] <a href="../../mn/mn39.html">MN 39</a> at MN I 273,3.</span></span></span> a need also taken into account in the Chinese versions.</p>
+<table class="comparative-table">
+<caption>Table 4.10: Qualities of a True Recluse in <a href="../../mn/mn39.html">MN 39</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn39.html">MN 39</a></th><th><a href="../../parallels/ma182.html">MĀ 182</a></th><th><a href="../../parallels/ea49.8.html">EĀ 49.8</a></th></tr>
+<tr><td>sense of shame (1)</td><td>pure bodily conduct (→ 2)</td><td>sense-restraint (→ 6)</td></tr>
+<tr><td>pure bodily conduct (2)</td><td>pure verbal conduct (→ 3)</td><td>moderation with food (→ 7)</td></tr>
+<tr><td>pure verbal conduct (3)</td><td>pure mental conduct (→ 4)</td><td>wakefulness (→ 8)</td></tr>
+<tr><td>pure mental conduct (4)</td><td>pure livelihood (→ 5)</td><td>destroy influxes (→ 17)</td></tr>
+<tr><td>pure livelihood (5)</td><td>sense-restraint (→ 6)</td><td></td></tr>
+<tr><td>sense-restraint (6)</td><td>clear comprehension (→ 9)</td><td></td></tr>
+<tr><td>moderation with food (7)</td><td>remove 5 hindrances (→ 10)</td><td></td></tr>
+<tr><td>wakefulness (8)</td><td>attain 4 <i>jhāna</i>s (→ 11-14)</td><td></td></tr>
+<tr><td>clear comprehension (9)</td><td>destroy influxes (→ 17)</td><td></td></tr>
+<tr><td>remove 5 hindrances (10)</td><td></td><td></td></tr>
+<tr><td>attain 1st <i>jhāna</i> (11)</td><td></td><td></td></tr>
+<tr><td>attain 2nd <i>jhāna</i> (12)</td><td></td><td></td></tr>
+<tr><td>attain 3rd <i>jhāna</i> (13)</td><td></td><td></td></tr>
+<tr><td>attain 4th <i>jhāna</i> (14)</td><td></td><td></td></tr>
+<tr><td>recollect past lives (15)</td><td></td><td></td></tr>
+<tr><td>divine eye (16)</td><td></td><td></td></tr>
+<tr><td>destroy influxes (17)</td><td>(≠ 1, 7-8, 15-16)</td><td>(≠ 1-5, 9-16)</td></tr>
+</table>
+<p>The <i>Mahā-assapura-sutta</i> continues by turning to moderation with food.<span class="note" id="mn39n259"><span class="details"><span class="p">[n.259] <a href="../../mn/mn39.html">MN 39</a> at MN I 273,22: <i>bhojane mattaññuno bhavissāma </i>(Se-MN I 500,4: <i>mattaññū</i>).</span></span></span> The same quality recurs only in the <i>Ekottarika-āgama</i> version, which compares food to grease, used to treat a sore or to smear the axle of a chariot.<span class="note" id="mn39n260"><span class="details"><span class="p">[n.260] <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 802a10.</span></span></span> The same image recurs in discourses in the <i>Saṃyutta-nikāya</i> and the Chinese <i>Dīrgha-āgama</i> to illustrate moderation with food.<span class="note" id="mn39n261"><span class="details"><span class="p">[n.261] <a href="../../sn/sn35.198.html">SN 35:198</a> at SN IV 177,1 and <a href="../../parallels/da20.html">DĀ 20</a> at T I 84c23; cf. also <a href="../../parallels/ea21.6.html">EĀ 21.6</a> at T II 604a3+8, Vism 32,16, and the <i>Saundaranandakāvya </i>14:11-12 in Johnston 1928: 97,7. A counterpart to this simile can be found in the Jain <i>Viyāhapaṇṇatti </i>7.1.23 in Lalwani 1980: 15,14.</span></span></span> The <i>Mahā-assapura-sutta</i> next takes up the development of wakefulness,<span class="note" id="mn39n262"><span class="details"><span class="p">[n.262] <a href="../../mn/mn39.html">MN 39</a> at MN I 273,35: <i>jāgariyaṃ anuyuttā bhavissāma </i>(Se-MN I 500,18: <i>jāgariyamanuyuttā</i>).</span></span></span> a quality found only in its <i>Ekottarika-āgama </i>parallel. The <i>Ekottarika-āgama </i>version's description of wakefulness resembles the Majjhima-nikāya instructions, in addition to which it also speaks of giving attention to the thirty-seven requisites to awakening (bodhipakkhiyā dhammā) by day and by night.<span class="note" id="mn39n263"><span class="details"><span class="p">[n.263] <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 802a16: 思惟三十七道之法.</span></span></span></p>
+<p>In relation to this difference, it could be noted that, although the various mental qualities and activities subsumed under the heading of ‘thirty-seven requisites to awakening’ occur frequently in the discourses, the heading itself appears to belong to a later period.<span class="note" id="mn39n264"><span class="details"><span class="p">[n.264] Gethin 1992a: 14.</span></span></span></p>
+<p>After describing the development of wakefulness, the Majjhima-nikāya version turns to the practice of clear comprehension of activities.<span class="note" id="mn39n265"><span class="details"><span class="p">[n.265] <a href="../../mn/mn39.html">MN 39</a> at MN I 274,13: satisampajaññena samannāgatā bhavissāma.</span></span></span> This practice recurs also in the Madhyama-āgama parallel, but is absent from the Ekottarika-āgama account.<span class="note" id="mn39n266"><span class="details"><span class="p">[n.266] <a href="../../parallels/ma182.html">MĀ 182</a> at T I 725b8: 當學正知出入, 善觀分別.</span></span></span> The Majjhima-nikāya and Madhyama-āgama versions also agree that the next thing to be done is to retreat into seclusion, followed by overcoming the five hindrances and attaining the four jhānas, a progress of practice not taken into account in the Ekottarikaāgama version. The Pāli discourse offers a set of illustrative similes for each hindrance and for each of the jhānas, similes not found in the Chinese parallels.<span class="note" id="mn39n267"><span class="details"><span class="p">[n.267] <a href="../../mn/mn39.html">MN 39</a> at MN I 275,8. Both sets of similes recur as part of the standard expositions of the gradual path in nearly every discourse of the Sīlakkhandha-vagga of the Dīgha-nikāya: <a href="../../dn/dn2.html">DN 2</a> at DN I 71,30, <a href="../../dn/dn3.html">DN 3</a> at DN I 100,6, <a href="../../dn/dn4.html">DN 4</a> at DN I 124,24, <a href="../../dn/dn5.html">DN 5</a> at DN I 147,8, <a href="../../dn/dn6.html">DN 6</a> at DN I 157,21, <a href="../../dn/dn7.html">DN 7</a> at DN I 159,16, <a href="../../dn/dn8.html">DN 8</a> at DN I 172,26, <a href="../../dn/dn9.html">DN 9</a> at DN I 182,12, <a href="../../dn/dn10.html">DN 10</a> at DN I 207,15, <a href="../../dn/dn11.html">DN 11</a> at DN I 214,23, <a href="../../dn/dn12.html">DN 12</a> at DN I 232,13, and <a href="../../dn/dn13.html">DN 13</a> at DN I 250,29 (all occurrences abbreviated except for <a href="../../dn/dn2.html">DN 2</a>). While the similes for the jhānas recur also in <a href="../../mn/mn77.html">MN 77</a> at MN II 15,11 and <a href="../../mn/mn119.html">MN 119</a> at MN III 92,28, the similes for the hindrances are not found elsewhere in the Majjhima-nikāya. Yit 2004b: 262 note 461 highlights that <a href="../../mn/mn39.html">MN 39</a> refers to not incurring a loss of wealth not only in relation to being released from prison (MN I 275,27), but also in relation to crossing a desert (MN I 276,5). The corresponding set of similes in <a href="../../dn/dn2.html">DN 2</a> at DN I 72,17, however, only mentions loss of wealth in the case of the first of these two similes. The set of similes for the hindrances has a counterpart in <a href="../../parallels/da20.html">DĀ 20</a> at T I 85a25, although occurring in a different sequence, which proceeds from release from servitude (4th in <a href="../../mn/mn39.html">MN 39</a>), via repayment of a loan (1st in <a href="../../mn/mn39.html">MN 39</a>), recovery from disease (2nd in <a href="../../mn/mn39.html">MN 39</a>), release from prison (3rd in <a href="../../mn/mn39.html">MN 39</a>), to safely crossing a desert with wealth (5th in <a href="../../mn/mn39.html">MN 39</a>). Another occurrence can be found in T 21 at T I 265c17, which lists repayment of a loan (1st in <a href="../../mn/mn39.html">MN 39</a>), release from slavery (4th in <a href="../../mn/mn39.html">MN 39</a>), release from prison (3rd in <a href="../../mn/mn39.html">MN 39</a>), recovery from disease (2nd in <a href="../../mn/mn39.html">MN 39</a>), and safely travelling an evil path with wealth (5th in <a href="../../mn/mn39.html">MN 39</a>). The same <a href="../../parallels/da20.html">DĀ 20</a> at T I 85b14 continues with the four jhāna similes, similes also found in <a href="../../parallels/ma81.html">MĀ 81</a> at T I 555b20 and <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582c22. For a more detailed examination of the jhāna similes cf. below p. 674.</span></span></span></p>
+<p>In regard to the considerable difference between the Ekottarika-āgama presentation and the other two versions, it is noteworthy that even though this discourse occurs among the elevens of the Ekottarika-āgama, it presents only four qualities that make up a true recluse. This gives the impression that its presentation could be due to a loss of seven qualities from an earlier list of eleven qualities.<span class="note" id="mn39n268"><span class="details"><span class="p">[n.268] Judging from the overall dynamics, these seven missing qualities might have covered the development of fourfold purity by way of body, speech, mind, and livelihood, the practice of clear comprehension of activities, the removal of the five hindrances, and the development of the four jhānas. Although this remains entirely hypothetical, at least the practice of clear comprehension of bodily activities is not totally absent from <a href="../../parallels/ea49.8.html">EĀ 49.8</a>, since its initial exposition of the two types of recluse at T II 801c21 characterizes the “practising recluse” as one who undertakes bodily activities – such as going and coming, looking up and down, wearing robes and bowl – in accordance with the Dharma, a description similar to the standard expositions of clear comprehension of activities, cf., e.g., <a href="../../mn/mn10.html">MN 10</a> at MN I 57,5 and its parallel <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582b25.</span></span></span></p>
+<p>The Pāli version continues at this point with recollection of past lives and the ability to directly perceive the passing away and reappearing of beings according to their deeds, two higher knowledges not mentioned in its two Chinese parallels.<span class="note" id="mn39n269"><span class="details"><span class="p">[n.269] Demiéville 1927: 284 remarks that out of the three higher knowledges, <a href="../../parallels/ma182.html">MĀ 182</a> mentions only the knowledge that is properly Buddhist, “des trois vidyā est seule mentionée celle qui est proprement bouddhique”.</span></span></span> The three versions agree, however, on insight into the four noble truths and the destruction of the influxes as the culmination point of the practice.<span class="note" id="mn39n270"><span class="details"><span class="p">[n.270] <a href="../../mn/mn39.html">MN 39</a> at MN I 279,20, <a href="../../parallels/ma182.html">MĀ 182</a> at T I 725b26, and <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 802a22.</span></span></span></p>
+<p>In relation to this difference, it would seem that, since the two higher knowledges are not required for the destruction of the influxes, they may also not be absolutely necessary for becoming a true recluse. Other Pāli discourses similarly proceed directly from the four jhānas to the destruction of the influxes, without bringing in the other two higher knowledges.<span class="note" id="mn39n271"><span class="details"><span class="p">[n.271] Cf., e.g., <a href="../../mn/mn112.html">MN 112</a> at MN III 36,14, <a href="../../an/an4.198.html">AN 4:198</a> at AN II 211,10, <a href="../../an/an5.75.html">AN 5:75</a> at AN III 93,4, and <a href="../../an/an5.76.html">AN 5:76</a> at AN III 100,14.</span></span></span> In the end, it is the third of these higher knowledges that, according to all versions of the present discourse, definitely turns a monk into a true recluse.</p>
+<p>The Mahā-assapura-sutta employs the image of a mountain lake to illustrate the destruction of the influxes, a simile not found in the two parallel versions.<span class="note" id="mn39n272"><span class="details"><span class="p">[n.272] <a href="../../mn/mn39.html">MN 39</a> at MN I 279,32. This simile recurs in <a href="../../dn/dn2.html">DN 2</a> at DN I 84,13, in the Chinese parallel <a href="../../parallels/da27.html">DĀ 27</a> at T I 109b9 (here abbreviated, to be supplied with the full version found at T I 86c8), and in a parallel passage in the Saṅghabhedavastu, Gnoli 1978a: 251,1. The same simile occurs in <a href="../../mn/mn77.html">MN 77</a> at MN II 22,4, in which case the simile is not found in the parallel version <a href="../../parallels/ma207.html">MĀ 207</a> at T I 783b16.</span></span></span> In its stead, the Ekottarika-āgama version presents a stanza spoken by the Buddha, according to which one becomes a recluse by eradicating evil and a pure Brahmin by leaving behind all delusion.<span class="note" id="mn39n273"><span class="details"><span class="p">[n.273] <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 802a29.</span></span></span></p>
+<p>The three versions conclude by giving a deeper meaning to terms like “recluse” and “Brahmin”, explaining them to stand for qualities of a fully awakened one.<span class="note" id="mn39n274"><span class="details"><span class="p">[n.274] <a href="../../mn/mn39.html">MN 39</a> at MN I 280,9 gives a deeper meaning to the terms “recluse”, samaṇa, “Brahmin”, brāhmaṇa, “one who has been washed”, nahātaka (Be-MN I 347,27 and Se-MN I 510,4: nhātaka), “one who has attained to knowledge”, vedagū, “learned one”, sottiya, “noble one”, ariya, and arahant. A similar listing can be found in <a href="../../an/an7.81.html">AN 7:81</a> at AN IV 144,22, several of these terms are also explained on their own in Dhp 265 and Sn 3:6 at Sn 520 (recluse), Sn 3:6 at Sn 519 (Brahmin), Sn 3:6 at Sn 521 (one who has been washed), and Dhp 270 (noble one). <a href="../../parallels/ma182.html">MĀ 182</a> at T I 725c4 takes up the terms “recluse”, 沙門, “Brahmin”, 梵志, “noble one”, 聖, and “one purified [through] bathing”, 淨浴. <a href="../../parallels/ea49.8.html">EĀ 49.8</a> at T II 802b4 mentions “recluse”, 沙門, “Brahmin”, 梵志, “warrior”, 剎利, “one who has been washed”, 沐浴, “awakened one”, 覺, and “one gone beyond”, 彼岸. This part of the present discourse has also been preserved in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, D (4094) mngon pa, nyu 27b2 or Q (5595) thu 63b1, which provides definitions for the terms “recluse”, dge sbyong, “Brahmin”, bram ze, “noble one”, ’phags pa, and “one who has been washed”, khrus byed pa ba; cf. Abhidh-k 6:51 in Pradhan 1967: 369,9, which parallels the definition of a recluse in <a href="../../mn/mn39.html">MN 39</a> at MN I 280,12; cf. also T 1558 at T XXIX 128a14 and T 1559 at T XXIX 279b15. Norman 1991/1993c: 276 and 278 draws attention to the historical background to the Buddhist use of the terms nahātaka and vedagū. He explains that “in its brahmanical sense snātaka is used of a brahman who has carried out the ceremonial bathing at the end of the brahma-cārin stage of his life. The Buddha rejected the efficacy of ritual bathing, and used the term metaphorically [in the sense] of washing away evil by means of the eightfold path”. “The word vedagu, which in its brahmanical sense meant one who had gained competence in the Vedas, was interpreted as one who had gained knowledge of release from saṃsāra”.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

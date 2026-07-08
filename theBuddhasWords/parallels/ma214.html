@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>MĀ 214 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>MĀ 214</h2>
+<div class="mirror hgroup">
+<p class="division">
+<span class="mirror-left latin">Madhyamāgama</span>
+<span class="mirror-right">中阿含经</span></p>
+<p class="mirror-row">
+<span class="mirror-left latin">Chapter 18</span>
+<span class="mirror-right">例品</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">214. </span>
+<span class="mirror-right">（二一四）鞞诃提经</span></h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn88.html">MN 88</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>I have heard thus:</p></td><td lang="lzh" class="agama-chi"><p>我闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was traveling in the country of Śrāvastī, staying at the Jeta Grove Anāthapiṇḍada-ārāma.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游舍卫国，在胜林给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda was staying in Śrāvastī, at the Deer Park of the Eastern Garden, for a minor matter. At that time, Venerable Ānanda, together with a bhikṣu, left Śrāvastī and went to the Deer Park of the Eastern Garden. After finishing what he had to do, he took that bhikṣu back to the Jeta Grove Anāthapiṇḍada-ārāma.</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者阿难住舍卫国，于东园鹿子母堂为小事故。彼时尊者阿难将一比丘从舍卫出，往至东园鹿子母堂，所为事讫，将彼比丘还，往至胜林给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit of Kośala was riding a penda elephant together with the chief minister Śrīdatta, leaving the city of Śrāvastī. Venerable Ānanda saw from afar that King Prasenajit of Kośala was coming, and asked the accompanying bhikṣu, &quot;Is that King Prasenajit of Kośala?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，拘萨罗王波斯匿乘一奔陀利象，与尸利阿荼大臣俱出舍卫国。尊者阿难遥见拘萨罗王波斯匿来已，问伴比丘：「彼是拘萨罗王波斯匿耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He replied, &quot;Yes.&quot;</p></td><td lang="lzh" class="agama-chi"><p>答曰：「是也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda then left the road and went to sit under a tree.</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难便下道避至一树下。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala saw Venerable Ānanda from afar in the trees and asked, &quot;Śrī Āṭavika! Is that the śramaṇa Ānanda?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿遥见尊者阿难在于树间，问曰：「尸利阿荼！彼是沙门阿难耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śrī Āṭavika replied, &quot;Yes.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尸利阿荼答曰：「是也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala told Minister Śrī Āṭavika, &quot;You should lead this elephant to where the śramaṇa Ānanda is.&quot; Śrī Āṭavika received the king&#x27;s order and led the elephant to where Venerable Ānanda was.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿告尸利阿荼大臣曰：「汝御此象，令至沙门阿难所。」尸利阿荼受王教已即御此象，令至尊者阿难所。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then King Prasenajit of Kosala asked, &quot;Ānanda! Where are you coming from and where do you wish to go?&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，拘萨罗王波斯匿问曰：「阿难！从何处来，欲至何处？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! I am coming from the Deer Park of Queen Mallikā in the east and wish to go to the Jeta Grove Anāthapiṇḍada-ārāma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！我从东园鹿子母堂来，欲至胜林给孤独园。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala said, &quot;Ānanda! If there is no urgent matter at the Jeta Grove, please come with me to the Airavati River out of compassion.&quot; Venerable Ānanda silently accepted King Prasenajit of Kosala.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿语曰：「阿难！若于胜林无急事者，可共往至阿夷罗婆提河，为慈愍故。」尊者阿难为拘萨罗王波斯匿默然而受。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then King Prasenajit of Kosala had Venerable Ānanda go ahead and together they went to the Airavati River. Arriving, he dismounted, took the elephant&#x27;s saddle, folded it into four layers, and spread it out, inviting Venerable Ānanda, &quot;Ānanda! Please sit on this seat.&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，拘萨罗王波斯匿令尊者阿难在前，共至阿夷罗婆提河。到已下乘，取彼象荐，四叠敷地，请尊者阿难：「阿难！可坐此座。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Enough, enough, great king! Just a peaceful mind is enough.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「止！止！大王！但心靖足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala invited Venerable Ānanda three times, &quot;Ānanda! Please sit on this seat.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿再三请尊者阿难：「阿难！可坐此座。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda also said three times, &quot;Enough, enough, great king! Just a peaceful mind is enough. I have my own sitting mat. I will sit now.&quot; Then Venerable Ānanda spread out his sitting mat and sat cross-legged.</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难亦再三语：「止！止！大王！但心靖足，我自有尼师檀，我今当坐。」于是，尊者阿难敷尼师檀，结跏趺坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala exchanged greetings with Venerable Ānanda and then sat to one side, saying, &quot;Ānanda! I wish to ask something. May I ask?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿与尊者阿难共相问讯，却坐一面，语曰：「阿难！欲有所问，听我问耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! Ask what you wish. I will think about it after you ask.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！欲问便问，我问已当思。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! Does the Tathāgata engage in such bodily conduct that it is disliked by monastics and brahmins?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！如来颇行如是身行，谓此身行为沙门、梵志所憎恶耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! The Tathāgata does not engage in such bodily conduct that is disliked by monastics, brahmins, the wise and intelligent, and the rest of the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！如来不行如是身行，谓此] cf.［丽】身行为沙门、梵志聪明智慧及余世间所憎恶也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard this, King Prasenajit of Kosala exclaimed, &quot;Excellent! Excellent! Ānanda! What I cannot reach, the wise and intelligent, and the rest of the world, Ānanda has reached. Ānanda! If there are those who criticize and praise without proper characteristics, we do not see their truth. Ānanda! If there are those who criticize and praise with proper characteristics, we see their truth. Ānanda! Does the Tathāgata engage in such bodily conduct that it is disliked by monastics, brahmins, the wise and intelligent, and the rest of the world?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿闻已，叹曰：「善哉！善哉！阿难！我所不及，若聪明智慧及余世间者，而阿难及之。阿难！若有不善相悉而毁呰称誉者，我等不见彼真实也。阿难！若有善相悉而毁呰称誉者，我见彼真实也。阿难！如来颇行如是身行，谓此身行为沙门、梵志聪明智慧及余世间所憎恶耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! The Tathāgata never engages in such bodily conduct that is disliked by monastics, brahmins, the wise and intelligent, and the rest of the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！如来终不行如是身行，谓此身行为沙门、梵志聪明智慧及余世间所憎恶也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is bodily conduct?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何为身行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! It is unwholesome bodily conduct.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！不善身行也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is unwholesome bodily conduct?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何不善身行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! It is bodily conduct that is blameworthy.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓身行有罪。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is bodily conduct that is blameworthy?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何身行有罪耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! It is bodily conduct that is disliked by the wise.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓行身行，智者所憎恶。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is disliked by the wise?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何智者所憎恶耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! It is bodily conduct that leads to self-harm, harm to others, and harm to both; it extinguishes wisdom and promotes evil characteristics. It does not lead to nirvāṇa, to knowledge, to awakening, or to nirvāṇa. One does not know as it truly is what should be practiced and what should not be practiced. Having not known as it truly is what should be practiced and what should not be practiced, one does not know as it truly is what should be accepted and what should not be accepted. Having not known as it truly is what should be accepted and what should not be accepted, one does not know as it truly is what should be abandoned and what should not be abandoned. Having not known as it truly is what should be abandoned and what should not be abandoned, one does not know as it truly is what should be accomplished and what should not be accomplished. Having not known as it truly is what should be accomplished and what should not be accomplished, one does not practice what should be practiced and practices what should not be practiced. Having not practiced what should be practiced and practiced what should not be practiced, one does not accept what should be accepted and accepts what should not be accepted. Having not accepted what should be accepted and accepted what should not be accepted, one does not abandon what should be abandoned and abandons what should not be abandoned. Having not abandoned what should be abandoned and abandoned what should not be abandoned, one does not accomplish what should be accomplished and accomplishes what should not be accomplished. Having not accomplished what should be accomplished and accomplished what should not be accomplished, unwholesome qualities increase and wholesome qualities diminish. Therefore, the Tathāgata never practices such things.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓行身行，自害、害彼、俱害，灭智慧、恶相助，不得涅槃，不趣智，不趣觉，不趣涅槃，彼可行法不知如真，不可行法亦不知如真。可行法不知如真，不可行法亦不知如真已，可受法不知如真，不可受法亦不知如真。可受法不知如真，不可受法亦不知如真已，可断法不知如真，不可断法亦不知如真。可断法不知如真，不可断法亦不知如真已，可成就法不知如真，不可成就法亦不知如真。可成就法不知如真，不可成就法亦不知如真已，可行法便不行，不可行法而行。可行法便不行，不可行法而行已，可受法便不受，不可受法而受。可受法便不受，不可受法而受已，可断法便不断，不可断法而断。可断法便不断，不可断法而断已，可成就法便不成就，不可成就法而成就。可成就法便不成就，不可成就法而成就已，不善法转增，善法转减。是故如来终不行此法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! Why does the Tathāgata never practice such things?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！如来何故终不行此法耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great king! Having been separated from desire, desire is exhausted; having been separated from anger, anger is exhausted; having been separated from delusion, delusion is exhausted. The Tathāgata has cut off all unwholesome qualities and accomplished all wholesome qualities. He is a teacher, a wonderful teacher, a good teacher, a guide, a good guide, a good speaker, a wonderful speaker, a good speaker. Therefore, the Tathāgata never practices such things.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！离欲、欲已尽，离恚、恚已尽，离痴、痴已尽，如来断一切不善之法，成就一切善法，教师、妙师、善顺师，将御、顺御，善语、妙语、善顺语。是故如来终不行此法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala exclaimed, &quot;Excellent! Excellent! Ānanda! The Tathāgata never practices what should not be practiced. Why is that? Because the Tathāgata, the Arhat, the Perfectly Enlightened One. Ānanda! You are a disciple of your teacher, practicing the path to attain the unsurpassed peace of nirvāṇa. You do not even practice such things, let alone the Tathāgata practicing them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿叹曰：「善哉！善哉！阿难！如来不可行法终不行。所以者何？以如来、无所著、正尽觉故。阿难！汝彼师弟子，学道欲得无上安隐涅槃，汝尚不行此法，况复如来行此法耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! Does the Tathāgata ever engage in such bodily conduct, that is, bodily conduct that is not disliked by monastics, brahmins, the wise and intelligent, or the rest of the world?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！如来颇行如是身行，谓此身行不为沙门、梵志聪明智慧及余世间所憎恶耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! The Tathāgata certainly engages in such bodily conduct, that is, bodily conduct that is not disliked by monastics, brahmins, the wise and intelligent, or the rest of the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！如来必行如是身行，谓此身行不为沙门、梵志聪明智慧及余世间所憎恶也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is bodily conduct?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何为身行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! It is called good bodily conduct.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓善身行也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is good bodily conduct?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何善身行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! It is called bodily conduct without offense.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓身行无罪。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is bodily conduct without offense?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何身行无罪耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! It is called bodily conduct that is not disliked by the wise.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓行身行，智者所不憎恶。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! What is not disliked by the wise?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！云何智者所不憎恶。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! It is called bodily conduct that does not harm oneself, does not harm others, and does not harm both; that is accompanied by wisdom and not evil; that leads to nirvāṇa, to knowledge, to awakening, and to the attainment of nirvāṇa. One knows as it really is what should be practiced and what should not be practiced. Having known as it really is what should be practiced and what should not be practiced, one knows as it really is what should be accepted and what should not be accepted. Having known as it really is what should be accepted and what should not be accepted, one knows as it really is what should be abandoned and what should not be abandoned. Having known as it really is what should be abandoned and what should not be abandoned, one knows as it really is what should be accomplished and what should not be accomplished. Having known as it really is what should be accomplished and what should not be accomplished, one practices what should be practiced and does not practice what should not be practiced. Having practiced what should be practiced and not practiced what should not be practiced, one accepts what should be accepted and does not accept what should not be accepted. Having accepted what should be accepted and not accepted what should not be accepted, one abandons what should be abandoned and does not abandon what should not be abandoned. Having abandoned what should be abandoned and not abandoned what should not be abandoned, one accomplishes what should be accomplished and does not accomplish what should not be accomplished. Having accomplished what should be accomplished and not accomplished what should not be accomplished, unwholesome qualities diminish and wholesome qualities increase. Therefore the Tathāgata must practice this method.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！谓行身行，不自害、不害彼、不俱害，觉慧、不恶相助，得涅槃，趣智趣觉，趣至涅槃。彼可行法知如真，不可行法亦知如真。可行法知如真，不可行法亦知如真已，可受法知如真，不可受法亦知如真。可受法知如真，不可受法亦知如真已，可断法知如真，不可断法亦知如真。可断法知如真，不可断法亦知如真已，可成就法知如真，不可成就法亦知如真。可成就法知如真，不可成就法亦知如真已，可行法而行，不可行法便不行。可行法而行，不可行法便不行已，可受法而受，不可受法便不受。可受法而受，不可受法便不受已，可断法而断，不可断法便不断。可断法而断，不可断法便不断已，可成就法而成就，不可成就法便不成就。可成就法而成就，不可成就法便不成就已，不善法转减，善法转增。是故如来必行此法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala asked, &quot;Ānanda! Why must the Tathāgata practice this method?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿问曰：「阿难！如来何故必行此法耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Great King! Having abandoned desire, desire is exhausted; having abandoned anger, anger is exhausted; having abandoned delusion, delusion is exhausted. The Tathāgata has accomplished all wholesome qualities and abandoned all unwholesome qualities. He is a teacher, a wonderful teacher, a good teacher, a guide, a good guide, a good speaker, a wonderful speaker, a good speaker. Therefore the Tathāgata must practice this method.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「大王！离欲、欲已尽，离恚、恚已尽，离痴、痴已尽，如来成就一切善法，断一切不善之法，教师、妙师、善顺师，将御、顺御，善语、妙语、善顺语。是故如来必行此法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala praised, &quot;Excellent! Excellent! Ānanda! The Tathāgata must practice the methods that can be practiced. Why is that? Because the Tathāgata, the Arhat, the Perfectly Enlightened One. Ānanda, you are a disciple of your teacher, practicing the path to attain the unsurpassed peace of nirvāṇa. You still practice these methods, let alone the Tathāgata not practicing them. Ānanda has spoken well. I am now delighted. Ānanda has spoken excellently. I am extremely delighted. If Ānanda should accept the taxes paid in grain by the villages, I will pay the taxes in grain by the villages as a Dharma offering. Ānanda, if Ānanda should accept elephants, horses, cattle, and sheep, I will offer elephants, horses, cattle, and sheep as a Dharma offering. Ānanda, if Ānanda should accept women and girls, I will offer women and girls as a Dharma offering. Ānanda, if Ānanda should accept precious gems, I will offer precious gems as a Dharma offering. Ānanda, you should not accept such things. In my Kosala household, there is a robe called Vehaṭi, the best of its kind. I send it to you as a token of trust, wrapped in the hole of a parasol handle. Ānanda, if the robes of the Kosala household are silk, this Vehaṭi is the best of all robes. Why is that? This Vehaṭi robe is sixteen cubits long and eight cubits wide. I now offer this Vehaṭi robe as a Dharma offering to Ānanda. Ānanda, please make it into three robes and keep it. May the Kosala household increase in merit for a long time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿叹曰：「善哉！善哉！阿难！如来可行法必行。所以者何？以如来、无所著、正尽觉故。阿难！汝彼师弟子，学道欲得无上安隐涅槃，汝尚行此法，况复如来不行此法耶？阿难善说，我今欢喜，阿难快说，我极欢喜。若村输租阿难法应受者，我村输租为法布施。阿难！若象、马、牛、羊阿难法应受者，我象、马、牛、羊为法布施。阿难！若妇女及童女阿难法应受者，我妇女及童女为法布施。阿难！若生色宝阿难法应受者，我生色宝为法布施。阿难！如此之事阿难皆不应受，我拘萨罗家有一衣，名鞞诃提，彼第一，王以繖枓孔中盛送来为信。阿难！若拘萨罗家劫贝诸衣者，此鞞诃提于诸衣中最为第一。所以者何？此鞞诃提衣长十六肘，广八肘，我此鞞诃提衣，今为法故布施阿难！阿难！当作三衣，持令彼拘萨罗家长夜增益福。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;Stop! Stop! Great King! Just let your mind be at peace. I already have three robes.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「止！止！大王！但心靖足，自有三衣，谓我所受。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala said, &quot;Ānanda, let me give you an analogy. The wise understand the meaning through analogies. It is like when it rains heavily, the water in this Airavati River fills up and overflows both banks. Does Ānanda see this?&quot;</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿白曰：「阿难！听我说喻，慧者闻喻则解其义。犹如大雨时，此阿夷罗婆提河水满，两岸溢则流出。阿难见耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda replied, &quot;I see.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难答曰：「见也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit of Kosala said, &quot;In that case, Ānanda, if there are three robes, they should be given to the monks and nuns, gradually learning the śarā and śarāmaṇī. Ānanda, by making these three robes and upholding them, it will cause the families of Kosala to increase their merit for a long time.&quot; Venerable Ānanda silently accepted King Prasenajit of Kosala&#x27;s request.</p></td><td lang="lzh" class="agama-chi"><p>拘萨罗王波斯匿白曰：「如是，阿难！若有三衣，当与比丘、比丘尼，渐学舍罗、舍罗磨尼离。阿难！以此鞞诃提作三衣受持，令彼拘萨罗家长夜增益福。」尊者阿难为拘萨罗王波斯匿默然而受。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then King Prasenajit of Kosala, knowing that Venerable Ānanda had silently accepted, offered the vīra cloth as a Dharma gift to Venerable Ānanda. He then rose from his seat, circumambulated three times, and departed.</p></td><td lang="lzh" class="agama-chi"><p>于是，拘萨罗王波斯匿知尊者阿难默然受已，鞞诃提衣为法布施尊者阿难，即从座起，绕三匝而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Not long after he left, Venerable Ānanda took the vīra cloth and went to where the Buddha was. He bowed at the Buddha&#x27;s feet, stood to one side, and said, &quot;World-Honored One! This vīra cloth was offered to me today by King Prasenajit of Kosala for the Dharma. I wish the World-Honored One would place his two feet on the vīra cloth, causing the families of Kosala to increase their merit for a long time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>去后不久，尊者阿难持鞞诃提衣往诣佛所，稽首佛足，却住一面，白曰：「世尊！此鞞诃提衣，今日拘萨罗王波斯匿为法布施我，愿世尊以两足著鞞诃提衣上，令拘萨罗家长夜得增益福。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then the World-Honored One placed his two feet on the vīra cloth and said, &quot;Ānanda! If you discussed anything with King Prasenajit of Kosala, now tell me all about it in detail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，世尊以两足著鞞诃提衣上，告曰：「阿难！若汝与拘萨罗王波斯匿所共论者，今悉向我而广说之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then Venerable Ānanda told the Buddha everything he had discussed with King Prasenajit of Kosala. He joined his palms and said, &quot;Did I speak falsely and slander the World-Honored One? Did I truly speak according to the Dharma, speak the Dharma in accordance with the Dharma, without any faults in accordance with the Dharma?&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，尊者阿难与拘萨罗王波斯匿所共论者，尽向佛说，叉手白曰：「我如是说，不诬谤世尊耶？真说如法，说法次法，不于如法有过失耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One replied, &quot;You spoke like that, without falsely slandering me. You truly spoke according to the Dharma, spoke the Dharma in accordance with the Dharma, and did not have any faults in accordance with the Dharma. Ānanda! If King Prasenajit of Kosala were to ask me about this meaning, this phrase, and this text, I would also answer him with this meaning, this phrase, and this text. Ānanda! This meaning is as you have said. You should uphold it like this. Why is that? This is the meaning.</p></td><td lang="lzh" class="agama-chi"><p>世尊答曰：「汝如是说，不诬谤我，真说如法，说法次法，亦不于如法有过失也。阿难！若拘萨罗王波斯匿以此义、以此句、以此文来问我者，我亦为拘萨罗王波斯匿以此义、以此句、以此文答彼也。阿难！此义如汝所说，汝当如是受持。所以者何？此说即是其义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. Venerable Ānanda and the bhikṣus, having heard the Buddha&#x27;s words, rejoiced and upheld them.</p></td><td lang="lzh" class="agama-chi"><p>佛说如是。尊者阿难及诸比丘，闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Madhyamāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

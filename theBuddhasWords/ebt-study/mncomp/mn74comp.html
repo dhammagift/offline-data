@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 74 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 74: Dīghanakha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn73comp.html#content"></a><a id="next-sutta" href="./mn75comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn74.html">MN 74</a> / <a href="../../parallels/sa969.html">SĀ 969</a> / <a href="../../parallels/sa-2.203.html">SĀ² 2.203</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Dīghanakha-sutta, the “discourse to Dīghanakha”, examines views and feelings, an examination during which the wanderer Dīghanakha became a stream-enterer and Sāriputta an arahant. This discourse has two parallels in two Saṃyukta-āgama translations,<span class="note" id="mn74n52"><span class="details"><span class="p">[n.52] The discourse parallels are <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249a-250a and <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a-b. While <a href="../../mn/mn74.html">MN 74</a> takes place at Mount Vulture Peak near Rājagaha, <a href="../../parallels/sa969.html">SĀ 969</a> and <a href="../../parallels/sa-2.203.html">SĀ2 203</a> have the Squirrel’s Feeding Ground near the same Rājagaha as their location. Anesaki 1908: 137 lists <a href="../../parallels/sa969.html">SĀ 969</a> under the title “Dīghanakha”, 長爪, a title used in an uddāna at T II 453b19 to refer to <a href="../../parallels/sa-2.203.html">SĀ2 203</a>. A variation on the Pāli version’s title can be found in the Pāli commentaries, which refer to this discourse as the Vedanāpariggaha-suttanta, the “discourse on comprehending feelings” (cf. Sv II 418,19, Ps IV 87,7, Spk II 234,8, Mp I 161,7, Dhpa I 96,9, and Th-a III 95,22). In the early discourses, pariggaha refers to “acquisition”, which would not result in a meaningful title for the present discourse. The title Vedanāpariggaha-sutta appears to be rather based on a sense pariggaha acquired later, in the post-canonical period, as “comprehension” or even “investigation”, cf., e.g., the gloss given in Be-Vibh-mṭ 32 on the expression pariggahe ṭhito as vīmaṃsāya ṭhito; cf. also Ñāṇamoli 1994: 69, who lists “discerning” for pariggaha. Thus this alternative title for <a href="../../mn/mn74.html">MN 74</a> appears to be a commentarial coinage. Another discourse given to a different person with the same name as the protagonist of <a href="../../mn/mn74.html">MN 74</a> is the “discourse on the query of the Brahmin Dīghanakha”, 長爪梵志請問經, T 584 at T XIV 968a-c, a Tibetan version being in D (342) mdo sde, a 298b-330a and Q (1009) shu 302b-304a (a survey of its content can be found in Feer 1881a: 283), and a Sogdian version, edited in Benveniste 1940: 74-79; for a translation of the Sogdian version and comparison with its Chinese counterpart cf. Gauthiot 1912; for a recently discovered Sanskrit version cf. Vinītā 2010: 358- 389, who collates the Sanskrit text with its Chinese and Tibetan counterparts. This discourse relates how a Brahmin visitor by the name of Dīrghanakha inquired from the Buddha about the karmic causes for various physical qualities of the Buddha (in some respects similar to <a href="../../dn/dn30.html">DN 30</a> at DN III 145-179). Thus, as already noted by Sander 1979: 62, this discourse has little in common with <a href="../../mn/mn74.html">MN 74</a>, as “only in the introduction to the sūtra are there any similarities and the locality is the same”. Another reference can be found in the Chinese Udāna-(varga), which mentions a discourse spoken to the Brahmin Dīghanakha, a discourse it allocates to the Dīrgha-āgama, cf. T 212 at T IV 736c28.</span></span></span> and another parallel in the Pravrajyāvastu of the (Mūla-)Sarvāstivāda Vinaya.<span class="note" id="mn74n53"><span class="details"><span class="p">[n.53] The relevant section of the Tibetan Pravrajyāvastu has been edited in Eimer 1983: 96-105. Its Chinese counterpart, T 1444 at T XXIII 1028c4-15, is abbreviated and gives only the beginning part of the encounter between the Buddha and Dīghanakha.</span></span></span> Several parts of the present discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn74n54"><span class="details"><span class="p">[n.54] The Sanskrit fragments can be found in Pischel 1904: 814-816 or Hosoda 1989b: 144-151. The close correspondence of these fragments to <a href="../../parallels/sa969.html">SĀ 969</a> was noticed soon after their publication by Lévi 1904: 299.</span></span></span> Versions of the present discourse can also be found in the *Mahāprajñāpāramitā-(upadeśa-)śāstra,<span class="note" id="mn74n55"><span class="details"><span class="p">[n.55] T 1509 at T XXV 61b-62a and T XXV 254b, translated in Lamotte 1944/1981: 47-51 and id. 1970a: 1688-1689.</span></span></span> in the *Mahāvibhāṣā,<span class="note" id="mn74n56"><span class="details"><span class="p">[n.56] T 1545 at T XXVII 509b-510b.</span></span></span> and in the Avadānaśataka.<span class="note" id="mn74n57"><span class="details"><span class="p">[n.57] The relevant Avadānaśataka tale is no. 99 in Speyer 1909/1970: 186-196 or in Vaidya 1958a: 255-259, with its Chinese counterpart in T 200 at T IV 255a-256b, translated in Pachow 1945: 49-53, and its Tibetan counterpart in Devacandra 1996: 708-721. On the depiction of Dīrghanakha’s karmic background in this tale cf. also Feer 1882: 339. Oldenberg 1912b: 178 highlights the close similarity between the Sanskrit fragments in Pischel 1904 and the Sanskrit Avadānaśataka tale.</span></span></span></p>
+<p>The Dīghanakha-sutta and its parallels report that the wanderer Dīghanakha came to visit the Buddha and presented his view.<span class="note" id="mn74n58"><span class="details"><span class="p">[n.58] As Wagle 1966: 49 explains, Dīghanakha is a nickname, alluding to his “long nails”. A reference to his name has also been preserved in an Uighur fragment in Kudara 1995: 28. According to the *Mahāpraj- ñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 61c5, the *Mahāvibhāṣā, T 1545 at T XXVII 509b22, and the Pravrajyāvastu in Dutt 1984d: 22,1 and folio 6r1 in Vogel 1992: 79, this wanderer was called Dīghanakha or Dīrghanakha because he did not cut his finger nails (according to the otherwise unrelated <a href="../../parallels/ea34.4.html">EĀ 34.4</a> at T II 694a12, to keep the nails long was one of five characteristics of contemporary recluses and wanderers). <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a5 differs from the other sources in so far as it introduces its protagonist as 長爪梵志. It is a recurring characteristic of this Saṃyukta-āgama collection (T 100) that it uses 梵志 for what in the parallel versions are wanderers, as the same recurs also in the parallels to <a href="../../mn/mn72.html">MN 72</a> and <a href="../../mn/mn73.html">MN 73</a>, <a href="../../parallels/sa-2.196.html">SĀ2 196</a> and <a href="../../parallels/sa-2.198.html">SĀ2 198</a>, cf. above p. 389 note 6 and p. 394 note 27. In the present case, this specification would fit the context, as all versions reckon Dīghanakha a close relative of Sāriputta, so that he would indeed stem from a Brahmin family. According to Goshima 2008: 332, however, it is also quite possible that in the present context 梵志 renders parivrājaka, cf. also Karashima 2001: 88 s.v. 梵志.</span></span></span> Additional narrative background to this meeting is provided in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, the *Mahāvibhāṣā, and the Avadānaśataka, which report that Dīghanakha had been displeased or even irritated on hearing that his close relative Sāriputta, whom he respected for his intelligence, had become a disciple of another teacher.<span class="note" id="mn74n59"><span class="details"><span class="p">[n.59] T 1509 at T XXV 61c15, T 1545 at T XXVII 509c4, and the Avadānaśataka in Speyer 1909/1970: 187,4 or in Vaidya 1958a: 256,1, with its counterparts in T 200 at T IV 256a8 and in Devacandra 1996: 709,16.</span></span></span> This would explain the slightly provocative nuance that appears to underlie the way he presents his view to the Buddha in the discourse versions.</p>
+<p>The Majjhima-nikāya version reports that Dīghanakha made the proclamation that he did not approve of anything.<span class="note" id="mn74n60"><span class="details"><span class="p">[n.60] <a href="../../mn/mn74.html">MN 74</a> at MN I 497,26: sabbaṃ me na khamatī ti (Be-MN II 165,13: nakkhamatī ti), literally “all is not bearable to me”, which in the present context would have the sense “I do not approve of anything”.</span></span></span> According to one of the Saṃyukta-āgama versions, his proposition was that he did not approve of any view, while according to the other Saṃyukta-āgama version he did not approve of any teaching.<span class="note" id="mn74n61"><span class="details"><span class="p">[n.61] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249b3: “I do not approve of any view”, 我一切見不忍, and <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a6: “in regard to all teachings, I do not approve of any”, 於一切法, 悉不忍受. The character 忍 means literally “to bear, to endure, to put up with” and thus closely corresponds to khamati or kṣamati and to their equivalent bzod do used in the Tibetan Pravrajyāvastu; cf. also Hirakawa 1997: 467, who begins his list of equivalents for 忍 with kṣānti and kṣama.</span></span></span></p>
+<p>Dīghanakha’s proposition in the Sanskrit fragment, in the Tibetan Pravrajyāvastu, in the *Mahāvibhāṣā, and in the Sanskrit and Tibetan versions of the Avadānaśataka tale is as brief as the Pāli statement.<span class="note" id="mn74n62"><span class="details"><span class="p">[n.62] Fol. 162a5 in Pischel 1904: 814: sarvaṃ me na kṣamati, the Tibetan Pravrajyāvastu in Eimer 1983: 96,13: bdag ni thams cad mi bzod do, the *Mahāvibhāṣā, T 1545 at T XXVII 509c9: 我一切不忍, and the Avadānaśataka in Speyer 1909/1970: 187,10 or in Vaidya 1958a: 256,7: sarvaṃ me, bho Gautama, na kṣamata iti, with its Tibetan counterpart in bdag ni thams cad mi ’tshal lo in Devacandra 1996: 710,9 (the Chinese avadāna tale does not record his statement).</span></span></span> The way the *Mahāprajñāpāramitā-(upadeśa-)śāstra and the Chinese Pravrajyāvastu record his statement, however, is more elaborate and thus resembles more closely the Saṃyukta-āgama versions.<span class="note" id="mn74n63"><span class="details"><span class="p">[n.63] According to the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 62a3, he proclaimed: “I do not approve of any teachings”, 我一切法不忍 (adopting the 元, 宮, and 石 variant reading 忍 instead of 受), thereby bringing in the notion of teachings found also in <a href="../../parallels/sa-2.203.html">SĀ2 203</a>. In the Chinese Pravrajyāvastu, T 1444 at T XXIII 1028c5, his proposition is more elaborate: “any of my [own] teachings, or the holding of a corresponding view, all that I do not desire”, 一切我法, 所有見等, 皆我不欲.</span></span></span></p>
+<p>The Pāli commentary suggests that Dīghanakha was an annihilationist and hence his proclamation implied that he did not approve of any kind of rebirth.<span class="note" id="mn74n64"><span class="details"><span class="p">[n.64] Ps III 204,3 (as a gloss on his position): “all [types of] arising are not approved of by me ... I am an annihilationist”, sabbā me upapattiyo nakkhamanti ... ucchedavādo ’ham asmī ti.</span></span></span> The formulation in one of the Saṃyukta-āgama discourses, however, suggests that his refusal referred to views or doctrines.<span class="note" id="mn74n65"><span class="details"><span class="p">[n.65] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249b3: 見, although a 宋, 元, 明, and 聖 variant reading does not mention the “view”, 見.</span></span></span> This much seems to be also implicit in the reply the Buddha gave to Dīghanakha’s proclamation in all versions, since tongue in cheek he asked his visitor if this refusal to approve of anything also included Dīghanakha’s own view.<span class="note" id="mn74n66"><span class="details"><span class="p">[n.66] Fuller 2005: 154 explains the purpose of this inquiry to be that “the Buddha is attempting to find out how this view is being held. Is Dīghanakha’s view a non-position, its aim to overcome all cognitive standpoints, or is Dīghanakha holding to this view?”. Premasiri 2006a: 186 notes that “Dīghanakha's position could itself become a dogma. For if one dogmatically holds the view ‘I agree with no view’, it can have the same consequences as taking any other dogmatic position”.</span></span></span> The humour underlying the Buddha’s reply is lost when Dīghanakha’s proposition is seen as only being concerned with modes of rebirth.</p>
+<p>The Majjhima-nikāya version reports Dīghanakha replying that it would not matter if he were to approve of his own view.<span class="note" id="mn74n67"><span class="details"><span class="p">[n.67] <a href="../../mn/mn74.html">MN 74</a> at MN I 497,28: “if this view were to be approved of by me, it would still be the same, it would still be the same”, esā ce me ... diṭṭhi khameyya, taṃ p’ assa tādisam eva, taṃ p’ assa tādisam evā ti (Se- MN II 263,10: taṃ pi ’ssa).</span></span></span> According to the Saṃyukta-āgama versions, the Tibetan Pravrajyāvastu, the *Mahāprajñāpāramitā-(upadeśa-)śāstra, and the Sanskrit and Tibetan Avadānaśataka tale, however, he affirmed that he also did not approve of his own view.<span class="note" id="mn74n68"><span class="details"><span class="p">[n.68] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249b5: “this view, I also do not approve of”, 此見亦不忍, <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a8: “I also do not approve of a view like this”, 如此之見, 我亦不忍. According to the Tibetan Pravrajyāvastu in Eimer 1983: 96,16, he proclaimed that “I also do not approve of this view”, lta ba de yang mi bzod do, with its Chinese counterpart in T 1509 at T XXV 62a14: “that view I also do not approve”, 是見亦不忍 (adopting again the variant reading 忍 instead of 受). The Avadānaśataka in Speyer 1909/1970: 187,11 or in Vaidya 1958a: 256,8 similarly reads “this view is also not approved by me”, eṣā pi me ... dṛṣṭir na kṣamate, with the Tibetan counterpart lta ba gang lags pa ’di yang bdag mi ’tshal lo in Devacandra 1996: 710,12.</span></span></span> One of the two Saṃyukta-āgama versions reports that the Buddha followed up this inconsistency by asking Dīghanakha why he had proclaimed a view he did not approve of.<span class="note" id="mn74n69"><span class="details"><span class="p">[n.69] <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a9: “if you do not approve of such a view, why did you proclaim it”, 汝若不忍如是 見者, 何故而言?</span></span></span> In fact, according to the *Mahāvibhāṣā, already on the Buddha’s first question Dīghanakha realized his self-contradictory position and remained silent.<span class="note" id="mn74n70"><span class="details"><span class="p">[n.70] T 1545 at T XXVII 509c13, cf. also Dhammajoti 2004: 192. The Chinese Avadāna account, T 200 at T IV 256a14, similarly reports that he remained silent, although according to its report this happened after the Buddha had pointed out that Dīghanakha’s view did not lead to Nirvāṇa. According to T 200, Dīghanakha continued to remain silent three times, at which point a thunderbolt wielding spirit intervened and forced him to reply to the Buddha. T 200 then continues differently from the other versions and does not report the instructions on contemplation of the body and feelings at all.</span></span></span></p>
+<p>The parallel versions continue by examining three possible variations of this type of view, which could be:</p>
+<ul>
+<li>to approve of all,</li>
+<li>to approve of nothing,</li>
+<li>to approve of some and to disapprove of some.</li>
+</ul>
+<p>The Pāli and Chinese discourses, the Sanskrit fragments, the Tibetan Pravrajyāvastu, and the Sanskrit and Tibetan versions of the Avadānaśataka tale point out that to hold any of the three possible variations of this view will lead to dispute with those who take a different position on this matter.<span class="note" id="mn74n71"><span class="details"><span class="p">[n.71] <a href="../../mn/mn74.html">MN 74</a> at MN I 498,17 indicates that to approve of all is closer to attachment than to disapprove of all, a position similarly taken in fol. 163a4 in Pischel 1904: 814 (cf. Hosoda 1989b: 146), <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249b17, the Tibetan Pravrajyāvastu in Eimer 1983: 97,12, the Avadānaśataka in Speyer 1909/1970: 188,11 or in Vaidya 1958a: 256,20, with its Tibetan counterpart in Devacandra 1996: 711,19, and the *Mahāvibhāṣā, T 1545 at T XXVII 509c24. The Sanskrit fragment, <a href="../../parallels/sa969.html">SĀ 969</a>, the Tibetan Pravrajyāvastu, the Avadānaśataka, and the *Mahāvibhāṣā differ from <a href="../../mn/mn74.html">MN 74</a> at MN I 498,21 in as much as they do not report that Dīghanakha drew the conclusion that the Buddha commended his view. <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449a24 differs from the other versions, as according to its presentation all three types of view, including the disapproval of everything, are related to attachment and aversion and will therefore obstruct progress towards liberation.</span></span></span></p>
+<p>The Dīghanakha-sutta and its parallels next turn to the nature of the human body, made up of the four elements. The Pāli version recommends contemplating the body from a standard set of eleven perspectives, which revolve around the three characteristics of impermanence, dukkha, and not-self.<span class="note" id="mn74n72"><span class="details"><span class="p">[n.72] <a href="../../mn/mn74.html">MN 74</a> at MN I 500,3: “[the body] should be contemplated as impermanent, unsatisfactory, a disease, a tumour, an arrow, a calamity, an affliction, alien, disintegrating, void and not-self”, aniccato dukkhato rogato gaṇḍato sallato aghato ābādhato parato palokato suññato anattato samanupassitabbo, where aniccato and palokato can be understood as corresponding to the characteristic of impermanence, dukkhato, rogato, gaṇḍato, sallato, aghato, ābādhato represent the characteristic of dukkha, and parato, suññato, anattato pertain to the characteristic of not-self.</span></span></span> The Saṃyukta-āgama discourses, the Tibetan Pravrajyāvastu, and the Sanskrit and Tibetan version of the Avadānaśataka tale present contemplations of the body that involve the related topics of impermanence, dispassion, and relinquishment.<span class="note" id="mn74n73"><span class="details"><span class="p">[n.73] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c8: “contemplate impermanence, cessation, freedom from passion, full eradication, and the abandoning of [any] establishings”, 觀無常, 觀滅, 觀離欲, 觀滅盡, 觀捨住者. <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449b8: “having contemplated [this body] as impermanent, one is able [to develop] freedom from passion; seeing this body [as subject to] cessation, [one] promptly relinquishes [it]”, 既見無常, 便能離欲, 見此身滅, 即便捨離. Fol. 164b2 in Pischel 1904: 815 has preserved vyayā, thereby indicating that the Sanskrit fragment version would have instructed to contemplate impermanence. The Tibetan Pravrajyāvastu in Eimer 1983: 101,1 speaks of repeatedly contemplating arising and disintegration as the means to remove all longing and attachment, etc., towards the body, yang dang yang du ’byung ba dang, ’jig par rjes su lta zhing gnas na, de la lus la ’dun pa dang, lus la chags pa dang, lus la dga’ ba dang, lus la zhen pa dang, lus la chums pa dang, lus la lhag par chags par ’byung ba gang yin pa des de’i sems yongs su gtugs te mi gnas so. The instructions in the Avadānaśataka in Speyer 1909/1970: 191,5 or in Vaidya 1958a: 257,16 are to dwell contemplating arising and passing away, dispassion, and letting go, udayavyayānudarśinā vihartavyaṃ virāgānudarśinā pratinisargānudarśinā (Vaidya: vihartavyam), to which the Tibetan version in Devacandra 1996: 714,20 adds cessation as the penultimate aspect to be contemplated, ’gog par rjes su lta ba.</span></span></span></p>
+<p>After describing contemplation of the body, the Dīghanakha-sutta and its parallels turn to contemplation of feelings. The Majjhima-nikāya account begins examining this topic by clarifying that the three types of feeling are mutually exclusive.<span class="note" id="mn74n74"><span class="details"><span class="p">[n.74] <a href="../../mn/mn74.html">MN 74</a> at MN I 500,10.</span></span></span> Instead of taking up the mutually exclusive nature of the three types of feeling, the Saṃyuktaāgama versions highlight that feelings arise in dependence on contact and cease with the cessation of contact.<span class="note" id="mn74n75"><span class="details"><span class="p">[n.75] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c13 and <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449b13, a presentation also found in fol. 165a1-2 in Pischel 1904: 815. The *Mahāprajñāpāramitā-(upadeśa-)śāstra and the *Mahāvibhāṣā do not report instructions for contemplating body and feelings. The focus of their presentation appears to be more on the issue of views and the effect this discourse had on Sāriputta.</span></span></span></p>
+<p>The Tibetan Pravrajyāvastu and the Sanskrit and Tibetan versions of the Avadānaśataka tale agree with the Pāli discourse on taking up the mutually exclusive nature of the three feelings.<span class="note" id="mn74n76"><span class="details"><span class="p">[n.76] Eimer 1983: 101,8, Speyer 1909/1970: 192,2 or Vaidya 1958a: 257,21, and Devacandra 1996: 715,7.</span></span></span> The same works also mention the dependency of feelings on contact, in this respect resembling the Saṃyukta-āgama versions.<span class="note" id="mn74n77"><span class="details"><span class="p">[n.77] Eimer 1983: 102,6, Speyer 1909/1970: 192,10 or Vaidya 1958a: 257,29, and Devacandra 1996: 716,3.</span></span></span></p>
+<p>The Dīghanakha-sutta and its parallels continue by directing awareness to the impermanent and conditioned nature of feelings, to which the Sanskrit fragment, one of the Saṃyukta-āgama versions, and the Sanskrit Avadānaśataka version add awareness of the gratification, the danger, and the escape in regard to feelings.<span class="note" id="mn74n78"><span class="details"><span class="p">[n.78] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c15: “he knows in accordance with reality how [feelings] arise, how [they] cease, how [they provide] gratification, how [they are beset by] danger, and how to escape [from them]”, 若集, 若滅, 若味, 若患, 若出, 如實知. Fol. 165a4-5 in Pischel 1904: 815: cāsvādaṃ cādīnavaṃ ca niḥ(saraṇaṃ) and yathābhūtaṃ prajānaṃ, indicating that the Sanskrit version also took up the gratification, danger, and escape in relation to feelings. The same formulation is also found in the Sanskrit Avadānaśataka tale in Speyer 1909/1970: 193,1 or in Vaidya 1958a: 258,3.</span></span></span></p>
+<p>The two Saṃyukta-āgama discourses, the Sanskrit fragment, the Tibetan Pravrajyāvastu, and the Sanskrit and Tibetan versions of the Avadānaśataka tale also turn to the feelings to be experienced when life comes to an end.</p>
+<p>Although this particular perspective on feelings occurs frequently in other Pāli discourses concerned with contemplation of feelings,<span class="note" id="mn74n79"><span class="details"><span class="p">[n.79] <a href="../../mn/mn140.html">MN 140</a> at MN III 244,33, <a href="../../sn/sn12.51.html">SN 12:51</a> at SN II 83,1, <a href="../../sn/sn22.88.html">SN 22:88</a> at SN III 126,14, <a href="../../sn/sn36.7.html">SN 36:7</a> at SN IV 213,10, <a href="../../sn/sn26.8.html">SN 26:8</a> at SN IV 214,21, <a href="../../sn/sn54.8.html">SN 54:8</a> at SN V 319,24, and <a href="../../an/an4.195.html">AN 4:195</a> at AN II 198,29.</span></span></span>it does not form part of the instructions in the Dīghanakha-sutta. The Majjhima-nikāya version also stands alone in reporting that the Buddha made a pronouncement on the type of speech used by an arahant.<span class="note" id="mn74n80"><span class="details"><span class="p">[n.80] <a href="../../mn/mn74.html">MN 74</a> at MN I 500,34: “he expresses himself in the words used [commonly] in the world without holding on [to them]”, yañ ca loke vuttaṃ tena voharati aparāmasan ti (Ce-MN II 284,24: teneva, Se-MN II 268,4 adds kho before loke). This statement recurs in Nidd I 284,9 and Nidd I 303,28 as a quote from the present discourse; on its implications cf., e.g., Katz 1982/1989: 218. A similar proposition can also be found in <a href="../../dn/dn9.html">DN 9</a> at DN I 202,8.</span></span></span></p>
+<p>The parallel versions report that Sāriputta, who had been present during this discourse, reached full awakening, while Dīghanakha became a stream-enterer.<span class="note" id="mn74n81"><span class="details"><span class="p">[n.81] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c26 and <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449b21 further specify that at the time of this event Sāriputta had been a monk for half a month, 半月, a specification made also in the Tibetan Pravrajyāvastu in Eimer 1983: 104,6, in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 61c17, in the *Mahāvibhāṣā, T 1545 at T XXVII 510b1, and in the Sanskrit and Tibetan Avadānaśataka in Speyer 1909/1970: 194,1 or in Vaidya 1958a: 258,15 and in Devacandra 1996: 717,14; cf. also the survey of sources related to Sāriputta’s going forth and awakening in Migot 1952: 426-443. The Mahāvastu also associates his full awakening with the Dīrghanakhaparivrājaka-sūtra, cf. Basak 1968/2004: 40,19 or Senart 1897: 67,7, as does Xuánzàng (玄奘) in his travel records, T 2087 at T LI 925a10, translated in Beal 1884/2001b: 179. The same Mahāvastu in Basak 1968/2004: 40,12 or in Senart 1897: 66,17 also reports, however, that Śāriputra and Mahāmaudgalyāyana attained awakening during an instruction given to them by the Buddha right after their ordination, an instruction similar to an exposition given in <a href="../../mn/mn28.html">MN 28</a> at MN I 190,20 by Sāriputta. The Mahāvastu’s suggestion that the two attained full awakening together stands in direct contrast to a specification given in the same passage in Basak 1968/2004: 40,14+16 or in Senart 1897: 67,2+3 that it took Mahāmaudgalyāyana a week to awaken, while Śāriputra achieved the same in two weeks. As the two ordained together, this passage in the Mahāvastu appears to conflate two different and to some degree conflicting accounts, something not uncommon in this work, cf. also above p. 175 note 157.</span></span></span> The Majjhimanikāya version indicates that Sāriputta became an arahant once he had realized that the Buddha’s instruction aimed at abandonment through direct knowledge.<span class="note" id="mn74n82"><span class="details"><span class="p">[n.82] <a href="../../mn/mn74.html">MN 74</a> at MN I 501,2: “the Blessed One tells us about abandoning those things through direct knowledge”, tesaṃ tesaṃ kira no bhagavā dhammānaṃ abhiññā pahānam āha.</span></span></span></p>
+<p>The Saṃyukta-āgama versions, the Sanskrit fragment, the Tibetan Pravrajyāvastu, and the Sanskrit and Tibetan versions of the Avadānaśataka tale present the same event more in terms of actual meditation practice. According to their report, Sāriputta became an arahant by practising contemplation of impermanence and thereby developing dispassion.<span class="note" id="mn74n83"><span class="details"><span class="p">[n.83] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c29: “he contemplated those dharmas as impermanent, as arising and ceasing, [and in terms of] freedom from passion, full eradication, and relinquishment”, 於彼彼法觀察無常, 觀生滅, 觀離欲, 觀滅盡, 觀捨. <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449b22: “he contemplated all these dharmas as impermanent, promptly realised freedom from passion, [thereby] discarding and relinquishing all views”, 觀察諸法 無常, 即便離欲證成, 棄捨諸見. Fol. 166a5 in Pischel 1904: 815 similarly refers to contemplating dispassion, virāgānupaśyino. According to the Tibetan Pravrajyāvastu in Eimer 1983: 104,21, Śāriputra reached full awakening after contemplating the relinquishment of all phenomena, dispassion, extinction, and complete relinquishing, chos de dang de dag la spong bar rjes su lta zhing gnas pa dang, ’dod chags dang bral bar rjes su lta ba dang, ’gog par rjes su lta ba dang, rab tu spong bar rjes su lta zhing gnas pa. The Sanskrit and Tibetan Avadānaśataka tales in Speyer 1909/1970: 194,5 or Vaidya 1958a: 258,19 report that Śāriputra contemplated impermanence, passing away, dispassion, cessation, and relinquishment, anityatānudarśino viharato vyayānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānudarśino, with the Tibetan counterpart passage in Devacandra 1996: 718,2 reading mi rtag par rjes su lta bas gnas pa dang, ’jig par rjes su lta ba dang, ’dod chags dang bral bar rjes su lta ba dang, ’gog par rjes su lta ba dang, dor bar rjes su lta bas gnas nas.</span></span></span></p>
+<p>The Majjhima-nikāya account concludes by reporting that Dīghanakha became a lay follower of the Buddha. According to the Chinese and Sanskrit discourses, however, and according to the Tibetan Pravrajyāvastu, he requested ordination and in due turn became an arahant.<span class="note" id="mn74n84"><span class="details"><span class="p">[n.84] <a href="../../parallels/sa969.html">SĀ 969</a> at T II 250a1, <a href="../../parallels/sa-2.203.html">SĀ2 203</a> at T II 449b27, fol. 166b4 in Pischel 1904: 816, and Eimer 1983: 105,11; cf. also T 1444 at T XXIII 1028c15, which after abbreviating the main body of the discourse ends with “(up to) he went forth”, 乃至出家.</span></span></span> The *Mahāprajñāpāramitā-(upadeśa-)śāstra, as well as the Chinese, Sanskrit, and Tibetan Avadānaśataka tale similarly report that Dīghanakha became a monk and eventually an arahant.<span class="note" id="mn74n85"><span class="details"><span class="p">[n.85] T 1509 at T XXV 62a24, T 200 at T IV 256a19, Speyer 1909/1970: 194,14 or Vaidya 1958a: 258,27, and Devacandra 1996: 718,18.</span></span></span></p>
+<p>This would be a more natural presentation, since after becoming a stream-enterer it is difficult to imagine Dīghanakha continuing to live on as a non-Buddhist wanderer or even to revert to lay status, so that for him to become a Buddhist monk would be the most reasonable course of action to be taken at this point.<span class="note" id="mn74n86"><span class="details"><span class="p">[n.86] Freiberger 1997: 128, in his survey of the usage of the term paribbājaka in the Pāli discourses, comes to the conclusion that there is no evidence for the existence of any Buddhist paribbājakas; cf. also Karunaratna 2004b: 318. Thus a Buddhist who “goes forth”, or one “gone forth” who turns Buddhist, would presumably both become members of the Buddhist monastic order.</span></span></span></p>
+<p>According to the Sanskrit Avadānaśataka tale and the *Mahāprajñāpāramitā-(upadeśa-)śāstra, after going forth Dīghanakha was known by the name of Koṣṭhila or Koṭṭhita.<span class="note" id="mn74n87"><span class="details"><span class="p">[n.87] T 1509 at T XXV 61b24: 摩訶俱絺羅, rendered by Lamotte 1944/1981: 47 note 1 as Mahākauṣṭhila, and the Avadānaśataka in Speyer 1909/1970: 195,4 or Vaidya 1958a: 259,4, discussed in Oldenberg 1912b: 178 note 3; cf. also Feer 1891: 425 note 3. The Tibetan (Mūla-)Sarvāstivāda Vinaya in Eimer 1983: 95,15+17 also refers to him as stod rings, which Panglung 1981: 303 lists as a rendering of the name Koṣṭhila.</span></span></span> In fact, once he had ordained as a Buddhist monk, Dīghanakha would have cut his fingernails, so that the use of the sobriquet “long nail” could indeed fall out of use.</p>
+<p>Thus, from the perspective of Avadānaśataka tale and the *Mahāprajñāpāramitā- (upadeśa-)śāstra, the wanderer Dīghanakha and the monk Mahākoṭṭhita appear to be the same person.</p>
+<p>This identification stands in contrast to the Pāli commentarial tradition, which reckons Mahākoṭṭhita and Dīghanakha as two different persons. However, closer inspection reveals some internal inconsistencies in the commentarial presentation.<span class="note" id="mn74n88"><span class="details"><span class="p">[n.88] According to the Therāpadāna, Ap 534:23 at Ap II 480,17, the parents of Mahākoṭṭhita were Assalāyana and Candavatī, whereas according to Ps III 203,17 Sāriputta was Dīghanakha’s maternal uncle, mātula, i.e., Dīghanakha was the son of Sāriputta’s sister, cf. also Ps IV 87,6: sāriputtathero ... bhāgineyyassa dīghanakhaparibbājakassa. Sāriputta is recorded to have had three sisters, Cālā, Upacālā, and Sisūpacālā, all of which, according to Dhp-a II 188,16, went forth (cf. also their verses at <a href="../../thi/thi7.html#p182">Thī 182</a>-203 and <a href="../../sn/sn5.6.html">SN 5:6</a>-8 at SN I 132-134 or SN2 167-169 at SN2 I 290-294). Thī-a 159,21 indicates that, before going forth, Cālā, Upacālā, and Sisūpacālā each had a son and each of these sons was given the same name as his respective mother, a name under which each of them went forth (cf. also Th-a I 117,15). Thus, none of the three sisters seems to be identifiable as the mother of Dīghanakha, so that the commentarial presentation of Dīghanakha as a son of a sister of Sāriputta appears to lack support from the information provided in the same commentarial tradition. According to several other works, Dīghanakha was in fact Sāriputta’s uncle, cf. the Pravrajyāvastu in Dutt 1984d: 23,13 and folio 6r9-10 in Vogel 1992: 80 (which record the names given to the son of Dīghanakha’s sister as Upatiṣya and Śāriputra), the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 61c11, the *Mahāvibhāṣā, T 1545 at T XXVII 509c3, and the Avadānaśataka in Speyer 1909/1970: 187,3 or Vaidya 1958a: 255,26, T 200 at T IV 256a9, and Devacandra 1996: 709,7. This, however, does not fully solve the situation either, as according to the Sanskrit and Tibetan Avadānaśataka tales in Speyer 1909/1970: 186,7 or in Vaidya 1958a: 255,20 and in Devacandra 1996: 709,6, the father of Dīrghanakha and his sister Śāri (= Śāriputra’s mother) was called Maṭhara (ma tha ra). Lamotte 1944/1981: 47 note 1 points out that this would not fit with the parents the Therāpadāna at Ap II 480,17 attributes to Mahākoṭṭhita, according to which his father was Assalāyana. Yet, this attribution seems also to be beset with difficulties, since at the time of the Assalāyanasutta, <a href="../../mn/mn93.html">MN 93</a> at MN II 147,10, Assalāyana was only sixteen years old. This discourse seems to have taken place at a later stage of the Buddha’s ministry, when his teaching had become generally known, since <a href="../../mn/mn93.html">MN 93</a> takes its occasion from a group of Brahmins who want to challenge the Buddha on his proclamation of purification of all four social classes, cātuvaṇṇa suddhi. The identity of the Assalāyana mentioned in this discourse and the one referred to in the Apadāna can be seen in the next Apadāna verse, according to which the Buddha converted Assalāyana by a teaching on purification for all, vinayī sabbasuddhiyā (following Be-Ap II 132,26, whereas Ee reads sabbabuddhiyā), a reference that evidently refers to the discussion in <a href="../../mn/mn93.html">MN 93</a>. Following the Apadāna account, then, Mahakoṭṭhita would have been the son of a Brahmin who at the time of the delivery of the Assalāyana-sutta was only sixteen years old, a presentation that seems less probable than the assumption that he could have been identical with Dīghanakha. In sum, as this little excursion into ‘historical’ information amply shows, the indications given in the various sources on family relationships, etc., are at times not easily reconciled with each other.</span></span></span></p>
+<p>In sum, the wanderer Dīghanakha might indeed be identical with the monk Mahākoṭṭhita, a suggestion that would also provide a meaningful background to the close relationship between Mahākoṭṭhita and Sāriputta and their frequent discussions recorded elsewhere in the discourses.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 49 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 49: Brahmanimantaṇika-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn48comp.html#content"></a><a id="next-sutta" href="./mn50comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn49.html">MN 49</a> / <a href="../../parallels/ma78.html">MĀ 78</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Brahmanimantaṇika-sutta, the “discourse on Brahmā’s invitation”,<span class="note" id="mn49n143"><span class="details"><span class="p">[n.143] Regarding the title, both versions of the discourse conclude with an explanation by the reciters that the title refers to Brahmā’s invitation to the Buddha, cf. <a href="../../mn/mn49.html">MN 49</a> at MN I 331,31: brahmuno ca abhinimantanatāya, tasmā imassa veyyākaraṇassa brahmanimantaṇikan t’ eva adhivacanan ti (Be-MN I 407,15: brahmanimantanikaṃteva, Ce-MN I 774,32: brahmanimantanikanteva, Se-MN I 598,7: brahmanimantanikantveva) and <a href="../../parallels/ma78.html">MĀ 78</a> at T I 549a28: 是為梵天請 ... 是故此經名梵天請佛. According to Ps II 415,30, “Brahmā’s invitation” (Brahmanimantaṇika) refers to the way Brahmā welcomed the Buddha on arrival. The same sense seems to be reflected in <a href="../../parallels/ma78.html">MĀ 78</a> at T I 547a9, which uses the verb “to invite”, 請, in its title and again at T I 547a19 and T I 547c3 in its description of how Brahmā welcomed the Buddha. Horner 1954/1967: 395, however, understands the expression Brahmanimantaṇika to have the sense of an “invitation to Brahmā”, perhaps taking brahmuno (in the concluding sentence) to be dative rather than genitive. Yet, to indicate the sense of an invitation ‘to’ Brahmā, the object of such an invitation should stand in the accusative, cf., e.g., Wijesekera 1993: 43: “with verbs of asking, begging ... etc. the person asked ... is denoted by the accusative”. Neumann 1896/1995: 356 translates the discourse’s title as “Brahmā’s visitation” (“Brahmās Heimsuchung”) and Chalmers 1926: 234 as “Brahmā’s appeal”; cf. also Gombrich 2001: 106.</span></span></span> records a visit paid by the Buddha to a Brahmā in order to refute the latter’s mistaken belief that his realm was permanent.<span class="note" id="mn49n144"><span class="details"><span class="p">[n.144] Gombrich 2001: 98 points out that a comparable belief in the Brahmā world as the ultimate is reflected in the Bṛhadāraṇyaka Upaniṣad 6.2.15.</span></span></span> This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn49n145"><span class="details"><span class="p">[n.145] The parallel is <a href="../../parallels/ma78.html">MĀ 78</a> at T I 547a-549b, which agrees with <a href="../../mn/mn49.html">MN 49</a> on the location and has the closely similar title “discourse on Brahmā’s invitation to the Buddha”, 梵天請佛經. On <a href="../../parallels/ma78.html">MĀ 78</a> cf. also Minh Chau 1964/1991: 58 and 184-185. According to <a href="../../mn/mn49.html">MN 49</a> at MN I 326,5, the Buddha’s encounter with Brahmā took place at a time when the Buddha was staying at Ukkaṭṭhā in the Subhaga Grove. Bodhi in Ñāṇamoli 1995/2005: 1246 note 499 points out that <a href="../../mn/mn1.html">MN 1</a> takes place at the same location and has a subject matter similar to <a href="../../mn/mn49.html">MN 49</a>, so that <a href="../../mn/mn49.html">MN 49</a> can be seen “as a dramatic representation of the same ideas set forth by the Mūlapariyāya in abstract philosophical terms”. For a discourse quotation in Abhidh-k-ṭ cf. below note 155.</span></span></span> The first part of the Brahmanimantaṇika-sutta recurs, moreover, as a discourse in the Saṃyutta-nikāya under the title Bakabrahma-sutta.<span class="note" id="mn49n146"><span class="details"><span class="p">[n.146] <a href="../../sn/sn6.4.html">SN 6:4</a> at SN I 142-144 (or SN2 175 at SN2 I 310-314), which agrees with <a href="../../mn/mn49.html">MN 49</a> on the location. The subject matter of this discourse recurs also in the Bakajātaka, Jā 405 at Jā III 358,20.</span></span></span></p>
+<p>The Brahmanimantaṇika-sutta, its Madhyama-āgama parallel, and the Bakabrahmasutta begin by reporting that a Brahmā, whom the Pāli versions identify as Baka the Brahmā, believed his realm to be permanent and supreme, with nothing superior to it. The Buddha, who had become aware of the deluded thought of this Brahmā, thereupon decided to visit him.<span class="note" id="mn49n147"><span class="details"><span class="p">[n.147] According to <a href="../../mn/mn49.html">MN 49</a> at MN I 326,17, Brahmā welcomed the Buddha by saying that it had been a long time since the Buddha had visited him, cirassaṃ ... imaṃ pariyāyam akāsi yadidaṃ idh’ āgamanāya (Se-MN I 590,16: adh’ āgamanāya), cf. also <a href="../../sn/sn6.4.html">SN 6:4</a> at SN I 142,23 (or SN2 175 at SN2 I 311,3), a form of greeting not recorded in <a href="../../parallels/ma78.html">MĀ 78</a>. This greeting appears to be a polite expression of welcome that can be used even if the visitor is coming for the first time. A similar case can be seen when Mahāmoggallāna visits Sakka, a visit which, judging from the fact that Sakka takes him for a tour of the heavenly place and that Sakka’s maidens do not know Mahāmoggallāna, appears to have been his first visit to Sakka’s realm. Nevertheless, according to <a href="../../mn/mn37.html">MN 37</a> at MN I 252,25 and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594a6 Sakka welcomes Mahāmoggallāna by saying that it had been a long time since he had visited (another parallel, <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c5, does not record such a greeting). Another case is what appears to be the Buddha’s first visit to Uruvilvākāśyapa, who according to the Catuṣpariṣat-sūtra fragments S 360 folio 84V3 and S 365V6 in Waldschmidt 1952: 11 and 46 (cf. also Gnoli 1977: 217,18) welcomes the Buddha by saying that it had been a long time since the Buddha had come for a visit (Vin I 24,20 does not report such a greeting). Another difference between <a href="../../mn/mn49.html">MN 49</a> and <a href="../../parallels/ma78.html">MĀ 78</a> in regard to the present passage is that, according to <a href="../../mn/mn49.html">MN 49</a> at MN I 326,17, Brahmā addressed the Buddha as mārisa, “sir”, a mode of address often used in the discourses by gods to address each other or the Buddha (cf. also Wagle 1985: 73). According to <a href="../../parallels/ma78.html">MĀ 78</a> at T I 547a19, however, Brahmā rather addressed the Buddha as “great seer”, 大仙人.</span></span></span></p>
+<p>On arrival in the Brahmā realm, the Buddha told Brahmā that his eternalist view was mistaken. The Bakabrahma-sutta of the Saṃyutta-nikāya continues at this point with a verse exchange between the Buddha and Brahmā, in the course of which the Buddha explains the past meritorious deeds that had led this Brahmā to his present position, after which this version ends.<span class="note" id="mn49n148"><span class="details"><span class="p">[n.148] In his account of Brahmā’s past lives, according to <a href="../../sn/sn6.4.html">SN 6:4</a> at SN I 144,1 (or SN2 175 at SN2 I 313,11) the Buddha also mentions a time when he had been a pupil of this Brahmā, a past life experience described in more detail in Jā 346 at Jā III 143,4.</span></span></span></p>
+<p>According to the Brahmanimantaṇika-sutta and its Madhyama-āgama parallel, at this point Māra appeared on the scene, warning the Buddha that he should not contradict the word of Brahmā. Māra explained that recluses and Brahmins, who had developed disgust towards earth, water, fire, wind, the devas, Pajāpati, or Brahmā,<span class="note" id="mn49n149"><span class="details"><span class="p">[n.149] Gombrich 2001: 99 comments that this listing “summarizes, from bottom to top, the world Brahmā has created, and Māra is urging a positive attitude to both the creator and his creation”.</span></span></span> had on that account been reborn in a lower realm. However, recluses and Brahmins who rejoiced in earth, water, fire, wind, the devas, Pajāpati, or Brahmā, had been reborn in a superior realm.</p>
+<p>The Buddha immediately recognized the speaker to be Māra, who according to the Madhyama-āgama version pretended to be a member of Brahmā’s assembly.<span class="note" id="mn49n150"><span class="details"><span class="p">[n.150] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 547b24: “Māra, the Evil One, who was not Brahmā, nor a member of Brahmā’s assembly, nevertheless claimed of himself: ‘I am a Brahmā’”, 魔波旬非是梵天, 亦非梵天眷屬, 然自稱說, 我是 梵天. An extract from the present discussion already appeared in Anālayo 2005b: 12.</span></span></span> According to the Majjhima-nikāya version, however, Māra had taken possession of a member of Brahmā’s assembly.<span class="note" id="mn49n151"><span class="details"><span class="p">[n.151] <a href="../../mn/mn49.html">MN 49</a> at MN I 326,34: “Māra, the Evil One, had taken possession of a member of Brahmā’s assembly”, māro pāpimā aññataraṃ brahmapārisajjaṃ anvāvisitvā.</span></span></span> This is remarkable, for although the discourses attribute power to Māra in relation to the sensuous sphere, in the thought-world of early Buddhism the jhānas and therewith the corresponding realms of the Brahmā world appear to be outside of his control.<span class="note" id="mn49n152"><span class="details"><span class="p">[n.152] According to <a href="../../mn/mn25.html">MN 25</a> at MN I 159,10 and its parallel <a href="../../parallels/ma178.html">MĀ 178</a> at T I 720a9, as well as according to <a href="../../an/an9.39.html">AN 9:39</a> at AN IV 434,1, the jhānas are beyond the reach of Māra. Notably, however, his realm appears to be just bordering on the Brahmā world, as according to Ps I 34,2 Māra lives in the paranimmittavasavattidevaloka, where he governs his own following like a rebel prince in the border region of a kingdom, attano parisāya issariyaṃ pavattento rajjapaccante dāmarikarājaputto viya vasati, cf. also Boyd 1975: 112 note 33 and Gombrich 1975a: 134. The commentarial gloss on the present passage, found at Ps II 405,28, explains that Māra had only taken possession of a single member of Brahmā’s retinue, cf. also Boyd 1975: 93 note 80. This does not seem to resolve the problem, since already for Māra to be able to do that much would not fit the way his range of power is depicted in other discourses.</span></span></span> Thus it is already unexpected that he is able to reach and manifest himself in the Brahmā world. According to the Brahmanimantaṇika-sutta, however, he not only took possession of a member of Brahmā’s assembly, but had even taken control over Brahmā himself, together with the whole of the assembly.<span class="note" id="mn49n153"><span class="details"><span class="p">[n.153] In <a href="../../mn/mn49.html">MN 49</a> at MN I 327,30, the Buddha addresses Māra by acknowledging: “Evil One, Brahmā and Brahmā’s assembly ... have all gone under your power”, yo c’ eva, pāpima, brahmā yā ca brahmaparisā ... sabbe va tava vasagatā (Be-MN I 403,4 and Ce-MN I 766,29: vasaṃgatā, Se-MN I 592,17: vasaṅgatā and without va before tava).</span></span></span> This presentation stands in contrast to the range of Māra’s power and influence described in other discourses. Both versions report that Brahmā reaffirmed his eternalist view and informed the Buddha that whoever delights in the four elements, in devas, in Pajāpati, or in Brahmā will come under his control. The Buddha replied that he knew this to be the case, but he also knew Brahmā’s past and his future destiny.<span class="note" id="mn49n154"><span class="details"><span class="p">[n.154] Following <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548a8: “I know where you came from and where you are going to”, 我知汝所 從來處, 所往至處. The version of the Buddha’s reply in <a href="../../mn/mn49.html">MN 49</a> at MN I 328,25 instead indicates that the Buddha knew Brahmā’s destiny and “splendour”, te ahaṃ, brahme, gatiñ ca pajānāmi jutiñ ca pajānāmi. A variant for juti, listed in Ee-MN I 557 and in Ce-MN I 768 note 5, reads instead cuti, which in view of the context and of the passage in <a href="../../parallels/ma78.html">MĀ 78</a> appears to be the preferable reading; cf. also Horner 1954/1967: 391 note 5, who comments that juti <i>“</i>seems to be faulty for cuti”.</span></span></span></p>
+<p>According to the Brahmanimantaṇika-sutta and its parallel, the Buddha described the reach of Brahmā’s power, followed by referring to heavenly realms he knew, but of which Brahmā was unaware, thereby clarifying that in respect to knowledge Brahmā was not his equal.<span class="note" id="mn49n155"><span class="details"><span class="p">[n.155] <a href="../../mn/mn49.html">MN 49</a> at MN I 329,10 and <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548a28. A counterpart to the description of the reach of Brahmā’s power has also been preserved as a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, D (4094) mngon pa, ju 188b6-189a7 or Q (5595) tu 215b5-216a7; cf. also Abhidh-k 3:96 in Pradhan 1967: 185,3, paralleling MN I 328,18, with the Chinese counterparts in T 1558 at T XXIX 64c24 and T 1559 at T XXIX 222c11.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, Brahmā had forgotten about his former life, as this took place long ago,<span class="note" id="mn49n156"><span class="details"><span class="p">[n.156] <a href="../../mn/mn49.html">MN 49</a> at MN I 329,4: tassa te aticiranivāsena sā sati muṭṭhā (Be-MN I 404,14: pamuṭṭhā).</span></span></span> an explanation not found in the Madhyama-āgama version. This explanation seems to be required in order to account for Brahmā’s mistaken view, which not only involves his ignorance of other higher heavenly realms, but also his belief not to be subject to birth and death.</p>
+<p>According to the Madhyama-āgama discourse, in reply to the Buddha’s claim to superior knowledge, Brahmā affirmed to have infinite knowledge, an affirmation not recorded in the Majjhima-nikāya version. In this affirmation, Brahmā proclaims to be conscious of infinite elements, to have infinite knowledge, and infinite vision.<span class="note" id="mn49n157"><span class="details"><span class="p">[n.157] According to <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548b11, Brahmā proclaimed that “because I am conscious of infinite elements, have infinite knowledge, infinite vision, and infinite discrimination, I know each and everything distinctly”, 以識無量境界故, 無量知, 無量見, 無量種別, 我各各知別.</span></span></span> A reference to an ‘infinite consciousness’ occurs also in the Brahmanimantaṇika-sutta at a later point, where the Pāli editions differ on whether this expression should be attributed to the Buddha or to Brahmā.<span class="note" id="mn49n158"><span class="details"><span class="p">[n.158] Ee-MN I 329,30, Ce-MN I 770,25, and Se-MN I 596,1 attribute the anantaṃ viññāṇaṃ to Brahmā, while Be-MN I 405,8 attributes it to the Buddha, as in this edition the anantaṃ viññāṇaṃ is preceded by concluding Brahmā’s speech with iti (as does a variant reading in Ee-MN I 558); cf. also Bodhi in Ñāṇamoli 1995/2005: 1249 note 512 and Gombrich 2001: 105.</span></span></span></p>
+<p>The commentary attributes this stanza to the Buddha and explains it to be a reference to Nirvāṇa.<span class="note" id="mn49n159"><span class="details"><span class="p">[n.159] Ps II 413,6.</span></span></span> In the Majjhima-nikāya discourse, this stanza would indeed seem to fit the Buddha better, as the Brahmanimantaṇika-sutta qualifies the infinite consciousness to be “non-manifestative” (anidassana).<span class="note" id="mn49n160"><span class="details"><span class="p">[n.160] According to Nakamura 1955: 78-79, however, the stanza reflects Upaniṣadic conceptions of consciousness as the ultimate principle, in which case it would also fit Brahmā.</span></span></span> In the Madhyama-āgama version, however, to be conscious of infinite elements is only an aspect of Brahmā’s claim to omniscience and does not seem to be related to Nirvāṇa.</p>
+<p>The “infinite consciousness” recurs in a stanza in the Kevaddha-sutta and in its Chinese parallel,<span class="note" id="mn49n161"><span class="details"><span class="p">[n.161] <a href="../../dn/dn11.html">DN 11</a> at DN I 223,12: viññāṇaṃ anidassanaṃ anantaṃ sabbato pahaṃ (Be-DN I 213,13 and Se-DN I 283,10: pabhaṃ), <a href="../../parallels/da24.html">DĀ 24</a> at T I 102c17: “consciousness [that is] non-manifestative, immeasurable, and self-luminous”, 識無形, 無量, 自有光; DĀ (Skt) fragment 389c7 in Zhou 2008: 9: vijñāyānidarśanam anantaṃ sarvaḥ pṛthuṃ. On this passage cf. also Brahmāli 2009: 43-47, Dutt 1960/1971: 283-293, Harvey 1989: 88-89, Meisig 1995: 200 note 22312, Norman 1987, and Ñāṇananda 2004: 24-43.</span></span></span> explained by the Pāli commentary to be an allusion to Nirvāṇa.<span class="note" id="mn49n162"><span class="details"><span class="p">[n.162] Sv II 393,14. If the claim to being endowed with an infinite consciousness should indeed have been attributed to Brahmā in ancient India, as <a href="../../parallels/ma78.html">MĀ 78</a> and some editions of <a href="../../mn/mn49.html">MN 49</a> suggest, then the reference to the infinite consciousness in <a href="../../dn/dn11.html">DN 11</a> and <a href="../../parallels/da24.html">DĀ 24</a> could be seen as an instance of a recurring pattern in the early discourses, where a particular expression is reinterpreted in accordance with Buddhist teachings, a device Rhys Davids 1921: 132 refers to as “pouring new wine into the old bottles”. Hershock 2005: 4 speaks of “openly accommodating ... existing political, social and religious authorities” and then focussing “on how they might be skilfully redirected”, expressive of a “general strategy of accepting, but then pointedly revising the meaning” of contemporary conceptions. Behind this feature stands a particular mode of thought in India, which approaches rival views and proposals in a spirit of “inclusivism” by incorporating central elements of another religious group and treating them as if these were identical with one’s own position, while at the same time explicitly or implicitly indicating that these rival elements are in some way inferior to one’s own system, cf. also Hacker 1983, Mertens 2004, the articles collected in Oberhammer 1983, Ruegg 2008: 97-99, and Schmithausen 2005a: 171.</span></span></span> In the case of the Kevaddha-sutta, the Pāli and Chinese versions agree in attributing this expression to the Buddha.</p>
+<p>In the Madhyama-āgama version, the Buddha replies to Brahmā’s claim to infinite knowledge by pointing out that those, who consider earth (etc.) to be ‘I’ or ‘mine’, do not truly know earth (etc.), as only those, who do not consider earth (etc.) in such a way, truly know earth (etc.).<span class="note" id="mn49n163"><span class="details"><span class="p">[n.163] According to <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548b14, recluses and Brahmins who in regard to earth have the idea that “‘I am earth’, ‘earth is mine’, ‘I belong to earth’, having [thus] reckoned earth as being a self, do not [truly] know earth”, 地是我, 地是我所, 我是地所, 彼計地是我已, 便不知地.</span></span></span> Such an explanation is not found in the Brahmanimantaṇika-sutta.</p>
+<p>The Madhyama-āgama discourse reports that the Buddha affirmed that he really knew earth, since he did not consider earth (etc.) to be ‘I’ or ‘mine’. A parallel to this statement occurs in the Brahmanimantaṇika-sutta, according to which the Buddha similarly proclaimed that he did not claim earth (etc.) to be ‘mine’.</p>
+<p>On reading this passage in the Brahmanimantaṇika-sutta, it is not entirely clear why the Buddha should at this point proclaim that he did not consider earth, etc., to be ‘mine’. In the Madhyama-āgama version the progression of thought is smoother, since here Brahmā had just affirmed his superior knowledge in regard to earth (etc.), an affirmation that came as a reply to the Buddha’s disclosure of heavenly realms unknown to Brahmā. The Buddha then counters Brahmā’s presumption to have superior knowledge by highlighting that true knowledge requires going beyond the notions ‘I’ and ‘mine’. By declaring that he belongs to those who truly know, the Buddha implicitly indicates that Brahmā does not truly know, because of being under the influence of notions of ‘I’ and ‘mine’.</p>
+<p>In the Brahmanimantaṇika-sutta, the Buddha explains that he does not claim to be “earth”, to be “in earth”, or to be “from earth”, and thereby does not take earth to be “mine”.<span class="note" id="mn49n164"><span class="details"><span class="p">[n.164] <a href="../../mn/mn49.html">MN 49</a> at MN I 329,14, a presentation that brings to mind the Tathāgata’s aloofness from conceivings described in <a href="../../mn/mn1.html">MN 1</a> at MN I 5,35.</span></span></span> This analysis of the process of appropriating different elements of experience and identifying with them is not found in the Madhyama-āgama parallel.</p>
+<p>According to the Madhyama-āgama account, Brahmā proclaimed that all beings delight in existence, whereas the Buddha was uprooting existence. This proclamation seems to intend to criticize the Buddha. In reply, the Buddha affirmed his lack of interest in existence.<span class="note" id="mn49n165"><span class="details"><span class="p">[n.165] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548c2: “seeing fear in becoming, and seeing no fear in non-becoming, therefore one should not delight in becoming, becoming – why should it not be eradicated”, 於有見恐怖, 無有見不懼, 是故 莫樂有, 有何不可斷? The way <a href="../../parallels/ma78.html">MĀ 78</a> introduces this statement could give the impression that it was spoken by Brahmā. The context, however, suggest this to be improbable, since for Brahmā to make such a statement would not fit the flow of the narration. That this statement should be attributed to the Buddha would also be supported by the fact that <a href="../../mn/mn49.html">MN 49</a> at MN I 330,13 attributes a similar statement to him (cf. note 166 below).</span></span></span></p>
+<p>A similar stanza occurs at a later point in the Majjhima-nikāya version, after the Buddha had vanished from the sight of Brahmā.<span class="note" id="mn49n166"><span class="details"><span class="p">[n.166] <a href="../../mn/mn49.html">MN 49</a> at MN I 330,13: “having seen fear in existence, and seeing existence about to come to an end, I did not welcome any existence, nor did I cling to any delight”, bhave vāhaṃ bhayaṃ disvā, bhavañ ca vibhavesinaṃ, bhavaṃ nābhivadiṃ kañci, nandiñ ca na upādiyin ti (Be-MN I 405,28, Ce-MN I 772,11, and Se-MN I 596,19: kiñci, Se also: upādiyan ti). For vibhavesinaṃ in this stanza cf. Norman 1995: 205, who in his note on <a href="../../tha/tha10.html#p527">Th 527</a> suggests taking vibhavesinaṃ in the present context as a future active participle. Chalmers 1926: 238 renders this line as [marking] “how life still dogs the nihilist”, Gombrich 2001: 105 as [having seen] “how those who seek non-becoming still become”, Horner 1954/1967: 393 as “becoming seeking dis-becoming” (taking ºesin in vibhavesinaṃ in the sense of “seeking”), and Ñāṇamoli 1995/2005: 428 as “being will cease to be”; cf. also Udāna-(varga) 29.22 in Bernhard 1965: 377.</span></span></span> Judging from the Madhyama-āgama discourse, the rationale for this stanza is to rebut Brahmā’s affirmation of existence as something that should be delighted in.</p>
+<p>The Brahmanimantaṇika-sutta and its parallel record that at this point of their discussion Brahmā unsuccessfully attempted to vanish from the Buddha’s sight. According to the Madhyama-āgama version, the Buddha was able to point out to Brahmā “now you are here, now you are there”.<span class="note" id="mn49n167"><span class="details"><span class="p">[n.167] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548c6.</span></span></span> Both versions report that the Buddha then successfully vanished from Brahmā’s sight. According to the Madhyama-āgama discourse, he accomplished this feat by emanating rays of light, so that Brahmā and his assembly could no longer see him, although they could still hear him.<span class="note" id="mn49n168"><span class="details"><span class="p">[n.168] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548c14.</span></span></span></p>
+<p>While according to the Majjhima-nikāya version the Buddha at this point proclaimed his lack of interest in existence in verse, according to the Madhyama-āgama account he did not say anything while being invisible. Here the Majjhima-nikāya version fits the flow of the narration better, since according to both versions the Buddha had decided to perform a supernormal feat in such a way that he would disappear visually but could still be heard by Brahmā and his assembly, a point which would be meaningless if, once invisible, he were to remain silent.</p>
+<p>The two versions note that Brahmā and his assembly were struck with wonder, after which Māra reappeared on the scene, urging the Buddha to refrain from teaching disciples, as such teaching activities would result in an unfavourable rebirth.<span class="note" id="mn49n169"><span class="details"><span class="p">[n.169] <a href="../../mn/mn49.html">MN 49</a> at MN I 330,27 reads mā sāvakesu gedhim akāsi. According to PED p. 253 s.v. gedhi, the expression gedhiṃ karoti requires the locative, which explains why in the present passage the disciples, sāvakesu, stand in the locative case, so that the phrase seems to intend craving in relation to the disciples, not craving that takes place in the disciples themselves. This understanding is confirmed by <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548c26, which enjoins: “don’t be attached to disciples”, 莫著弟子.</span></span></span> Both versions reveal the real motivation behind this intervention by Māra to be his apprehension that the Buddha’s disciples will escape his power if the Buddha teaches the Dharma to them.</p>
+<p>According to the Brahmanimantaṇika-sutta, the Buddha clarified that teaching activities could result in an unfavourable rebirth only in the case of teachers who are not fully awakened.<span class="note" id="mn49n170"><span class="details"><span class="p">[n.170] <a href="../../mn/mn49.html">MN 49</a> at MN I 331,15.</span></span></span> The Madhyama-āgama version makes a similar statement, explaining that those who develop attachment to their disciples cannot really be reckoned to be [true] recluses, [true] Brahmins, arahants, or fully awakened ones.<span class="note" id="mn49n171"><span class="details"><span class="p">[n.171] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 549a21.</span></span></span></p>
+<p>In the Majjhima-nikāya account, the Buddha points out that, whether he should teach or not, he remains “such”,<span class="note" id="mn49n172"><span class="details"><span class="p">[n.172] <a href="../../mn/mn49.html">MN 49</a> at MN I 331,18: desento ... tādiso va, adesento ... tādiso va.</span></span></span> followed by explaining that he remains “such” because he has abandoned all influxes, comparable to a palm tree cut off at the root.</p>
+<p>The Madhyama-āgama discourse instead reports that the Buddha told Māra to keep away from the issue whether the Buddha should teach or not, since the Buddha knew well enough himself when that was suitable and when it was not appropriate.<span class="note" id="mn49n173"><span class="details"><span class="p">[n.173] <a href="../../parallels/ma78.html">MĀ 78</a> at T I 549a26.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.121 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.121</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 121</span><span class="mirror-right">（一二一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn16.13.html">SN 16.13</a> / <a href="../parallels/sa906.html">SĀ 906</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, Venerable Mahākāśyapa was staying in the western garden of Śrāvastī, in the lecture hall of Viśākhā. At sunset, Mahākāśyapa arose from his meditation, went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! For what reason did the Tathāgata, when first establishing the precepts, have very few precepts and many practitioners? Why is it that today, as the precepts are established more and more, there are fewer and fewer practitioners?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，尊者摩诃迦叶住舍卫国西园林中毘舍佉讲堂。彼大迦叶于日没时，从禅定起，往诣佛所，顶礼佛足，在一面坐。而白佛言：「世尊！以何因缘，如来初始制戒之时，极为尠少，修行者多？今日何故，制戒转增，履行者少？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Kāśyapa, &quot;So it is, so it is. The turbidity of sentient beings&#x27; lives, the turbidity of afflictions, the turbidity of sentient beings, the turbidity of eons, and the turbidity of views - as sentient beings become more and more evil, the true Dharma also declines. Therefore, the Tathāgata establishes many precepts for disciples, but few bhikṣus can follow the Buddha&#x27;s words and uphold the precepts. Sentient beings gradually decline and fall. It is like gold gradually decreasing until similar gold appears. The Tathāgata&#x27;s true Dharma is also like this, gradually decreasing until the semblance Dharma appears. Because the semblance Dharma appears, the true Dharma declines. Kāśyapa should know, it is like a ship in the ocean carrying many treasures, which will surely sink. The Tathāgata&#x27;s teachings are also like this, gradually declining. The Tathāgata&#x27;s true Dharma is not destroyed by earth, water, fire, or wind. If evil desires arise in my Dharma, if evil deportment is practiced, if many evils are accomplished, if the Dharma is called non-Dharma and non-Dharma is called Dharma, if what is not Vinaya is said to be Vinaya and what is Vinaya is said to be not Vinaya, if minor offenses are said to be serious and serious offenses are said to be minor, if these things appear in the world, it is all due to the semblance Dharma&#x27;s similarity in words and meaning, causing the Tathāgata&#x27;s true Dharma to gradually decline. Kāśyapa should know, there are five causes and conditions that can cause the Dharma to decline, causing everyone to forget the chapters and phrases, and the good Dharma to decline. What are the five? Not respecting the Buddha, not honoring the Buddha, not making offerings to the Buddha, not being able to wholeheartedly take refuge in the Buddha, yet still relying on the Buddha&#x27;s teachings to abide. Not respecting the Dharma, not honoring the Dharma, not making offerings to the Dharma, not being able to wholeheartedly abide in the true Dharma, yet still relying on the Dharma to abide. Not respecting the precepts, not honoring the precepts, not making offerings to the precepts, not being able to wholeheartedly uphold the precepts received, yet still relying on the precepts to abide. Not respecting instruction, not honoring instruction, not making offerings to instruction. Not being able to wholeheartedly approach those who instruct, because of not respecting, honoring, and making offerings, and not being able to wholeheartedly approach those who instruct, one still relies on this instruction to abide. Not respecting those who practice the same pure conduct as the Buddha, not honoring them, not making offerings to them, not being able to wholeheartedly pay respects and ask questions, yet still relying on them to find peace and abide. Kāśyapa! Because of these five causes and conditions above, the true</p></td><td lang="lzh" class="agama-chi"><p>佛告迦叶：「如是，如是。众生命浊、结使浊、众生浊、劫浊、见浊，众生转恶，正法亦末，是故如来为诸弟子多制禁戒，少有比丘，能顺佛语，受持禁戒，诸众生等，渐渐退没。譬如金宝渐渐损减，乃至相似金出。如来正法亦复如是，渐渐损减，像法乃出。像法出故，正法灭没。迦叶当知，譬如海中所有船舫，多载众宝，船必沉没。如来教法亦复如是，以渐灭没。如来正法，不因地没，亦非水火风之所坏。若我法中，生于恶欲，行恶威仪，成就众恶。法言非法，非法言法，非是毘尼说言毘尼，犯说非犯，非犯说犯，轻罪说重，重罪说轻。如斯之事，出于世者，皆由像法句味相似，令佛正法渐渐灭没。迦叶当知，有五因缘能令法灭，一切咸共忘失章句，善法退转。何等为五？不恭敬佛、不尊重佛、不供养佛、不能至心归命于佛，然复依止佛法而住。不敬法、不尊重法、不供养法，于正法中不能至心，然依法住。不恭敬戒、不尊重戒、不供养戒、不能至心持所受戒，然依戒住。不恭敬教授、不尊重教授、不供养教授。不能至心向教授者，以不恭敬、尊重、供养，亦不至心向教授故，然复依此教授而住。于同梵行，佛所赞者不恭敬、不尊重、不供养、不能至心礼拜问讯，然犹依彼而得安住。迦叶！以此上来五因缘故，能令正法，渐渐灭没，衰退忘失。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Kāśyapa! There are also five causes and conditions that can cause the true Dharma to abide in the world for a long time, not declining, not retreating, not being forgotten, and not being lost. What are the five? Respecting the World-Honored One, honoring the Buddha, making offerings to the Buddha, always being able to wholeheartedly take refuge in the Buddha. Also respecting the Dharma, the precepts, instruction, and those who practice the same pure conduct as the Buddha. One should make offerings, respect, honor, and wholeheartedly approach them. Because of these five good causes and conditions, one can cause the true Dharma to abide in the world for a long time, not declining, not retreating, not being forgotten, and not being lost. For this reason, one should respect the Buddha, the Dharma, instruction, and those who practice the same pure conduct as the Buddha.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「迦叶！复有五因缘故，能令正法久住于世，不没不退，不忘不失。何等为五？恭敬世尊、尊重于佛、供养于佛、常能至心归依于佛。于法于戒，及以教授、同梵行者，亦应供养、恭敬、尊重、至心向之，以此五种善因缘故，能使正法久住于世，不没不退，不忘不失。以是义故，应当恭敬佛、法、教授、同梵行者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus and others, having heard the Buddha&#x27;s teaching, rejoiced and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>诸比丘等闻佛所说，欢喜奉行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>moon simile, giving, horn-like, faithless, Buddha<br/>as the root, extremely old, robe-wearer<br/>again, at that time, reduced, non-Buddhist Dharma damage</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>月喻、施与　　角胜、无信　　佛为根本极老、纳衣重　　是时、众减少外道、法损坏</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

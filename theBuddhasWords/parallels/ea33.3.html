@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 33.3 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 33.3</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">33.3</span> <span class="mirror-right">（三）斗</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an5.75.html">AN 5.75</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;There are five strong men who are capable of fighting in battle. What are the five? Here, some people put on armor and take up weapons to enter the army and fight. When they see dust raised by the wind from afar, they become terrified. This is called the first kind of warrior.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「五健丈夫堪任战鬪出现于世。云何为五？于是，有人著铠持仗，入军战鬪，遥见风尘，便怀恐怖，是谓第一战鬪人也。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, the second kind of warrior puts on armor and takes up weapons, wanting to enter the army and fight. If he sees dust raised by the wind, he is not terrified, but when he sees a tall banner, he becomes terrified and is not able to advance to fight. This is called the second kind of person.</p></td><td lang="lzh" class="agama-chi"><p>「复次，第二战鬪人，著铠持仗，欲入军战。若见风尘，不怀恐怖；但见高幢，便怀恐怖，不堪前鬪，是谓第二人。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, the third kind of warrior puts on armor and takes up weapons, wanting to enter the army and fight. If he sees dust raised by the wind or a tall banner, he is not terrified, but when he sees a bow and arrow, he becomes terrified and is not able to fight. This is called the third kind of person.</p></td><td lang="lzh" class="agama-chi"><p>「复次，第三战鬪人，著铠持仗，欲入军战鬪，彼若见风尘，若见高幢，不怀恐怖；若见弓箭，便怀恐怖，不堪战鬪，是谓第三人也。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, the fourth kind of warrior puts on armor and takes up weapons, entering the army to fight. If he sees dust raised by the wind, a tall banner, or an arrow, he is not terrified, but when he enters the battle, he is captured by the enemy and either has his life cut off. This is called the fourth kind of warrior.</p></td><td lang="lzh" class="agama-chi"><p>「复次，第四战鬪人，著铠持仗，入军共鬪，彼若见风尘，若见高幢，若见箭，不怀恐惧；但入阵时，便为他所捉，或断命根，是谓第四战鬪人也。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, the fifth kind of warrior puts on armor and takes up weapons, wanting to enter the battle. If he sees dust raised by the wind, a tall banner, an arrow, or is captured by the enemy, even to the point of death, he is not terrified. He is able to destroy the enemy&#x27;s territory and rule the people. This is called the fifth kind of warrior.</p></td><td lang="lzh" class="agama-chi"><p>「复次，第五战鬪人，著铠持仗，欲入阵鬪，彼若见风尘，若见高幢，若见箭，若为他所捉，乃至于死，不怀恐怖；能坏他军境界无外而领人民，是谓第五战鬪人也。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Thus, bhikkhus, there are these five kinds of people in the world. Now, there are also these five kinds of people who appear in the community of bhikkhus. What are the five? Suppose there is a bhikkhu who wanders to a village. He hears that there is a woman in the village who is exceptionally beautiful, with a face like a peach blossom. Having heard this, he puts on his robes at the proper time, takes his alms bowl, enters the village to beg for alms, and sees this woman with an exceptional appearance. He then gives rise to lustful thoughts, removes his three robes, returns to lay life, and becomes a householder. This is like the warrior who, upon seeing a little dust raised by the wind, becomes terrified. It is like this bhikkhu.</p></td><td lang="lzh" class="agama-chi"><p>「如是，比丘！世间有此五种人。今比丘众中亦有此五种之人出现于世。云何为五？或有一比丘游他村落，彼闻村中有妇人，端正无双，面如桃华色。彼闻已，到时，著衣持钵，入村乞食，即见此女人颜貌无双，便起欲想，除去三衣，还佛禁戒，而作居家，犹如彼鬪人，小见风尘，以怀恐怖，似此比丘也。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, there is a bhikkhu who hears that there is a woman living in a village who is exceptionally beautiful. At the proper time, he puts on his robes, takes his alms bowl, enters the village to beg for alms. If he sees that woman, he does not give rise to lustful thoughts. He only plays and talks with her. Because of this play, he abandons the Dharma robes and returns to lay life. This is like the second warrior who is not afraid of seeing the dust raised by the wind, but becomes terrified upon seeing the tall banner. This bhikkhu is also like this.</p></td><td lang="lzh" class="agama-chi"><p>「复次，有比丘闻有女人在村落中住，端正无比，到时，著衣持钵，入村乞食，彼若见女人不起欲想；但与彼女人共相调戏，言语往来；因此调戏，便舍法服，还为白衣。如彼第二人，见风尘不怖，但见高幢便怀恐怖，此比丘亦复如是。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, there is a bhikkhu who hears that there is a woman living in a village who is exceptionally beautiful, with a face like a peach blossom. At the proper time, he puts on his robes, takes his alms bowl, enters the village to beg for alms. If he sees that woman, he does not give rise to lustful thoughts. Even if he plays and talks with her, he does not give rise to lustful thoughts. He only plays with her by clasping hands or pinching each other. In this, he gives rise to lustful thoughts, abandons the three Dharma robes, returns to lay life, and engages in household affairs. This is like the third warrior who, when entering the battle, is not afraid of seeing the dust raised by the wind or the tall banner, but becomes terrified upon seeing the bow and arrow.</p></td><td lang="lzh" class="agama-chi"><p>「复次，有一比丘闻村落中有女人，容貌端正，世之希有，如桃华色，到时，著衣持钵，入村乞食。若见女人不起欲想，设共女人共调戏，亦复不起欲意之想；但与彼女人手拳相加，或相捻挃，于中便起欲想，舍三法衣，还为白衣，习于家业。如彼第三人入阵时，见风尘、见高憧不恐怖，见弓箭便怀恐怖。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, there is a bhikkhu who hears that there is a woman living in a village who is exceptionally beautiful. At the proper time, he puts on his robes, takes his alms bowl, enters the village to beg for alms. If he sees that woman, he does not give rise to lustful thoughts. Even if he talks with her, he does not give rise to lustful thoughts. Even if that woman plays with him by clasping hands or pinching each other, he gives rise to lustful thoughts. However, he does not abandon the Dharma robes and engages in household affairs. This is like the fourth warrior who, when entering the army, is captured by the enemy and either loses his life or is unable to escape.</p></td><td lang="lzh" class="agama-chi"><p>「复次，有一比丘闻村落中有女人，面容端正，世之希有，到时，著衣持钵，入村乞食，彼若见女人不起欲想，设共言语，亦复不起欲想，设彼女人共相捻挃，便起欲想；然不舍法服，习于家业，如彼第四人入军，为他所获，或丧命根，而不得出。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Furthermore, there is a bhikkhu who lives in a village. He hears that there is a woman in the village. At the proper time, he puts on his robes, takes his alms bowl, enters the village to beg for alms. If he sees that woman, he does not give rise to lustful thoughts. Even if he talks and laughs with her, he does not give rise to lustful thoughts. Even if she plays with him by clasping hands or pinching each other, he still does not give rise to lustful thoughts. At that time, the bhikkhu contemplates the thirty-six impure and unclean things in this body. Who is attached to these? What gives rise to desire? Where does this desire cease? Is it from the head or from the body? Contemplating these things, he finds nothing. From head to toe, it is the same. The five viscera are not imagined, and there is no place of origin. He contemplates the origin of conditions and does not know where they come from. He further thinks: &#x27;I contemplate that this desire arises from causes and conditions.&#x27; When the bhikkhu contemplates this, his mind is liberated from the defilement of desire, the defilement of existence, and the defilement of ignorance. He then attains the wisdom of liberation: &#x27;Birth and death are exhausted, the holy life is established, what was to be done is done, and I will not again take rebirth.&#x27; He truly knows this. This is like the fifth warrior who is not troubled by the enemy and can roam freely. Therefore, I now say that this person abandons desire and enters the place of fearlessness, attaining nirvana. This is called, bhikkhus, the appearance of these five kinds of people in the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「复次，有一比丘，依村落而住，彼闻村中有女人，然比丘到时，著衣持钵，入村乞食，彼若见女人不起欲想，设共言笑，亦不起欲想，设复共相捻挃，亦复不起欲想。是时，比丘观此身中三十六物恶秽不净，谁著此者？由何起欲？此欲为止何所？为从头耶？形体出耶？观此诸物了无所有。从头至足亦复如是，五藏所属，无有想像，亦无来处，彼观缘本，不知所从来处。彼复作是念：『我观此欲从因缘生。』彼比丘观此已，欲漏心得解脱，有漏心得解脱，无明漏心得解脱，便得解脱智：生死已尽，梵行已立，所作已办，更不复受胎，如实知之。如彼第五战鬪之人，不难众敌而自游化。由是故，我今说此人舍于爱欲，入于无畏之处，得至涅槃城。是谓，比丘！有此五种之人，出现于世。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I know your origin, desire, which arises from thought<br/>If I do not think, you do not exist.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「欲我知汝本，　　意以思想生，非我思想生，　　且汝而不有。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Therefore, bhikṣus, you should contemplate the impurity of evil and unwholesome sexual conduct, and remove desire for form. Thus, bhikṣus, you should train in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「是故，诸比丘！当观恶秽婬不净行，除去色欲。如是，诸比丘！当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said, and joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 50 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 50: Māratajjanīya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn49comp.html#content"></a><a id="next-sutta" href="./mn51comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn50.html">MN 50</a> / <a href="../../parallels/ma131.html">MĀ 131</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Māratajjanīya-sutta, the “discourse on a rebuke to Māra”, reports how Mahāmoggallāna rebuked Māra for harassing him. This discourse has three Chinese parallels, one of which occurs in the Madhyama-āgama, while the other two are individual translations.<span class="note" id="mn50n174"><span class="details"><span class="p">[n.174] The parallels are <a href="../../parallels/ma131.html">MĀ 131</a> at T I 620b-623a, entitled “discourse on defeating Māra”, 降魔經, T 66 at T I 864b-866c, entitled “discourse spoken by the Buddha on Māra’s disturbance”, 佛說魔嬈亂經, and T 67 at T I 867a-868c, entitled “discourse on Māra tempting Mahāmoggallāna”, 弊魔試目連經; cf. also D (4094) mngon pa, ju 75b4 or Q (5595) tu 85a8, which speaks of the “discourse on having rebuked Māra”, bdud bsdigs pa’i mdo. According to the information given in the Taishō edition, T 66 was translated by an unknown translator, while T 67 was translated by Zhī Qīan (支謙), although Nattier 2003b: 241 does not include T 67 in a provisional list of the authentic translations by Zhī Qīan. <a href="../../parallels/ma131.html">MĀ 131</a> agrees with the Pāli version on locating the discourse in the Bhaggā country, while the individual translations take place among the Vajjians. For a remark on <a href="../../parallels/ma131.html">MĀ 131</a> cf. Minh Chau 1964/1991: 37.</span></span></span> Counterparts to several sections of the present discourse have also been preserved in Sanskrit fragments and in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn50n175"><span class="details"><span class="p">[n.175] The Sanskrit fragments are SHT IV 412 folios 8-11 (pp. 26-31), SHT V 1070 (pp. 61-62, cf. also SHT VII p. 279), SHT V 1424 (pp. 253), and SHT X 4022 (p. 248); cf. also Waldschmidt 1976: 141-146. SHT V 1424 parallels the description at MN I 333,15; SHT IV 412 folio 8 parallels the account at MN I 334,1 and the denigration of the monks at MN I 334,16; SHT IV 412 folio 9 and SHT V 1070 parallel the monks’ practice of loving kindness at MN I 335,21 and the excessive veneration of the monks at MN I 336,11; SHT IV 412 folio 10 parallels the instructions to the monks, the good rebirth of the householders, and Māra’s attack at MN I 336, for which cf. also SHT X 4022; SHT IV 412 folio 11 parallels some of the verses at MN I 337-338. For discourse quotations in Abhidh-k-ṭ cf. below notes 178 and 202.</span></span></span> Two partial parallels in the Ekottarika-āgama have preserved narrations that correspond to sections of the Māratajjanīya-sutta.<span class="note" id="mn50n176"><span class="details"><span class="p">[n.176] <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772a-c, which parallels the main part of the tale that reports Māra’s mischief at the time of the former Buddha Kakusandha, and <a href="../../parallels/ea48.6.html">EĀ 48.6</a> at T II 793b13-c8, translated in Lamotte 1967: 110, which has the story of Sañjīva surviving his own cremation.</span></span></span></p>
+<p>The Māratajjanīya-sutta and its three Chinese parallels report in similar terms that Māra had entered into the belly of Mahāmoggallāna, but was quickly recognized by Mahāmoggallāna and told to leave. Mahāmoggallāna then narrated that he had also been a Māra in a past life, at the time of the Buddha Kakusandha.<span class="note" id="mn50n177"><span class="details"><span class="p">[n.177] Gombrich 1980: 66 voices the suspicion that “the tradition is garbled and that originally it was the present Māra who had been Dūsin”, the Māra at the time of Kakusandha. On the role of Māra in early Buddhism cf., e.g., Bareau 1986, Barua 1915, Batchelor 2004: 17-28, Bingenheimer 2007: 50-51, Boyd 1971, id. 1975: 73-133, Bloss 1978, Choong 2009b: 40-42, Clark 1994: 2-37 and 46-93, Coomaraswamy 1945: 471-476, Cummings 1982: 169, Dayal 1932/1970: 306-317, de La Vallée Poussin 1915b, Doniger O’Flaherty 1976/1988: 213, Falk 1987, Foucher 1949: 151-154 and 156-160, Gräfe 1974: 41, Guruge 1988/1997, Haldar 1977: 153-157, Hamilton 2000: 207-210, Jayatilleke 1973: 36-38, Jones 1979: 180, Karetzky 1992: 122, King 1964: 61 note 28, Kinnard 2004b, Klimkeit 1990: 179-180, Law 1931/ 2004a, Ling 1962, Malalasekera 1938/1998: 611-620, Marasinghe 2002b, Misra 1972: 46, Oldenberg 1899, id. 1881/1961: 286-290, Przyluski 1927, Radich 2007: 198-201, Rahula 1978: 108-114 and 177- 180, Rao 1954, Saibaba 2005: 37-38, Senart 1882b: 166-187, Strong 1992: 93, Southwold 1985: 135- 137, Thomas 1933/2004: 145-147, Verclas 1978: 50-74, Wayman 1959: 112-125, Werner 2008: 20-28, Wikramagamage 1997, Wilson 1996: 33-37, Windisch 1895, and Yoshiko 1996: 32-33. On Māra episodes in art cf., e.g., Bautze-Picron 1998, id. 2010: 91-94, Fischer 1980, Foucher 1918: 197-202, Karetzky 1982, Kurita 1988: 113-120 plates 216-235, Malandra 1981, Longhurst 1938/1991: 46 and plate xlib, Schlingloff 1982, Sivaramamurti 1942/1956: 89-90, Tanabe 2007: 30-31 figure I-23, and Zin 2007: 100-105 and 145-148; for figures of a monk whose belly bulges out, which might be representing Mahāmoggallāna with Māra in his belly, cf. Luce 1969: 208 and id. 1970 plates 90-91. On the way the qualification Pāpimā was rendered into Chinese cf. Nakamura 2000a: 439 and Pelliot 1933.</span></span></span></p>
+<p>As part of their narration of events at the time of the Buddha Kakusandha, the Pāli and Chinese versions relate how Sañjīva, one of the two chief disciples of this Buddha, on one occasion entered the attainment of cessation.<span class="note" id="mn50n178"><span class="details"><span class="p">[n.178] A discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 75b4 or Q (5595) tu 85a8 parallels the description of Sañjīva’s attainment of cessation and subsequent cremation at MN I 333-334, differing in so far as here the past Buddha is Vipaśyī, rnam par gzigs; cf. also Abhidh-k 2:45 in Pradhan 1967: 75,3, paralleling MN I 333,19, with its Chinese counterparts in T 1558 at T XXIX 26c21 and T 1559 at T XXIX 185a27. T 67 at T I 867a28 differs from the other versions in as much as it does not explicitly refer to cessation, but only reports that Sañjīva was in a “concentration attainment”, 三昧正受 (introduced as 如其色像, where Kuan 2007: 191 note 24, in relation to an occurrence of the similar expression 如其像 in another discourse as a qualification of 定, explains that this expression is probably a literal rendering of a phrase similar to the Pāli tathārūpa).</span></span></span> Some cowherds mistook him for being dead and set him on fire in order to cremate him, which he, however, survived unharmed.<span class="note" id="mn50n179"><span class="details"><span class="p">[n.179] <a href="../../mn/mn50.html">MN 50</a> at MN I 333,36 explains that this was how Sañjīva came to be given his name, since when the cowherds the next day saw him alive, they thought that he had been “resurrected”, paṭisañjīvita. The translators of <a href="../../parallels/ma131.html">MĀ 131</a> and T 67 were apparently not aware of this word play on paṭisañjīvita and sañ- jīva, since <a href="../../parallels/ma131.html">MĀ 131</a> at T I 620c12 renders his name by 想, “perception”, and T 67 at T I 867a24 by 知想, “knowing perception”, apparently taking the name Sañjīva or Saṃjīva to be related to saññā or saṃjñā. The translator of T 66 at T I 864c8 took the safer road of transcribing Sañjīva with 薩若, which he then explains at T I 865a4 to mean “born again”, 還生, a gloss which indicates that he was aware of the implications of the name Sañjīva. On renditions of the same name in the Chinese parallels to the Mahāpadāna-sutta cf. Waldschmidt 1956: 171. D (4094) mngon pa, ju 75b4 or Q (5595) tu 85a8 combines both senses, as it gives his name as ’tsho byed dang mkhas pa, although this is followed by referring to him just as ’tsho byed, corresponding to jīvaka.</span></span></span> This tale of Sañjīva surviving his own cremation recurs also as part of a discourse in the Ekottarika-āgama.<span class="note" id="mn50n180"><span class="details"><span class="p">[n.180] <a href="../../parallels/ea48.6.html">EĀ 48.6</a> at T II 793b21 differs in so far as Sañjīva did not attain cessation, but rather 金剛三昧, an expression for which Hirakawa 1997: 1180 gives vajropama-samādhi and vajra-samādhi as equivalents (for the former cf. also Mahāvyutpatti no. 560 in Sakaki 1926: 44). The 金剛三昧 recurs in <a href="../../parallels/ea48.6.html">EĀ 48.6</a> at T II 793a13, which, as noted by Lancaster 1976: 201, is one of several peculiar samādhis mentioned in this collection. <a href="../../parallels/ea48.6.html">EĀ 48.6</a> describes how Sāriputta was seated in 金剛三昧 and remained unhurt when hit by a yakkha on the head, an account similar to the story found in Ud 4:4 at Ud 39,20. The commentary Ud-a 245,5 records various opinions on the meditative attainment Sāriputta had entered when he was hit by the yakkha, one of which is that he had attained cessation. Thus, perhaps the 金剛三昧 in <a href="../../parallels/ea48.6.html">EĀ 48.6</a> also intends the attainment of cessation. In the Sarvāstivāda tradition, the vajropama-samādhi stands specifically for the complete cutting off of defilements, cf., e.g., Abhidh-k 6:44 in Pradhan 1967: 364,14; cf. also Frauwallner 1971a: 85. In a survey of related references (for additional references cf. Ruegg 1989: 167 note 336), de La Vallée Poussin 1925/1980: 227 note 3 points out that Pp 30,20 uses the expression vajirūpamacitta to qualify an arahant’s freedom from the influxes, which the Puggalapaññatti then compares to a vajra that can break up any other gem or stone. In the Sarvāstivāda tradition, according to Dhammajoti 2002/2007: 439 the same image illustrates the vajrōpama-samādhi, “whose strength (concentration) is comparable to that of a diamond that cuts through everything”. For a definition of the vajropama-samādhi in the Yogācārabhūmi cf. Delhey 2009a: 204,1 and T 1579 at T XXX 340b3 As already pointed out by Frauwallner 1971a: 96, the association between the arahant and the vajra’s ability to break up any other gem or stone can already be found in <a href="../../an/an3.25.html">AN 3:25</a> at AN I 124,20, according to which the vajirūpamacitta puggala is one who has destroyed the influxes; cf. also Dhs 226,1. On the vajropama-samādhi in Mahāyāna literature cf. the survey in Pagel 2007: 15 note 17. Another tale of being burnt while seated in deep meditation can be found in T 211 at T IV 594c10, translated in Willemen 1999: 133, although in this case it is the Buddha himself who is mistaken for being dead after sitting for seven days without moving, having “entered on the concentration on Nirvāṇa”, 入 泥洹三昧.</span></span></span></p>
+<p>According to the Māratajjanīya-sutta and its three Chinese parallels, in his former existence as a Māra, Mahāmoggallāna had tried to harass the monk disciples of Kakusandha Buddha by instigating the householders to revile and abuse the monks.</p>
+<p>A similar tale is also found in another discourse in the Ekottarika-āgama, which differs in so far as here Māra influences the householders so that they do not give alms to the monks.<span class="note" id="mn50n181"><span class="details"><span class="p">[n.181] <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772b10. The tale of events at the time of the former Buddha Kakusandha is preceded in <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772a26 with a narration according to which Māra had decided to prevent the Buddha Gotama from receiving alms (for a similar tale cf. Dhp-a III 257,20), followed by the Buddha Gotama relating events from the past to Māra.</span></span></span></p>
+<p>The Māratajjanīya-sutta reports that, in order to achieve his aim, Māra had “taken possession” of the householders.<span class="note" id="mn50n182"><span class="details"><span class="p">[n.182] <a href="../../mn/mn50.html">MN 50</a> at MN I 334,11: anvāvisi.</span></span></span> According to the Chinese versions, however, he had only instructed the householders to act according to his design.<span class="note" id="mn50n183"><span class="details"><span class="p">[n.183] According to <a href="../../parallels/ma131.html">MĀ 131</a> at T I 621a21 Māra “taught” the householders, 教, according to T 66 at T I 865a19 he “told” them, 說, according to T 67 at T I 867b14 he “converted” them to do his bidding, 化, and according to <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772b11 he “impelled” them, 約勅 (for which Hirakawa 1997: 926 lists codayati). An extract from the present discussion already appeared in Anālayo 2005b: 12-13.</span></span></span> The Māratajjanīyasutta and its three main Chinese parallels agree that the householders had to suffer rebirth in hell for their conduct, a retribution for their evil conduct not recorded in the partial parallel from the Ekottarika-āgama.</p>
+<p>In the light of this retribution, the Pāli version’s proposition that Māra “took possession” of the householders is puzzling, since one would not expect the householders to undergo the karmic retribution of rebirth in hell for something they had not done of their own accord.<span class="note" id="mn50n184"><span class="details"><span class="p">[n.184] The commentary, Ps II 418,22, raises the same point and explains that what Māra did was to make the householders believe that the monks were breaking their precepts and engaging in blameworthy conduct, so that the abuse poured on the monks was due to the householders’ own volitional decision, therefore they had to reap the corresponding karmic results. Although this commentarial explanation makes sense from the viewpoint of karmic retribution, it does not fit the terminology employed in the discourse.</span></span></span></p>
+<p>The Māratajjanīya-sutta and its three full parallels depict the abuse poured by the householders on the monks in similar terms, recording that the householders denigrated the meditation practice of the monks by comparing them to various predatory animals that await an opportunity to catch a mouse or a fish (see table 5.7).<span class="note" id="mn50n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn50.html">MN 50</a> at MN I 334,18. The last image used for such abuse in <a href="../../mn/mn50.html">MN 50</a> at MN I 334,29 describes a donkey that stands by a doorpost. This image is not entirely clear, since one may wonder what the object of the donkey’s “meditation” could be, as a donkey is not a predatory animal, unlike the other animals mentioned before. <a href="../../parallels/ma131.html">MĀ 131</a> at T I 621a8, T 66 at T I 865a7, and T 67 at T I 867b13 provide the detail required to fill out this image, as according to their description the object that occupies the donkey’s mind at the end of a day of hard work, his “meditation object”, is fodder. The same idea recurs in <a href="../../an/an11.10.html">AN 11:10</a> at AN V 323,8, which describes a horse “meditating” on fodder. Bollée 1988: 128 note 15 explains that it was apparently customary to let donkeys search for food themselves, instead of providing them with fodder. Their chronic hunger, resulting from this situation, then became an object of popular mocking; cf. also Gokhale 1980b: 451, who notes the humour underlying the similes in <a href="../../mn/mn50.html">MN 50</a>. The set of four similes recurs in Nidd I 149,28 in a commentary on Sn 4:7 at Sn 818. A related image can be found in the Jain work Sūyagaḍa 1.11.27-28 in Vaidya 1928: 51,9.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 5.7: Similes in <a href="../../mn/mn50.html">MN 50</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn50.html">MN 50</a></th><th><a href="../../parallels/ma131.html">MĀ 131</a></th></tr>
+<tr><td>owl wanting to catch mice (1)</td><td>donkey wanting fodder (→ 4)</td></tr>
+<tr><td>jackal wanting to catch fish (2)</td><td>cat wanting to catch mice (→ 3)</td></tr>
+<tr><td>cat wanting to catch mice (3)</td><td>owl or fox wanting to catch mice (→ 1)</td></tr>
+<tr><td>donkey (4)</td><td>crane wanting to catch fish (→ 2?)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>T 66</td><td>T 67</td></tr>
+<tr><td>donkey wanting fodder (→ 4)</td><td>dog or cat wanting to catch mice (→ 3)</td></tr>
+<tr><td>cat wanting to catch mice (→ 3)</td><td>crane wanting to catch fish (→ 2?)</td></tr>
+<tr><td>owl or fox wanting to catch mice (→ 1)</td><td>donkey wanting fodder (→ 4)</td></tr>
+<tr><td>heron wanting to catch fish (→ 2?)</td><td>(≠ 1)</td></tr>
+</table>
+<p>According to the three main Chinese versions, the householders not only abused the monks, but even went so far as to beat them with sticks, throw stones at them, and destroy their requisites. When reborn in hell because of such wicked deeds, the householders realized that their evil rebirth was due to having maltreated the monks.<span class="note" id="mn50n186"><span class="details"><span class="p">[n.186] <a href="../../parallels/ma131.html">MĀ 131</a> at T I 621a29, T 66 at T I 865a28, and T 67 at T I 867c5.</span></span></span> The Pāli version neither reports that the householders went so far as to physically harm the monks, nor does it record that they realized why they had been reborn in hell.</p>
+<p>In view of the karmic retribution of rebirth in hell, it would make sense for the householders to be shown as having gone further than just ridiculing the meditation practice of the monks, an act which, although certainly improper and unwholesome, might on its own not warrant such heavy karmic retribution.<span class="note" id="mn50n187"><span class="details"><span class="p">[n.187] In fact, according to <a href="../../an/an6.46.html">AN 6:46</a> at AN III 355,6 some Buddhist monks disparaged other monks who were meditating in a similar way, although without employing the similes used by the householders in <a href="../../mn/mn50.html">MN 50</a>, caricaturing the meditating monks in the following manner: “[proclaiming] ‘we are meditators, we are meditators’ they meditate, they overmeditate. What do they meditate about? For what do they meditate? How do they meditate?”, jhāyino ’mhā jhāyino ’mhā ti jhāyanti, pajjhāyanti, kiṃ h’ ime jhāyanti, kint’ ime jhāyanti, kathaṃ h’ ime jhāyanti? (Be-AN II 312,7 adds nijjhāyanti avajjhāyanti after pajjhāyanti and reads kim ime and kathaṃ ime, Se-AN III 397,6: kiñ h’ ime and kathañ h’ ime). This description has several expressions in common with the way the householders abuse the monks in <a href="../../mn/mn50.html">MN 50</a> at MN I 334,16, caricaturing the meditating monk in this manner: “[proclaiming] ‘we are meditators, we are meditators’, with dropping shoulders, downcast face and [having become] languid they meditate, they overmeditate, they outmeditate, they mismeditate”, jhāyino ’sma jhāyino ’sma ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyanti (Be-MN I 410,10 and Se-MN I 603,19: ’smā). Although the remainder of <a href="../../an/an6.46.html">AN 6:46</a> makes it clear that such derisive criticism is not appropriate, there is no indication that it is of such unwholesome nature as to lead to rebirth in hell.</span></span></span> The Chinese version’s depiction of how the householders realized the dire consequences of harassing monks also seems to fit the present discourse well, whose purpose is to impress upon Māra the dire consequences of harassing a monk.</p>
+<p>According to the Māratajjanīya-sutta and its three main Chinese parallels, the Buddha Kakusandha told his monks to develop the brahmavihāras in order to face the abuse they were experiencing. The partial parallel in the Ekottarika-āgama instead reports that he gave them a teaching on the true nature of nutriment.<span class="note" id="mn50n188"><span class="details"><span class="p">[n.188] Cf. <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772b14, which first lists the standard set of four types of nutriment (edible food, contact, intention, and consciousness), followed by setting forth five types of supramundane food, namely absorption, resolution, mindfulness, the eight liberations, and joy.</span></span></span></p>
+<p>The Māratajjanīya-sutta and its three main parallels report that, once Māra realized that he had been unable to get at the monks in this way, he decided to induce the householders to respect and venerate the monks instead. According to the partial parallel in the Ekottarika-āgama, he got the householders to provide the monks with an abundance of material gains.<span class="note" id="mn50n189"><span class="details"><span class="p">[n.189] <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772b26.</span></span></span></p>
+<p>While the Pāli discourse simply mentions that the householders honoured and revered the monks, the three main Chinese versions and a Sanskrit fragment parallel to the present passage report that they went so far as to put their hair on the road, asking the monks to step on it for the sake of good fortune.<span class="note" id="mn50n190"><span class="details"><span class="p">[n.190] <a href="../../parallels/ma131.html">MĀ 131</a> at T I 621c1, T 66 at T I 865b29, T 67 at T I 867c15, and Waldschmidt 1976: 143. Such stepping on an item spread on the ground for good luck appears to have been a custom in ancient India, in fact Vin II 129,15 records an allowance for monks to step on cloth when asked to do so by laity for the sake of good fortune.</span></span></span> The Māratajjanīya-sutta and its main parallels agree that the householders were reborn in heaven as a result of their reverential behaviour, with the Chinese versions again noting that, when reborn in heaven, the householders realized that their fortunate rebirth was due to their good conduct towards the monks.</p>
+<p>The Māratajjanīya-sutta and its three main Chinese parallels differ on the instruction given by the Buddha Kakusandha to his monks on this second occasion.<span class="note" id="mn50n191"><span class="details"><span class="p">[n.191] <a href="../../mn/mn50.html">MN 50</a> at MN I 336,22 takes up the impure nature of the human body, the repulsive nature of food, the absence of delight in the whole world, and the impermanent nature of all formations, asubhānupassī kāye viharatha, āhāre paṭikkūlasaññino, sabbaloke anabhiratasaññino, sabbasaṅkhāresu aniccānupassino (Be-MN I 412,18: asubhānupassino and anabhiratisaññino). <a href="../../parallels/ma131.html">MĀ 131</a> at T I 621c25 mentions contemplation of all formations as impermanent and subject to arising and passing away, as well as contemplation of dispassion, discarding, cessation, and giving up, 汝等當觀諸行無常, 觀興衰法, 觀無欲, 觀 捨離, 觀滅, 觀斷. T 66 at T I 865c24 enjoins viewing all formations as abiding in impermanence and as being eradicated, discarded, ceasing, appeased, and abiding in the sphere of appeasement, 當於一切行 見無常住, 當 見盡, 當見離, 當見滅, 當見止, 當見止住處. T 67 at T I 868a2 speaks of recollecting the impermanent nature of all things, of avoiding greed and delight in regard to robes and food, and of [contemplating] dukkha, emptiness, and not-self, 念諸萬物所在無常, 雖著衣食莫以貪樂, 苦, 空, 非身. Since in the partial parallel <a href="../../parallels/ea45.4.html">EĀ 45.4</a> the issue at stake is the monks receiving material gains, the recommendation they get at T II 772c5 is on avoiding attachment. Hence this version does not bring in the topic of impermanence.</span></span></span> A comparison of these four versions suggests contemplation of impermanence to be the central aspect common to the instructions on how to confront excessive respect and worship.</p>
+<p>The Māratajjanīya-sutta and its main parallels continue by reporting that, since Māra had not been successful with this ruse, he eventually went so far as to physically harm Vidhura, the other chief disciple of Kakusandha Buddha. As a result of this evil deed, Māra immediately wound up in hell.<span class="note" id="mn50n192"><span class="details"><span class="p">[n.192] A reference to this event can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 654c17.</span></span></span> This part of the present discourse is no longer found in the partial parallel in the Ekottarika-āgama.<span class="note" id="mn50n193"><span class="details"><span class="p">[n.193] After reporting the instruction given by the Buddha Kakusandha to his monks regarding the avoiding of attachment, <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772c9 continues with the Buddha Gotama giving a similar instruction to his monks.</span></span></span></p>
+<p>When narrating this event, the Pāli version speaks of Māra having “taken possession” of a young boy,<span class="note" id="mn50n194"><span class="details"><span class="p">[n.194] <a href="../../mn/mn50.html">MN 50</a> at MN I 336,33: aññataraṃ kumāraṃ anvāvisitvā (Be-MN I 413,1 and Se-MN I 607,17: kumārakaṃ).</span></span></span> while according to the three Chinese parallels he transformed himself into a young boy or man in order to attack Vidhura.<span class="note" id="mn50n195"><span class="details"><span class="p">[n.195] <a href="../../parallels/ma131.html">MĀ 131</a> at T I 622a7, T 66 at T I 866a8, and T 67 at T I 868a11 agree that Māra “transformed”, 化作, himself into the perpetrator of the action. D (4094) mngon pa, nyu 119a2 or Q (5595) tu 136a8, which has preserved an extract from this passage, also does not report Māra taking possession of someone else.</span></span></span> The verb used in the present Pāli passage is the same as in the earlier instance when Māra “possessed” the householders, yet the earlier instance when Māra took possession resulted in the householders having to bear the karmic retribution, whereas in the present instance Māra himself receives the karmic retribution.<span class="note" id="mn50n196"><span class="details"><span class="p">[n.196] The commentary, Ps II 420,26, explains that in the present instance Māra indeed took control over the boy, whereas in relation to the earlier abuse the commentary at Ps II 418,22 suggests that Māra had not really taken control over the householders. <a href="../../mn/mn50.html">MN 50</a> at MN I 334,11 indeed indicates that Māra only told the householders to abuse the monks, while the harming of Vidhura at MN I 336,34 is worded in such a way as to indicate that Māra himself is the subject of the action. The expression used for his interference in both cases is, however, the same, in that he “took possession”, anvāvisati, of the householders and the boy.</span></span></span></p>
+<p>The idea of possession by Māra brings to mind the preceding discourse in the Majjhima-nikāya collection, the Brahmanimantaṇika-sutta, where according to the Pāli version Māra took possession of a member of Brahmā’s assembly, while the Chinese parallel does not attribute such powers to him.</p>
+<p>The same idea of possession by Māra recurs again on two occasions in the Saṃyuttanikāya. One of these instances reports that he took possession of a deva and made it speak a stanza in the presence of the Buddha, yet, according to the Saṃyukta-āgama parallel he did not take possession of the deva.<span class="note" id="mn50n197"><span class="details"><span class="p">[n.197] <a href="../../sn/sn2.30.html">SN 2:30</a> at SN I 67,1 (or SN2 111 at SN2 I 154,7): māro pāpima ... devaputtam anvāvisitvā (Be-SN I 67,1, Ce-SN I 128,6, and Se-SN I 96,15: devaputtaṃ), while in <a href="../../parallels/sa1308.html">SĀ 1308</a> at T II 359c19 Māra “manifested”, 著, as a deva to speak a stanza.</span></span></span> The other occurrence in the Saṃyutta-nikāya describes how Māra took possession of householders in order to prevent the Buddha from receiving alms, an instance where according to two Chinese parallels, found in the Saṃyukta-āgama and the Ekottarika-āgama, he only told the householders not to give alms to the Buddha, without taking possession of them.<span class="note" id="mn50n198"><span class="details"><span class="p">[n.198] <a href="../../sn/sn4.18.html">SN 4:18</a> at SN I 114,7 (or SN2 154 at SN2 I 253,4): brāhmaṇagahapatikā mārena pāpimatā anvāviṭṭhā bhavanti, <a href="../../parallels/sa1095.html">SĀ 1095</a> at T II 288a15: 語, and <a href="../../parallels/ea45.4.html">EĀ 45.4</a> at T II 772a28: 告.</span></span></span></p>
+<p>The famous passage in the Mahāparinibbāna-sutta, according to which Māra prevented Ānanda from requesting the Buddha to continue to live on, employs a different type of terminology, since it speaks of Ānanda’s mind being “obsessed” by Māra.<span class="note" id="mn50n199"><span class="details"><span class="p">[n.199] <a href="../../dn/dn16.html">DN 16</a> at DN II 103,14: mārena pariyuṭṭhitacitto. The commentary, Sv II 555,19, explains that Māra created frightening sights and sounds that disturbed Ānanda, something Māra was able to do because Ānanda’s mind was not yet free from the vipallāsas; on the commentarial position regarding this event cf. also the study by An 2000.</span></span></span> Nevertheless, here, too, the Chinese and Tibetan parallel versions make use of vocabulary that is milder in tone, indicating that Ānanda had been “blinded” or “confused” by Māra.<span class="note" id="mn50n200"><span class="details"><span class="p">[n.200] The Sanskrit fragment TM 361 folio 165V2 in Waldschmidt 1950: 53 and the Divyāvadāna in Cowell 1886: 201,21 or in Vaidya 1999: 125,18 describe that Ānanda was “suffused” by Māra, sphuṭo, a description that seems not too far from the idea of possession. The Tibetan counterpart in Waldschmidt 1951: 207,14, however, indicates that Māra was “covering up” Ānanda, khebs pa, similarly <a href="../../parallels/da2.html">DĀ 2</a> at T I 15b25 and T 6 at T I 180b20 speak of Ānanda being “covered up”, 蔽, by Māra, which Weller 1939: 79 translates as “blinded” (“mit Blindheit geschlagen”). According to another individual translation and the account in the (Mūla-)Sarvāstivāda Vinaya, Māra “confused” Ānanda, T 7 at T I 191b23: 迷惑 and T 1451 at T XXIV 387c17: 迷亂. T 5 at T I 165a12, translated in Puini 1909: 36, differs from all these versions by reporting that Māra entered Ānanda’s belly and made him actually request the Buddha to enter parinibbāna.</span></span></span></p>
+<p>In sum, it seems that the Pāli discourses stand alone in attributing to Māra the ability to take possession of someone and thereby make this person speak or act according to his will.<span class="note" id="mn50n201"><span class="details"><span class="p">[n.201] The possibility of possession is also reflected in an allowance made in Vin I 203,1 to partake of raw meat and blood in case of being possessed by a spirit, cf. also below p. 318 note 43.</span></span></span> While in the case of the Brahmanimantaṇika-sutta this presentation is at odds with what can be gathered from other discourses on the range of Māra’s power vis-à-vis Brahmā, the Māratajjanīya-sutta’s description of how Māra took possession of humans creates some inconsistency in regard to the karmic retribution described in the same discourse for the acts undertaken by these possessed beings.</p>
+<p>The Māratajjanīya-sutta and its parallels continue by describing the hell in which the former Māra was reborn in retribution for his mischief.<span class="note" id="mn50n202"><span class="details"><span class="p">[n.202] <a href="../../mn/mn50.html">MN 50</a> at MN I 337,15 specifies that Māra was reborn in hell in a human body with a fish’s head, a detail not mentioned in the Chinese versions. A discourse quotation paralleling Māra’s ending up in hell, reported in <a href="../../mn/mn50.html">MN 50</a> at MN I 337,5, can be found in Abhidh-k 3:12 in Pradhan 1967: 123,2; cf. also T 1558 at T XXIX 45b7, T 1559 at T XXIX 202b2, and D (4094) mngon pa, ju 118b6 or Q (5595) tu 136a4.</span></span></span> The Chinese versions note that (present time) Māra was thoroughly frightened on hearing the misfortune that befell his uncle Māra for harassing the monk disciples of Kakusandha Buddha and for harming his chief disciple.<span class="note" id="mn50n203"><span class="details"><span class="p">[n.203] According to <a href="../../parallels/ma131.html">MĀ 131</a> at T I 622a25, Māra asked in verse for more details on this hell, whereas according to <a href="../../mn/mn50.html">MN 50</a> at MN I 337,18 and T 66 at T I 866a23 a similar verse inquiring about the nature of this hell was spoken by Mahāmoggallāna as a rhetorical question when beginning his description of this hell. In T 67 at T I 868a26, this inquiry and the subsequent verses that describe the hell are spoken by the Buddha, which does not seem to fit the context too well.</span></span></span></p>
+<p>The Chinese versions agree with the Māratajjanīya-sutta that Mahāmoggallāna also described some of his past deeds in verse, such as his shaking the Hall of Migāra’s Mother and the palace of Sakka with his toe, and his visit to a Brahmā to check if the latter had overcome his former eternalist belief.<span class="note" id="mn50n204"><span class="details"><span class="p">[n.204] <a href="../../parallels/ma131.html">MĀ 131</a> at T I 622c3, T I 622c1, and T I 622c15. T 66 at T I 866b28, T I 866b26, and T I 866c11. T 67 does not describe these events as explicitly as the other versions, although T 67 at T I 868b15 and T I 868b29 does record Mahāmoggallāna shaking a palace with his toe and questioning Brahmā. Mahāmoggallāna’s shaking of the Hall of Migāra’s Mother is recorded in <a href="../../sn/sn51.14.html">SN 51:14</a> at SN V 270,5, his shaking of Sakka’s palace in <a href="../../mn/mn37.html">MN 37</a> at MN I 253,35, and his addressing Brahmā on the latter’s eternalist belief in <a href="../../sn/sn6.5.html">SN 6:5</a> at SN I 145,23 (or SN2 176 at SN2 I 316,12). The stanzas that depict these events in <a href="../../mn/mn50.html">MN 50</a> recur at <a href="../../tha/tha20.html#p1187">Th 1187</a>-1208 (for further parallels cf. Franke 1912: 174-182), as part of a set of over sixty stanzas attributed to Mahāmoggallāna. Ling 1962: 104 comments that “as the verses occur there [i.e. in Th] independently of the story of Dūsin, it is possible that the present form of the story [i.e. in <a href="../../mn/mn50.html">MN 50</a>] was prefixed to them at a later stage, in the way that prose narrations have been prefixed to verses in the Itivuttaka and Udāna, for instance”; on the relationship between verse and prose in the Udāna cf. also, e.g., Anālayo 2009e.</span></span></span></p>
+<p>According to all versions, Mahāmoggallāna concluded his stanzas by illustrating the karmic retribution for attacking the Buddha or his monk disciples with the image of a fool who will be burnt by fire, even though the fire does not have any intention to burn the fool.<span class="note" id="mn50n205"><span class="details"><span class="p">[n.205] Windisch 1895: 160 suggests that, since the title of the discourse is Māratajjaniya, the reading at <a href="../../tha/tha20.html#p1208">Th 1208</a>: atajjesi, according to which Mahāmoggallāna <i>“</i>rebuked” Māra, seems preferable to MN I 338,29: aghaṭṭesi, according to which he “chastened” Māra. The other Pāli editions, Be-MN I 415,9, Ce-MN I 788,22, and Se-MN I 611,1, indeed read atajjesi. His suggestion receives further support from <a href="../../parallels/ma131.html">MĀ 131</a> at T I 622c29, according to which Mahāmoggallāna <i>“</i>scolded” Māra, 訶, and from T 66 at T I 866c24, according to which Mahāmoggallāna <i>“</i>told” Māra, 說. T 67 at T I 868c16, however, indicates that Mahāmoggallāna <i>“</i>subdued” Māra, 降伏.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

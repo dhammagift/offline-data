@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.110 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.110</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 110</span><span class="mirror-right">（一一〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn6.15.html">SN 6.15</a> / <a href="../parallels/sa1197.html">SĀ 1197</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at the place of birth of the Kuśinagara wrestlers, in the Śāla Grove. At that time, when the Tathāgata&#x27;s time for parinirvāṇa had come, he said to Ānanda, &quot;You should prepare a seat for me between the twin śāla trees, with the head pointing north.&quot; At that time, Ānanda received the Buddha&#x27;s instruction and prepared a seat between the twin śāla trees, with the head pointing north. Having prepared the seat, he returned to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! I have finished preparing the seat between the twin śāla trees, with the head pointing north.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在拘尸那竭力士生地，娑罗林中。尔时，如来涅盘时到，告阿难曰：「汝可为我于双树间，北首敷座。」于时，阿难受佛勅已，于双树间，北首敷座。既敷座已，还至佛所，顶礼佛足，在一面坐。白佛言：「世尊！我于双树间，北首敷座，所作已竟。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One rose from his seat, went to the prepared seat between the twin śāla trees, lay down on his right side, placed one foot on the other, focused his mind on the bright, and arose in the thought of mindfulness, first forming the thought of parinirvāṇa. At that time, there was a brāhman named Subhadra in the country of Kuśinagara. He had lived there for a long time, and was one hundred and twenty years old. At that time, the wrestlers in that country made offerings, paid respect, honored, and praised him as an arhat. At that time, Subhadra heard people say that the Bhagavān would enter parinirvāṇa that night. He thought to himself, &quot;I have doubts about the Dharma. Only Gautama will be able to explain and resolve my doubts.&quot; Having thought this, he left Kuśinagara and went to the Śāla Grove.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即从坐起，往趣双树敷上，北首右脇而卧，足足相累，系心在明，起于念觉，先作涅盘想。尔时，拘尸那竭国有一梵志名须跋陀罗，先住彼国，其年朽迈，一百二十。时，彼国中诸力士辈供养恭敬，尊重赞叹是阿罗汉。时，须跋陀罗传闻人说婆伽婆于今日夜当入涅盘，作是念言：「我于法中，有所疑惑，唯有瞿昙，必能解释，决我所疑。」作是念已，即出拘尸那竭，往诣娑罗林。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Ānanda was walking outside. When Subhadra saw Ānanda, he went to him and said, &quot;I heard people say that the śramaṇa Gautama will enter parinirvāṇa without remainder in the middle of the night today. I now wish to see him and resolve my doubts.&quot; Ānanda replied, &quot;Brahmin! The Buddha&#x27;s body is tired. You are now disturbing him.&quot; Subhadra said to Ānanda, &quot;I heard that the Tathāgata will enter parinirvāṇa without remainder in the middle of the night today. I once heard the elder sages say: &#x27;When a Tathāgata, Arhat, Perfectly Enlightened One appears in the world, it is as rare as the udumbara flower.&#x27; I have a few doubts that I wish to ask. Please allow me to see him.&quot; He made this request three times. Ānanda replied, &quot;Do not disturb the Buddha!&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者阿难在外经行，时，须跋陀见阿难已，即诣其所，白阿难言：「我闻他说，沙门瞿昙于今日中夜当入无余涅盘，吾今须见，咨决所疑。」阿难答言：「梵志！佛身疲惓，汝今扰恼。」须跋陀罗白阿难言：「我闻如来今日中夜入无余涅盘，我昔曾闻宿旧仙言：『若如来、至真、等正觉出现于世，如优昙钵花，难可值遇。』我有少疑，思得咨决，愿听我见。」如是三请，阿难答言：「莫扰恼佛！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, with his pure divine ear, heard from afar Ānanda preventing Subhadra from going forward. The Buddha told Ānanda, &quot;Do not stop that person. Allow him to go forward and ask whatever he wishes.&quot; When Subhadra heard the Buddha&#x27;s compassionate permission to go forward, he was overjoyed. He then went to where the Buddha was, greeted him, and sat to one side. He said to the Buddha, &quot;World-Honored One! I have a few doubts. May I ask them?&quot; The Buddha said, &quot;Ask as you wish.&quot; When Subhadra was granted permission, he said to the Buddha, &quot;World-Honored One! The six non-Buddhist teachers have various different views. Pūraṇa Kāśyapa, Maskarin Gośālīputra, Ajita Keśakambalin, Kakuda Kātyāyana, Sañjayin Vairaṭṭīputra, and Nirgrantha Jñātiputra. These six teachers each claim to be the World-Honored One. Do they truly attain omniscience? &quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以净天耳遥闻阿难遮须跋陀，不听前进。佛告阿难：「莫遮彼人，听其前进，随意问难。」时，须跋陀罗闻佛慈矜，听令前进，踊跃欢喜，即至佛所，问讯已讫，在一面坐。白佛言：「世尊！我有少疑，听我问不？」佛言：「恣汝所问。」须跋陀罗既蒙听许，白佛言：「世尊！外道六师种种异见，富兰那迦叶、未迦梨俱赊梨子、阿阇耶毘罗坻子、阿阇多翅舍婆罗、迦尼陀迦旃延、尼乾陀阇提子，斯等六师各各自称已为世尊竟，为实得一切智不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Thirty years ago I left home, and since then more than fifty<br/>years have passed. I have sought the good Dharma, and have attained<br/>clarity in precepts, concentration, and practice. All the worlds do not know<br/>the true place, let alone know the true Dharma. If one cultivates<br/>the eightfold right path, one can attain the first fruit, up to<br/>the fourth fruit; if one does not cultivate the eightfold right path<br/>the first fruit cannot be known, let alone the fourth fruit. In<br/>the great assembly, I roar the lion&#x27;s roar of the Dharma, saying<br/>that outside of this true Dharma, there are no śramaṇas or brāhmaṇas.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「三十一出家，　　尔来过五十，推求诸善法，　　戒定行明达。一切诸世间，　　不知实方所，况知实法者？　　若修八正道，能获于初果，　　乃至第四果；若不修八正，　　初果不可知，况复第四果？　　我于大众中，说法师子吼，　　如此正法外，亦无有沙门，　　及与婆罗门。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When the Buddha spoke this, Subhadra was far removed from defilements and attained the purity of the Dharma eye. At that time, Subhadra adjusted his upper robe, joined his palms towards the Buddha, and said to the Buddha, &quot;World-Honored One! I have now transcended the three evil paths.&quot; At that time, Subhadra said to Ānanda, &quot;Excellent! Ānanda! You have gained great benefits as a disciple of the Buddha, serving as the foremost attendant. I have also gained great benefits now, and wish to go forth in the Buddha&#x27;s teachings.&quot; Ānanda joined his palms and said to the Buddha, &quot;Subhadra wishes to go forth in the Buddha&#x27;s teachings.&quot; At that time, the World-Honored One said to Subhadra, &quot;Welcome, monk! Your beard and hair fell out by themselves, and the Dharma robe was on your body.&quot; He immediately attained the full precepts, and having attained the full precepts, he became an arhat.</p></td><td lang="lzh" class="agama-chi"><p>佛说是时，须跋陀罗远尘离垢，得法眼净。时，须跋陀罗整欝多罗僧，合掌向佛，白佛言：「世尊！我今已得过三恶道。」时，须跋陀罗白阿难言：「善哉！阿难！汝获大利，为佛弟子，给侍第一。我于今者，亦得善利，于佛法中，愿得出家。」阿难合掌白佛言：「须跋陀罗于佛法中，愿乐出家。」尔时，世尊即告须跋陀罗：「善来比丘！须发自落，法衣著身。」即得具戒，得具戒已，即成罗汉。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Subhadra thought, &quot;I cannot bear to see the World-Honored One enter parinirvāṇa. I shall enter first.&quot; Subhadra then entered parinirvāṇa first, and the Tathāgata entered parinirvāṇa afterwards. At that time, there was a bhikṣu in the assembly who spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>须跋陀罗即作是念：「我今不忍见于世尊入般涅盘，我当先入。」须跋陀罗即时先入涅盘，如来于后亦入涅盘。尔时，众中有一比丘。而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The twin trees enter parinirvāṇa, with branches spreading in all directions. Flowers<br/>rain down from above and below, scattering over the Buddha. The reason<br/>for the rain of flowers is that the World-Honored One enters parinirvāṇa.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「双树入涅盘，　　枝条四遍布，上下而雨花，　　缤纷散佛上。所以雨花者，　　世尊入涅盘。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śakra, Lord of the Devas, also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>释提桓因复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All conditioned phenomena are impermanent, they are phenomena of arising<br/>and ceasing. When arising and ceasing cease, that is called nirvāṇa.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「诸行无常，　　是生灭法，　　生灭灭已，乃名涅盘。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Lord of the Brahmā Heaven also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时，梵主天复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All beings in the world, after abandoning their bodies, return to<br/>extinction. Now the great sage, the honored one, is fully endowed<br/>with the ten powers. The World-Honored One, without equal, now enters nirvāṇa.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「世间有生类，　　舍身归终灭，今者大圣尊，　　具足于十力，世尊无等伦，　　今入于涅盘。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Venerable Aniruddha also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时，尊者阿那律复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The mind of the Dharma master abides in stillness, the in-and-out<br/>breath has ceased. The Tathāgata has fully accomplished the power of<br/>practice. Now entering nirvāṇa, the mind is fearless, completely abandoning all<br/>feelings, like a lamp extinguished when the oil is used up<br/>Entering nirvāṇa by extinguishing existence, the mind and intention are liberated.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「法主意止住，　　出入息已断，如来所成就，　　行力悉满足。今入于涅盘，　　其心无怖畏，都舍于诸受，　　如油尽灯灭，灭有入涅盘，　　心意得解脱。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the assembly, upon seeing this, all had their body hairs stand on end. Seven days had passed since the Buddha entered nirvāṇa. At that time, Ānanda circumambulated the Tathāgata to the right and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时，众覩已，身毛皆竖。佛入涅盘始经七日，尔时，阿难阇维如来右遶说偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Greatly compassionate, Brahma-world Honored One! Your body is the same as the pure<br/>true gem, with great supernatural powers, fire arises naturally from your body. Thousand<br/>layers of cloth wrap your body, neither the inside nor the outside burns.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「大悲梵世尊！　　体同真净宝，有大神通力，　　火出自然身，千［叠＊毛］用缠身，　　内外二不烧。」</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

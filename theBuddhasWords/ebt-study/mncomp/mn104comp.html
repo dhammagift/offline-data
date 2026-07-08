@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 104 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 104: Sāmagāma-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn103comp.html#content"></a><a id="next-sutta" href="./mn105comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn104.html">MN 104</a> / <a href="../../parallels/ma196.html">MĀ 196</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sāmagāma-sutta, the “discourse at Sāmagāma”, explains how the monks can avoid quarrels among each other after the Buddha’s demise. This discourse has a parallel in the Madhyama-āgama and another parallel in an individual translation.<span class="note" id="mn104n95"><span class="details"><span class="p">[n.95] The parallels are <a href="../../parallels/ma196.html">MĀ 196</a> at T I 752c-755c and T 85 at T I 904c-907a. <a href="../../parallels/ma196.html">MĀ 196</a> has the title “discourse to Cunda”, 周那經, while T 85 has the title “discourse spoken by the Buddha on the conditions for appeasing quarrels”, 佛說息諍因緣經. According to the information given in the Taishō edition, T 85 was translated by Dānapāla (施護). <a href="../../parallels/ma196.html">MĀ 196</a> and T 85 agree with <a href="../../mn/mn104.html">MN 104</a> on locating the discourse at the village Sāmagāma (舍彌村 or 舍摩迦子聚落). While <a href="../../mn/mn104.html">MN 104</a> at MN II 243,16 places Sāmagāma among the Sakyans, according to <a href="../../parallels/ma196.html">MĀ 196</a> at T I 752c12 Sāmagāma was rather among the Vajjians, 跋 耆. Anesaki 1908: 58 reasons that as “Pāvā, where Jina died, gave the occasion to this discourse ... it seems more probable that Sāmagāma was near Pāvā”, thereby taking <a href="../../parallels/ma196.html">MĀ 196</a> to be correct in locating Sāmagāma in the Vajjian country. Yet, with Pāvā in the Malla country as the starting point, it seems equally possible for Cunda to depart in the direction of the Vajjian country or in the opposite direction of the Sakyan country to deliver the news of the death of the Nigaṇṭha leader. Thus, the fact that Cunda came from Pāvā does not imply that Sāmagāma should be located among the Vajjians. Sāmagāma recurs in <a href="../../dn/dn29.html">DN 29</a> at DN III 118,7 and in <a href="../../an/an6.21.html">AN 6:21</a> at AN III 309,1. <a href="../../an/an6.21.html">AN 6:21</a> explicitly locates Sāmagāma in the Sakyan country, while <a href="../../dn/dn29.html">DN 29</a> does the same implicitly, since its reports that Cunda met Ānanda at was living among the Sakyans. The parallel to <a href="../../dn/dn29.html">DN 29</a>, <a href="../../parallels/da17.html">DĀ 17</a> at T I 72c13+16, does not mention Sāmagāma, although it reports that Ānanda and the Buddha were staying in the park of the Vedhaññas near Kapilavatthu, thereby confirming that the whole event took place in the Sakyan country (<a href="../../an/an6.21.html">AN 6:21</a> does not appear to have a parallel). These discourses would support the indication given in <a href="../../mn/mn104.html">MN 104</a> that Sāmagāma should be located in the Sakyan country. For remarks on <a href="../../parallels/ma196.html">MĀ 196</a> cf. Minh Chau 1964/1991: 87 and 176-180.</span></span></span></p>
+<p>The Sāmagāma-sutta and its parallels record in similar terms that Cunda had approached Ānanda to report a quarrel that had broken out among the Jains,<span class="note" id="mn104n96"><span class="details"><span class="p">[n.96] <a href="../../dn/dn29.html">DN 29</a> at DN III 118,11 and <a href="../../parallels/da17.html">DĀ 17</a> at T I 72c17 also record that the novice Cunda approached Ānanda to report the quarrel that had broke out among the Jains after the death of their leader; cf. also Gethin 1992a: 232-234. The same quarrel among the Jains stands at the background of <a href="../../dn/dn33.html">DN 33</a> at DN III 210,18 and its parallel <a href="../../parallels/da9.html">DĀ 9</a> at DN I 49c6 (translated in Behrsing 1930: 1-2 and Watanabe 1993: 180), with a Sanskrit counterpart in fragment K 484 (11)Rc in Stache-Rosen 1968: 17 (cf. also Schmidt 1997: 304) and in Waldschmidt 1955: 311-314, which indicate that the rationale for the delivery of this discourse was to prevent the arising of such a quarrel in the Buddhist community. Tilakaratne 2000a: 189 notes that the underlying purpose of the Saṅgīti-sutta as a communal recitation is to function as an expression of harmony within the monastic community, expressed in <a href="../../dn/dn33.html">DN 33</a> at DN III 211,3 with the injunction that “all should recite together and not dispute, so that this holy life may endure and remain for a long time”, sabbeh’ eva saṅgāyitabbaṃ na vivaditabbaṃ yathayidaṃ brahmacariyaṃ addhaniyaṃ assa ciraṭṭhitikaṃ, a purpose mentioned in similar terms also in <a href="../../parallels/da9.html">DĀ 9</a> at T I 49c18. Keith 1932: 864 notes that during the lifetime of Mahāvīra quarrels had broken out in the Jain community already (cf. the surveys in Deo 1956: 78-84 and von Glasenapp 1925/1999: 383-384), making it not improbable that a dispute could have happened again after his death. According to Jaini 1980: 84, during subsequent periods of Indian history “the divisiveness associated with sectarianism was much more severe among Jainas than among the Buddhists”. In T 85, however, the theme of a quarrel among the Jains seems to shade over into Jains challenging Buddhist monks.</span></span></span> after their leader had passed away.<span class="note" id="mn104n97"><span class="details"><span class="p">[n.97] Ps IV 34,17 reports that Nigaṇṭha Nāṭaputta had been so affected by the conversion of his disciple Upāli to Buddhism that he vomited blood (Upāli’s conversion is described in <a href="../../mn/mn56.html">MN 56</a> at MN I 378,30 and its parallel <a href="../../parallels/ma133.html">MĀ 133</a> at T I 630a22, on its effect on Nigaṇṭha Nāṭaputta cf. also above p. 333). He had come to Pāvā to recover from this affliction, where he passed away.</span></span></span> On hearing Cunda’s account, Ānanda decided to convey this news to the Buddha.<span class="note" id="mn104n98"><span class="details"><span class="p">[n.98] A minor difference is that <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753b11 records Ānanda’s worries in detail, relating that he told the Buddha how on hearing such news he had been terrified and had wondered if a monk, who now behaved respectfully in front of the Buddha, may not on a later occasion, once the Buddha had passed away, create a similar quarrel in the Buddhist monastic community.</span></span></span></p>
+<p>According to the Sāmagāma-sutta, the Buddha told Ānanda that a dispute about the path to awakening would indeed be a serious matter.<span class="note" id="mn104n99"><span class="details"><span class="p">[n.99] Willemen 1998: 169 notes that the summary of the constituents of the path to awakening, given at the present junction, foreshadows the tendency of employing listings as summaries of teachings, prominent in Abhidharma literature.</span></span></span> In contrast, a dispute about matters of conduct would be of less significance.<span class="note" id="mn104n100"><span class="details"><span class="p">[n.100] <a href="../../mn/mn104.html">MN 104</a> at MN II 245,19: “a dispute about livelihood or about the higher rules would be insignificant. If in the community a dispute were to arise about the path and the way, such a dispute would be of harm to many”, appamattako so ... vivādo yadidaṃ ajjhājīve vā adhipātimokkhe vā. magge vā ... paṭipadāya vā saṅghe vivādo upajjamāno uppajjeyya, so ’ssa vivādo bahujanāhitāya (Be-MN III 33,7 and Se-MIII 51,15: svāssa, Se also reads yo instead of so). Dhirasekera 1982/2007: 227 comments that this statement shows “the relatively secondary importance which the Buddha attached to discipline in its mere outward form in contrast to the more fundamental teachings of the doctrine and their practice in the religious life”; cf. also Guruge 1970: 11. According to <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753b27, however, “such disputation would be very small, namely [a disputation] related to the higher morality, the higher mind, the higher insight”, 此鬪諍甚少, 謂因增上戒, 增上心, 增上觀, which <a href="../../parallels/ma196.html">MĀ 196</a> then contrasts with the gravity of a dispute related to the path. According to <a href="../../an/an3.88.html">AN 3:88</a> at AN I 235,19+23 and its parallel <a href="../../parallels/sa817.html">SĀ 817</a> at T II 210a28+b1, the training in the higher mind, adhicitta/增上意, stands for the four jhānas, while the training in higher wisdom, adhipaññā/增上慧, stands for penetrative insight into the four noble truths. Although <a href="../../parallels/ma196.html">MĀ 196</a> speaks of “higher insight”, 增上觀, instead of “higher wisdom”, 增上慧, the two terms are sufficiently similar to allow the conclusion that the higher virtue, higher mind, and higher insight mentioned in <a href="../../parallels/ma196.html">MĀ 196</a> stand for the three higher trainings. Whether the point at stake is higher wisdom or higher insight, the present passage in <a href="../../parallels/ma196.html">MĀ 196</a> seems self-contradictory, since it would be difficult to think of anything apart from the three items it has already mentioned that could be assembled under the heading “related to the path”, 因道. Judging from the formulation in <a href="../../mn/mn104.html">MN 104</a>, perhaps the occurrence of higher virtue misled a reciter into adding the other two higher trainings. Regarding the reference in both versions to “higher” morality or rules, adhi-/增上, it may be pertinent to note that, according to Eimer 1976: 40 note 26, the prefix adhi- in adhisīla (etc.) originally just meant that such a training was undertaken “concerning” or “in regard to” morality (etc.), and it was only later that adhi- was understood to mean “higher”.</span></span></span></p>
+<p>Sāmagāma, after which the two monks approached the Buddha, who according to <a href="../../dn/dn29.html">DN 29</a> at DN III 117,</p>
+<p>The parallel versions take up different causes for disputation. While the Sāmagāmasutta directly broaches this subject, the Madhyama-āgama account provides a lead over to this topic by highlighting that the teacher of the Jains could not have been all-knowing and all-seeing, for if that had been the case he would have taught his disciples these causes for disputation (and thereby forestalled the arising of quarrels after his death).<span class="note" id="mn104n101"><span class="details"><span class="p">[n.101] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753c8.</span></span></span></p>
+<p>While the three versions agree in mentioning such states as anger, envy, and being deceitful as potential causes for dispute, their listings show some variations (see table 11.4). The Pāli version stands alone in including a contemptuous and domineering attitude as a potential cause for disputation.<span class="note" id="mn104n102"><span class="details"><span class="p">[n.102] <a href="../../mn/mn104.html">MN 104</a> at MN II 246,13.</span></span></span> The two Chinese accounts additionally reckon the absence of shame and recklessness as qualities that can cause disputation.<span class="note" id="mn104n103"><span class="details"><span class="p">[n.103] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754a3 and T 85 at T I 905b25: 無慚 and 無愧, corresponding to the absence of hiri and ottappa.</span></span></span></p>
+<p>The Sāmagāma-sutta and its parallels indicate that, due to the presence of such unwholesome states, a monk will be disrespectful towards the teacher. The individual translation explains that a monk without respect towards the teacher will not undertake proper insight contemplation when being in the midst of the assembly, as a result of which he can easily become disputatious.<span class="note" id="mn104n104"><span class="details"><span class="p">[n.104] T 85 at T I 905b16: “because of being disrespectful to the teacher, he does not see the Dharma; because of not seeing the Dharma, this monk will not properly contemplate [when] being in the midst of the assembly; because of not properly contemplating, he will enjoy quarrelling”, 由不恭敬彼師長故, 即不見 法, 以不見法故, 於苾芻眾中不正觀察, 由不正觀察故, 乃興鬪諍. <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753c16 also refers to “not seeing the Dharma”, 不見法, as one of the reasons for the arising of quarrels in the community, although it does not draw out the dynamics of its consequences in as detailed a manner as T 85.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 11.4: Causes for Disputation According to <a href="../../mn/mn104.html">MN 104</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn104.html">MN 104</a></th><th><a href="../../parallels/ma196.html">MĀ 196</a></th></tr>
+<tr><td>anger & resentment (1)</td><td>anger & vexation (→ 1)</td></tr>
+<tr><td>contempt & domineering (2)</td><td>silent sulking105</td></tr>
+<tr><td>envy & avarice (3)</td><td>avarice & envy (→ 3)</td></tr>
+<tr><td>fraud & deceit (4)</td><td>flattery & deceit (→ 4)</td></tr>
+<tr><td>evil wishes & wrong views (5)</td><td>shamelessness & recklessness</td></tr>
+<tr><td>dogmatic grasp of own view (6)</td><td>evil wishes & wrong views (→ 5)106</td></tr>
+<tr><td></td><td>(≠ 2, 6)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>T 85</td></tr>
+<tr><td>anger & resentment (→ 1)</td></tr>
+<tr><td>hypocrisy & deceit & flattery (→ 4)</td></tr>
+<tr><td>envy & avarice (→ 3)</td></tr>
+<tr><td>shamelessness & recklessness</td></tr>
+<tr><td>lack of clear comprehension</td></tr>
+<tr><td>dogmatic grasp of [own] view (→ 6)107</td></tr>
+<tr><td>(≠ 2, 5)</td></tr>
+</table>
+<p>The three versions agree in highlighting the need to energetically take action against such causes for disputation, whether these be found internally or externally, a specification the Pāli commentary explains to stand for oneself and others.<span class="note" id="mn104n108"><span class="details"><span class="p">[n.108] Ps IV 42,3.</span></span></span></p>
+<p>The Chinese versions additionally highlight the need for mindfulness and clear comprehension when taking action against these causes for disputation. The individual translation points out that a dispute will not be overcome as long as mindfulness and clear comprehension are lacking.<span class="note" id="mn104n109"><span class="details"><span class="p">[n.109] T 85 at T I 905b21 explains that as long as “in this way loss of mindfulness and lack of clear comprehension arises ... it will be impossible to eradicate and extinguish the cause of the disputation”, 如是 妄念不正知起 ... 於鬪諍緣不能斷滅. <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753c22 similarly recommends the development of “right mindfulness and right knowledge”, 正念正智, which it additionally associates with the need to maintain unremitting patience, 忍莫令退, without, however, drawing out the implications of the absence of mindfulness in the way done in T 85.</span></span></span></p>
+<p>The Madhyama-āgama discourse illustrates the sense of urgency with which these causes for dispute should be overcome with a simile. This simile describes a person whose head or clothes are on fire, a predicament that indeed requires swift action.<span class="note" id="mn104n110"><span class="details"><span class="p">[n.110] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 753c23.</span></span></span> Elsewhere this image illustrates the need to overcome unwholesome states of mind.<span class="note" id="mn104n111"><span class="details"><span class="p">[n.111] <a href="../../an/an6.20.html">AN 6:20</a> at AN III 307,11, <a href="../../an/an8.74.html">AN 8:74</a> at AN IV 320,25, <a href="../../an/an10.51.html">AN 10:51</a> at AN V 93,23, <a href="../../an/an10.52.html">AN 10:52</a> at AN V 95,19, <a href="../../an/an10.53.html">AN 10:53</a> at AN V 98,3, and <a href="../../an/an10.55.html">AN 10:55</a> at AN V 104,22. Alternatively, <a href="../../an/an4.93.html">AN 4:93</a> at AN II 93,17 and <a href="../../an/an10.54.html">AN 10:54</a> at AN V 99,27 use this image to highlight the need to develop tranquillity of the mind and higher wisdom.</span></span></span></p>
+<p>The Sāmagāma-sutta and its parallels next take up ways to settle litigations.<span class="note" id="mn104n112"><span class="details"><span class="p">[n.112] The sequence of these seven ways in <a href="../../mn/mn104.html">MN 104</a> is to some degree inconsistent, as its exposition works through the following order: confrontation with the teachings, etc. (1st), decision by majority (2nd), declaration of innocence (3rd), past insanity (4th), confession (5th), prevarication by a monk of bad character (6th), and covering over a communal litigation (7th). In the introduction to this exposition in <a href="../../mn/mn104.html">MN 104</a> at MN II 247,8, however, the sequence is 1, 3, 4, 5, 2, 6, 7, a pattern found similarly in Be-MN III 35,4, Ce-MN III 56,23, and Se-MIII 53,15. The sequence of listing in this introductory statement recurs at Vin IV 207,3, <a href="../../dn/dn33.html">DN 33</a> at DN III 254,11, and <a href="../../an/an7.80.html">AN 7:80</a> at AN IV 144,4 (cf. also Vin II 93,32, which examines confrontation with the teachings, etc., followed at Vin II 97,22 by taking up decision by majority). Horner 1959: 33 note 7 comments that in the main exposition in <a href="../../mn/mn104.html">MN 104</a> “the usual order is altered”. For a survey of these seven ways cf., e.g., Abeynayake 2009a: 84-85, Barua 1968: 76-80, Dhirasekera 1982/ 2007: 232-238, Dutt 1924/1996: 129-136, Grero 1996: 117-121, Hazra 1988: 110-115, Hecker 1977: 111-113, Nolot 1996: 99-115, Prasad 1972a: 219-222, Prebish 1980: 228-229, Ratnapala 1993: 150- 160, and (on the same for nuns) Talim 1965: 133; for the parallel versions cf. Frauwallner 1956: 114- 116; for a survey of their counterparts in the Dharmaguptaka Vinaya cf. Beal 1871: 238 and Heirman 2002: 162-165; for a comparison of the seven ways in <a href="../../mn/mn104.html">MN 104</a> and <a href="../../parallels/ma196.html">MĀ 196</a> cf. Minh Chau 1964/1991: 176-180; and on the seven ways in <a href="../../parallels/ma196.html">MĀ 196</a> and the Sarvāstivāda Vinaya cf. Chung 2008: 13 note 20.</span></span></span> The Pāli discourse precedes this exposition by distinguishing between four types of litigation, a classification not found in its Chinese parallels.<span class="note" id="mn104n113"><span class="details"><span class="p">[n.113] <a href="../../mn/mn104.html">MN 104</a> at MN II 247,3, a presentation found also in Vin II 88,17, followed by a detailed explanation.</span></span></span></p>
+<p>In the Sāmagāma-sutta, the first two ways to settle litigations are to set out what are the proper teachings,<span class="note" id="mn104n114"><span class="details"><span class="p">[n.114] <a href="../../mn/mn104.html">MN 104</a> at MN II 247,10: sammukhāvinayo, with its counterparts in <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754a21: 面前止諍 律 and in T 85 at T I 905c4: 現前毘尼. The implications of this procedure are set out in detail at Vin II 93,32. <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754a26 and T 85 at T I 905c7 present this procedure by describing that those who set out the proper teachings to others could be a single person who teaches a single person, a single person teaching a group, etc., or even a whole community that teaches a whole community.</span></span></span> followed by bringing about a decision by the majority.<span class="note" id="mn104n115"><span class="details"><span class="p">[n.115] <a href="../../mn/mn104.html">MN 104</a> at MN II 247,19: yebhuyyasikā, with its counterparts in <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755a9: 展轉 and T 85 at T I 906a10: 多人語.</span></span></span> These two ways of settling litigations are similarly mentioned in the two Chinese versions, which vary, however, in the sequence of their presentation (see table 11.5).</p>
+<p>In relation to each of these two ways of settling a litigation, the Pāli version recommends to “draw out the guidelines of the Dharma” as a reference point.<span class="note" id="mn104n116"><span class="details"><span class="p">[n.116] <a href="../../mn/mn104.html">MN 104</a> at MN II 247,14+23: dhammanetti samanumajjitabbā.</span></span></span> A similar reference is made in the two Chinese versions in relation to the case where a decision is taken by the majority. According to the two Chinese discourses, the point of reference in such a case should be the discourses, the Vinaya, and the summaries (mātikā).<span class="note" id="mn104n117"><span class="details"><span class="p">[n.117] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755a17 lists 經, 律, and 母者, T 85 at T I 906a17 lists 經, 律, and 摩怛里迦, on the mātikā cf. above p. 217.</span></span></span></p>
+<p>The three versions describe in similar terms how a monk can clear himself by declaring that he does not remember having committed the breach of conduct of which he is accused.<span class="note" id="mn104n118"><span class="details"><span class="p">[n.118] <a href="../../mn/mn104.html">MN 104</a> at MN II 247,28: sativinayo, <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754b11: 憶止諍律, and T 85 at T I 905c16: 憶念 毘尼. Judging from the case of Dabba Mallaputta in Vin II 79,12 (on Dabba cf. also Anālayo 2012b), the point of this rule would be that innocent monks can in this way clear themselves of wrong accusations. In the Chinese versions, however, this procedure is concerned with a monk who has committed an offence but does not remember it, cf. <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754b12: “if there is a person who has violated the precepts and does not remember”, 若有一人犯戒而不憶 and T 85 at T I 905c16: “there is a monk who has committed an offence but does not remember it himself”, 有苾芻隨犯罪已不自憶念 (<a href="../../parallels/ma196.html">MĀ 196</a> and T 85 take up the case of someone who does not remember due to having been out of his mind as a separate case). On the corresponding regulation in the Mahāsāṅghika Vinaya cf. Clarke 2008: 118.</span></span></span> He can also be cleared by others of an offence if it is found out that, although he did commit a breach of conduct, at the time when this happened he was out of his mind.<span class="note" id="mn104n119"><span class="details"><span class="p">[n.119] <a href="../../mn/mn104.html">MN 104</a> at MN II 248,5: amūḷhavinayo, <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754b23: 不癡止諍律, and T 85 at T I 905c22: 不癡毘尼. <a href="../../mn/mn104.html">MN 104</a> stands alone in indicating that this and the preceding case involve pārājika offences or offences bordering on pārājika. On this form of acquittal cf. also Koike 2010.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 11.5: Sequence of Ways to Settle Disputes in <a href="../../mn/mn104.html">MN 104</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn104.html">MN 104</a> (actual exposition)</th><th><a href="../../parallels/ma196.html">MĀ 196</a></th><th>T 85120</th></tr>
+<tr><td>confrontation (1)</td><td>confrontation (→ 1)</td><td>confrontation (→ 1)</td></tr>
+<tr><td>majority opinion (2)</td><td>not remembering (→ 3)</td><td>not remembering (→ 3)</td></tr>
+<tr><td>not remembering (3)</td><td>past insanity (→ 4)</td><td>past insanity (→ 4)</td></tr>
+<tr><td>past insanity (4)</td><td>acknowledgement (→ 5)</td><td>acknowledgement (→ 5)</td></tr>
+<tr><td>acknowledgement (5)</td><td>bad character (→ 6)</td><td>majority opinion (→ 2)</td></tr>
+<tr><td>bad character (6)</td><td>majority opinion (→ 2)</td><td>acknowledgement (→ 5)</td></tr>
+<tr><td>covering with grass (7)</td><td>covering with grass (→ 7)</td><td>covering with grass (→ 7)</td></tr>
+<tr><td></td><td></td><td>(≠ 6)</td></tr>
+</table>
+<p>In the second case, while the Pāli version describes how this monk is taken up for cross-questioning,<span class="note" id="mn104n121"><span class="details"><span class="p">[n.121] <a href="../../mn/mn104.html">MN 104</a> at MN II 248,11.</span></span></span> in the Chinese versions he is just informed by other monks of what took place while he was out of his mind.<span class="note" id="mn104n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754b27 and T 85 at T I 905c17. Here the Chinese versions present a more suitable manner of dealing with such a situation, since if someone has committed an offence while being out of his mind, there would be little point in trying to make him later admit to it by continued cross-questioning, a procedure appropriate in the case of a monk who tries to conceal an offence. In fact, according to Vin II 81,12 some monks had adopted cross-questioning in the case of the monk Gagga, who had misbehaved while being out of his mind, a way of dealing with this case that according to the Vinaya report met with the Buddha’s explicit disapproval. In the Karmavācanā fragment 260V4 in Härtel 1956: 46, the monk’s confession explicitly notes that he should not be reproved or reminded of this offence, nāhaṃ kenacit tena vastunā saṃghena saṃbahulaiḥ dvābhyām ekena codayita[vya sm](ārayitavyaḥ).</span></span></span></p>
+<p>The Majjhima-nikāya and Madhyama-āgama versions describe in related ways how someone who has confessed an offence can be cleared.<span class="note" id="mn104n123"><span class="details"><span class="p">[n.123] <a href="../../mn/mn104.html">MN 104</a> at MN II 248,21: patiññātakaraṇaṃ and <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754c12: 自發露. T 85 at T I 906a22+3 differs in so far as it examines clearance through confession by distinguishing between two possible cases, where either the culprit knows he has committed an offence and confesses it, or else the culprit was not aware of the fact that what he did constituted an offence.</span></span></span></p>
+<p>The Sāmagāma-sutta takes up the possibility that a monk may try to conceal what he did. After continued cross-questioning, the monks finally get the wrongdoer to admit his deed.<span class="note" id="mn104n124"><span class="details"><span class="p">[n.124] <a href="../../mn/mn104.html">MN 104</a> at MN II 249,25. <a href="../../parallels/ma196.html">MĀ 196</a> at T I 754c24 only describes his prevarications, without reporting that he finally admits his fault. <a href="../../mn/mn104.html">MN 104</a> stands alone in designating the deed to be a pārājika offence or an offence bordering on pārājika. T 85 does not consider the possibility that a monk may try to conceal what he did.</span></span></span> The Sāmagāma-sutta indicates that such a type of litigation will be settled when the monks come to the conclusion that this monk is of evil character.<span class="note" id="mn104n125"><span class="details"><span class="p">[n.125] A more detailed description of the procedure to be adopted in such a case can be found at Vin II 85,25. According to <a href="../../an/an8.90.html">AN 8:90</a> at AN IV 347,6, a monk whose evil character has been determined in this way will be divested of all possible privileges, such as having a novice as his attendant, giving teachings to the nuns, being given a place of honour, or benefiting from a community decision. This shows that speaking falsehood when interrogated in the midst of the monastic order was seen as a grave wrongdoing, an act whereby a monk had thoroughly dishonoured himself. On the role of speaking falsehood in relation to the Buddhist training schemes for monastics and laity cf. also Caillat 1984a. Von Hinüber 1995a: 11 highlights “one of the basic principles of early Buddhist law as laid down in the Pātimokkha: that the monk involved has to admit his intention to commit an offense ... speaking the truth is taken more or less for granted here as in Brahmanical tradition, where it is thought that brahmins speak the truth by their very nature”.</span></span></span></p>
+<p>The Majjhima-nikāya and Madhyama-āgama versions agree that, in order to settle a quarrel between two factions of monks, the various offences committed among them should be considered as settled through an act of public announcement and a summary confession.<span class="note" id="mn104n126"><span class="details"><span class="p">[n.126] <a href="../../mn/mn104.html">MN 104</a> at MN II 250,1: tiṇavatthārako, <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755a25: 如棄糞掃, and T 85 at T I 906b2: 如草覆地.</span></span></span> According to the Madhyama-āgama discourse, during such a public announcement the monk who is to address the other monks should remind them of the fact that they had gone forth from the household life into homelessness out of faith and in order to undertake the path, yet, instead of pursuing the path they are now engaging in quarrel and dispute.<span class="note" id="mn104n127"><span class="details"><span class="p">[n.127] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755b11, a meaningful reminder in such a situation.</span></span></span></p>
+<p>The parallels next take up six qualities conducive to concord and harmony, which are:</p>
+<ul>
+<li>acting with loving kindness,</li>
+<li>speaking with loving kindness,</li>
+<li>thinking with loving kindness,</li>
+<li>willingness to share one’s material gains,</li>
+<li>maintaining virtuous conduct,</li>
+<li>possessing the type of view that leads to the eradication of dukkha.</li>
+</ul>
+<p>The Madhyama-āgama version adds that the ultimate purpose of these six qualities is to lead to Nirvāṇa.<span class="note" id="mn104n128"><span class="details"><span class="p">[n.128] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755b25: 得涅槃.</span></span></span></p>
+<p>The final part of the three versions highlight the benefits of these six qualities in complementary ways. The Majjhima-nikāya discourse concludes by proclaiming that a monk possessed of these six qualities will be able to bear any type of speech.<span class="note" id="mn104n129"><span class="details"><span class="p">[n.129] <a href="../../mn/mn104.html">MN 104</a> at MN II 251,22, a proposition found also in <a href="../../mn/mn21.html">MN 21</a> at MN I 129,26.</span></span></span></p>
+<p>The concluding section of the Madhyama-āgama discourse proclaims that, if the monks practise these six qualities after the Buddha’s demise, they will live together in harmony and without dispute, being of one mind and blending like water and milk,<span class="note" id="mn104n130"><span class="details"><span class="p">[n.130] <a href="../../parallels/ma196.html">MĀ 196</a> at T I 755c13: 同一一心 ... 合一水乳. The same image recurs in a description of communal harmony in <a href="../../mn/mn31.html">MN 31</a> at MN I 206,18+29 and its parallel <a href="../../parallels/ma185.html">MĀ 185</a> at T I 730a28, according to which Anuruddha and his companions lived together “blending like milk and water”, khīrodakībhūta, 合一水乳, and were “of one mind”, ekañ ca pana maññe cittan ti, 一心.</span></span></span> just as if he were still among them.</p>
+<p>The individual translation concludes by explaining that those, who practise these six qualities conducive to communal harmony, will be at ease and free from quarrels even after the Buddha has passed away, just as they are at ease now while he is still living among them.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

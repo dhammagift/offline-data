@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 149 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 149: Mahāsaḷāyatanika-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn148comp.html#content"></a><a id="next-sutta" href="./mn150comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn149.html">MN 149</a> / <a href="../../parallels/sa305.html">SĀ 305</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāsaḷāyatanika-sutta, the “discourse on the great six sense-spheres”, gives a short but penetrative instruction on the development of insight in regard to the six sensespheres. This discourse has a parallel in the Saṃyukta-āgama,<span class="note" id="mn149n108"><span class="details"><span class="p">[n.108] The parallel is <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87a-c. While <a href="../../mn/mn149.html">MN 149</a> takes place in Jeta’s Grove, <a href="../../parallels/sa305.html">SĀ 305</a> and Abhidh-kṭ have Kammāsadhamma in the Kuru country as their venue.</span></span></span> as well as in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn149n109"><span class="details"><span class="p">[n.109] Abhidh-k-ṭ at D (4094) mngon pa, ju 203b1-205b6 or Q (5595) tu 232a5-234b8; cf. also Abhidh-k 4:4 in Pradhan 1967: 196,21, paralleling <a href="../../mn/mn149.html">MN 149</a> at MN III 289,2, with its Chinese counterparts in T 1558 at T XXIX 69a22 and T 1559 at T XXIX 226c28. For another quotation from Abhidh-k-ṭ cf. below note 111.</span></span></span></p>
+<p>The Mahāsaḷāyatanika-sutta and its parallels offer a closely similar exposition on the six sense-spheres, which highlights how lack of proper vision and knowledge in regard to the six senses, their objects, consciousness, contact, and the three types of feeling leads to the arising of lust, and therewith to the continuation of the five aggregates, to future rebirth, and to bodily and mental affliction.<span class="note" id="mn149n110"><span class="details"><span class="p">[n.110] <a href="../../parallels/sa305.html">SĀ 305</a> differs from the standard sequence of enumerating the three types of feeling, as it begins with “painful” feeling, 苦, followed by “pleasant” feeling, 樂, and then “neither-painful-nor-pleasant” feeling, 不苦不樂. The same sequence can be found in several other discourses in the Saṃyukta-āgama, cf. <a href="../../parallels/sa46.html">SĀ 46</a> T II 11c2, <a href="../../parallels/sa65.html">SĀ 65</a> at T II 17a29, <a href="../../parallels/sa166.html">SĀ 166</a> at T II 45a23, <a href="../../parallels/sa167.html">SĀ 167</a> at T II 45b3, <a href="../../parallels/sa195.html">SĀ 195</a> at T II 50a14, <a href="../../parallels/sa196.html">SĀ 196</a> at T II 50a27, <a href="../../parallels/sa197.html">SĀ 197</a> at T II 50b29, <a href="../../parallels/sa201.html">SĀ 201</a> at T II 51c16, <a href="../../parallels/sa202.html">SĀ 202</a> at T II 52a4, <a href="../../parallels/sa203.html">SĀ 203</a> at T II 52a23, <a href="../../parallels/sa204.html">SĀ 204</a> at T II 52b1, <a href="../../parallels/sa205.html">SĀ 205</a> at T II 52b12, <a href="../../parallels/sa206.html">SĀ 206</a> at T II 52b25, <a href="../../parallels/sa211.html">SĀ 211</a> at T II 53b10, <a href="../../parallels/sa213.html">SĀ 213</a> at T II 54a9, <a href="../../parallels/sa219.html">SĀ 219</a> at T II 55a6, <a href="../../parallels/sa220.html">SĀ 220</a> at T II 55a13, <a href="../../parallels/sa222.html">SĀ 222</a> at T II 55b2, <a href="../../parallels/sa223.html">SĀ 223</a> at T II 55b11, <a href="../../parallels/sa224.html">SĀ 224</a> at T II 55b19, <a href="../../parallels/sa225.html">SĀ 225</a> at T II 55b27, <a href="../../parallels/sa226.html">SĀ 226</a> at T II 55c5, <a href="../../parallels/sa227.html">SĀ 227</a> at T II 55c19, <a href="../../parallels/sa229.html">SĀ 229</a> at T II 56a11, <a href="../../parallels/sa230.html">SĀ 230</a> at T II 56a28, <a href="../../parallels/sa231.html">SĀ 231</a> at T II 56b17, <a href="../../parallels/sa232.html">SĀ 232</a> at T II 56b26, <a href="../../parallels/sa241.html">SĀ 241</a> at T II 58b4, <a href="../../parallels/sa253.html">SĀ 253</a> at T II 62a27, <a href="../../parallels/sa298.html">SĀ 298</a> at T II 85b7, <a href="../../parallels/sa304.html">SĀ 304</a> at T II 87a22, <a href="../../parallels/sa308.html">SĀ 308</a> at T II 88b26, <a href="../../parallels/sa320.html">SĀ 320</a> at T II 91b11, <a href="../../parallels/sa321.html">SĀ 321</a> at T II 91b19, <a href="../../parallels/sa466.html">SĀ 466</a> at T II 119a15, <a href="../../parallels/sa988.html">SĀ 988</a> at T II 257b7, <a href="../../parallels/sa994.html">SĀ 994</a> at T II 260b4, <a href="../../parallels/sa1025.html">SĀ 1025</a> at T II 267c29, and <a href="../../parallels/sa1166.html">SĀ 1166</a> at T II 311c1. Yet, other discourses in the same Saṃyukta-āgama collection adopt the sequence found in the Pāli discourses (and also in the Abhidh-k-ṭ parallel to the present discourse, <a href="../../parallels/sa305.html">SĀ 305</a>, cf. D (4094) mngon pa, ju 203b4 or Q (5595) tu 232a8), which begins with pleasant feelings, cf. <a href="../../parallels/sa471.html">SĀ 471</a> at T II 120b19, <a href="../../parallels/sa473.html">SĀ 473</a> at T II 121a4, <a href="../../parallels/sa474.html">SĀ 474</a> at T II 121a21, <a href="../../parallels/sa475.html">SĀ 475</a> at T II 121c2, <a href="../../parallels/sa476.html">SĀ 476</a> at T II 121c22, <a href="../../parallels/sa478.html">SĀ 478</a> at T II 122a8, <a href="../../parallels/sa485.html">SĀ 485</a> at T II 123c25, <a href="../../parallels/sa551.html">SĀ 551</a> at T II 144b18, <a href="../../parallels/sa759.html">SĀ 759</a> at T II 199c19, and <a href="../../parallels/sa1164.html">SĀ 1164</a> at T II 310c7. Some discourses in the Saṃyukta-āgama have both patterns, as <a href="../../parallels/sa470.html">SĀ 470</a> at T II 120a1, <a href="../../parallels/sa467.html">SĀ 467</a> at T II 119a27, <a href="../../parallels/sa468.html">SĀ 468</a> at T II 119b15, <a href="../../parallels/sa472.html">SĀ 472</a> at T II 120c12, and <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c10 begin with painful feelings, but then the same discourses <a href="../../parallels/sa470.html">SĀ 470</a> at T II 120b2, <a href="../../parallels/sa467.html">SĀ 467</a> at T II 119a29, <a href="../../parallels/sa468.html">SĀ 468</a> at T II 119b16, <a href="../../parallels/sa472.html">SĀ 472</a> at T II 120c12, and <a href="../../parallels/sa969.html">SĀ 969</a> at T II 249c20 continue by mentioning pleasant feelings first. It is noteworthy that within a single discourse collection variations should occur in the case of such an elementary aspect of the teachings as the three types of feeling, since from the perspective of the dynamics of transmission it would be natural for the reciters to adopt the same sequence throughout, and it is difficult to conceive of a cogent reason why they should have adopted different sequences. This is, however, not the only instance of such unexpected variations in the Saṃyukta-āgama. Another example of a similar type is when the name Koṇḍañña is rendered in two different ways (憍陳如 and 拘隣) within the same discourse, cf. <a href="../../parallels/sa379.html">SĀ 379</a> at T II 104a10: 世尊告尊者憍陳如, 知法未? 憍陳如白佛, 已知, 世尊. 復告尊者憍陳如, 知法未? 拘隣白佛, 已知, 善逝. 尊者拘隣已知 法故. Another case is <a href="../../parallels/sa551.html">SĀ 551</a> at T II 144b4, which presents a stanza, follows this stanza with an explanation, and then concludes by repeating the stanza that has just been explained (T II 144c13). This repetition, however, differs considerably from the earlier stanza, as its first line reads 若斷一切流, instead of 斷一切諸流, the third line speaks of 諸欲, instead of 五欲, and the final line is quite different, cf. 不 復與世間, 共言語諍訟, whereas earlier the final line reads 世間諍言訟, 畢竟不復為. These instances might be examples of a tendency described by Zürcher 1991: 288, where in early translations “there is a strong tendency to avoid the monotonous effect of ... verbatim repetition ... by introducing a certain amount of diversification and irregularity”, as a result of which “in the same translated scripture we often find various alternative forms and longer or shorter versions of the same cliché”. Relevant to the same topic would also be one of the maxims set up for correct translation attributed to Dàoān (道安) in T 2145 at T LV 52b26, cf. also Bingenheimer 2010: 25 and Meier 1972: 43, which emphasizes the, for the early Chinese translators apparently not self-evident, importance of respecting the repetitive nature of the Indian texts.</span></span></span></p>
+<p>The Chinese and Tibetan versions additionally point out that in this way birth, old age, disease, and death arise, as well as the whole great mass of dukkha.<span class="note" id="mn149n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87b13 and D (4094) mngon pa, ju 204a1 or Q (5595) tu 232b6. A discourse quotation paralleling the development of the path, described in <a href="../../mn/mn149.html">MN 149</a> at MN III 289,9, can also be found in Abhidh-k 6:70 in Pradhan 1967: 385,6; cf. also T 1558 at T XXIX 133a15, T 1559 at T XXIX 284b12, and D (4094) mngon pa, nyu 41b1 or Q (5595) thu 80a7.</span></span></span> The three versions continue by applying the same treatment to the complementary case when vision and knowledge are present, whereby the arising of lust and all its detrimental repercussions can be avoided. The Mahāsaḷāyatanika-sutta and its parallels continue in similar ways by showing how one with such knowledge and vision is endowed with the following path factors:</p>
+<ul>
+<li>right view,</li>
+<li>right intention,</li>
+<li>right effort,</li>
+<li>right mindfulness,</li>
+<li>right concentration.</li>
+</ul>
+<p>The other three path factors should be understood to have been developed earlier.<span class="note" id="mn149n112"><span class="details"><span class="p">[n.112] Abhidh-k-ṭ differs, as it includes right speech among the factors that are developed by knowledge and vision, D (4094) mngon pa, ju 205a2 or Q (5595) tu 234a1, so that, in its presentation, only right action and right livelihood have been developed earlier. A minor difference between the other two versions is that <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87c1 lists the factors developed earlier as “right speech, right action, right livelihood”, 正語, 正業, 正命, whereas <a href="../../mn/mn149.html">MN 149</a> at MN III 289,7 adopts a different sequence by listing “bodily action, verbal action, and livelihood”, kāyakammaṃ vacīkammaṃ ājīvo. A quotation of the present passage in the Abhidharmakośabhāṣya, Abhidh-k 4:4 in Pradhan 1967: 196,23, agrees in sequence with <a href="../../parallels/sa305.html">SĀ 305</a>: samyak vākkarmāntājīvāḥ, T 1558 at T XXIX 69a22: 正語業命, and T 1559 at T XXIX 226c28: 正語正業正命, a sequence also adopted in the commentarial gloss at Ps V 103,23: vācākammantājīvā. From the perspective of oral recitation, a result of the departure from the usual sequence in <a href="../../mn/mn149.html">MN 149</a> by listing kāyakammaṃ vacīkammaṃ ājīvo is that the final two words produce assonance through the long -ī- in second position (the first two words are anyway related through homoioteleuton by sharing the same ºkammaṃ as their second part), whereas to recite vacīkammaṃ kāyakammaṃ ājīvo, a sequence that would accord with the standard listings of the corresponding factors of the noble eightfold path, would not produce such an assonance. It seems, however, less probable that this would have influenced the sequence of the terms, since usually the influence of assonance or of the principle of waxing syllables on listings is overruled by doctrinal requirements, which would be the case for the sequence of the factors of the noble eightfold path; cf. also Anālayo 2009v.</span></span></span> Practising the noble eightfold path in this way then leads to developing:</p>
+<ul>
+<li>the four satipaṭṭhānas,</li>
+<li>the four right efforts,</li>
+<li>the four ways to [psychic] power,</li>
+<li>the five faculties,</li>
+<li>the five powers,</li>
+<li>the seven factors of awakening.</li>
+</ul>
+<p>The Pāli and Tibetan versions add to this listing that, by practising in this way, tranquillity and insight come into being concurrently.<span class="note" id="mn149n113"><span class="details"><span class="p">[n.113] <a href="../../mn/mn149.html">MN 149</a> at MN III 289,16 and D (4094) mngon pa, ju 205a4 or Q (5595) tu 234a4. On samatha and vipassanā undertaken in conjunction cf. also <a href="../../an/an4.170.html">AN 4:170</a> at AN II 157,15, the Śrāvakabhūmi in Shukla 1973: 404,4 or ŚSG 2010: 26,3, with the Chinese counterpart in T 1579 at T XXX 458b4, and Anālayo 2009z.</span></span></span> The Mahāsaḷāyatanika-sutta and its parallels continue by examining four aspects of penetrative insight, though they differ in the sequence of their presentation (see table 15.3).<span class="note" id="mn149n114"><span class="details"><span class="p">[n.114] <a href="../../mn/mn149.html">MN 149</a> at MN III 289,20, <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87c5, and D (4094) mngon pa, ju 205a5 or Q (5595) tu 234a6. The same four aspects of the development of penetrative insight recur – in the sequence adopted by <a href="../../parallels/sa305.html">SĀ 305</a> and Abhidh-k-ṭ – in the Dhammacakkapavattana-sutta, <a href="../../sn/sn56.11.html">SN 56:11</a> at SN V 422,6, which proceeds from what is to be “fully understood”, pariññeyyaṃ, via what is to be “abandoned”, pahātabbaṃ, and what is to be “realized”, sacchikātabbaṃ, to what is to be “developed”, bhāvetabbaṃ (for a survey of some parallel versions that show the same pattern cf. Chung 2006). The sequence in <a href="../../mn/mn149.html">MN 149</a>, together with the corresponding explanation, recurs as a discourse on its own in <a href="../../an/an4.251.html">AN 4:251</a> at AN II 246-247.</span></span></span> The sequence adopted in the Chinese and Tibetan versions conforms to the pattern set by the standard formulation of the four noble truths.</p>
+<table class="comparative-table">
+<caption>Table 15.3: Four Aspects of Insight in <a href="../../mn/mn149.html">MN 149</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn149.html">MN 149</a></th><th><a href="../../parallels/sa305.html">SĀ 305</a> & Abhidh-k-ṭ</th></tr>
+<tr><td>full understanding (1)</td><td>full understanding (→ 1)</td></tr>
+<tr><td>abandoning (2)</td><td>abandoning (→ 2)</td></tr>
+<tr><td>development (3)</td><td>realization (→ 4)</td></tr>
+<tr><td>realization (4)</td><td>development (→ 3)</td></tr>
+</table>
+<p>The Pāli discourse explains that the five aggregates [affected by] clinging are to be fully understood, whereas according to the Chinese and Tibetan presentation nameand-form should be fully understood.<span class="note" id="mn149n115"><span class="details"><span class="p">[n.115] <a href="../../mn/mn149.html">MN 149</a> at MN III 289,23: pañcupādānakkhandhā, <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87c8: 名色, and D (4094) mngon pa, ju 205a6 or Q (5595) tu 234a7: ming dang gzugs.</span></span></span> The three versions agree that ignorance and craving for becoming need to be abandoned, while knowledge and liberation need to be realized. According to the Pāli and Tibetan versions, tranquillity and insight should be developed, whereas the Saṃyukta-āgama discourse only takes insight into account.<span class="note" id="mn149n116"><span class="details"><span class="p">[n.116] <a href="../../mn/mn149.html">MN 149</a> at MN III 289,29: samatho ca vipassanā ca and D (4094) mngon pa, ju 205b2 or Q (5595) tu 234b3: zhi gnas dang lhag mthong, whereas <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87c11 only mentions 正觀 (which might be an error for 止觀, in which case the three versions would be in agreement).</span></span></span></p>
+<p>The Chinese and Tibetan discourses conclude that a monk, who has accomplished these four aspects of penetrative insight, can be reckoned as having eradicated craving and gone beyond dukkha.<span class="note" id="mn149n117"><span class="details"><span class="p">[n.117] <a href="../../parallels/sa305.html">SĀ 305</a> at T II 87c14 and D (4094) mngon pa, ju 205b5 or Q (5595) tu 234b6.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

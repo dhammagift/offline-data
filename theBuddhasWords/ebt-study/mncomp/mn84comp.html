@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 84 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 84: Madhura-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn83comp.html#content"></a><a id="next-sutta" href="./mn85comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn84.html">MN 84</a> / <a href="../../parallels/sa548.html">SĀ 548</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Madhura-sutta, the “discourse at Madhurā”,<span class="note" id="mn84n170"><span class="details"><span class="p">[n.170] Jaini 1989: 215 comments that “Mathurā is always referred to as Madhurā in the Pāli texts. It is difficult to ascertain whether the Pāli suttas retain the original name of the city or only a variant spelling of the same”.</span></span></span> examines the Brahminical claim to supremacy among ancient Indian social classes. This discourse has a parallel in the Saṃyukta-āgama.<span class="note" id="mn84n171"><span class="details"><span class="p">[n.171] The parallel is <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142a-143a, for which Akanuma 1929/1990: 60 gives 摩偷羅, corresponding to Madhurā, as a tentative title.</span></span></span></p>
+<p>The Madhura-sutta and its Saṃyukta-āgama parallel report in similar terms that the king of Madhurā had asked Mahākaccāna’s opinion on the claim made by the Brahmins to being the superior social class (vaṇṇa).<span class="note" id="mn84n172"><span class="details"><span class="p">[n.172] A circumstantial difference between the two versions is that <a href="../../mn/mn84.html">MN 84</a> at MN II 83,18 begins by reporting Mahākaccāna’s good reputation as a learned and wise arahant and also describes in detail how the king drove out of town in his chariot to meet Mahākaccāna, while <a href="../../parallels/sa548.html">SĀ 548</a> does not mention Mahākaccāna’s reputation, nor does it describe in what manner the king approached him.</span></span></span> In reply, Mahākaccāna clarified that the Brahminical claim to superiority was mere hearsay. According to the Saṃyukta-āgama version, he also explained that what really matters are one’s own deeds.<span class="note" id="mn84n173"><span class="details"><span class="p">[n.173] <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b2: “great king, you should know that [one’s] deeds are what is truly real [in this regard], it depends on [one’s] deeds”, 大王當知業真實者, 是依業者, a remark that might be related in meaning to a statement found in Sn 3:9 at Sn 650, according to which it is through one’s deeds that one becomes a [true] Brahmin, cf. also Sn 1:7 at Sn 136. According to <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b3, the king then requested Mahākaccāna to explain this matter in more detail, so that their subsequent discussion is a more detailed exposition of this short statement. This becomes particularly evident in <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b17+c3+23, where after each argument Mahākaccāna refers back to this statement on karma, a statement that recurs also in the king’s final conclusion in <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142c27.</span></span></span></p>
+<p>The Madhura-sutta illustrates that economic might is more powerful than class membership with the example of a wealthy person from any of the four classes who is served by members of each of these four classes.<span class="note" id="mn84n174"><span class="details"><span class="p">[n.174] <a href="../../mn/mn84.html">MN 84</a> at MN II 84,18. The suggestion that all four classes were able to reach a position of being served by members of each of the other classes is to some extent surprising. Although some degree of social fluctuation may well have been possible in ancient India, it seems improbable that members of the fourth class were able to have members of the other three classes at their service and command. In fact, the statement in <a href="../../mn/mn84.html">MN 84</a> is formulated as a hypothetical case, so that to apply this possibility to the worker class may not have been intended as an accurate reflection of ancient Indian social mobility.</span></span></span> Instead of Brahmins, warriors, merchants, and workers, the Saṃyukta-āgama version’s explanation of the same point speaks of Brahmins, warriors, and two types of householder.<span class="note" id="mn84n175"><span class="details"><span class="p">[n.175] <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b6: 婆羅門, 剎利, 居士, 長者, a listing which Nakamura 1957: 167 takes to be due to a tendency on the side of the translator(s) “to adapt the text to the understanding of readers brought up on Confucian hierarchical ethics”. The same type of enumeration recurs again in <a href="../../parallels/sa472.html">SĀ 472</a> at T II 120c10 (which adds “wilderness men and hunters”, 野人獵師, to this list), where the Pāli parallel <a href="../../sn/sn36.14.html">SN 36:14</a> at SN IV 219,12 has instead the standard enumeration of the four classes. According to Hirakawa 1997: 403 and 1195, 居士 is an equivalent to gṛhapati or vaiśya, while 長者 corresponds to gṛhapati, to mahāśāla, or to śreṣṭhin. According to Soothill 1937/2000: 257 and 284, 居士 refers to a kulapati, a householder in the sense of being the head of a family, and 長者 stands for a gṛhapati as a householder in general. Hence, even though a subtle difference might be found between the two expressions, their main import appears to be similar. This impression is born out in <a href="../../parallels/sa1074.html">SĀ 1074</a> at T II 279a27+29, which uses the two terms 居士 and 長者 to refer to the same group of persons. A similar closeness of meaning of these two expressions can also be seen in their use in the Ekottarika-āgama, where <a href="../../parallels/ea39.8.html">EĀ 39.8</a> at T II 732c5+6 uses 居士 and 長者 interchangeably to refer to the same person. Along similar lines, <a href="../../parallels/ma64.html">MĀ 64</a> at T I 506a8, <a href="../../parallels/ma134.html">MĀ 134</a> at T I 637c29, and <a href="../../parallels/ma199.html">MĀ 199</a> at T I 763a2 use the combination 居士大長者 to represent one of the three great families. These instances show a considerable overlap in meaning between 居士 and 長者.</span></span></span> Other discourses in the Saṃyuktaāgama, however, have the standard listing of all four classes that includes the merchants and the workers.<span class="note" id="mn84n176"><span class="details"><span class="p">[n.176] <a href="../../parallels/sa95.html">SĀ 95</a> at T II 26b5 and <a href="../../parallels/sa592.html">SĀ 592</a> at T II 157c5 speak of 婆羅門, 剎利, 毘舍, 首陀羅, while <a href="../../parallels/sa1145.html">SĀ 1145</a> at T II 304a9, <a href="../../parallels/sa1146.html">SĀ 1146</a> at T II 304b29, and <a href="../../parallels/sa1235.html">SĀ 1235</a> at T II 338b14 speak of 婆羅門, 剎利, 鞞舍, 首陀羅, each of these two ways of presentation corresponding to the four classes usually mentioned in the early texts. It is noteworthy that between discourses belonging to the same Saṃyukta-āgama collection and presumably translated by the same translation team, alternative ways of rendering vessa or vaiśya can be found. <a href="../../parallels/sa95.html">SĀ 95</a> reads 毘舍, <a href="../../parallels/sa1145.html">SĀ 1145</a> uses 鞞舍, and <a href="../../parallels/sa548.html">SĀ 548</a> employs 居士, even though their Pāli parallels <a href="../../an/an3.57.html">AN 3:57</a> at AN I 162,17 (parallel to <a href="../../parallels/sa95.html">SĀ 95</a>), <a href="../../sn/sn3.24.html">SN 3:24</a> at SN I 99,15 (or SN2 135 at SN2 I 221,3, parallel to <a href="../../parallels/sa1145.html">SĀ 1145</a>) and the present discourse <a href="../../mn/mn84.html">MN 84</a> at MN II 85,9 (parallel to <a href="../../parallels/sa548.html">SĀ 548</a>) all use the same term vessa, making it probable that the Indic original used for translating these Saṃyukta-āgama discourses had the same reference to vessa or vaiśya in each instance.</span></span></span> Since the present context is clearly related to class issues, the reference to Brahmins, warriors, and two types of householder could be a confusion of the four classes with the four types of wise man (a listing that covers Brahmins, warriors, householders, and recluses),<span class="note" id="mn84n177"><span class="details"><span class="p">[n.177] This listing is found in <a href="../../parallels/sa108.html">SĀ 108</a> at T II 33c20 and includes 剎利, 婆羅門, 長者, and 沙門, being the counterpart to khattiya, brāhmaṇa, gahapati, and samaṇa in its parallel <a href="../../sn/sn22.2.html">SN 22:2</a> at SN III 6,16.</span></span></span> or else a confusion of the four classes with the three types of great family (a listing that mentions Brahmins, warriors, and householders).<span class="note" id="mn84n178"><span class="details"><span class="p">[n.178] This listing shows some variations, as <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 273a7 has 剎利, 婆羅門, and 居士 (preceded in <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 273a6 by a reference to 長者), while <a href="../../parallels/sa1146.html">SĀ 1146</a> at T II 304c21 has 剎利, 婆羅門, and 長者. Thus, these two discourses again point to the close similarity between 居士 and 長者. The Pāli parallels <a href="../../mn/mn41.html">MN 41</a> at MN I 289,2 and <a href="../../sn/sn3.21.html">SN 3:21</a> at SN I 94,33 (or SN2 132 at SN2 I 212,6) speak of khattiya, brāhmaṇa, and gahapati (each case qualified as mahāsāla).</span></span></span></p>
+<p>The Saṃyukta-āgama discourse also differs in so far as instead of taking up the possibility of becoming wealthy, it speaks of becoming a king. This results in envisaging the possibility that Brahmins and householders become kings.<span class="note" id="mn84n179"><span class="details"><span class="p">[n.179] <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b5+9 speaks of becoming a Brahmin king, of a warrior becoming king, and (twice) of becoming a householder becoming king, 為婆羅門王, 剎利為王, 居士為王 and 長者為王.</span></span></span> The Saṃyukta-āgama version’s indication that Brahmins and householders can become kings receives support from the Mahāsāṅghika and Sarvāstivāda Vinayas, from the Divyāvadāna, and from the Mahāvastu.<span class="note" id="mn84n180"><span class="details"><span class="p">[n.180] The Mahāsāṅghika Vinaya, T 1425 at T XXII 244b7, in the context of its regulation against theft, defines kings by listing the same four types of king as found in <a href="../../parallels/sa548.html">SĀ 548</a>: “about kings – kings [can be] designated as warriors, Brahmins, householders, and householders”, 王者, 王名剎利, 婆羅門, 長者, 居 士 (notably another instance where 長者 and 居士 feature together in a listing). The Sarvāstivāda Vinaya, T 1435 at T XXIII 309b24, goes a step further, since in its definition of kings it lists not only Brahmins and householders, but also women as potential candidates, “if a Brahmin, a householder, or a woman are given the office of a king, this is also reckoned as ‘becoming a king by sprinkling water on the head’”, 若婆羅門, 若居士, 若女人受王職, 亦名為王水澆頂. A similar definition occurs in the Divyāvadāna in Cowell 1886: 544,3 or in Vaidya 1999: 464,19: stry-api ... brāhmaṇo ’pi vaiśyo ’pi śudro ’pi rājyābhiṣekeṇābhiṣikto bhavati rājā. The Mahāvastu in Basak 1968/2004: 105,28 or in Senart 1897: 172,8 introduces a Brahmin king in one of its tales, indicating that from its perspective it was indeed possible for a Brahmin to take up the office of a king. The same Mahāvastu in Basak 1965: 98,6 or in Senart 1890: 70,1, in the context of a fable, however, records the statement that “nowhere females are kings, everywhere males are kings”, na ca kahiṃ cit istriyo rājā, sarvatra puruṣā rājā. Megasthenes reports that in a part of India a queen could be found, cf. McCrindle 1877: 147, 156, and 158; cf. also Altekar 1956: 186. In relation to the Divyāvadāna passage, Oldenberg 1912b: 166 remarks: “won’t it be experiences and considerations of later times – one may think of the Maurya dynasty – that recommended such broadminded interpretation?” (“sind es nicht Erfahrungen und Rücksichten späterer Zeiten – man denke etwa an die Maurya-Dynastie – die zu dieser weitherzigen Interpretation rieten?”); cf. also Lamotte 1958/1988: 218-219 on Candragupta’s probable low birth.</span></span></span></p>
+<p>The Madhura-sutta and its parallel agree that undertaking the ten unwholesome courses of action will result in evil rebirth independent of class affiliation.<span class="note" id="mn84n181"><span class="details"><span class="p">[n.181] A minor difference in regard to the examination of the ten courses of action is that, according to <a href="../../mn/mn84.html">MN 84</a> at MN II 86,16, the king on his own indicated that he had heard from arahants about the prospective rebirth in hell, while according to <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142c6 Mahākaccāna asked the king what he had heard from arahants concerning the rebirth to be expected for undertaking the ten unwholesome courses of conduct, thereby prompting the king to refer to arahants in his reply.</span></span></span> Both versions apply the same principle to the ten wholesome courses of action and their potential to lead to a heavenly rebirth.</p>
+<p>The Majjhima-nikāya version next describes someone who breaks into a house, commits burglary, makes an ambush or seduces the wife of another. In each case the king would punish him, independent of whatever class the culprit may belong to. The Saṃyukta-āgama version takes up the same case at an earlier point of its exposition.<span class="note" id="mn84n182"><span class="details"><span class="p">[n.182] <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142b18 examines the punishment inflicted by a king on a thief before taking up the ten courses of action, whereas <a href="../../mn/mn84.html">MN 84</a> at MN II 88,7 takes up the topic of the king’s punishment only after having examined the ten courses of action.</span></span></span> It also differs in so far as it only describes how this person commits a theft, without taking into account the other types of evil conduct mentioned in the Majjhima-nikāya version.</p>
+<p>The Madhura-sutta continues by taking up the case of someone gone forth, who would be worthy of the king’s respect and offerings independent of his former class, an example not found in the Saṃyukta-āgama presentation (see below table 9.4).<span class="note" id="mn84n183"><span class="details"><span class="p">[n.183] <a href="../../mn/mn84.html">MN 84</a> at MN II 89,2. This example seems to fit well into the exposition, as it provides a contrast to the description of what will happen to someone who breaks the law and incurs the king’s punishment, similar to the earlier contrast between rebirth in heaven and rebirth in hell.</span></span></span></p>
+<p>The Saṃyukta-āgama discourse concludes by reporting that the king rejoiced in the exposition and left. According to the Majjhima-nikāya version, however, he expressed his wish to take refuge and was thereon told by Mahākaccāna that he should take refuge with the Buddha. In reply to the king’s inquiry after the whereabouts of the Buddha, Mahākaccāna explained that the Buddha had passed away.<span class="note" id="mn84n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn84.html">MN 84</a> at MN II 90,16. This indication stands in contrast to <a href="../../parallels/sa548.html">SĀ 548</a> at T II 142a18, which begins by re- cording that at the time of this discourse the Buddha was staying at Sāvatthī, so that from the perspective of the Saṃyukta-āgama version he was still alive.</span></span></span> The Majjhima-nikāya version concludes with the king’s proclamation that he would have been willing to undertake a journey of up to a hundred yojanas in order to meet the Buddha, had the Buddha still been alive.<span class="note" id="mn84n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn84.html">MN 84</a> at MN I 90,26: yojanasatam pi mayaṃ gaccheyyāma taṃ bhagavantaṃ dassanāya (Se-MN II 439,12: yojanasataṃ). A similar statement recurs in <a href="../../mn/mn94.html">MN 94</a> at MN II 162,33 and in SHT V 1332bR3-5 (p. 228). The parallelism between <a href="../../mn/mn84.html">MN 84</a> and <a href="../../mn/mn94.html">MN 94</a> in regard to taking place after the Buddha’s death had already been noted by Chalmers 1894: 341. On the assumption that a yojana would correspond to approximately seven miles (cf. also above p. 164 note 106), to cover a distance of a hundred yojanas would have required a rather long journey.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 9.4: Arguments against Brahminical Superiority in <a href="../../mn/mn84.html">MN 84</a> and <a href="../../parallels/sa548.html">SĀ 548</a></caption>
+<tr><th><a href="../../mn/mn84.html">MN 84</a></th><th><a href="../../parallels/sa548.html">SĀ 548</a></th></tr>
+<tr><td>all serve the rich (1)</td><td>all serve the king (→ 1)</td></tr>
+<tr><td>10 evil deeds lead to hell (2)</td><td>theft is punished (→ 4)</td></tr>
+<tr><td>10 good deeds lead to heaven (3)</td><td>10 evil deeds lead to hell (→ 2)</td></tr>
+<tr><td>killing, theft, etc. is punished (4)</td><td>10 good deeds lead to heaven (→ 3)</td></tr>
+<tr><td>recluse is respected and supported (5)</td><td>(≠ 5)</td></tr>
+</table>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 42 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 42: Verañjaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn41comp.html#content"></a><a id="next-sutta" href="./mn43comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn42.html">MN 42</a> / <a href="../../parallels/sa1042.html">SĀ 1042</a> / <a href="../../parallels/sa1043.html">SĀ 1043</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sāleyyaka-sutta, the “discourse to those from Sālā”, and the Verañjaka-sutta, the “discourse to those from Verañjā”, are two versions of the same discourse, addressed to the Brahmins of Sālā and Verañjā respectively. These two discourses have their counterpart in two consecutive discourses in the Saṃyukta-āgama.<span class="note" id="mn42n1"><span class="details"><span class="p">[n.1] The parallels are <a href="../../parallels/sa1042.html">SĀ 1042</a> and <a href="../../parallels/sa1043.html">SĀ 1043</a> at T II 272c-273b. Both are located in the country of Kosala, thereby agreeing with <a href="../../mn/mn41.html">MN 41</a> on the location, while <a href="../../mn/mn42.html">MN 42</a> takes place in Jeta’s Grove by Sāvatthī. Akanuma 1929/1990: 93 employs the location of the discourse, 鞞聞摩, as a tentative title for <a href="../../parallels/sa1042.html">SĀ 1042</a> and <a href="../../parallels/sa1043.html">SĀ 1043</a>. A translation of <a href="../../parallels/sa1042.html">SĀ 1042</a>, together with extracts from the present study, can be found in Anālayo 2006g.</span></span></span></p>
+<p>A minor difference between the Pāli and Chinese versions is that the Sāleyyaka-sutta and the Verañjaka-sutta begin by describing in detail the favourable report about the recluse Gotama heard by the Brahmins of Sālā or by the Brahmins of Verañjā that motivated them to visit the Buddha, while the Chinese versions simply mention that the Brahmins had come to know about the Buddha’s presence and so went to pay him a visit.</p>
+<p>The Pāli versions also report that on coming into the Buddha’s presence some Brahmins expressed more respect than others, while some silently sat down at one side.<span class="note" id="mn42n2"><span class="details"><span class="p">[n.2] <a href="../../mn/mn41.html">MN 41</a> at MN I 285,18 and <a href="../../mn/mn42.html">MN 42</a> at MN I 290,29. The Brahmins from Verañjā as a group do not seem to take part in any other discourse in the Pāli Nikāyas, although a single Brahmin from Verañjā occurs in <a href="../../an/an8.11.html">AN 8:11</a> at AN IV 172,17 (= Vin III 1,7). The Brahmins from Sālā recur in <a href="../../mn/mn60.html">MN 60</a> at MN I 400,29, according to which the Buddha delivered a detailed examination of various types of view to them. Although <a href="../../mn/mn60.html">MN 60</a> does not stand in an explicit temporal relation to <a href="../../mn/mn41.html">MN 41</a>, the relatively more basic exposition given to these Brahmins in <a href="../../mn/mn41.html">MN 41</a> gives the impression as if the present discourse could be reporting the earlier of these two meetings between the Brahmins from Sālā and the Buddha.</span></span></span> The Chinese versions do not mention such differences.</p>
+<p>The four discourses agree that the Brahmins asked the Buddha what causes rebirth in hell and in heaven. The Buddha replied that conduct not in accordance with the Dharma results in rebirth in hell, whereas conduct in accordance with the Dharma leads to a heavenly rebirth.<span class="note" id="mn42n3"><span class="details"><span class="p">[n.3] A difference is that while in <a href="../../mn/mn41.html">MN 41</a> at MN I 285,26 and <a href="../../mn/mn42.html">MN 42</a> at MN I 291,6 the Brahmins present their inquiry about rebirth in hell and heaven as a single question, in <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 272c22+29 and <a href="../../parallels/sa1043.html">SĀ 1043</a> at T II 273b6 (where the second question is abbreviated) they first ask about rebirth in hell. After having received a reply to their inquiry about rebirth in hell, they ask about rebirth in heaven.</span></span></span> On being requested by the Brahmins to explain both types of conduct,<span class="note" id="mn42n4"><span class="details"><span class="p">[n.4] A minor difference is that while according to <a href="../../mn/mn41.html">MN 41</a> at MN I 286,1 and <a href="../../mn/mn42.html">MN 42</a> at MN I 291,16 the Brahmins indicate that they have been unable to grasp in detail what the Buddha had stated in brief, so that it would be good if the Buddha were to elaborate, according to <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 272c25 and T II 273a3 they simply ask him to explain the two types of conduct (in <a href="../../parallels/sa1043.html">SĀ 1043</a> this passage is abbreviated).</span></span></span> the Buddha expounded the ten unwholesome courses of actions and their ten wholesome counterparts.</p>
+<p>The Pāli versions stand alone in introducing this exposition of the ten unwholesome courses of action by distinguishing them into three bodily, four verbal, and three mental types of conduct.<span class="note" id="mn42n5"><span class="details"><span class="p">[n.5] <a href="../../mn/mn41.html">MN 41</a> at MN I 286,10.</span></span></span></p>
+<p>Another difference is that the Chinese versions simply enumerate the ten unwholesome courses of action, whereas the Pāli versions offer a detailed exposition of each of the ten course of action (see table 5.1).<span class="note" id="mn42n6"><span class="details"><span class="p">[n.6] This detailed treatment recurs in <a href="../../mn/mn114.html">MN 114</a> at MN III 46,24 and in <a href="../../an/an10.176.html">AN 10:176</a> at AN V 264,12. While <a href="../../mn/mn114.html">MN 114</a> does not appear to have a Chinese counterpart, the parallel to <a href="../../an/an10.176.html">AN 10:176</a>, <a href="../../parallels/sa1039.html">SĀ 1039</a> at T II 271b20, offers a similar detailed exposition of the ten courses of action. On the expression mālāguṇaparikkhitta (Be-MN I 355,21 and Se-MN I 521,10: mālāguḷaparikkhitta), found in the description of the third type of bodily misconduct in <a href="../../mn/mn41.html">MN 41</a> at MN I 286,21, cf. Silk 2007a: 7.</span></span></span> When evaluating this difference, it seems that such a detailed exposition of the ten courses of action would fit the present context well. Since the Brahmins were requesting practical instructions about the path to heaven and hell, it would have been opportune to explain to them in detail what the ten courses of action refer to.</p>
+<table class="comparative-table">
+<caption>Table 5.1: Progression of Topics in <a href="../../mn/mn41.html">MN 41</a> & <a href="../../mn/mn42.html">MN 42</a> and their Parallels</caption>
+<tr><th><a href="../../mn/mn41.html">MN 41</a> & <a href="../../mn/mn42.html">MN 42</a></th><th><a href="../../parallels/sa1042.html">SĀ 1042</a> & <a href="../../parallels/sa1043.html">SĀ 1043</a></th></tr>
+<tr><td>good report about Buddha (1)</td><td>Brahmins visit Buddha (→ 2)</td></tr>
+<tr><td>Brahmins visit Buddha (2)</td><td>inquiry about rebirth in hell (→ 3)</td></tr>
+<tr><td>inquiry about rebirth in heaven and hell (3)</td><td>brief reply on conduct (→ 4)</td></tr>
+<tr><td>brief reply on conduct (4)</td><td>10 unwholesome actions in brief (→ 6?)</td></tr>
+<tr><td>3-fold analysis of unwholesome conduct (5)</td><td>inquiry about rebirth in heaven (→ 3)</td></tr>
+<tr><td>10 unwholesome actions in detail (6)</td><td>brief reply on conduct (→ 4)</td></tr>
+<tr><td>3-fold analysis of wholesome conduct (7)</td><td>10 wholesome actions in brief (→ 8?)</td></tr>
+<tr><td>10 wholesome actions in detail (8)</td><td>rebirth in good family (→ 9)</td></tr>
+<tr><td>rebirth in good family (9)</td><td>rebirth in sense-sphere heaven (→ 10)</td></tr>
+<tr><td>rebirth in sense-sphere heaven (10)</td><td>rebirth in Brahmā world (→ 11)</td></tr>
+<tr><td>rebirth in Brahmā world (11)</td><td>rebirth in Pure Abodes (→ 12)</td></tr>
+<tr><td>rebirth in Pure Abodes (12)</td><td>4 jhānas</td></tr>
+<tr><td>rebirth in immaterial realms (13)</td><td>4 brahmavihāras, 4 immaterial spheres (→ 13?)</td></tr>
+<tr><td>destruction of influxes (14)</td><td>3 lower stages of awakening, 5 supernormal</td></tr>
+<tr><td></td><td>knowledges, destruction of influxes (→ 14)</td></tr>
+<tr><td></td><td>(≠ 1, 5, 7)</td></tr>
+</table>
+<p>The Pāli and Chinese versions agree in indicating that someone who observes such conduct in accordance with the Dharma may expect his aspiration to rebirth in a good family or in one of the various heavenly realms to be fulfilled. The Pāli versions apply this prospective not only to rebirth in good families and rebirth in celestial realms of the sense-sphere, but also to:</p>
+<ul>
+<li>rebirth in the Brahmā realms,<span class="note" id="mn42n7"><span class="details"><span class="p">[n.7] A noteworthy aspect of this exposition is that, while proceeding through the Brahmā realms, <a href="../../mn/mn41.html">MN 41</a> at MN I 289,17 (this part is abbreviated in <a href="../../mn/mn42.html">MN 42</a>) at first refers to Brahmā’s retinue, the brahmakāyika devas; then refers to the realm corresponding to the second jhāna under a single title, the ābhā devas; then lists three sub-realms corresponding to the second jhāna, the parittābhā, appamāṇābhā, and ābhassara devas; then refers to the realm corresponding to the third jhāna under a single title, the subha devas; again followed by listing the three corresponding sub-realms, the parittasubha, appamāṇasubha, and subhakiṇṇa devas (the subha devas are absent from the Burmese and Siamese editions of <a href="../../mn/mn41.html">MN 41</a> and <a href="../../mn/mn42.html">MN 42</a>, Be-MN I 359,29 and Be-MN I 364,27 as well as Se-MN I 526,17 and Se-MN I 533,20; for an examination of the relationship of the realms of Buddhist cosmology to mental experiences cf. also, e.g., Gethin 1997a). Unfortunately, in the Chinese versions this whole part is abbreviated, making a comparison impossible. The same type of listing recurs in <a href="../../mn/mn120.html">MN 120</a> at MN III 102,26+31 and in the Mahāvastu in Basak 1965: 471,5 or in Senart 1890: 348,19 (although without including the parīttaśubha devas, which are, however, mentioned in another listing in the Mahāvastu in Basak 1965: 487,7 or in Senart 1890: 360,19). The pattern found in <a href="../../mn/mn41.html">MN 41</a> reminds of a tendency in Jain literature, described by Bruhn 1983: 59 as involving a “multiplication of segments in cosmography”, where the “emphasis is on series-cum-subseries (subdivision as a form-element) rather than on long and coherent series”. Nattier 2009: 101 explains that the “complex cosmological vision” reflected in Buddhist texts “was clearly not formulated all at once”; whereas the sources reflect an “early standardization of the list of kāmadhātu heavens”,”the same cannot be said of the heavens belonging to the rūpadhātu” (p. 105); cf. also Masson 1942: 22-26.</span></span></span></li>
+<li>rebirth in the Pure Abodes,</li>
+<li>rebirth in the immaterial realms,</li>
+<li>the destruction of the influxes.</li>
+</ul>
+<p>The Chinese versions work through a similar range of possible rebirths, although they differ in as much as they give additional details on what is required for each kind of rebirth. While they agree with the Pāli versions that rebirth in good families requires conduct in accordance with the Dharma, for rebirth in the different celestial realms of the sense-sphere they additionally speak of practising pure morality.<span class="note" id="mn42n8"><span class="details"><span class="p">[n.8] <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 273a11: 行淨戒. In a similar vein, according to the Karmavibhaṅga in Kudo 2004: 76,12 or in Lévi 1932a: 47,10, to undertake the ten wholesome courses of action “well [yet] weakly”, subhāvitā mandabhāvitāś ca, is the condition for rebirth as a human, whereas rebirth in a sensual heavenly world requires having undertaken the same ten courses of action in a way that is “well completed”, susamāptā, a difference that also highlights the higher ethical standards required for such rebirth. The Śrāvakabhūmi also stipulates purified moral conduct for rebirth in the heavenly spheres of the sensual realm, cf. Shukla 1973: 62,12 or ŚSG 1998: 96,19 and T 1579 at T XXX 406a27.</span></span></span> Although pure morality is to some extent already implicit in the stipulation to observe conduct in accordance with the Dharma, this additional qualification highlights that a celestial rebirth requires higher ethical standards than rebirth in a human family of good standing.</p>
+<p>For rebirth in the Brahmā realms, the Chinese versions stipulate conduct in accordance with the Dharma, pure morality, and freedom from sensual desires.<span class="note" id="mn42n9"><span class="details"><span class="p">[n.9] <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 273a13: “keeping morality fully pure and separating the mind from craving and sensual desire”, 持戒清淨, 心離愛欲.</span></span></span> This additional stipulation regarding freedom from sensual desires goes beyond the absence of covetousness mentioned as part of the ten wholesome courses of action and thus highlights the qualitative difference between rebirth in the celestial realms of the sensesphere and rebirth in the Brahmā realms.<span class="note" id="mn42n10"><span class="details"><span class="p">[n.10] In a similar vein, <a href="../../dn/dn33.html">DN 33</a> at DN III 260,1 and <a href="../../an/an8.35.html">AN 8:35</a> at AN IV 241,7 indicate that for rebirth in the Brahmā world, morality (sīla) and freedom from sensuality (vītarāga) are required, as does the Śrāvakabhūmi, cf. Shukla 1973: 62,16 or ŚSG 1998: 98,3 and T 1579 at T XXX 406a29. The Karmavibhaṅga in Kudo 2004: 78,7 and 79,5 or in Lévi 1932a: 47,17 does not mention the need for freedom from sensuality for rebirth in the Brahmā worlds, but only speaks of undertaking the ten courses of action to a degree superior to the degree required for rebirth in a sensual heavenly world. The Dharmaskandha, fragment 4737 folio 14r9 in Dietz 1984: 62,20 and T 1537 at T XXVI 512c22, also stipulates the need for absorption attainment.</span></span></span></p>
+<p>Having described rebirth in the Brahmā realms up to the highest realm of the Pure Abodes, the Chinese versions indicate that the same conditions (namely conduct in accordance with the Dharma, moral purity, and freedom from sensual desires) also serve as conditions for attaining the four jhānas in one’s present life. In this way, according to their presentation the Buddha led the discussion from the otherworldly benefits, about which his Brahmin visitors had inquired, to the benefits that can be achieved in the present life.</p>
+<p>The Chinese versions continue by indicating that the same conditions also serve as a basis for developing:</p>
+<ul>
+<li>the four brahmavihāras,</li>
+<li>the four immaterial attainments,</li>
+<li>the three lower stages of awakening,</li>
+<li>supernormal powers,</li>
+<li>the divine ear,</li>
+<li>telepathic knowledge,</li>
+<li>recollection of past lives,</li>
+<li>the divine eye,</li>
+<li>the destruction of the influxes.</li>
+</ul>
+<p>Only the last of these, the destruction of the influxes, is mentioned in the Pāli versions.</p>
+<p>The Pāli versions conclude with the Brahmins taking refuge and declaring themselves to be lay followers for life. The Chinese versions, however, report only that the Brahmins rejoiced in the Buddha’s exposition, not that they became lay followers.</p>
+<p>Looking back on the Sāleyyaka-sutta and the Verañjaka-sutta, these two discourses are so similar that the question could be asked if they go back to a single original. That is, was the same discourse delivered twice, or was it delivered only once and some confusion about the name of its auditors led to a doubling of the discourse?</p>
+<p>The differences between these two, as well as the differences between their Chinese parallels, are of a rather minor nature. While the two Pāli versions are situated in different places, the two Chinese versions even share the same location. Except for the names of the Brahmins, the two Pāli versions differ from each other only in that one of them mentions the number of monks present, while the other does not record their number.<span class="note" id="mn42n11"><span class="details"><span class="p">[n.11] <a href="../../mn/mn41.html">MN 41</a> at MN I 285,2: mahatā bhikkhusaṅghena saddhiṃ, a specification not made in <a href="../../mn/mn42.html">MN 42</a>. Another minor difference is a matter of formulation, where the introductory part of the exposition of the ten types of action in <a href="../../mn/mn41.html">MN 41</a> at MN I 286,10 reads adhammacariyā visamacariyā hoti, while the corresponding part in <a href="../../mn/mn42.html">MN 42</a> at MN I 291,25 reads adhammacārī visamacārī hoti, i.e., <a href="../../mn/mn41.html">MN 41</a> speaks of “conduct”, while <a href="../../mn/mn42.html">MN 42</a> of “one who undertakes conduct”.</span></span></span> The two Chinese versions are also nearly identical, as they differ from each other only in the way they describe how the Brahmins (which also have different names) came to the Buddha’s presence.<span class="note" id="mn42n12"><span class="details"><span class="p">[n.12] <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 272c21 simply mentions that the Brahmins approached the place where the Buddha was staying, whereas <a href="../../parallels/sa1043.html">SĀ 1043</a> at T II 273b2 describes how they travelled by vehicle until they reached the vicinity of the Buddha’s place of residence, where they got down and proceeded on foot. This passage in <a href="../../parallels/sa1043.html">SĀ 1043</a> thus parallels a standard pericope used also in other Pāli discourses to depict how someone approaches the Buddha by vehicle, cf., e.g., <a href="../../mn/mn89.html">MN 89</a> at MN II 119,13.</span></span></span></p>
+<p>A relatively clear instance of a doubling of discourses can be found in the Madhyama-āgama, which has preserved two parallels to the Vanapattha-sutta.<span class="note" id="mn42n13"><span class="details"><span class="p">[n.13] <a href="../../mn/mn17.html">MN 17</a> at MN I 104-108, which has two consecutive Chinese parallels: <a href="../../parallels/ma107.html">MĀ 107</a> and <a href="../../parallels/ma108.html">MĀ 108</a> at T I 596c-598b, cf. above page 132.</span></span></span> These two Madhyama-āgama discourses are so similar to each other that they do seem to go back to what originally was only a single discourse, an impression confirmed by the fact that they have only a single Pāli counterpart.</p>
+<p>Another instance of doubling of discourses can be found in the Saṃyutta-nikāya, which records two instances in which Ānanda received instructions on mindfulness of breathing.<span class="note" id="mn42n14"><span class="details"><span class="p">[n.14] <a href="../../sn/sn54.13.html">SN 54:13</a>-14 at SN V 328-334.</span></span></span> These two discourses are identical in content and differ only on whether the Buddha gave these instructions after an inquiry by Ānanda or without his prompting. Of these two discourses, only the one in which Ānanda inquired about the subject of mindfulness of breathing has a counterpart in the Saṃyukta-āgama.<span class="note" id="mn42n15"><span class="details"><span class="p">[n.15] <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208a-c.</span></span></span></p>
+<p>Since according to the traditional account Ānanda had such mental retention that he had memorized all the discourses spoken by the Buddha,<span class="note" id="mn42n16"><span class="details"><span class="p">[n.16] Ānanda’s recital of the discourses from memory is recorded in the Dharmaguptaka Vinaya, T 1428 at T XXII 968b15, in the Mahāsāṅghika Vinaya, T 1425 at XXII 491c2, in the Mahīśāsaka Vinaya, T 1421 at T XXII 191a19, in the (Mūla-)Sarvāstivāda Vinaya, T 1451 at T XXIV 407a3, in the Sarvāstivāda Vinaya, T 1435 at T XXIII 449a20, and in the Theravāda Vinaya at Vin II 287,12 (for translations of the passages in T 1428, T 1425, T 1421, T 1435, and Vin cf. Anuruddha 2008: 68, 26, 75, 47, and 7). Cf. also <a href="../../tha/tha17.html#p1024">Th 1024</a>, where Ānanda proclaims to have mastered eighty-four-thousand teachings, caturāsīti sahassāni ye me dhammā pavattino (counterparts to this statement, noted by Lamotte 1958/1988: 148, are: T 1425 at T XXII 491c23 and T 1545 at T XXVII 385c11; cf. also the Avadānaśataka, Speyer 1909/1970: 155,7 or Vaidya 1958a: 242,24). According to <a href="../../an/an1.14.html">AN 1:14</a> at AN I 24,32, the Buddha had designated Ānanda as outstanding for his learnedness and memory, etad aggaṃ mama sāvakānaṃ bhikkhūnaṃ bahussutānaṃ ... satimantānaṃ, yadidaṃ ānando, qualities of Ānanda similarly highlighted in its counterpart <a href="../../parallels/ea4.7.html">EĀ 4.7</a> at T II 558a26: 所憶不忘, 多聞廣遠; cf. also the Divyāvadāna in Cowell 1886: 396,18 or Vaidya 1999: 253,31. According to the Saṅghabhedavastu in Gnoli 1978a: 54,18, his eminency in remembering had already been predicted before he went forth, anena kumāreṇa śrutidharāṇām agreṇa bhavitavyam iti, an ability to which he had aspired in a former life, cf. Gnoli 1978a: 66,15, and 67,14.</span></span></span> it seems improbable that he would be depicted as needing to be given the same instruction again, or else that the Buddha would have forgotten that he had already taught Ānanda on this subject.</p>
+<p>That is, the more probable account appears to be given in the Saṃyukta-āgama version, according to which Ānanda received this particular instruction only once. If this should indeed be the original version, then the two discourses in the Saṃyutta-nikāya would be a doubling of what should be considered a single instance.</p>
+<p>Another such case can be found in the Aṅguttara-nikāya, where Ānanda on two occasions inquired after the significance of “becoming” (bhava), and the Buddha replied by delivering two nearly identical discourses.<span class="note" id="mn42n17"><span class="details"><span class="p">[n.17] <a href="../../an/an3.76.html">AN 3:76</a>-77 at AN I 223-224, which differ from each other in that <a href="../../an/an3.76.html">AN 3:76</a> at AN I 223,23 reads viñ- ñāṇaṃ patiṭṭhitaṃ, whereas <a href="../../an/an3.77.html">AN 3:77</a> at AN I 224,17 reads cetanā patiṭṭhitā patthanā patiṭṭhitā.</span></span></span> Here, too, once Ānanda had received a reply to such an inquiry, there would have been no need for him to ask the same question a second time, so that that these two discourses might also go back to a single occasion.</p>
+<p>In the case of the Sāleyyaka-sutta and the Verañjaka-sutta, however, the Saṃyuktaāgama agrees in presenting this exposition by the Buddha in a pair-wise fashion. Hence the evidence that can be gathered through a comparative study would rather suggest that the Sāleyyaka-sutta and the Verañjaka-sutta, as well as their two Chinese parallels, might go back to two individual occasions. After all, an exposition of the ways leading to heaven and hell must have been a topic of such common interest in ancient India that it would not be extraordinary for different Brahmins to pose the same question to a religious teacher like the Buddha.<span class="note" id="mn42n18"><span class="details"><span class="p">[n.18] Cf., e.g., <a href="../../an/an2.7.html">AN 2:2:7</a> at AN I 56,16, which reports that the Brahmin Jāṇussoṇi similarly inquired after the causes for rebirth in hell or in heaven.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 62 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 62: Mahārāhulovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn61comp.html#content"></a><a id="next-sutta" href="./mn63comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn62.html">MN 62</a> / <a href="../../parallels/sa803.html">SĀ 803</a> / <a href="../../parallels/sa815.html">SĀ 815 (~)</a> / <a href="../../parallels/sa-3.15.html">SĀ³ 3.15 (~)</a> / <a href="../../parallels/ea17.1.html">EĀ 17.1</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahārāhulovāda-sutta, the “greater discourse on an instruction to Rāhula”, presents a set of meditation instructions given by the Buddha to his son Rāhula. This discourse has a parallel in the Ekottarika-āgama.<span class="note" id="mn62n33"><span class="details"><span class="p">[n.33] The parallel is <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 581c-582c. <a href="../../parallels/ea17.1.html">EĀ 17.1</a> agrees with <a href="../../mn/mn62.html">MN 62</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ea17.1.html">EĀ 17.1</a> has been translated by Huyen-Vi 1993: 213-222.</span></span></span></p>
+<p>The Mahārāhulovāda-sutta and its Ekottarika-āgama parallel begin with the Buddha approaching Sāvatthī to collect alms, together with his son Rāhula. According to the Majjhima-nikāya account, while they were walking on the road the Buddha turned around and told Rāhula that he should contemplate the not-self nature of the aggregate of form.<span class="note" id="mn62n34"><span class="details"><span class="p">[n.34] <a href="../../mn/mn62.html">MN 62</a> at MN I 421,6: “all form should be seen as ‘not mine’, ‘not I’, ‘not my self’”, sabbaṃ rūpaṃ, n’ etaṃ mama, n’ eso ’ham asmi, na me ’so attā ti ... daṭṭhabban ti.</span></span></span> The Ekottarika-āgama discourse differs slightly, as here the Buddha told Rāhula that he should contemplate the impermanent nature of form.<span class="note" id="mn62n35"><span class="details"><span class="p">[n.35] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 581c3: “you should now contemplate form as being impermanent”, 汝今當觀色為無常.</span></span></span> Both versions report that the Buddha then extended the respective instruction to cover the other four aggregates.</p>
+<p>According to the Majjhima-nikāya version, this enlargement of the instruction was prompted by Rāhula, who had inquired whether the contemplation, which he had just been taught, should be applied only to form.<span class="note" id="mn62n36"><span class="details"><span class="p">[n.36] <a href="../../mn/mn62.html">MN 62</a> at MN I 421,8: rūpam eva nu kho, bhagavā, rūpam eva nu kho, sugatā ti?</span></span></span></p>
+<p>The Pāli commentary explains that, while following the Buddha, Rāhula had been mentally congratulating himself on having inherited the splendid appearance of his father.<span class="note" id="mn62n37"><span class="details"><span class="p">[n.37] Ps III 132,10.</span></span></span> The Buddha had become aware of these vain thoughts and decided to address the matter right on the spot by instructing Rāhula to contemplate the true nature of material form. This sudden and unexpected instruction apparently had its effect, since according to the Mahārāhulovāda-sutta and its Ekottarika-āgama parallel Rāhula decided to forgo begging alms and right away sat down to meditate in order to put the instruction into practice.<span class="note" id="mn62n38"><span class="details"><span class="p">[n.38] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 581c7 describes Rāhula’s reaction in additional detail, reporting how he reflected why the Buddha had addressed him in this way when they were about to enter the town for alms.</span></span></span></p>
+<p>The Mahārāhulovāda-sutta continues by reporting that, while Rāhula was seated in meditation, Sāriputta came by and told him to practise mindfulness of breathing. According to the Ekottarika-āgama presentation, however, this instruction was given by the Buddha who, on his way back from collecting alms, had seen Rāhula seated in meditation.<span class="note" id="mn62n39"><span class="details"><span class="p">[n.39] The commentary, Ps III 136,11, explains that Sāriputta did not know that Rāhula had already received meditation instructions from the Buddha. According to Vin I 82,16, Sāriputta had ordained Rāhula. As Rāhula’s upajjhāya, it would be natural for him to given an instruction to Rāhula.</span></span></span> The Ekottarika-āgama version reports that at this point the Buddha also instructed Rāhula on contemplation of impurity (asubha) and on the four brahmavihāras.</p>
+<p>The Mahārāhulovāda-sutta and its Ekottarika-āgama parallel agree that Rāhula next approached the Buddha and inquired about how to undertake mindfulness of breathing so that it becomes fruitful.<span class="note" id="mn62n40"><span class="details"><span class="p">[n.40] <a href="../../mn/mn62.html">MN 62</a> at MN I 421,24: kathaṃ bhāvitā nu kho, bhante, ānāpānasati ... mahapphalā hoti? <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a6: 云何修行安般 ... 獲大果報? In <a href="../../parallels/ea17.1.html">EĀ 17.1</a> this is preceded by a verse exchange between Rāhula and the Buddha that has no counterpart in <a href="../../mn/mn62.html">MN 62</a>. As noted by Greene 2006: 33 note 98, these verses seem to have some distant affinity with an exchange between the Buddha and Rāhula reported in Sn 2.11 at Sn 335-336.</span></span></span> The Ekottarika-āgama version reports that the Buddha directly replied to this question by describing mindfulness of breathing. According to the Majjhima-nikāya version, however, he replied by at first giving a detailed instruction on contemplation of the five elements,<span class="note" id="mn62n41"><span class="details"><span class="p">[n.41] <a href="../../mn/mn62.html">MN 62</a> at MN I 421,27 to MN I 424,26. An extract from the present discussion already appeared in Anālayo 2005c: 97-98. A distinction of the five elements into internal and external manifestations occurs as a discourse quotation in the *Mahāvibhāṣā, T 1545 at T XXVII 387c14; cf. also the Śrāvakabhūmi, Shukla 1973: 211,4 or ŚSG 2007: 72,8 and T 1579 at T XXX 430a16.</span></span></span> followed by taking up the brahmavihāras, contemplation of impurity, and perception of impermanence, before turning to mindfulness of breathing. The detailed instructions on the five elements, which make up about half of the text of the Pāli discourse, are not found at all in the Chinese version.</p>
+<p>When evaluating this substantial difference between the two versions, it comes somewhat unexpected that the Buddha, instead of directly replying to Rāhula’s question, should give such a detailed exposition of other types of meditation before turning to the topic about which he had been asked, namely mindfulness of breathing. Notably, a discourse in the Aṅguttara-nikāya and its parallel in the Saṃyukta-āgama record an instruction given by the Buddha to Rāhula on the four elements.<span class="note" id="mn62n42"><span class="details"><span class="p">[n.42] <a href="../../an/an4.177.html">AN 4:177</a> at AN II 164,26 and <a href="../../parallels/sa465.html">SĀ 465</a> at T II 118c29. <a href="../../parallels/sa465.html">SĀ 465</a> differs from <a href="../../an/an4.177.html">AN 4:177</a> in as much as it begins with an inquiry by Rāhula on how to go beyond notions of self and conceit in regard to this body with consciousness and all external signs (<a href="../../an/an4.177.html">AN 4:177</a> does not report any inquiry by Rāhula). Another difference is that <a href="../../parallels/sa465.html">SĀ 465</a> takes up six elements, whereas <a href="../../an/an4.177.html">AN 4:177</a> covers only four elements. Compared to <a href="../../mn/mn62.html">MN 62</a>, the examination of the elements in <a href="../../an/an4.177.html">AN 4:177</a> and <a href="../../parallels/sa465.html">SĀ 465</a> is also shorter, as they do not list bodily manifestations of each internal element.</span></span></span> This leaves open the possibility that the instructions given by the Buddha to his son Rāhula on contemplating the elements were originally associated with the occasion described in the Aṅguttara-nikāya and Saṃyukta-āgama, and during the course of transmission these instructions came to be added to the Mahārāhulovāda-sutta.<span class="note" id="mn62n43"><span class="details"><span class="p">[n.43] Greene 2006: 33-34 note 98 comments that “the structure of the sūtra makes far more sense in the Chinese version ... the entire section concerning the ... elements that we find in the Pāli version ... was probably a later addition”.</span></span></span></p>
+<p>The Pāli commentary to the Mahārāhulovāda-sutta, however, explains that the Buddha took up the subject of the elements in order to give a more detailed explanation of his earlier instruction on contemplating the aggregate of form.<span class="note" id="mn62n44"><span class="details"><span class="p">[n.44] Ps III 138,8.</span></span></span> This commentarial gloss would explain why the Buddha first gave a detailed exposition of the short instruction he had delivered on the road to Rāhula and only then took up the practice of mindfulness of breathing. In fact, according to the Mahārāhulovāda-sutta it was Sāriputta, and not the Buddha, who had told Rāhula to practise mindfulness of breathing. The Buddha had rather asked him to contemplate the true nature of the aggregate of form, an instruction of which the exposition of contemplating the elements would indeed be a more detailed exposition.</p>
+<p>Be that as it may, the two versions agree in recommending the development of the four brahmavihāras as an antidote to particular unwholesome mental qualities, although they have these recommendations at different junctions of the discourse. The two parallels present loving kindness as a remedy for aversion and compassion as a remedy for cruelty (vihiṃsā). While the Majjhima-nikāya version considers sympathetic joy to be an antidote to discontent and equanimity an antidote to irritation (paṭigha),<span class="note" id="mn62n45"><span class="details"><span class="p">[n.45] <a href="../../mn/mn62.html">MN 62</a> at MN I 424,30. Other Pāli discourses also place sympathetic joy in contrast to discontent, cf., e.g., <a href="../../dn/dn33.html">DN 33</a> at DN III 249,2, <a href="../../dn/dn34.html">DN 34</a> at DN III 280,26, <a href="../../an/an6.13.html">AN 6:13</a> at AN III 291,18, and <a href="../../an/an6.113.html">AN 6:113</a> at AN III 448,6. A different nuance can be found in <a href="../../an/an3.93.html">AN 3:93</a> at AN I 243,23, which relates sympathetic joy to the absence of quarrelling and disputing.</span></span></span> the Ekottarika-āgama discourse instead contrasts sympathetic joy with envy and equanimity with conceit (see table 7.1).<span class="note" id="mn62n46"><span class="details"><span class="p">[n.46] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 581c21+22.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 7.1: Specific Meditations as Antidotes in <a href="../../mn/mn62.html">MN 62</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn62.html">MN 62</a></th><th><a href="../../parallels/ea17.1.html">EĀ 17.1</a></th></tr>
+<tr><td>loving kindness ≠ aversion (1)</td><td>impurity ≠ lust (→ 5)</td></tr>
+<tr><td>compassion ≠ cruelty (2)</td><td>loving kindness ≠ aversion (→ 1)</td></tr>
+<tr><td>sympathetic joy ≠ discontent (3)</td><td>compassion ≠ cruelty (→ 2)</td></tr>
+<tr><td>equanimity ≠ irritation (4)</td><td>sympathetic joy ≠ envy (→ 3)</td></tr>
+<tr><td>impurity ≠ lust (5)</td><td>equanimity ≠ conceit (→ 4, 6 ?)</td></tr>
+<tr><td>impermanence ≠ conceit ‘I am’ (6)</td><td></td></tr>
+</table>
+<p>When evaluating this difference, the point made by the Ekottarika-āgama version’s presentation of sympathetic joy as a remedy for envy could be that to rejoice in someone else’s good fortune would be directly opposed to sentiments of envy.</p>
+<p>Regarding equanimity, however, the Ekottarika-āgama version appears less straightforward. Situations that arouse irritation would indeed require the establishment of equanimity, as suggested by the Majjhima-nikāya version’s presentation, while it is less clear why equanimity should be particularly apt for overcoming conceit. The Majjhima-nikāya version at this point also takes up the perception of impermanence to counter the conceit ‘I am’, an instruction not found at all in the Ekottarika-āgama discourse (see table 7.1).</p>
+<p>Perception of impermanence also features in other discourses as the appropriate method for countering conceit.<span class="note" id="mn62n47"><span class="details"><span class="p">[n.47] <a href="../../mn/mn122.html">MN 122</a> at MN III 115,3, <a href="../../parallels/ma191.html">MĀ 191</a> at T I 739b17, and their Tibetan parallel in Skilling 1994a: 240,1 indicate that contemplation of the impermanent nature of the five aggregates leads beyond the conceit ‘I am’. <a href="../../sn/sn22.102.html">SN 22:102</a> at SN III 155,14 and its parallel <a href="../../parallels/sa270.html">SĀ 270</a> at T II 70c3 present perception of impermanence as the tool for overcoming various defilements, one of which is conceit. <a href="../../an/an9.1.html">AN 9:1</a> at AN IV 353,11 recommends perception of impermanence to overcome the conceit ‘I am’, a recommendation given similarly in its parallel <a href="../../parallels/ma57.html">MĀ 57</a> at T I 492b25. The same recommendation recurs in <a href="../../an/an9.3.html">AN 9.3</a> at AN IV 358,17 (= Ud 4:1 at Ud 37,18) and the parallel <a href="../../parallels/ma56.html">MĀ 56</a> at T I 492a7.</span></span></span> This suggests that perhaps the Ekottarika-āgama version’s contrasting conceit with equanimity is the result of a textual error, conflating what originally were two separate topics, namely equanimity as a remedy for irritation and contemplation of impermanence as a way to counter conceit.</p>
+<p>Regarding the subject of mindfulness of breathing, the two versions exhibit some interesting differences in their detailed exposition of this topic, which merit a closer examination. Both versions begin by instructing that one should retire to a secluded spot, sit down cross-legged, and keep the body straight. The Majjhima-nikāya account at this point recommends establishing mindfulness “in front” (parimukha),<span class="note" id="mn62n48"><span class="details"><span class="p">[n.48] <a href="../../mn/mn62.html">MN 62</a> at MN I 425,8.</span></span></span> an expression that according to the explanation given in the Vibhaṅga and the Paṭisambhidāmagga refers to the nostril area as the proper location for being mindful of the breath.<span class="note" id="mn62n49"><span class="details"><span class="p">[n.49] Vibh 252,12: “mindfulness is established, well established, at the nose tip or the upper lip, therefore it is said: ‘having established mindfulness in front’”, sati upaṭṭhitā hoti supaṭṭhitā nāsikagga vā mukhanimitte vā, tena vuccati parimukhaṃ satiṃ upaṭṭhapetvā ti; cf. also Paṭis I 171,19. An alternative instruction on the same practice can be found in T 613 at T XV 256c25, according to which the practice of mindfulness of breathing can also be undertaken by directing attention to the navel region, 意在臍中. The same work, a treatise on meditation whose translation is attributed to Kumārajīva (344-413), continues by instructing to count the breaths, instructions found also in Vism 278,33.</span></span></span> This explanation is reflected in the Ekottarika-āgama discourse, which explicitly instructs that one should be “keeping the mind at the tip of the nose”.<span class="note" id="mn62n50"><span class="details"><span class="p">[n.50] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a15: 繫意鼻頭. In regard to an earlier occurrence of parimukhaṃ satiṃ upaṭṭhapetvā in <a href="../../mn/mn62.html">MN 62</a> at MN I 421,14, however, the parallel passage in <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 581c12 speaks simply of establishing unification of the mind, 專精一心. Since this instance describes contemplation of the five aggregates, to direct mindfulness to the nose-tip would in fact not have suited the context.</span></span></span></p>
+<p>The standard pericope description of sitting down for meditation in other Ekottarikaāgama discourses, however, does not mention the nose tip, but speaks just of putting mindfulness “in front”.<span class="note" id="mn62n51"><span class="details"><span class="p">[n.51] E.g., in <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711c19: 念在前, corresponding to parimukhaṃ satiṃ upaṭṭhapetvā in its parallel <a href="../../mn/mn32.html">MN 32</a> at MN I 219,30. The same expression 念在前 as part of the standard description of sitting down for meditation occurs over thirty times in the Ekottarika-āgama. In contrast, the expression to keep the mind at the nose tip, 繫意鼻頭, does not seem to recur anywhere else in the Ekottarika-āgama or in the other three main Āgamas.</span></span></span> This leaves open the possibility that the instruction to keep the mind at the tip of the nose in the Ekottarika-āgama parallel to the Mahārāhulovāda-sutta could have been an explanatory gloss on the practice of mindfulness of breathing that, either during the period of transmission or at the time of translation, became part of the discourse itself.<span class="note" id="mn62n52"><span class="details"><span class="p">[n.52] Zürcher 1959/1972: 31 explains that “during the work of translation, and perhaps also on other occasions, the master gave oral explanations (k’ou-chieh 口解) concerning the contents of the scriptures translated. Explanations of this kind often appear to have crept into the text”.</span></span></span></p>
+<p>The Mahārāhulovāda-sutta and its parallel begin their description of mindfulness of breathing with awareness of the long or short nature of in-breaths and out-breaths.<span class="note" id="mn62n53"><span class="details"><span class="p">[n.53] Huyen-Vi 1993: 216 note 6 draws attention to the fact that the instructions for contemplating long and short breaths in <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a15 speak of doing this first in regard to the out-breath, 出息, and then in regard to the in-breath, 入息. <a href="../../mn/mn62.html">MN 62</a> at MN I 425,9 directs mindfulness first to assasati and then to passasati, although there is some divergence of opinions on how these two Pāli expressions should be understood. Vism 272,1 states that according to the Vinaya commentary assasati represents the outbreath, whereas according to the Suttanta commentary assasati represents the in-breath. PED: 92 s.v. ā1 comments that assasati and passasati “in exegesis ... have been differentiated in a way which looks like a distortion of the original meaning, viz. assasati is taken as ‘breathing out’, passasati as ‘breathing in’”. Childers 1875/1993: 61, DP I: 268, and CPD I: 523 (all s.v. assasati) take assasati to mean “to breathe in”, but according to Böhtlingk 1883/1998d: 173, Mylius 1997: 250, and MW: 696 (s.v. praśvāsa or passasati), “to breath in” is rather represented by passasati or praśvasati; cf. also Caland 1931: 62 note 1 on the possible influence of the law of waxing syllables on the sequence of terms in the dvanda compound prāṇāpānau. BHSD: 110 s.v. āśvāsa-praśvāsa, remarks that “whatever may have been the meaning of the two terms, it seems clear that the compound (like ānāpāna) was commonly used in the sense of breath, collectively and as a whole”.</span></span></span> The Ekottarika-āgama version continues by instructing to be mindful of the temperature of the in-breaths and out-breaths in terms of their coolness or warmness.<span class="note" id="mn62n54"><span class="details"><span class="p">[n.54] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a17: 冷 and 暖. The point behind this instruction could be related to the circumstance that out-breaths will be slightly warmer than in-breaths, hence attention given to this difference in temperature would be a way of developing distinct awareness of in-breaths as against out-breaths; on this instruction cf. also the 分別功德論, T 1507 at T XXV 49c3.</span></span></span></p>
+<p>The Ekottarika-āgama version also directs mindfulness to the whole body,<span class="note" id="mn62n55"><span class="details"><span class="p">[n.55] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582b1: “completely contemplate the physical body [when] breathing in, [when] breathing out, coming to know it entirely”, 盡觀身體入息, 出息, 皆悉知之.</span></span></span> an instruction found in the Majjhima-nikāya version as the third step of its scheme of sixteen stages in the practice of mindfulness of breathing.<span class="note" id="mn62n56"><span class="details"><span class="p">[n.56] <a href="../../mn/mn62.html">MN 62</a> at MN I 425,14: “he trains: ‘experiencing the whole body I breathe in ... breathe out’”, sabbakāyapaṭisaṃvedī assasissāmī ti ... passasissāmī ti sikkhati (Be-MN II 88,17: sabbakāyappaṭisaṃvedī).</span></span></span></p>
+<p>According to an explanation given in the Visuddhimagga, the expression “body” should in the present context be understood to refer to the “body” of the breath,<span class="note" id="mn62n57"><span class="details"><span class="p">[n.57] Vism 273,24. In fact <a href="../../mn/mn118.html">MN 118</a> at MN III 83,31 identifies in- and out-breaths as “a body among bodies”, kāyesu kāyaññatarāhaṃ ... vadāmi yadidaṃ assāsapassāsaṃ (Be-MN III 126,11 and Ce-MN III 230,18: assāsapassāsā). On this interpretation, the instruction to be aware of the ‘body’ of the breath in its whole length would intend a strengthening and further enhancement in the continuity of awareness. Bodhi 2005: 442 note 29 remarks that the commentarial interpretation of sabbakāyapaṭisaṃvedī as intending awareness of the beginning, middle, and end of the breaths “is difficult to square with the literal words of the original text, which may have originally intended simply a global awareness of the entire body. It is also difficult to see how -paṭisaṃvedī could mean ‘is aware of’; this suffix is based on the verb paṭisaṃvedeti meaning ‘to experience’ or ‘to feel’, which has a different nuance from ‘awareness’”.</span></span></span> in the sense of directing awareness to the full extent of the breath from beginning to end. The formulation used in the Ekottarika-āgama version, however, appears to intend the physical body.<span class="note" id="mn62n58"><span class="details"><span class="p">[n.58] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582b2 uses the expression 身體, whereas for a figurative sense of kāya, simply 身 would have been the appropriate choice.</span></span></span></p>
+<p>The Ekottarika-āgama version next instructs to be aware if the breath is present or not present.<span class="note" id="mn62n59"><span class="details"><span class="p">[n.59] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a19: “at the time when there is breathing, he knows it is there; at a time when there is no breathing, he knows it is not there”, 有時有息, 亦復知有, 又時無息, 亦復知無. The implications of this instruction could be either to notice the gaps between in-breaths and out-breaths (as well as between out-breaths and in-breaths), or else the point might be that during the more deeply concentrated stages of mindfulness of breathing the breath becomes increasingly subtle, until a meditator may no longer feel it. Vism 283,16 offers a detailed examination of this phenomenon, explaining that once the breath disappears one should not get up and leave, believing that now the meditation is over.</span></span></span> Instead of directing mindfulness to the presence or absence of the breath, the Mahārāhulovāda-sutta speaks of tranquillising the bodily formation.<span class="note" id="mn62n60"><span class="details"><span class="p">[n.60] <a href="../../mn/mn62.html">MN 62</a> at MN I 425,15: passambhayaṃ kāyasaṅkhāraṃ. According to <a href="../../dn/dn32.html">DN 32</a> at DN III 270,23 and <a href="../../an/an10.20.html">AN 10:20</a> at AN V 31,27, with the attainment of the fourth jhāna the bodily formation has been fully tranquilized, a stage of practice where according to <a href="../../sn/sn36.11.html">SN 36:11</a> at SN IV 217,8 the breath totally disappears.</span></span></span> Since in other discourses the expression “bodily formation” refers to in- and out-breathing,<span class="note" id="mn62n61"><span class="details"><span class="p">[n.61] <a href="../../sn/sn41.6.html">SN 41:6</a> at SN IV 293,15: assāsapassāsā ... kāyasaṅkhāro, and its counterpart <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150a24: 出息入息名為身行. This need not be interpreted as an exclusive identification, cf. Griffiths 1986/1991: 148 note 17, who comments that “it seems more likely ... that we are supposed to regard the process of respiration (assāsapassāsa) as an example of physical activity rather than an exhaustive account of it”; cf. also Jayatilleke 1948: 217 and Kapani 1992: 199-200.</span></span></span> the instruction given in the Pāli version could be similar in meaning to what is described in the Chinese version.</p>
+<p>The Mahārāhulovāda-sutta continues by directing the development of mindfulness of breathing to a range of phenomena with the help of twelve other steps of practice.<span class="note" id="mn62n62"><span class="details"><span class="p">[n.62] The same scheme of sixteen steps recurs in <a href="../../mn/mn118.html">MN 118</a> and its parallel <a href="../../parallels/sa815.html">SĀ 815</a>, cf. below p. 666. Another parallel to these instructions can be found in Sanskrit fragments of a text containing meditation instructions, the so-called Yogalehrbuch, cf. Schlingloff 1964: 65-68.</span></span></span> Its Ekottarika-āgama parallel, however, has only one more step of practice at this point, which instructs to be aware if the breath comes “from the heart”.<span class="note" id="mn62n63"><span class="details"><span class="p">[n.63] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a20: “if the breathing comes out from the heart, he knows ‘it comes out from the heart’; if the breathing comes in from the heart, he knows ‘it comes in from the heart’”, 若息從心出, 亦復知從心出, 若息從心入, 亦復知從心入. This instruction might imply to become aware of the breath in the chest area. Huyen-Vi 1993: 217 alternatively translates “in the event of breathing out conditioned by the mind, he is fully aware of it; and in the event of breathing in conditioned by the mind, he is again fully aware of it”. Huyen-Vi thus appears to take the instruction to imply becoming aware of the interrelationship of mind and breath at this point, based on a free rendering of 從. The same character usually means “to follow” and “from”, cf. Mathews 1963: 1019 and Soothill 1937/2000: 349. Hirakawa 1997: 453 gives the following equivalents for 從: anu-√gam, upādāya; tatas, prabhṛti; -agreṇa, adhīna, anantaram, anu-√bandh, anuvicāra, antikāt, ārabhya, itas, -tas, prabhāvita, sakāśāt, santikāt, none of which would support the rendering “conditioned by”.</span></span></span></p>
+<p>Both versions conclude their respective expositions of mindfulness of breathing by proclaiming that such practice is of great fruit and benefit. The Majjhima-nikāya version indicates that, if mindfulness of breathing is practised well, even one’s last breaths will be with mindfulness.<span class="note" id="mn62n64"><span class="details"><span class="p">[n.64] <a href="../../mn/mn62.html">MN 62</a> at MN I 426,1: ye pi te carimakā assāsapassāsā, te pi viditā va nirujjhanti, no aviditā ti (Be-MN II 89,8, Ce-MN II 150,7, and Se-MN II 142,8: viditāva, Be also reads just: assāsā, without passāsā).</span></span></span> The Ekottarika-āgama version highlights that properly practising mindfulness of breathing leads to experiencing the taste of the deathless.<span class="note" id="mn62n65"><span class="details"><span class="p">[n.65] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582a23: 得甘露味.</span></span></span></p>
+<p>The Majjhima-nikāya version concludes with the delighted reaction of Rāhula. The Ekottarika-āgama version continues by describing how Rāhula put the instructions received into practice and developed the four jhānas as well as the three higher knowledges. He then went to the Buddha to proclaim his achievement, which the Buddha approved, followed by declaring Rāhula to be foremost among disciples who uphold the rules.<span class="note" id="mn62n66"><span class="details"><span class="p">[n.66] <a href="../../parallels/ea17.1.html">EĀ 17.1</a> at T II 582c13: 我聲聞中第一弟子能持禁戒, 所謂羅雲比丘是, followed by a stanza in praise of gradually reaching the destruction of the fetters through moral conduct and sense-restraint.</span></span></span></p>
+<p>While the listing of eminent disciples in the Aṅguttara-nikāya somewhat similarly considers Rāhula outstanding for his willingness to be trained,<span class="note" id="mn62n67"><span class="details"><span class="p">[n.67] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 24,16: etad aggaṃ mama sāvakānaṃ bhikkhūnaṃ sikkhākāmānaṃ, yadidaṃ rāhulo.</span></span></span> his full awakening is associated in the Pāli discourses with another occasion. This occasion is recorded in the Cūḷarāhulovāda-sutta of the Majjhima-nikāya, which, judging from its title, would be a counterpart to the present discourse, the Mahārāhulovāda-sutta. According to the Cūḷarāhulovāda-sutta and its Saṃyukta-āgama parallel, Rāhula became an arahant after receiving an instruction by the Buddha on the development of insight in regard to the six sense-spheres.<span class="note" id="mn62n68"><span class="details"><span class="p">[n.68] <a href="../../mn/mn147.html">MN 147</a> at MN III 280,7 (= <a href="../../sn/sn35.121.html">SN 35:121</a> at SN IV 107,28) and <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51c9, translated in Anālayo 2011h. As Pāsādika 2004: 711 notes, this account differs considerably from the way Rāhula attains full awakening in <a href="../../parallels/ea17.1.html">EĀ 17.1</a>.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

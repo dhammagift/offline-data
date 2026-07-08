@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 145 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 145: Puṇṇovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn144comp.html#content"></a><a id="next-sutta" href="./mn146comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn145.html">MN 145</a> / <a href="../../parallels/sa311.html">SĀ 311</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Puṇṇovāda-sutta, the “discourse on an instruction to Puṇṇa”, records the teachings given by the Buddha to Puṇṇa. This discourse has a Pāli parallel in the Saṃyuttanikāya,<span class="note" id="mn145n41"><span class="details"><span class="p">[n.41] <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 60-63. The deeds performed by Puṇṇa in a former life are the theme of his stanzas in the Therāpadāna, Ap 399:1-16 at Ap II 341,1. A stanza spoken by Puṇṇa can also be found at <a href="../../tha/tha1.html#p70">Th 70</a>.</span></span></span> and two Chinese parallels, one of which is found in the Saṃyukta-āgama,<span class="note" id="mn145n42"><span class="details"><span class="p">[n.42] <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89b-c, for which Akanuma 1929/1990: 46 notes “Puṇṇa”, 富樓那, as a tentative title. Akanuma 1929/1990: 171 suggests <a href="../../parallels/sa215.html">SĀ 215</a> at T II 54b to be another parallel to <a href="../../mn/mn145.html">MN 145</a>. However, closer inspection shows that <a href="../../parallels/sa215.html">SĀ 215</a> is considerably different from <a href="../../mn/mn145.html">MN 145</a> and should rather be reckoned a parallel to <a href="../../sn/sn35.70.html">SN 35:70</a> at SN IV 41, with which it agrees closely except for the fact that the protagonist in <a href="../../sn/sn35.70.html">SN 35:70</a> is the monk Upavāna, whereas <a href="../../parallels/sa215.html">SĀ 215</a> speaks of the monk Puṇṇa, 富留那 (which may have led Akanuma to associate this discourse with <a href="../../mn/mn145.html">MN 145</a>).</span></span></span> while the other Chinese parallel is an individual translation.<span class="note" id="mn145n43"><span class="details"><span class="p">[n.43] T 108 at T II 502c-503a, which is entitled “discourse spoken by the Buddha to Mantāṇiputta”, 佛說滿 願子經, apparently confusing the protagonist of the present discourse, Puṇṇa of Sunāparanta, with Puṇṇa Mantāṇiputta from Kapilavatthu. The Taishō edition indicates that the translator of T 108 is not known.</span></span></span></p>
+<p>In addition to these discourse parallels, the events described in the Puṇṇovāda-sutta recur also in the context of a longer narration found in the Divyāvadāna and in the Bhaiṣajyavastu of the (Mūla-)Sarvāstivāda Vinaya, preserved in Chinese and Tibetan.<span class="note" id="mn145n44"><span class="details"><span class="p">[n.44] The relevant part in the Divyāvadāna can be found in Cowell 1886: 37-40 or in Vaidya 1999: 22-24, the Chinese (Mūla-)Sarvāstivāda Vinaya tale in T 1448 at T XXIV 11c-12c, and its Tibetan counterpart in D (1) ’dul ba, ka 304b-307b or Q (1030) khe 284b-286b. For representations of this longer narration in ancient Indian art cf. Sarkar 1990: 152 and Schlingloff 1988b; for a study of its different versions cf. Tatelman 2000. A version of this longer narration can also be found in T 202 at T IV 393c-397a and in T 211 at T IV 588b-c (translated in Willemen 1999: 91-93). T 202 at T IV 396c19 and T 211 at T IV 588c2 mention the events covered in <a href="../../mn/mn145.html">MN 145</a> only briefly, as they simply report that, after Puṇṇa had gone forth, the Buddha taught him the Dharma so that he became an arahant.</span></span></span></p>
+<p>The Puṇṇovāda-sutta and its parallels begin by reporting that Puṇṇa approached the Buddha and requested an instruction in brief.<span class="note" id="mn145n45"><span class="details"><span class="p">[n.45] <a href="../../mn/mn145.html">MN 145</a> at MN III 267,7, <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 60,10, <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89b3, T 108 at T II 502c11, the Divyāvadāna in Cowell 1886: 37,8 or in Vaidya 1999: 22,22, and the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 12a1 and at D (1) ’dul ba, ka 304b6 or Q (1030) khe 284b2. A reference to the present discourse, found in the Mahāsāṅghika Vinaya, T 1425 at T XXII 415c15, also records that Puṇṇa asked for an instruction in brief.</span></span></span> In reply, the Buddha took up the need to avoid unwholesome reactions in relation to the objects of the six senses.<span class="note" id="mn145n46"><span class="details"><span class="p">[n.46] According to <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89b5, the Divyāvadāna in Cowell 1886: 37,17 or in Vaidya 1999: 22,28, and the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 12a6 and at D (1) ’dul ba, ka 305a2 or Q (1030) khe 284b5, before delivering this instruction the Buddha praised Puṇṇa for asking such a question.</span></span></span></p>
+<p>The Pāli versions of this instruction describe how rejoicing in and welcoming the objects of the six senses and holding on to them causes delight, which leads to the arising of dukkha.<span class="note" id="mn145n47"><span class="details"><span class="p">[n.47] <a href="../../mn/mn145.html">MN 145</a> at MN III 267,16: nandīsamudayā dukkhasamudayo (Ce-MN III 546,16 and Se-MN III 481,15: nandisamudayā), cf. also <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 60,15. The same instruction recurs in <a href="../../sn/sn35.64.html">SN 35:64</a> at SN IV 38,1, given by the Buddha to the monk Migajāla.</span></span></span> The Chinese, Sanskrit, and Tibetan parallels examine the repercussions of such delighting in more detail than the Pāli versions.<span class="note" id="mn145n48"><span class="details"><span class="p">[n.48] The parallel versions explain with the help of various intermediate steps how such delight eventually leads to lust, as a result of which one is far from Nirvāṇa, cf. <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89b10: 歡喜 ... 貪愛, 阨礙 故, 去涅槃遠, Cowell 1886: 37,24 or Vaidya 1999: 23,1: ānandī bhavati ... sarāgo bhavati ... ārānnirvāṇasyocyate (Bailey 1950: 177 suggests to read saṃrāgo, instead of sarāgo), T 1448 at T XXIV 12a10: 樂欲 ...貪 ... 遠離涅槃, D (1) ’dul ba, ka 305a5 or Q (1030) khe 284b8: kun du dga’ ba ’byung ngo ... kun du chags par ’gyur ro ... mya ngan las ’das pa las ring du gyur pa zhes bya’o. T 108 at T II 502c16 also relates the arising of delight to lust, which it explains to ultimately result in misery and vexation.</span></span></span></p>
+<p>The Puṇṇovāda-sutta and its parallels continue by applying their respective treatments to the complementary case, when such unwholesome reactions to the objects of the six senses are avoided. After delivering these instructions, the Buddha asked Puṇṇa where he intended to go in order to put into practice the instructions he had received.</p>
+<p>On hearing that Puṇṇa planned to go to his home country, the Buddha warned Puṇṇa of the rude and rough nature of its inhabitants and asked him what he would do if they were to abuse him. Puṇṇa replied that, if he were to meet with abuse, he would reflect on the kindness of the people in as much as they did not give him a blow.</p>
+<p>The exchange between the Buddha and Puṇṇa continues in the same manner with Puṇṇa mentioning each time a worse alternative he would reflect on in order to maintain patience, followed by the Buddha inquiring what he would do if that worse alternative should happen. This exchange takes up the possibility that Puṇṇa might:</p>
+<ul>
+<li>receive a blow,</li>
+<li>have a clod thrown at him,</li>
+<li>be hit with a stick,</li>
+<li>be attacked with a knife,</li>
+<li>be deprived of life.<span class="note" id="mn145n49"><span class="details"><span class="p">[n.49] <a href="../../mn/mn145.html">MN 145</a> at MN III 268,11 and <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 61,9 present these as six separate cases. T 108 at T II 502c23 has the same as five cases, combining the attack by stick and knife into one instance. <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89b21, the Divyāvadāna in Cowell 1886: 38,10 or in Vaidya 1999: 23,11, and the Chinese (Mūla-) Sarvāstivāda Vinaya, T 1448 at T XXIV 12a20, present the same as four separate cases, by treating attack with the hand and a clod as one case, and attack with a stick or a knife as one case. The Tibetan (Mūla-)Sarvāstivāda Vinaya at D (1) ’dul ba, ka 306a1+5+7 or Q (1030) khe 285b2+5+8 covers only three cases, which are being abused, being hit with a stick, and being killed. Oldenberg 1912b: 162 already noted that, whereas in several other respects the Pāli versions are shorter than the Divyāvadāna tale, when describing variations of being attacked the Pāli treatments are longer than their parallels. A similar description of patience when confronted with increasing manifestations of hostility can be found in the Isibhāsiyāiṃ in Schubring 1969: 538, noted as a parallel to this part of <a href="../../mn/mn145.html">MN 145</a> by Matsunami 1961: 742 and Nakamura 1983a: 306.</span></span></span></li>
+</ul>
+<p>In case he should be deprived of life, Puṇṇa explained that he would still be able to consider this in a positive light, as other disciples had to go searching for means to commit suicide, whereas he would be achieving the same result without having to do any searching.<span class="note" id="mn145n50"><span class="details"><span class="p">[n.50] <a href="../../mn/mn145.html">MN 145</a> at MN III 269,11 speaks in this context of satthahāraka pariyesanti, “they search for someone who carries a knife”, cf. also <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 62,24. The Indic original used for translating T 108 appears to have had a similar expression, rendered in T 108 at T II 503a6 as “searching a knife for food”, 求刀為食, perhaps mistaking √hṛ for ā+√hṛ, “nourishing”. The other versions also refer to the possibility of using a knife to commit suicide, cf. <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89c10: 以刀自殺, the Divyāvadāna in Cowell 1886: 39,8 or in Vaidya 1999: 23,31: śastram ... ādhārayanti, T 1448 at T XXIV 12b7: 以其刀, and its Tibetan counterpart at D (1) ’dul ba, ka 306b2 or Q (1030) khe 286a2: mtshon gyis kyang ’debs par byed, in addition to which they also mention the possibilities of taking poison, of hanging oneself, and of jumping down a precipice (T 1448 at T XXIV 12b7 differs in that it only mentions the [taking of] poison). Blum 2008: 143 holds that the present passage in <a href="../../parallels/sa311.html">SĀ 311</a> affirms that “self-destruction can lead to emancipation”, an opinion he bases on translating <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89c12: 於我朽敗之身, 以少作方便, 便得解脫 as implying that “if this putrefying body [is destroyed] through some means that they employ, then [I] will attain liberation”. I am under the impression that this does not fully capture the sense of the passage, whose implications are rather that “this rotten body of mine, through little effort I am able to get rid of it”. The expression 解脫 can render a range of derivatives of √muc and thus need not invariably refer to vimutti or vimukti. In the present context it seems to refer to the body, a way of understanding that would allow translating the whole phrase without needing to supplement a verb to the first part, such as “[is destroyed]”.</span></span></span> According to all versions, the Buddha approved of Puṇṇa’s patient attitude and sanctioned Puṇṇa’s plan to go and live among the fierce people of his home country.<span class="note" id="mn145n51"><span class="details"><span class="p">[n.51] In the Divyāvadāna and in the Chinese and Tibetan (Mūla-)Sarvāstivāda Vinaya, the Buddha not only accepts Puṇṇa’s plans, but also tells him to work for the salvation of others, cf. Cowell 1886: 39,14 or Vaidya 1999: 24,3, T 1448 at T XXIV 12b11, and D (1) ’dul ba, ka 306b4 or Q (1030) khe 286a4, an instruction recorded also in <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89c15.</span></span></span></p>
+<p>Puṇṇa’s patience finds an additional illustration in the Divyāvadāna and in the Chinese and Tibetan versions of the (Mūla-)Sarvāstivāda Vinaya tale. According to their account, once he had arrive in his home country, Puṇṇa encountered a hunter who, thinking that to see a monk was inauspicious, got ready to attack Puṇṇa.<span class="note" id="mn145n52"><span class="details"><span class="p">[n.52] Cowell 1886: 39,25 or Vaidya 1999: 24,11, T 1448 at T XXIV 12b19, and D (1) ’dul ba, ka 307a2 or Q (1030) khe 286a8.</span></span></span> On seeing the hunter rush towards him, Puṇṇa bared his chest and told the hunter to strike right there. The hunter was so mollified by this reaction that he not only desisted from his attack, but gave ear to instructions and finally took refuge and the five precepts.<span class="note" id="mn145n53"><span class="details"><span class="p">[n.53] Tatelman 2000: 87 note 85 points out that the formulation in the Divyāvadāna in Cowell 1886: 40,12 or in Vaidya 1999: 24,23 does not make it unequivocally clear if it was Puṇṇa who became an arahant, or rather the hunter. He notes that in the Bodhisattvāvadānakalpalatā 36:47 (cf. Das 1888: 900,2 and 901,2 or Vaidya 1959: 236,2) the hunter also reaches awakening. In the Chinese (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 12c5, however, it is clearly Puṇṇa who became an arahant, 圓滿即 ... 證阿羅漢果.</span></span></span></p>
+<p>According to the Puṇṇovāda-sutta and its parallels, while living in his home country Puṇṇa realized the three higher knowledges and converted a substantial number of lay followers.<span class="note" id="mn145n54"><span class="details"><span class="p">[n.54] <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89c21, T 108 at T II 503a12, the Divyāvadāna in Cowell 1886: 40,10 or in Vaidya 1999: 24,21, and the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 12c4 and D (1) ’dul ba, ka 307a6 or Q (1030) khe 286b4, add that he also established a substantial number (‘500’) of dwelling places for the monastic community.</span></span></span> The Divyāvadāna and the Chinese and Tibetan (Mūla-)Sarvāstivāda Vinaya,<span class="note" id="mn145n55"><span class="details"><span class="p">[n.55] The Divyāvadāna, Cowell 1886: 42,8 or Vaidya 1999: 25,29, and the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 13a29 and D (1) ’dul ba, ka 308b2 or Q (1030) khe 287b6.</span></span></span> together with the Pāli commentary,<span class="note" id="mn145n56"><span class="details"><span class="p">[n.56] Ps V 89,1.</span></span></span> continue by describing how, by dint of his supernormal power, Puṇṇa rescued his brother and a group of merchants who were about to suffer misfortune in the midst of the sea, followed by getting a sandalwood building constructed for the Buddha and inviting the Buddha to partake of a meal in this building,<span class="note" id="mn145n57"><span class="details"><span class="p">[n.57] The construction of this sandalwood building for the Buddha is also recorded in the Karmavibhaṅga, Kudo 2004: 126,1 and 127,1 or Lévi 1932a: 63,3, as well as in a Sanskrit fragment in Minayeff 1983: 6.</span></span></span> an invitation the Buddha accepted by using psychic power to travel through the air with a group of monks.</p>
+<p>The Puṇṇovāda-sutta, its Saṃyutta-nikāya parallel, and the individual translation report that, when Puṇṇa had passed away, the monks approached the Buddha to find out about his level of accomplishment. In reply, they were told that Puṇṇa had passed away as an arahant. The Saṃyukta-āgama discourse also notes that he passed away as an arahant, without, however, reporting an inquiry by the other monks.<span class="note" id="mn145n58"><span class="details"><span class="p">[n.58] <a href="../../parallels/sa311.html">SĀ 311</a> at T II 89c23, which indicates that this happened soon after Puṇṇa had attained the three higher knowledges. According to <a href="../../sn/sn35.88.html">SN 35:88</a> at SN IV 63,7, Puṇṇa passed away at the end of the same rainy season during which he had converted the laity and had reached liberation himself. <a href="../../mn/mn145.html">MN 145</a> at MN III 269,29 does not give such precise indications on the time of his passing away, only reporting that it took place after some time.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

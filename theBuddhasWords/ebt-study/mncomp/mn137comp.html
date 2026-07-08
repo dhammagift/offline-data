@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 137 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 137: Saḷāyatanavibhaṅga-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn136comp.html#content"></a><a id="next-sutta" href="./mn138comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn137.html">MN 137</a> / <a href="../../parallels/ma163.html">MĀ 163</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Saḷāyatanavibhaṅga-sutta, the “discourse on an analysis of the six sense-spheres”, examines various aspects in relation to the six sense-spheres. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn137n123"><span class="details"><span class="p">[n.123] The parallel is <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692b-694b, which agrees with <a href="../../mn/mn137.html">MN 137</a> on the location and on the title (分別六處經). On <a href="../../parallels/ma163.html">MĀ 163</a> cf. also Minh Chau 1964/1991: 37.</span></span></span> Parts of the present discourse have counterparts in discourse quotations in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan,<span class="note" id="mn137n124"><span class="details"><span class="p">[n.124] Cf. below notes 129, 131, and 144.</span></span></span> in addition to which a few lines have also been preserved in Sanskrit fragments.<span class="note" id="mn137n125"><span class="details"><span class="p">[n.125] The fragments are SHT VI 1252a (p. 49), SHT VII 1717 (p. 139), and the so far unpublished fragment no. 2375/17 of the Schøyen collection, identified by Peter Skilling (I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of these fragments). The three fragments are parallels to the exposition of the three satipaṭṭhānas found in <a href="../../mn/mn137.html">MN 137</a> at MN III 221,3.</span></span></span></p>
+<p>The Saḷāyatanavibhaṅga-sutta begins by examining the following topics:</p>
+<ul>
+<li>the six senses,</li>
+<li>the six sense-objects,</li>
+<li>the six types of consciousness,</li>
+<li>the six types of contact.</li>
+</ul>
+<p>The Madhyama-āgama version differs in so far as it only examines the six senses and the six corresponding types of contact.<span class="note" id="mn137n126"><span class="details"><span class="p">[n.126] <a href="../../mn/mn137.html">MN 137</a> at MN III 216,1 lists “six internal spheres ... six external spheres ... six groups of consciousness ... six groups of contact”, cha ajjhattikāni āyatanāni ... cha bāhirāni āyatanāni ... cha viññāṇakāyā ... cha phassakāyā. <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692b29 lists “six spheres ... six contact-spheres”, 六處 ... 六更樂處 (on 更樂 cf. above p. 270 note 31). <a href="../../mn/mn137.html">MN 137</a> at MN III 216,8 stands alone in referring to its introductory listing of topics as a summary, uddesa, cf. also above p. 598 note 71. <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692b25 begins with the Buddha announcing that he would teach the Dharma that is sublime in the beginning, middle, and end, etc., an announcement not found in <a href="../../mn/mn137.html">MN 137</a>. The same pericope recurs in <a href="../../parallels/ma164.html">MĀ 164</a> at T I 694b16, <a href="../../parallels/ma168.html">MĀ 168</a> at T I 700b27, and <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701b25, where the corresponding Pāli discourses <a href="../../mn/mn138.html">MN 138</a>, <a href="../../mn/mn120.html">MN 120</a>, and <a href="../../mn/mn139.html">MN 139</a> also do not have this announcement; cf. also below p. 838.</span></span></span> In relation to these six types of contact, while the Majjhima-nikāya version takes up contact only from the perspective of the corresponding sense-organ,<span class="note" id="mn137n127"><span class="details"><span class="p">[n.127] <a href="../../mn/mn137.html">MN 137</a> at MN III 216,26: “eye-contact ... mind-contact”, cakkhusamphasso ... manosamphasso.</span></span></span> the Madhyama-āgama treatment also takes into account the sense-objects.<span class="note" id="mn137n128"><span class="details"><span class="p">[n.128] <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692c7: “eye contact on seeing forms ... mind contact on knowing mind-objects”, 眼更樂 為見色 ... 意更樂為知法.</span></span></span></p>
+<p>The two parallel versions continue by turning to eighteen types of mental exploration,<span class="note" id="mn137n129"><span class="details"><span class="p">[n.129] A discourse quotation paralleling the reference to the eighteen mental explorations in <a href="../../mn/mn137.html">MN 137</a> at MN III 216,29 (or in <a href="../../mn/mn140.html">MN 140</a> at at MN III 239,28) can be found in Abhidh-k 3:32 in Pradhan 1967: 146,22, with its Chinese counterparts in T 1558 at T XXIX 53b29 and T 1559 at T XXIX 210b18; cf. also D (4094) mngon pa, ju 165b6 or Q (5595) tu 191b1. A discourse quotation paralleling the subsequent mental explorations of pleasure mentioned in <a href="../../mn/mn137.html">MN 137</a> at MN III 216,31 (or <a href="../../mn/mn140.html">MN 140</a> at MN III 239,30) can be found in Abhidh-k 3:32 in Pradhan 1967: 147,10; cf. also T 1558 at T XXIX 53c16 and T 1559 at T XXIX 210c4.</span></span></span> which arise based on pleasant, unpleasant, and neutral sense-objects.<span class="note" id="mn137n130"><span class="details"><span class="p">[n.130] While <a href="../../mn/mn137.html">MN 137</a> at MN III 216,29 enjoins that “the eighteen mental explorations should be known”, aṭṭhādasa manopavicārā veditabbā ti (Be-MN III 259,20, Ce-MN III 460,1, and Se-MN III 401,12: aṭṭhārasa), <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692c10 instructs that “the eighteen mental activities should be known internally”, 十八意行當知內者, thereby qualifying the knowing to be ‘internal’. <a href="../../parallels/ma163.html">MĀ 163</a> has been using the same qualification in its previous treatment of the six spheres and of the six types of contact; it continues to speak of knowing “internally” in relation to the thirty-six-fold examination that comes next. This mode of presentation fits the absence of an explicit listing of the six external sense-spheres in <a href="../../parallels/ma163.html">MĀ 163</a>, since a consistent qualification of all items as something that should be known ‘internally’ would not have been applicable in the same manner to the ‘external’ sense-spheres.</span></span></span> Both versions proceed from this eighteen-fold treatment to an analysis of experience from thirty-six perspectives.<span class="note" id="mn137n131"><span class="details"><span class="p">[n.131] A discourse quotation paralleling the exposition on thirty-six positions of beings in <a href="../../mn/mn137.html">MN 137</a> at MN III 217,8 can be found in Abhidh-k-ṭ at D (4094) mngon pa, ju 166a2 or Q (5595) tu 191b5; cf. also Abhidh-k 3:36 in Pradhan 1967: 150,8, with its Chinese parallels in T 1558 at T XXIX 54b12 and T 1559 at T XXIX 211b13 (cf. note 132 below).</span></span></span> The Majjhima-nikāya version approaches this thirty-six-fold analysis by distinguishing between experiences that are worldly and experiences that pertain to renunciation.<span class="note" id="mn137n132"><span class="details"><span class="p">[n.132] <a href="../../mn/mn137.html">MN 137</a> at MN III 217,8 refers to “thirty-six positions of beings”, chattiṃsa sattapadā. <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692c16 instead speaks of “thirty-six knives”, 三十六刀, an expression perhaps due to mistaking satta or sattva for sattha or śāstra, or else perhaps a copyist’s mistake, confusing 句 with 刀 (the same expression 三十六刀 recurs also in Saṅghabhūti’s Vibhāṣā translation, T 1547 at T XXVIII 435c29, with a 聖 variant reading that has 勾 instead of 刀). The corresponding expression in Abhidh-k 3:36 in Pradhan 1967: 150,8 reads ṣaṭtriṃśac chāstṛpadāni, “thirty-six positions [set forth] by the teacher” (rendered by Pruden 1988: 437 as “thirty-six points of the Master”), which thus has satthar or śāstṛ instead of satta or sattva, an expression found similarly in Xuánzàng’s (玄奘) translation, T 1558 at T XXIX 54b12: 三十六師句, cf. also Hirakawa 1978: 97, who gives the Tibetan equivalent as ston pa’i bka’, found also at the outset of the discourse quotation in Śamathadeva’s commentary, D (4094) mngon pa, ju 166a2 or Q (5595) tu 191b5 (the *Mahāvibhāṣā, T 1545 at T XXVII 718a25 also speaks of 三十六 師句). Paramārtha’s translation, T 1559 at T XXIX 211b13, speaks of 三十六寂靜足, which suggests śāntapadāni, “peaceful positions”, or perhaps “paths of tranquillity”.</span></span></span> The Madhyama-āgama version uses slightly different terminology to make the same point, as it distinguishes between experiences based on attachment and experiences based on renunciation.<span class="note" id="mn137n133"><span class="details"><span class="p">[n.133] While <a href="../../mn/mn137.html">MN 137</a> at MN III 217,9 contrasts gehasita with nekkhammasita, <a href="../../parallels/ma163.html">MĀ 163</a> at T I 692c17 contrasts 依著 with 依無欲, where 無欲 could stand for dispassion, virāga, although it probably renders an equivalent to naiṣkāmya, instead of naiṣkramya, cf. also above p. 690 note 31.</span></span></span> The same is the case for a discourse quotation from Śamathadeva’s commentary on the Abhidharmakośabhāṣya that parallels the present section.<span class="note" id="mn137n134"><span class="details"><span class="p">[n.134] D (4094) mngon pa, ju 166a4 or Q (5595) tu 191b6 contrasts zhen pa with nges par ’byung ba.</span></span></span></p>
+<p>The Saḷāyatanavibhaṅga-sutta and its Chinese and Tibetan parallels apply their respective negative category (i.e., “worldly” or “based on attachment”) to the following:</p>
+<ul>
+<li>the pleasure derived from sense-objects, the sadness that arises from not obtaining pleasurable sense-objects, the indifference of the fool towards sense-objects. the pleasure that arises from insight into the true nature of sense-objects, the sadness that arises from yearning for liberation, the equanimity that arises from insight into the true nature of sense-objects.</li>
+</ul>
+<p>In contrast, what pertains to renunciation are:</p>
+<p>Although agreeing in their analysis, the three versions differ in the sequence of their presentation. The Pāli version first works through the worldly pleasures in relation to all six sense-objects, after which it takes up the pleasures of renunciation in relation to all six sense-objects. The Chinese and Tibetan versions instead take up each sense-object from both perspectives, before turning to the next sense-object (see table 14.2).</p>
+<p>When examining the two types of equanimity, the Pāli version explains that worldly equanimity does not transcend sense-objects, while the equanimity of renunciation does transcend sense-objects.<span class="note" id="mn137n135"><span class="details"><span class="p">[n.135] <a href="../../mn/mn137.html">MN 137</a> at MN III 219,12+25.</span></span></span> The Chinese version formulates this in a slightly different manner, explaining that equanimity based on attachment is not separated from its object, whereas equanimity based on renunciation is the outcome of mental development.<span class="note" id="mn137n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693a28+b2 contrasts 為色有捨, 不離色 with 至意修習捨.</span></span></span> The Tibetan version distinguishes between equanimity based on attachment that has not given up its object and equanimity based on renunciation by having undertaken an analysis.<span class="note" id="mn137n137"><span class="details"><span class="p">[n.137] D (4094) mngon pa, ju 167a7+b2 or Q (5595) tu 193a4+6 contrasts gzugs mi ’dor (Q: dor) zhing with so sor brtags nas btang snyoms su byed de.</span></span></span> In spite of differing formulations, the three versions make the same point, since it is precisely through mental development and analysis that the transcendence of the sense-objects will be reached.</p>
+<table class="comparative-table">
+<caption>Table 14.2: Analysis of Pleasure in <a href="../../mn/mn137.html">MN 137</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn137.html">MN 137</a></th><th><a href="../../parallels/ma163.html">MĀ 163</a> & Abhidh-k-ṭ</th></tr>
+<tr><td>household pleasure with forms (1)</td><td>household pleasure with forms (→ 1)</td></tr>
+<tr><td>household pleasure with sounds (2)</td><td>renunciation pleasure with forms (→ 7)</td></tr>
+<tr><td>household pleasure with odours (3)</td><td>household pleasure with sounds (→ 2)</td></tr>
+<tr><td>household pleasure with flavours (4)</td><td>renunciation pleasure with sounds (→ 8)</td></tr>
+<tr><td>household pleasure with touches (5)</td><td>household pleasure with odours (→ 3)</td></tr>
+<tr><td>household pleasure with mind-objects (6)</td><td>renunciation pleasure with odours (→ 9)</td></tr>
+<tr><td>renunciation pleasure with forms (7)</td><td>household pleasure with flavours (→ 4)</td></tr>
+<tr><td>renunciation pleasure with sounds (8)</td><td>renunciation pleasure with flavours (→ 10)</td></tr>
+<tr><td>renunciation pleasure with odours (9)</td><td>household pleasure with touches (→ 5)</td></tr>
+<tr><td>renunciation pleasure with flavours (10)</td><td>renunciation pleasure with touches (→ 11)</td></tr>
+<tr><td>renunciation pleasure with touches (11)</td><td>household pleasure with mind-objects (→ 6)</td></tr>
+<tr><td>renunciation pleasure with mind-objects (12)</td><td>renunciation pleasure with mind-objects (→ 12)</td></tr>
+</table>
+<p>The Saḷāyatanavibhaṅga-sutta and its Madhyama-āgama counterpart recommend leaving the three worldly types of experience behind by relying on their counterparts that are based on renunciation. The Pāli version continues by recommending the pleasure of renunciation as the means to go beyond the sadness of renunciation, followed by presenting the equanimity of renunciation as the means to go beyond the pleasure of renunciation.</p>
+<p>The Madhyama-āgama version agrees with the Majjhima-nikāya presentation on reckoning the equanimity of renunciation as the culmination point, it differs, however, in regard to the preceding step, as, instead of recommending the use of the pleasure of renunciation to go beyond the sadness of renunciation, it advocates the use of the sadness of renunciation to go beyond the pleasure of renunciation.<span class="note" id="mn137n138"><span class="details"><span class="p">[n.138] <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693b18: “what are reckoned the six [types of] sadness dependent on the absence of desire, take these, depend on these, be established in these; what are reckoned the six [types of] pleasure dependent on the absence of desire, eradicate those, discard those, vomit those out”, 謂此六憂依無欲, 取是, 依是, 住是也, 謂此六喜依無欲, 滅彼, 除彼, 吐彼.</span></span></span> On applying the explanations given in both versions to this difference, the Pāli version thus recommends to go beyond the yearning for liberation through developing the joy of insight, while the Chinese version enjoins to go beyond the joy of insight through developing yearning for liberation.</p>
+<p>The Pāli and Chinese versions next turn to diversified and unified types of equanimity, which stand for equanimity in relation to the sense-objects and the equanimity of the immaterial attainments.<span class="note" id="mn137n139"><span class="details"><span class="p">[n.139] <a href="../../mn/mn137.html">MN 137</a> at MN III 220,22 contrasts equanimity that is nānatta nānattasita with equanimity that is ekatta ekattasita, while <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693b23 contrasts equanimity “with boundless contacts, with diversified contacts”, 無量更樂, 若干更樂, with equanimity “with a single contact, without diversified contacts”, 一更樂, 不若干 更樂.</span></span></span> The two versions present the unified type of equanimity as the means to go beyond the diversified type of equanimity. The Pāli discourse stands alone in recommending non-identification for going beyond unified equanimity.<span class="note" id="mn137n140"><span class="details"><span class="p">[n.140] <a href="../../mn/mn137.html">MN 137</a> at MN III 220,34: atammayataṃ ... nissāya, atammayataṃ āgamma. On atammayata cf. also above p. 642 note 33.</span></span></span></p>
+<p>The Madhyama-āgama version continues by highlighting that the Buddha’s teaching of the Dharma is inexhaustible, since it could not be covered exhaustively even if he should continuously teach four disciples for a period of a hundred years.<span class="note" id="mn137n141"><span class="details"><span class="p">[n.141] <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693c7.</span></span></span> The same image recurs in the Mahāsīhanāda-sutta, where it illustrates the Buddha’s teaching of the four satipaṭṭhānas.<span class="note" id="mn137n142"><span class="details"><span class="p">[n.142] <a href="../../mn/mn12.html">MN 12</a> at MN I 82,32. <a href="../../parallels/sa612.html">SĀ 612</a> at T II 171c7 also relates this image to the four satipaṭṭhānas.</span></span></span></p>
+<p>The Saḷāyatanavibhaṅga-sutta and its Madhyama-āgama parallel continue by taking up the Buddha’s practice of three satipaṭṭhānas,<span class="note" id="mn137n143"><span class="details"><span class="p">[n.143] A noteworthy point in regard to translation terminology is that <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693c23 has as its counterpart to the tayo satipaṭṭhānā, mentioned at <a href="../../mn/mn137.html">MN 137</a> at MN III 221,3, the “three [types] of mental stability”, 三意止. This rendering differs from the usual translation employed in the Madhyama-āgama as 念 處, cf., e.g., <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582b11. Other works agree with <a href="../../mn/mn137.html">MN 137</a> in referring to these three attitudes as smṛtyupasthāna, cf. the Abhidharmakośabhāṣya 7:32 in Pradhan 1967: 414,9, the Abhisamayālaṅkāra-prajñāparāmitā-upadeśa-śāstra 8:5 in Stcherbatsky 1929: 34,7 (with its Tibetan counterpart dran pa nyer gzhig rnam gsum in ibid. p. 62,9), the Avadānaśataka in Speyer 1906/1970: 7,5 or in Vaidya 1958a: 4,7, the Bodhisattvabhūmi in Wogihara 1971a: 403,10, the Divyāvadāna in Cowell 1886: 126,13 (etc.) or in Vaidya 1999: 78,19, the Mahāvyutpatti no. 187 in Sakaki 1926: 16, the Mahāyānasūtrālaṅkāra 20:53 in Lévi 1907: 186,20, the Saṅghabhedavastu in Gnoli 1977: 179,22; cf. also SHT VI 1252a1 +5, which has preserved triṇ-imāni and at a later point smṛty[u](pasthānam), SHT VII 1689aR1 (p. 99) and SHT VII 1717 (p. 139, which only has part of the treatment, without the term itself). In the case of texts preserved in Chinese, the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 91b24, also uses the expression 三意止. The *Mahāvibhāṣā, T 1545 at T XXVII 160b19, the two Abhidharmakośabhāṣya translations, T 1558 at T XXIX 140c26 and T 1559 at T XXIX 292a6, and the Yogācārabhūmi, T 1579 at T XXX 573c18, speak of 三念住. The Bodhisattvabhūmi, T 1581 at T XXX 958c3, and the *Tattvasiddhi, T 1646 at T XXXII 242c29, use the slightly different rendering 三念處. The use of 意止 for satipaṭṭhānā or smṛtyupasthāna is, however, a characteristic of Ekottarika-āgama discourses, cf., e.g., <a href="../../parallels/ea8.6.html">EĀ 8.6</a> at T II 561b21, <a href="../../parallels/ea12.1.html">EĀ 12.1</a> at T II 568a4, <a href="../../parallels/ea26.9.html">EĀ 26.9</a> at T II 639b7, <a href="../../parallels/ea28.3.html">EĀ 28.3</a> at T II 650b19, <a href="../../parallels/ea41.3.html">EĀ 41.3</a> at T II 745b15, <a href="../../parallels/ea41.4.html">EĀ 41.4</a> at T II 746a8, <a href="../../parallels/ea47.7.html">EĀ 47.7</a> at T II 783a21, and <a href="../../parallels/ea49.1.html">EĀ 49.1</a> at T II 794b11 (the same usage can also be found in a translation attributed to Ān Shìgāo (安世高), cf. T 13 at T I 234a19 and at T I 238c12). The occurrence of 意止 in <a href="../../parallels/ma163.html">MĀ 163</a> might be an instance where translation vocabulary used by Zhú Fóniàn (竺佛念) has made its way into the translation of the Madhyama-āgama undertaken by Gautama Saṅghadeva, cf. also Lü 1963: 242 and above p. 374 note 178 and p. 617 note 158.</span></span></span> an exposition also preserved in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya.<span class="note" id="mn137n144"><span class="details"><span class="p">[n.144] Abhidh-k-ṭ at D (4094) mngon pa, nyu 59a1 or Q (5595) thu 101a8; cf. also Abhidh-k 7:32 in Pradhan 1967: 414,9, paralleling <a href="../../mn/mn137.html">MN 137</a> at MN III 221,3, with its Chinese parallels in T 1558 at T XXIX 140c26 and T 1559 at T XXIX 292a6.</span></span></span> These three satipaṭṭhānas stand for the Buddha’s attitude towards three types of situation:</p>
+<ul>
+<li>his disciples do not listen to his teaching and do not follow it,</li>
+<li>some disciples do not listen to and do not follow his teaching, while others listen to and follow his teaching,</li>
+<li>his disciples listen to and follow his teaching.</li>
+</ul>
+<p>The parallel versions differ in the sequence in which they present these three situations (see table 14.3). They also differ in the way they depict the Buddha’s reaction to these three situations. According to the Pāli version’s presentation:</p>
+<ul>
+<li>when all disciples do not listen, the Buddha is not satisfied,</li>
+<li>when some listen, the Buddha is neither satisfied nor dissatisfied,</li>
+<li>when all listen, the Buddha is satisfied.<span class="note" id="mn137n145"><span class="details"><span class="p">[n.145] <a href="../../mn/mn137.html">MN 137</a> at MN III 221,10 (all disciples do not listen): “he is not satisfied and feels no satisfaction, yet he dwells without being defiled by it”, na c’ eva attamano hoti na ca attamanataṃ paṭisaṃvedeti, anavassuto ca viharati, although in this case the Burmese edition rather indicates that “he is not dissatisfied and feels no dissatisfaction”, Be-MN III 263,22: na c’ eva anattamano hoti na ca anattamanataṃ paṭisaṃvedeti. <a href="../../mn/mn137.html">MN 137</a> at MN III 221,21 (some listen and some do not listen): “he is not satisfied and feels no satisfaction, and he is not dissatisfied and feels not dissatisfaction, leaving behind both satisfaction and dissatisfaction he dwells in equanimity”, na c’ eva attamano hoti na ca attamanataṃ paṭisaṃvedeti, na ca anattamano hoti na ca anattamanataṃ paṭisaṃvedeti, attamanatañ ca anattamanatañ ca tad ubhayaṃ abhinivajjetvā so upekhako viharati (Be-MN III 264,1 follows the opposite sequence in so far as it begins with na c’ eva anattamano hoti, etc., followed by na ca attamano hoti, etc., and then in the third part reads anattamanatā ca attamanatā ca tad ubhayaṃ, etc.; Be, Ce-MN III 466,31, and Se- MN III 408,15 read upekkhako, Be and Se also do not have so). <a href="../../mn/mn137.html">MN 137</a> at MN III 221,30 (all listen): “he is satisfied and feels satisfaction, yet he dwells without being defiled by it”, attamano c’ eva hoti attamanatañ ca paṭisaṃvedeti, anavassuto ca viharati. Since during transmission the negative and positive forms in this highly repetitive passage could easily have become confused with each other, perhaps the statement should rather be that in case all disciples do not listen he is not displeased with that, na anattamano hoti, the reading found in Be, and in case all disciples listen he is not pleased with that, na attamano hoti, in line with the presentation in <a href="../../parallels/ma163.html">MĀ 163</a>; cf., however, also Cicuzza 2004: 401.</span></span></span></li>
+</ul>
+<p>According to the Chinese and Tibetan accounts, however, the Buddha maintains equanimity in all three cases, as he is not sad when all disciples do not listen, he is neither sad nor joyful when some listen and some do not listen, and he is not joyful when all listen.<span class="note" id="mn137n146"><span class="details"><span class="p">[n.146] <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693c29, T I 694a7, and T I 694a17, as well as D (4094) mngon pa, nyu 59a4, 59a7, and 59b3 or Q (5595) thu 101b4, 101b8, and 102a5; cf. also Anālayo 2012h. In all three cases, just as in <a href="../../mn/mn137.html">MN 137</a>, the Buddha is endowed with mindfulness and clear comprehension.</span></span></span></p>
+<p>Hence, while in the Pāli version there is a difference in the Buddha’s attitude depending on whether his disciples listen or not, in the parallel versions he remains equanimous in all three cases. The Abhidharmakośabhāṣya, the *Mahāprajñāpāramitā-(upadeśa-)śāstra, the *Mahāvibhāṣā, and the Mahāvyutpatti agree with the Madhyamaāgama presentation, as according to these works the Buddha’s attitude in these three cases is invariably the same.<span class="note" id="mn137n147"><span class="details"><span class="p">[n.147] The Abhidharmakośabhāṣya, T 1558 at T XXIX 140c26 and T 1559 at T XXIX 292a6 (unlike the Chinese versions, the Sanskrit version in Pradhan 1967: 414,11 does not give all three cases in full), the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 91b24, the *Mahāvibhāṣā, T 1545 at T XXVII 160b20 and again T XXVII 942b16, and the Mahāvyutpatti no. 188-190 in Sakaki 1926: 16-17; cf. also the *Tattvasiddhi, T 1646 at T XXXII 243a1 (which only explicitly examines the two cases where attention is being paid and where no attention is being paid to what the Buddha teaches). Another occurrence can be found in a bilingual Sanskrit and Uighur fragment, which has preserved parts of the third smṛtyupasthāna, where the Buddha also just remains equanimous, cf. Maue 2008: 181.</span></span></span></p>
+<p>This form of presentation would also receive support from a discourse in the Saṃyutta-nikāya, according to which the Buddha’s attitude when instructing was free from attraction or repulsion.<span class="note" id="mn137n148"><span class="details"><span class="p">[n.148] <a href="../../sn/sn4.14.html">SN 4:14</a> at SN I 111,20 (or SN2 150 at SN2 I 248,11), noted by Kuan 2008: 29 as a contrast to the present passage in <a href="../../mn/mn137.html">MN 137</a>.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 14.3: Three Satipaṭṭhānas in <a href="../../mn/mn137.html">MN 137</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn137.html">MN 137</a></th><th><a href="../../parallels/ma163.html">MĀ 163</a> & Abhidh-k-ṭ</th></tr>
+<tr><td>disciples do not listen (1)</td><td>disciples do not listen/follow (→ 1)</td></tr>
+<tr><td>some listen, some do not listen (2)</td><td>disciples listen/follow (→ 3)</td></tr>
+<tr><td>disciples listen (3)</td><td>some listen/follow, some do not listen/follow (→ 2)</td></tr>
+</table>
+<p>The Pāli and Chinese versions conclude by describing the Buddha’s incomparable leadership of beings, contrasting the ability of an animal trainer to teach an elephant, a horse, or an ox how to move in one of the four directions with the Buddha’s ability to teach his disciples how to approach eight ‘directions’ by attaining the eight liberations.<span class="note" id="mn137n149"><span class="details"><span class="p">[n.149] <a href="../../mn/mn137.html">MN 137</a> at MN III 222,12 and <a href="../../parallels/ma163.html">MĀ 163</a> at T I 694a27, parts of this comparison have also been preserved in fragment no. 2375/17 of the Schøyen collection. On the conception of the eight liberations cf., e.g., Anālayo 2009q, Bronkhorst 1993/2000: 80-82, Hurvitz 1979, and Lamotte 1970a: 1281-1283.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

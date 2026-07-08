@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 121 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 121: Cūḷasuññata-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn120comp.html#content"></a><a id="next-sutta" href="./mn122comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn121.html">MN 121</a> / <a href="../../parallels/ma190.html">MĀ 190</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷasuññata-sutta, the “lesser discourse on emptiness”, depicts the progress of a gradual meditation on emptiness. This discourse has a parallel in the Madhyama-āgama and a parallel preserved in Tibetan.<span class="note" id="mn121n1"><span class="details"><span class="p">[n.1] The parallels are <a href="../../parallels/ma190.html">MĀ 190</a> at T I 736c-738a and the mdo chen po stong pa nyid ces bya ba, translated by Jinamitra, Prajñāvarman, and Ye shes sde, D (290) or Q (956), edited in Skilling 1994a: 146-186. <a href="../../parallels/ma190.html">MĀ 190</a> and the Tibetan version agree with <a href="../../mn/mn121.html">MN 121</a> on locating the discourse in the Hall of Migāra’s Mother by Sāvatthī. While <a href="../../parallels/ma190.html">MĀ 190</a> agrees with <a href="../../mn/mn121.html">MN 121</a> on the title (小空 經), the Tibetan version’s title would correspond to Śūnyatā-nāma-mahāsūtra. <a href="../../mn/mn121.html">MN 121</a> and <a href="../../parallels/ma190.html">MĀ 190</a> have been compared by Choong 1999: 66-76. All three versions of the present discourse have been studied by Schmithausen 1981: 232-239 and Skilling 1997a: 335-363; cf. also Skilling 2007: 233-235. According to Skilling 1997a: 14 and 338, the Tibetan version stems from a Madhyama-āgama collection that would have belonged to the (Mūla-)Sarvāstivāda tradition. For counterparts to <a href="../../mn/mn121.html">MN 121</a> at MN III 104,7-11 in Vyākhyāyukti literature cf. Skilling 2000b: 343.</span></span></span></p>
+<p>The Cūḷasuññata-sutta and its parallels begin with Ānanda inquiring if he rightly remembered an earlier occasion when the Buddha had proclaimed that he often dwelled in emptiness.<span class="note" id="mn121n2"><span class="details"><span class="p">[n.2] Skilling 1997a: 347 note 46 notes a minor difference, as in <a href="../../mn/mn121.html">MN 121</a> at MN III 104,9 the Buddha speaks of dwelling much in the ‘emptiness dwelling’, suññatāvihārenāhaṃ ... etarahi bahulaṃ viharāmī ti, while the Chinese and Tibetan versions simply speak of dwelling much in ‘emptiness’, <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a4: 多行空 and Skilling 1994a: 148,4: stong pa nyid kyis lan mang du gnas so. The idiomatic expression vihārena viharati is a recurring feature in the discourses (cf., e.g., <a href="../../dn/dn16.html">DN 16</a> at DN II 130,35, <a href="../../mn/mn151.html">MN 151</a> at MN III 294,2, <a href="../../sn/sn21.3.html">SN 21:3</a> at SN II 275,22, <a href="../../an/an6.10.html">AN 6:10</a> at AN III 284,26, etc.), listed by Wijesekera 1993: 84 as an example for the instrumental case that expresses “attendant circumstances”, so that this difference would be mainly a matter of formulation.</span></span></span> The Buddha confirms that Ānanda has properly remembered this earlier statement,<span class="note" id="mn121n3"><span class="details"><span class="p">[n.3] This earlier statement by the Buddha has not been recorded elsewhere in the Pāli discourses. Skilling 1997a: 346 notes that the Vyākhyāyukti (cf. Lee 2001: 206,8) takes up the absence of a record of this saying “to demonstrate that the sūtra collection of the Śrāvakas is not complete: that it does not record every teaching given by the Buddha” (cf. also Cabezón 1992: 227). Without intending to dispute the incompleteness of the collection of discourses, it could nevertheless be noted that the argument made in relation to the present instance does not seem to work too well. If the Buddha had given a full exposition of the matter on that earlier occasion, Ānanda would not have needed to inquire about it again on the present occasion. This suggests that, on that former occasion, the Buddha made only the short statement quoted in the present discourse. Such a short statement would then, due to its brevity, not have stood a chance to be recorded as a discourse on its own. Other instances of this short statement, where monks similarly declare that they often dwell in emptiness, are also not found on their own but occur as part of a longer exposition, cf. <a href="../../mn/mn151.html">MN 151</a> at MN III 294,4 and Vin II 304,12.</span></span></span> followed by explaining how to undertake such dwelling in emptiness.</p>
+<p>In relation to the various steps to be taken during the gradual approach for such dwelling in emptiness, the Cūḷasuññata-sutta and its parallels propose a similar mode of contemplation. This contemplation is based on developing a unitary type of experience,<span class="note" id="mn121n4"><span class="details"><span class="p">[n.4] <a href="../../mn/mn121.html">MN 121</a> at MN I 105,5+20 introduces each of its steps (e.g., for perception of earth) with the injunction to “give attention to the unity dependent on” the particular perception to be developed, ºsaññaṃ paṭicca manasikaroti ekattaṃ, and concludes its treatment of each step by indicating that the experience based on such unity is what remains at this point, ºsaññaṃ paṭicca ekattaṃ (on ekattaṃ in the sense of a “uniform” perception cf. Schmithausen 1981: 233 note 122). <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a21+29 (e.g., for perception of earth) instructs to be mindful of a “unitary” or “single” perception, 念一 ... 想, followed by concluding that what remains is such “unitary” or “single” perception, 唯一 ... 想 (a procedure absent from the treatment of the community of monks in <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a9). The Tibetan version in Skilling 1994a: 156,3 and 160,1 (e.g., for perception of earth) instructs to give attention to unity, de las kha cig yid la bya, and then concludes that what remains is the type of experience dependent on such unity, de las kha cig la brten nas, thereby bringing in the idea of “dependence” found also in the Pāli version (I take kha cig to be a confusion of ekatta or ekatva for ekacca or ekatya, as suggested by Skilling 1997a: 349).</span></span></span> followed by considering this experience as devoid of the disturbances related to the types of perception that at this stage have been left behind.<span class="note" id="mn121n5"><span class="details"><span class="p">[n.5] <a href="../../mn/mn121.html">MN 121</a> at MN III 104,23: ye assu darathā ... te ’dha na santi, <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a15: 若有疲勞 ... 我無 是也, and the Tibetan version in Skilling 1994a: 154,1: nyon mongs pa’i gnas gang dag yin pa de dag med. While <a href="../../mn/mn121.html">MN 121</a> speaks first of the disturbances and then of contemplating what is there and what is not there, the Chinese and Tibetan versions adopt the opposite sequence. The term daratha, derived from dara, for which Böhtlingk 1883/1998c: 70 s.v. dara gives “bersten, sprengen, zerreissen” and MW: 470 s.v. dara “cleaving, breaking”, thus sets a contrast to the “unitary” character of these experiences, which are developed by overcoming any daratha related to the perceptions that are to be left behind. On daratha cf. also Brough 1962/2001: 186 and Skilling 1997a: 352-355.</span></span></span> The three versions instruct to contemplate what is present as “existing” and at the same time as “empty” of what has been left behind,<span class="note" id="mn121n6"><span class="details"><span class="p">[n.6] <a href="../../mn/mn121.html">MN 121</a> at MN III 105,22: yaṃ hi kho tattha na hoti, tena taṃ suññaṃ samanupassati, yaṃ pana tattha avasiṭṭhaṃ hoti, taṃ santaṃ idam atthī ti pajānāti (Be-MN III 147,24 and Ce-MN III 264,28: santam idaṃ), <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a17: 若彼中無者, 以此故, 彼見是空, 若彼有餘者, 彼見真實有, and the Tibetan version in Skilling 1994a: 154,5: de lta bas na gang la gang med pa de des stong ngo zhes bya bar yang dag par rjes su mthong yang, de la lhag ma gang yod pa de de la yod do zhes bya bar yang dag pa ji lta ba bzhin du rab tu shes te.</span></span></span> and conclude that in this way a genuine and undistorted approach to emptiness can be developed.<span class="note" id="mn121n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn121.html">MN 121</a> at MN III 105,2 additionally qualifies this entry into emptiness as “pure”, parisuddha, a qualification not made in its Chinese and Tibetan parallels.</span></span></span></p>
+<p>According to the Cūḷasuññata-sutta and its parallels, the Buddha began his exposition by highlighting the absence of any animals, possessions, or human beings – except for the community of monks – in the forest where the discourse was taking place.<span class="note" id="mn121n8"><span class="details"><span class="p">[n.8] Although the items listed in the Tibetan version are more numerous than those listed in <a href="../../mn/mn121.html">MN 121</a> and <a href="../../parallels/ma190.html">MĀ 190</a>, the basic idea of the absence of animals, possessions, and human beings (except for the monks) is the same in the three versions. For a discussion and survey of the listings in the three versions cf. Skilling 1997a: 348 and 363. Hayashima 1962: 758 and 765 notes that the early Buddhist conception of emptiness was closely related to the solitary and remote lifestyle of the Buddha and his disciples, something particularly evident in the present instance.</span></span></span></p>
+<p>The Chinese and Tibetan versions turn to the presence of the monk community as a first step in their gradual approach to emptiness, presenting it in the same manner as all the subsequent steps of practice in the gradual meditation on emptiness (see table 13.1).<span class="note" id="mn121n9"><span class="details"><span class="p">[n.9] In <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a10 it is the Buddha himself who views the absence of animals, etc., as empty and the presence of the monks community as what is still there: “I contemplate it as empty”, 我見是空, and “I contemplate it as truly existing”, 我見真實有, whereas the ensuing steps of contemplation have a monk as their subject, 比丘, and are described without use of the personal pronoun “I”, cf., e.g., <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a18: 見是空 and 見真實有.</span></span></span> The Chinese and Tibetan versions then proceed to perception of the forest,<span class="note" id="mn121n10"><span class="details"><span class="p">[n.10] <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a13: 一無事想 and the Tibetan version in Skilling 1994a: 152,7: dgon par ’du shes pa.</span></span></span> which thus forms the second step of the meditative development of emptiness in their versions. The Pāli version, however, does not reckon awareness of the monk community as a stage in itself, as it immediately continues by directing attention to perception of the forest.<span class="note" id="mn121n11"><span class="details"><span class="p">[n.11] <a href="../../mn/mn121.html">MN 121</a> at MN III 104,17: bhikkhusaṅghaṃ paṭicca ekattaṃ, directly followed in the next line at MN III 104,18 by araññasaññaṃ paṭicca manasikaroti ekattaṃ. The perception of forest recurs in <a href="../../an/an6.42.html">AN 6:42</a> at AN III 343,9 (= <a href="../../an/an8.86.html">AN 8:86</a> at AN IV 344,6) as a means to develop a unitary experience, ekatta. Vism 73,17 considers the same as a supportive condition for developing concentration.</span></span></span></p>
+<p>The step that follows perception of the forest in the gradual meditation on emptiness, described in the Cūḷasuññata-sutta and its parallels, requires developing a unitary perception of earth by not giving attention to such things as valleys and mountains, etc.<span class="note" id="mn121n12"><span class="details"><span class="p">[n.12] While <a href="../../mn/mn121.html">MN 121</a> at MN III 105,10 only takes up what should not be attended to in order to develop a unitary perception of earth, <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737a23 and the Tibetan version in Skilling 1994a: 156,9 also mention what should be attended to, describing that the meditating monk gives attention to the aspect of sameness, similar to looking at the palm of a hand.</span></span></span> The three versions illustrate this unitary perception of earth by comparing it to fixing the hide of an ox with pegs until it is fully stretched and without any wrinkles.<span class="note" id="mn121n13"><span class="details"><span class="p">[n.13] This simile recurs in <a href="../../parallels/ma199.html">MĀ 199</a> at T I 760b28 to illustrate a particular torture administered to evildoers in hell, where the tongue is stretched out and fixed by a hundred pegs, a punishment also described in Jā 541 at Jā VI 112,31; cf. also <a href="../../parallels/ea50.5.html">EĀ 50.5</a> at T II 810c27.</span></span></span></p>
+<p>This process of mental abstraction by ‘emptying’ or ‘voiding’ the mind of its former perceptions proceeds in the Cūḷasuññata-sutta and its parallels from the perception of earth to the perceptions of:</p>
+<ul>
+<li>boundless space,</li>
+<li>boundless consciousness,</li>
+<li>nothingness.</li>
+</ul>
+<p>The gradual approach to emptiness thus progresses through the types of perception that correspond to the first three of the four immaterial attainments. Each time, the respective experience is contemplated in the following manner:</p>
+<ul>
+<li>as empty of what is not there (the former perceptions),</li>
+<li>as not empty of what is there (the present perception).</li>
+</ul>
+<p>According to the Cūḷasuññata-sutta and its parallels, in this way it becomes possible to develop a genuine and undistorted meditative entry into emptiness. A minor difference is that, in relation to each perception, the Pāli discourse depicts how the mind gets firmly established in the respective experience, a circumstance not mentioned in the Chinese and Tibetan versions.<span class="note" id="mn121n14"><span class="details"><span class="p">[n.14] <a href="../../mn/mn121.html">MN 121</a> at MN III 104,22: “the mind enters into it, acquires confidence in it, is established in it, and settles into it”, cittaṃ pakkhandati pasīdati santiṭṭhati adhimuccati (I follow Schmithausen 1981: 234 note 124 and adopt the reading adhimuccati found in Be-MN III 147,18, Ce-MN III 264,21, and Se-MN III 227,1, instead of Ee: vimuccati; cf. also above p. 194 note 263. An argument in favour of the reading vimuccati would be the expression vimocayaṃ cittaṃ in <a href="../../mn/mn118.html">MN 118</a> at MN III 83,10 which, since it is preceded by samādahaṃ cittaṃ, clearly occurs in a context closely related to the development of concentration).</span></span></span></p>
+<p>The Pāli version next takes up the attainment of neither-perception-nor-non-perception. This step is not found in the Chinese and the Tibetan versions (see table 13.1).</p>
+<table class="comparative-table">
+<caption>Table 13.1: Gradual Descent into Emptiness in <a href="../../mn/mn121.html">MN 121</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn121.html">MN 121</a></th><th><a href="../../parallels/ma190.html">MĀ 190</a> & D 290/Q 956</th></tr>
+<tr><td>forest (1)</td><td>monastery</td></tr>
+<tr><td>earth (2)</td><td>forest (→ 1)</td></tr>
+<tr><td>infinite space (3)</td><td>earth (→ 2)</td></tr>
+<tr><td>infinite consciousness (4)</td><td>infinite space (→ 3)</td></tr>
+<tr><td>nothingness (5)</td><td>infinite consciousness (→ 4)</td></tr>
+<tr><td>neither-perception-nor-non-perception (6)</td><td>nothingness (→ 5)</td></tr>
+<tr><td>signlessness (7a)</td><td>signlessness (→ 7)</td></tr>
+<tr><td>signlessness (7b)</td><td>(≠ 6)</td></tr>
+</table>
+<p>The Cūḷasuññata-sutta and its parallels agree in presenting the signless concentration of the mind as the last step in this gradual series of perceptions.<span class="note" id="mn121n15"><span class="details"><span class="p">[n.15] <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737c3 actually speaks of “unconscious concentration of the mind”, 無想心定. The notion of a meditative experience that involves the absence of perception is reflected in the expression asaṃj[ñ]isa(m)[ā]pattiḥ, found in the otherwise unrelated fragment SHT IV 623 folio 40V6 (p. 256); cf. also the asaññasamāpatti mentioned in Sp II 514,17. The reference in <a href="../../parallels/ma190.html">MĀ 190</a> to 心定, however, points to an equivalent to cetosamādhi instead of samāpatti. Moreover, since the Pāli and Tibetan parallels qualify the present experience as “signless”, cf. <a href="../../mn/mn121.html">MN 121</a> at MN III 107,29: animitta and the Tibetan version in Skilling 1994a: 172,5: mtshan ma med pa (though the Tibetan version differs in as much as it speaks of the signless “element” or “sphere”, dbyings, instead of the signless “concentration of the mind”), it seems that in the present case the character 想, “perception”, should be corrected to 相, “sign”, resulting in what is the standard rendering of the signless concentration of the mind as 無相心定; for other cases where 想 and 相 appear to have been confused with each other cf. above p. 274 note 54. The main point in developing such a “signless” form of meditation appears to be not to allow attention to be concerned with any “sign”, cf., e.g., <a href="../../mn/mn43.html">MN 43</a> at MN I 296,33. A “sign” in such contexts refers to those aspects, marks, and characteristics by which one recognizes phenomena. Several Pāli discourses relate meditation on signlessness to the path to liberation or to liberation itself. Thus <a href="../../mn/mn43.html">MN 43</a> at MN I 298,22 and <a href="../../sn/sn41.7.html">SN 41:7</a> at SN IV 297,25 speak of unsurpassable liberation of the mind, akuppa cetovimutti, as the highest of all signless experiences. According to <a href="../../sn/sn43.4.html">SN 43:4</a> at SN IV 360,16 and <a href="../../sn/sn43.12.html">SN 43:12</a> at SN IV 363,12, animitta samādhi constitutes a path that leads to the asaṅkhata. <a href="../../an/an3.163.html">AN 3:163</a> at AN I 299,14 relates animitta samādhi to the removal of rāga, dosa, and moha. <a href="../../an/an7.53.html">AN 7:53</a> at AN IV 78,19 takes up a monk who dwells in signlessness, animittavihārin, in the context of a discussion of various noble disciples. To be able to practise signless concentration of the mind does, however, not necessarily imply a high level of realization, since <a href="../../an/an6.60.html">AN 6:60</a> at AN III 397,11 describes the case of a monk who, priding himself on having attained signless meditative experiences, neglects seclusion and excessively associates with others, as a result of which lust invades his mind and he finally disrobes. An additional perspective on signlessness can be found in a discourse in the Saṃyukta-āgama, according to which it is not possible to develop signlessness (in its ultimate sense) without at first developing concentration on emptiness, cf. <a href="../../parallels/sa80.html">SĀ 80</a> at T II 20b4: “having attained emptiness, it is possible to develop signlessness”, 得空已, 能起無相, a statement <a href="../../parallels/sa80.html">SĀ 80</a> precedes by explaining that without having attained emptiness, to develop signlessness is not possible. For a discussion of the relationship between śūnyatā and animitta cf. also SHT V 1131 V4- 5 (p. 126). These various passages make it clear why signless concentration of the mind comes as the climax of the gradual development of emptiness described in <a href="../../mn/mn121.html">MN 121</a> and its parallels. For a detailed study of different occurrences of animitta in the Pāli discourses and commentaries cf. Harvey 1986.</span></span></span></p>
+<p>The three versions direct insightful contemplation to the conditioned and mentally fabricated nature of such signless concentration. While the Pāli discourse instructs to contemplate this experience as impermanent and subject to cessation,<span class="note" id="mn121n16"><span class="details"><span class="p">[n.16] <a href="../../mn/mn121.html">MN 121</a> at MN III 108,17: “this is impermanent and subject to cessation”, tad aniccaṃ nirodhadhamman ti.</span></span></span> the Chinese and Tibetan accounts recommend avoiding delight in relation to this attainment.<span class="note" id="mn121n17"><span class="details"><span class="p">[n.17] <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737c11 describes the reflection like this: “I do not delight in this, do not seek this, it is not suitable [for me] to be established on this”, 我不樂彼, 不求彼, 不應住彼. According to the Tibetan version in Skilling 1994a: 174,7: “it is not suitable to delight in it, to approve of it, to become attached to it, or to remain attached to it” (my translation), de la ni mngon par dga’ bar bya ba ’am, mngon par brjod par bya ba ’am, lhag par chags par bya ba ’am, lhag par chags shing gnas par bya bar mi rigs so. Schmithausen 1981: 236 note 136 suggests that mngon par brjod pa could be a mistaking of abhilaṣituṃ for abhilapituṃ. Although mngong par brjod pa is indeed the standard rendering of abhilapanatā, cf. eg. BHSD: 56 s.v. and entry no. 2795 in the Mahāvyutpatti, Sakaki 1926: 201 (for a discussion of abhilapanatā cf. also Cox 1992/1993: 79-82 and Gethin 1992a: 39-40), in the present context an alternative way of understanding mngong par brjod pa might be that it renders abhivadituṃ, found as part of a similar sequence of verbs, e.g., in <a href="../../mn/mn106.html">MN 106</a> at MN II 263,7: abhinandituṃ ... abhivadituṃ ... ajjhosituṃ, or else in <a href="../../mn/mn38.html">MN 38</a> at MN I 266,29: abhinandati abhivadati ajjhosāya tiṭṭhati. A Sanskrit fragment version of this verb series in SHT III 865V4-5 (p. 114), however, does not include abhivadituṃ, as it only reads (a)[bh](i)n(aṃ)dituṃ vā adhyavasituṃ vā adhyava(sāya) vā sthātuṃ.</span></span></span></p>
+<p>The Pāli discourse stands alone in taking up the signless concentration of the mind twice (see above table 13.1). The Chinese and the Tibetan versions mention signless concentration only once and then continue directly with the insightful contemplation to be undertaken in regard to this experience.</p>
+<p>The Pāli version also speaks twice of the only “disturbance” that remains at this stage, which is the continuity of the six sense-spheres conditioned by the life faculty.<span class="note" id="mn121n18"><span class="details"><span class="p">[n.18] <a href="../../mn/mn121.html">MN 121</a> thereby no longer conforms to its own pattern of overcoming a particular “disturbance” with each of the successive steps. Schmithausen 1981: 237 comments that “this appears strange in a text which up to this point had strictly followed a pattern of ... progressive spiritual stages. In such a framework, the two final sections give the impression of being ... a juxtaposition of an original and a revised version of the final portion”.</span></span></span> The Chinese and Tibetan versions speak of the six sense-spheres and the life faculty only once, as part of the retrospective knowledge after the influxes have been eradicated.<span class="note" id="mn121n19"><span class="details"><span class="p">[n.19] <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737c15 and Skilling 1994a: 176,11, corresponding to the second occurrence of the six sense-spheres and the life faculty in <a href="../../mn/mn121.html">MN 121</a> at MN III 108,26; on the instruction regarding the six sensespheres cf. also Tanto 2004. Here the Chinese and Tibetan versions offer a more straightforward perspective, since to speak of the six sense-spheres as the only disturbance left makes sense in relation to retrospective knowledge of the destruction of the influxes. Once the influxes are destroyed, sensory experience is indeed the only disturbance left (Ps IV 154,1 explains that the reference to the six sensespheres stands for “what is related to the six sense-spheres”, saḷāyatanapaṭisaṃyuttaṃ, i.e., experiences through the six senses), standing representative for the subtlest degree of dukkha recognized in early Buddhism, the unsatisfactoriness of all that is conditioned, cf., e.g., <a href="../../dn/dn33.html">DN 33</a> at DN III 216,22 and its parallel <a href="../../parallels/da9.html">DĀ 9</a> at T I 50b12 (on the three types of dukkha cf. also Schmithausen 1977; on a Jain counterpart to saṅkhāradukkhatā cf. Jaini 1977/2001). The same qualification does, however, not fit signless concentration of the mind, which by its very absence of signs would be aloof from sensory experience.</span></span></span></p>
+<p>According to all versions, insight contemplation undertaken in regard to the signless concentration of the mind leads to the destruction of the influxes, which the Pāli and the Tibetan discourses qualify as an unsurpassable manifestation of emptiness.<span class="note" id="mn121n20"><span class="details"><span class="p">[n.20] <a href="../../mn/mn121.html">MN 121</a> at MN III 109,1: paramānuttarā suññatāvakkanti and the Tibetan version in Skilling 1994a: 178,2: stong pa nyid la ’jug pa bla na med pa.</span></span></span></p>
+<p>The Pāli version refers to recluses and Brahmins in past, present, or future times who dwell in this type of pure and supreme emptiness, while its two parallels speak of Tathāgatas of the past, present, and future.<span class="note" id="mn121n21"><span class="details"><span class="p">[n.21] <a href="../../mn/mn121.html">MN 121</a> at MN III 109,2, <a href="../../parallels/ma190.html">MĀ 190</a> at T I 737c21, and Skilling 1994a: 178,10. The Chinese and Tibetan versions of this statement fit the context well, since the discourse as a whole is a detailed exposition of the Buddha’s statement that he often dwelled in emptiness. In view of this, it would be natural for the discourse to conclude by referring to the dwelling in emptiness of a Tathāgata, an expression used regularly to refer to the Buddha, but which in a more general sense can also include all arahants, cf., e.g., <a href="../../mn/mn22.html">MN 22</a> at MN I 140,5, <a href="../../sn/sn54.12.html">SN 54:12</a> at SN V 327,8, or Sn 3:4 at Sn 467-477. Ps IV 154,16 takes that the expression “recluses and Brahmins”, used in <a href="../../mn/mn121.html">MN 121</a> for those who dwell in emptiness, to intend only Buddhas and their disciples in the present context. In fact, as according <a href="../../mn/mn11.html">MN 11</a> at MN I 66,3, <a href="../../parallels/ma103.html">MĀ 103</a> at T I 591a20, and <a href="../../parallels/ea27.2.html">EĀ 27.2</a> at T II 644a16 heterodox recluses and Brahmins did not really understand the problem posed by clinging to a doctrine of self, one would not expect <a href="../../mn/mn121.html">MN 121</a> to propose that these same heterodox recluses and Brahmins were able to dwell in supreme emptiness.</span></span></span> The three versions conclude with the Buddha encouraging Ānanda to put this gradual approach to emptiness into practice.<span class="note" id="mn121n22"><span class="details"><span class="p">[n.22] <a href="../../mn/mn121.html">MN 121</a> at MN III 109,13, <a href="../../parallels/ma190.html">MĀ 190</a> at T II 737c29, and Skilling 1994a: 180,5. Skilling 1997a: 358 notes that while <a href="../../mn/mn121.html">MN 121</a> and the Tibetan version report only that Ānanda rejoiced in the discourse, <a href="../../parallels/ma190.html">MĀ 190</a> at T I 738a1 adds that other monks also rejoiced in the Buddha’s exposition. Such variations are found frequently between parallel versions of the same discourse, e.g., <a href="../../mn/mn122.html">MN 122</a> at MN III 118,6 reports only that Ānanda rejoiced, while its parallel <a href="../../parallels/ma191.html">MĀ 191</a> at T I 740c1 reports that Ānanda and the monks rejoiced, and the Tibetan counterpart in Skilling 1994a: 262,4 mentions only the monks. It appears to be a stylistic device in the early discourses that by mentioning the most important member of a group, anyone else who may be present is implicitly included. Thus by naming Ānanda, presumably anyone else present is also taken into account. In the case of <a href="../../mn/mn121.html">MN 121</a> this is self-evident, as unless other monks had been present, it would have been impossible to direct Ānanda’s awareness to the community of monks as a first step in the meditative development of emptiness; cf. also above p. 66, p. 474 note 169 and p. 618 note 161.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 65 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 65: Bhaddāli-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn64comp.html#content"></a><a id="next-sutta" href="./mn66comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn65.html">MN 65</a> / <a href="../../parallels/ma194.html">MĀ 194</a> / <a href="../../parallels/ea49.7.html">EĀ 49.7 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bhaddāli-sutta, the “discourse to Bhaddāli”, records the Buddha admonishing a monk who was unwilling to follow the regulation to eat only once a day. This discourse has a parallel in the Madhyama-āgama and a partial parallel in the Ekottarika-āgama.<span class="note" id="mn65n96"><span class="details"><span class="p">[n.96] The parallel is <a href="../../parallels/ma194.html">MĀ 194</a> at T I 746b-749b, while the partial parallel is <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800b-801c. <a href="../../parallels/ma194.html">MĀ 194</a> and <a href="../../parallels/ea49.7.html">EĀ 49.7</a> agree with <a href="../../mn/mn65.html">MN 65</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma194.html">MĀ 194</a> also agrees with <a href="../../mn/mn65.html">MN 65</a> on taking the protagonist of the discourse as its title, rendered as 跋陀和利, bat da γwa lih (following Pulleyblank 1991: 27, 122, 188, and 314). <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c1 also employs a four-syllable rendering for the name of this monk, reading 跋提婆羅, bat dεj ba la (following Pulleyblank 1991: 27, 203, 241, and 304). On <a href="../../parallels/ma194.html">MĀ 194</a> cf. also Minh Chau 1964/1991: 180-181.</span></span></span> Part of the instructions to eat only once a day have also been preserved in a Sanskrit fragment,<span class="note" id="mn65n97"><span class="details"><span class="p">[n.97] SHT II 559 (pp. 34-35), which has preserved counterparts to the instruction found in <a href="../../mn/mn65.html">MN 65</a> at MN I 437,17.</span></span></span> and a description of how Bhaddāli refused for three months to follow these instructions can be found in the Mahāsāṅghika Vinaya.<span class="note" id="mn65n98"><span class="details"><span class="p">[n.98] T 1425 at T XXII 359b11-20.</span></span></span></p>
+<p>The Bhaddāli-sutta and its parallels begin with the Buddha’s instruction to the monks that they should partake of a single meal per day. The Majjhima-nikāya and Madhyama-āgama versions report that the monk Bhaddāli publicly refused to follow this injunction, explaining that he would feel worried if he were to undertake such a practice.<span class="note" id="mn65n99"><span class="details"><span class="p">[n.99] <a href="../../mn/mn65.html">MN 65</a> at MN I 437,27: siyā kukkuccaṃ siyā vippatisāro (Be-MN II 101,6, Ce-MN II 174,10, and Se- MN II 163,13: vippaṭisāro), and <a href="../../parallels/ma194.html">MĀ 194</a> at T I 746b28: 懊惱心悔.</span></span></span> The Pāli commentary explains that Bhaddāli was worried whether under such conditions he would be able to live as a monk for his whole life.<span class="note" id="mn65n100"><span class="details"><span class="p">[n.100] Ps III 148,12.</span></span></span> According to the Ekottarika-āgama version, however, he simply objected that by undertaking this practice he would become weak,<span class="note" id="mn65n101"><span class="details"><span class="p">[n.101] <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800b29: 氣力弱劣.</span></span></span> and according to the Mahāsāṅghika Vinaya he told the Buddha that he would feel at ease only if he could eat morning and evening.<span class="note" id="mn65n102"><span class="details"><span class="p">[n.102] T 1425 at T XXII 359b14: 我朝暮食者乃得安樂, thus directly taking up the Buddha’s suggestion that by eating only once the monks will feel at ease, T 1425 at T XXII 359b12: 汝等亦應一食 ... 得安樂住. This refusal reminds of how, according to <a href="../../mn/mn70.html">MN 70</a> at MN I 474,2 and <a href="../../parallels/ma195.html">MĀ 195</a> at T I 749c27, another group of monks refused to follow the regulation on the proper time for partaking of food.</span></span></span></p>
+<p>The parallel versions agree that Bhaddāli was not willing to settle for a compromise suggested by the Buddha, according to which he could take some food along from his meal and take that at a later time.<span class="note" id="mn65n103"><span class="details"><span class="p">[n.103] <a href="../../mn/mn65.html">MN 65</a> at MN I 438,1, <a href="../../parallels/ma194.html">MĀ 194</a> at T I 746c3, <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c4, and T 1425 at T XXII 359b17. According to <a href="../../parallels/ma194.html">MĀ 194</a> and T 1425, the Buddha repeated his instruction on taking a single meal three times, but Bhaddāli kept on refusing to follow suit.</span></span></span> Bhaddāli kept up this recalcitrant attitude for the whole three-month period of the rains retreat, at the completion of which other monks (or else according to the Ekottarika-āgama account Ānanda) prompted him to approach the Buddha and confess his transgression.<span class="note" id="mn65n104"><span class="details"><span class="p">[n.104] His confession and the subsequent events are not recorded in the Mahāsāṅghika Vinaya. For a study of the formula used for confession and the standard reply given by the Buddha in Pāli texts cf. Attwood 2008.</span></span></span></p>
+<p>According to the Majjhima-nikāya and the Madhyama-āgama versions, the Buddha drew Bhaddāli’s attention to the circumstance that, when he had refused to follow the Buddha’s instruction, he had not taken into account that this refusal would become known among other monks and nuns, among the laity, and among other recluses and Brahmins residing in Sāvatthī.<span class="note" id="mn65n105"><span class="details"><span class="p">[n.105] <a href="../../mn/mn65.html">MN 65</a> at MN I 438,33 also mentions that the Buddha himself would have been aware of the fact that Bhaddāli was not following the training, a circumstance not noted in <a href="../../parallels/ma194.html">MĀ 194</a>.</span></span></span></p>
+<p>The Ekottarika-āgama presentation differs, as it reports another event related to a different monk, paralleling events described in the Laṭukikopama-sutta.<span class="note" id="mn65n106"><span class="details"><span class="p">[n.106] <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c7-801b16 narrates how on another occasion the monk Udāyī had gone begging on a rainy night and so startled a pregnant woman that she had a miscarriage (cf. the similar story in <a href="../../mn/mn66.html">MN 66</a> and <a href="../../parallels/ma192.html">MĀ 192</a>). This accident caused people to criticize the Buddhist monks. On hearing this criticism, the Buddha called the monks together and recommended eating a single meal as a way of life that is conducive to the development of concentration and to insight into the four noble truths. This part of <a href="../../parallels/ea49.7.html">EĀ 49.7</a> concludes with the Buddha recommending some of the ascetic practices and praising Mahākassapa’s conduct, after which <a href="../../parallels/ea49.7.html">EĀ 49.7</a> returns to the events concerning Bhaddāli, namely by reporting that Bhaddāli had not seen the Buddha for three months, followed by Ānanda’s intervention and Bhaddāli’s confession.</span></span></span> Thus this Ekottarika-āgama discourse appears to conflate what in the Majjhima-nikāya and the Madhyama-āgama are two different occasions.<span class="note" id="mn65n107"><span class="details"><span class="p">[n.107] That this is indeed a case of conflation becomes evident in <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 801c5, where a short sentence with an exhortation to develop contentment is addressed to Bhaddāli, 跋提婆羅, but ends by telling Upāli, 優波離, that he should train himself in this way.</span></span></span> At a later point, the Ekottarika-āgama discourse returns to the Bhaddāli incident, reporting that the Buddha gave him an exhortation in prose and in verse, in which he recommended the development of contentment. According to the Ekottarika-āgama account, Bhaddāli thereon retired into seclusion for intensive practice and became an arahant.<span class="note" id="mn65n108"><span class="details"><span class="p">[n.108] <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 801c10.</span></span></span> The Majjhima-nikāya and the Madhyama-āgama versions instead contrast Bhaddāli’s disobedience with the obedience of the seven types of noble disciple in regard to the Buddha’s directives. The two versions illustrate the willingness of these noble disciples to follow the Buddha’s instructions by describing that they would even lie down in the mud if asked to do so.<span class="note" id="mn65n109"><span class="details"><span class="p">[n.109] While in <a href="../../mn/mn65.html">MN 65</a> at MN I 439,26 the point is to lie in the mud as a plank for the Buddha (to walk over), ehi me tvaṃ bhikkhu paṅke saṅkamo hohī ti (Se-MN II 166,14: hotī ti), <a href="../../parallels/ma194.html">MĀ 194</a> at T I 747a28 speaks only of lying down in the mud, 來入泥, without indicating that this is done in order to become a plank for the Buddha.</span></span></span></p>
+<p>After accepting Bhaddāli’s confession, according to both versions the Buddha described how a monk might retire into seclusion for intensive meditation without establishing the proper foundation for such secluded practice by fulfilling the training. The two versions agree that such a monk would be unable to reach any attainment due to being censured by his teacher, by his companions, by the gods, and by himself. The Madhyama-āgama version explains that, due to being censured by others, such a monk will be unable to arouse joy, which in turn prevents him from developing tranquillity, happiness, and concentration.<span class="note" id="mn65n110"><span class="details"><span class="p">[n.110] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 747c13.</span></span></span> Being without concentration, he will not be able to know and see things as they truly are.</p>
+<p>The two versions contrast this case with a monk who, by observing the training rules and retiring into seclusion, is able to develop the four jhānas and the three higher knowledges. The Majjhima-nikāya version makes a point of highlighting that each of these attainments is the fruit of having fulfilled the training.<span class="note" id="mn65n111"><span class="details"><span class="p">[n.111] <a href="../../mn/mn65.html">MN 65</a> at MN I 441,15: yathā taṃ satthusāsane sikkhāya paripūrakārissa (Ee actually reads satthusasāne, presumably a printing error, as elsewhere the same edition reads satthusāsane).</span></span></span> The Madhyama-āgama version instead presents each jhāna as a higher state of mind that provides a pleasant abiding at present and is conducive to Nirvāṇa,<span class="note" id="mn65n112"><span class="details"><span class="p">[n.112] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748a1: 增上心 ... 現法得安樂居 ... 令昇涅槃.</span></span></span> followed by introducing the three higher knowledges as realizations that arouse knowledge and eradicate ignorance.<span class="note" id="mn65n113"><span class="details"><span class="p">[n.113] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748a25.</span></span></span></p>
+<p>According to the Bhaddāli-sutta and its Madhyama-āgama parallel, Bhaddāli inquired why only some monks were repeatedly admonished and dealt with by their companions. In reply, the Buddha took up the case of a monk who has committed several offences, explaining that the extent to which such a monk will be repeatedly admonished depends on whether he is obstinate and displays anger, instead of being submissive and obedient.<span class="note" id="mn65n114"><span class="details"><span class="p">[n.114] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748c1+13 differs from <a href="../../mn/mn65.html">MN 65</a> at MN I 442,31 and MN I 443,10 by describing that the monk who prevaricates and displays anger says that he will act in such a way that it pleases the Saṅgha and meets with their approval, and he also has the intention to act in such a manner, 作如是說, 我今當作令眾歡喜而可意, 作如是意, while the monk who does not prevaricate and displays no anger neither says that he will act nor wants to act in such a way that it pleases the Saṅgha and meets with their approval, 不如是說, 我今當作令眾歡喜而可意, 不作如是意. This appears to be a textual error, similar in type to the error noted above p. 346 note 29.</span></span></span></p>
+<p>Both versions repeat the same explanation for the case of a monk who has committed only few offences,<span class="note" id="mn65n115"><span class="details"><span class="p">[n.115] While <a href="../../mn/mn65.html">MN 65</a> at MN I 443,22 gives this case in full, <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748c22 has the same only in an abbreviated manner.</span></span></span> followed by comparing a monk who has but a small amount of faith to a man who has already lost one eye, due to which his friends and relatives will do what they can to protect him, so that he will not lose the other eye as well.<span class="note" id="mn65n116"><span class="details"><span class="p">[n.116] <a href="../../mn/mn65.html">MN 65</a> at MN I 444,22 and <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748c27.</span></span></span> Similarly, other monks will not admonish such a monk in order to avoid that this monk loses the little faith he has.</p>
+<p>The Majjhima-nikāya version continues by reporting that Bhaddāli asked why formerly there were fewer rules and more monks were established in final knowledge, whereas at present there are many rules and only few monks are established in final knowledge.<span class="note" id="mn65n117"><span class="details"><span class="p">[n.117] <a href="../../mn/mn65.html">MN 65</a> at MN I 444,36. Bhaddāli’s question recurs as a question posed by Mahākassapa in <a href="../../sn/sn16.13.html">SN 16:13</a> at SN II 224,2, in which case the parallel <a href="../../parallels/sa906.html">SĀ 906</a> at T II 226b28 contrasts the time of few rules and many monks, whose mind delighted in the practice, with the time of many rules and few monks delighting in the practice; cf. also <a href="../../parallels/sa-2.121.html">SĀ2 121</a> at T II 419b18.</span></span></span></p>
+<p>The corresponding question in the Madhyama-āgama version differs in that it does not take up the issue of being established in final knowledge. Instead, it contrasts earlier times, when many monks respectfully observed the relatively few rules, with present times, where there are many rules and only a smaller number of monks observe them respectfully.<span class="note" id="mn65n118"><span class="details"><span class="p">[n.118] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749a10: “formerly, when few rules had been promulgated, many were the monks who observed and upheld [them] ... nowadays many rules have been promulgated, [yet] few are the monks who observe and uphold [them]”, 昔日少施設戒, 多有比丘遵奉持者... 今日多施設戒, 少有比丘遵 奉持者. Thus Bhaddāli’s question in <a href="../../parallels/ma194.html">MĀ 194</a> appears less challenging than in <a href="../../mn/mn65.html">MN 65</a>. In fact, in <a href="../../parallels/ma194.html">MĀ 194</a> his attitude throughout is more respectful than in <a href="../../mn/mn65.html">MN 65</a>. While in <a href="../../mn/mn65.html">MN 65</a> Bhaddāli simply poses his queries, according to <a href="../../parallels/ma194.html">MĀ 194</a> each time Bhaddāli gets up, arranges his robe over one shoulder and puts his hands together [in respect], before asking the Buddha a question, cf. <a href="../../parallels/ma194.html">MĀ 194</a> at T I 746b26, T I 746c11, T I 748b23, T I 749a9, and T I 749b5. The description of such respectful behaviour is a frequently recurring pericope in the Madhyama-āgama, however, so that its occurrence in the present context may not bear a particular relation to Bhaddāli’s attitude.</span></span></span> The two versions agree in attributing this development to the growth of the monastic community in various respects (see table 7.4).<span class="note" id="mn65n119"><span class="details"><span class="p">[n.119] While <a href="../../mn/mn65.html">MN 65</a> at MN I 445,8 presents “things that are bases for the influxes”, āsavaṭṭhāniyā dhammā (Be-MN II 108,26 and Se-MN II 175,4: āsavaṭṭhānīyā), as the reason for the promulgation of rules, <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749a14 speaks repeatedly of 喜好法, literally “likeable things” (adopting the 聖 variant reading 喜 instead of 憙, a variation that would not affect the meaning of the phrase). Elsewhere in the Madhyama-āgama, e.g., in <a href="../../parallels/ma194.html">MĀ 194</a> at T I 748b15, influx is translated with 漏, a translation also used at the end of the present passage in <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749a20. This makes it improbable that 喜好 could be a translation error, mistaking “influx”, āsava or āśrava/āsrava, for “enjoyment”, assāda or āsvada. Could 喜好法 be a gloss by the translator(s) on the implication of an expression similar in meaning to āsavaṭṭhāniyā dhammā?</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 7.4: Aspects of the Growth of the Saṅgha in <a href="../../mn/mn65.html">MN 65</a> and its Parallel<span class="note" id="mn65n120"><span class="details"><span class="p">[n.120] <a href="../../mn/mn65.html">MN 65</a> at MN I 445,14 and <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749a13. Notably, an examination of the same topic in Vin III 9,35 has a somewhat different listing, comprising great seniority, great development, great gains, and great learning.</span></span></span></caption>
+<tr><th><a href="../../mn/mn65.html">MN 65</a></th><th><a href="../../parallels/ma194.html">MĀ 194</a></th></tr>
+<tr><td>greatness (1)</td><td>gains (→ 2)</td></tr>
+<tr><td>highest gain (2)</td><td>great fame (→ 3)</td></tr>
+<tr><td>highest fame (3)</td><td>renown (→ 5)</td></tr>
+<tr><td>much learning (4)</td><td>great merit</td></tr>
+<tr><td>renown (5)</td><td>much learning (→ 4)</td></tr>
+<tr><td></td><td>(≠ 1)</td></tr>
+</table>
+<p>The Bhaddāli-sutta and its Madhyama-āgama parallel next turn to the simile of the horse, a simile already delivered by the Buddha on a former occasion, although at that time Bhaddāli did not pay proper attention.<span class="note" id="mn65n121"><span class="details"><span class="p">[n.121] <a href="../../mn/mn65.html">MN 65</a> at MN I 445,26 and <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749b2. This simile recurs in <a href="../../mn/mn107.html">MN 107</a> at MN III 2,3.</span></span></span> This simile describes the gradual training of a horse and compares a well-trained horse, worthy of a king, to a monk who possesses the ten path factors of one who is beyond training (asekha).<span class="note" id="mn65n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/ma194.html">MĀ 194</a> at T I 749b22 differs from <a href="../../mn/mn65.html">MN 65</a> at MN I 447,2 on the sequence of the ten path factors in as much as it has right knowledge as its last factor. For an examination of this type of difference cf. below p. 663.</span></span></span> They conclude with Bhaddāli’s delight in the exposition he had received.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

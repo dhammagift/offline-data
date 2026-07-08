@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 112 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 112: Chabbisodhana-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn111comp.html#content"></a><a id="next-sutta" href="./mn113comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn112.html">MN 112</a> / <a href="../../parallels/ma187.html">MĀ 187</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Chabbisodhana-sutta, the “discourse on six-fold purity”, describes how to check someone’s claim to having reached full awakening. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn112n3"><span class="details"><span class="p">[n.3] The parallel is <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732a-734a, which has the title “discourse on a declaration of [final] knowledge”, 說智經, and agrees with <a href="../../mn/mn112.html">MN 112</a> on locating the discourse in Jeta’s Grove by Sāvatthī. For a remark on <a href="../../parallels/ma187.html">MĀ 187</a> cf. Minh Chau 1964/1991: 31; for a translation of <a href="../../parallels/ma187.html">MĀ 187</a>, together with extracts from the present study, cf. Anālayo 2008e. A discourse quotation paralleling the four vohāras mentioned in <a href="../../mn/mn112.html">MN 112</a> at MN III 29,30 can be found in Abhidh-k 4:74 in Pradhan 1967: 245,8, with its Chinese counterparts in T 1558 at T XXIX 87b18 and T 1559 at T XXIX 242c11 (for the full quotes cf. note 4 below), cf. also Abhidh-k-ṭ at D (4094) mngon pa, ju 240b6 or Q (5595) tu 275a4 (which does not give the full quote).</span></span></span></p>
+<p>The Chabbisodhana-sutta and its parallel in the Madhyama-āgama take up the case of a monk who claims to have reached full awakening. In such a case, the other monks should investigate this claim by questioning the claimant on various topics.</p>
+<p>The two discourses agree that, on being questioned, a monk who is an arahant will indicate that he is neither attracted nor repelled in regard to what is seen, heard, sensed, and cognised,<span class="note" id="mn112n4"><span class="details"><span class="p">[n.4] <a href="../../mn/mn112.html">MN 112</a> at MN III 29,30: diṭṭhe diṭṭhavāditā, sute sutavāditā, mute mutavāditā, viññāte viññātavāditā, which has its counterpart in <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732b29: 一曰見見說, 二曰聞聞說, 三曰識識說, 四曰知知 說. Another set of four ariyavohāras, concerned with refraining from the four types of wrong speech, can be found in <a href="../../dn/dn33.html">DN 33</a> at DN III 232,7; cf. also Caillat 1984b: 68. It is noteworthy that in this way <a href="../../parallels/ma187.html">MĀ 187</a> has 知, “to know”, where <a href="../../mn/mn112.html">MN 112</a> has viññāta, “cognized”, and then <a href="../../parallels/ma187.html">MĀ 187</a> uses 識, which elsewhere stands for being “conscious”, where <a href="../../mn/mn112.html">MN 112</a> has muta, what is “experienced”. According to Vin IV 2,25, muta refers to what is experienced by the sense-organs nose, tongue, and body, whereas viññāta refers to what is experienced by the mind, an explanation also found in the Dharmaguptaka Vinaya, T 1428 at T XXII 634b6. This would square with the circumstance that muta or mata precedes viññāta or vijñāta, thereby concurring with the general sequence of listing the sense-organs, although Vetter 2000: 101 note 7 suggests that the order diṭṭha, suta, muta, and viññāta “is better explained by the Waxing Syllable Principle ... etymologically, muta rather points to ‘experienced by the [‘sense organ’] mind’, whereas viññāta probably has ... the meaning ‘experienced by other external senses’”. Pāsādika 1985: 189 note 36 draws attention to an Ekottarika-āgama Sanskrit fragment in Ōkubo 1982: 105,27, which has the same set, dṛṣṭe dṛṣṭavādinī śrute mate vijñāte vijñātavādinī (cf. also ibid. p. 107,14). A discourse quotation in Abhidh-k 4:74 in Pradhan 1967: 245,8 of the same set in its ‘ignoble’ manifestation reads adṛṣṭe dṛṣṭavāditā aśrute ’mate ’vijnāte vijñātavāditā, cf. also T 1558 at T XXIX 87b18: 謂於不見, 不聞, 不覺, 不知事中, 言實見等, and T 1559 at T XXIX 242c11: 不見說見, 乃至不知說知. The corresponding four anariyavohāra in <a href="../../dn/dn33.html">DN 33</a> at DN III 232,10 are adiṭṭhe diṭṭhavāditā, assute sutavāditā, amute mutavāditā, aviññāte viññātavāditā, where the Chinese parallel, <a href="../../parallels/da9.html">DĀ 9</a> at T I 50b27, reads 不見言見, 不聞言聞, 不覺 言覺, 不知言知. Stache-Rosen 1968: 129 restores the corresponding Sanskrit fragment to (adṛṣṭe dṛṣṭavāditānāryavyavahāraḥ aśrute śrutavād)itā, am(a)te (matavāditā avijñāte vijñātavāditānāryavyava)hāraḥ, based on the Saṅgītiparyāya, T 1536 at T XXVI 410b25, which reads 一不見言見, 二不聞言聞, 三 不覺言覺, 四不知言知; cf. also SHT I 778b A1-2 (p. 336). The *Mahāvibhāṣā, T 1545 at T XXVII 861b18, similarly reads 不見言見, 不聞言聞, 不覺言覺, 不知言知. The sequence in <a href="../../parallels/ma187.html">MĀ 187</a> as 見, 聞, 識, 知, a sequence found again in <a href="../../parallels/ma106.html">MĀ 106</a> at T I 596b18 (parallel to occurrences of diṭṭha, suta, muta, and viññāta in <a href="../../mn/mn1.html">MN 1</a> at MN I 3,15, in which case another Chinese parallel in <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766b3 reads 見, 聞, 念, 知, and a third Chinese parallel in T 56 at T I 851b3 reads 見聞 知識) and in <a href="../../parallels/ma200.html">MĀ 200</a> at T I 764c22 (parallel to diṭṭha, suta muta, and viññāta in <a href="../../mn/mn22.html">MN 22</a> at MN I 135,34) may well conform to the same pattern, even though their rendering of muta or mata by 識 is at first sight puzzling. The sequence found in Buddhist texts recurs also in the Bṛhadāraṇyaka Upaniṣad 3.7.23 in Radhakrishnan 1953/1992: 229: adṛṣṭo draṣṭā aśrutaḥ śrotā, amata mantā, avijñāto vijñātā, and 3.8.11 in ibid. p. 233: adṛṣṭaṃ draṣṭṛ aśrutam śrotṛ, amatam mantṛ, avijñātaṃ vijñātṛ. Nakamura 1983a: 312 notes that the same pattern is also found in the Jain tradition as diṭṭhaṃ suyaṃ mayaṃ vinnāyaṃ.</span></span></span> remaining detached in regard to all these aspects of experience. The Chabbisodhana-sutta and its parallel differ, however, in as much as they turn to this topic at different junctions of their exposition (see below table 12.1).<span class="note" id="mn112n5"><span class="details"><span class="p">[n.5] <a href="../../mn/mn112.html">MN 112</a> at MN III 30,9 describes an arahant as dwelling “not attracted, not repelled, independent, detached, free, not bound, with a mind free from barriers”, anupāyo anapāyo anissito appaṭibaddho vippamutto visaṃyutto vimariyādikatena cetasā. <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732c4 describes the same in terms of being “not elated, not depressed, not depending, not bound, not defiled, not attached”, 不高不下, 不倚不縛, 不染不著.</span></span></span> Both versions recommend that the other monks should approve of such detachment and rejoice in it, after which they are to continue their investigation.</p>
+<p>While in the Madhyama-āgama version such rejoicing takes place already at the time of the monk’s first proclamation to have reached the goal,<span class="note" id="mn112n6"><span class="details"><span class="p">[n.6] <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732a25.</span></span></span> according to the Majjhimanikāya version such an initial declaration should not be approved of, nor should it be rejected.<span class="note" id="mn112n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn112.html">MN 112</a> at MN III 29,26.</span></span></span> Thus, from the perspective of the Majjhima-nikāya discourse, a monk’s proclamation of having become an arahant should only be approved of after an investigation of this claim has been undertaken, whereas in the Madhyama-āgama version such a claim meets with approval right away and will then be scrutinized.<span class="note" id="mn112n8"><span class="details"><span class="p">[n.8] In view of the possibility that such claims can be mistaken, the more cautious attitude evinced in the Pāli version would be reasonable in such circumstances, cf., e.g., <a href="../../mn/mn105.html">MN 105</a> at MN II 252,20 and its counterparts in SHT IV 32 folio 25R6 (p. 125) and SHT IV 165 folio 6R4-5 (p. 182), according to which the claim of some monks to being arahants was an overestimation of their own progress. That such a claim should at first be thoroughly investigated would also be more in accordance with <a href="../../mn/mn47.html">MN 47</a> at MN I 318,3 and its parallel <a href="../../parallels/ma186.html">MĀ 186</a> at T I 731b9, which recommend that a monk should carry out a prolonged and detailed investigation even before coming to the conclusion that the Buddha was fully awakened.</span></span></span></p>
+<p>Another topic to be investigated regarding a claim to full awakening is the claimant’s attitude towards the five aggregates. The two versions agree that, as a result of having seen their impermanent and unreliable nature,<span class="note" id="mn112n9"><span class="details"><span class="p">[n.9] <a href="../../mn/mn112.html">MN 112</a> at MN III 30,31 speaks of having seen each aggregate to be “without strength”, abala. The corresponding passage in <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732b2 reads “without result”, 非果, which might be due to a mistaking of abala, “without strength”, for aphala, “without result”.</span></span></span> an arahant is thoroughly detached from the five aggregates.<span class="note" id="mn112n10"><span class="details"><span class="p">[n.10] <a href="../../mn/mn112.html">MN 112</a> at MN III 30,31 and <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732b3.</span></span></span> The Chabbisodhana-sutta and its Madhyama-āgama parallel also take up the six elements – the four material elements, space, and consciousness – highlighting that an arahant has fully realized their not-self nature.<span class="note" id="mn112n11"><span class="details"><span class="p">[n.11] <a href="../../mn/mn112.html">MN 112</a> at MN III 31,23 and <a href="../../parallels/ma187.html">MĀ 187</a> at T I 733a2. As noted by Schayer 1935: 125, the listing of these six elements is based on “a ‘graduated scale’ of subtleness, as Air is subtler than Water, so is Ether subtler than Air, and Consciousness than Ether”; for a comparable graduation cf. Taittirīya Upaniṣad 2.1.1, whose account of evolution proceeds from the self via space and the other elements up to earth; cf. also Wynne 2007: 36.</span></span></span></p>
+<p>Another topic for investigation is the claimant’s attitude towards the six senses. While the Majjhima-nikāya version explicitly mentions the respective objects of the senses, its Madhyama-āgama parallel does not include them in its presentation.<span class="note" id="mn112n12"><span class="details"><span class="p">[n.12] In the case of the sense-organ eye, for example, <a href="../../mn/mn112.html">MN 112</a> at MN III 32,16 lists the eye, form, eye-consciousness, and the things to be cognised by eye-consciousness, cakkhusmiṃ ... rūpe, cakkhuviññāṇe, cakkhuviññāṇaviññātabbesu dhammesu, while <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732c19 only speaks of the eye, eye-consciousness, and the things to be cognised by eye-consciousness, 眼及眼識, 眼識知法. Here <a href="../../parallels/ma187.html">MĀ 187</a> seems more economic, since once “things to be cognised by eye-consciousness” are taken into account, to mention “form” would be redundant. Ps IV 93,22 attempts to explain this redundancy by suggesting that “form”, etc., refers to what is actually cognised, while the expression “things to be cognised by eyeconsciousness”, etc., refers to what could have been cognised but has disappeared (or will disappear) without being cognised. This explanation is not convincing, since it would be irrelevant to describe the reaction of an arahant to what he or she does not experience at all. The commentary offers also another explanation, according to which “things to be cognised by eye-consciousness”, etc., refer to the aggregates of feeling, perception, and volitional formation that are present together with eye-consciousness during the act of cognition, while “form”, etc., refers to the object. This also does not seem to work too well, since the aggregates of feeling, perception, and formation are not cognisable by eye-consciousness or any of the other types of sense-consciousness, so that apart from “form” there would be little scope to find anything that could be fitted into the category “things to be cognised by eye-consciousness”.</span></span></span> The two versions agree, however, that an arahant is completely detached in regard to each of these six senses.<span class="note" id="mn112n13"><span class="details"><span class="p">[n.13] <a href="../../mn/mn112.html">MN 112</a> at MN III 32,17 and <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732c19, which does not bring in the underlying tendencies and adherences mentioned in the formulation found in <a href="../../mn/mn112.html">MN 112</a>.</span></span></span></p>
+<p>The Chabbisodhana-sutta and its Madhyama-āgama parallel culminate their examination by describing the gradual path of training up to the attainment of the four jhānas and the destruction of the influxes in order to account for an arahant’s transcendence of all patterns of identification in regard to body and mind.<span class="note" id="mn112n14"><span class="details"><span class="p">[n.14] <a href="../../mn/mn112.html">MN 112</a> at MN III 32,33 and <a href="../../parallels/ma187.html">MĀ 187</a> at T I 733a13. The accounts of the gradual path in <a href="../../mn/mn112.html">MN 112</a> and <a href="../../parallels/ma187.html">MĀ 187</a> show the same minor differences between Majjhima-nikāya and Madhyama-āgama discourses noted above p. 190 in regard to the section on morality, p. 619 in regard to sense-restraint, and p. 82 in regard to the practice of mindfulness and clear comprehension.</span></span></span></p>
+<p>The Majjhima-nikāya version indicates that at this point the other monks can come to the conclusion that the interrogated monk’s claim to full awakening is genuine. According to the Madhyama-āgama version, however, the monks had already been satisfied with the first answer; they had kept on inquiring only because they wanted to witness the skill and wisdom of the interrogated monk.<span class="note" id="mn112n15"><span class="details"><span class="p">[n.15] <a href="../../parallels/ma187.html">MĀ 187</a> at T I 734a22.</span></span></span></p>
+<p>The Chabbisodhana-sutta’s treatment concludes at this point. In spite of speaking of a six-fold purity in its title, it presents only five aspects of the purity of an arahant. The Pāli commentary attempts to arrive at six types of purity by applying the freedom from I-making, my-making, and conceit to oneself as well as to others.<span class="note" id="mn112n16"><span class="details"><span class="p">[n.16] Ps IV 94,19.</span></span></span> Based on dividing this type of purity into two, the commentary suggests, a final count of six types of purity can be made. This does not seem to solve the problem successfully, as some of the other types of purity, taken up in the Chabbisodhana-sutta, could also be applied to oneself and others, so that a consistent application of this mode of interpretation would result in more than six purities.</p>
+<p>The commentary also records another opinion, which it attributes to the “elders that live on the other side of the sea”.<span class="note" id="mn112n17"><span class="details"><span class="p">[n.17] Ps IV 94,23: parasamuddavāsī therā. An extract from the present discussion already appeared in Anālayo 2005c: 104-105.</span></span></span> According to the explanation of these elders, the purity of an arahant’s attitude towards the four nutriments should be taken into account. This explanation is puzzling, since although in this way a sixth type of purity would indeed be obtained, the Chabbisodhana-sutta does not refer at all to the four nutriments.</p>
+<table class="comparative-table">
+<caption>Table 12.1: Listing of Purities in <a href="../../mn/mn112.html">MN 112</a> and <a href="../../parallels/ma187.html">MĀ 187</a></caption>
+<tr><th><a href="../../mn/mn112.html">MN 112</a></th><th><a href="../../parallels/ma187.html">MĀ 187</a></th></tr>
+<tr><td>seen, heard, sensed, cognised (1)</td><td>5 aggregates (→ 2)</td></tr>
+<tr><td>5 aggregates (2)</td><td>4 nutriments</td></tr>
+<tr><td>6 elements (3)</td><td>seen, heard, sensed, cognised (→ 1)</td></tr>
+<tr><td>6 senses (4)</td><td>6 senses (→ 4)</td></tr>
+<tr><td>sense of ‘I’/gradual path (5)</td><td>6 elements (→ 3)</td></tr>
+<tr><td></td><td>sense of ‘I’/gradual path (→ 5)</td></tr>
+</table>
+<p>The solution to this puzzle can be found in the Madhyama-āgama discourse, which in addition to the five purities covered in both discourses also takes up an arahant’s attitude towards the four nutriments. According to the Madhyama-āgama account, an arahant will be completely detached in regard to the four nutriments of food, contact, intention, and consciousness.<span class="note" id="mn112n18"><span class="details"><span class="p">[n.18] <a href="../../parallels/ma187.html">MĀ 187</a> at T I 732b18. The four nutriments also occur together with the elements, the aggregates, and the senses in the description of an arahant’s detachment in the Saundaranandakāvya 18:18 in Johnston 1928: 136,5.</span></span></span> Thus the Madhyama-āgama discourse does indeed have an exposition that results in a six-fold purity (see above table 12.1).</p>
+<p>Judging from the title of the Pāli version, it seems safe to assume that at an earlier time a similar examination of the four nutriments was part of the Chabbisodhana-sutta. The “elders that live on the other side of the sea”, mentioned in the Pāli commentary, were apparently still familiar with the earlier version that included the four nutriments, a treatment lost at some point during or after the transmission of the Pāli discourse from India to Sri Lanka.</p>
+<p>From the perspective of the transmission of the early discourses, this apparent loss of a part of the Pāli discourse and the commentarial gloss on this loss are noteworthy. Although the present case shows that even a considerable part of a discourse could be lost, it also reveals the degree to which the reciting monks were committed to preserving a discourse exactly as they had received it. It would have been easy for the reciters to supply the missing section about the four nutriments on the strength of the discourse’s title and the commentarial explanation, or alternatively to change the title to “five-fold purity” in order to make it fit with the discourse’s content. This evidently did not happen and the Pāli discourse was instead handed down in its present truncated state. This testifies to the fidelity of the reciters and their earnest efforts, albeit not always successful, to pass on a discourse the way they had received it.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

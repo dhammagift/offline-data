@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.160 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.160</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 160</span><span class="mirror-right">（一六〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn55.24.html">SN 55.24</a> / <a href="../parallels/sa936.html">SĀ 936</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Buddha was in the Niqūṭa Garden in the country of Kapilavastu. At that time, the Śākyas of that country gathered in the discussion hall. After gathering and sitting down, they discussed among themselves and said to Mahānāman, &quot;There is no difference in the past and present. Who do you think is superior? The Śākya with rough hands was prophesied by the Tathāgata to attain the stream-entry, to be born and die seven times among humans and gods, and to end suffering. That Śākya with rough hands violated the precepts and drank alcohol, yet the Buddha still prophesied that he would attain the stream-entry. If that is so, what is the difference between the past and present?&quot; They also said to Mahānāman, &quot;You should go to the World-Honored One and ask about this meaning.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，佛在迦毘罗卫国尼俱陀园林中。当尔之时，彼国诸释集讲论处，既集坐已，于其中间，各共谈论，语摩诃男言：「无有前后，汝意谓谁以为后耶？麁手释者，如来记彼得须陀洹，于人天中七生七死，得尽苦际。彼麁手释毁犯禁戒，饮彼酒浆，佛尚记言得须陀洹。若如是者，有何前后？」复语摩诃男言：「汝可往诣于世尊所，问如斯义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahānāman Śākya then went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! The Śākyas of Kapilavastu gathered in the discussion hall and discussed among themselves, saying to me, &#x27;Who is superior in the past and present? The Śākya with rough hands has already passed away. The Tathāgata prophesied that he would attain the stream-entry, be born and die seven times among humans and gods, and end suffering. That Śākya with rough hands violated the precepts and drank alcohol. If he is prophesied to attain the stream-entry, then there is no difference between the past and present.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>时摩诃男释寻如其言，即往佛所，顶礼佛足，在一面坐。白佛言：「世尊！迦毘罗释集讲论处，于其中间作如是论，语我言：『谁为前后？时麁手释其命已终，如来记彼得须陀洹，于人天中七生七死，得尽苦际。彼麁手释毁犯禁戒，饮放逸浆，若记彼得须陀洹，当知是即无有前后。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Those who call me the Well-Gone One, the World-Honored One, are also called the Well-Gone One. Because of calling the Well-Gone One, one gives rise to the mind of the Well-Gone One. The noble disciples give rise to the right view and call it the Well-Gone One. Furthermore, Mahanama! The disciples of the Tathāgata who single-mindedly take refuge in the Buddha, the Dharma, and the Sangha, attain swift wisdom, sharp wisdom, wisdom of disgust, wisdom of the path, do not fall into hell, hungry ghosts, animals, or other evil destinies, attain the eight liberations, attain the body-witness, perfect the eight liberations, abide in perfect precepts, see with wisdom, and exhaust all taints, are called those who attain liberation through both wisdom and liberation. Furthermore, Mahanama! The noble disciples, as previously stated, are liberated through wisdom and do not attain the eight liberations. Furthermore, Mahanama! Those who single-mindedly take refuge in the Buddha, as previously stated, attain the body-witness of the non-returner, perfect the eight liberations, but have not exhausted all taints. Furthermore, Mahanama! Those who single-mindedly take refuge in the Buddha, as previously stated, do not fall into hell, hungry ghosts, animals, or evil destinies. They follow the teachings of the Tathāgata without going against them. This is called seeing the truth. Furthermore, Mahanama! The noble disciples single-mindedly take refuge in the Buddha. As previously stated, they follow and liberate according to the teachings of the Buddha. This is called liberation through faith. Furthermore, Mahanama! Those who have faith in the Buddha&#x27;s words, delight in and practice them, and patiently accept the five dharmas - namely, faith, diligence, mindfulness, concentration, and wisdom - are called noble disciples who do not fall into the three evil paths. This is called the firm dharmas. Furthermore, the noble disciples accept the Buddha&#x27;s words, but within limits. They patiently accept the five dharmas as previously stated. This is called the noble disciples who do not fall into the three evil paths. This is called firm faith. Mahanama! If I were to say that the forest of sal trees can understand the meaning, it would be impossible. Even if they understand the meaning, I would still predict that they will attain the stream-entry. For this reason, I would not predict that the coarse-handed Sakyan will attain the stream-entry. Why is that? The coarse-handed Sakyan did not violate the grave precepts, but violated the precepts of prohibition. At the time of death, he regretted his actions. Because of his regret, his precepts were complete and he attained the stream-entry. When a person commits a minor offense and regrets it, his precepts are complete</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「皆称我为善逝，世尊作是语者，亦名善逝。称善逝故，生善逝心，贤圣弟子生正直见，称言善逝。复次，摩诃男！如来弟子一向归佛，亦复归依法僧三宝，得疾智、利智、厌离智、道智，不堕地狱、饿鬼、畜生，及余恶趣，得八解脱，获于身证，具八解脱，住于具戒，以智慧见，尽于诸漏，是则名为得俱解脱阿罗汉也。复次，摩诃男！贤圣弟子，亦如上说，慧解脱阿罗汉不得八解脱。复次，摩诃男！一向归佛，余如上说，身证阿那含，成就八解脱，未尽诸漏。复次，摩诃男！一向归佛，余如上说，不堕地狱、饿鬼、畜生，不堕恶趣。如来教法，彼随顺不逆，是名见到。复次，摩诃男！贤圣弟子一向归依佛。余如上说。佛所教法，彼随顺解脱，是名信解脱。复次，摩诃男！若信佛语，欣尚玩习，忍乐五法，所谓信、精进、念、定、慧，是名贤圣弟子不堕三涂，是名坚法。复次，贤圣弟子信受佛语，然有限量，忍乐五法，如上所说，是名贤圣弟子不堕三涂，是名坚信。摩诃男！我今若说娑罗树林能解义味，无有是处。假使解义，我亦记彼得须陀洹。以是义故，麁手释我当不记彼释得须陀洹。所以者何？彼麁手释不犯性重，犯于遮戒，临命终时，悔责所作。以悔责故，戒得完具，得须陀洹。人少有所犯，悔责完具，何故不记彼麁手释得须陀洹？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahānāman Śākya, having heard the Buddha&#x27;s teaching, was delighted and bowed his head in respect before departing.</p></td><td lang="lzh" class="agama-chi"><p>摩诃男释闻佛所说，欢喜顶礼而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How does an upāsaka attain the fruit, all<br/>practices, self-contempt, and dwelling place? The eleventh and<br/>twelfth, liberation and śarīra, and the tenth, coarse hands.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>云何优婆塞　　得果、一切行自轻及住处　　十一与十二解脱并舍罗　　麁手为第十</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

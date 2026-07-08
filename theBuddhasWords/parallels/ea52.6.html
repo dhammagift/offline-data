@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 52.6 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 52.6</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">52.6</span> <span class="mirror-right">（六）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an5.34.html">AN 5.34</a> / <a href="../an/an7.57.html">AN 7.57 (~)</a> / <a href="../parallels/ea32.10.html">EĀ 32.10 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at the Mahāvana Grove in Vaiśālī, together with a great assembly of five hundred bhikṣus.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在毘舍离摩诃婆那园中，与大比丘众五百人俱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general Siṃha went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. At that time, the Tathāgata said to the great general, &quot;There are five merits for a donor. What are the five?</p></td><td lang="lzh" class="agama-chi"><p>尔时，师子大将便往至世尊所，头面礼足，在一面坐。尔时，如来告大将曰：「施主檀越有五功德。云何为五？</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Thus, the donor&#x27;s fame spreads far and wide. In such-and-such a village, there is this generous person who gives generously to the needy without any stinginess. This is called the first merit attained by the donor.</p></td><td lang="lzh" class="agama-chi"><p>「于是，施主名闻远布，某甲村中有此好施之人，周穷济乏，无有爱惜，是谓，师子大将，第一功德施主所致。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, great general Siṃha, when a donor goes among the kṣatriya assembly, brāhmaṇa assembly, or śramaṇa assembly, they are fearless and have no doubts or difficulties. This is called the second merit.</p></td><td lang="lzh" class="agama-chi"><p>「复次，师子大将，施主檀越若至刹利众、婆罗门众、沙门众中，皆无所畏，亦无疑难，是谓，师子！第二功德。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, great general Siṃha, the donor is loved and respected by many people, like a child loves its mother and their hearts are inseparable. The donor is also like this, loved by many.</p></td><td lang="lzh" class="agama-chi"><p>「复次，施主檀越多为人所爱念，普来宗仰，如子爱母，其心不相离，施主亦复如是，多为人所爱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, Siṃha, when the donor gives, they give with a joyful mind. With joy, there is delight, and the mind is firm. At that time, they are aware of pleasure and pain, and also of change and regret. How do they know? They know the truth of suffering, the origin of suffering, the cessation of suffering, and the path to the cessation of suffering.</p></td><td lang="lzh" class="agama-chi"><p>「复次，师子！施主檀越布施之时，发欢喜心，以有欢喜即有悦豫，意性坚固，是时便自觉有乐有苦，亦变悔，如实而自知。云何自知，知有苦谛、苦习、苦尽、出要谛，如实知之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Giving is the means to all merits, and one attains the ultimate<br/>truth. Those who can remember giving will give rise to a joyful mind.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「施为众福具，　　而逮第一义，其能忆施者，　　便发欢喜心。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Furthermore, Lion Elder! When a donor gives, their body perishes and their life ends, they are reborn in the Heaven of the Thirty-three. There are five things that surpass the other gods. What are the five? First, their appearance is noble and majestic, with majestic light. Second, they have mastery over what they desire, and nothing is not accomplished. Third, if the donor is reborn among humans, they will encounter a wealthy and noble family. Fourth, they will have abundant wealth and many treasures. Fifth, their words are followed and used. These are called, Lion! The five merits of the donor lead to the good path.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「复次，师子长者！施主檀越布施之时，身坏命终，生三十三天，又有五事胜彼诸天。云何为五？一者颜貌豪贵，威神光明；二者所欲自在，无事不果；三者若檀越施主生人中者，值富贵家；四者饶财多宝；五者言从语用。是谓，师子！檀越有此五功德引入善道。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general Lion heard what the Buddha said, and was overjoyed, unable to contain himself. He went before the Buddha and said, &quot;I only wish that the World-Honored One and the assembly of monks would accept my invitation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，师子大将闻佛所说，欢喜踊跃，不能自胜，前白佛言：「唯愿世尊及比丘僧当受我请。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One silently accepted the invitation. The great general Lion, seeing that the World-Honored One silently accepted the invitation, immediately rose from his seat, bowed his head at the Buddha&#x27;s feet, and then withdrew. Returning to his home, he prepared various foods and laid out fine seats. He then said, &quot;The time has come. Now is the right time. I only wish that the Great Sage would deign to look upon us with compassion.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊默然受请。时，师子大将以见世尊默然受请，即从坐起，头面礼足，便退而去，还至家中，办具种种饮食，敷好坐具，即白：「时至，今正是时，唯愿大圣垂愍临顾。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, when it was time, the World-Honored One put on his robe, took his alms bowl, and surrounded by the assembly of monks, went to the general&#x27;s house and sat in order. At that time, the great general Lion saw that the Buddha and the assembly of monks had sat in order, and personally served and offered various foods. At that time, when the general was serving the food, the devas in the sky announced, &quot;This is an arhat. This person is heading towards arahantship. Giving to this person brings great merit. Giving to this person brings little merit. This is a non-returner. This person is heading towards the path of non-returner. This person is a once-returner. This person is heading towards the path of once-returner. This person is a stream-enterer. This person is heading towards the path of stream-enterer. This person will be reborn seven times. This person will be reborn once. This person upholds faith. This person upholds the Dharma. This person has sharp faculties. This person has dull faculties. This person is inferior. This person is diligent in upholding the precepts. This person violates the precepts. Giving to this person brings great merit. Giving to this person brings little merit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊到时，著衣持钵，将诸比丘众，前后围遶，至大将家，各次第坐。尔时，师子将军见佛及比丘僧已次第坐，手自斟酌行种种饮食。尔时，大将行食之时，诸天在虚空中而告之曰：「此是阿罗汉，斯人向阿罗汉，施此得福多，施此得福少，此是阿那含，此人向阿那含，此人是斯陀含，斯人向斯陀含道，此人是须陀洹，斯人向须陀洹道，是人七生往返，此人一生，是持信，此人奉法，此是利根，此是钝根，此人下卑，此人精进持戒，此人犯戒，施此人得福多，施此人得福少。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general Lion, having heard the words of the devas, was not concerned. Seeing that the Tathāgata had finished eating and removed the bowls and utensils, he took a small seat and sat in front of the Tathāgata. At that time, the great general Lion said to the World-Honored One, &quot;Just now, some devas came to me and said, &#x27;From the arhats to the precept-breakers.&#x27; I have fully informed the Tathāgata of this. Although I heard these words, I was not concerned and did not think, &#x27;I should give to this one and not to that one.&#x27; Rather, I thought, &#x27;I should give to all sentient beings, to all beings with form who subsist on food. Without food, they will perish.&#x27; I personally heard this verse from the Tathāgata and have always kept it in mind without forgetting it. What is the verse called?</p></td><td lang="lzh" class="agama-chi"><p>尔时，师子大将闻诸天语已，亦不经怀，见如来食已讫，除去钵器，更取小座，如来前坐。尔时，师子大将白世尊言：「我向者有诸天来至我所，而告之曰：『从罗汉，至犯戒。』皆具白如来。虽闻斯言，亦不经怀，亦不生此念：『我当舍此施彼，舍彼施此。』然我复生斯念：『应施一切众生，有形之类，由食而存，无食则丧，我躬自从如来闻说斯偈，恒在心怀而不忘失。云何名为偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The giving should be universally equal, without ever going against it. One<br/>will surely encounter the sages and worthies, and be liberated through this.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『「施当普平等，　　终不有所逆，必当遇圣贤，　　缘斯而得度。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;This is what is said in the verse, World-Honored One!&quot; I personally heard it from the Tathāgata and have always remembered and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>「『是谓，世尊！斯偈所说。』我躬从如来闻之，恒念奉行。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the general, &quot;Excellent! This is called the mind of a bodhisattva, giving equally. When a bodhisattva gives, they do not think, &#x27;I will give this, not that.&#x27; They always give equally, and also think, &#x27;All sentient beings live when they eat, and die when they do not.&#x27; When a bodhisattva practices giving, they also contemplate this.&quot; Then he spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>佛告大将：「善哉！斯名菩萨之心，平等惠施。若菩萨布施之时，亦不生此念：『我当与此，置此。』恒有平等而惠施，亦复有此念：『一切众生有食则存，无食则亡。』菩萨行施之时，亦复思惟此业。」便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>When a person cultivates their practice, whether it is evil<br/>or good, they themselves receive the retribution. The practice does<br/>not diminish. As a person seeks their practice, they immediately<br/>receive its result. Doing good gains its good, doing evil<br/>receives its evil retribution. Doing evil and its good follow<br/>a person&#x27;s habits. It is like planting the five grains<br/>each obtaining its fruit.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「夫人修其行，　　行恶及其善，彼彼自受报，　　行终不衰耗。如人寻其行，　　即受其果报，为善获其善，　　作恶受恶报。为恶及其善，　　随人之所习，如似种五谷，　　各获其果实。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Great General Siṃha! You should know through this method that good and evil each have their own practice. Because from the initial generation of the mind until the attainment of enlightenment, the mind is without increase or decrease, does not discriminate people, and also does not observe their land. Therefore, Siṃha! When you wish to give, always contemplate equality and do not give rise to the mind of right and wrong. Thus, Siṃha! You should practice in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「师子大将！当以此方便，知善恶各有其行。所以然者，从初发意至于成道，心无增减，不选择人，亦不观其地。是故，师子！若欲惠施之时，恒念平等，勿兴是非之心。如是，师子！当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One again spoke the dhāraṇī:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复说嚫曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Giving brings joy and is loved by people, praised by<br/>the masses. Wherever one goes, there are no difficulties or<br/>jealousy. Therefore, the wise give, removing all evil thoughts. For<br/>a long night, one reaches good places, praised by the gods.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「施欢人所爱，　　众人所称叹，所至无疑难，　　亦无嫉妬心。是故智者施，　　除去诸恶想，长夜至善处，　　诸天所嘉叹。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, having spoken these words, then rose from his seat and departed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊说斯语已，便从坐起而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the lion heard what the Buddha had said and joyfully accepted it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，师子闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

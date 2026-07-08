@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 34 (Part 2) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 34: Dasuttara-sutta (Part 2 of 2)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn34comp_1.html#content"></a><a id="next-sutta" href="./oral-tradition-1.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2013 under the title "Summaries of the Dharma – A Translation of Dīrgha-āgama Discourse No. 12" in <i>Asian Literature and Trans</i><i>lation: A Journal of Religion and Culture</i>, 1.6: 1–14.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn34.html">DN 34</a> / <a href="../../parallels/da9.html">DĀ 9 (~)</a> / <a href="../../parallels/da10.html">DĀ 10</a> / <a href="../../parallels/da11.html">DĀ 11 (~)</a> / <a href="../../parallels/ma206.html">MĀ 206</a> / <a href="../../parallels/ea37.5.html">EĀ 37.5</a> / <a href="../../parallels/ea39.5.html">EĀ 39.5</a> / <a href="../../parallels/ea51.4.html">EĀ 51.4</a></p>
+<p class="read-links">Read: <a href="./dn34comp_1.html">Part 1</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>In this chapter I translate the twelfth discourse in the Chinese <i>Dīrgha-āgama</i>. As already mentioned in the previous chapter, this discourse, which is without known parallels, presents a summary of essential Buddhist teachings in the form of a list. The "Discourse on the Three Groups" is the last of four discourses in the <i>Dīrgha-āgama</i> that offer such a summary of the Dharma.</p>
+<p>The first of these four discourses is the Dharmaguptaka parallel to the <i>Saṅgīti-sutta</i>, which lists diverse sets of doctrinal terms and teachings in a numerically ascending order from Ones to Tens. Versions of this discourse are as follows:</p>
+<p class="quote-block">• the thirty-third discourse in the Theravāda <i>Dīgha-nikāya</i>;<span class="note" id="dn34comp_2n1"><span class="details"><span class="p">[n.1] [3] DN 33 at DN III 207,1 to DN III 271,22.</span></span></span> • the third discourse in the Sarvāstivāda/Mūlasarvāstivāda <i>Dīr</i>-</p>
+<p class="quote-block"><i>gha-āgama</i>,<span class="note" id="dn34comp_2n2"><span class="details"><span class="p">[n.2] [4] According to the reconstructed order of the Sanskrit <i>Dīrghā-agama </i>in Hartmann 2004: 125, the <i>Saṅgīti-sūtra </i>comes in third position, preceded by the <i>Daśottara-sūtra </i>as the first and the <i>Arthavistara-sūtra </i>as the second discourse.</span></span></span> extant in Sanskrit fragments;<span class="note" id="dn34comp_2n3"><span class="details"><span class="p">[n.3] [5] The chief edition of the discourse is Stache-Rosen 1968; cf. also Hoernle 1916: 18–22, Waldschmidt 1955, Tripāṭhī 1985, and Hartmann 1991: 251– 259 (§§138–146). Fragments published subsequent to the edition by Stache- Rosen are, e.g., SHT III 895 and 991, Waldschmidt et al. 1971: 143 and 253; SHT IV 412.33, Sander and Waldschmidt 1980: 66f; SHT VI 1414 (identified by M. Schmidt in Bechert and Wille 2004: 420) 1559, and 1597 (identified by S. Dietz in Bechert and Wille 1995: 302), Bechert and Wille 1989: 127, 188, and 207; SHT VII 1654Ay-z, Bechert and Wille 1995: 64; SHT VIII 1922, Bechert and Wille 2000: 103; SHT IX 2214, 2273, 2362+7119, and 2787, Bechert and Wille 2004: 137, 158, 185, and 279, cf. also SHT I 168 in Bechert and Wille 2004: 382–389; Or 15003, Wille 2006: 76, 106, 107, 120, 125f, 138, and 143f; SHT X 3684?, 3738, 4175h, 4178, 4220, and 4305, Wille 2008: 154, 165, 292, 295, 322f, and 368; Or 15004, Wille 2009: 94; Or 15009, Hirabayashi 2009: 160, Fukita 2009: 322 and 323, Melzer 2009: 201; SHT XI 4597, 5263, 5608, Wille 2012: 138, 288, and 359. Relevant discourse quotations in Śamathadeva's <i>Abhidharmakośopāyikā-ṭīkā</i>, preserved in Tibetan, have been identified by Honjō 1984: 22, 30, 42, 46, 70, 112, and 114; on Gāndhārī fragments cf. Salomon 1997: 355.</span></span></span></p>
+<p>• the ninth discourse in the Dharmaguptaka <i>Dīrgha-āgama</i>,<span class="note" id="dn34comp_2n4"><span class="details"><span class="p">[n.4] [2] DĀ 9 at T I 49b26 to T I 52c11; translated and studied by Behrsing 1930.</span></span></span></p>
+<p>• a version of uncertain school affiliation preserved as an in-</p>
+<p>dividual translation in Chinese.<span class="note" id="dn34comp_2n5"><span class="details"><span class="p">[n.5] [6] T 12 at T I 226c3 to T I 233b19.</span></span></span></p>
+<p>The parallel versions agree that the discourse was spoken by Sāriputta as a way to help ensure communal harmony through the group recitation, <i>saṅgīti</i>, of the Buddha's teaching. The introductory narration to the discourse reports that a quarrel had broken out among the Jains after the demise of their teacher. To forestall something similar happening among Buddhist disciples once their teacher also passed away, Sāriputta expounded the discourse.</p>
+<p>In the Dharmaguptaka and Theravāda collections of long discourses, the <i>Saṅgīti-sutta </i>is followed by the <i>Dasuttara-sutta,</i> another discourse attributed to Sāriputta. Versions of this discourse are:</p>
+<p class="quote-block">• the thirty-fourth discourse in the Theravāda <i>Dīgha-nikāya</i>;<span class="note" id="dn34comp_2n6"><span class="details"><span class="p">[n.6] [9] DN 34 at DN III 272,1 to DN III 292,7.</span></span></span> • the first discourse in the Sarvāstivāda/Mūlasarvāstivāda <i>Dīr</i>-</p>
+<p class="quote-block"><i>gha-āgama</i>;<span class="note" id="dn34comp_2n7"><span class="details"><span class="p">[n.7] [10] Chief editions of the discourse are Mittal 1957 and Schlingloff 1962; cf. also Pauly 1957: 287–292 and 1959: 248, Tripāṭhī 1980, and Hartmann 1991: 128–142 (§§53–68). Fragments published subsequent to the editions by Mittal and Schlingloff are, e.g., SHT III 863 and 915, Waldschmidt et al. 1971: 111f and 171; SHT VII 1646A (identified by M. Schmidt in Bechert and Wille 2004: 423) and 1682, Bechert and Wille 1995: 60 and 90; SHT IX 2101, 2215, 2537, 2538, 2681, and 2785, Bechert and Wille 2004: 99f, 137, 230f, 257, and 278; cf. also SHT I 168 in Bechert and Wille 2004: 381–391; Or 15003, Wille 2006: 75, 80, 110, 124, 141 and 142; Or 15004, Wille 2009: 88 and 89; Or 15009, Nagashima 2009: 158, Melzer 2009: 208, and Ye 2009: 239; and SHT XI 4465c, Wille 2012: 71; cf. also Hori 2003: 103f. Discourse quotations in Śamathadeva's <i>Abhidharmakośopāyikā</i> have been identified by Honjō 1984: 14, 22, and 96; cf. also Skilling 1980: 26–30.</span></span></span></p>
+<p>• the tenth discourse in the Dharmaguptaka <i>Dīrgha-āgama</i>,<span class="note" id="dn34comp_2n8"><span class="details"><span class="p">[n.8] DĀ 10 at T I 52c17 to T I 57b24; for a comparative study cf. de Jong 1966/1979.</span></span></span></p>
+<p>• an individual translation preserved in Chinese.<span class="note" id="dn34comp_2n9"><span class="details"><span class="p">[n.9] [11] T 13 at T I 233b23 to T I 241c19.</span></span></span></p>
+<p>As already mentioned in the previous chapter, whereas in the <i>Saṅgīti-sutta </i>and its parallels the main structural element is the progression from Ones to Tens, under which various numbers of doctrinal items are arranged, the <i>Dasuttara-sutta </i>and its parallels invariably assign ten items to each of the numerical divisions from Ones to Tens, and these ten items follow a consistently applied thematic pattern for each exposition.</p>
+<p>The Dharmaguptaka <i>Dīrgha-āgama</i> then continues with two discourses attributed to the Buddha that are without a parallel in the Theravāda <i>Dīgha-nikāya</i> or the Sarvāstivāda/Mūlasarvāstivāda <i>Dīrgha-āgama</i>. The first of the two is the eleventh discourse in the collection and carries the title "Discourse Increasing by One", translated and studied in the previous chapter. This discourse appears to be simply an abridged version of the <i>Dasuttara-sutta </i>in the Dharmaguptaka <i>Dīrgha-āgama</i>. Instead of using ten topics, it works through the listing of Ones to Tens based on five topics.</p>
+<p>Another discourse in this group of four summaries of the Dharma is the twelfth discourse in the Dharmaguptaka <i>Dīrgha-āgama</i>, the Discourse on the Three Groups. This discourse, which I already introduced in the previous chapter, works its way from Ones to Tens based on a threefold scheme, distinguishing between:</p>
+<p>• what leads towards a bad destiny, 趣/向惡趣,</p>
+<p>• what leads towards a good destiny, 趣/向善趣,</p>
+<p>• what leads towards Nirvāṇa, 趣/向涅槃.</p>
+<p>With this succinct presentation, this discourse well exemplifies the tendency towards creating summaries of the teachings based on combining numerical divisions with soteriologically relevant themes. In what follows I translate the Discourse on the Three Groups.<span class="note" id="dn34comp_2n10"><span class="details"><span class="p">[n.10] [14] DĀ 12 at T I 59b14 to T I 60a27, which has been translated into English by Ichimura 2016: 17–22.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p class="quote-block">The Discourse on the Three Groups</p>
+<p class="quote-block">Thus have I heard. At one time the Buddha was at Sāvatthī in Jeta's Grove, the park [given by] Anāthapiṇḍika, accompanied by a great community of one thousand two hundred and fifty monks.</p>
+<p class="quote-block">At that time the Blessed One said to the monks: "I will teach you the sublime Dharma, which is flavoured with meaning and endowed with the purity of the holy life, namely the three groups of states. Listen, pay attention to and be mindful of what I will teach you." Then the monks listened to receive the teaching.</p>
+<p class="quote-block">The Buddha said to the monks: "One groups states in three: One state leads towards a bad destiny, one state leads towards a good destiny, and one state leads towards Nirvāṇa.</p>
+<p class="quote-block">1)<span class="note" id="dn34comp_2n11"><span class="details"><span class="p">[n.11] For the sake of easy reference, I have numbered the ten sections of the discourse, which is not found in the original.</span></span></span> "What one state leads towards a bad destiny? It is: being without <i>mettā</i> and cherishing harmfulness in the heart. This is reckoned one state that leads towards a bad destiny.</p>
+<p class="quote-block">"What one state leads towards a good destiny? It is: not imposing, out of evilness in the heart, on living beings. This is one state that leads towards a good destiny.</p>
+<p class="quote-block">"What one state leads towards Nirvāṇa? It is: being able to make a diligent effort to cultivate the establishing of mindfulness on the body.<span class="note" id="dn34comp_2n12"><span class="details"><span class="p">[n.12] DĀ 12 at T I 59b25: 修身念處, which Ichimura 2016: 17 renders as "the practice of mental awareness of one's inner and outer physical senses"; the inner and outer senses are not mentioned in the original.</span></span></span> This is one state that leads towards Nirvāṇa.</p>
+<p class="quote-block">2) "Again, two states lead towards a bad destiny; again, two states lead towards a good destiny; and again, two states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What two states lead towards a bad destiny? The first is: breaches of morality,<span class="note" id="dn34comp_2n13"><span class="details"><span class="p">[n.13] DĀ 12 at T I 59b27: 毀戒, which Ichimura 2016: 18 renders as "the transgression of precepts and associating with the wicked"; the idea of an association with the wicked is an addition without support in the original.</span></span></span> the second is: destructive views.</p>
+<p class="quote-block">"What two states lead towards a good destiny? The first is: being endowed with morality, the second is: being endowed with [right] view.</p>
+<p class="quote-block">"What two states lead towards Nirvāṇa? The first is: tranquillity, the second is: insight.</p>
+<p class="quote-block">3) "Again three states lead towards a bad destiny, three states lead towards a good destiny, and three states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What three states lead towards a bad destiny? They are the three unwholesome roots: the unwholesome root of lust, the unwholesome root of hatred, and the unwholesome root of delusion.</p>
+<p class="quote-block">"What three states lead towards a good destiny? They are the three wholesome roots: the wholesome root of absence of lust, the wholesome root of absence of hatred, and the wholesome root of absence of delusion.</p>
+<p class="quote-block">"What three states lead towards Nirvāṇa? They are the three concentrations: concentration on emptiness,<span class="note" id="dn34comp_2n14"><span class="details"><span class="p">[n.14] DĀ 12 at T I 59c5: 空三昧, which Ichimura 2016: 18 renders as "concentration on the emptiness of the self and things attributed to it"; the original has no explicit reference to the self or to things attributed to it.</span></span></span> concentration on signlessness, and concentration on non-activity.</p>
+<p class="quote-block">4) "Again four states lead towards a bad destiny, four states lead towards a good destiny, and four states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What four states lead towards a bad destiny? They are: speaking with craving, speaking with hatred, speaking in fear, and speaking with delusion.</p>
+<p class="quote-block">"What four states lead towards a good destiny? They are: speaking without craving, speaking without hatred, speaking without fear, and speaking without delusion.</p>
+<p class="quote-block">"What four states lead towards Nirvāṇa? They are the four establishments of mindfulness: the establishment of mindfulness on the body, the establishment of mindfulness on feeling, the establishment of mindfulness on the mind, and the establishment of mindfulness on phenomena.<span class="note" id="dn34comp_2n15"><span class="details"><span class="p">[n.15] DĀ 12 at T I 59c10: 身念處, 受念處, 意念處, 法念處; Ichimura 2016: 18 renders this reference to the four <i>satipaṭṭhāna</i>s as "first, the inner and outer physical senses; second, sensation or feeling, third, the mind or intellect; and fourth, the psychophysical elements (aggregates)". The original has no distinction between inner and outer senses and no psychophysical elements; cf. also above p. 350 note 5.</span></span></span></p>
+<p class="quote-block">5) "Again five states lead towards a bad destiny, five states lead towards a good destiny, and five states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What five states lead towards a bad destiny? They are: breaking the five precepts: killing, stealing, adultery, false speech, and drinking liquor.<span class="note" id="dn34comp_2n16"><span class="details"><span class="p">[n.16] DĀ 12 at T I 59c13: 飲酒, translated by Ichimura 2016: 19 as "states of indolence arising from [the use] of intoxicants"; the original has no explicit reference to states of indolence.</span></span></span></p>
+<p class="quote-block">"What five states lead towards a good destiny? They are upholding the five precepts: not killing, not stealing, not engaging in adultery, not deceiving, and not drinking liquor.</p>
+<p class="quote-block">"What five states lead towards Nirvāṇa? They are the five faculties: the faculty of faith, the faculty of energy, the faculty of mindfulness, the faculty of concentration, and the faculty of wisdom.</p>
+<p class="quote-block">6) "Again six states lead towards a bad destiny, six states lead towards a good destiny, and six states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What six states lead towards a bad destiny? They are the six [forms of] disrespect: being disrespectful towards the Buddha, being disrespectful towards the Dharma, being disrespectful towards the community, being disrespectful towards morality, being disrespectful towards concentration, and being disrespectful towards one's father and mother.<span class="note" id="dn34comp_2n17"><span class="details"><span class="p">[n.17] [15] DĀ 12 at T I 59c18: 父母. In Indic texts the mother tends to come in first position (other <i>Āgama </i>discourses agree in this respect with DĀ 12, as they also list the father in first place; cf., e.g., MĀ 15 at T I 437c5, SĀ 88 at T II 22b23, SĀ2 18 at T II 379c25, and EĀ 10.3 at T II 564a25); cf. also above p. 180 note 6.</span></span></span></p>
+<p class="quote-block">"What six states lead towards a good destiny? They are the six forms of respect: being respectful towards the Buddha, being respectful towards the Dharma, being respectful towards the community, being respectful towards morality, being respectful towards concentration, and being respectful towards one's father and mother.</p>
+<p class="quote-block">"What six states lead towards Nirvāṇa? They are the six recollections: recollection of the Buddha, recollection of the Dharma, recollection of the community, recollection of morality, recollection of generosity, and recollection of <i>deva</i>s.</p>
+<p class="quote-block">7) "Again seven states lead towards a bad destiny, seven states lead towards a good destiny, and seven states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What seven states lead towards a bad destiny? They are: killing living beings, taking what is not given, adultery, false speech, divisive speech, harsh speech, and frivolous speech.</p>
+<p class="quote-block">"What seven states lead towards a good destiny? They are: not killing living beings, not stealing, not engaging in adultery, not deceiving, not speaking divisively, not speaking harshly, and not speaking frivolously.</p>
+<p class="quote-block">"What seven states lead towards Nirvāṇa? They are the seven factors of awakening: the awakening factor of mindfulness,<span class="note" id="dn34comp_2n18"><span class="details"><span class="p">[n.18] DĀ 12 at T I 59c26: 念覺意, translated by Ichimura 2016: 19f as "first, a <i>bhikṣu</i> practices the discipline of mindfulness on the basis of nondesire and quiescence, distancing [himself from worldly matters]", most of which has no basis in the original.</span></span></span> the awakening factor of investigation of phenomena, the awakening factor of energy, the awakening factor of tranquillity, the awakening factor of concentration, the awakening factor of joy,<span class="note" id="dn34comp_2n19"><span class="details"><span class="p">[n.19] [16] Joy seems to be out of sequence, as usually this awakening factor stands in fourth position. The sequence in which these factors are listed is significant, since they build upon one another; cf. MN 118 at MN III 85,8 and its parallel SĀ 810 at T II 208b15, and for a discussion of the meditative dynamics involved Anālayo 2013f: 231–235. Thus, whereas in the standard presentations the awakening factor of joy is the outcome of the awakening factor of energy (third) and leads on to the awakening factor of tranquillity (fifth), in DĀ 12 at T I 59c27 joy occurs in sixth position, between concentration and equanimity. This appears to be an error, since elsewhere in the same <i>Dīrgha-āgama </i>the standard sequence of the awakening factors can be found, with joy in fourth position; cf. DĀ 2 at T I 12a4, DĀ 9 at T I 52b8, DĀ 10 at T I 54b18, DĀ 11 at T I 58b2, DĀ 18 at T I 77a20, and DĀ 25 at T I 103b18. It seems less probable that such an error could have occurred during oral transmission, since a reciter who has memorized an <i>Āgama</i> collection could be expected to be sufficiently familiar with the standard sequence of the awakening factors. The same does not hold for a copyist, so that this change of sequence would more probably be an error that occurred in the written medium.</span></span></span> and the awakening factor of equanimity.</p>
+<p class="quote-block">8) "Again eight states lead towards a bad destiny, eight states lead towards a good destiny, and eight states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What eight states lead towards a bad destiny? They are the eight wrong practices: wrong view, wrong intention, wrong speech, wrong action, wrong livelihood, wrong effort, wrong mindfulness, and wrong concentration.</p>
+<p class="quote-block">"What eight states lead towards a good destiny? They are: worldly right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration.<span class="note" id="dn34comp_2n20"><span class="details"><span class="p">[n.20] Ichimura 2016: 20 translates: "They are the eight criteria of the secular world: gain and loss; infamy and fame; praise and blame; and suffering and happiness." None of this is found in the original.</span></span></span></p>
+<p class="quote-block">"What eight states lead towards Nirvāṇa? They are the [members of the] noble eightfold path: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration.</p>
+<p class="quote-block">9) "Again nine states lead towards a bad destiny, nine states lead towards a good destiny, and nine states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What nine states lead towards a bad destiny? They are the nine vexations: a person has encroached upon and vexed me, now encroaches upon and vexes me, or will encroach upon and vex me; he has encroached upon and vexed those who are dear to me, is encroaching upon and vexing them now, or will encroach upon and vex them; he had loving regard for those whom I dislike, has loving regard for them now, or will have loving regard for them.<span class="note" id="dn34comp_2n21"><span class="details"><span class="p">[n.21] On these nine cf. also Hartmann 2011.</span></span></span></p>
+<p class="quote-block">"What nine states lead towards a good destiny? They are the nine absences of vexation: 'He has encroached upon me' – what benefit would it be for me to be vexed by this? [Reflecting thus] vexation did not arise, vexation does not arise now, and vexation will not arise. 'He has encroached upon and vexed those who are dear to me' – what benefit would it be for me to be</p>
+<p class="quote-block">vexed by this? [Reflecting thus] vexation did not arise, vexation does not arise now, and vexation will not arise. 'He has loving regard for those whom I dislike' – what benefit would it be for me to be vexed by this? [Reflecting thus] vexation did not arise, vexation will not arise, and vexation does not arise now.<span class="note" id="dn34comp_2n22"><span class="details"><span class="p">[n.22] [17] DĀ 12 at T I 60a13: 已不生惱, 當不生惱, 今不生惱; thus here the past is followed directly by the future, and the present comes in last position, whereas in the presentation up to this point the occasions for being vexed proceed from past occasions via present ones to future ones, as is the case for an exposition of the same topic in DĀ 10 at T I 56b11. The change in sequence in DĀ 12 would be an unusual occurrence in oral material, where maintaining the same pattern throughout facilitates memorization and recitation. It would appear more probable for this type of variation to have come into being in the written medium.</span></span></span></p>
+<p class="quote-block">"What nine states lead towards Nirvāṇa? They are the nine states [productive] of joy:<span class="note" id="dn34comp_2n23"><span class="details"><span class="p">[n.23] [18] Adopting the variant 喜 instead of 善. In DĀ 10 at T I 56a26 and DĀ 11 at T I 58c21 the same set of nine is introduced as 九喜本. Ichimura 2015: 330 and 2016: 12 and 21 translates all such instances as "the nine roots of proper mental attention". The original rather refers to the nine roots of joy.</span></span></span> the first is joy [itself], the second is affection, the third is delight, the fourth is happiness, the fifth is concentration, the sixth is knowledge as it really is, the seventh is giving up, the eighth is dispassion, and the ninth is liberation.</p>
+<p class="quote-block">10) "Again ten states lead towards a bad destiny, ten states lead towards a good destiny, and ten states lead towards Nirvāṇa.</p>
+<p class="quote-block">"What ten states lead towards a bad destiny? They are the ten [courses of] unwholesomeness: the bodily [courses] of killing, stealing, and adultery; the verbal [courses] of divisive speech, abuse, false speech, and frivolous speech;<span class="note" id="dn34comp_2n24"><span class="details"><span class="p">[n.24] [19] DĀ 12 at T I 60a19: 口不兩舌, 惡罵, 妄言, 綺語, where the listing seems to be out of order, as usually false speech is the first of the verbal deeds in such tenfold listings; cf., e.g., MN 41 at MN I 286,25, MĀ 63 at T I 499b15, SĀ 490 at T II 128a18, SĀ2 198 at T II 446a26, and EĀ 48.1 at T II 786a3; giving one example from the Pāli discourses and from each of the other <i>Āgama</i>s. However, the same unusual sequence, with false speech in third position, recurs in the same <i>Dīrgha-āgama </i>collection in DĀ 10 at T I 57a25, which also agrees with DĀ 12 at T I 60a18 in listing 嫉妬 as the ninth of the ten courses of action, on which cf. above p. 300 note 17.</span></span></span> and the mental [courses] of covetousness, aversion, and wrong view.</p>
+<p class="quote-block">"What ten states lead towards a good destiny? They are the ten courses of wholesomeness: the bodily [courses] of not killing, stealing, or engaging in adultery; the verbal [courses] of no divisive speech, abuse, false speech, or frivolous speech; and the mental [courses] of no covetousness, aversion, or wrong view.</p>
+<p class="quote-block">"What ten states lead towards Nirvāṇa? They are the ten [members of the] straight path: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration, right liberation, and right knowledge.<span class="note" id="dn34comp_2n25"><span class="details"><span class="p">[n.25] [20] In the Pāli discourses, the two path factors of right knowledge and right liberation tend to occur in the opposite sequence; cf. in more detail Anālayo 2011b: 663.</span></span></span> Monks, in this way these ten states lead to reaching Nirvāṇa.</p>
+<p class="quote-block">"This is called the sublime true Dharma of the Three Groups. Being the Tathāgata, I have done for the assembly of my disciples what is appropriate, without deficiencies. Because of thoughts of concern for you, I have expounded this discourse on the path.</p>
+<p class="quote-block">"It is becoming for you to have also concern for yourself, you should dwell in secluded places, meditate at the root of trees. Do not be negligent. If you do not exert yourself now, later it will be of no benefit to harbour regrets."</p>
+<p class="quote-block">The monks who had heard what the Buddha had said were delighted and received it respectfully.</p>
+<p>In what follows I survey the structure of the exposition as well as the length and overall character of the Discourse on the Three Groups. A noteworthy feature of this discourse is the overall structure of its exposition. At times its adoption of a systematized mode of listing results in a nice match, such as when four out of the six forms of disrespect or respect – towards the Buddha, the Dharma, the community, and morality – are also the object of four out of the six recollections (6). Moreover, by dint of the topic they take up, the nine vexations (and their absence) stand in a meaningful relationship to the nine states of joy (9). Again, after the ten courses of unwholesomeness or wholesomeness it seems indeed fitting to continue with the tenfold path (10).</p>
+<p>Elsewhere, the items listed in the third group regarding what leads towards Nirvāṇa seem to have relatively little relation to the items listed in the two preceding groups regarding future destinies. This can be seen from the survey below in table 8, which from left to right lists the numerical group to which this applies, what in this group leads towards a bad or a good destiny, and what leads towards Nirvāṇa:</p>
+<table class="comparative-table">
+<caption>Table 8: Structure of DĀ 12</caption>
+<tr><th>Ones</th><th>benevolence and its opposite</th><th>mindfulness of the body</th></tr>
+<tr><td>Twos</td><td>morality and view</td><td>tranquillity and insight</td></tr>
+<tr><td>Threes</td><td>the three roots</td><td>the three concentrations</td></tr>
+<tr><td>Fours</td><td>the four types of speech</td><td>the four <i>satipaṭṭhāna</i>s</td></tr>
+<tr><td>Fives</td><td>the five precepts</td><td>the five faculties</td></tr>
+<tr><td>Sevens</td><td>the seven deeds</td><td>the seven awakening factors</td></tr>
+</table>
+<p>In the case of the Eights, the third group regarding what leads towards Nirvāṇa repeats the same factors that have already been listed in the previous group regarding what leads towards a good destiny (8). The difference between the two is that the listing of the factors that lead towards a good destiny begins with the qualification "worldly", 世, corresponding to <i>laukika </i>in Sanskrit and <i>loki</i><i>ya/lokika </i>in Pāli. This case appears to reflect a distinction of the eightfold path into worldly and supramundane manifestations, a distinction of considerable significance for Abhidharma thought.<span class="note" id="dn34comp_2n26"><span class="details"><span class="p">[n.26] [21] For a discussion of another instance where this distinction manifests in a Pāli discourse, in this case the <i>Mahācattārīsaka-sutta</i>, MN 117 at MN III 72,4, as apparently reflecting the influence of Abhidharma thought cf. Anālayo 2010d.</span></span></span></p>
+<p>In sum, the application of the systematized mode of listing from Ones to Tens only at times results in a meaningful unit for all three groups. In the majority of cases the third category of what leads towards Nirvāṇa does not appear to stand in a clear relationship with the other two groups that belong to the same number.</p>
+<p>In terms of overall length, the Discourse on the Three Groups is the shortest of the discourses found in the <i>Dīrgha-āgama</i>. Compared to the remaining discourses in this collection,<span class="note" id="dn34comp_2n27"><span class="details"><span class="p">[n.27] [22] In what follows I leave out the last discourse in this collection, DĀ 30 at T I 114b7 to 149c23. Due to its extreme length of five fascicles this discourse would further enhance the difference between DĀ 12 and the remainder of the long discourses in the collection.</span></span></span> the above translated discourse represents about 22% of the average length of a <i>Dīrgha-āgama </i>discourse.<span class="note" id="dn34comp_2n28"><span class="details"><span class="p">[n.28] [23] After removing the introduction, punctuation, translator's information, etc., from the digital CBETA edition of T 1, but leaving intact the titles, I arrive at 1,172 characters for DĀ 12 and 147,884 characters in total for the other twentyeight discourses (i.e., DĀ 1 to DĀ 11 and DĀ 13 to DĀ 29). It follows that the other discourses would have an average of 5,282 characters per discourse.</span></span></span> In the case of other discourses in the collection that are also relatively short, this is usually because they employ abbreviation.<span class="note" id="dn34comp_2n29"><span class="details"><span class="p">[n.29] [24] One example of a rather short discourse, although still longer than DĀ 12, is DĀ 29. DĀ 29 at T I 113c17 abbreviates the whole exposition of the gradual path. If this were given in full, DĀ 29 would be considerably longer.</span></span></span> The Discourse on the Three Groups, however, does not have any abbreviations at all.</p>
+<p>For being included in a collection of 'long' discourses, the Discourse on the Three Groups seems too short. The most natural explanation for this situation would be that this discourse only came into being as a derivative of another long discourse when the collection had already been formed.</p>
+<p>As already mentioned in the previous chapter, the exposition of what "should be cultivated" according to the <i>Dīrgha-āgama </i>version of the <i>Dasuttara-sutta </i>(DĀ 10) recurs in the Discourse on the Three Groups under the heading of what leads towards Nirvāṇa in the case of each set, from the Ones to the Tens.<span class="note" id="dn34comp_2n30"><span class="details"><span class="p">[n.30] [25] The corresponding states to be cultivated in DĀ 10 are: mindfulness of the body, T I 53a5; tranquillity and insight, T I 53a14; the three concentrations, T I 53a23; the four <i>satipaṭṭhāna</i>s (given with more details), T I 53b11; the five faculties, T I 53c3; the six recollections, T I 54a19; the seven factors of awakening (given with more details), T I 54b17; the noble eight[fold] path, T I 55a7; the nine states that are a basis for joy, T I 56a26; and the ten[fold] path, T I 57a19.</span></span></span> This appears to be the nucleus out of which the Discourse on the Three Groups evolved, namely by simply taking over the entire listing of states to be cultivated from the <i>Dasuttara-sutta</i>.<span class="note" id="dn34comp_2n31"><span class="details"><span class="p">[n.31] [26] At times these differ from the parallels to DĀ 10, e.g., the five states to be cultivated are not the five faculties, but rather the fivefold concentration in DN 34 at DN III 277,25 and five types of concentration in T 13 at T I 234b21 (the implications of the similar expressions in these two versions differ).</span></span></span></p>
+<p>The exposition of what leads to either a bad destiny or else a good one in the Discourse on the Three Groups corresponds to what leads to decline or else to increase according to the <i>Dīrgha-</i><i>āgama </i>version of the <i>Dasuttara-sutta</i> in the case of the Twos, Threes, Sixes, Nines, and Tens.<span class="note" id="dn34comp_2n32"><span class="details"><span class="p">[n.32] [27] The states leading to decline or increase in DĀ 10 are: breaches of morality and destructive views as opposed to being endowed with morality and [right] view, T I 53a15; the three unwholesome and wholesome roots, T I 53a26; the six [forms] of disrespect and respect, T I 54a23; the nine vexations and their absence, T I 56b11; and the ten courses of unwholesomeness and of wholesomeness, T I 57a24.</span></span></span> Moreover, in the case of the Eights the states that lead to a bad destiny in the Discourse on the Three Groups correspond to what should be "extinguished" according to the <i>Dīrgha-āgama</i> version of the <i>Dasuttara-sutta</i>.<span class="note" id="dn34comp_2n33"><span class="details"><span class="p">[n.33] [28] This is the eightfold wrong path in DĀ 10 at T I 55a10.</span></span></span></p>
+<p>This last case is of further interest, since the <i>Dīrgha-āgama </i> version of the <i>Dasuttara-sutta</i> actually has in two categories what the Discourse on the Three Groups presents in a threefold manner. The <i>Dīrgha-āgama </i>version of the<i> Dasuttara-sutta</i> just lists the noble eightfold path as what should be cultivated, and its opposite as what should be extinguished. The Discourse on the Three Groups develops this into a threefold presentation by distinguishing between "worldly" manifestations of the eight path factors as what leads towards a good destiny and the noble eightfold path as what leads towards Nirvāṇa. As already mentioned above, this mode of presentation appears to reflect Abhidharma thought.<span class="note" id="dn34comp_2n34"><span class="details"><span class="p">[n.34] [29] For a more detailed examination of the relation of discourse summaries, such as the <i>Saṅgīti-sutta</i>, the <i>Dasuttara-sutta</i>, etc., to emerging Abhidharma thought cf. Anālayo 2014c.</span></span></span></p>
+<p>In sum, as already noted in the previous chapter, the Discourse on the Three Groups (DĀ 12) seems to be a derivative of the <i>Dīrgha-āgama </i>version of the <i>Dasuttara-sutta </i>(DĀ 10), similar to the case of the Discourse Increasing by One (DĀ 11).<span class="note" id="dn34comp_2n35"><span class="details"><span class="p">[n.35] [30] Warder 1982: xxxi to xxxiv notes that the Pāli parallel to DĀ 10, the <i>Dasuttara-sutta </i>(DN 34), has had an influence on the <i>Paṭisambhidāmagga</i>.</span></span></span> Whereas the Discourse Increasing by One is simply a straightforward extract from the <i>Dīrgha-āgama</i> version of the <i>Dasuttara-sutta</i>, the Discourse on the Three Groups is based on such an extract in the case of its third category, regarding what leads towards Nirvāṇa. The other two categories – what leads towards a bad or a good destiny – are in part inspired by this <i>Dasuttara-sutta</i>. In the case of the Eights, an existing topic has been rephrased in such a way as to make room for what appears to be emerging Abhidharma thought.</p>
+<hr class="chapter-divider">
+<h3>Conclusion</h3>
+<p>Comparing the Discourse on the Three Groups with the <i>Saṅ</i><i>gīti-sutta</i> makes the advantages of such a short and at the same time systematized presentation immediately apparent. The concise nature of the material makes it fairly easy to memorize the discourse. This is further enhanced by the threefold grouping, which provides a basic pattern that facilitates recognition if a failure of memory occurs.</p>
+<p>At the same time, this discourse also shows the limitations that naturally arise when a particular scheme is applied consistently to a numerically ascending series of items. Occasionally, it seems as though the demands of the system lead to filling out an empty slot in a way whose practical relevance is not easily discerned.</p>
+<p>This neatly exemplifies the unintended results that can emerge from an attempt to provide the disciples of the Buddha with succinct summaries of the Dharma, maps to be memorized, contemplated, and recited as a way of ensuring proper understanding of the teachings and communal harmony.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn34.html">DN34</a>: Dasuttara Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

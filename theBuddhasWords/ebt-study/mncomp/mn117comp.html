@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 117 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 117: Mahācattārīsaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn116comp.html#content"></a><a id="next-sutta" href="./mn118comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn117.html">MN 117</a> / <a href="../../parallels/ma189.html">MĀ 189</a> / <a href="../../parallels/sa785.html">SĀ 785 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahācattārīsaka-sutta, the “discourse on the great forty”, examines the noble eightfold path from the perspective of its eighth and final factor, right concentration. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn117n92"><span class="details"><span class="p">[n.92] The parallel is <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735b-736c and has the title “discourse on the noble path”, 聖道經. As already noted by Skilling 1997a: 341, Abhidh-k-ṭ at D (4094) mngon pa, ju 235b4 or Q (5595) tu 269a5 agrees with <a href="../../mn/mn117.html">MN 117</a> on the title “great forty”, chen po bzhi bcu, cf. also the *Mahāvibhāṣā, T 1545 at T XXVII 911c1: 大四十法門經. While <a href="../../mn/mn117.html">MN 117</a> has Jeta’s Grove by Sāvatthī as its location, <a href="../../parallels/ma189.html">MĀ 189</a> takes place at Kammāsadhamma in the Kuru country. <a href="../../parallels/ma189.html">MĀ 189</a> has been translated into English in Anālayo 2010i and into German in Meisig 1987a.</span></span></span> Another parallel can be found in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn117n93"><span class="details"><span class="p">[n.93] Abhidh-k-ṭ at D (4094) mngon pa, nyu 43b7-47b4 or Q (5595) thu 83a7-87b2; cf. also Abhidh-k 6:75 in Pradhan 1967: 387,14, paralleling <a href="../../mn/mn117.html">MN 117</a> at MN III 76,7, with its Chinese counterparts in T 1558 at T XXIX 6c2 and in T 1559 at T XXIX 166c24. For further discourse quotations in Abhidh-k-ṭ cf. below notes 95 and 105.</span></span></span> A few lines of this discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn117n94"><span class="details"><span class="p">[n.94] The fragments are SHT V 1125 (p. 120) and SHT VIII 1919A (p. 100, identified in SHT XI). SHT V 1125R1-2 has part of the summing up of the exposition into two sets of twenty, found in <a href="../../mn/mn117.html">MN 117</a> at MN III 77,21-24, while R3 has preserved part of the shift from the eightfold noble path of the disciple in training to the tenfold noble path of the arahant, found in <a href="../../mn/mn117.html">MN 117</a> at MN III 76,7, cf. also SHT VIII 1919A1- 2, although this exposition in the Sanskrit version seems to have been formulated in a manner that dif- fers from the presentation in <a href="../../mn/mn117.html">MN 117</a> and also appears to have stood at a different point in the Sanskrit version, namely right after the summing up of the exposition into two sets of twenty.</span></span></span></p>
+<p>The Mahācattārīsaka-sutta and its parallels approach their subject by defining right concentration as one-pointedness of the mind that is supported by the other seven factors of the noble eightfold path.<span class="note" id="mn117n95"><span class="details"><span class="p">[n.95] A discourse quotation paralleling the definition of right concentration, given in <a href="../../mn/mn117.html">MN 117</a> at MN III 71,20, can be found in Abhidh-k 8:8 in Pradhan 1967: 438,5; cf. also T 1559 at T XXIX 298a20 and Abhidhk-ṭ at D (4094) mngon pa, nyu 72b4 or Q (5595) thu 117a7.</span></span></span> This definition, unlike the more common definition of right concentration by way of the four jhānas,<span class="note" id="mn117n96"><span class="details"><span class="p">[n.96] E.g., <a href="../../dn/dn22.html">DN 22</a> at DN II 313,12, a definition also found in <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736b16.</span></span></span> highlights the importance of developing concentration as part of a comprehensive practice of the noble eightfold path.<span class="note" id="mn117n97"><span class="details"><span class="p">[n.97] The same definition can also be found in <a href="../../dn/dn18.html">DN 18</a> at DN II 217,1 and <a href="../../sn/sn45.28.html">SN 45:28</a> at SN V 21,15. <a href="../../dn/dn33.html">DN 33</a> at DN III 252,4 and <a href="../../an/an7.42.html">AN 7:42</a> at AN IV 40,20 implicitly refer to the same type of presentation; cf. also the Yogācārabhūmi, Delhey 2009a: 202,2 and T 1579 at T XXX 340a4.</span></span></span></p>
+<p>Before coming to this definition of right concentration, the Madhyama-āgama version introduces right concentration as the “single way” for the purification of beings,<span class="note" id="mn117n98"><span class="details"><span class="p">[n.98] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c1: 一道.</span></span></span> thereby making use of a qualification that the Madhyama-āgama parallel to the Satipaṭṭhāna-sutta uses in relation to the four satipaṭṭhānas.<span class="note" id="mn117n99"><span class="details"><span class="p">[n.99] <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582b9: 一道, being the counterpart to ekāyano maggo in <a href="../../dn/dn22.html">DN 22</a> at DN II 290,8 and <a href="../../mn/mn10.html">MN 10</a> at MN I 55,31, and to 一入道 in <a href="../../parallels/ea12.1.html">EĀ 12.1</a> at T II 568a2, cf. also above p. 75 note 245. Meisig 1987a: 224-225 suggests that the 一道 passage was subsequently introduced into <a href="../../parallels/ma189.html">MĀ 189</a> from its original occurrence in the satipaṭṭhāna context.</span></span></span> The discourse quotation in Śamathadeva’s commentary has a similar passage, although it speaks of the “single vehicle” for the purification of beings.<span class="note" id="mn117n100"><span class="details"><span class="p">[n.100] D (4094) mngon pa, nyu 44a2 or Q (5595) thu 83b1: theg pa ni gcig; on the similar rendering 一乘 in Chinese translations cf. the study by Nattier 2007.</span></span></span></p>
+<p>The Madhyama-āgama discourse follows its definition of right concentration by describing the conditional dependence of each path factor on the preceding one, a statement found at a later point also in the Pāli and Tibetan versions.<span class="note" id="mn117n101"><span class="details"><span class="p">[n.101] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c8, <a href="../../mn/mn117.html">MN 117</a> at MN III 76,1, and D (4094) mngon pa, nyu 46b1 or Q (5595) thu 86a6, a presentation also found in <a href="../../dn/dn18.html">DN 18</a> at DN II 217,4 and <a href="../../sn/sn45.1.html">SN 45:1</a> at SN V 2,1; for a comparable statement cf. also <a href="../../parallels/sa748.html">SĀ 748</a> at T II 198b8.</span></span></span> At the conclusion of this conditioned sequence, the Madhyama-āgama and Tibetan versions declare that a noble disciple, who has acquired right concentration in this way, will soon reach awakening.<span class="note" id="mn117n102"><span class="details"><span class="p">[n.102] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c10 and D (4094) mngon pa, nyu 46b3 or Q (5595) thu 86a7.</span></span></span></p>
+<p>The three versions highlight the role of right view as a precursor to the other path factors, since based on right view and with the support of right effort and right mindfulness the other path factors can be developed. The task of right view is to differentiate between right and wrong manifestations of the first five path factors. Right effort is the actual endeavour to overcome wrong path factors and to develop their right counterparts, while right mindfulness is the presence of mindfulness required for this task.<span class="note" id="mn117n103"><span class="details"><span class="p">[n.103] For the first path factor this treatment can be found in <a href="../../mn/mn117.html">MN 117</a> at MN III 71,24, with its counterparts in <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c13 and D (4094) mngon pa, nyu 44b4 or Q (5595) thu 84a5. While <a href="../../mn/mn117.html">MN 117</a> continues in the same way, <a href="../../parallels/ma189.html">MĀ 189</a> differs in as much as its exposition of the relation of right view to each path factor does not conclude that the distinction between right and wrong factors is an implementation of right view, but rather of the respective factor itself. Thus in the case of right action, for example, <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736a15 indicates that “when he sees wrong action as wrong action, this is reckoned right action, when he sees right action as right action, that is also reckoned right action”, 若見邪業是邪業者, 是謂正業, 若見正業是正業者, 亦謂 正業. As Meisig 1987a: 238 note 27 points out, this is obviously a textual error. A comparable error occurs also in Abhidh-k-ṭ, which in the context of describing the role of effort and mindfulness for abandoning wrong intention and arousing right intention speaks of ‘view’, when ‘intention’ would instead be required, D (4094) mngon pa nyu 45a2 or Q (5595) thu 84b4, thereby confusing log par rtog pa and yang dag pa’i rtog pa with log par lta ba and yang dag pa’i lta ba. This error differs from the one found in <a href="../../parallels/ma189.html">MĀ 189</a>, as it replaces the path-factor with view, whereas <a href="../../parallels/ma189.html">MĀ 189</a> replaces view with the path-factor. Nevertheless, the similarity in type of this error shows how in such a repetitive exposition such confusion can easily arise during the transmission of the texts.</span></span></span></p>
+<p>When examining individual path factors, the Majjhima-nikāya version expounds the path factors view, intention, speech, action, and livelihood in a threefold manner, by distinguishing between manifestations of these path factors that are:</p>
+<ul>
+<li>wrong,</li>
+<li>right,</li>
+<li>supramundane.</li>
+</ul>
+<p>The presentation of the wrong and right manifestations of these path factors is fairly similar in the three versions. A noteworthy difference is that the Madhyama-āgama version does not mention the denial of the existence of spontaneously arisen beings in its exposition of wrong view, nor does it stipulate belief in their existence when describing right view.<span class="note" id="mn117n104"><span class="details"><span class="p">[n.104] <a href="../../mn/mn117.html">MN 117</a> at MN III 71,29 (wrong view:) n’ atthi sattā opapātikā and MN III 72,11 (right view): atthi sattā opapātikā, a stipulation not found in the corresponding sections in <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c17+20. On sattā opapātikā cf. also Manné 1995: 78-80 and Windisch 1908: 184-194.</span></span></span> Occurrences of similar listings in the Madhyama-āgama, in the Ekottarika-āgama and in several Chinese Vinayas also do not mention spontaneously arisen beings.<span class="note" id="mn117n105"><span class="details"><span class="p">[n.105] <a href="../../parallels/ma15.html">MĀ 15</a> at T I 437c28, <a href="../../parallels/ma124.html">MĀ 124</a> at T I 613b25, <a href="../../parallels/ea26.5.html">EĀ 26.5</a> at T II 636b4, <a href="../../parallels/ea28.1.html">EĀ 28.1</a> at T II 647a11, <a href="../../parallels/ea29.1.html">EĀ 29.1</a> at T II 655a28, <a href="../../parallels/ea35.7.html">EĀ 35.7</a> at T II 700a7, <a href="../../parallels/ea42.1.html">EĀ 42.1</a> at T II 747a26, T 127 at T II 835a1, T 212 at T IV 639b2, the Mahīśāsaka Vinaya, T 1421 at T XXII 133b6, the Mahāsāṅghika Vinaya, T 1425 at T XXII 427c4 (this seems rather abbreviated), the Sarvāstivāda Vinaya, T 1435 at T XXIII 241c25 (not taking into account occurrences that are explicitly attributed to one of the six heretical teachers, but only occurrences where this listing functions as an instance of wrong view). Spontaneously arisen beings are also not mentioned in a definition of right view in the Arthaviniścaya-sūtra in Samtani 1971: 35,5. Another relevant instance is <a href="../../parallels/sa1039.html">SĀ 1039</a> at T II 271c14, which in what is the counterpart to a reference to spontaneously arisen beings in <a href="../../an/an10.176.html">AN 10:176</a> at AN V 265,23 has the statement: “there are no living beings born in the world”, 無眾生生世間, a formulation that leaves it open to interpretation if it refers to beings being reborn in general or in a ‘spontaneous’ manner. That the point at stake would indeed be spontaneous rebirth can be seen from the Tibetan parallel to the same type of reference, albeit in the positive mode, found in <a href="../../parallels/sa784.html">SĀ 784</a> at T II 203a7 to 有眾生生, in which case the corresponding passage in Abhidh-k-ṭ at D (4094) mngon pa, ju 206a5 or Q (5595) tu 235a7 reads sems can rdzus te byung ba yod do. The same expression 有眾生生 in <a href="../../parallels/ma71.html">MĀ 71</a> at T I 525b15, however, appears to rather intend rebirth as such, as becomes clear from its use throughout the discourse, even though the parallel <a href="../../dn/dn23.html">DN 23</a> at DN II 318,18 does refer to spontaneously reborn beings. An explicit reference to the existence of spontaneously arisen beings can be found in a description of wrong view in the (Mūla-)Sarvāstivāda Vinaya, T 1442 at T XXIII 692c8: 無化生有情於此世間. A reference to spontaneously arisen beings occurs also in Abhidh-k 9 in Lee 2005: 90,1 or Pradhan 1967: 468,9, which reads nāsti sattva upapāduka iti mithyādṛṣṭiḥ, paralleling <a href="../../mn/mn117.html">MN 117</a> at MN III 71,29, cf. also T 1558 at T XXIX 155b10, T 1559 at T XXIX 306c9, and Abhidh-k-ṭ at D (4094) mngon pa, nyu 86a4 or Q (5595) thu 132b7.</span></span></span> Thus, according to these versions, to believe in the existence of spontaneously arisen beings would not be required for establishing right view. The Tibetan counterpart to the Mahācattārīsaka-sutta, however, does mention spontaneously arisen beings in its presentation of wrong and right view.<span class="note" id="mn117n106"><span class="details"><span class="p">[n.106] D (4094) mngon pa, nyu 44a6 and 44b2 or Q (5595) thu 83b7 and 84a3: sems can rdzus (Q: brdzus) te byung ba rnams.</span></span></span></p>
+<p>Another and rather major difference is that the Madhyama-āgama discourse and the Tibetan version do not have the supramundane manifestations of the path factors, found in the Majjhima-nikāya version, at all (see below table 12.6).<span class="note" id="mn117n107"><span class="details"><span class="p">[n.107] For a more detailed discussion of this difference cf. Anālayo 2005c: 98-100.</span></span></span> Notably, the Mahācattārīsaka-sutta is the only discourse in the Pāli Nikāyas that features such a presentation of the path factors defined as “supramundane”.<span class="note" id="mn117n108"><span class="details"><span class="p">[n.108] The importance of this unique supramundane description of the path factors can be seen in a discussion on the nature of the supramundane noble path, depicted in the commentary on the Vibhaṅga at Vibh-a 320,26, according to which a monk should ask another monk if he is a “reciter of the ‘great forty’”, tvaṃ tāva mahācattāḷīsakabhāṇako hosi? This question shows the significance of the present discourse, whose recall the commentaries consider an indispensable requirement for being able to engage in a discussion on the supramundane noble path. Mori 1990: 125 takes the expression mahācattārīsakabhāṇaka to be an example of “Bhāṇakas who further specialized in some particular suttas” (Adikaram 1946/1994: 31 and Goonesekera 1968: 689, in their surveys of the bhāṇaka tradition, simply list the mahācattārīsakabhāṇaka without attempting an explanation). Alternatively, the expression mahācattārīsakabhāṇaka may also be just a form of inquiring if the other monk remembered the exposition given in this particular discourse, equivalent to asking him: mahācattārīsakaṃ dhāresi? Be that as it may, the use of the term mahācattārīsakabhāṇaka definitely highlights the importance of the exposition of the noble eightfold path given in <a href="../../mn/mn117.html">MN 117</a>, which due to its uniqueness in the Pāli discourses would have been (and still is) an important reference point for discussions on the supramundane path.</span></span></span></p>
+<p>According to the preamble found in all versions of the discourse, the main intent of the present exposition was to show the supportive function of the other seven path factors for right concentration. That is, the point at stake does not seem to have been an exposition of the path factors individually, but rather their interrelation as a basis for developing right concentration, and in particular the function of right view, right effort, and right mindfulness as means of correction and support for the other path factors.<span class="note" id="mn117n109"><span class="details"><span class="p">[n.109] Meisig 1987a: 233.</span></span></span> This intent of the exposition would not require a supramundane description of the path factors. Hence, it seems quite possible that the exposition of the supramundane path factors is a later expansion of the present discourse. Perhaps an early commentary on the Mahācattārīsaka-sutta developed such a treatment of the path factors from the supramundane perspective of path attainment. What originally may have been only an alternative mode of explanation preserved in an oral commentary, during the process of transmission could then have become part of the discourse itself.</p>
+<p>A somewhat similar exposition of the path factors in their supramundane manifestation can be found in a discourse in the Saṃyukta-āgama, which distinguishes all eight path factors into worldly and supramundane manifestations.<span class="note" id="mn117n110"><span class="details"><span class="p">[n.110] <a href="../../parallels/sa785.html">SĀ 785</a> at T II 203a21, for a translation cf. Anālayo 2010i; a small section of a parallel to <a href="../../parallels/sa785.html">SĀ 785</a> has been preserved in Uighur, cf. fragment Ga6-7 in Kudara 1983: 302.</span></span></span> The description of the first five supramundane path factors in this Saṃyukta-āgama discourse is similar to the corresponding sections in the Mahācattārīsaka-sutta.</p>
+<p>Unlike the Mahācattārīsaka-sutta, however, this Saṃyukta-āgama discourse only takes up right path factors in their worldly and supramundane manifestations, without covering wrong manifestations of the path factors. The Saṃyukta-āgama discourse also does not mention the role of right view, right effort, and right mindfulness in relation to each path factor. These differences make it clear that this Saṃyukta-āgama discourse would not be a parallel to the Mahācattārīsaka-sutta.</p>
+<p>Nevertheless, the occurrence of an exposition of the supramundane path factors in a Saṃyukta-āgama discourse shows that different Buddhist traditions gave importance to this type of presentation. Its occurrence further supports the assumption that this type of treatment could stem from an early Indian exegetical tradition, which during the course of transmission could have made its way into the Mahācattārīsaka-sutta in the case of the Pāli tradition and into the Saṃyukta-āgama discourse in the case of the reciter tradition that transmitted this particular discourse collection.</p>
+<p>Another difference between the Mahācattārīsaka-sutta and its parallels is that the Chinese and Tibetan versions extend their treatment to the path factors right effort, right mindfulness, and right concentration, with the Madhyama-āgama version also mentioning right liberation and right knowledge (see table 12.6).<span class="note" id="mn117n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736b8.</span></span></span></p>
+<p>Yet, in all versions right concentration has already been defined as one-pointedness of the mind endowed with the other seven path factors, while right effort and right mindfulness have been defined as the effort and the mindfulness required for establishing the right manifestations of the other path factors. Hence, it seems redundant to treat these path factors once more.</p>
+<p>Moreover, whereas in regard to the earlier path factors the Chinese and Tibetan versions invariably conclude each treatment by highlighting the cooperative action of right view, right effort, and right mindfulness, the same is absent from their exposition of the remaining three path factors. Nor do they provide a contrast to wrong manifestations of these path factors.</p>
+<p>The Chinese and Tibetan versions also differ in the definitions they employ. Whereas the Chinese version uses the standard descriptions of the four right efforts, the four satipaṭṭhānas, and the four absorptions, the Tibetan version instead defines these three path factors by listing several synonyms for effort, mindfulness, and concentration in turn.</p>
+<p>This makes it highly probable that the additional treatment of these three path factors was added during the process of transmission, with the reciter(s) supplying the ‘missing’ parts, perhaps even unintentionally, from the standard treatment of this subject found elsewhere in the discourses.<span class="note" id="mn117n112"><span class="details"><span class="p">[n.112] Cf. also Meisig 1987a: 230. In fact, whereas the earlier part of <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c3 was concerned with a definition of “noble right concentration”, 聖正定, just as its counterpart <a href="../../mn/mn117.html">MN 117</a> at MN III 71,16: ariyo sammāsamādhi, the present part in <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736b16 speaks merely of “right concentration”, 正 定, a change of terminology that supports the impression that this part of the discourse may be a later expansion or addition. The Tibetan version, however, speaks from the outset only of “right concentration”, without further qualifying it as “noble”, cf. D (4094) mngon pa, nyu 44a2 or Q (5595) thu 83b1: yang dag pa’i ting nge ’dzin.</span></span></span> This impression is further strengthened by the circumstance that the Madhyama-āgama stands alone in mentioning right liberation and right knowledge at this point.</p>
+<table class="comparative-table">
+<caption>Table 12.6: Survey of Path Factors in <a href="../../mn/mn117.html">MN 117</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn117.html">MN 117</a></th><th><a href="../../parallels/ma189.html">MĀ 189</a></th><th>Abhidh-k-ṭ</th></tr>
+<tr><td>wrong view (1)</td><td>wrong view (→ 1)</td><td>wrong view (→ 1)</td></tr>
+<tr><td>right view (2)</td><td>right view (→ 2)</td><td>right view (→ 2)</td></tr>
+<tr><td>supramundane right view (3)</td><td>wrong intention (→ 4)</td><td>wrong intention (→ 4)</td></tr>
+<tr><td>wrong intention (4)</td><td>right intention (→ 5)</td><td>right intention (→ 5)</td></tr>
+<tr><td>right intention (5)</td><td>wrong speech (→ 7)</td><td>wrong speech (→ 7)</td></tr>
+<tr><td>supramundane right intention (6)</td><td>right speech (→ 8)</td><td>right speech (→ 8)</td></tr>
+<tr><td>wrong speech (7)</td><td>wrong action (→ 10)</td><td>wrong action (→ 10)</td></tr>
+<tr><td>right speech (8)</td><td>right action (→ 11)</td><td>right action (→ 11)</td></tr>
+<tr><td>supramundane right speech (9)</td><td>wrong livelihood (→ 13)</td><td>wrong livelihood (→ 13)</td></tr>
+<tr><td>wrong action (10)</td><td>right livelihood (→ 14)</td><td>right livelihood (→ 14)</td></tr>
+<tr><td>right action (11)</td><td>right effort</td><td>right effort</td></tr>
+<tr><td>supramundane right action (12)</td><td>right mindfulness</td><td>right mindfulness</td></tr>
+<tr><td>wrong livelihood (13)</td><td>right concentration</td><td>right concentration</td></tr>
+<tr><td>right livelihood (14)</td><td>right liberation</td><td></td></tr>
+<tr><td>supramundane right livelihood (15)</td><td>right knowledge</td><td></td></tr>
+<tr><td></td><td>(≠ 3, 5, 9, 12, 15)</td><td>(≠ 3, 5, 9, 12, 15)</td></tr>
+</table>
+<p>The Mahācattārīsaka-sutta and the Tibetan version continue by depicting the conditional dependence of each path factor on the preceding one, a treatment that the Madhyama-āgama version already took up at an earlier point. In all versions, this exposition is complementary to their earlier depiction of right view, right effort, and right mindfulness as necessary conditions for the implementation of the path factors right speech, right action, and right livelihood, thereby highlighting the conditional interrelatedness of the factors of the noble eightfold path.</p>
+<p>The Mahācattārīsaka-sutta and its parallels extend their examination to the ten-factored path of an arahant, followed by indicating that each of the ten right factors serves the purpose of overcoming its wrong counterpart.<span class="note" id="mn117n113"><span class="details"><span class="p">[n.113] A description of how the right path factors overcome their wrong counterparts can also be found in <a href="../../dn/dn34.html">DN 34</a> at DN III 291,13 and in <a href="../../an/an10.106.html">AN 10:106</a> at AN V 215,1, cf. also the Daśottara-sūtra fragment 679 folio 23R in Schlingloff 1962a: 12 and its Chinese counterpart <a href="../../parallels/da10.html">DĀ 10</a> at T I 57b14.</span></span></span></p>
+<p>Another difference between the parallel versions can be found in the sequence in which they present the final two factors, as right knowledge precedes right liberation in the Pāli version,<span class="note" id="mn117n114"><span class="details"><span class="p">[n.114] The sequence found in <a href="../../mn/mn117.html">MN 117</a> at MN III 76,6 appears to be standard in the Pāli discourses, some of which indicate that right knowledge is the factor that leads to right liberation. This suggests that right knowledge stands for penetrative insight, for seeing things as they truly are, which then issues in realization, in fact <a href="../../dn/dn18.html">DN 18</a> at DN II 217,10 explicitly indicates that sammāñāṇassa sammāvimutti pahoti. Ñāṇa similarly precedes vimutti in <a href="../../dn/dn17.html">DN 17</a> at DN II 217,10, <a href="../../dn/dn33.html">DN 33</a> at DN III 271,9, <a href="../../dn/dn34.html">DN 34</a> at DN III 292,2, <a href="../../mn/mn8.html">MN 8</a> at MN I 44,15, <a href="../../mn/mn65.html">MN 65</a> at MN I 447,2, <a href="../../mn/mn78.html">MN 78</a> at MN II 29,9, <a href="../../sn/sn55.26.html">SN 55:26</a> at SN V 384,1, <a href="../../an/an3.140.html">AN 3:140</a> at AN I 292,8, <a href="../../an/an4.89.html">AN 4:89</a> at AN II 89,35, <a href="../../an/an4.206.html">AN 4:206</a> at AN II 222,12, <a href="../../an/an4.208.html">AN 4:208</a> at AN II 223,28, <a href="../../an/an4.210.html">AN 4:210</a> at AN II 225,15, <a href="../../an/an10.103.html">AN 10:103</a>-166 at AN V 212-249, <a href="../../an/an10.218.html">AN 10:218</a> at AN V 310,12, and <a href="../../an/an11.11.html">AN 11:11</a> at AN V 327,15. The Chinese Āgamas usually follow the sequence found in <a href="../../parallels/ma189.html">MĀ 189</a>, with right knowledge coming only after right liberation, cf., e.g., <a href="../../parallels/da10.html">DĀ 10</a> at T I 57b17, <a href="../../parallels/da11.html">DĀ 11</a> at T I 59a25, <a href="../../parallels/da12.html">DĀ 12</a> at T I 60a22, <a href="../../parallels/sa481.html">SĀ 481</a> at T II 122c6, and <a href="../../parallels/sa750.html">SĀ 750</a> at T II 198c10. An exception can be found in <a href="../../parallels/da9.html">DĀ 9</a> at T I 52c8, where right knowledge precedes right liberation. Yet, <a href="../../parallels/da9.html">DĀ 9</a> at T I 52c7 also has right mindfulness before right effort, which suggests that the presentation in this discourse may have suffered from a transmission or translation error. The sequence found in <a href="../../parallels/ma189.html">MĀ 189</a> recurs also in the Sanskrit fragments of the Saṅgītisūtra and the Daśottara-sūtra, cf. fragment K 484m2Rb in Stache-Rosen 1968: 35 and fragment 679 folio 23R4 in Schlingloff 1962a: 12. Notably, the Pāli discourses that refer to right knowledge do not seem to specify the implications of right knowledge or to offer further explanations on its significance. The type of knowledge that in the discourses usually precedes liberation is insight into the four noble truths. Such insight, however, could also be considered as an instance of right view, which the discourses in fact explicitly define as insight into the four noble truths, cf., e.g., <a href="../../dn/dn22.html">DN 22</a> at DN II 312,1. On sammā ñāṇa in the Pāli discourses cf. also Bucknell 1984: 9-10, 15, and 31 and id. 1986: 6-7.</span></span></span> whereas in the Chinese and Tibetan versions right knowledge follows right liberation.</p>
+<p>The Madhyama-āgama version also offers an explanation of right knowledge. According to its presentation, right knowledge stands for the retrospective knowing that right liberation has been reached by becoming free from lust, anger, and delusion.<span class="note" id="mn117n115"><span class="details"><span class="p">[n.115] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736b19: “knowing that the mind has been liberated from sensual desire, knowing that the mind has been liberated from anger and from delusion, this is reckoned right knowledge”, 知欲心 解脫, 知恚癡心解脫, 是謂正智也; for a similar definition cf. also <a href="../../parallels/sa750.html">SĀ 750</a> at T II 198c11. This explanation squares well with the Pāli commentaries, according to which right knowledge represents reviewing knowledge, cf. Ps I 189,1: paccavekkhaṇāñāṇaṃ sammāñāṇan ti vuccati, cf. also Ps IV 134,24, which glosses the occurrence of sammāñāṇa in <a href="../../mn/mn117.html">MN 117</a> with maggapaccavekkhaṇa and phalapaccavekkhaṇa. On this commentarial explanation, right knowledge should indeed be placed after right liberation, not before it. Such retrospective knowledge of liberation is part of the standard description of realization in the Pāli discourses, which invariably speak of knowing that birth has been destroyed, the holy life has been lived, what had to be done has been done, etc., cf., e.g., <a href="../../dn/dn2.html">DN 2</a> at DN I 84,10. The same is also reflected in another type of presentation in the Pāli discourses, where the aggregate of liberation is followed by the aggregate of “knowledge and vision of liberation”, cf., e.g., <a href="../../sn/sn3.24.html">SN 3:24</a> at SN I 100,2 (or SN2 135 at SN2 I 222,16), <a href="../../sn/sn6.2.html">SN 6:2</a> at SN I 139,18 (or SN2 173 at SN2 I 304,22), <a href="../../sn/sn47.13.html">SN 47:13</a> at SN V 162,20, <a href="../../an/an3.57.html">AN 3:57</a> at AN I 162,7, <a href="../../an/an5.107.html">AN 5:107</a> at AN III 134,15, <a href="../../an/an5.250.html">AN 5:250</a> at AN III 271,12, <a href="../../an/an10.12.html">AN 10:12</a> at AN V 16,25, and It 4:5 at It 108,3. In the same type of presentation, however, the aggregate of liberation is preceded by the aggregate of wisdom, which would thus mirror the position given in the Pāli discourse to right knowledge in respect to right liberation.</span></span></span></p>
+<p>The Mahācattārīsaka-sutta and its parallels sum up their exposition by adding up the ten wholesome factors, the ten wholesome states originating from them, the ten unwholesome factors, and the ten unwholesome states originating for them, thereby arriving at a final count of forty.<span class="note" id="mn117n116"><span class="details"><span class="p">[n.116] A discourse quotation from this section can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 911c1.</span></span></span></p>
+<p>The Majjhima-nikāya version proclaims that the Dharma instruction on the great forty has been set rolling and cannot be stopped from rolling by any recluse or Brahmin,<span class="note" id="mn117n117"><span class="details"><span class="p">[n.117] <a href="../../mn/mn117.html">MN 117</a> at MN III 77,26: mahācattārīsako dhammapariyāyo pavattito appaṭivattiyo samaṇena vā brāhmaṇena vā (Ce-MN III 220,34: mahācattārisako). The use of the verb “rolling” in this context is unusual, as elsewhere the Pāli discourses use this term in relation to rolling the wheel of the Dharma, but do not speak of “rolling” in relation to a discourse or an instruction, cf. <a href="../../dn/dn16.html">DN 16</a> at DN II 140,25, <a href="../../mn/mn111.html">MN 111</a> at MN III 29,15, <a href="../../mn/mn141.html">MN 141</a> at MN III 248,6, <a href="../../sn/sn8.7.html">SN 8:7</a> at SN I 191,13 (or SN2 215 at SN2 I 412,4), <a href="../../sn/sn56.11.html">SN 56:11</a> at SN V 423,16, <a href="../../an/an1.13.html">AN 1:13</a> at AN I 23,10, <a href="../../an/an3.14.html">AN 3:14</a> at AN I 110,26, <a href="../../an/an5.131.html">AN 5:131</a> at AN III 148,10, <a href="../../an/an5.132.html">AN 5:132</a> at AN III 149,3, <a href="../../an/an5.133.html">AN 5:133</a> at AN III 151,8, and Sn 3:8 at Sn 557.</span></span></span> with the Madhyama-āgama and Tibetan versions referring to this Dharma instruction on the forty as a divine wheel (literally: Brahmā’s wheel).<span class="note" id="mn117n118"><span class="details"><span class="p">[n.118] <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736c2: 梵輪 and D (4094) mngon pa, nyu 47a6 or Q (5595) thu 87a4: tshangs pa’i ’khor lo. The usage of the wheel imagery fits the idea of “rolling”, suggesting that perhaps this image has been lost in the Pāli version.</span></span></span></p>
+<p>The three discourses conclude by proclaiming that anyone who rejects this discourse will only incur censure, since by doing so one would speak in praise of those endowed with the wrong manifestations of the ten factors.<span class="note" id="mn117n119"><span class="details"><span class="p">[n.119] <a href="../../mn/mn117.html">MN 117</a> and <a href="../../parallels/ma189.html">MĀ 189</a> mention followers of the doctrine of non-action who nevertheless would not dare to contradict this exposition. <a href="../../mn/mn117.html">MN 117</a> at MN III 78,13 refers to these as Okkalā Vassa-Bhaññā (Ce-MN III 222,25 and Se-MN III 189,6 read Ukkalā). The commentary at Ps IV 136,4 explains that Vassa and Bhañña are the proper names of two individuals who were inhabitants of the country of Okkala. The Ukkalā-Vassa-Bhaññā as proponents of a doctrine of non-action recur in <a href="../../sn/sn22.62.html">SN 22:62</a> at SN III 73,3 and in <a href="../../an/an4.30.html">AN 4:30</a> at AN II 31,21; cf. also Kv 141,28. <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736c19 instead speaks of “the squatters and advocators [of the practice] of squatting”, 蹲踞說蹲踞 and a little later refers to being “cut off and destroyed”, 斷絕破壞. Bareau 1981b: 3 concludes that <a href="../../parallels/ma189.html">MĀ 189</a> “makes no allusion to the Ukkalas”, but Meisig 1987a: 245 note 93 and 99 suggests that the translator may not have recognized these proper names and instead rendered them as the activities of “squatting” and being “cut off and destroyed”.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

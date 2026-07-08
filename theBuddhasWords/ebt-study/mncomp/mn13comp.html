@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 13 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 13: Mahādukkhakkhandha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn12comp.html#content"></a><a id="next-sutta" href="./mn14comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn13.html">MN 13</a> / <a href="../../parallels/ma99.html">MĀ 99</a> / <a href="../../parallels/ea21.9.html">EĀ 21.9</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahādukkhakkhandha-sutta, the “greater discourse on the aggregate of dukkha”, expounds the full understanding of:</p>
+<ul>
+<li>sensual pleasures,</li>
+<li>material form,</li>
+<li>feeling.</li>
+</ul>
+<p>This discourse has four Chinese parallels, one of which is found in the Madhyama-āgama, another parallel occurs in the Ekottarika-āgama, while the remaining two parallels are individual translations.<span class="note" id="mn13n96"><span class="details"><span class="p">[n.96] The parallels are <a href="../../parallels/ma99.html">MĀ 99</a> at T I 584c-586a, <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 604c-606b, T 53 at T I 846c-848a, and T 737 at T XVII 539b-541a. All of these parallels agree with <a href="../../mn/mn13.html">MN 13</a> on locating the discourse in Jeta’s Grove near Sāvatthī. <a href="../../parallels/ma99.html">MĀ 99</a> and T 53 agree with <a href="../../mn/mn13.html">MN 13</a> on the title “discourse on the aggregate of dukkha”, 苦陰經 (which T 53 qualifies as a discourse “spoken by the Buddha”, 佛說苦陰經), although neither of them specifies this discourse as a “greater” one. <a href="../../parallels/ea21.9.html">EĀ 21.9</a> may have had the same title, as 苦陰 occurs in the relevant section of the summary verse of the Ekottarika-āgama at T II 606c28 (following the 宋, 元, 明, and 聖 variant reading 苦陰 instead of 苦除). T 737 has the title “discourse on [how] objects of desire lead to dukkha”, 所欲致患經. For a remark on <a href="../../parallels/ma99.html">MĀ 99</a> cf. Minh Chau 1964/1991: 61. <a href="../../parallels/ea21.9.html">EĀ 21.9</a> has been translated by Huyen-Vi 2004: 59-63 and 216-221. According to the information given in the Taishō edition, T 53 was translated by an unknown translator, while T 737 should be attributed to Dharmarakṣa. For counterparts to <a href="../../mn/mn13.html">MN 13</a> at MN I 85,22-29 in Vyākhyāyukti literature cf. Skilling 2000b: 342.</span></span></span>
+<p>The Majjhima-nikāya discourse, the Ekottarika-āgama version, and one of the individual translations begin with a group of monks who, on their way to town to beg for alms, have a meeting with some other wanderers.<span class="note" id="mn13n97"><span class="details"><span class="p">[n.97] <a href="../../mn/mn13.html">MN 13</a> at MN I 84,4 and <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 604c11 indicate that the monks had gone to visit those wanderers, a detail not mentioned in T 737 at T XVII 539b15. Hartmann 1992: 41 notes that in the Hoernle collection a fragment that might be a parallel to <a href="../../mn/mn13.html">MN 13</a> at MN I 83 can be found.</span></span></span> According to the Madhyama-āgama version and the other individual translation, however, these other wanderers had come to visit the monks.<span class="note" id="mn13n98"><span class="details"><span class="p">[n.98] <a href="../../parallels/ma99.html">MĀ 99</a> at T I 584c11 and T 53 at T I 846c10.</span></span></span></p>
+<p>According to all versions, the monks were confronted with a challenge by these wanderers, being asked to point out the difference between their teaching and the Buddha’s teaching regarding the full understanding of sensual pleasures, form, and feelings.<span class="note" id="mn13n99"><span class="details"><span class="p">[n.99] T 737 at T XVII 539b16 differs, as here the wanderers’ challenge does not explicitly refer to understanding these three.</span></span></span> Apparently unable to reply to this challenge, the monks went to see the Buddha in order to learn from him how such a question should be answered. MN I According to the Mahādukkhakkhandha-sutta and its parallels, the Buddha told the monks that they should reply to such a challenge by querying those other wanderers about the gratification (assāda), danger (ādīnava), and release (nissaraṇa) in relation to sensual pleasures, form, and feelings.<span class="note" id="mn13n100"><span class="details"><span class="p">[n.100] T 737 at T XVII 539b25 only mentions sensual pleasures at this point, although its later treatment does cover sensual pleasures, form, and feelings. A reference to the Buddha’s teaching of the three types of full understanding can also be found in <a href="../../an/an10.29.html">AN 10:29</a> at AN V 65,1, which adds his teaching on fully understanding Nirvāṇa as fourth.</span></span></span> Wanderers of other traditions who are faced with such a question would be unable to reply, since only a Tathāgata or someone who has learned it from him will be able to satisfactorily expound these three aspects.</p>
+<p>The Mahādukkhakkhandha-sutta and its parallels continue by providing the details of such an exposition, indicating that the gratification of sensual pleasures is the pleasure derived from the five senses. Regarding the dangers of sensual pleasures, the parallel versions show some variations (see table 2.7). They agree that the need to toil in order to obtain wealth should be reckoned as a danger inherent in the quest for sensual pleasures, and that another danger is to be found in the difficulties involved in protecting such wealth, once it has been acquired. MN I The Majjhima-nikāya version notes as another danger that, for the sake of gaining sensual pleasures, kings, Brahmins and warriors, as well as family members – such as mother and child, brother and sister – will dispute and quarrel. According to its presentation, these might go so far as to take up weapons and inflict harm or death on each other.<span class="note" id="mn13n101"><span class="details"><span class="p">[n.101] <a href="../../mn/mn13.html">MN 13</a> at MN I 86,18.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 2.7: Disadvantages of Sensual Pleasures in <a href="../../mn/mn13.html">MN 13</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn13.html">MN 13</a></th><th><a href="../../parallels/ma99.html">MĀ 99</a> & T 53</th></tr>
+<tr><td>- suffer to earn living (1)</td><td>- suffer to earn living, no profit, lose it (→ 1, 2, 3)</td></tr>
+<tr><td>- make no profit (2)</td><td>- relatives quarrel (→ 4)</td></tr>
+<tr><td>- lose profit by theft, etc. (3)</td><td>- kings quarrel & fight (→ 4)</td></tr>
+<tr><td>- relatives & kings quarrel & fight (4)</td><td>- battle fighting (→ 5)</td></tr>
+<tr><td>- battle fighting (5)</td><td>- bastion fighting (→ 6)</td></tr>
+<tr><td>- bastion fighting (6)</td><td>- punishment for crimes (→ 7)</td></tr>
+<tr><td>- punishment for crimes (7)</td><td>- regret evil deeds</td></tr>
+<tr><td>- evil rebirth (8)</td><td>- evil rebirth (→ 8)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea21.9.html">EĀ 21.9</a></td><td>T 737</td></tr>
+<tr><td>- suffer to earn living (→→1)</td><td>- suffer to earn living, no profit, lose it (→ 1, 2, 3)</td></tr>
+<tr><td>- make no profit (→→2)</td><td>- relatives quarrel (→ 4)</td></tr>
+<tr><td>- worry about losing profit (→→3)</td><td>- battle fighting (→ 5)</td></tr>
+<tr><td>- lose profit by theft, etc. (→→3)</td><td>- relatives are angry with each other (→ 4)</td></tr>
+<tr><td>- battle fighting (→ 5)</td><td>- fighting (→ 6?)</td></tr>
+<tr><td>- bastion fighting (→→6)</td><td>- punishment for crimes (→ 7)</td></tr>
+<tr><td>- sensual pleasures are impermanent</td><td>- evil rebirth (→ 8)</td></tr>
+<tr><td>(≠ 4, 7-8)</td><td></td></tr>
+</table>
+<p>The Ekottarika-āgama discourse does not take up this theme at all, and one of the individual translations only mentions quarrel among family members.<span class="note" id="mn13n102"><span class="details"><span class="p">[n.102] T 737 at T XVII 539c20.</span></span></span> The Madhyamaāgama version and the other individual translation present this danger in two consecutive steps. First they describe how members of a family may get into dispute with each other, then they turn to the arising of quarrelling among kings, Brahmins and warriors. Only in relation to the second group do these two Chinese versions envisage the possibility that such quarrel could lead to taking up weapons or even to killing.<span class="note" id="mn13n103"><span class="details"><span class="p">[n.103] <a href="../../parallels/ma99.html">MĀ 99</a> at T I 585a19 and T 53 at T I 847a21. The parallels to <a href="../../mn/mn14.html">MN 14</a>, <a href="../../parallels/ma100.html">MĀ 100</a> at T I 586c12, T 54 at T I 848c18, and T 55 at T I 850a4 also depict family members quarrelling only verbally with each other, in contrast to kings, etc., who go so far as to inflict physical harm or even kill each other. An example for killing among family members would be the tale of Prince Ajātasattu, who is reported to have killed his own father out of desire for the throne, cf. <a href="../../dn/dn2.html">DN 2</a> at DN I 85,16, <a href="../../parallels/da27.html">DĀ 27</a> at T I 109c9, <a href="../../parallels/ea43.7.html">EĀ 43.7</a> at T II 764a16, and the Saṅghabhedavastu in Gnoli 1978a: 251,22. However, this instance would still be in line with the depiction in <a href="../../parallels/ma99.html">MĀ 99</a> and T 53, as it also falls under the category of kings killing each other.</span></span></span></p>
+<p>A presentation similar to the Madhyama-āgama discourse and this individual translation recurs in Sanskrit fragments of the Mahalla-sūtra (a discourse otherwise without a Pāli counterpart), which offers an examination of the gratification, danger, and release in relation to sensual pleasures that is similar to the Mahādukkhakkhandha-sutta. In its examination of the dangers of sensual pleasures, the Mahalla-sūtra only speaks of the taking up of weapons in relation to quarrels that have arisen among warriors and Brahmins, etc., whereas in relation to family members, it merely envisages verbal dispute.<span class="note" id="mn13n104"><span class="details"><span class="p">[n.104] According to the reconstruction of fragment 429r3 of the Mahalla-sūtra in Melzer 2006: 362, warriors, Brahmins, and householders will go so far as to attack each other physically in various ways, whereas in the case of family members fragment 429r1 only speaks of verbal dispute. The same also holds for a comparable exposition in the Śrāvakabhūmi, which envisages only verbal dispute among family members, cf. Shukla 1973: 79,6 or ŚSG 1998: 122,5 and T 1579 at T XXX 408c6.</span></span></span></p>
+<p>The Majjhima-nikāya discourse, the Madhyama-āgama version, and the two individual translations reckon the evils of warfare, the suffering caused by burglary and other unlawful acts, and the consequent brutal punishments apparently prevalent in ancient India for such deeds as other dangers of sensual pleasures.<span class="note" id="mn13n105"><span class="details"><span class="p">[n.105] For an explanation of what these punishments actually entail cf. Barua 1971/2003: 482-483; cf. also the translations of extracts from commentarial explanations of these punishments, provided by Woodward 1932/1960: 42-43 in the footnotes to his translation of another occurrence of such descriptions.</span></span></span> The Ekottarika-āgama discourse also takes up the danger of warfare,<span class="note" id="mn13n106"><span class="details"><span class="p">[n.106] <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 605a28.</span></span></span> although it does not describe the danger of being punished for burglary and similar acts. MN I The Majjhima-nikāya discourse, the Madhyama-āgama version, and the two individual translations note as another danger that desire for sensual enjoyment often leads to evil conduct by way of body, speech, and mind.</p>
+<p>While the Majjhima-nikāya version and one of the individual translations only draw attention to the resulting unfavourable rebirth as a future danger,<span class="note" id="mn13n107"><span class="details"><span class="p">[n.107] <a href="../../mn/mn13.html">MN 13</a> at MN I 87,23 and T 737 at T XVII 540a21.</span></span></span> the Madhyama-āgama version and the other individual translation also mention the worry and regret experienced by such an evildoer as a danger visible in the present life.<span class="note" id="mn13n108"><span class="details"><span class="p">[n.108] <a href="../../parallels/ma99.html">MĀ 99</a> at T I 585b29 and T 53 at T I 847b27 compare this regret to the shadow of a great mountain that covers the earth. The same metaphor can also be found in <a href="../../mn/mn129.html">MN 129</a> at MN III 164,29 and its parallel <a href="../../parallels/ma199.html">MĀ 199</a> at T I 759b28, where it illustrates the regret experienced by an evil doer. The same image recurs, moreover, in two parallels to <a href="../../mn/mn14.html">MN 14</a>, <a href="../../parallels/ma100.html">MĀ 100</a> at T I 587a23 and T 55 at T I 850b12; for another occurrence cf. <a href="../../parallels/sa1244.html">SĀ 1244</a> at T II 341a11 and the Śrāvakabhūmi, Shukla 1973: 80,17 or ŚSG 1998: 124,12 and T 1579 at T XXX 408c27.</span></span></span> The Ekottarikaāgama account instead completes its exposition of the dangers of sensual pleasures by highlighting their impermanent nature.<span class="note" id="mn13n109"><span class="details"><span class="p">[n.109] <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 605b8.</span></span></span></p>
+<p>The five versions agree that the eradication of desire is the way to go beyond sensual pleasures.<span class="note" id="mn13n110"><span class="details"><span class="p">[n.110] <a href="../../mn/mn13.html">MN 13</a> at MN I 87,29, <a href="../../parallels/ma99.html">MĀ 99</a> at T I 585c11, <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 605b10, T 53 at T I 847c9, and T 737 at T XVII 540a26. The same is also the way to go beyond form and feeling.</span></span></span> The Majjhima-nikāya discourse, the Madhyama-āgama version, and one of the individual translations conclude their exposition of sensual desires by declaring that only recluses and Brahmins who understand the gratification, danger, and release in relation to sensual desires will be able to go beyond sensual pleasures and lead others to achieving the same.<span class="note" id="mn13n111"><span class="details"><span class="p">[n.111] <a href="../../mn/mn13.html">MN 13</a> at MN I 87,32, <a href="../../parallels/ma99.html">MĀ 99</a> at T I 585c13, and T 53 at T I 847c11. <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 605b11 has a related statement, although it speaks only of the need to know the danger and the release in regard to sensual desires, thereby not mentioning the need to understand the gratification. T 737 at T XVII 540b3 also indicates that removal of lust is the condition for recluses and Brahmins to reach liberation themselves and liberate others, although the first part of its exposition on gratification and danger, etc., seems to have suffered from some textual corruption.</span></span></span></p>
+<p>Mahādukkhakkhandha-sutta and its parallels next turn to form, illustrating the gratification of form with the example of a beautiful young girl. The corresponding danger becomes evident once the same girl grows old, succumbs to disease, and finally passes away, at which time her formerly so beautiful body will undergo decay and decomposition.<span class="note" id="mn13n112"><span class="details"><span class="p">[n.112] <a href="../../mn/mn13.html">MN 13</a> at MN I 88,28, <a href="../../parallels/ma99.html">MĀ 99</a> at T I 585c27, <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 605c7, T 53 at T I 847c25, and T 737 at T XVII 540b14; a reference to this mode of exposing the `danger’ can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 117a14.</span></span></span></p>
+<p>In relation to feelings, the Majjhima-nikāya discourse, the Madhyama-āgama version, and the two individual translations agree that the gratification of feelings is to be found in the four jhānas.<span class="note" id="mn13n113"><span class="details"><span class="p">[n.113] <a href="../../mn/mn13.html">MN 13</a> at MN I 89,32, <a href="../../parallels/ma99.html">MĀ 99</a> at T I 586a18, T 53 at T I 848a17, and T 737 at T XVII 540c15. <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 606a23 differs considerably from the other versions, since it expounds the gratification in relation to feeling with the example of the practice of mindfulness of feeling (described in the same way as the Ekottarika-āgama parallel to <a href="../../mn/mn10.html">MN 10</a>, <a href="../../parallels/ea12.1.html">EĀ 12.1</a> at T II 568b27, describes contemplation of feeling as a satipaṭṭhāna practice). The subsequent passage on the danger of feeling in <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 606b8 has no formal introduction, unlike earlier passages of this type in <a href="../../parallels/ea21.9.html">EĀ 21.9</a>, but instead begins with the conjunction “again”, 復次, the equivalent of puna ca paraṃ, even though it treats a different topic. This gives the impression that an error in textual transmission may have occurred, all the more probable since contemplation of feeling does not fit the present context; cf. also Huyen-Vi 2004: 220 note 11.</span></span></span> All versions attribute the danger of feelings to their impermanent nature and propose detachment as the release in regard to them.</p>
+<p>While the other versions conclude with the delighted reaction of the listeners, the Ekottarika-āgama ends with an exhortation by the Buddha to meditate and not be negligent, lest later one regret it.<span class="note" id="mn13n114"><span class="details"><span class="p">[n.114] <a href="../../parallels/ea21.9.html">EĀ 21.9</a> at T II 606b27.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

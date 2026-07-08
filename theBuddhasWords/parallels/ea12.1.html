@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 12.1 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 12.1</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<p class="mirror-row"><span class="mirror-left latin">Chapter 12</span> <span class="mirror-right">增壹阿含经壹入道品第十二</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">12.1</span> <span class="mirror-right">（一）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../dn/dn22.html">DN 22</a> / <a href="../mn/mn10.html">MN 10</a> / <a href="../mn/mn119.html">MN 119 (~)</a> / <a href="../parallels/ma31.html">MĀ 31 (~)</a> / <a href="../parallels/ma81.html">MĀ 81 (~)</a> / <a href="../parallels/ma98.html">MĀ 98</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;There is one entrance to the path that purifies sentient beings&#x27; practices, removes sorrow and worry, eliminates all afflictions, and attains great wisdom and realizes nirvāṇa. Namely, it is to extinguish the five hindrances and contemplate the four foundations of mindfulness. What is meant by &#x27;one entrance&#x27;? Namely, to concentrate the mind, this is called &#x27;one entrance&#x27;. What is the path? Namely, the eightfold noble path. The first is called right view, the second is called right thought, the third is called right speech, the fourth is called right action, the fifth is called right livelihood, the sixth is called right effort, the seventh is called right mindfulness, and the eighth is called right concentration. This is called the path, this is called the one entrance to the path.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「有一入道，净众生行，除去愁忧，无有诸恼，得大智慧，成泥洹证。所谓当灭五盖，思惟四意止。云何名为一入？所谓专一心，是谓一入。云何为道？所谓贤圣八品道，一名正见，二名正治，三名正业，四名正命，五名正方便，六名正语，七名正念，八名正定，是谓名道，是谓一入道。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is meant by &#x27;extinguishing the five hindrances&#x27;? Namely, the hindrances of sensual desire, ill-will, restlessness and remorse, sloth and torpor, and doubt. These are called the five hindrances to be extinguished.</p></td><td lang="lzh" class="agama-chi"><p>「云何当灭五盖？所谓贪欲盖、瞋恚盖、调戏盖、眠睡盖、疑盖，是谓当灭五盖。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is meant by &#x27;contemplating the four foundations of mindfulness&#x27;? Namely, a bhikṣu internally observes the body, removes evil thoughts, and is free from sorrow and worry; externally observes the body, removes evil thoughts, and is free from sorrow and worry; internally and externally observes the body, removes evil thoughts, and is free from sorrow and worry. Internally observes feelings and delights in them, externally observes feelings, internally and externally observes feelings; internally observes the mind and delights in it, externally observes the mind, internally and externally observes the mind; internally observes phenomena, externally observes phenomena, internally and externally observes phenomena and delights in them.</p></td><td lang="lzh" class="agama-chi"><p>「云何思惟四意止？于是，比丘内自观身，除去恶念，无有愁忧；外自观身，除去恶念，无有愁忧；内外观身，除去恶念，无有愁忧。内观痛痛而自娱乐，外观痛痛，内外观痛痛；内观心而自娱乐，外观心，内外观心；内观法，外观法，内外观法而自娱乐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What is meant by &#x27;a bhikṣu internally observing the body and delighting in it&#x27;? Namely, a bhikṣu observes this body according to its nature and practice, from head to toe, from toe to head, observing that this body is all impure and not to be desired. He further observes that this body has hair, nails, teeth, skin, flesh, tendons, bones, marrow, brain, fat, intestines, stomach, heart, liver, spleen, kidneys, and so forth, all of which he observes and knows. Feces, urine, the two intestines, tears, saliva, blood vessels, fat, and bile, all of which he observes and knows, are not to be desired. Thus, bhikṣus! One should observe the body and delight in it, removing evil thoughts, and being free from sorrow and worry.</p></td><td lang="lzh" class="agama-chi"><p>「云何比丘内观身而自娱乐？于是，比丘观此身随其性行，从头至足，从足至头，观此身中皆悉不净，无有可贪。复观此身有毛、发、爪、齿、皮、肉、筋、骨、髓、脑、脂膏、肠、胃、心、肝、脾、肾之属，皆悉观知。屎、尿、生熟二藏、目泪、唾、涕、血脉、肪、胆，皆当观知，无可贪者。如是，诸比丘！当观身自娱乐，除去恶念，无有愁忧。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe this body again. Is there the earth element, the water, fire, and wind elements? Thus, bhikṣu! Observe this body. Furthermore, bhikṣu! Observe this body, distinguishing the elements. This body has four parts, just like a skilled butcher or a butcher&#x27;s apprentice, who dissects a cow and observes that this is the leg, this is the heart, this is the joint, this is the head. Thus, that bhikṣu distinguishes these elements and observes this body, which has the earth, water, fire, and wind elements. Thus, bhikṣu! Observe the body and delight in it.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！还观此身有地种耶？水、火、风种耶？如是，比丘观此身。复次，比丘！观此身，分别诸界，此身有四种，犹如巧能屠牛之士、若屠牛弟子，解牛节解，而自观见此是脚，此是心，此是节，此是头。如是，彼比丘分别此界，而自观察此身有地、水、火、风种。如是，比丘观身而自娱乐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe this body, which has holes leaking out impurities. It is like a person observing a bamboo grove or a clump of reeds. Thus, bhikṣu! Observe this body, which has holes leaking out impurities.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！观此身有诸孔，漏出不净。犹如彼人观竹园，若观苇丛。如是，比丘观此身有诸孔，漏出诸不净。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe a corpse, whether dead for one night, two nights, three, four, five, six, or seven nights, bloated, stinking, and impure. Then observe your own body as no different from that. My body is not exempt from this affliction. If a bhikṣu observes a corpse being eaten by crows, magpies, or vultures, or being eaten by tigers, wolves, dogs, or insects, then observe your own body as no different from that. My body is not exempt from this affliction. This is called a bhikṣu observing the body and delighting in it.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！观死尸，或死一宿，或二宿，或三宿、四宿，或五宿、六宿、七宿，身体膖胀，臭处不净。复自观身与彼无异，吾身不免此患。若复比丘观死尸，乌鹊、鵄鸟所见噉食；或为虎狼、狗犬、虫兽之属所见噉食。复自观身与彼无异，吾身不离此患。是谓比丘观身而自娱乐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe a corpse, half eaten and scattered on the ground, stinking and impure. Then observe your own body as no different from that. My body is not exempt from this. Furthermore, observe a corpse, with the flesh already gone, only the bones remaining, smeared with blood. Then observe that body as no different from this. Thus, bhikṣu! Observe this body. Furthermore, bhikṣu! Observe a corpse bound with sinews like a bundle of firewood. Then observe your own body as no different from that. Thus, bhikṣu! Observe this body.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！观死尸，或噉半散落在地，臭处不净。复自观身与彼无异，吾身不离此法。复次，观死尸，肉已尽，唯有骨在，血所涂染。复以此身观彼身亦无有异。如是，比丘观此身。复次，比丘！观死尸筋缠束薪，复自观身与彼无异。如是，比丘观此身。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe a corpse with the bones scattered in different places, with the hand bones, foot bones, each in a different place; or the thigh bones, waist bones, hip bones, arm bones, shoulder bones, rib bones, spine bones, neck bones, or skull. Then observe your own body as no different from that. I am not exempt from this. My body will also decay. Thus, bhikṣu! Observe the body and delight in it.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！观死尸骨节分散，散在异处，或手骨、脚骨各在一处；或䏝骨，或腰骨，或尻骨，或臂骨，或肩骨，或脇骨，或脊骨，或项骨，或髑髅。复以此身与彼无异，吾不免此法，吾身亦当坏败。如是，比丘观身而自娱乐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! Observe a corpse with a white color, the color of white shells. Then observe your own body as no different from that. I am not exempt from this. This is called a bhikṣu observing his own body.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！观死尸白色、白珂色。复自观身与彼无异，吾不离此法，是谓比丘自观身。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣu! If one sees a corpse with a bluish, bruised appearance, there is nothing to be desired, or the same color as ash and earth, indistinguishable. Thus, bhikṣu! Observe one&#x27;s own body to remove evil thoughts, without sorrow or worry; this body is impermanent, subject to dispersal. Thus, bhikṣu! Observe one&#x27;s own body internally, externally, and both internally and externally, understanding that it is insubstantial.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！若见死尸、骨青、瘀想，无可贪者，或与灰土同色不可分别。如是，比丘！自观身除去恶念，无有愁忧；此身无常，为分散法。如是，比丘内自观身，外观身，内外观身，解无所有。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does a bhikṣu observe feelings internally? Here, a bhikṣu, when experiencing a pleasant feeling, knows for himself that he is experiencing a pleasant feeling; when experiencing a painful feeling, he knows for himself that he is experiencing a painful feeling; when experiencing a neither-painful-nor-pleasant feeling, he knows for himself that he is experiencing a neither-painful-nor-pleasant feeling. When experiencing a feeling that arises from eating, he knows for himself that he is experiencing a feeling that arises from eating; when experiencing a feeling that arises from not eating, he knows for himself that he is experiencing a feeling that arises from not eating; when experiencing a feeling that arises from neither eating nor not eating, he knows for himself that he is experiencing a feeling that arises from neither eating nor not eating. Thus, a bhikṣu observes feelings internally.</p></td><td lang="lzh" class="agama-chi"><p>「云何比丘内观痛痛？于是，比丘得乐痛时，即自觉知我得乐痛；得苦痛时，即自觉知我得苦痛；得不苦不乐痛时，即自觉知我得不苦不乐痛。若得食乐痛时，便自觉知我得食乐痛；若得食苦痛时，便自觉知我得食苦痛；若得食不苦不乐痛时，亦自觉知我食不苦不乐痛。若得不食乐痛时，便自觉知我得不食乐痛；若得不食苦痛时，亦自觉知我不食苦痛；若得不食不苦不乐痛时，亦自觉知我得不食不苦不乐痛。如是，比丘内自观痛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, when a bhikṣu experiences a pleasant feeling, at that time he does not experience a painful feeling. At that time, he knows for himself that he is experiencing a pleasant feeling. When he experiences a painful feeling, at that time he does not experience a pleasant feeling. He knows for himself that he is experiencing a painful feeling. When he experiences a neither-painful-nor-pleasant feeling, at that time there is neither pain nor pleasure. He knows for himself that he is experiencing a neither-painful-nor-pleasant feeling. He cultivates the Dharma of feelings and observes the Dharma of cessation. He also observes the Dharma of the cessation of feelings. There may be feelings that arise in the present that can be known and seen. He contemplates their original source, does not rely on anything, and cultivates himself. He does not give rise to worldly thoughts. He is not frightened or terrified by them. Because he is not frightened or terrified, he attains nirvāṇa: the end of birth and death, the establishment of the holy life, the completion of what was to be done, and the knowledge that there will be no further rebirth. Thus, a bhikṣu observes feelings internally. He removes confused thoughts and has no sorrow or worry. He observes feelings externally, and both internally and externally. He removes confused thoughts and has no sorrow or worry. Thus, a bhikṣu observes feelings internally and externally.</p></td><td lang="lzh" class="agama-chi"><p>「复次。若复比丘得乐痛时，尔时不得苦痛，尔时自觉知我受乐痛。若得苦痛时，尔时不得乐痛，自觉知我受苦痛。若得不苦不乐痛时，尔时无苦无乐，自觉知我受不苦不乐痛。彼习法而自娱乐，亦观尽法，复观习尽之法。或复有痛而现在前可知可见，思惟原本，无所依倚而自娱乐，不起世间想；于其中亦不惊怖，以不惊怖，便得泥洹：生死已尽，梵行已立，所作已办，更不复受有，如真实知。如是，比丘内自观痛，除去乱念，无有愁忧；外自观痛，内外观痛，除去乱念，无有愁忧。如是，比丘内外观痛。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does a bhikṣu observe the mind and mental factors and cultivate himself? Here, a bhikṣu, when the mind is with desire, he knows for himself that the mind is with desire; when the mind is without desire, he knows for himself that the mind is without desire. When the mind is with anger, he knows for himself that the mind is with anger; when the mind is without anger, he knows for himself that the mind is without anger. When the mind is with delusion, he knows for himself that the mind is with delusion; when the mind is without delusion, he knows for himself that the mind is without delusion. When the mind is with affection, he knows for himself that the mind is with affection; when the mind is without affection, he knows for himself that the mind is without affection. When the mind is with acceptance, he knows for himself that the mind is with acceptance; when the mind is without acceptance, he knows for himself that the mind is without acceptance. When the mind is with distraction, he knows for himself that the mind is distracted; when the mind is without distraction, he knows for himself that the mind is without distraction. When the mind is with scattering, he knows for himself that the mind is scattering; when the mind is without scattering, he knows for himself that the mind is without scattering. When the mind is with pervasiveness, he knows for himself that the mind is pervasive; when the mind is without pervasiveness, he knows for himself that the mind is without pervasiveness. When the mind is great, he knows for himself that the mind is great; when the mind is not great, he knows for himself that the mind is not great. When the mind is immeasurable, he knows for himself that the mind is immeasurable; when the mind is not immeasurable, he knows for himself that the mind is not immeasurable. When the mind is in samādhi, he knows for himself that the mind is in samādhi; when the mind is not in samādhi, he knows for himself that the mind is not in samādhi. When the mind is not liberated, he knows for himself that the mind is not liberated; when the mind is liberated, he knows for himself that the mind is liberated. Thus, a bhikṣu observes the mind and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「云何比丘观心心法而自娱乐？于是，比丘有爱欲心，便自觉知有爱欲心；无爱欲心，亦自觉知无爱欲心。有瞋恚心，便自觉知有瞋恚心；无瞋恚心，亦自觉知无瞋恚心。有愚痴心，便自觉知有愚痴心；无愚痴心，便自觉知无愚痴心。有爱念心，便自觉知有爱念心；无爱念心，便自觉知无爱念心。有受入心，便自觉知有受入心；无受入心，便自觉知无受入心。有乱念心，便自觉知有乱心；无乱心，便自觉知无乱心。有散落心，亦自觉知有散落心；无散落心，便自觉知无散落心。有普遍心，便自觉知有普遍心；无普遍心，便自觉知无普遍心。有大心，便自觉知有大心；无大心，便自觉知无大心。有无量心，便自觉知有无量心；无无量心，便自觉知无无量心。有三昧心，便自觉知有三昧心；无三昧心，便自觉知无三昧心。未解脱心，便自觉知未解脱心；已解脱心，便自觉知已解脱心。如是，比丘心相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He observes the Dharma of feelings, the Dharma of cessation, and the Dharma of the cessation of feelings. He contemplates the Dharma that can be known, seen, and thought about, and that which cannot be thought about. He does not rely on anything, and cultivates himself. He does not give rise to worldly thoughts. Having not given rise to thoughts, he is not frightened or terrified. Having not been frightened or terrified, he has no more. Having no more, he attains nirvāṇa: the end of birth and death, the establishment of the holy life, the completion of what was to be done, and the knowledge that there will be no further rebirth. Thus, a bhikṣu observes the mind internally. He removes confused thoughts and has no sorrow or worry. He observes the mind externally, and both internally and externally. He removes confused thoughts and has no sorrow or worry. Thus, a bhikṣu observes the mind internally and externally.</p></td><td lang="lzh" class="agama-chi"><p>「观习法，观尽法，并观习尽之法，思惟法观而自娱乐。可知、可见、可思惟、不可思惟，无所猗，不起世间想，已不起想，便无畏怖；已无畏怖，便无余；已无余，便涅槃：生死已尽，梵行已立，所作已办，更不复受有，如实知之。如是，比丘内自观心心意止，除去乱念，无有忧愁；外观心，内外观心心意止。如是，比丘心心相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>How does a bhikṣu observe the Dharma and mental factors and cultivate himself? Here, a bhikṣu cultivates the mindfulness factor of awakening, based on observation, based on dispassion, based on cessation, abandoning unwholesome dharmas. He cultivates the Dharma factor of awakening, the vigor factor of awakening, the mindfulness factor of awakening, the concentration factor of awakening, and the equanimity factor of awakening, based on observation, based on dispassion, based on cessation, abandoning unwholesome dharmas. Thus, a bhikṣu observes the Dharma and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「云何比丘法法相观意止？于是，比丘修念觉意，依观、依无欲、依灭尽，舍诸恶法。修法觉意、修精进觉意、修念觉意、修猗觉意、修三昧觉意、修护觉意，依观、依无欲、依灭尽，舍诸恶法。如是，比丘法法相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, in the liberation from desire and lust, abandoning unwholesome dharmas, with initial and sustained thought, with joy and happiness, they dwell in the first dhyāna, cultivating themselves. Thus, bhikṣus, observe the Dharma and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！于爱欲解脱，除恶不善法，有觉、有观，有猗念，乐于初禅而自娱乐。如是，比丘法法相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, abandoning initial and sustained thought, internally generating joy, with a single-pointed mind, they attain the absence of initial and sustained thought, with mindfulness, joy, happiness, and equanimity, dwelling in the second dhyāna, cultivating themselves. Thus, bhikṣus, observe the Dharma and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！舍有觉、有观，内发欢喜，专其一意，成无觉、无观，念猗喜安，游二禅而自娱乐。如是，比丘法法相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, abandoning mindfulness, cultivating protection, constantly being aware of the bodily sensations of pleasure, the noble ones&#x27; sought-after, protected, pure mindfulness, they dwell in the third dhyāna. Thus, bhikṣus, observe the Dharma and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！舍于念，修于护，恒自觉知身觉乐，诸贤圣所求，护念清净，行于三禅。如是，比丘法法相观意止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Furthermore, bhikṣus, abandoning suffering and pleasure, without further sorrow or joy, without suffering or pleasure, with protected, pure mindfulness, they delight in the fourth dhyāna. Thus, bhikṣus, observe the Dharma and mental factors.</p></td><td lang="lzh" class="agama-chi"><p>「复次，比丘！舍苦乐心，无复忧喜，无苦无乐，护念清净，乐于四禅。如是，比丘法法相观意止。彼行习法，行尽法，并行习尽之法而自娱乐，便得法意止而现在前。可知可见，除去乱想，无所依猗，不起世间想；已不起想，便无畏怖；已无畏怖，生死便尽；梵行已立，所作已办，更不复受有，如实知之。诸比丘！依一入道众生得清净，远愁忧，无复喜想，便逮智慧，得涅槃证。所谓灭五盖，修四意止也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

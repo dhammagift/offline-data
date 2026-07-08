@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>MĀ 123 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>MĀ 123</h2>
+<div class="mirror hgroup">
+<p class="division">
+<span class="mirror-left latin">Madhyamāgama</span>
+<span class="mirror-right">中阿含经</span></p>
+<p class="mirror-row">
+<span class="mirror-left latin">Chapter 11</span>
+<span class="mirror-right">大品</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">123. </span>
+<span class="mirror-right">（一二三）沙门二十亿经</span></h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an6.55.html">AN 6.55</a> / <a href="../parallels/sa254.html">SĀ 254</a> / <a href="../parallels/ea23.3.html">EĀ 23.3</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>I have heard thus:</p></td><td lang="lzh" class="agama-chi"><p>我闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was traveling in the country of Śrāvastī, staying at the Jeta Grove Anāthapiṇḍada-ārāma.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游舍卫国，在胜林给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śramaṇa Vītarāga was also traveling in Śrāvastī, staying in the Dark Forest. He diligently practiced the path, studying and not sleeping at night. Then, Venerable Śramaṇa Vītarāga, while peacefully dwelling alone, sitting in meditation, had this thought: &quot;If there is a disciple of the World-Honored One who diligently studies the true Dharma and Vinaya, I am the foremost. However, my mind is not liberated from the defilements. My parents&#x27; home is extremely wealthy and prosperous. I have much money and wealth. Should I now abandon the precepts, give up the path, and practice giving and cultivating merit?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者沙门二十亿亦游舍卫国，在暗林中，前夜、后夜学习不眠，精勤正住，修习道品。于是，尊者沙门二十亿安静独住，宴坐思惟，心作是念：「若有世尊弟子精勤学习正法、律者，我为第一，然诸漏心不得解脱。我父母家极大富乐，多有钱财，我今宁可舍戒罢道行，欲布施修诸福业耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, knowing Venerable Śramaṇa Vītarāga&#x27;s thoughts with his mind-reading knowledge, told a bhikṣu, &quot;Go to him and call Śramaṇa Vītarāga.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以他心智知尊者沙门二十亿心之所念，便告一比丘：「汝往至彼，呼沙门二十亿来。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu said, &quot;Yes,&quot; and immediately rose from his seat, bowed his head at the Buddha&#x27;s feet, circumambulated him three times, and left. He went to Venerable Śramaṇa Vītarāga and said, &quot;The World-Honored One calls you!&quot;</p></td><td lang="lzh" class="agama-chi"><p>于是，一比丘白曰：「唯然。」即从坐起，稽首礼足，遶三匝而去，往至尊者沙门二十亿所而语彼曰：「世尊呼汝！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Śramaṇa Vītarāga, having heard the bhikṣu&#x27;s words, went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, and sat to one side. The World-Honored One said, &quot;Śramaṇa! You truly were peacefully dwelling alone, sitting in meditation, contemplating, and thinking, &#x27;If there are disciples of the World-Honored One who diligently study the true Dharma and Vinaya, I am the foremost, but my mind is not liberated from the contaminants. My parents&#x27; family is extremely wealthy and has much money and property. Should I now abandon the precepts, give up the path, and practice giving and cultivating various meritorious deeds?&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者沙门二十亿闻比丘语，即诣佛所，稽首作礼，却坐一面。世尊告曰：「沙门！汝实安静独住，宴坐思惟，心作是念：『若有世尊弟子精勤学习正法、律者，我为第一，然诸漏心不得解脱。我父母家极大富乐，多有钱财，我今宁可舍戒罢道行，欲布施修诸福业耶？』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śramaṇa Vītarāga was ashamed and embarrassed, and had no fear. &quot;The World-Honored One knows what I am thinking.&quot; He joined his palms towards the Buddha and said, &quot;It is true.&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼时，尊者沙门二十亿羞耻慙愧，则无无畏。「世尊知我心之所念。」叉手向佛，白曰：「实尔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Śramaṇa! I now ask you, answer as you see fit. What do you think? When you were at home, you were skilled in playing the zither. Did the zither follow the melody, or did the melody follow the zither?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「沙门！我今问汝，随所解答。于意云何？汝在家时，善调弹琴，琴随歌音，歌随琴音耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Śramaṇa Vītarāga said, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者沙门二十亿白曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One further asked, &quot;What do you think? If the strings of the zither are too tight, is there a harmonious sound that is pleasing and delightful?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊复问：「于意云何？若弹琴弦急，为有和音可爱乐耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The śramaṇa replied, &quot;No, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>沙门答曰：「不也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One further asked, &quot;What do you think? If the strings of the zither are too loose, is there a harmonious sound that is pleasing and delightful?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊复问：「于意云何？若弹琴弦缓，为有和音可爱乐耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The śramaṇa replied, &quot;No, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>沙门答曰：「不也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One further asked, &quot;What do you think? If the strings of the zither are neither too tight nor too loose, but just right, is there a harmonious sound that is pleasing and delightful?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊复问：「于意云何？若弹琴调弦不急不缓，适得其中，为有和音可爱乐耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The śramaṇa replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>沙门答曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;So it is, śramaṇa! Excessive diligence makes the mind agitated, while insufficient diligence makes it lazy. Therefore, you should discern the right time and observe these characteristics, without being negligent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「如是。沙门！极大精进，令心调乱；不极精进，令心懈怠。是故汝当分别此时，观察此相，莫得放逸。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śramaṇa Vītarāga heard what the Buddha said, accepted it well, and upheld it well. He then rose from his seat, bowed his head at the Buddha&#x27;s feet, circumambulated him three times, and departed. He received the Buddha&#x27;s teaching on the parable of the lute and dwelt in seclusion, alone, without negligence, practicing diligently. Having dwelt in seclusion, alone, without negligence, and practicing diligently, he, a noble son, shaved off his hair and beard, donned the saffron robes, left home out of true faith, and went forth to practice the path. Having completed the unsurpassed holy life, he knew and realized for himself in this very life, attained, and dwelled in it. He knew as it really is: &quot;Birth is ended, the holy life has been established, what was to be done has been done, there is no more of this mundane state.&quot; Venerable Śramaṇa Vītarāga, having known the Dharma, attained arahantship. At that time, Venerable Śramaṇa Vītarāga, having attained arahantship, thought: &quot;Now is the time. Should I go to where the World-Honored One is and declare my attainment of ultimate knowledge?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者沙门二十亿闻佛所说，善受善持，即从坐起，稽首佛足，绕三匝而去。受佛弹琴喻教，在远离独住，心无放逸，修行精勤。彼在远离独住，心无放逸，修行精勤已，族姓子所为，剃除须发，著袈裟衣，至信、舍家，无家，学道者，唯无上梵行讫，于现法中自知自觉，自作证成就游，生已尽，梵行已立，所作已办，不更受有，知如真。尊者沙门二十亿知法已，至得阿罗诃。彼时，尊者沙门二十亿得阿罗诃已，而作是念：「今正是时，我宁可往诣世尊所，说得究竟智耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then Venerable Śramaṇa Vītarāga went to where the Buddha was, bowed his head at his feet, sat to one side, and said, &quot;World-Honored One! If a bhikṣu attains non-attachment, exhausts the contaminants, establishes the holy life, accomplishes what was to be done, discards the heavy burden, unties the fetters, and personally attains the good meaning, right knowledge, and right liberation, he delights in these six states at that time. He delights in non-desire, delights in seclusion, delights in non-conflict, delights in the exhaustion of craving, delights in the exhaustion of feeling, and delights in an unmoving mind. World-Honored One! Some may think: &#x27;This virtuous one delights in non-desire because of relying on faith.&#x27; One should not view it like this. It is the exhaustion of desire, anger, and delusion that is delighting in non-desire. World-Honored One! Some may think: &#x27;This virtuous one delights in seclusion because of seeking gain, praise, and offerings.&#x27; One should not view it like this. It is the exhaustion of desire, anger, and delusion that is delighting in seclusion. World-Honored One! Some may think: &#x27;This virtuous one delights in non-conflict because of relying on precepts.&#x27; One should not view it like this. It is the exhaustion of desire, anger, and delusion that is delighting in non-conflict, delighting in the exhaustion of craving, delighting in the exhaustion of feeling, and delighting in an unmoving mind. World-Honored One! If a bhikṣu attains non-attachment, exhausts the contaminants, establishes the holy life, accomplishes what was to be done, discards the heavy burden, unties the fetters, and personally attains the good meaning, right knowledge, and right liberation, he delights in these six states at that time.</p></td><td lang="lzh" class="agama-chi"><p>于是，尊者沙门二十亿往诣佛所，稽首作礼，却坐一面，白曰：「世尊！若有比丘得无所著，诸漏已尽，梵行已立，所作已办，重担已舍，有结已解，自得善义，正智正] cf.［丽】解脱者，彼于尔时乐此六处，乐于无欲，乐于远离，乐于无诤，乐于爱尽，乐于受尽，乐心不移动。世尊！或有一人而作是念：『此贤者以依信故，乐于无欲者，不应如是观，但欲尽、恚尽、痴尽，是乐于无欲。』世尊！或有一人而作是念：『此贤者以贪利称誉求供养故，乐于远离者，不应如是观，但欲尽、恚尽、痴尽，是乐于远离。』世尊！或有一人而作是念：『此贤者以依戒故，乐于无诤者，不应如是观，但欲尽、恚尽、痴尽，是乐于无诤，乐于爱尽，乐于受尽，乐心不移动。』世尊！若有比丘得无所著，诸漏已尽，梵行已立，所作已办，重担已舍，有结已解，自得善义，正智正解脱者，彼于尔时乐此六处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>World-Honored One! If a bhikṣu is still learning and seeks the unsurpassed peace and bliss of nirvāṇa, he accomplishes the faculties and precepts of learning at that time. Later, when his contaminants are exhausted, he attains the uncontaminated, liberation of mind and liberation through wisdom, and personally knows and realizes for himself in this very life, attains, and dwells in it. He knows as it really is: &quot;Birth is ended, the holy life has been established, what was to be done has been done, there is no more of this mundane state.&quot; He accomplishes the faculties and precepts of the non-learner at that time. World-Honored One! It is like a young child. At that time, he accomplishes the faculties and precepts of a child. Later, when he has fully mastered the faculties of learning, he accomplishes the faculties and precepts of learning at that time.</p></td><td lang="lzh" class="agama-chi"><p>「世尊！若有比丘学未得意，求愿无上安隐涅槃者，彼于尔时成就学根及学戒。彼于后时，诸漏已尽而得无漏，心解脱、慧解脱，于现法中自知自觉，自作证成就游，生已尽，梵行已立，所作已办，不更受有，知如真者。彼于尔时成就无学根及无学戒。世尊！犹幼少童子，彼于尔时成就小根及小戒，彼于后时具足学根者，彼于尔时成就学根及学戒。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>So it is, World-Honored One! If a bhikṣu is still learning and seeks the unsurpassed peace and bliss of nirvāṇa, he accomplishes the faculties and precepts of learning at that time. Later, when his contaminants are exhausted, he attains the uncontaminated, liberation of mind and liberation through wisdom, and personally knows and realizes for himself in this very life, attains, and dwells in it. He knows as it really is: &quot;Birth is ended, the holy life has been established, what was to be done has been done, there is no more of this mundane state.&quot; He accomplishes the faculties and precepts of the non-learner at that time. If there are visible forms that can be known by the eye and come into contact with the eye, they cannot cause him to lose this liberation of mind and liberation through wisdom. His mind abides internally, well restrained and guarded, observing the arising and ceasing of phenomena. If there are sounds that can be known by the ear, smells that can be known by the nose, tastes that can be known by the tongue, tangibles that can be known by the body, and dharmas that can be known by the mind and come into contact with the mind, they cannot cause him to lose this liberation of mind and liberation through wisdom. His mind abides internally, well restrained and guarded, observing the arising and ceasing of phenomena.</p></td><td lang="lzh" class="agama-chi"><p>「如是，世尊！若有比丘学未得意，求愿无上安隐涅槃者，彼于尔时成就学根及学戒。彼于后时，诸漏已尽而得无漏，心解脱、慧解脱，于现法中自知自觉，自作证成就游，生已尽，梵行已立，所作已办，不更受有，知如真者，彼于尔时成就无学根及无学戒。彼若有眼所知色与对眼者，不能令失此心解脱、慧解脱，心在内住，善制守持，观兴衰法。若有耳所知声、鼻所知香、舌所知味、身所知触、意所知法与对意者，不能令失此心解脱、慧解脱，心在内住，善制守持，观兴衰法。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>World-Honored One! It is like a large rock mountain not far from a village, unbroken, uncracked, not brittle, firmly standing, solid and compact. If a great wind and rain come from the east, it cannot be shaken, moved, or displaced. The wind from the east does not move to the south. If a great wind and rain come from the south, it cannot be shaken, moved, or displaced. The wind from the south does not move to the west. If a great wind and rain come from the west, it cannot be shaken, moved, or displaced. The wind from the west does not move to the north. If a great wind and rain come from the north, it cannot be shaken, moved, or displaced. The wind from the north does not move to the other directions. In the same way, if there are visible forms that can be known by the eye and come into contact with the eye, they cannot cause him to lose this liberation of mind and liberation through wisdom. His mind abides internally, well restrained and guarded, observing the arising and ceasing of phenomena. If there are sounds that can be known by the ear, smells that can be known by the nose, tastes that can be known by the tongue, tangibles that can be known by the body, and dharmas that can be known by the mind and come into contact with the mind, they cannot cause him to lose this liberation of mind and liberation through wisdom. His mind abides internally, well restrained and guarded, observing the arising and ceasing of phenomena.</p></td><td lang="lzh" class="agama-chi"><p>「世尊！犹去村不远有大石山，不破不缺不脆，坚住不空合一，若东方有大风雨来，不能令摇，不动转移；亦非东方风移至南方，若南方有大风雨来，不能令摇，不动转移；亦非南方风移至西方，若西方有大风雨来，不能令摇，不动转移；亦非西方风移至北方，若北方有大风雨来，不能令摇，不动转移；亦非北方风移至诸方。如是彼若有眼所知色与对眼者，不能令失此心解脱、慧解脱，心在内住，善制守持，观兴衰法。若有耳所知声、鼻所知香、舌所知味、身所知触、意所知法与对意者，不能令失此心解脱、慧解脱，心在内住，善制守护，观兴衰法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then the Venerable Śramaṇa Vītivṛtta spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>于是，尊者沙门二十亿说此颂曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>He delights in being free from desire, his mind abides in<br/>seclusion, he rejoices in being free from disputes, and delights in<br/>the end of suffering. He also delights in the end of<br/>suffering, his mind does not move, and he knows it as<br/>it truly is, thus his mind is liberated. Having attained mental<br/>liberation, the monk ceases the faculties, having done, he does not<br/>observe, and does not seek to do. Like a stone mountain<br/>the wind cannot move it, so it is with forms, sounds<br/>smells, tastes, and tangibles. The dharmas of what is loved and<br/>what is not loved cannot move the mind.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「乐在无欲，　　心存远离，喜于无诤，　　受尽欣悦。亦乐受尽，　　心不移动，得知如真，　　从是心解。得心解已，　　比丘息根，作已不观，　　无所求作。犹如石山，　　风不能动，色声香味，　　身触亦然。爱不爱法，　　不能动心。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Venerable Śramaṇa Vītivṛtta, having spoken about attaining ultimate knowledge in front of the Buddha, then rose from his seat, bowed his head at the Buddha&#x27;s feet, circumambulated him three times, and departed.</p></td><td lang="lzh" class="agama-chi"><p>尊者沙门二十亿于佛前说得究竟智已，即从坐起，稽首佛足，绕三匝而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, not long after the Venerable Śramaṇa Vītivṛtta had left, the World-Honored One told the bhikṣus, &quot;Noble sons! You should come before me and speak about attaining ultimate knowledge like the Venerable Śramaṇa Vītivṛtta came before me and spoke about attaining ultimate knowledge, without praising oneself or belittling others, speaking about the meaning and the present Dharma according to the circumstances; do not be like those who are deluded and bound by excessive pride, coming before me and speaking about attaining ultimate knowledge, but not attaining the meaning, only causing great trouble. The Venerable Śramaṇa Vītivṛtta came before me and spoke about attaining ultimate knowledge, without praising himself or belittling others, speaking about the meaning and the present Dharma according to the circumstances.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊，尊者沙门二十亿去后不久，告诸比丘：「诸族姓子！应如是来于我前说得究竟智，如沙门二十亿来于我前说得究竟智，不自誉，不慢他，说义现法随诸处也；莫令如痴增上慢所缠，来于我前说得究竟智，彼不得义，但大烦劳。沙门二十亿来于我前说得究竟智，不自誉，不慢他，说义现法随诸处也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. Those bhikṣus, having heard the Buddha&#x27;s words, rejoiced and upheld them.</p></td><td lang="lzh" class="agama-chi"><p>佛说如是。彼诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Madhyamāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

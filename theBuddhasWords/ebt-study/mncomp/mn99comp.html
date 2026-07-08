@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 99 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 99: Subha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn98comp.html#content"></a><a id="next-sutta" href="./mn100comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn99.html">MN 99</a> / <a href="../../parallels/ma152.html">MĀ 152</a> / <a href="../../parallels/ma170.html">MĀ 170 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Subha-sutta, the “discourse to Subha”, reports a discussion between the Buddha and the Brahmin Subha during which the Buddha taught his visitor the path to the Brahmā world. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn99n221"><span class="details"><span class="p">[n.221] The parallel is <a href="../../parallels/ma152.html">MĀ 152</a> at T I 666c-670a and has the title “discourse to Suka”, 鸚鵡經, thereby employing the name of the Brahmin protagonist of several parallels to <a href="../../mn/mn135.html">MN 135</a>, a discourse whose Pāli version speaks instead of the Brahmin Subha, just as <a href="../../mn/mn99.html">MN 99</a>. Although <a href="../../mn/mn99.html">MN 99</a> and <a href="../../parallels/ma152.html">MĀ 152</a> thus adopt a different name, they agree on taking the respective name of their Brahmin protagonist as the title of the discourse. While <a href="../../mn/mn99.html">MN 99</a> takes place in Jeta’s Grove by Sāvatthī, <a href="../../parallels/ma152.html">MĀ 152</a> has the Bamboo Grove by Rājagaha as its location. For a remark on <a href="../../parallels/ma152.html">MĀ 152</a> cf. Minh Chau 1964/1991: 61. Akanuma 1929/1990: 168 lists also T 79 as a parallel, which, however, is rather a parallel to <a href="../../mn/mn135.html">MN 135</a>.</span></span></span> In addition to this parallel, a few parts of a version of the present discourse have been preserved in a Sanskrit fragment.<span class="note" id="mn99n222"><span class="details"><span class="p">[n.222] This is the so far unpublished fragment no. 2375/37 of the Schøyen collection, identified by Peter Skilling (I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of this fragment). Fragment 2375/37A1 sets in with a reference to celibacy as the second quality listed by the young Brahmin, corresponding to the third quality listed in MN II 199,15, fragment 2375/ 37Bz refers to the protagonist of the discourse as śubho māṇavo.</span></span></span></p>
+<p>The Subha-sutta and its Madhyama-āgama parallel begin by describing that the Brahmin Subha, being recommended to do so, went to visit the Buddha.<span class="note" id="mn99n223"><span class="details"><span class="p">[n.223] While according to <a href="../../mn/mn99.html">MN 99</a> at MN II 196,16 Subha had inquired if there were arahants in Sāvatthī and was thereon told to visit the Buddha, according to <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a2 he had asked after a renowned teacher with a substantial following. <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a13 also differs from <a href="../../mn/mn99.html">MN 99</a> in as much as it describes the splendid sight of the Buddha, who was emanating a bright light like a golden mountain. This is a frequent pericope in the Madhyama-āgama, cf. above p. 408 note 94.</span></span></span> According to the Majjhima-nikāya version, Subha asked the Buddha’s opinion about the Brahminical view that a householder accomplishes the proper way, while someone gone forth fails to do so.<span class="note" id="mn99n224"><span class="details"><span class="p">[n.224] <a href="../../mn/mn99.html">MN 99</a> at MN II 197,6. A comparable Brahminical disdain for going forth, although phrased differently, can be found in the Mahāvastu in Basak 1968/2004: 133,8 or in Senart 1897: 221,2: “going forth ... is of little worth, of little profit, of little power, [deserving] little praise”, pravrajyā ... alpārthikā ca alpabhogā ca alpeśākyā ca alpānuśaṃsā ca.</span></span></span></p>
+<p>In the Madhyama-āgama version, the view presented by the Brahmin visitor was that a householder is superior to someone gone forth in regard to being able to reach understanding and knowledge.<span class="note" id="mn99n225"><span class="details"><span class="p">[n.225] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a19 reports the proposal that a householder “will reach proper understanding and therefore knowledge in accordance with the Dharma”, 便得善解, 則知如法, unlike someone who goes forth. <a href="../../parallels/ma152.html">MĀ 152</a> also differs from <a href="../../mn/mn99.html">MN 99</a> in as much as Subha does not present this as a Brahminical view, but only indicates that he had heard this, 我所聞.</span></span></span></p>
+<p>According to the Subha-sutta, the Buddha explained that he was one who would make a declaration on such a matter after carrying out an analysis, using the term vibhajjavāda in this explanation.<span class="note" id="mn99n226"><span class="details"><span class="p">[n.226] <a href="../../mn/mn99.html">MN 99</a> at MN II 197,10: “in this matter, I am one who speaks [after carrying out] an analysis”, vibhajjavādo kho aham ettha (Se-MN II 650,18: vibhajavādo). The term vibhajjavādin recurs in <a href="../../an/an10.94.html">AN 10:94</a> at AN V 190,18, where it similarly qualifies the analytical approach of the Buddha. Cousins 2001: 133 comments that in these instances the Buddha “is never simply described as a vibhajja-vāda or vibhajjavādin; it is always a question of being one who responds critically in a particular manner, as indicated by the pronoun ettha. In fact, elsewhere and on other issues, the Buddha’s position is represented as unequivocal ... there would in fact be some support in the Nikāyas for calling him [also] an ekaṃsa-vādin ... in the Poṭṭhapāda-sutta (D I 191) we find the Buddha declaring that he has made known ekaṃsikā teachings, namely the Four Noble Truths”, cf. also Abeynayake 2009b: 95, Karunadasa 2000: 27 or id. 2010: 286, Jain 1985: 62, Prasad 1972b: 106, Rhys Davids 1938/1978: 99, and Sujāto 2006: 137.</span></span></span> The parallel version in the Madhyama-āgama similarly indicates that the Buddha would answer Subha’s question with the help of an analytical explanation, with the difference that, according to its presentation, Subha had requested such an analytical explanation.<span class="note" id="mn99n227"><span class="details"><span class="p">[n.227] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a23: “I shall provide you with an analytical explanation”, 我當為汝具分別說, in reply to the Brahmin’s requests for an analytical explanation in <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a21: “may you now analyse this matter for me”, 願今為我分別此事. Hirakawa 1997: 184 indicates 分別說部 to stand for vibhajavādin, cf. also Soothill 1937/2000: 140. In other contexts, 分別說 can simply stand for explaining something in detail.</span></span></span></p>
+<p>This minor difference introduces a slight shift of emphasis, as in the Madhyama-āgama version the Buddha’s reply simply takes up something suggested by his visitor. In the Majjhima-nikāya discourse, in contrast, the Buddha’s reference to carrying out an analysis comes without any external prompting, so that here the analytical approach stands out as a qualification the Buddha himself attributes to his way of replying to questions.</p>
+<p>This slight shift of emphasis probably reflects the respective textual affiliation, as during later stages of the history of Buddhism the term vibhajjavāda came to be closely associated with the Theravāda tradition.<span class="note" id="mn99n228"><span class="details"><span class="p">[n.228] According to the Mahāvaṃsa 5:271-272 in Be-Mhv 40, at the council of Pāṭaliputta the Theravādins claimed to be Vibhajjavādins, cf. also Bareau 1955: 206 and Oldenberg 1879/1997: xlii. Similarly, Vism 711,23 uses the term Vibhajjavādin as an epithet expressing praiseworthiness in its eulogy of a Mahāvihāra monk. In contrast, the Abhidharmakośabhāṣya reckons those who were at odds with the Sarvāstivāda doctrine on the existence of past and future phenomena to be vibhajyavādinaḥ/分別說部/ 分別部, cf. Abhidh-k 5:25 in Pradhan 1967: 296,6, with its Chinese parallels in T 1558 at T XXIX 104b27 and T 1559 at T XXIX 257c27. Thus, for the compilers of the Abhidharmakośabhāṣya this term carried negative connotations. On the term vibhajjavāda as representative of the Theravāda tradition cf. also, e.g., Anālayo 2009m, Cousins 2001, Karunadasa 2000 or id. 2010: 282-293, Prasad 1972b: 105- 113, and Shwe Zan Aung 1915/1979: xl; on the same term in other Buddhist schools cf. Dutt 1978: 208-210. Cox 2004b: 506 explains that “the name Vibhajyavāda might be best characterized as a loose umbrella term for those, excluding the Sarvāstivādins, who belonged to the original Sthavira branch”.</span></span></span></p>
+<p>Another minor difference is that according to the Madhyama-āgama account the Buddha began each of his replies by telling Subha to listen carefully to what he was going to say.<span class="note" id="mn99n229"><span class="details"><span class="p">[n.229] E.g., <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667a22: “listen, pay careful attention”, 諦聽, 善思念之.</span></span></span> This turn of speech is not found in the Subha-sutta, although a similar injunction occurs frequently in other Majjhima-nikāya discourses.<span class="note" id="mn99n230"><span class="details"><span class="p">[n.230] E.g., in <a href="../../mn/mn54.html">MN 54</a> at MN I 360,17: suṇāhi sādhukaṃ manasi karohi, an injunction that in this case is absent from the corresponding Madhyama-āgama parallel, <a href="../../parallels/ma203.html">MĀ 203</a> at T I 773b2. At times, the same injunction occurs in both versions, cf., e.g., <a href="../../mn/mn27.html">MN 27</a> at MN I 178,11: suṇāhi sādhukaṃ manasi karohi and its parallel <a href="../../parallels/ma146.html">MĀ 146</a> at T I 656c11: 當善聽之. Thus, both collections make use of this pericope, although not always in the same discourses.</span></span></span></p>
+<p>At a later point, the Madhyama-āgama parallel to the Subha-sutta employs this injunction in quite a unique manner, as it describes that Subha also told the Buddha to listen carefully.<span class="note" id="mn99n231"><span class="details"><span class="p">[n.231] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667c10: “Gotama, listen well, Gotama”, 瞿曇, 善聽, 瞿曇.</span></span></span> Although several Pāli discourses depict how a monk tells another monk to listen well and in one instance even record that a householder told a monk to listen well,<span class="note" id="mn99n232"><span class="details"><span class="p">[n.232] Ānanda tells another monk that he should listen well in <a href="../../an/an5.169.html">AN 5:169</a> at AN III 201,18, <a href="../../an/an5.170.html">AN 5:170</a> at AN III 202,23, and <a href="../../an/an6.51.html">AN 6:51</a> at AN III 361,10. The householder Ugga tells an unnamed monk that he should listen well in <a href="../../an/an8.22.html">AN 8:22</a> at AN IV 213,8.</span></span></span> there does not seem to be a single Pāli discourse in which anyone tells the Buddha to listen well.</p>
+<p>The Madhyama-āgama version’s presentation clearly is the more unusual reading, the lectio difficilior. When evaluating this more unusual reading, it could be noted that, according to both versions, the Buddha had just invited Subha in a very polite manner to explain what the Brahmins reckoned as the five bases for merit.<span class="note" id="mn99n233"><span class="details"><span class="p">[n.233] <a href="../../mn/mn99.html">MN 99</a> at MN II 199,7: “if it is not inconvenient for you, it would be good if you could state those five things in this assembly”, sace te agaru, sādhu te pañca dhamme imasmiṃ parisatiṃ bhāsassū ti (Be- MN II 415,14, Se-MN II 653,11: parisati). <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667c6: “those five things ... can you state them now, being in this assembly”, 五法 ... 汝在此眾, 今可說耶?</span></span></span> The commentary does not give further details as to why the Buddha extended this invitation in such a polite manner. In both versions, Subha replied that he was willing to speak on such a subject when being in a company like the Buddha and his monks. This gives the impression that for him to speak on this subject possibly depended on the audience, in the sense that perhaps Brahmins would not easily proclaim such teachings in public.</p>
+<p>If Subha was about to deliver Brahminical teachings that were considered to some extent esoteric, it would be less surprising if he were to tell the Buddha to listen well, perhaps slipping into a turn of speech normally used when instructing other Brahmins on this matter.</p>
+<p>If this turn of speech should indeed have been part of the original discourse, it could easily be imagined how during the process of oral tradition it could have been lost, as for a layman to tell the Buddha to listen carefully must have appeared odd to the reciters and runs counter to their natural tendency, evident in the discourses, to enhance the status of the Buddha.</p>
+<p>Returning to the discussion described in the Subha-sutta, in reply to Subha’s proposal about the superiority of the householder’s way of life, according to both versions the Buddha explained that he did not approve of householders or recluses who practise wrongly, but commended both if they practised rightly.<span class="note" id="mn99n234"><span class="details"><span class="p">[n.234] <a href="../../an/an2.9.html">AN 2:9</a> at AN I 69,14 records the Buddha making a similar point, also in relation to accomplishing the proper way. Bluck 2002: 7 notes that such passages indicate some degree of “‘complementariness’ between monastics and lay disciples”, in that what really counts is proper practice in both cases. Shiraishi 1996: 188 observes that, according to the position taken by the Buddha, “whether one is a householder or whether one leaves the home, one is still required to abandon the wrong course of action”.</span></span></span></p>
+<p>Subha then presented the Buddha with the view that the activity of a householder is of greater fruit than the activity of someone who goes forth.<span class="note" id="mn99n235"><span class="details"><span class="p">[n.235] According to <a href="../../mn/mn99.html">MN 99</a> at MN II 197,19, Subha also suggested that the activity of a householder requires greater effort, whereas according to <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667b12 it was the Buddha in his reply to Subha who brought up the issue of which activity requires greater effort.</span></span></span> In both versions, the Buddha explained that the activity of a householder could yield great or small fruit, just as the activity of a recluse may yield great or small fruit. Both versions illustrate the activity of a householder with the example of agriculture and the life of someone gone forth with the example of engaging in trade, an activity that involves comparatively less effort.</p>
+<p>The Subha-sutta and its Madhyama-āgama parallel next turn to the five bases for merit proclaimed by the Brahmins, which they list with some variation in sequence (see table 10.4).</p>
+<p>In both versions, the Buddha highlights that the Brahmins’ proclamation of these five bases for merit was not based on personal realization, a situation comparable to a file of blind men leading each other.<span class="note" id="mn99n236"><span class="details"><span class="p">[n.236] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 668a15 differs in so far as, instead of blind men, the simile is concerned with blind children, 盲兒. <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667c29 also reports that Subha tried to defend his position by explaining that the Brahmins base their faith on their oral tradition: “but the Brahmins base their faith on [what they have] memorized”, 但諸梵志因信受持, which brings to mind an argument raised by the Brahmin Kāpaṭhika in a similar discussion in <a href="../../mn/mn95.html">MN 95</a> at MN II 170,24: “the Brahmins honour this as oral tradition”, anussavā p’ ettha brāhmaṇa payirūpāsantī ti.</span></span></span> According to both versions, Subha was displeased with this comparison and reacted by quoting a saying by the Brahmin Pokkharasāti,<span class="note" id="mn99n237"><span class="details"><span class="p">[n.237] Ps III 446,25 offers alternative explanations of the name Pokkharasāti, one of which is that he got this name because of resembling a lotus, pokkharasadisattā. Lévi 1912: 501 explains that this commentarial gloss points to an earlier stage when this name still had a d instead of a t, such as in its Sanskrit form Pauṣkarasādi, as otherwise the word play on sadisa would not work, in fact the commentary mentions both Pokkharasāti as well as Pokkharasādi.</span></span></span> in which Pokkharasāti derided recluses and Brahmins who claim to have reached a superhuman state.</p>
+<table class="comparative-table">
+<caption>Table 10.4: Five Bases for Merit in <a href="../../mn/mn99.html">MN 99</a> and <a href="../../parallels/ma152.html">MĀ 152</a><span class="note" id="mn99n238"><span class="details"><span class="p">[n.238] My survey is based on <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669b16+27. This is, however, only a recapitulation of the original listing in <a href="../../parallels/ma152.html">MĀ 152</a> at T I 667c10, which omits generosity and mentions asceticism twice, under two different headings, namely 熱行 and 苦行. Note 13 in the Taishō edition suggests to take 苦行 to stand for cāga, generosity, but in view of the fact that <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669b18 no longer mentions 熱行 and instead has 行施, “practise generosity”, it may be preferable to take 苦行 at its usual meaning of “ascetic practice” and consider the earlier occurrence of 熱行 to have accidentally replaced 行施.</span></span></span></caption>
+<tr><th><a href="../../mn/mn99.html">MN 99</a></th><th><a href="../../parallels/ma152.html">MĀ 152</a></th></tr>
+<tr><td>truth (1)</td><td>truth (→ 1)</td></tr>
+<tr><td>asceticism (2)</td><td>generosity (→ 5)</td></tr>
+<tr><td>celibacy (3)</td><td>study (→ 4)</td></tr>
+<tr><td>study (4)</td><td>asceticism (→ 2)</td></tr>
+<tr><td>generosity (5)</td><td>celibacy (→ 3)</td></tr>
+</table>
+<p>The Subha-sutta and its Madhyama-āgama parallel report in similar terms how, by way of a question and answer exchange, the Buddha got Subha to admit that the proclamation made by Pokkharasāti was not appropriate.<span class="note" id="mn99n239"><span class="details"><span class="p">[n.239] <a href="../../mn/mn99.html">MN 99</a> at MN II 201,13 compares the proclamation made by Pokkharasāti to a blind man who claims that coloured forms, even and uneven, stars, the moon, and the sun do not exist because he cannot see them. <a href="../../parallels/ma152.html">MĀ 152</a> at T I 668b17 illustrates the same only with the example of various types of visible form (white or black, beautiful or ugly, long or short, far or near, gross or subtle), without bringing in stars, the moon, or the sun.</span></span></span></p>
+<p>According to the Subha-sutta, the Buddha pointed out that Pokkharasāti was not able to realize a superhuman state due to being obstructed by the five hindrances of sensual desire, ill will, sloth-and-torpor, restlessness-and-worry, and doubt. The Madhyamaāgama version − where the point at stake is knowing one’s own benefit, the benefit of another, and the mind of other recluses and Brahmins − instead lists sensual desire, ill will, personality view, clinging to rules, and doubt (see table 10.5).</p>
+<p>Thus, instead of the two hindrances sloth-and-torpor and restlessness-and-worry, this listing mentions personality view and clinging to rules, so that in the Madhyama-āgama version what obstructs clear vision are the five lower fetters, instead of the five hindrances.<span class="note" id="mn99n240"><span class="details"><span class="p">[n.240] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 668c18: 身見 and 戒取, which correspond to sakkāyadiṭṭhi and sīlabbataparāmāsa. <a href="../../parallels/ma152.html">MĀ 152</a> precedes these two with sensual desire and ill will, 欲 and 恚, and concludes its listing with doubt, 疑. As all five are introduced as “obstructions”, 障礙, “obstacles”, 覆蓋, and as causing “blindness”, 盲, standard qualifications for the effect of the five hindrances, it would have been more natural to find a listing of the five hindrances instead of the five lower fetters.</span></span></span> This suggestion is unusual, since in other discourses the precondition for clear vision is the removal of the five hindrances,<span class="note" id="mn99n241"><span class="details"><span class="p">[n.241] Cf., e.g., <a href="../../sn/sn46.55.html">SN 46:55</a> at SN V 121,17 or <a href="../../an/an5.51.html">AN 5:51</a> at AN III 63,22.</span></span></span> not an eradication of the five lower fetters.<span class="note" id="mn99n242"><span class="details"><span class="p">[n.242] Perhaps the presentation in <a href="../../parallels/ma152.html">MĀ 152</a> is the outcome of a confusion of the five hindrances with the five lower fetters. Such a confusion could easily occur, as Madhyama-āgama discourses usually list the five fetters in a sequence where sensual desire and ill will stand at the beginning and doubt comes as the last term, cf. <a href="../../parallels/ma4.html">MĀ 4</a> at T I 424c21, <a href="../../parallels/ma38.html">MĀ 38</a> at T I 481a26, and <a href="../../parallels/ma205.html">MĀ 205</a> at T I 778c20, a sequence also found in the Saṅgītiparyāya, T 1536 at T XXVI 419c7. The sequence for listing the fetters adopted in the Madhyama-āgama is thus similar to the standard listing of the hindrances, with the first two and the last items corresponding, a similarity which more easily can lead to confusing the two schemes. The Pāli discourses adopt a different sequence for the five fetters, as they list first the three fetters related to stream-entry, and then the fetters of sensual desire and ill will, cf., e.g., <a href="../../mn/mn64.html">MN 64</a> at MN I 432,15, a pattern also adopted in the Dīrgha-āgama, cf. <a href="../../parallels/da9.html">DĀ 9</a> at T II 51b10, in the Saṃyukta-āgama, cf. <a href="../../parallels/sa490.html">SĀ 490</a> at T II 127c17, <a href="../../parallels/sa820.html">SĀ 820</a> at T II 210c4, SĀ 821at T II 211a1, <a href="../../parallels/sa822.html">SĀ 822</a> at T II 211a26, <a href="../../parallels/sa823.html">SĀ 823</a> at T II 211b20, <a href="../../parallels/sa918.html">SĀ 918</a> at T II 233a12, <a href="../../parallels/sa928.html">SĀ 928</a> at T II 236c24, <a href="../../parallels/sa934.html">SĀ 934</a> at T II 239a23, and in the Abhidharmakośabhāṣya, Abhidh-k 5:43 in Pradhan 1967: 310,2, T 1558 at T XXIX 108c29, and T 1559 at T XXIX 262b1.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 10.5: Five Obstructions in <a href="../../mn/mn99.html">MN 99</a> and <a href="../../parallels/ma152.html">MĀ 152</a></caption>
+<tr><th><a href="../../mn/mn99.html">MN 99</a></th><th><a href="../../parallels/ma152.html">MĀ 152</a></th></tr>
+<tr><td>sensual desire (1)</td><td>sensual desire (→ 1)</td></tr>
+<tr><td>ill will (2)</td><td>ill will (→ 2)</td></tr>
+<tr><td>sloth-and-torpor (3)</td><td>personality view</td></tr>
+<tr><td>restlessness-and-worry (4)</td><td>clinging to rules</td></tr>
+<tr><td>doubt (5)</td><td>doubt (→ 5)</td></tr>
+<tr><td></td><td>(≠ 3-4)</td></tr>
+</table>
+<p>The Subha-sutta and its Madhyama-āgama parallel agree in next taking up the five types of sensual pleasure, explaining that Pokkharasāti was incapable of vision because he indulged in sensual pleasures without seeing any danger in such indulgence.<span class="note" id="mn99n243"><span class="details"><span class="p">[n.243] The two versions differ in the sequence of their presentation, as <a href="../../mn/mn99.html">MN 99</a> at MN II 203,10 first takes up the five types of sensual pleasure and then turns to Pokkharasāti’s infatuation with them, while <a href="../../parallels/ma152.html">MĀ 152</a> at T I 668c23 first examines Pokkharasāti’s infatuation with sensuality and then takes up the five types of sensual pleasure.</span></span></span> Both versions illustrate the difference between sensual pleasures and non-sensual pleasures by comparing fire that burns in dependence on fuel to the much brighter fire that due to an act of supernormal power would burn without any fuel.<span class="note" id="mn99n244"><span class="details"><span class="p">[n.244] According to <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669a7, Subha replied that such a fire without fuel does not exist and would be possible only through an act of supernormal power, to which the Buddha agreed. According to <a href="../../mn/mn99.html">MN 99</a> at MN II 203,27, however, it was the Buddha who made this point.</span></span></span></p>
+<p>The Subha-sutta next illustrates non-sensual pleasure that is free from sensuality with the example of the first and the second jhāna, an illustration not found in its Madhyama-āgama counterpart. The Majjhima-nikāya version continues by reporting that the Buddha asked Subha what the Brahmins consider most fruitful among the five bases for merit declared by them. Subha replied that generosity was considered the most meritorious among the five. This exchange is also absent from the Madhyama-āgama version.<span class="note" id="mn99n245"><span class="details"><span class="p">[n.245] As in both versions the Buddha next takes up the topic of generosity, the question and answer recorded in <a href="../../mn/mn99.html">MN 99</a> seem to be required to introduce this change of topic.</span></span></span></p>
+<p>Both versions bring up the hypothetical case of visitors to a Brahminical sacrifice who, having the wish to get the best seat and food, are annoyed when this does not happen.<span class="note" id="mn99n246"><span class="details"><span class="p">[n.246] The otherwise similar exposition in <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669a17 differs in so far as, instead of describing two Brahmin visitors to a Brahminical sacrifice, it speaks of a young warrior, a young Brahmin, a young merchant, and a young worker, each of which comes from one of the four directions to a food offering by Brahmins.</span></span></span> When Subha explains that the generosity of the Brahmins is motivated by compassion and not by the wish to vex their visitors, the Buddha concludes that compassion should be reckoned as a sixth basis for merit, a proposal to which Subha has to agree. In both versions, Subha also has to admit that he sees the five bases for merit more often among those who have gone forth than among householders.</p>
+<p>According to the Majjhima-nikāya account, the Buddha reckoned the five bases of merit proposed by the Brahmins as mere “equipment of the mind”,<span class="note" id="mn99n247"><span class="details"><span class="p">[n.247] <a href="../../mn/mn99.html">MN 99</a> at MN II 205,32: cittassāhaṃ ete parikkhāre vadāmi. The term cittaparikkhāra recurs in <a href="../../an/an7.49.html">AN 7:49</a> at AN IV 62,5 as a motivation for giving gifts.</span></span></span> in the sense that they support the development of a mind free from ill will. The Madhyama-āgama version instead explains that the five bases of merit originate from a mind free from ill will, without qualifying them as an equipment of the mind.<span class="note" id="mn99n248"><span class="details"><span class="p">[n.248] <a href="../../parallels/ma152.html">MĀ 152</a> at T I 669b24.</span></span></span></p>
+<p>The Majjhima-nikāya version reports that Subha asked if the Buddha knew and was willing to teach him the path to union with Brahmā, in reply to which the Buddha described the practice of the brahmavihāras, illustrating their radiation with the example of a vigorous trumpeter. The Madhyama-āgama version also records that the Buddha taught Subha the practice of the brahmavihāras as a way to rebirth in the Brahmā world, a practice similarly illustrated with the image of a trumpeter.<span class="note" id="mn99n249"><span class="details"><span class="p">[n.249] <a href="../../parallels/ma152.html">MĀ 152</a> differs from <a href="../../mn/mn99.html">MN 99</a> in the sequence of its presentation, as it reports that, after describing the practice of the brahmavihāras, the Buddha asked Subha if he thought such practice to lead to Brahmā’s heaven, which Subha affirmed. After this, according to <a href="../../parallels/ma152.html">MĀ 152</a> at T I 670a7 Subha asked if the Buddha knew the path to Brahmā. This seems out of sequence, since it would make little sense for Subha to ask if the Buddha knew this path after the Buddha had already described it.</span></span></span> The Majjhima-nikāya version concludes this description by proclaiming that, by developing the brahmavihāras in this way, no limiting action can remain, a statement not found in its Madhyamaāgama counterpart.<span class="note" id="mn99n250"><span class="details"><span class="p">[n.250] <a href="../../mn/mn99.html">MN 99</a> at MN II 208,2+6: “no limiting action remains or persists there”, yaṃ pamāṇakataṃ kammaṃ, na taṃ tatrāvasissati, na taṃ tatrāvatiṭṭhati, a statement the commentary Ps III 450,10 explains to imply that the powerful karmic effect of the brahmavihāra practice will be stronger than other karmas of the sensual sphere and thus have a determining effect on the next rebirth. Although this statement is not found in <a href="../../parallels/ma152.html">MĀ 152</a>, a similar statement occurs in <a href="../../parallels/ma15.html">MĀ 15</a> at T I 438a14 (translated in Anālayo 2009f: 9), parallel to an occurrence of such a statement in <a href="../../an/an10.208.html">AN 10:208</a> at AN V 299,25. Aronson 1979: 31 relates this notion to the image of the trumpeter who makes himself heard in all direction, explaining that the trumpet blast “is not a measured performance. Similarly, when one cultivates love and the other attitudes according to the method given ... no measured intentions remain”.</span></span></span></p>
+<p>In both versions, the Buddha illustrated his knowledge of the path to Brahmā with the example of a man who has just come from a particular village and will therefore be able to describe the way to that village without any hesitation.<span class="note" id="mn99n251"><span class="details"><span class="p">[n.251] A minor difference is that, while according to <a href="../../mn/mn99.html">MN 99</a> at MN II 206,24 this person is a native of the particular village, <a href="../../parallels/ma152.html">MĀ 152</a> at T I 670a11 speaks of someone who has just gone to this village and come back.</span></span></span></p>
+<p>According to both versions, Subha took refuge.<span class="note" id="mn99n252"><span class="details"><span class="p">[n.252] <a href="../../dn/dn10.html">DN 10</a> at DN I 210,11 reports that Subha took refuge again in the presence of Ānanda after the Buddha had passed away, perhaps by way of confirming his decision taken in the present discourse.</span></span></span> The Majjhima-nikāya discourse continues by describing how, after having left the Buddha, Subha met the Brahmin Jāṇussoṇi. This aftermath to the meeting between Subha and the Buddha is not found in the Madhyama-āgama version.</p>
+<p>Precisely the same meeting between a visitor who comes from the Buddha’s presence and the Brahmin Jāṇussoṇi recurs as the introduction to the Cūḷahatthipadopama-sutta and its Madhyama-āgama parallel, with the only difference that the person who met Jāṇussoṇi was the wanderer Pilotika instead of the Brahmin Subha.<span class="note" id="mn99n253"><span class="details"><span class="p">[n.253] <a href="../../mn/mn27.html">MN 27</a> at MN I 175,14 and <a href="../../parallels/ma146.html">MĀ 146</a> at T I 656a22.</span></span></span> In the case of the Cūḷahatthipadopama-sutta and its parallel, it was due to this meeting that Jāṇussoṇi felt inspired to visit the Buddha. The Cūḷahatthipadopama-sutta and its Madhyamaāgama parallel agree that the ensuing discourse inspired Jāṇussoṇi to take refuge and become a lay disciple of the Buddha.<span class="note" id="mn99n254"><span class="details"><span class="p">[n.254] <a href="../../mn/mn27.html">MN 27</a> at MN I 184,16 and <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a24; on Jāṇussoṇi taking refuge cf. also above p. 41.</span></span></span> This makes it less probable that on another occasion he would again inquire of someone coming from the Buddha’s presence about the Buddha’s wisdom, as if he had no personal knowledge of the Buddha and his way of teaching.</p>
+<p>Whereas in the Cūḷahatthipadopama-sutta Jāṇussoṇi’s inquiry is an important step leading up to the ensuing discourse, in the Subha-sutta the same inquiry does not have such a function. As in the case of the Subha-sutta this inquiry by Jāṇussoṇi is absent from the parallel version, it is quite possible that during the course of the transmission of the Majjhima-nikāya discourses Jāṇussoṇi’s inquiry, which originally belonged only to the Cūḷahatthipadopama-sutta, was, perhaps even accidentally, added to the conclusion of the Subha-sutta.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.350 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.350</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 350</span><span class="mirror-right">（三五〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn15.20.html">SN 15.20</a> / <a href="../parallels/sa956.html">SĀ 956</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Vepulla Mountain in Rajagriha. At that time, the World-Honored One told the bhikshus, &quot;All conditioned phenomena are impermanent, they are phenomena of arising and ceasing, they do not abide for long, they cannot be relied upon, they are phenomena of decay. For this reason, you bhikshus should be content with all conditioned phenomena, generate thoughts of disgust, remove desire, and seek liberation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城毘富罗山下。尔时，世尊告诸比丘：「诸行无常，是生灭法，无有住时，不可保信，是坏] cf.【丽】败法。以是义故，汝诸比丘，于诸行所，应知止足，生厌恶想，离于爱欲，而求解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He further told the bhikshus, &quot;This Vepulla Mountain was called Vagi Banjha in the past. At that time, this city was called Dipamitra. The lifespan of the people was then forty thousand years. When the people wanted to climb this mountain, it took them four days to reach the summit. At that time, there was a Buddha named Kasyapa Tathāgata, Arhat, Perfectly Enlightened One, Perfect in Knowledge and Conduct, Well-Gone, Knower of the Secular World, Unsurpassed Person, Tamer of Men, Teacher of Gods and Men, Buddha, World-Honored One. He taught the Dharma to his disciples, which was good in the beginning, good in the middle, and good in the end. The meaning was profound, the words were skillfully expressed, pure and unadulterated, and complete with the characteristics of pure and chaste conduct. Bhikshus, you should know that the appearance of Vagi Banjha Mountain has now disappeared, and the people have all died. After the Buddha entered nirvana, the lifespan of humans gradually decreased. For this reason, all conditioned phenomena are impermanent, they are phenomena of arising and ceasing, they do not abide for long, they cannot be relied upon, they are phenomena of decay and destruction. Therefore, bhikshus, you should be content with all conditioned phenomena, generate thoughts of disgust, remove desire, and seek liberation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>复告比丘：「此毘富罗山，往昔之时，名曰婆耆半阇。尔时，此城名帝弥罗，彼时人民寿四万岁，诸人民等，欲上此山，经于四日，然后乃能至彼山顶。时世有佛，号迦孙如来、应供、正遍知、明行足、善逝、世间解、无上士、调御丈夫、天人师、佛、世尊，为诸弟子而说法要，初中后善，其义深远，其语巧妙，纯一无杂，具足清白梵行之相。比丘当知，尔时，婆耆半阇山相，于今已灭，人民尽死，是佛世尊入涅槃后，人寿转减。以是义故，诸行无常，是生灭法，无有住时，不可保信，是坏败法。是故比丘，于诸行所，应知止足，生厌恶想，离于爱欲，而求解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He further told the bhikshus, &quot;In the past, this mountain was called Pungaka, and at that time, this city was called Abhigaka. The lifespan of the people was then thirty thousand years. When these beings wanted to climb the mountain, it took them three days to go and return. At that time, there was a Buddha, a World-Honored One, named Kanakamuni Tathāgata, Arhat, Perfectly Enlightened One, Perfect in Knowledge and Conduct, Well-Gone, Knower of the Secular World, Unsurpassed Person, Tamer of Men, Teacher of Gods and Men, Buddha, World-Honored One. At that time, the Tathāgata universally expounded the Dharma for the great assembly. What he expounded was good in the beginning, good in the middle, and good in the end. The meaning was profound, the words were skillfully expressed, complete and pure, revealing the characteristics of pure and chaste conduct. Bhikshus, you should know that after that Buddha, the World-Honored One, entered nirvana, the lifespan of humans gradually decreased. At that time, the appearance of the mountain has now disappeared, and the people have all died. Therefore, bhikshus, all conditioned phenomena are impermanent, they are phenomena of change and transformation, they cannot be relied upon, they will eventually return to destruction. You should be content with all conditioned phenomena, generate thoughts of disgust, remove desire, and seek liberation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>复告比丘：「乃往昔时，此山名曰朋迦，于时此城名阿毘迦，时，彼世人寿三万岁，此诸众生，若欲上山，经于三日，便得往还。时世有佛世尊，号迦那含牟尼如来、应供、正遍知、明行足、善逝、世间解、无上士、调御丈夫、天人师、佛、世尊。尔时，如来普为大众演说法要，所演说者，初中后善，其义深远，其语巧妙，具足清净，显发梵行之相。比丘当知，彼佛世尊入涅槃后，人民转减，于时山相，于今已灭，人民死尽。是故比丘，诸行无常，是变易法，不可恃怙，会归磨灭。汝等应当于诸行所，宜知止足，生厌恶想，离于爱欲，而求解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha further told the bhikshus, &quot;In the past, this mountain was called Shanbian. At that time, the country was called Chima. The lifespan of the people was then twenty thousand years. At that time, there was a Buddha who appeared in the world, named Kanakamuni Tathāgata, Arhat, Perfectly Enlightened One, Perfect in Knowledge and Conduct, Well-Gone, Knower of the Secular World, Unsurpassed Person, Tamer of Men, Teacher of Gods and Men, Buddha, World-Honored One. He extensively expounded and analyzed the profound Dharma for the great assembly. What he expounded was good in the beginning, good in the middle, and good in the end. The meaning was profound, the words were skillfully expressed, pure and unadulterated, complete with the characteristics of pure and chaste conduct. Bhikshus, you should know that the name Shanbian Mountain has now disappeared, and the people have all died. After that Buddha, the World-Honored One, entered parinirvana, the lifespan of humans gradually decreased. For this reason, all conditioned phenomena are impermanent, they are phenomena of change and transformation, they do not abide for long, they cannot be relied upon, they will eventually return to destruction. Therefore, you should be content with all conditioned phenomena, generate thoughts of disgust, remove desire, and seek liberation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告诸比丘：「乃往古昔，此山名曰善边，尔时，国土名曰赤马，于时人民寿二万岁。当尔之时有佛出世，号曰迦叶如来、应供、正遍知、明行足、善逝、世间解、无上士、调御丈夫、天人师、佛、世尊，广为大众敷演分别诸法秘奥，其所说者初中后善，其义深远，其语巧妙，纯一无杂，具足清白梵行之相。比丘当知，善边山名于今已灭，人皆终没，彼佛世尊入般涅槃，人命转减。以是义故，诸行无常，是变易法，无有住时，不可恃怙，会归磨灭。是故宜应于诸行所，生于止足，厌恶之想，离于爱欲，而求解脱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;This mountain is now also called Vifula, and this country is called Magadha. The lifespan of the beings here is one hundred years, sometimes more, sometimes less. If these beings want to climb the mountain, they can go and return in a short while. I, Shakyamuni, have appeared in the world, fully endowed with the ten titles, and expound the Dharma for the multitude. What I expound is good in the beginning, good in the middle, and good in the end. The meaning is profound, the words are skillfully expressed, pure and unadulterated, complete with the characteristics of pure and chaste conduct.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「此山今复名毘富罗，而斯国土名摩竭提，是中众生寿命百年，或增或减，此诸众生若欲上山，须臾之顷，即便往还。我释迦文出现于世，十号具足，为众演说无量经典，其所说者，初中后善，其义深远，其语巧妙，纯一无杂，具足清白梵行之相。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He further told the bhikshus, &quot;The name of this mountain and the people of this country will soon all be extinguished. I will also not be long before entering nirvana. For this reason, all conditioned phenomena are impermanent, they are phenomena of change and transformation, they do not abide for long, they cannot be relied upon, they will eventually return to destruction. Therefore, bhikshus, you should sincerely generate thoughts of contentment, disgust, and detachment from desire towards all conditioned phenomena, and seek liberation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>复告比丘：「此山名字并及国人，不久亦当悉皆灭尽，我亦不久当入涅槃。以是义故，诸行无常，是变易法，无有住时不可恃怙，会归磨灭。是故比丘，宜应至心于诸行所，生止足想，厌恶之心，离于爱欲，而求解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The mountains of Vārāṇasī, Aṅga, and Magadha, the red horse country of the mountain of<br/>the good border, and the mountain of Vṛddhikā - all the mountains will be destroyed<br/>and the people will also perish. The Buddha will enter nirvana and the lifespan will be extinguished.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「婆耆半阇帝弥罗，　　阿毘迦罗朋伽迦，善边之山赤马国，　　毘富罗山摩竭提，诸山悉灭人亦终，　　佛入涅槃寿命灭。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>For this reason, all conditioned things are impermanent, they are phenomena of arising and ceasing. When arising and ceasing cease, then cessation is bliss.</p></td><td lang="lzh" class="agama-chi"><p>「以是义故，诸行无常，是生灭法，生灭灭已，寂灭为乐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard the Buddha&#x27;s teaching and joyfully practiced it.</p></td><td lang="lzh" class="agama-chi"><p>时诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>city, mountain, past, no place, sentient beings are not<br/>all not coarse rain drops, rain like a broom<br/>throw a stick, return to turn the wheel, Vimalakīrti</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>城、山、过去　　无地方所　　众生无不是麁雨渧雨、如缚扫篲　　掷杖、还转轮毘富罗</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

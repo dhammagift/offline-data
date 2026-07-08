@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.186 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.186</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 186</span><span class="mirror-right">（一八六）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn10.8.html">SN 10.8</a> / <a href="../parallels/ma28.html">MĀ 28 (~)</a> / <a href="../parallels/sa592.html">SĀ 592</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Kalandaka Bamboo Grove in Rājagṛha. At that time, the elder Sudatta had some minor business and came from Śrāvastī to Rājagṛha, going to the house of the elder Gopālaka. He saw that in the house, the whole night was spent without sleeping, chopping firewood to make a fire, preparing various offerings, arranging high seats, and laying out various beds and mats. Having seen this, the elder Sudatta thought: &quot;Now this elder is arranging offerings, is it to celebrate a marriage and a joyful feast? Or is it to invite King Bimbisāra and his ministers?&quot; He further thought: &quot;If it is to invite the king and officials for a marriage feast, this elder should not personally be so busy, taking on the toil and trouble of making the fire and cooking the food. There must be a superior person, I wonder who it is? I should ask about it.&quot; Having thought this, he immediately asked the elder about his thoughts.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林。时须达多长者有少因缘，从舍卫国至王舍城，诣护弥长者家，见其家中，竟夜不睡，破薪然火，办诸供具，安置高座，敷诸床榻。须达多长者见是事已，作是思惟：「今此长者施设供具，为欲结婚欢乐宴会？为欲屈彼频婆娑罗王及大臣乎？」复更思念：「若请国王，及以官属，婚姻宴会，而此长者不应躬身，而自栖栖，执于劳苦，然火作食；必有胜人，不审是谁？我今当问。」思惟是已，即以所念，问于长者。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder Gopālaka then replied: &quot;I am not holding a marriage feast, nor am I inviting King Bimbisāra and his ministers for this gathering. I will invite the Buddha and the bhikṣus tomorrow, and therefore I am making these preparations.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时护弥长者即答之曰：「我亦不为婚姻欢会，亦不屈请频婆娑罗王及大臣等，而为此会。我于明日，将欲请佛及比丘僧，故设斯供。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When the elder Sudatta first heard the name &quot;Buddha,&quot; his body hair stood on end, and he asked in surprise and joy: &quot;What is meant by &#x27;Buddha&#x27;?&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达多长者初闻佛名，身毛为竖，惊喜问言：「云何名佛？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Gopālaka replied: &quot;A Śākya prince has renounced the householder&#x27;s life, shaved his head and beard, and attained the unsurpassed true path. He is called a Buddha.&quot;</p></td><td lang="lzh" class="agama-chi"><p>护弥答言：「释种出家，剃除须发，成于无上正真之道，号曰为佛。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta then asked: &quot;What is meant by &#x27;saṃgha&#x27;?&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达又问：「云何名僧？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder replied: &quot;If a kṣatriya prince shaves his head and beard, renounces the householder&#x27;s life to follow the Buddha, and the same is true for brahmins, householders, and śūdras, who all renounce the householder&#x27;s life to follow the Buddha, they are called the saṃgha. I now invite the Buddha and the saṃgha.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者答曰：「若刹利子，剃除须发，逐佛出家。婆罗门种、居士种、首陀罗种，如是之等，信家非家，随佛出家，是名为僧。我于今者，请佛及僧。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta asked: &quot;Is the Tathāgata visible today?&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达多问言：「今日如来为可见不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Humkara replied: &quot;The Tathāgata is nearby in the Karanda Bamboo Grove. Please wait a moment, and the Buddha will come himself to accept your offerings.&quot;</p></td><td lang="lzh" class="agama-chi"><p>护弥答言：「如来近在迦兰陀林，尔今小待，佛当自来受我供养。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sudatta was overjoyed in his heart, thinking of seeing the World-Honored One. He then took a short nap. After sleeping, he woke up. It was still not yet dawn, but he thought it was already morning. He then got up early and went to the city gate. However, the city gate was always open during the two periods of the night. When Sudatta arrived at the gate, he saw the city gate open and thought it was already dawn. He then went outside the city, intending to go to where the Buddha was. Because he was thinking of the Buddha, there was light that illuminated his body. After arriving outside the city, he saw a shrine and immediately circumambulated the shrine, paying homage with respect. It then became dark again. He thought to himself: &quot;The sky is very dark. If it is a person or a non-person, they may harm me. I should return to the city.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时须达多内心踊跃，思覩世尊，便小睡眠，眠已寻寤，天犹未晓，意谓平旦，即便早起，趣于城门。然彼城门，初夜后夜二时常开。时须达多既至门下，见城门开，谓天已晓，即出门外，欲诣佛所。先以念佛故，有光明来照其身。到城外已，见一天祠，即时绕祠，恭敬礼拜，还复黑暗，心自念言：「天大黑暗，若人非人，或能害我，当还入城。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the god Shipa emitted light to illuminate all the way to the Jetavana, making it very bright. The god then said to Sudatta: &quot;You should go forward, do not retreat.&quot; At that time, the god spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>时尸婆天神放光照曜，乃至祇洹悉皆大明。天神即语须达多言：「汝可前进，不宜退还。」尔时天神即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Even if one were to load a hundred horses with precious<br/>treasures, and also a hundred golden men, and use them to<br/>make offerings, and so on, making offerings all over Jambudvipa, the<br/>merit accumulated from such offerings would be only a fraction of<br/>the merit of a single person who generates the aspiration to<br/>go to where the Buddha is. The merit of taking a<br/>single step forward is sixteen times greater. Even if one were<br/>to offer a hundred powerful elephants from the snowy mountains, adorned<br/>with gold and jewels, with majestic bodies and extremely swift movements<br/>wild and twice as strong, fully loaded with various treasures, the<br/>merit from such offerings would be only a fraction of the<br/>merit of going to where the Buddha is and taking a<br/>single step forward. The merit of taking a single step forward<br/>is sixteen times greater. Even if one were to offer a<br/>hundred precious women from the Sword-Bearing Mountains, with extremely beautiful faces<br/>adorned with necklaces, with golden crowns on their heads, and jeweled<br/>necklaces, the merit obtained from such offerings would be only a<br/>fraction of the merit of going to where the Buddha is<br/>and taking a single step forward. The merit of taking a<br/>single step forward is sixteen times greater. Therefore, I encourage you<br/>not to retreat from here.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「假使百匹马，　　载满众珍宝，并及百金人，　　以持用布施，如是展转施，　　遍满阎浮提，如是功德聚，　　以用为一分，不如有一人，　　发心向佛所，举足行一步，　　十六分中一。假使雪山中，　　所有大力象，其数足满百，　　金宝庄挍身，其体甚姝大，　　其行极迅疾，暴逸倍有力，　　满载诸杂宝，以此用布施，　　不如向佛所，一步之功德，　　十六分中一。假使剑摩耆，　　所出之宝女，颜容甚端严，　　其数足满百，璎珞以严身，　　真金为首饰，头著宝珠璎，　　以此用布施，所得之功德，　　不如向佛所，举足行一步，　　十六分中一。是故我劝尔，　　于此莫退还。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sudatta asked him: &quot;Who are you?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时须达多即问之曰：「汝是谁耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The god replied: &quot;I am your old friend, the good man Sunaksatra. At the time of my death, I gave rise to a joyful mind in the presence of Sariputra and Maha Maudgalyayana. After death, I was reborn in heaven as the son of the Northern Heavenly King Virudhaka. By giving rise to the aspiration to rejoice in the disciples of the Tathāgata, I have attained such blessings. How much more so for the Buddha himself?&quot;</p></td><td lang="lzh" class="agama-chi"><p>天即答言：「我是汝昔日亲旧善身摩纳，于舍利弗、大目] cf.【丽】连所，临终之时，生欢喜心，命终生天，得为北方天王毘沙门子。我于如来弟子所，发心随喜，尚获此福，况复佛也？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sudatta further thought to himself: &quot;Now this heavenly spirit praises him in this way. Judging from this, I must know that that person&#x27;s merits and virtues are supreme and victorious.&quot; At that time, the World Honored One was walking in the open air. The elder Sudatta then went to where the Buddha was. When he first saw the World Honored One, he did not know how to pay respect. He went forward and sat down directly. At that time, that heavenly spirit transformed into a brahmin, came to where the Buddha was, circumambulated the Buddha three times, bowed his head in respect, and then sat down. When Sudatta saw this, he then imitated him, paid respect and sat down, and asked: &quot;I do not know if the holy body is at ease and at peace?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时须达多复自念言：「今此天神称赞乃尔，以此量之，必知彼人功德尊胜。」尔时，世尊露地经行，须达多长者即诣佛所，初见世尊，不知礼敬，辄前直坐。时彼天神化作婆罗门，来至佛所，绕佛三匝，顶礼恭敬，然后就坐。时须达多既见之已，方效于彼，礼敬而坐，问讯：「不审圣体安乐以不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All things are at ease, the brahmin has attained nirvana, unstained<br/>by desires, liberated from all existences. The mind has cut off<br/>all desires and seeking, the mind has removed the illness of<br/>afflictions. The mind has attained purity, peacefully and peacefully sleeping in tranquility.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「一切事安乐，　　婆罗门涅槃，无为欲所污，　　解脱于诸有。心断诸欲求，　　心除热恼病，其心得清净，　　寂灭安隐眠。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One led the elder Sudatta into the room, spread out a seat, and sat down. When Sudatta had paid homage at the Buddha&#x27;s feet, he sat to one side. The Buddha spoke various teachings to him, showing, teaching, benefiting, and delighting him, discussing giving, discussing precepts, discussing rebirth in the heavens, explaining that desires are impure and that liberation is blissful. The Buddha knew that Sudatta&#x27;s mind was focused and upright, and he was joyful and delighted. The Buddha spoke to him about the Four Noble Truths. He saw the Four Noble Truths right there on the seat, just as a new, clean cloth easily accepts dye. Sudatta&#x27;s easy understanding was also like this. He saw the Dharma, realized the Dharma, cut off the eighty koṭis of afflictions, and attained the stage of stream-entry. He then rose from his seat, adjusted his robes, paid homage at the Buddha&#x27;s feet, and said to the Buddha, &quot;World Honored One! My name is Sudatta. Because I give to the poor and needy, people call me &#x27;the one who gives to the destitute.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即将长者须达多入于房中，敷座而坐。时须达多礼佛足已，在一面坐。佛为种种说法，示教利喜，施论、戒论、生天之论，欲为不净，出要为乐。佛知须达多心意专正，踊跃欢喜，佛为说四真谛，即于座上见四真谛，如新净［叠＊毛］易受染色，须达多易悟，亦复如是，见法证法，断八十亿洞然之结，得须陀洹。即从座起，整衣服，礼佛足已，白佛言：「世尊！我名须达多，我以布施贫乏之故，诸人称为给孤独氏。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;What country are you from? What family are you born into?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「汝是何国人？出生何种族？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta said, &quot;I was born in the country of Sravasti. I only wish that the World Honored One would go to that country. I will provide for your needs for the rest of my life.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达白言：「我所出生舍卫国，唯愿世尊往诣彼国，我当终身施设供养。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Sudatta, &quot;Is there a monastery in that country?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告须达多：「彼国为有僧坊以不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta said to the Buddha, &quot;World Honored One, just go there. I will build it so that the monks can come and go there.&quot; At that time, the Tathāgata silently accepted the invitation.</p></td><td lang="lzh" class="agama-chi"><p>须达多白佛言：「世尊但往于彼，我当营造，使诸比丘来往于彼。」尔时如来默然受请。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sudatta heard the Buddha&#x27;s words and accepted the invitation. He bowed his head at the Buddha&#x27;s feet and left joyfully.</p></td><td lang="lzh" class="agama-chi"><p>时须达多闻佛所说，并受其请，顶礼佛足，欢喜而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

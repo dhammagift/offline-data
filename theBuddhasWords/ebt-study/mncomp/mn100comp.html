@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 100 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 100: Saṅgārava-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn99comp.html#content"></a><a id="next-sutta" href="./mn101comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn100.html">MN 100</a> / <a href="../../parallels/ma101.html">MĀ 101 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Saṅgārava-sutta, the “discourse to Saṅgārava”, records a discussion between the Buddha and the Brahmin Saṅgārava during which the Buddha declared that his teaching was based on personal realization. This discourse does not have a parallel in the Chinese Āgamas.<span class="note" id="mn100n256"><span class="details"><span class="p">[n.256] The narration given in the introductory section of <a href="../../mn/mn100.html">MN 100</a> recurs in similar form in <a href="../../sn/sn7.1.html">SN 7:1</a> at SN I 160,6 (or SN2 187 at SN2 I 344,5) and in its parallels <a href="../../parallels/sa1158.html">SĀ 1158</a> at T II 308b21 and <a href="../../parallels/sa-2.81.html">SĀ2 81</a> at T II 401c21, which relate how the Brahmin woman Dhanañjānī’s praises of the Buddha angered her husband, who thereon decided to confront the Buddha himself. During the ensuing meeting he was converted, after which he decided to go forth and eventually became an arahant.</span></span></span> A version of this discourse has, however, been preserved in Sanskrit fragments.<span class="note" id="mn100n257"><span class="details"><span class="p">[n.257] A full version of the discourse is part of the recently discovered Dīrgha-āgama manuscript and has been edited and translated by Zhang 2004. Judging from the uddāna in Hartmann 2004b: 123, the Sanskrit discourse would agree with <a href="../../mn/mn100.html">MN 100</a> in taking for its title the name of its Brahmin protagonist, which in most occurrences in the fragment reads Śaṃkaraka (though two instances and the uddāna only read Śaṃkara), cf. also Zhang 2004: 5. While <a href="../../mn/mn100.html">MN 100</a> at MN II 209,20 locates the discourse at Caṇḍalakappa in the Kosala country, the Sanskrit version speaks of Calakalpā in the Videha country, cf. fragment 344v5-6 in Zhang 2004: 9. In addition to this full parallel, sections of <a href="../../mn/mn100.html">MN 100</a> have counterparts in SHT IV 33 folios 28-29+33 (pp. 171-174, the last identified in SHT IX p. 369, cf. also SHT VII p. 233, SHT VIII p. 162, and SHT IX p. 369), SHT IV 165 folios 24-26+42+58 (pp. 198-200 and 208, on folio 42 cf. also SHT IX p. 379, on folio 58 cf. also SHT X p. 403), SHT IV 180 folios 3-4+6 (pp. 214-215, the last identified in SHT IX p. 392), SHT IX 2063e (p. 80), and Hoernle fragment 149/Add.32, no. 147 in Hartmann 1991: 259-260. SHT IV 33 folios 28-29, SHT IV 165 folios 24-25, and Hoernle fragment 149/Add.32 parallel the introductory narration of the discourse at MN II 209-210. SHT IV 165 folio 26 and SHT IV 180 folios 3-4 parallel the examination of different sources for knowledge found at MN II 211. Hoernle fragment 149/Add.32 parallels part of the discussion on devas found at MN II 212,26. SHT IV folio 28R4 and SHT IV 165 folio 25Vc locate the discourse at Caṃcalakalpa or Cañcalakalpa. SHT IV 165 folio 24R4, SHT IV 180 folio 4Ab+e, and Hoernle fragment 149/Add.32Vc, give the name of the Brahmin as Śaṅkaraka or Śaṃkaraka.</span></span></span></p>
+<p>The Saṅgārava-sutta and its Sanskrit parallel begin by reporting a young Brahmin’s irritation at witnessing a Brahmin woman proclaiming her devotion to the Buddha.<span class="note" id="mn100n258"><span class="details"><span class="p">[n.258] The Sanskrit version indicates that this happened when she was serving the young Brahmin, who apparently was her husband (similar to <a href="../../sn/sn7.1.html">SN 7:1</a>, mentioned above in note 256), fragment 344v8 in Zhang 2004: 9: sā svasvāminaṃ śaṃkarakaṃ māṇavakam upatiṣṭhaṃtī, a reading which, as noted by Zhang 2004: 53, appears to have a counterpart in SHT IV 33 folio 28R6: patiṣṭaṃtī.</span></span></span> On being told about the Buddha’s qualities, however, the young Brahmin expressed his interest to meet the Buddha.</p>
+<p>Once the Buddha had arrived in the vicinity, the Brahmin woman informed Saṅgārava − or Śaṃkaraka in the Sanskrit version − who thereupon approached the Buddha.</p>
+<p>According to the Pāli account, Saṅgārava inquired about the grounds on which the Buddha based his claim to knowledge. In reply, the Buddha differentiated between those who claim knowledge based on:</p>
+<ul>
+<li>oral tradition,</li>
+<li>reasoning,</li>
+<li>direct knowledge.</li>
+</ul>
+<p>The Saṅgārava-sutta reports the Buddha explaining that direct knowledge was the basis for what he taught. The Sanskrit version differs from the Pāli account in as much as its listing of various claims to knowledge also mentions the denial of causality by the Ajīvikas and the affirmation that everything is the outcome of former deeds by the Jains (see table 10.6).<span class="note" id="mn100n259"><span class="details"><span class="p">[n.259] Fragment 347 in Zhang 2004: 11-12, cf. also SHT IV 165 folio 26Va+c, which has preserved traivi(dyāḥ) and (a)nanuśruteṣu dha[rm]e(ṣu svaya)[m]-anuprāptaḥ. Regarding the reference in <a href="../../mn/mn100.html">MN 100</a> at MN II 211,14 to those who are “entirely based on mere faith ... namely thinkers and investigators”, kevalaṃ saddhāmattakena ... seyyathāpi takkī vīmaṃsī, Bodhi in Ñāṇamoli 1995/2005: 1304 note 919 comments that “it is puzzling that the reasoners and investigators (takkī, vīmaṃsī) are here said to rely on the basis of mere faith (saddhāmattakena). Elsewhere faith and reasoning are contrasted as two different grounds of conviction ... and ‘mere faith’ seems more closely allied with reliance on oral tradition than with reasoning and investigation”. In fact, “faith”, saddhā, and “examination-and-reasoning”, ākāraparivitakka, are listed in <a href="../../mn/mn95.html">MN 95</a> at MN II 170,27, <a href="../../mn/mn101.html">MN 101</a> at MN II 218,16, and <a href="../../mn/mn102.html">MN 102</a> at MN I 234,7 as two out of five sources of knowledge, a way of presentation that suggests them to differ from each other. A reference to faith occurs also in the Sanskrit version, where this forms part of a proclamation made by each of the claimants to knowledge, cf., e.g., fragment 347r5 in Zhang 2004: 12 for the case of the reasoners: śraddhāvādina smā iti pratijānate śīlavādinaḥ tyāgavādinaḥ śrutavādinaḥ praj- ñāvādina sma iti pratijānate.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 10.6: Survey of Claims to Knowledge in <a href="../../mn/mn100.html">MN 100</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn100.html">MN 100</a></th><th>DĀ (Skt)</th></tr>
+<tr><td>oral tradition (1)</td><td>denial of causality</td></tr>
+<tr><td>reasoning (2)</td><td>reasoning (→ 2)</td></tr>
+<tr><td>direct knowledge (3)</td><td>karmic determinism</td></tr>
+<tr><td></td><td>oral tradition (→ 1)</td></tr>
+<tr><td></td><td>direct knowledge (→ 3)</td></tr>
+</table>
+<p>By way of illustrating how such direct knowledge is acquired, the Saṅgārava-sutta presents an autobiographical account of the Buddha’s awakening.<span class="note" id="mn100n260"><span class="details"><span class="p">[n.260] Ee-MN II 212,14 mentions only the first three jhānas in its account of the Buddha’s awakening, so that, on following its presentation, he would not have developed the fourth jhāna before attaining the three higher knowledges. This is quite obviously a mistake in this edition, in fact the corresponding passage in Be-MN II 437,1, Ce-MN II 756,11, and Se-MN II 686,8 mentions the fourth jhāna, and other discourses in the Nikāya and Āgamas regularly present the three higher knowledges as something to be developed based on mastery of the fourth jhāna.</span></span></span> At the conclusion of this account, Saṅgārava asked the Buddha about the existence of devas.<span class="note" id="mn100n261"><span class="details"><span class="p">[n.261] <a href="../../mn/mn100.html">MN 100</a> at MN II 212,25: atthi devā ti? The emendation suggested by Norman 1977: 333 to atthi adhideva does not receive support from what has been preserved in the corresponding Sanskrit fragments, cf. fragment 346v1-3 in Zhang 2004: 11 and Hoernle fragment 149/Add. 32 Re-f, no. 147 in Hartmann 1991: 260. Zhang 2004: 63 comments that such an emendation would in fact not fit the context too well. Norman 1985: 150 suggests a similar emendation of the question atthi deva in <a href="../../mn/mn90.html">MN 90</a> at MN II 130,13; cf. above p. 523 note 391. This also receives no support from the corresponding passage in <a href="../../parallels/ma212.html">MĀ 212</a> at T I 794c8, which just has the query “are there devas”, 有天耶?</span></span></span></p>
+<p>The Sanskrit version agrees with the Pāli discourse that the Buddha laid claim to direct knowledge and illustrated this with an autobiographical account of his awakening. The relation between these two sections is particularly evident in the Sanskrit version, as here the young Brahmin inquires in what way the Buddha lays claim to direct knowledge, which then forms the occasion for the autobiographical account.<span class="note" id="mn100n262"><span class="details"><span class="p">[n.262] Fragment 348r2-3 in Zhang 2004: 13: yathā kathaṃ bhagavāṃ gautamaḥ pūrvam ananuśruteṣu dharmmeṣu svayaṃ dharmmān abhijñāya svayaṃ dharmmān parijñāya dṛṣṭadharmmābhijñāḥ paramabodhim anuprāptaḥ āyatyāṃ bodhāya brahmacaryaṃ pratijānīte?</span></span></span></p>
+<p>A significant difference in the Sanskrit version is that the discussion on devas occurs at the outset of the exchange between the Buddha and the young Brahmin,<span class="note" id="mn100n263"><span class="details"><span class="p">[n.263] Hartmann 1992: 44 note 87, fragment 346v1-3 in Zhang 2004: 11; cf. also Hoernle fragment 149/Add. 32Re-f, no. 147 in Hartmann 1991: 260.</span></span></span> followed by the sources of knowledge and the autobiographical account (see table 10.7).<span class="note" id="mn100n264"><span class="details"><span class="p">[n.264] Fragment 346v7 in Zhang 2004: 11. SHT IV 165 folio 26V has also preserved parts of the discussion on the different sources of knowledge.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 10.7: Sequence of Topics in <a href="../../mn/mn100.html">MN 100</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn100.html">MN 100</a></th><th>DĀ (Skt)</th></tr>
+<tr><td>claim to direct knowledge (1)</td><td>discussion on devas (→ 3)</td></tr>
+<tr><td>autobiographical account (2)</td><td>claim to direct knowledge (→ 1)</td></tr>
+<tr><td>discussion on devas (3)</td><td>autobiographical account (→ 2)</td></tr>
+</table>
+<p>Thus the Sanskrit version presents the following pattern:</p>
+<ul>
+<li>the young Brahmin begins his discussion with the Buddha by broaching the topic of the existence of devas,</li>
+<li>in reply to the inquiry about devas, the Buddha affirms his knowledge of their existence,</li>
+<li>this affirmation leads to an inquiry on what sources of knowledge the Buddha bases his response,</li>
+<li>in reply, the Buddha distinguishes different claims to knowledge and then gives an autobiographical account of his awakening as an exemplification of the fact that his knowledge (about such things as the existence of devas) is based on personal realization.</li>
+</ul>
+<p>Regarding the young Brahmin’s inquiry about devas, other discourses present Saṅgārava as someone who would have believed in their existence.<span class="note" id="mn100n265"><span class="details"><span class="p">[n.265] According to <a href="../../an/an3.60.html">AN 3:60</a> at AN I 168,13 and its parallel <a href="../../parallels/ma143.html">MĀ 143</a> at T I 650b16, Saṅgārava declared that he was a performer of sacrifices, which presupposes that he believed in the existence of recipients of sacrificial offerings. According to <a href="../../sn/sn7.21.html">SN 7:21</a> at SN I 182,28 (or SN2 207 at SN2 I 393,8), Saṅgārava undertook ritual purification through bathing in water; <a href="../../sn/sn46.55.html">SN 46:55</a> at SN V 121,14 = <a href="../../an/an5.193.html">AN 5:193</a> at AN III 230,14 testify to his interest in memorizing Brahminical mantras. These passages indicate that he was involved in traditional Brahminical beliefs and practices, making it improbable that he would doubt the existence of devas.</span></span></span> Hence, there seems to be no reason to assume that Saṅgārava wanted to put into question what according to the Saṅgārava-sutta was in fact a generally held belief in ancient India,<span class="note" id="mn100n266"><span class="details"><span class="p">[n.266] <a href="../../mn/mn100.html">MN 100</a> at MN II 213,6: “it is generally agreed in the world that there are devas”, ucce sammataṃ ... lokasmiṃ yadidaṃ atthi devā ti (Be-MN II 438,17, Ce-MN II 758,23, and Se-MN II 688,14: uccena), with a probable counterpart in fragment 346v2 in Zhang 2004: 11: [u]ccai saṃmatā ete.</span></span></span> namely the existence of devas. That is, the reason for Saṅgārava to ask after the existence of devas would rather have been to find out the Buddha’s position on this topic.</p>
+<p>The autobiographical account of the Buddha’s awakening mentions the intervention of devas when he had considered completely desisting from food, and describes how Brahmā invited the Buddha to teach. For Saṅgārava to ask his question about the existence of devas only after this account, as it the case in the Saṅgārava-sutta, is puzzling, since one might wonder why Saṅgārava should ask if the Buddha accepted the existence of devas when their role in relation to the Buddha’s awakening had just been described.<span class="note" id="mn100n267"><span class="details"><span class="p">[n.267] Horner 1957/1970: xx comments on the question that precedes this reaction: “it is a little disconcerting to find Saṅgārava, at the end of this tremendous dissertation [i.e. the autobiographical account of the Buddha’s awakening] ... hurrying on to ask ... if there were devas ... I find the sudden introduction of this question about devas rather perplexing”.</span></span></span></p>
+<p>In contrast, to inquire about what the Buddha had to say regarding the existence of devas would fit as a first question to start the discussion. Other discourses report that some contemporary recluses in ancient Indian – and Saṅgarāva would presumably have been aware of this – denied the existence of supernatural beings and heavenly worlds.<span class="note" id="mn100n268"><span class="details"><span class="p">[n.268] Cf., e.g., the view that in <a href="../../dn/dn1.html">DN 1</a> at DN I 55,18 is attributed to Ajita Kesakambalī.</span></span></span> Thus, it would be quite natural for Saṅgarāva to start a discussion with a member of the ancient Indian recluse tradition by at first finding out to what extent the Buddha agreed to central aspects of the world view of Brahmins, such as belief in the existence of devas. By inquiring after the existence of devas, Saṅgārava would have been able to ascertain if there was at least this much of common ground between him and the Buddha.</p>
+<p>From the Pāli account of the ensuing discussion, it seems as if the Buddha replied to this question in such a way as to make it clear to Saṅgārava that for the Buddha the existence of devas was a matter of personal experience, not a mere belief.<span class="note" id="mn100n269"><span class="details"><span class="p">[n.269] <a href="../../mn/mn100.html">MN 100</a> at MN II 212,26: ṭhānaso me taṃ ... viditaṃ yadidaṃ atthi devā ti (Se-MN II 688,7: ṭhānaso kho pan etaṃ, Be-MN II 438,11: adhidevā ti), a reply Chalmers 1927: 122 translates as “I knew offhand there were gods”, Horner 1957/1970: 401 as “certainly ... it is known to me that there are devas”, and Ñāṇamoli 1995/2005: 821 as “it is known to me to be the case ... that there are gods”, cf. also Ñāṇajivako 1970: 140: “the statement that there are goods ... is for me established by experience”. Harvey 1995a: 82 explains this passage to imply that the Buddha on this occasion “clearly distinguished between his ‘certain knowledge’ that gods existed and the commonly held belief that they did”. Marasinghe 1974: 127 discusses this passage and suggests it to mean that “in the above context ... I have found that there are gods”; cf. also Saibaba 2005: 3-4, who reasons that the way the answer is formulated suggests that the Buddha “agreed upon the existence of [the] Buddhist conception of the devas only”, which “differs from the Vedic conception of gods”. The implications of the ablative ṭhānaso in the present passage are not entirely clear, as in other contexts ṭhānaso indicates that something happens “immediately” or “on the spot”, cf., e.g., Vin III 70,23, <a href="../../sn/sn8.8.html">SN 8:8</a> at SN I 193,6 (or SN2 216 at SN2 I 416,2), <a href="../../sn/sn45.156.html">SN 45:156</a> at SN V 50,7, <a href="../../sn/sn54.9.html">SN 54:9</a> at SN V 321,25, <a href="../../sn/sn55.26.html">SN 55:26</a> at SN V 381,29, <a href="../../an/an5.194.html">AN 5:194</a> at AN III 238,6, <a href="../../an/an7.16.html">AN 7:16</a> at AN III 298,2, <a href="../../an/an8.46.html">AN 8:46</a> at AN IV 263,4, and <a href="../../an/an10.60.html">AN 10:60</a> at AN V 108,29. Such a meaning does not fit the present context, as it would make little sense for the Buddha to answer that he “immediately” or “on the spot” knew that there are devas. Perhaps ṭhānaso intends to underline the expression vidita as a pointer to the Buddha’s personal realization, in the sense of “according to fact”. The use of ṭhānaso (or whatever equivalent may have been found in the earliest Indic version of this passage) in a somewhat unusual manner could then have caused Saṅgārava’s misunderstanding, for he might have understood ṭhānaso to have a meaning related to ṭhāna as “possibility” or “occasion”, which would give a sense of ambiguity or evasiveness to the Buddha’s reply. Fragment 346v2 in Zhang 2004: 11 reads yenam ekāṃśena vyākaroṣi santi de[v]ā iti, and Hoernle fragment 149/Add. 32 Rb+d, no. 147 in Hartmann 1991: 260, has preserved: [tr]e[dā]nīṃ naikāṃśena vyā and yena na ekāṃśe[na] vyākaroṣi saṃt(i), suggesting that in these versions a similar misunderstanding would have taken place.</span></span></span> Saṅgārava apparently misunderstood this reply and even wondered if the Buddha was speaking a falsehood.<span class="note" id="mn100n270"><span class="details"><span class="p">[n.270] <a href="../../mn/mn100.html">MN 100</a> at MN II 212,30: “in that case, is [what you are saying] not empty and false”, nanu ... evaṃ sante tucchā musā hotī ti? According to the commentary, Ps III 454,1, Saṅgarava had spoken like this because he thought the Buddha had made this declaration without knowing the matter, ajānanto. This explanation does not fit the present version of <a href="../../mn/mn100.html">MN 100</a> too well, as the Buddha had already described his knowledge of the existence of devas in his autobiographical account. On the hypothesis that an earlier version of the discourse may have followed the sequence of events suggested by the Sanskrit fragments, it could be assumed that the Pāli commentarial explanation was taken over unchanged from an ancient Indian commentary on this earlier version of the discourse, in which case the commentarial gloss would fit quite well.</span></span></span> The Buddha then clarified this misunderstanding by explaining that his reply was meant as an affirmation of the existence of devas.<span class="note" id="mn100n271"><span class="details"><span class="p">[n.271] According to <a href="../../mn/mn100.html">MN 100</a> at MN II 213,2, the Buddha clarified that, on hearing his earlier statement, “a wise man should draw the definite conclusion that there are devas”, atha khv’ ettha viññūpurisena ekaṃsena niṭṭhaṃ gantabbaṃ yadidaṃ atthi devā ti (Be-MN II 212,15: vinā purisena, Ce-MN II 760,20: viññūnā purisena, Se-MN II 688,3: gantuṃ vā), thereby indicating that it was Saṅgārava’s lack of wisdom that had caused him to misunderstand the Buddha’s reply.</span></span></span></p>
+<p>The first part of this exchange is unfortunately not preserved too well in the Sanskrit version. Nevertheless, from what has been preserved it becomes evident that, unlike the Pāli version, the Sanskrit discourse continues with a simile. This simile contrasts those who recognize a woman as a woman and a man as man with those who confuse these two.<span class="note" id="mn100n272"><span class="details"><span class="p">[n.272] Fragment 346v5-6 in Zhang 2004: 11: yat kaścin māṇava stṛyaṃ dṛṣṭvā puruṣaṃ pratyeti puruṣaṃ dṛṣṭvā striyaṃ pratyeti asty eta jñānadarśanaṃ ta[c c]a na yathāvat ... (stṛ)yaṃ dṛṣṭvā striyaṃ pratyeti puruṣaṃ dṛṣṭvā puruṣaṃ pratyeti asty etad darśanaṃ tac ca [ya]thāvat.</span></span></span> Although the context remains unclear, the simile might be another way of underlining the Buddha’s affirmation of the existence of devas.</p>
+<p>According to the Pāli version, at the end of the discourse Saṅgārava took refuge,<span class="note" id="mn100n273"><span class="details"><span class="p">[n.273] <a href="../../mn/mn100.html">MN 100</a> at MN II 213,14. <a href="../../an/an3.60.html">AN 3:60</a> at AN I 173,7 also concludes with Saṅgārava taking refuge.</span></span></span> whereas according to the Sanskrit version he rejoiced in the discourse and left.<span class="note" id="mn100n274"><span class="details"><span class="p">[n.274] Fragment 348r8 in Zhang 2004: 13: śaṃkarako mā[ṇavo] bhagavato bhāṣitam abhinaṃdyānumodya bhagavato ’ntikāt prakrāntaḥ.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

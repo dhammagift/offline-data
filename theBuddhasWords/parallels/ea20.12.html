@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 20.12 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 20.12</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">20.12</span> <span class="mirror-right">（一二）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../tha/tha10.html">Thag 10</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Venerable Panthaka said to his younger brother Jīvaka Panthaka, &quot;If you cannot uphold the precepts, then return to lay life.&quot; When Jīvaka Panthaka heard this, he went to the gate of the Jetavana Monastery and stood there, shedding tears.</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者槃特告弟朱利槃特曰：「若不能持戒者，还作白衣。」是时，朱利槃特闻此语已，便诣祇洹精舍门外立而堕泪。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, with his pure divine eye, saw that the monk Jīvaka Panthaka was standing outside the gate, weeping uncontrollably. Then the World-Honored One rose from his quiet room, as if walking, and went to the gate of the Jetavana Monastery. He said to Jīvaka Panthaka, &quot;Monk! Why are you weeping here?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以天眼清净，观是朱利槃特比丘在门外立，而悲泣不能自胜。时，世尊从静室起，如似经行至祇洹精舍门外，告朱利槃特曰：「比丘！何故在此悲泣？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Jīvaka Panthaka replied, &quot;World-Honored One! My elder brother has driven me out, saying, &#x27;If you cannot uphold the precepts, then return to lay life. You need not stay here.&#x27; That is why I am weeping.&quot;</p></td><td lang="lzh" class="agama-chi"><p>朱利槃特报曰：「世尊！兄见驱逐：『若不能持戒者，还作白衣，不须住此。』是故悲泣耳。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Monk! Do not be afraid. I attained unsurpassed perfect enlightenment, not because of your elder brother Panthaka.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「比丘！勿怀畏怖，我成无上等正觉，不由卿兄槃特得道。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One took Jīvaka Panthaka to a quiet room and instructed him to sit down. The World-Honored One further instructed him to hold a broom and said, &quot;Recite this character. What is the character?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊手执朱利槃特诣静室教使就坐，世尊复教使执扫［打－丁＋彗］：「汝诵此字，为字何等？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Jīvaka Panthaka could recite &quot;broom&quot; but forgot &quot;sweeping&quot;; if he could recite &quot;sweeping&quot;, he forgot &quot;broom&quot;.</p></td><td lang="lzh" class="agama-chi"><p>是时，朱利槃特诵得扫，复忘［打－丁＋彗］；若诵得［打－丁＋彗］，复忘扫。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Jīvaka Panthaka recited &quot;broom&quot; and &quot;sweeping&quot; for several days. However, &quot;broom&quot; and &quot;sweeping&quot; are also called &quot;removing defilements&quot;. Jīvaka Panthaka further thought, &quot;What is removing? What are defilements? Defilements are ashes, earth, tiles, and stones. Removing is purity.&quot; He further thought, &quot;Why does the World-Honored One teach me to repent with this? I should now contemplate this meaning.&quot; Contemplating this meaning, he further thought, &quot;There are also dust and defilements on my body. I will use myself as an analogy. What is removing? What are defilements?&quot; He further thought, &quot;Knots are defilements, and wisdom is removing. I can now use the broom of wisdom to sweep away these knots and bonds.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者朱利槃特诵此扫] cf.【丽】［打－丁＋彗］乃经数日。然此扫［打－丁＋彗］复名除垢，朱利槃特复作是念：「何者是除？何者是垢？垢者灰土瓦石，除者清净也。」复作是念：「世尊何故以此教悔我？我今当思惟此义。」以思惟此义，复作是念：「今我身上亦有尘垢，我自作喻，何者是除？何者是垢？」彼复作是念：「缚结是垢，智慧是除，我今可以智慧之［打－丁＋彗］扫此结缚。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Jīvaka Panthaka contemplated the formation and destruction of the five aggregates, namely, form, the origin of form, and the cessation of form. This is called feeling, perception, formation, and consciousness, their formation and destruction. Having contemplated these five aggregates, his mind was liberated from the defilements of desire, existence, and ignorance. Having attained liberation, he attained the knowledge of liberation: &quot;Birth and death are exhausted, the holy life has been established, what was to be done has been done, and I will not again experience rebirth in the womb.&quot; Venerable Jīvaka Panthaka then became an arhat. Having become an arhat, he immediately rose from his seat, went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the World-Honored One, &quot;Now I have wisdom, now I have discernment, now I have understood the meaning of sweeping.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者朱利槃特思惟五盛阴成者、败者：所谓此色、色习、色灭，是谓痛、想、行、识，成者、败者。尔时，思惟此五盛阴已，欲漏心得解脱，有漏心、无明漏心得解脱。已得解脱，便得解脱智：生死已尽，梵行已立，所作已办，更不复受胎有，如实知之。尊者朱利槃特便成阿罗汉。已成阿罗汉，即从坐起，诣世尊所，头面礼足，在一面坐。白世尊曰：「今已有智，今已有慧，今已解扫［打－丁＋彗］。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Bhikṣu! How do you understand it?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「比丘！云何解之？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Jīvaka Panthaka replied, &quot;To remove is called wisdom, and defilements are called afflictions.&quot;</p></td><td lang="lzh" class="agama-chi"><p>朱利槃特报曰：「除者谓之慧，垢者谓之结。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Excellent! Bhikṣu! As you have said, to remove is wisdom, and defilements are afflictions.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「善哉！比丘！如汝所言，除者是慧，垢者是结。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Jīvaka Panthaka spoke this verse to the World-Honored One:</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者朱利槃特向世尊而说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Now reciting this is enough, as the Honored One<br/>has said; Wisdom can remove afflictions, not by other practices.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「今诵此已足，　　如尊之所说；智慧能除结，　　不由其余行。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Bhikṣu! As you say, it is by wisdom, not by other means.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「比丘！如汝所言，以智慧，非由其余。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Venerable One, having heard what was said by the World-Honored One, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者闻世尊所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

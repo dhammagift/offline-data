@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 108 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 108: Gopakamoggallāna-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn107comp.html#content"></a><a id="next-sutta" href="./mn109comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn108.html">MN 108</a> / <a href="../../parallels/ma145.html">MĀ 145</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Gopakamoggallāna-sutta, the “discourse to Gopakamoggallāna”, examines the causes due to which harmony prevailed in the Buddhist monastic community after the Buddha’s demise. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn108n187"><span class="details"><span class="p">[n.187] The parallel is <a href="../../parallels/ma145.html">MĀ 145</a> at T I 653c-656a, which agrees with <a href="../../mn/mn108.html">MN 108</a> on locating the discourse at Rājagaha and on taking the name of Ānanda’s visitor for its title, 瞿默目揵連經. For counterparts to <a href="../../mn/mn108.html">MN 108</a> at MN III 13,26-32 in Vyākhyāyukti literature cf. Skilling 2000b: 341. For a remark on <a href="../../parallels/ma145.html">MĀ 145</a> cf. Minh Chau 1964/1991: 147.</span></span></span> In addition to this parallel, the final part of the Gopakamoggallāna-sutta has a counterpart in a partial discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn108n188"><span class="details"><span class="p">[n.188] Abhidh-k-ṭ at D (4094) mngon pa, nyu 67b3-68a6 or Q (5595) thu 111b2-112a7, which has preserved a counterpart to the discussion on jhāna found in <a href="../../mn/mn108.html">MN 108</a> at MN III 13,23 to MN III 15,3; cf. also Abhidh-k 8:2 in Pradhan 1967: 433,12, paralleling MN III 14,1, with its Chinese counterparts in T 1558 at T XXIX 145b21 and T 1559 at T XXIX 296c13 (for the actual quotes cf. below p. 628 note 207).</span></span></span></p>
+<p>The Gopakamoggallāna-sutta and its Madhyama-āgama parallel begin by narrating that King Ajātasattu was getting Rājagaha fortified. The Majjhima-nikāya version explains that he was apprehensive of an attack by King Pajjota of Avanti, whereas according to the Madhyama-āgama account he was apprehensive of the Vajjians.<span class="note" id="mn108n189"><span class="details"><span class="p">[n.189] <a href="../../mn/mn108.html">MN 108</a> at MN III 7,15: rañño pajjotassa āsaṅkamāno and <a href="../../parallels/ma145.html">MĀ 145</a> at T I 653c24: 為防跋耆故. The rendering 跋耆, corresponding to bat gji in Early Middle Chinese (cf. Pulleyblank 1991: 27 and 245), would point to a Prākrit original instead of the Sanskrit form Vṛji (cf. also Karashima 1994: 185 on the alternative rendering 跋闍 found in <a href="../../parallels/da15.html">DĀ 15</a> at T I 66b24).</span></span></span> Other discourses also report that King Ajātasattu was at odds with the Vajjians,<span class="note" id="mn108n190"><span class="details"><span class="p">[n.190] Ajātasattu’s wish to conquer the Vajjians is recorded in <a href="../../dn/dn16.html">DN 16</a> at DN II 72,5 and in its Chinese, Sanskrit, and Tibetan counterparts <a href="../../parallels/da2.html">DĀ 2</a> at T I 11a10, T 5 at T I 160b9, T 6 at T I 176a6, fragment S 360 folio 151V5-6 in Waldschmidt 1950: 7, and the Tibetan version in Waldschmidt 1951: 103; cf. also <a href="../../parallels/ma142.html">MĀ 142</a> at T I 648a26. That the Vajjians were under threat of being attacked by Ajātasattu is also reflected in <a href="../../sn/sn20.8.html">SN 20:8</a> at SN II 268,2 and its parallel <a href="../../parallels/sa1252.html">SĀ 1252</a> at T II 344b9, in SHT V 1290 V6 (p. 205), and in the Saṅghabhedavastu, Gnoli 1978a: 218,17 (the last two also in Sander 1985: 152). On the reasons for Ajātasattu’s wish to conquer the Vajjians cf. also Choudhary 1963.</span></span></span> but there appears to be no record elsewhere in the Pāli canon of a conflict between him and King Pajjota of Avanti.<span class="note" id="mn108n191"><span class="details"><span class="p">[n.191] Ps IV 71,1 explains that, after his patricide, Ajātasattu was afraid that King Pajjota might want to punish him, as King Bimbisāra had been a friend of King Pajjota; cf. also Rhys Davids 1903/1997: 13. Elsewhere in the discourses there seems to be no mention made of a close friendship between these two kings, in fact according to Vin I 278,21 on one occasion Bimbisāra approved of a ruse played on Pajjota, to whom he referred to as a “violent” person, caṇḍo. This passage does not give the impression that, from the perspective of the Pāli tradition, the two had been such close friends that Pajjota would want to attack Ajātasattu in order to revenge the killing of Bimbisāra.</span></span></span></p>
+<p>The two discourses report that Ānanda visited the Brahmin Gopakamoggallāna, who asked Ānanda if any of the monks was equal in qualities to their recently deceased teacher. The Brahmin minister Vassakāra joined the ensuing discussion,<span class="note" id="mn108n192"><span class="details"><span class="p">[n.192] Gokhale 1980a: 71 notes that for Vassakāra to be “involved in erecting fortifications” indicates that being a “purohita involved functions well beyond the performance of Brahmanical rituals for the king”; on the role and functions of the purohita according to the Jātakas cf. also Fick 1897: 107-117.</span></span></span> during which Ānanda clarified that there was not a single monk equal to the Buddha, nor had the Buddha appointed any monk as his successor,<span class="note" id="mn108n193"><span class="details"><span class="p">[n.193] An 1999: 74 explains that “the Buddha’s fundamental position is emphasis on self-discipline based on Dhamma, not on any authority ... which might serve as a crutch”. Misra 1972: 109 comments that “the cause of [the] Buddha’s preference for the abstract guidance of dharma to the tangible control by a leader ... is to be seen in his close acquaintance with and admiration for ... the republican states around him (from one of which he himself came)”. Thapar 1976/1978: 87-88 points out that in monastic organization “there is an attempt at imitating the structure of the tribal and oligarchic systems”, “it may be argued that the form adopted was ... in deliberate opposition to the monarchical system and its centralized power”; on this theme cf. also Bechert 1997: 62, Dutt 1957: 13, Ling 1973/1976: 157-163, and id. 1983: 62.</span></span></span> nor had the monastic community chosen a successor to the Buddha.</p>
+<p>According to the Pāli version, Ānanda further explained that no monk was equal to the Buddha, because the Buddha was the one who had discovered the path.<span class="note" id="mn108n194"><span class="details"><span class="p">[n.194] <a href="../../mn/mn108.html">MN 108</a> at MN III 8,11: “the Blessed One was the one to show the path not shown [before] ... and the disciples now live following this path”, bhagavā ... anakkhātassa maggassa akkhātā ... maggānugā ca pana etarahi sāvakā viharanti. Horner 1959: 59 note 1 draws attention to the absence of any gloss on this reference to the Buddha’s role as a teacher of the path in the commentary on the Majjhima-nikāya, which stands in contrast to two other occurrences of the same passage in <a href="../../sn/sn8.7.html">SN 8:7</a> at SN I 191,2 (or SN2 215 at SN2 I 411,7) and in <a href="../../sn/sn22.58.html">SN 22:58</a> at SN III 66,16, where each time the commentary offers a gloss, cf. Spk I 277,26 and Spk II 278,2. If the commentators thought it worthwhile to comment on two occurrences of this passage in the same Saṃyutta-nikāya, one would expect also a comment on an occurrence of the same passage in the Majjhima-nikāya. Although this is not conclusive, perhaps this passage originally did not form part of <a href="../../mn/mn108.html">MN 108</a>, as suggested by its absence in <a href="../../parallels/ma145.html">MĀ 145</a>.</span></span></span> The Gopakamoggallāna-sutta in this way highlights what, from the perspective of the early discourses, constitutes the crucial difference between the Buddha and his arahant disciples, namely the Buddha’s discovery and teaching of the path.<span class="note" id="mn108n195"><span class="details"><span class="p">[n.195] At a later point of its presentation, <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655c27 records a related explanation by Ānanda, in which he clarified that the liberation of the Buddha and the liberation of an arahant are not different from each other.</span></span></span></p>
+<p>According to both versions, Vassakāra wondered how the Buddhist monks were able to live in harmony, if they had no leader.<span class="note" id="mn108n196"><span class="details"><span class="p">[n.196] According to the commentary on the Mahāparinibbāna-sutta, Sv II 522,19, Vassakāra had been instrumental in sowing discord among the Vajjians in order to enable King Ajātasattu to conquer the Vajjian republic. This tale would explain why Vassakāra would be interested in the reasons for the concord that prevailed in the leaderless Buddhist monastic community, a community whose administration appears to have been modelled by its founder on republican principles similar to those of the Vajjian republic. Warder 1956: 45 explains that, from the viewpoint of organization, “the Saṅgha ... preserved the ancient democratic institutions of tribes such as the Buddha himself was born among, and which the kings of Kosala and Magadha were busily extirpating and subjecting to their growing states”.</span></span></span> In reply to Vassakāra’s inquiry, Ānanda explained that the monks relied on the Dharma instead of relying on a human leader.<span class="note" id="mn108n197"><span class="details"><span class="p">[n.197] <a href="../../mn/mn108.html">MN 108</a> at MN III 9,23: “we are not without refuge ... we are with refuge ... with the Dharma as refuge”, na kho mayaṃ ... appaṭisaraṇā, sappaṭisaraṇā mayaṃ ... dhammapaṭisaraṇā ti (Be-MN III 60,11: dhammappaṭisaraṇā) and <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654b23: “we do not rely on a person but rely on the Dharma”, 我等不依於人而依於法; cf. also the Mahāvyutpatti 1547 in Sakaki 1926: 124: dharma-pratisaraṇena bhavitavyaṃ na pudgala-pratisaraṇena. Dutt 1924/1996: 118 comments on the inquiry preceding this explanation that “evidently the republican organization of the Buddhist Sangha was somewhat incomprehensible to outsiders”.</span></span></span></p>
+<p>According to the Majjhima-nikāya account, Ānanda explained his statement by describing how on observance days the monks would come together to recite the code of conduct (pātimokkha) and confess any transgression.<span class="note" id="mn108n198"><span class="details"><span class="p">[n.198] Notably, <a href="../../mn/mn108.html">MN 108</a> at MN III 10,13 speaks of dealing according to the Dharma with a monk who recalls having transgressed while the pātimokkha is being recited, tasmiṃ ce bhaññamāne. <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654b27 is less explicit, reading: “if an impure person is in the assembly, we undertake to instruct him in accordance with what is set forth in the Dharma”, 若彼眾不清淨者, 隨法所說, 我等教作是. Dhirasekera 1982/2007: 196 remarks that the description in <a href="../../mn/mn108.html">MN 108</a> points to an early stage in the recital of the pātimokkha, when offences were revealed during the actual recitation, instead of being summarily confessed beforehand. The same early stage he also sees reflected in the injunction given as part of the instruction on the formal recitation of the pātimokkha at Vin I 103,2, according to which an offence should be revealed, yassa siyā āpatti so āvikareyya, asantiyā āpattiyā tuṇhī bhavitabbaṃ. Gombrich 1991: 35 explains that although “originally ... the rules were simply recited by the senior monk present and anyone who had violated any of them was to say so ... but then the monks could not endure the shame of public confession, so the procedure was changed: monks paired off and confessed to each other before the public recitation”; cf. also, e.g., Bhagvat 1939: 120, Dutt 1924/1996: 84, Oberlies 1997: 179 note 53, and Vetter 1999: 213.</span></span></span> The Madhyama-āgama version adds to this description that on such an occasion one of the monks would give a talk on the Dharma, to which the other monks would listen with respect and joy.<span class="note" id="mn108n199"><span class="details"><span class="p">[n.199] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654b25: “if there is a monk who is knowledgeable in the Dharma, we will invite that monk to teach us the Dharma ... all of us together will delight in what this monk says and received it respectfully”, 若有比丘知法者, 我等請彼比丘為我等說法 ... 我等一切歡喜奉行彼比丘所說. This additional stipulation indicates that the purpose of the fortnightly meeting of the monks is not only to ensure their purity in matters of conduct, but also to provide a platform for exchange on the teachings. This brings to mind an injunction given the Mahāparinibbāna-sutta and its parallels, according to which the Dharma and the Vinaya should become the teacher once the Buddha is no longer alive, cf. <a href="../../dn/dn16.html">DN 16</a> at DN II 154,5: “the Dharma and the discipline taught and set out by me to you, that shall be your teacher after my passing away”, yo vo ... mayā dhammo ca vinayo ca desito paññatto, so vo mam’ accayena satthā. Its Tibetan counterpart in Waldschmidt 1951: 387,22 begins by recommending recitation of the various types of Buddhist scripture and then presents the code of rules, so sor thar pa’i mdo, as the teacher after the Buddha’s passing away. One of the Chinese parallels to <a href="../../dn/dn16.html">DN 16</a> similarly takes up the rules, together with morality and the Dharma as the teacher, T 7 at T I 204b29: “morality, the pātimokkha and the other various teachings on the sublime true Dharma, these will then be your great teacher”, 戒波羅提木叉, 及餘所說種種妙法, 此即便是汝等大師. Two other Chinese parallels to <a href="../../dn/dn16.html">DN 16</a> simply recommend “the discourses and morality” as the refuge after the Buddha’s demise, <a href="../../parallels/da2.html">DĀ 2</a> at T I 26a27 and T 5 at T I 172b22: 經戒. Another parallel, T 6 at T I 188a24, only speaks of the “Dharma teachings”, 法教, as the refuge. T 6 continues by instructing that when the monks meet for recitation of the rules, they should also recite the discourses and take refuge in them, 誦經, 歸心於經. A quotation of this injunction in the *Karmavibhaṅgopadeśa in Lévi 1932a: 158,4, also speaks only of the discourses: sūtrāntaḥ śāstā.</span></span></span> The Gopakamoggallāna-sutta and its parallel continue by pointing out that, although no monk was set up as a leader, an individual monk will be respected by other monks if he is endowed with ten qualities.<span class="note" id="mn108n200"><span class="details"><span class="p">[n.200] While according to Ee-MN III 10,21 and Se-MN III 93,13 Ānanda affirmed that such a monk exists, atthi, according to Be-III 61,6 and Ce-MN III 104,28 he denied the existence of such a monk, n’ atthi. The parallel passage in <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654c5 affirms the existences of such a monk, 有, supporting the reading found in Ee and Se.</span></span></span> The two versions agree in listing the following qualities:</p>
+<ul>
+<li>proper observance of the rules,</li>
+<li>learning,</li>
+<li>contentment.<span class="note" id="mn108n201"><span class="details"><span class="p">[n.201] While <a href="../../mn/mn108.html">MN 108</a> at MN III 11,25 has only a brief reference to contentment (which comes as its third quality), <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655a6 illustrates contentment (which is its sixth quality) with the image of a bird that takes along its two wings wherever it goes, an image used regularly in other Majjhima-nikāya discourses to illustrate contentment, cf., e.g., <a href="../../mn/mn27.html">MN 27</a> at MN I 180,22, <a href="../../mn/mn38.html">MN 38</a> at MN I 268,34, <a href="../../mn/mn51.html">MN 51</a> at MN I 346,5, <a href="../../mn/mn94.html">MN 94</a> at MN II 162,8, <a href="../../mn/mn101.html">MN 101</a> at MN II 226,8, and <a href="../../mn/mn112.html">MN 112</a> at MN III 34,26. A counterpart to this image can be found in Jain texts, cf., e.g., the Uttarājjhayaṇa 6.15 in Charpentier 1922: 89,14.</span></span></span></li>
+</ul>
+<p>Both versions, moreover, present the destruction of the influxes as the culmination point of their list of praiseworthy qualities. Qualities that according to the Majjhima-nikāya presentation make a monk worthy of respect are the ability to attain:</p>
+<ul>
+<li>the four jhānas,</li>
+<li>the supernormal powers,</li>
+<li>the divine ear,</li>
+<li>knowledge of the mind of others,</li>
+<li>recollection of past lives,</li>
+<li>the divine eye.</li>
+</ul>
+<p>The Madhyama-āgama version instead reckons as qualities that make a monk worthy of respect if he:</p>
+<ul>
+<li>acts as a spiritual friend (kalyānamitta),<span class="note" id="mn108n202"><span class="details"><span class="p">[n.202] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654c25: 作善知識. To convey the idea of frequenting spiritual friends, other discourses in the Madhyama-āgama use the expressions “to approach spiritual friends”, 親近善知識, e.g., <a href="../../parallels/ma153.html">MĀ 153</a> at T I 672c28, or “to see spiritual friends”, 見善知識, e.g., <a href="../../parallels/ma204.html">MĀ 204</a> at T I 778a26.</span></span></span></li>
+<li>delights in mental and physical seclusion,</li>
+<li>delights in meditation,<span class="note" id="mn108n203"><span class="details"><span class="p">[n.203] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655a3 describes how someone “internally properly practices tranquillity, is not separated from mental investigation and puts into operation insight, increasingly practising emptiness”, 內行正止, 亦不離伺, 成就於觀, 增長空行, expressions that bring to mind the injunction in <a href="../../mn/mn6.html">MN 6</a> at MN I 33,10, “practising internal tranquillity of mind, not neglecting meditation (jhāna), being endowed with insight, and being a frequenter of empty places”, ajjhattaṃ cetosamatham anuyutto anirākatajjhāno vipassanāya samannāgato brūhetā suññāgārānaṃ (Se-MN I 58,9: ajjhattañ), where the parallel <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c19 refers to this mode of practice as “not neglecting jhāna, putting into operation insight and practising in empty and secluded places”, 不廢禪, 成就觀行於空靜處.</span></span></span></li>
+<li>is mindful,</li>
+<li>is energetic,</li>
+<li>is wise.</li>
+</ul>
+<p>Thus, while the Pāli version presents a listing of attainments, the emphasis in the Chinese parallel is more on a several recommendable qualities (see table 11.7).<span class="note" id="mn108n204"><span class="details"><span class="p">[n.204] The presentation in <a href="../../parallels/ma145.html">MĀ 145</a> thereby closely resembles a list of ten praiseworthy qualities of a monk found in <a href="../../dn/dn33.html">DN 33</a> at DN III 266,26, <a href="../../dn/dn34.html">DN 34</a> at DN III 290,13, <a href="../../an/an10.17.html">AN 10:17</a> at AN V 23,12, and <a href="../../an/an10.50.html">AN 10:50</a> at AN V 89,19. This list mentions observance of the rules (1st), learning (2nd), spiritual friends (3rd), gentle speech (4th), skill at carrying out duties for fellow monks (5th), delight in the Dharma (6th), contentment (7th in the Dīgha-nikāya discourses, 8th in the Aṅguttara-nikāya discourses), being energetic (8th in the Dīgha-nikāya discourses, 7th in the Aṅguttara-nikāya discourses), mindfulness (9th), and wisdom (10th). <a href="../../parallels/ma145.html">MĀ 145</a> has almost the same sequence and differs only in respect to qualities 4, 5, and 6, where instead of delight in the Dharma <a href="../../parallels/ma145.html">MĀ 145</a> speaks of delight in seclusion and in meditation, and instead of gentle speech and skill at tasks <a href="../../parallels/ma145.html">MĀ 145</a> has the destruction of the influxes as a quality that makes a monk worthy of respect. Gentle speech and skill at tasks are found also in a listing of these ten qualities in the Daśottara-sūtra, cf. fragment 679 folio 23V5+7 in Schlingloff 1962a: 12.</span></span></span> After asking Ānanda where he was staying,<span class="note" id="mn108n205"><span class="details"><span class="p">[n.205] A few minor differences are that while according to <a href="../../mn/mn108.html">MN 108</a> at MN III 13,3 Vassakāra expressed his appreciation of Ānanda’s presentation, according to <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655b1 the whole assembly expressed their approval. In addition to asking if the Bamboo Grove was quiet, according to <a href="../../parallels/ma145.html">MĀ 145</a> at T I 665b8 Vassakāra also inquired if it was free from insects and flies, a condition that would indeed facilitate the practice of meditation in this grove. According to <a href="../../mn/mn108.html">MN 108</a> at MN III 13,20, Ānanda remarked that the conducive conditions in the Bamboo Grove were due to the protection given by Vassakāra. Ps IV 73,3 explains that Vassakāra cared for the Bamboo Grove, as according to a prediction he was going to be reborn in his next life as a monkey in this grove, a rebirth prospective also referred to in the Karmavibhaṅga in Kudo 2004: 72,5 and 73,4 or in Lévi 1932a: 44,22. The reason for the conducive conditions in the Bamboo Grove given in <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655b14, however, is “because it formerly served as a shelter for the Blessed One”, 以世尊擁護故.</span></span></span> according to both versions Vassakāra proposed that the Buddha had spoken in praise of all types of meditation. The two versions differ in the word they use to refer to “meditation”, as the Majjhima-nikāya discourse speaks of jhāna,<span class="note" id="mn108n206"><span class="details"><span class="p">[n.206] <a href="../../mn/mn108.html">MN 108</a> at MN II 13,32: “the venerable Gotama was one who meditated and had the habit of a meditator, the venerable Gotama spoke in praise of all [kinds of] meditation”, jhāyī c’ eva so bhavaṃ gotamo ahosi jhānasīlī ca, sabbañ ca pana so bhavaṃ gotamo jhānaṃ vaṇṇesī ti (Se-MN III 98,10: jhānasīlo).</span></span></span> while the Madhyama-āgama version speaks of “application of the mind”, employing a Chinese character used elsewhere to render the first jhāna factor vicāra.<span class="note" id="mn108n207"><span class="details"><span class="p">[n.207] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655b23: “the recluse Gotama was one who practised application of the mind, who delighted in application of the mind, who praised all application of the mind”, 沙門瞿曇行伺, 樂伺, 稱歎 一切伺. The character 伺 used in the present instance is the standard rendering for vicāra in the Madhyama-āgama, whereas the standard way of rendering jhāna in the same collection is 禪, and the verb jhāyati, “to meditate”, could easily have been rendered as 禪作, or 禪行, or even 禪坐. <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655a3 refers to not neglecting meditation as 不離伺. This seems rather similar to the expression anirākatajjhāna in <a href="../../mn/mn6.html">MN 6</a> at MN I 33,10, which its parallel <a href="../../parallels/ma105.html">MĀ 105</a> at T I 595c19, however, refers to as 不廢 禪. At a later point, when <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655c15 turns to the four jhānas, it uses the expression 禪, explaining that the four jhānas are the four types of ‘meditation’ (伺), approved of by the Buddha. Although the use of both renderings side by side could indicate that the Indic original on which the translator(s) based their rendering did not use an equivalent to jhāna or jhāyati in the passage concerned with the five hindrances, it is also possible that the translator(s) deliberately chose 伺 instead of 禪 in order to better convey the implications of the present passage, where the point at stake is indeed not jhāna/禪 in its proper sense. In fact, from the perspective of transmission the second hypothesis seems more probable, since it is difficult to imagine that the reciters of what came to be the Pāli version of the present discourse would have replaced another term with jhāna in a context that does not fit the use of the expression jhāna in other discourses. This assumption finds further support in the Abhidharmakośabhāṣya, Abhidh-k 8:2 in Pradhan 1967: 433,12, which in a quote related to the present discourse (cf. also above note 188) speaks of “unwholesome dhyānas taught by the Blessed One”, uktāni cākuśalāni dhyānānyapi bhagavatā (cf. also T 1558 at T XXIX 145b21: 世尊亦說有惡靜慮 and T 1559 at T XXIX 296c13: 世尊亦說惡法為持訶那).</span></span></span> This part of the discourse has also been preserved in the discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, which employs the standard Tibetan counterpart for jhāna or dhyāna.<span class="note" id="mn108n208"><span class="details"><span class="p">[n.208] D (4094) mngon pa, nyu 67b5 or Q (5595) thu 111b5: bsam gtan.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 11.7: Qualities of a Monk Worthy of Respect in <a href="../../mn/mn108.html">MN 108</a> and <a href="../../parallels/ma145.html">MĀ 145</a></caption>
+<tr><th><a href="../../mn/mn108.html">MN 108</a></th><th><a href="../../parallels/ma145.html">MĀ 145</a></th></tr>
+<tr><td>observes rules (1)</td><td>observes rules (→ 1)</td></tr>
+<tr><td>learned (2)</td><td>learned (→ 2)</td></tr>
+<tr><td>contented (3)</td><td>acts as spiritual friend</td></tr>
+<tr><td>attains 4 jhānas (4)</td><td>delights in seclusion</td></tr>
+<tr><td>has supernormal powers (5)</td><td>delights in meditation</td></tr>
+<tr><td>has divine ear (6)</td><td>contented (→ 3)</td></tr>
+<tr><td>knows minds of others (7)</td><td>mindful</td></tr>
+<tr><td>recollects past lives (8)</td><td>energetic</td></tr>
+<tr><td>has divine eye (9)</td><td>wise</td></tr>
+<tr><td>has destroyed influxes (10)</td><td>has destroyed influxes (10)</td></tr>
+<tr><td></td><td>(≠ 4-9)</td></tr>
+</table>
+<p>In all versions, Ānanda was quick to point out that Vassakāra’s statement was a misunderstanding. He clarified that the Buddha only spoke in praise of types of “meditation” during which the mind was not overwhelmed by the five hindrances.<span class="note" id="mn108n209"><span class="details"><span class="p">[n.209] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655c7 actually omits restlessness-and-worry, thereby mentioning only four hindrances. As the whole point of the passage is to set a contrast to the jhānas, which require the removal of all five hindrances, the absence of restless-and-worry may be the result of an oversight during the transmission, translation, or copying of the discourse. D (4094) mngon pa, nyu 67b7 or Q (5595) thu 111b8 mentions in fact all five hindrances.</span></span></span> The use of different terminology to render the same basic idea of “meditation” in the parallel versions is interesting in so far as the Gopakamoggallāna-sutta seems to be the only Pāli discourse in which the term jhāna stands for a mental condition in which the hindrances are present.<span class="note" id="mn108n210"><span class="details"><span class="p">[n.210] In addition to its standard occurrence in relation to the four levels of mental absorption, the word jhāna occasionally has the more general sense of “meditation”. This is the case, e.g., in the expression arittajjhāna, “not lacking ‘jhāna’”, which <a href="../../an/an1.20.html">AN 1:20</a> at AN I 38-43 applies among others also to meditation practices such as satipaṭṭhāna and the six recollections, practices that tradition does not consider as leading to jhāna attainment on their own. A more general sense of jhāna seems to underlie also the expression anirākatajjhāna, “not neglecting ‘jhāna’”, found in <a href="../../mn/mn6.html">MN 6</a> at MN I 33,10, cf. also It 2:8 at It 39,11, in between the two qualities of cetosamatha and vipassanā. <a href="../../mn/mn36.html">MN 36</a> at MN I 243,5 refers to breath control as appānaka jhāna (Be-MN I 309,16, Ce-MN I 576,28, and Se-MN I 451,12: appāṇaka), where again the more general sense of “meditation” appears to fit the context best. Yet, none of these instances associates the term jhāna with the presence of the hindrances. Such an instance can be found, however, in a tale in the Mahāvastu in Senart 1897: 149,2. This tale describes how the son of a hermit, fallen in love at his first encounter with a beautiful girl, keeps thinking of her instead of doing his duties in the hermitage. This causes his father to ask him what occupies his mind with the words kin tuvaṃ dhyānaṃ dhyāyasi (Basak 1968/2004: 92,6: kiṃ), “what ‘dhyāna’ are your meditating on?” Notably, the Pāli counterpart in Jā 526 at Jā V 201,26 reads rather kin nu mando va jhāyasi? For a detailed study of the different versions of this tale cf. Lüders 1940b.</span></span></span> The three versions agree that Ānanda described the mind being overwhelmed by the hindrances without knowing an escape from this condition, a mental condition far from being anywhere near the complete absence of the hindrances experienced during real jhāna.<span class="note" id="mn108n211"><span class="details"><span class="p">[n.211] A similar description of a state of mind overwhelmed by the hindrances can be found in <a href="../../an/an11.10.html">AN 11:10</a> at AN V 323,14, which makes use of the same verb “to meditate”, jhāyati, without, however, bringing in the noun jhāna. Its parallel <a href="../../parallels/sa926.html">SĀ 926</a> at T II 236a2 also does not use the equivalent term 禪 in relation to the hindrances. Only when it comes to describing meditation free from the hindrances does <a href="../../parallels/sa926.html">SĀ 926</a> at T II 236a11 employ the term 禪. Thus <a href="../../mn/mn108.html">MN 108</a> stands out for using the noun jhāna in a way that appears to be unique in the early discourses.</span></span></span></p>
+<p>In both versions Vassakāra approved of Ānanda’s explanation and left. The Majjhima-nikāya version concludes with Ānanda repeating the reply he had already earlier given to Gopakamoggallāna’s initial question and then ends without the standard conclusion to a discourse (which usually reports the delight of the listeners).</p>
+<p>According to the Madhyama-āgama version, however, the discussion continued, as Gopakamoggallāna inquired if there was a difference between the liberation of the Buddha and the liberation of an arahant, which Ānanda denied.<span class="note" id="mn108n212"><span class="details"><span class="p">[n.212] <a href="../../parallels/ma145.html">MĀ 145</a> at T I 655c28: the “complete and full liberation and liberation by wisdom [of a Buddha], and the liberation of an arahant, what is the difference between these two liberations”, 等正覺解脫及慧解 脫, 阿羅訶解脫, 此二解脫有何差別 (adopting the 聖 variant reading 二 instead of 三)? On following the alternative reading 三, the passage could also be interpreted to intend three types of liberation: complete and full liberation, liberation by wisdom, and liberation of an arahant. However, whereas it would make sense to inquire after the difference between the liberation of a Buddha and the liberation of an arahant, to take the passage to inquire about the differences between three types of liberation would make less sense. “Liberation by wisdom” is one mode of arriving at arahant-ship and would thus need to be contrasted with the alternative mode of arriving at arahant-ship that leads to being liberated “bothways”, but would not provide a contrast to the “liberation of an arahant”.</span></span></span> Gopakamoggallāna then invited Ānanda to partake of a meal. At the end of the meal, Ānanda gave Gopakamoggallāna a talk on the Dharma. The Madhyama-āgama discourse concludes with Gopakamoggallāna’s delighted reaction.<span class="note" id="mn108n213"><span class="details"><span class="p">[n.213] Although this last exchange is not found in the Pāli version, it would fit the sequence of events quite well. According to both discourses, Ānanda had originally set out to collect alms, but on realizing that it was yet too early he had approached the workplace of Gopakamoggallāna. Due to the arrival of Vassakāra the discussion had been prolonged and by the time of Vassakāra’s departure it could well have become high time for Ānanda to approach the town in order to beg his alms so as to be able to partake of food before noon. In view of this situation, it would be a thoughtful gesture by Gopakamoggallāna to invite Ānanda to take a meal right where he was. The fact that the Pāli version ends rather abruptly, without the standard ending for a discourse, leaves open the possibility that a similar concluding narration earlier formed part of the discourse and was lost during the process of transmission.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

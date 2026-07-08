@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 78 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 78: Samaṇamaṇḍikā-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn77comp.html#content"></a><a id="next-sutta" href="./mn79comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn78.html">MN 78</a> / <a href="../../parallels/ma179.html">MĀ 179</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Samaṇamaṇḍikā-sutta, the “discourse to Samaṇamaṇḍika[putta]”, defines what makes one a “supreme recluse”. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn78n163"><span class="details"><span class="p">[n.163] The parallel is <a href="../../parallels/ma179.html">MĀ 179</a> at T I 720a-721c. <a href="../../parallels/ma179.html">MĀ 179</a> has the title “discourse to the carpenter Pañcakaṅga”, 五支物主經, and agrees with <a href="../../mn/mn78.html">MN 78</a> on locating the discourse in Jeta’s Grove by Sāvatthī. A translation of <a href="../../parallels/ma179.html">MĀ 179</a>, together with extracts from the present discussion, can be found in Anālayo 2009h. The Vyākhyāyukti in Lee 2001: 14,12 refers to the present discourse as yan lag lnga pa’i phya (Lee reads phywa) mkhan gyi mdo, which Skilling 2000b: 342 indicates to correspond to Pañcāṅgasthapati-sūtra. For counterparts to <a href="../../mn/mn78.html">MN 78</a> at MN II 26,16-22 and MN II 27,5-10 in Vyākhyāyukti literature cf. Skilling 2000b: 342.</span></span></span></p>
+<p>The Samaṇamaṇḍikā-sutta and its Madhyama-āgama parallel begin by relating that the carpenter Pañcakaṅga visited the wanderer Samaṇamaṇḍikaputta,<span class="note" id="mn78n164"><span class="details"><span class="p">[n.164] The Pāli editions differ in their description of the company of the wanderer Samaṇamaṇḍikā, which according to Ee-MN II 23,1 numbered three hundred, while Be-MN II 214,14 and Se-MN II 342,6 give the more usual number five hundred (thereby agreeing with <a href="../../parallels/ma179.html">MĀ 179</a> at T I 720b10), and Ce-MN II 366,5 speaks of seven hundred.</span></span></span> who proposed that to be a supreme recluse requires not doing evil by way of body, speech, thought, and livelihood. The two versions differ in the sequence in which they present these four qualities (see table 8.6). Both report that Pañcakaṅga left and reported this view to the Buddha who disapproved, explaining that a small infant would also fulfil these requirements.<span class="note" id="mn78n165"><span class="details"><span class="p">[n.165] In relation to the image of the small infant, <a href="../../mn/mn78.html">MN 78</a> at MN II 24,33 and MN II 25,1 presents the moaning of the infant as an example of its intention and the milk of the child’s mother as its livelihood. In this way, <a href="../../mn/mn78.html">MN 78</a> highlights that the intention of the child manifests through sulking and its livelihood is to depend on the mother’s milk. <a href="../../parallels/ma179.html">MĀ 179</a> at T I 720c9+10 instead relates the infant’s moaning to its livelihood and the mother’s milk to the thoughts or intentions of the child, 念, for which Hirakawa 1997: 469 lists saṃkalpa as one of its possible equivalents, besides smṛti, smaraṇa, anusmṛti, manasikāra, etc. (<a href="../../mn/mn78.html">MN 78</a> at MN II 24,32 speaks in this context of saṅkappa, “intention”). Thus <a href="../../parallels/ma179.html">MĀ 179</a> indicates that the child’s thoughts or intentions revolve around the mother’s milk and its demand for such livelihood takes place through moaning.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 8.6: Qualities of a Supreme Recluse in <a href="../../mn/mn78.html">MN 78</a> and its Parallel<span class="note" id="mn78n166"><span class="details"><span class="p">[n.166] The qualities are listed in <a href="../../mn/mn78.html">MN 78</a> at MN II 24,7 and in <a href="../../parallels/ma179.html">MĀ 179</a> at T I 720b25, which thereby presents thought, the subtlest of the four, as its last.</span></span></span></caption>
+<tr><th><a href="../../mn/mn78.html">MN 78</a></th><th><a href="../../parallels/ma179.html">MĀ 179</a></th></tr>
+<tr><td>no evil bodily deed (1)</td><td>no evil bodily deed (→ 1)</td></tr>
+<tr><td>no evil verbal deed (2)</td><td>no evil verbal deed (→ 2)</td></tr>
+<tr><td>no evil thought (3)</td><td>no evil livelihood (→ 4)</td></tr>
+<tr><td>no evil livelihood (4)</td><td>no evil thought (→ 3)</td></tr>
+</table>
+<p>The Samaṇamaṇḍikā-sutta continues by proclaiming that a person should not be considered accomplished in what is wholesome, or a supreme recluse, simply because of not doing evil by way of body, speech, thought, and livelihood.<span class="note" id="mn78n167"><span class="details"><span class="p">[n.167] <a href="../../mn/mn78.html">MN 78</a> at MN II 25,14: “[he is] not accomplished in what is wholesome, not perfected in what is wholesome, not an invincible recluse attained to the supreme”, na c’ eva sampannakusalaṃ na paramakusalaṃ na uttamapattipattaṃ samaṇaṃ ayojjhaṃ (Se-MN II 345,13: uttamappattipattaṃ).</span></span></span> The Madhyama-āgama version introduces a finer distinction at this point. In agreement with the Majjhimanikāya version, the Madhyama-āgama discourse proclaims that merely avoiding evil by way of body, speech, thought, and livelihood does not suffice for being a supreme recluse, followed by pointing out, however, that to avoid evil in this way is nevertheless an accomplishment in what is wholesome.<span class="note" id="mn78n168"><span class="details"><span class="p">[n.168] <a href="../../parallels/ma179.html">MĀ 179</a> at T I 720c13: “he is accomplished in wholesomeness, is supreme in wholesomeness, yet is not an unsurpassable person, has not reached the supreme essence, and has not the nature of a forthright recluse”, 成就善, 第一善, 然非無上士, 不得第一義, 亦非質直沙門.</span></span></span> In this way, the Madhyama-āgama version gives proper place to the importance of avoiding evil action, whereas the same is somewhat lost out of sight with the Majjhima-nikāya version’s sweeping dismissal.<span class="note" id="mn78n169"><span class="details"><span class="p">[n.169] Cf., e.g., <a href="../../an/an4.116.html">AN 4:116</a> at AN II 119,30, a whole discourse dedicated to the importance of developing wholesome bodily, verbal, and mental conduct, together with right view. This discourse supports the presentation in <a href="../../parallels/ma179.html">MĀ 179</a>, in the sense that proper bodily, verbal, and mental conduct can indeed be reckoned an accomplishment in what is wholesome.</span></span></span></p>
+<p>The Samaṇamaṇḍikā-sutta continues with a brief reference to the ten qualities required for being a supreme recluse, a reference found only in the concluding section of its Madhyama-āgama parallel.<span class="note" id="mn78n170"><span class="details"><span class="p">[n.170] <a href="../../mn/mn78.html">MN 78</a> at MN II 25,18: “endowed with ten qualities do I describe a man as ... a supreme recluse”, dasahi ... dhammehi samannāgataṃ purisapuggalaṃ paññāpemi ... samaṇam ayojjhaṃ (Be-MN II 216,27: paññapemi). The corresponding reference to being endowed with ten qualities occurs in <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c12.</span></span></span> In relation to this difference, it is worthy of note that in the early discourses it is a standard procedure to follow such a brief statement with a detailed exposition, usually by way of a rhetorical question about the nature of what has been said in brief. The two versions of the present discourse do indeed have such a corresponding question together with a more detailed exposition, yet this is found in both versions in their concluding sections.<span class="note" id="mn78n171"><span class="details"><span class="p">[n.171] <a href="../../mn/mn78.html">MN 78</a> at MN II 28,34: “endowed with what ten qualities do I describe a man as ... a supreme recluse”, katamehi ... dasahi dhammehi samannāgataṃ purisapuggallaṃ paññāpemi ... samaṇam ayojjhaṃ (Be- MN II 220,16: paññapemi)? The corresponding question occurs in <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c14.</span></span></span></p>
+<p>In the Madhyama-āgama discourse, this statement, the subsequent question, and the more detailed exposition come together, follow each other naturally, and fit the context. In contrast, in the Majjhima-nikāya version the initial statement on the ten qualities hangs somewhat in the air, as it is followed by a different exposition that takes up the need to understand unwholesome conduct. The transition between these two is rather abrupt and the ensuing exposition of unwholesome conduct does not stand in a direct relation to the ten qualities. As the question corresponding to the brief statement and the detailed exposition of the same ten qualities occur only much later, at the end of a treatment of the path to the cessation of wholesome intentions, it seems as if during the process of transmission the natural connection between the initial brief statement on the ten qualities and the subsequent question and detailed exposition was lost and the initial statement ended up in an earlier part of the Majjhima-nikāya discourse.</p>
+<p>In order to provide a contrast to the assumption that not doing evil suffices to become a supreme recluse, the Samaṇamaṇḍikā-sutta and its parallel highlight the need to properly understand the nature, the origin, the cessation, and the path leading to the cessation of:</p>
+<ul>
+<li>unwholesome conduct,</li>
+<li>wholesome conduct,</li>
+<li>unwholesome intentions,</li>
+<li>wholesome intentions.</li>
+</ul>
+<p>The exposition of the nature and origin of conduct that is either unwholesome or else wholesome is similar in the two versions.</p>
+<p>Regarding the cessation of unwholesome conduct, the two versions agree on mentioning the need to abandon not only unwholesome bodily and verbal conduct, but also to abandon any unwholesome mental activity.<span class="note" id="mn78n172"><span class="details"><span class="p">[n.172] <a href="../../mn/mn78.html">MN 78</a> at MN II 26,20: manoduccaritaṃ pahāya manosucaritaṃ bhāveti and <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721a8: 捨 ... 意不善業, 修 ... 意善業.</span></span></span> This is surprising, as both versions later on examine unwholesome and wholesome intentions on their own, whereas the present context is concerned with forms of conduct.</p>
+<p>The triad of bodily, verbal, and mental action occurs frequently in other discourses, so that a passage that mentions only bodily and verbal action could easily have led a reciter to supplement the ‘missing’ mental counterpart. Thus, the reference to mental activity in the Pāli and Chinese versions’ exposition of the cessation of unwholesome conduct could be a reciter’s error that happened early enough to make its way into the Majjhima-nikāya and the Madhyama-āgama versions of the present discourse.<span class="note" id="mn78n173"><span class="details"><span class="p">[n.173] A similar case can be found in <a href="../../mn/mn39.html">MN 39</a> at MN I 272,20 and its parallel <a href="../../parallels/ma182.html">MĀ 182</a> at T I 725a12. These two discourses agree on mentioning pure mental conduct after pure bodily and verbal conduct, before turning to pure livelihood, restraint of the senses, clear comprehension of bodily activities, removing the hindrances, and developing the four jhānas. In this case, too, the reference to mental conduct seems out of order and reduplicates the later detailed treatment of development of the mind, cf. Bucknell 1984: 16-20.</span></span></span></p>
+<p>The Samaṇamaṇḍikā-sutta and its Madhyama-āgama parallel continue by explaining that the complementary cessation of wholesome conduct requires avoiding attachment to such wholesome conduct.<span class="note" id="mn78n174"><span class="details"><span class="p">[n.174] <a href="../../mn/mn78.html">MN 78</a> at MN II 27,12: sīlavā hoti, no ca sīlamayo, which Chalmers 1927: 15 renders as “[he] embodies virtue and not merely virtuous observances”, Horner 1957/1970: 226 as “[he] is of moral habit and has no addition to make to moral habit”, and Ñāṇamoli 1995/2005: 651 as “[he] is virtuous, but he does not identify with his virtue”. <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721a17: “he practises morality without being attached to morality”, 行戒不著戒.</span></span></span> To this the Majjhima-nikāya version adds the need to understand liberation of the mind and liberation through wisdom, where wholesome conduct ceases completely, a statement not found in its Madhyama-āgama parallel.<span class="note" id="mn78n175"><span class="details"><span class="p">[n.175] <a href="../../mn/mn78.html">MN 78</a> at MN II 27,12: tañ ca cetovimuttiṃ paññāvimuttiṃ yathābhūtaṃ pajānāti, yatth’ assa te kusalasīlā aparisesā nirujjhanti (Be-MN II 218,26 and Se-MN II 248,15: kusalā sīlā).</span></span></span></p>
+<p>The commentary explains that the cessation of wholesome conduct comes about with full awakening.<span class="note" id="mn78n176"><span class="details"><span class="p">[n.176] Ps III 270,6. Bodhi in Ñāṇamoli 1995/2005: 1286 note 775 explains that since an arahant’s “virtuous habits no longer generate kamma, they are not describable as ‘wholesome’”.</span></span></span> The formulation in the Pāli discourse itself, however, does not necessarily entail full awakening, since it speaks only of “knowing” these two liberations, not of having “realized” them. While references to “realizing” liberation of the mind and liberation through wisdom in other discourses do indeed stand for full awakening,<span class="note" id="mn78n177"><span class="details"><span class="p">[n.177] References to realizing these two liberations that invariably stand for full awakening speak of “having oneself and with direct knowledge realized here and now liberation of the mind and liberation through wisdom”, cetovimuttiṃ paññāvimuttiṃ diṭṭhe va dhamme sayaṃ abhiññā (va) sacchikatvā, cf., e.g., in the first volume of the Majjhima-nikāya the occurrences <a href="../../mn/mn9.html">MN 9</a> at MN I 35,36, <a href="../../mn/mn12.html">MN 12</a> at MN I 71,10, <a href="../../mn/mn40.html">MN 40</a> at MN I 284,21, <a href="../../mn/mn41.html">MN 41</a> at MN I 289,31, <a href="../../mn/mn42.html">MN 42</a> at MN I 291,26, <a href="../../mn/mn53.html">MN 53</a> at MN I 357,35, <a href="../../mn/mn54.html">MN 54</a> at MN I 367,19, <a href="../../mn/mn71.html">MN 71</a> at MN I 482,34, and <a href="../../mn/mn73.html">MN 73</a> at MN I 490,14.</span></span></span> occurrences that speak only of “knowing” them can also refer to a stage of development that falls short of full awakening.<span class="note" id="mn78n178"><span class="details"><span class="p">[n.178] In <a href="../../mn/mn38.html">MN 38</a> at MN I 270,11, <a href="../../sn/sn35.202.html">SN 35:202</a> at SN IV 186,16, and <a href="../../an/an5.142.html">AN 5:142</a> at AN III 166,8, the expression “he understands in accordance with reality liberation of the mind and liberation through wisdom”, cetovimuttiṃ paññāvimuttiṃ yathābhūtaṃ pajānāti, seems to stand for full awakening, as <a href="../../mn/mn38.html">MN 38</a> at MN I 270,13 indicates that someone endowed with such understanding does not delight in feelings and has eradicated dukkha, <a href="../../sn/sn35.202.html">SN 35:202</a> at SN IV 187,22 similarly notes that someone with this understanding has overcome those states that lead to re-becoming and dukkha, and according to <a href="../../an/an5.142.html">AN 5:142</a> at AN III 167,14 someone who has such understanding ranges as the fifth in an examination of five different types of person, of which only the other four are still in need of eradicating the influxes. Occurrences of the same expression in <a href="../../sn/sn35.203.html">SN 35:203</a> at SN IV 189,33 and <a href="../../an/an10.75.html">AN 10:75</a> at AN V 139,26, however, clearly do not refer to full awakening, since <a href="../../sn/sn35.203.html">SN 35:203</a> at SN IV 190,9 envisages the arising of evil and unwholesome states, pāpakā akusalā dhammā, for someone who has understood in accordance with reality the liberation of the mind and liberation through wisdom, while in <a href="../../an/an10.75.html">AN 10:75</a> at AN V 139,24 a person endowed with the same understanding can even be of “bad morality”, dussīla. <a href="../../sn/sn35.132.html">SN 35:132</a> at SN IV 120,21 and <a href="../../sn/sn35.206.html">SN 35:206</a> at SN IV 199,24 mention such knowledge in relation to sense-restraint, a usage which would also not refer only to arahants.</span></span></span></p>
+<p>The Samaṇamaṇḍikā-sutta and its parallel differ on the path to the cessation of unwholesome conduct, a difference that similarly obtains in relation to the path to the cessation of wholesome conduct. According to the Majjhima-nikāya account, this path can be found in the four right efforts, while according to its Madhyama-āgama parallel the same path requires the practice of the four satipaṭṭhānas.<span class="note" id="mn78n179"><span class="details"><span class="p">[n.179] <a href="../../mn/mn78.html">MN 78</a> at MN II 26,24 and <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721a10. In relation to this difference, although mindfulness plays an important role in matters of conduct, the four right efforts would be more appropriate to the present context, since to avoid and overcome unwholesomeness and to develop and establish what is wholesome has a direct bearing on matters of conduct; cf. also Gethin 1992a: 78.</span></span></span></p>
+<p>With their examination of conduct completed, the two versions turn to thoughts or intentions, whose arising they attribute to perception. According to both versions, unwholesome thoughts or intentions cease with the first jhāna. In relation to the cessation of wholesome thoughts or intentions, the Majjhima-nikāya account attributes such cessation to the second jhāna, whereas its Madhyama-āgama parallel speaks of the fourth jhāna instead.<span class="note" id="mn78n180"><span class="details"><span class="p">[n.180] <a href="../../mn/mn78.html">MN 78</a> at MN II 28,22 and <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721b17. In relation to this difference, it is noteworthy that the standard description of the jhānas in the Pāli and Chinese discourses presents the removal of initial and sustained mental application as the decisive precondition for entering the second jhāna. Thus, although wholesome thoughts and intentions will certainly have ceased with the fourth jhāna, the same already takes place as soon as the second jhāna has been attained, so that the presentation in <a href="../../mn/mn78.html">MN 78</a> appears to be more to the point.</span></span></span></p>
+<p>The two versions also disagree on the path to the cessation of wholesome and unwholesome thoughts or intentions, where the Majjhima-nikāya discourse again speaks of the four right efforts, just as the Madhyama-āgama version again brings up the four satipaṭṭhānas.<span class="note" id="mn78n181"><span class="details"><span class="p">[n.181] In relation to the path leading to the cessation of unwholesome types of thought or intention, depicted in <a href="../../mn/mn78.html">MN 78</a> at MN II 28,4 and <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721b4, it is noteworthy that satipaṭṭhāna can lead to a change in perception, which according to <a href="../../mn/mn78.html">MN 78</a> and <a href="../../parallels/ma179.html">MĀ 179</a> is the source for the arising of such thoughts or intentions. Thus, e.g., <a href="../../sn/sn52.1.html">SN 52:1</a> at SN V 295,11 and its parallel <a href="../../parallels/sa536.html">SĀ 536</a> at T II 139c3 present the ability to have control over the evaluative function of one’s perception (appatikūle paṭikkulasaññī, etc.) as an outcome of satipaṭṭhāna practice. However, the second of the four right efforts appears to be more directly concerned with the cessation of unwholesome thoughts or intentions, cf., e.g., <a href="../../sn/sn49.1.html">SN 49:1</a> at SN V 244,8: “he strives ... for the abandoning of arisen evil and unwholesome states”, uppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ pahānāya ... padahati, similarly described in <a href="../../parallels/sa877.html">SĀ 877</a> at T II 221a24: 已起惡不善法斷, 生欲, 方便, 精勤, 心攝受 (where, however, this forms the first of the four right efforts). Again, <a href="../../mn/mn117.html">MN 117</a> at MN III 73,20 and its parallels <a href="../../parallels/ma189.html">MĀ 189</a> at T I 736a4 and D (4094) mngon pa, nyu 45a2 or Q (5595) thu 84b4 (which due to a textual error actually speaks of overcoming wrong view) indicate that while mindfulness plays an important role in relation to the overcoming of wrong intentions, their actual removal is a task performed by right effort. In relation to the complementary path to the cessation of wholesome thoughts or intentions, depicted in <a href="../../mn/mn78.html">MN 78</a> at MN II 28,25 and <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721b19, it would seem that satipaṭṭhāna constitutes indeed an important foundation for jhāna attainment. In fact, according to <a href="../../sn/sn52.11.html">SN 52:11</a>-24 at SN V 303-306 and their parallel <a href="../../parallels/sa539.html">SĀ 539</a> at T II 140b4, Anuruddha attributed his concentrative proficiency to his practice of the four satipaṭṭhānas. Moreover, <a href="../../sn/sn47.8.html">SN 47:8</a> at SN V 151,28 and its parallel <a href="../../parallels/sa616.html">SĀ 616</a> at T II 172c18 present satipaṭṭhāna as the tool to overcome mental obstructions in order to attain deeper stages of concentration. <a href="../../an/an4.14.html">AN 4:14</a> at AN II 17,2, however, relates the development of concentration to the fourth right effort in particular, indicating that to protect the samādhinimitta constitutes anurakkhanappadhāna (Be-AN I 323,11: anurakkhaṇāppadhāna, Ce-AN II 32,6: anurakkhaṇappadhāna, Se-AN II 20,14: anurakkhanāppadhāna), “effort at protecting”, an expression that <a href="../../an/an4.69.html">AN 4:69</a> at AN II 74,17 defines with the standard formulation used for the fourth right effort (<a href="../../an/an4.14.html">AN 4:14</a> speaks in this context of the samādhinimitta arisen through perception of a skeleton or a decaying corpse, whose potential to lead to jhāna Vism 186-190 describes in detail); cf. also <a href="../../parallels/sa879.html">SĀ 879</a> at T II 221b26. Hence in relation to the cessation of wholesome thoughts or intentions, it seems that a case could be made for right effort just as well as for satipaṭṭhāna.</span></span></span></p>
+<p>The Samaṇamaṇḍikā-sutta at this point proclaims that someone endowed with the ten path factors of an arahant is a supreme recluse. This is the later part of the passage already discussed above, where the brief introductory reference to the ten qualities required for being a supreme recluse may have been shifted to an earlier part of the discourse during the course of transmission.</p>
+<p>The Madhyama-āgama version differs not only by having the introductory statement in what appears to be its proper place, but also in so far as it leads up to this exposition with some intermediate steps, thereby giving a more detailed account of what takes place at this point.</p>
+<p>Before taking up the ten path factors of an arahant, the Madhyama-āgama version describes how a noble disciple develops the factors of the noble eightfold path, a development that takes place based on knowing conduct and thoughts in their wholesome and unwholesome manifestations and based on insight into their arising and cessation. The Madhyama-āgama discourse presents these factors in a conditional sequence, depicting how based on right view right intention arises, based on right intention right speech, etc.<span class="note" id="mn78n182"><span class="details"><span class="p">[n.182] <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c4, a presentation also found in <a href="../../mn/mn117.html">MN 117</a> at MN III 76,1.</span></span></span></p>
+<p>Endowed with the right concentration that has been developed based on establishing the other factors of the eightfold noble path, a noble disciple then reaches liberation from desire, anger, and delusion. Through such liberation, the noble disciple becomes an arahant endowed with the ten path factors of one beyond training.<span class="note" id="mn78n183"><span class="details"><span class="p">[n.183] <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c15 differs from <a href="../../mn/mn78.html">MN 78</a> at MN II 29,9 in regard to the sequence of the final two factors, as it precedes right knowledge with right liberation. This presentation reflects the description of the noble disciple’s attainment of liberation in <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c8, followed by his knowledge of being liberated in <a href="../../parallels/ma179.html">MĀ 179</a> at T I 721c10. For an examination of this difference in sequence, which recurs between other Majjhima-nikāya and Madhyama-āgama discourses, cf. below p. 663.</span></span></span> The Madhyamaāgama version concludes that one endowed with these ten path factors has reached the highest and become a supreme recluse.</p>
+<p>The presentation in the Madhyama-āgama version thus offers a more gradual transition from the topic of conduct and thoughts to the attainment of full liberation. Such a more detailed examination of the path to liberation accords well with the main thrust of the discourse, which took its occasion from the mistaken belief that to become a supreme recluse requires merely wholesome conduct and intentions.</p>
+<p>With the Pāli commentary, however, this perspective gets lost, as the commentators interpret the exposition of conduct and intentions from the point of view of the supramundane paths. Thus according to their explanation, the cessation of unwholesome conduct takes place with stream-entry, while the cessation of wholesome conduct ocurs with full awakening.<span class="note" id="mn78n184"><span class="details"><span class="p">[n.184] Ps III 269,21.</span></span></span> Similarly, the cessation of unwholesome intentions takes place with non-return, while the cessation of wholesome intentions comes with the attainment of full awakening.</p>
+<p>This commentarial explanation seems to rest on a too literal interpretation of the expression “cease without remainder”.<span class="note" id="mn78n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn78.html">MN 78</a> at MN II 25,23: aparisesā nirujjhati.</span></span></span> A perusal of other instances of the same expression in the discourses indicates that to “cease without remainder” does not always stand for the type of final eradication that is achieved through the different stages of realization. The same expression occurs, for example, when describing how certain types of perception “cease without remainder” by attaining the sphere of nothingness, or how unwholesome thoughts “cease without remainder” when one is well established in mindfulness.<span class="note" id="mn78n186"><span class="details"><span class="p">[n.186] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,17 and <a href="../../sn/sn22.80.html">SN 22:80</a> at SN III 93,23.</span></span></span></p>
+<p>Although perceptions and thoughts have indeed ceased without remainder while being in the attainment of the sphere of nothingness or while maintaining mindfulness, later on perceptions and thoughts will arise again. The same sense may well be relevant for the use of the expression to “cease without remainder” in the present discourse.</p>
+<p>In fact, a closer inspection of the Samaṇamaṇḍikā-sutta suggests the commentarial explanation to be unconvincing. According to the exposition given in the discourse itself, the cessation of unwholesome intentions takes place with the first jhāna, and the cessation of wholesome intentions with the second jhāna.</p>
+<p>If the cessation of unwholesome and wholesome intentions were indeed a matter of non-return and arahant-ship, as stated by the commentary, then the first and second jhāna mentioned in the discourse would be completely irrelevant as far as the cessation of intentions is concerned.<span class="note" id="mn78n187"><span class="details"><span class="p">[n.187] Brahmāli 2007: 82.</span></span></span> In this way, the commentarial explanation renders the stipulations given in the discourse superfluous.</p>
+<p>In the case of the exposition of unwholesome and wholesome conduct, the cessation of unwholesome conduct may similarly be only a matter of refraining from misconduct, not necessarily requiring the attainment of stream-entry. In fact a stream-enterer, although being incapable of major evils, may still commit minor breaches of conduct.<span class="note" id="mn78n188"><span class="details"><span class="p">[n.188] Although a stream-enterer would be unable to commit a breach of the five precepts, cf., e.g., <a href="../../sn/sn12.41.html">SN 12:41</a> at SN II 68,18, Sn 2:1 at Sn 232 indicates, in evident reference to a stream-enterer, that “whatever evil deed he may do, by body, speech, or mind, he is unable to cover it up”, kiñcāpi so kammaṃ karoti pāpakaṃ, kāyena vācā uda cetasā vā, abhabbo so tassa paṭicchadāya (Be-Sn 314,5+7: kamma and abhabba, Ce-Sn 370,3: vācāyuda). This statement would be meaningless if with stream-entry minor instances of unwholesome conduct had become a total impossibility. Similarly, <a href="../../mn/mn48.html">MN 48</a> at MN I 324,9 describes a stream-enterer, here referred to as the diṭṭhisampanno puggalo, who commits an offence of the type that allows rehabilitation, āpattiṃ āpajjati yathārūpāya āpattiyā vuṭṭhānaṃ paññāyati (Ce-MN I 760,13: uṭṭhānaṃ). Thus <a href="../../mn/mn48.html">MN 48</a> agrees with Sn 2:1 that stream-enterers are capable of such deeds. <a href="../../an/an3.87.html">AN 3:87</a> at AN I 234,19 in a similar vein envisages the possibility that noble disciples may commit minor breaches of the training rules.</span></span></span> Hence the commentarial suggestion that with stream-entry all unwholesome conduct ceases without remainder would not be fully to the point.</p>
+<p>Along the same lines, the cessation of wholesome conduct might also be just a matter of avoiding attachment to wholesome behaviour, something possible even before becoming an arahant. From this perspective, the Samaṇamaṇḍikā-sutta’s reference to knowing liberation of the mind and liberation through wisdom in the context of its exposition of the cessation of wholesome conduct need not have full awakening in mind, but only a stage of development that leads up to the same.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.81 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.81</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 81</span><span class="mirror-right">（八一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn1.71.html">SN 1.71</a> / <a href="../sn/sn2.3.html">SN 2.3</a> / <a href="../sn/sn7.1.html">SN 7.1</a> / <a href="../sn/sn11.21.html">SN 11.21</a> / <a href="../parallels/sa1116.html">SĀ 1116</a> / <a href="../parallels/sa1158.html">SĀ 1158</a> / <a href="../parallels/sa1309.html">SĀ 1309</a> / <a href="../parallels/sa-2.45.html">SĀ² 2.45</a> / <a href="../parallels/sa-2.308.html">SĀ² 2.308</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the brāhman woman Vasiṣṭhā in Śrāvastī had pure faith in the Buddha, Dharma, and Saṃgha. She took refuge in the Three Jewels and had no doubts about the truths of suffering, its origin, its cessation, and the path. She saw the Four Noble Truths and attained the first fruit of the path. She saw the Dharma as equal. Her husband, the brāhman named Vāṣpa, was sent by his wife to prostrate at the Buddha&#x27;s feet. After getting up from the ground, he joined his palms and faced the Buddha&#x27;s direction, saying, &quot;Homage to the Buddha, Tathāgata, Arhat, Perfectly Enlightened One, with the color of true gold, a halo of light one fathom in diameter, a body as straight as a nyagrodha tree, foremost in teaching the Dharma, the seventh sage, liberated hero of the world, my World-Honored One.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，舍卫城中婆私咤婆罗门女，于佛法僧前，心信清净，归依三宝，心不生疑，苦习灭道，亦不生疑，得见四谛，逮第一果，见法同等。其夫婆罗门姓，婆罗突逻阇为夫所使，足趺倒地，从地起已，叉手合掌，向佛方所，而作是言：「南无佛陀、如来、至真、等正觉，真金之色，圆光一寻，身体方整，如尼拘陀树，说法第一，第七仙圣，解脱世雄，我之世尊。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the husband, the brāhman, heard his wife&#x27;s words and became extremely angry and abusive, saying, &quot;You are a crazy caṇḍāla! Who would do this sorcery for such a foolish caṇḍāla? There is none more lowly than you. You cannot respect the great brāhman of the three knowledges, but instead pay homage to a bald, thin, and dark person. Such śramaṇas are praised by the Yānas and the Yānas, who cut off the lineage of people. If you have such deep faith and joy, then I now invite your teacher to debate with me.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，其夫婆罗门闻妇此语，极生瞋忿，而骂詈言：「汝是颠狂旃陀罗也。谁今为此痴旃陀罗，作蛊道也？更无如汝极下贱者，汝于三明大婆罗门所不能恭敬，方礼秃头瘦黑之人，如此沙门，共耶那逻延断人种者，极相赞叹。汝若信乐极深厚者，咄我于今，请与汝师，共相讲论。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The wife said to her husband, &quot;I do not see any śramaṇas, brāhmaṇas, gods, demons, or Brahmā who can debate with the Buddha.&quot; The wife continued, &quot;Homage to the Buddha, Tathāgata, Arhat, Perfectly Enlightened One, with the color of true gold, a body as straight as a nyagrodha tree, a halo of light one fathom in diameter, foremost in teaching the Dharma, the seventh sage, liberated hero of the world, my World-Honored One. You should know this yourself.&quot;</p></td><td lang="lzh" class="agama-chi"><p>妇语夫言：「我都不见若沙门、婆罗门、若天、若魔、若梵，有能与佛共讲论者。」其妇复言：「南无佛陀、如来、至真、等正觉，真金之色，身体方整，圆光一寻，如尼拘陀树，说法第一，第七仙圣，解脱世雄，我之世尊，汝自知。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman went to where the Buddha was, greeted him, and sat to one side. He spoke a verse and asked:</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门即诣佛所，问讯已讫，在一面坐，说偈问曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>What must be destroyed to sleep peacefully? What must be removed to be free from<br/>sorrow? What is the one thing that can be destroyed? Gautama Śramaṇa, please tell me.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「摧坏何物得安眠？　　除却何法获无忧？是何一法能死灭？　　瞿昙沙门为我说。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse in reply:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊说偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Destroy anger to sleep peacefully, remove anger to be free from sorrow. Anger, pretending<br/>to be close, can kill. Mānava, you should know this. Destroying anger is praised<br/>by the sages, and the one who destroys it will be free from sorrow.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「摧坏瞋恚得安眠，　　除灭瞋恚得无忧，瞋恚诈亲能死害，　　摩纳如是应当知，灭除瞋恚圣所赞，　　能害彼者得无忧。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke the Dharma for the brahmin as appropriate, teaching, benefiting, and delighting him. He then spoke about the discourse on giving, the discourse on precepts, the discourse on rebirth in heaven, and how desire is impure and the basis of suffering and affliction, while liberation is happiness. He extensively showed the pure and wholesome dharmas. When the brahmin heard the Buddha&#x27;s teachings, his mind opened up, his intentions were resolved, and he joyfully leapt up. The Buddha knew that the mind and intentions of the brahmin were subdued, joyful, and free from doubt. He was a suitable vessel for the Dharma. The Buddha taught him the one Dharma that he was able to understand and realize, just as it is in the teachings of the Buddhas. He extensively taught the four noble truths - suffering, its origin, its cessation, and the path. When the brahmin Varṣākāra heard the Buddha&#x27;s teachings, his mind was like a pure white cloth that easily accepts dye. He immediately saw the four noble truths while sitting there, realized all dharmas, attained the true limit of dharmas, crossed the shore of doubt, did not follow others, attained fearlessness, and immediately rose from his seat. He joined his palms towards the Buddha and said, &quot;World-Honored One! I have already been liberated. I now wish to take refuge in the Buddha, Dharma, and Sangha. For as long as I live, I will be an upāsaka, not killing, not stealing, not engaging in sexual misconduct, not speaking falsely, and not drinking alcohol.&quot; He then attained unshakable faith in the Buddha. He paid homage to the Buddha and returned home.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊为婆罗门如应说法，示教利喜，次第为说施论、戒论、生天之论，欲为不净苦恼之本，出要为乐，广示众善白净之法。时，婆罗门闻佛所说，心开意解，踊跃欢喜。佛知摩纳心意调濡，踊跃欢喜，心无狐疑，堪任法器，为说一法，堪任解悟，如诸佛法，为说四谛，苦习尽道，广为说已。时，婆罗突逻阇闻佛所说，如白净［叠＊毛］易受染色，即于坐上，见四真谛，了达诸法，得法真际，度疑彼岸，不随于他，得无所畏，即从坐起，合掌向佛白言：「世尊！我已出离。今欲归依佛法僧宝，尽我形寿为优婆塞，不杀、不盗、不婬、不妄语、不饮酒。」即于佛所，得不坏信，礼佛归家。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>His wife saw her husband praising the Buddha like this and said, &quot;My teacher is like this. Did you speak with him?&quot; The husband replied to his wife, &quot;I do not see anyone in the world, whether a śramaṇa, a brāhman, a god, a demon, or a Brahmā, who can debate with the Buddha.&quot; He then said to his wife, &quot;Give me my clothes.&quot; His wife gave them to him. Having obtained the clothes, he went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! I only wish to be allowed to leave home and study the path in the Buddha&#x27;s Dharma.&quot; The Buddha immediately consented and ordered a bhikṣu to ordain him. After he had left home, he practiced the Dharma of leaving home and was diligent in seclusion. The rest is as extensively explained in the Varṣākāra Sūtra, up to attaining arahantship and obtaining the good liberation of the mind.</p></td><td lang="lzh" class="agama-chi"><p>其妇见夫如上叹佛，「我师如是，汝共语耶？」夫答妇言：「我不见世间若沙门、若婆罗门、若天、若魔、若梵，有能与佛共论议者。」复语妇言：「与我衣来。」妇即与之，既得衣已，往诣佛所，顶礼佛足，在一面坐，白佛言：「世尊！唯愿听我于佛法中出家学道。」佛即然许，命一比丘，度使出家。既出家已，称出家法，独已专精。余如婆罗突逻阇经中广说，乃至得阿罗汉，心得好解脱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken thus, the bhikṣus were delighted and praised what the Buddha had said.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

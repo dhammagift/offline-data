@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 52.1 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 52.1</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<p class="mirror-row"><span class="mirror-left latin">Chapter 52</span> <span class="mirror-right">大爱道般涅槃品第五十二</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">52.1</span> <span class="mirror-right">（一）</span>
+</h1>
+</div>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at the Universal Assembly Hall in Vaiśālī, together with a great assembly of five hundred bhikṣus.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在毘舍离普会讲堂所，与大比丘众五百人俱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī was staying at the High Terrace Temple in Vaiśālī, together with a great assembly of five hundred bhikṣuṇīs, all of whom were arhats with their taints exhausted. At that time, Mahāprajāpatī heard the bhikṣus say: &quot;The Tathāgata will soon attain parinirvāṇa. In three months, he will be between the twin śāla trees in Kuśinagara.&quot; At that time, Mahāprajāpatī thought: &quot;I cannot bear to see the Tathāgata attain parinirvāṇa, nor can I bear to see Ānanda attain parinirvāṇa. I should now attain parinirvāṇa first.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，大爱道游于毘舍离城高台寺中，与大比丘尼众五百人俱，皆是罗汉，诸漏已尽。尔时，大爱道闻诸比丘说：「如来不久当取灭度，不过三月，当在拘夷那竭娑罗双树间。」尔时，大爱道便作是念：「我不堪任见如来取灭度，亦复不堪任见阿难取灭度，我今宜可先取灭度。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī went to where the World-Honored One was, bowed her head at his feet, and sat to one side. At that time, Mahāprajāpatī said to the Buddha: &quot;I have heard that the World-Honored One will soon attain parinirvāṇa, in three months, between the twin śāla trees in Kuśinagara. I cannot bear to see the World-Honored One and Ānanda attain parinirvāṇa. I only wish that the World-Honored One would allow me to attain parinirvāṇa first.&quot; At that time, the World-Honored One silently consented.</p></td><td lang="lzh" class="agama-chi"><p>尔时，大爱道便往至世尊所，头面礼足，在一面坐。尔时，大爱道前白佛言：「我闻世尊不久当取灭度，却后不过三月，在拘夷那竭娑罗双树间；我今不堪见世尊及阿难取灭度也，唯愿世尊听我先取灭度。」尔时，世尊默然可之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī again said to the Buddha: &quot;From now on, I only wish that the World-Honored One would teach the precepts to the bhikṣuṇīs.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，大爱道重白佛言：「自今已后，唯愿世尊与诸比丘尼说戒。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told her: &quot;I now allow the bhikṣuṇīs to teach the precepts to the bhikṣuṇīs. Teach them the precepts as I originally practiced them, without error.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「我今听比丘尼，还与比丘尼说禁戒，如我本所施行禁戒，无令差错。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī bowed at the Buddha&#x27;s feet and stood before him. Mahāprajāpatī then said to the Buddha: &quot;I will no longer see the Tathāgata&#x27;s countenance, nor will I see future Buddhas. I will not be reborn in the womb, but will forever dwell in the unconditioned. Today, parting from the holy countenance, I will never see it again.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，大爱道前礼佛足，在佛前立。尔时，大爱道复白佛言：「我今更不见如来颜色，亦不见将来诸佛，不受胞胎，永处无为，今日违离圣颜，永更不覩。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī circumambulated the Buddha seven times, and also circumambulated Ānanda seven times, and circumambulated the assembly of bhikṣus. She then withdrew and left. Returning to the assembly of bhikṣuṇīs, she said to the bhikṣuṇīs: &quot;I now wish to enter the realm of nirvāṇa without taints. The reason is that the Tathāgata will soon attain parinirvāṇa. You should each follow your practice.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时大爱道绕佛七匝，亦复绕阿难七匝，尽绕诸比丘众，却退而去。还诸比丘尼众中，告诸比丘尼曰：「我今欲入无为涅槃界。所以然者，如来不久当取灭度，汝等各宜随所行。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣuṇīs Cāma, Upavāsa, Kiṃśuka, Śāṭī, Śamā, Pāṭalī, Vārṣikā, Kātyāyanī, Jayā, and five hundred other bhikṣuṇīs went to where the World-Honored One was, stood to one side, and said to the Buddha: &quot;We have heard that the Tathāgata will soon attain parinirvāṇa. We cannot bear to see the World-Honored One and Ānanda attain parinirvāṇa first. We only wish that the World-Honored One would allow us to attain parinirvāṇa first. It is now the right time for us to attain nirvāṇa.&quot; At that time, the World-Honored One silently assented. The bhikṣuṇī Cāma and the five hundred bhikṣuṇīs, with Cāma as their leader, saw that the World-Honored One silently assented. They then bowed at the Buddha&#x27;s feet, circumambulated him three times, and withdrew. They returned to their own quarters.</p></td><td lang="lzh" class="agama-chi"><p>尔时，差摩比丘尼、优钵色比丘尼、基利施比丘尼、舍仇梨比丘尼、奢摩比丘尼、钵陀阑柘比丘尼、婆罗柘罗比丘尼、迦旃延比丘尼、阇耶比丘尼及五百比丘尼，往至世尊所，在一面立。尔时，五百比丘尼，差摩比丘尼最为上首，而白佛言：「我等诸人闻如来不久当取灭度，我等不忍见世尊及阿难先取灭度。唯愿世尊听我等先取灭度，我等今取涅槃，正是其宜。」尔时，世尊默然可之。时差摩比丘尼及五百比丘尼见世尊默然可之，前礼佛足，绕三匝便退而去。还诣本房。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī closed the lecture hall door, struck the dry drum, spread out the sitting mat in the open air, rose up into the sky, sat, lay down, and walked back and forth in the sky, sometimes emitting flames from the body, smoke from the lower body and fire from the upper body; water from the lower body and smoke from the upper body; flames from the whole body and smoke from the whole body; water from the left side and fire from the right side; water from the right side and smoke from the left side; fire from the front and water from the back; water from the front and fire from the back; fire from the whole body and water from the whole body.</p></td><td lang="lzh" class="agama-chi"><p>时，大爱道闭讲堂门，击干椎，于露地敷坐具，腾在虚空，于虚空中坐卧经行，或出火焰，身下出烟，身上出火；身下出水，身上出烟；举身放焰，举身放烟；左胁出水，右胁出火；右胁出水，左胁出烟；前出火，后出水；前出水，后出火；举身出火，举身出水。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāprajāpatī performed various transformations, then returned to her original seat, crossed her legs, straightened her body and mind, focused her thoughts in front, and entered the first dhyāna; rising from the first dhyāna, she entered the second dhyāna; rising from the second dhyāna, she entered the third dhyāna; rising from the third dhyāna, she entered the fourth dhyāna; rising from the fourth dhyāna, she entered the sphere of space; rising from the sphere of space, she entered the sphere of consciousness; rising from the sphere of consciousness, she entered the sphere of nothingness; rising from the sphere of nothingness, she entered the sphere of neither perception nor non-perception; rising from the sphere of neither perception nor non-perception, she entered the cessation of perception and feeling; rising from the cessation of perception and feeling, she returned and entered the sphere of neither perception nor non-perception; rising from the sphere of neither perception nor non-perception, she returned and entered the sphere of nothingness; rising from the sphere of nothingness, she returned and entered the sphere of consciousness; rising from the sphere of consciousness, she returned and entered the sphere of space; rising from the sphere of space, she returned and entered the fourth dhyāna; rising from the fourth dhyāna, she returned and entered the third dhyāna; rising from the third dhyāna, she returned and entered the second dhyāna; rising from the second dhyāna, she returned and entered the first dhyāna; rising from the first dhyāna, she entered the second dhyāna; rising from the second dhyāna, she returned and entered the third dhyāna; rising from the third dhyāna, she returned and entered the fourth dhyāna; having entered the fourth dhyāna, she then attained parinirvāṇa.</p></td><td lang="lzh" class="agama-chi"><p>尔时，大爱道作若干变化，还在本座，结加趺坐，正身正意，系念在前，而入初禅；从初禅起而入二禅；从第二禅起而入第三禅；从三禅起入第四禅；从第四禅起入空处；从空处起入识处；从识处起入不用处；从不用处起入有想无想处；从有想无想处起入想知灭；从想知灭起还入有想无想处；从有想无想起入不用处；从不用处起还入识处；从识处起还入空处；从空处起还入第四禅；从第四禅起还入三禅；从三禅起入二禅中；从二禅起还入初禅；从初禅起入二禅；从二禅起还入三禅；从三禅起还入四禅；已入四禅便取灭度。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the earth shook greatly, rising in the east and sinking in the west, rising in the west and sinking in the east, rising on all sides and sinking in the center. Cool breezes arose from all directions. The devas in the sky played music. The devas of the desire realm wept with tears, like the sweet rain of spring. The wondrous devas scattered the fragrance of various blue lotus flowers, and also scattered various sandalwood.</p></td><td lang="lzh" class="agama-chi"><p>尔时，天地大动，东踊西没，西踊东没，四边都踊中央没，又四面凉风起，诸天在空作倡伎乐，欲界诸天涕零悲泣，犹如春月天降甘雨，神妙之天杂碎优钵华香，又杂碎栴檀而散其上。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣuṇīs such as Cāma, Upavāsa, Kiṃśuka Gautamī, Śākyaprabhā, Śamā, Padālanā, Kātyāyanī, and Jayā, and the other five hundred bhikṣuṇīs, each spread out their seats in the open air, flew up into the sky, and sat, lay down, and walked in the sky, performing the eighteen transformations, and finally entering the cessation of perception and feeling, each attaining parinirvāṇa.</p></td><td lang="lzh" class="agama-chi"><p>尔时，差摩比丘尼、优钵色比丘尼、基梨施瞿昙弥比丘尼、舍瞿离比丘尼、奢摩比丘尼、波陀兰遮罗比丘尼、迦旃延比丘尼、阇耶比丘尼，如此上首五百比丘尼等，各各于露地敷坐，飞在虚空，于虚空之中坐卧经行，作十八变，乃至入想知灭，各取灭度。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, in the city of Vaiśālī, there was a general named Yaśodhara, who was lecturing with five hundred young men in the assembly hall. Yaśodhara and the five hundred young men saw the five hundred bhikṣuṇīs performing the eighteen transformations from afar. Seeing this, they were overjoyed and leaped with boundless joy. Each joined their palms and faced them. At that time, the World-Honored One said to Ānanda, &quot;Go to General Yaśodhara and tell him to quickly prepare five hundred beds, five hundred sitting mats, five hundred jars of ghee, five hundred jars of oil, five hundred carriages of flowers, five hundred bundles of incense, and five hundred carts of firewood.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，毘舍离城内有大将名曰耶输提，将五百童子集普会讲堂有所讲说。时，耶输提及五百童子遥见五百比丘尼作十八变，见已，欢喜踊跃无量，各共叉手而向彼所。尔时，世尊而告阿难曰：「汝往至耶输提大将所，而告之曰：『速办五百床具，五百坐具，五百瓶酥，五百瓶油，五百舆花，五百裹香，五百车薪。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda went forward and said to the Buddha, &quot;I do not know, World-Honored One, what you wish to do?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难前白佛言：「不审世尊欲何施为？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;Mahāprajāpatī has attained parinirvāṇa, as well as the five hundred bhikṣuṇīs who were stream-enterers. We wish to make offerings to their relics.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「大爱道已取灭度，及五百比丘尼埿洹，我等欲供养舍利。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda was overcome with grief and tears, unable to control himself, saying, &quot;How quickly Mahāprajāpatī has attained parinirvāṇa!&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难悲泣交集，不能自胜：「大爱道取灭度何其速哉。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda wiped away his tears with his hand and went to the place of the great general Yaśodhara.</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难以手挥泪，便往至耶输提大将所。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Yaśodhara saw Ānanda coming from afar and all came forward to welcome him, saying, &quot;Welcome, Ānanda! What instructions do you have? Your appearance is unusual.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，耶输提遥见阿难来，皆起前迎，并作是说：「善来，阿难！欲何告勅，又行非常。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda replied, &quot;I am a messenger of the Buddha, and I have something to instruct you.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难报曰：「我是佛使，欲有所告勅。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general all asked together, &quot;What instructions do you have?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，大将咸共问曰：「欲何所告勅？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda replied, &quot;The World-Honored One told the great general, &#x27;Prepare five hundred beds, five hundred sitting mats, five hundred jars of ghee, five hundred jars of oil, five hundred carts of flowers, five hundred bundles of incense, five hundred carts of firewood. Mahāprajāpatī and the five hundred bhikṣuṇīs have all attained parinirvāṇa. We should go to make offerings to their relics.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难报曰：「世尊告大将曰：『当办五百床，五百坐具，五百瓶酥，五百瓶油，五百舆花，五百裹香，五百车薪，大爱道及五百比丘尼皆取灭度，我等往供养舍利。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general wept and said, &quot;How quickly Mahāprajāpatī attained parinirvāṇa! And the five hundred bhikṣuṇīs attained parinirvāṇa so quickly! Who will instruct and teach us, and teach us to practice giving?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，大将悲泣交集，而作是说：「大爱道取灭度何其速哉！及五百比丘尼取灭度甚为速哉！谁当教授我等，教化分檀布施？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great general Yāśodharā immediately prepared five hundred beds, five hundred sitting mats, five hundred jars of oil, ghee, and firewood, as well as all the necessary items, and went to where the World-Honored One was. He bowed his head at the Buddha&#x27;s feet and stood to one side. At that time, the great general Yāśodharā said to the World-Honored One, &quot;The requisites for making offerings as instructed by the Tathāgata are now ready.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，耶输提大将即办五百床，五百坐具，五百瓶油、酥、薪，及诸耶维之具，往至世尊所，头面礼足，在一面立。尔时，耶输提大将白世尊言：「如来所约勅供养之具，今日已办。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;You should now each take the body of Mahāprajāpatī and the bodies of the five hundred bhikṣuṇīs out of Vaiśālī to an open place. I wish to make offerings to the relics there.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告曰：「汝今各取大爱道身及五百比丘尼身，出毘舍离到旷野之处，吾欲于彼供养舍利。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The great general Yāśodharā said to the Buddha, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>耶输提大将白佛言：「唯然，世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder went to Mahāprajāpatī and the others, and said to one person, &quot;You should now set up a ladder, climb the wall, enter inside, and slowly open the door without making any noise.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，长者即往至大爱道等所，告一人曰：「汝今施梯，登墙入内，徐开门，无令有声。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, that person followed his instructions, entered and opened the door, and further ordered five hundred people to each lift the relics and place them on the bed. At that time, there were two novice nuns, one named Nandā and the other named Upandā. At that time, the two novice nuns said to the general, &quot;Stop! Stop! General! Do not disturb the masters.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，彼人如彼教勅，即入开门，复勅五百人各举舍利著于床上。尔时，有二沙弥尼在，一名难陀，二名优般难陀。是时，二沙弥尼语大将曰：「止！止！大将！勿触扰诸师。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Yaśodharā, the general, replied, &quot;Your teacher is not sleeping, he has all attained parinirvāṇa.&quot;</p></td><td lang="lzh" class="agama-chi"><p>耶输提大将报曰：「汝师不为睡眠，皆取灭度。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the two novice monks, hearing that all the teachers had attained parinirvāṇa, were terrified in their hearts. They immediately contemplated the Dharma of conditioned arising, which is the Dharma of exhaustion, and attained the three insights and six supernatural powers while sitting. At that time, the two novice nuns flew up into the sky, first arriving in the wilderness to perform the eighteen transformations, sitting, lying down, walking, emitting water and fire from their bodies, manifesting countless transformations, and then attaining parinirvāṇa in the realm of nirvāṇa without remainder.</p></td><td lang="lzh" class="agama-chi"><p>尔时，二沙弥闻诸师皆取灭度，心怀恐怖，即自思惟，观有习之法皆是尽法，即于坐处得三明六通。尔时，二沙弥尼即飞在虚空中，先至旷野之中作十八变，坐卧经行，身出水火，变化无量，即于无余涅槃界而取般涅槃。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One, surrounded by the assembly of bhikṣus, went to the nunnery of Mahāprajāpatī. At that time, the World Honored One told Ānanda, Nanda, and Rāhula, &quot;You should lift up Mahāprajāpatī&#x27;s body. I will personally make offerings to her.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊将诸比丘僧，前后围遶，往至大爱道比丘尼寺中。尔时，世尊告阿难、难陀、罗云：「汝等举大爱道身，我当躬自供养。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, Lord of the Devas, knew what the World Honored One was thinking in his mind. He immediately came down from the Heaven of the Thirty-three, as quickly as a strong man bends and stretches his arm, to Vaiśālī, where he arrived at the World Honored One&#x27;s place. He bowed his head at the Buddha&#x27;s feet and stood to one side. The bhikṣus who had exhausted their taints all saw Śakra, Lord of the Devas, and the Heaven of the Thirty-three. The bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās who had not exhausted their taints, and those who had not yet exhausted their taints, did not see Śakra, Lord of the Devas, and the Heaven of the Thirty-three.</p></td><td lang="lzh" class="agama-chi"><p>是时，释提桓因知世尊心中所念，即从三十三天上，譬如力士屈伸臂顷来至毘舍离，到世尊所，头面礼足，在一面立。其中漏尽比丘皆见释提桓因及三十三天，其不漏尽有欲比丘，及比丘、比丘尼、优婆塞、优婆夷未漏尽者，亦不见释提桓因及三十三天。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brahmā King knew from afar what the Tathāgata was thinking in his mind. He brought the Brahmā gods and disappeared from the Brahmā Heaven, coming to where the World Honored One was. He bowed his head at the Buddha&#x27;s feet and stood to one side.</p></td><td lang="lzh" class="agama-chi"><p>尔时，梵天王遥知如来心中所念，将诸梵天从梵天上没，来至世尊所，头面礼足，在一面立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the King of the Vidyādhara Heaven knew what the World Honored One was thinking in his mind. He brought the Vidyādhara gods and came to where the Tathāgata was. He bowed his head at the Buddha&#x27;s feet and stood to one side.</p></td><td lang="lzh" class="agama-chi"><p>尔时，毘沙门天王知世尊心中所念，将阅叉、鬼神，到如来所，头面礼足，在一面立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the King of the Tīrthikas brought the Gandharvas and came from the east to where the Tathāgata was. He bowed his head at the Buddha&#x27;s feet and stood to one side. The King of the Vidyādhara Heaven brought countless Kumbhāṇḍas and came from the south to where the World Honored One was. He bowed his head at the Buddha&#x27;s feet and stood to one side. The King of the Vidyādhara Heaven brought the dragon gods and came to where the Tathāgata was. He bowed his head at the Buddha&#x27;s feet and stood to one side. The gods of the desire realm, form realm, and formless realm, each knowing what the Tathāgata was thinking in his mind, came to where the World Honored One was. They bowed their heads at the Buddha&#x27;s feet and stood to one side.</p></td><td lang="lzh" class="agama-chi"><p>尔时，提地赖咤天王将诸干沓和，从东方来至如来所，头面礼足，在一面立。毘娄勒叉天王将诸无数拘槃荼，从南方来至世尊所，头面礼足，在一面立。毘娄波叉天王将诸龙神来至如来所，头面礼足，在一面立。及欲界、色界、无色界诸天，各各知如来心中所念，来至世尊所，头面礼足，在一面立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra Devānām-Indra and the King of the Vidyādhara Heaven said to the Buddha, &quot;We only wish that the World Honored One would not trouble himself. We will offer the relics ourselves.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因、毘沙门天王前白佛言：「唯愿世尊勿自劳神，我等自当供养舍利。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the gods, &quot;Stop! Stop! Heavenly Kings! The Tathāgata himself will know the time. This is what the Tathāgata should practice, not what the gods, dragons, and spirits can reach. The reason is this: Parents give birth to children and have many benefits. The kindness of nurturing is heavy. Nursing and holding in the arms, one must repay the kindness, and cannot but repay the kindness. However, the gods should know that in the past, the mothers of the Buddha-World Honored Ones attained parinirvāṇa first, and then the Buddha-World Honored Ones all personally offered incense and flowers to the relics. Even if in the future, the mothers of the Buddha-World Honored Ones attain parinirvāṇa first, then the Buddhas will all personally offer. By this means, it is known that the Tathāgata should personally offer, not what the gods, dragons, and spirits can reach.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告诸天：「止！止！天王！如来自当知时。此是如来所应修行，非是天、龙、鬼神所及也。所以然者，父母生子多有所益，长养恩重，乳哺怀抱，要当报恩，不得不报恩。然诸天当知，过去诸佛世尊所生母先取灭度，然后诸佛世尊皆自供养虵旬舍利。正使将来诸佛世尊所生之母先取灭度，然后诸佛皆自供养。以此方便，知如来应自供养，非天、龙、鬼神所及也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the King of the Vidyādhara Heaven told the five hundred ghosts, &quot;You should go to the sandalwood forest and bring back fragrant firewood to offer to the relics.&quot; The five hundred ghosts, having heard the king&#x27;s words, immediately went to the sandalwood forest, took the sandalwood firewood, and came to the wilderness.</p></td><td lang="lzh" class="agama-chi"><p>尔时，毘沙门天王告五百鬼曰：「汝等往至栴檀林中，取香薪来，当供养虵旬。」时，五百鬼闻天王语已，即往至栴檀林中，取栴檀薪来至旷野之间。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One himself lifted one leg of the bed, Nanda lifted one leg, Rahula lifted one leg, and Ānanda lifted one leg, flying in the sky to the charnel ground; among the four groups of the assembly, bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās, lifted the relics of the five hundred bhikṣuṇīs to the charnel ground. At that time, the World-Honored One told the general Yaśodhara, &quot;You should now prepare two beds, two sitting mats, two carts of firewood, incense, and flowers to offer to the bodies of the two śrāmaṇerīs.</p></td><td lang="lzh" class="agama-chi"><p>是时，世尊躬自举床一脚，难陀举一脚，罗云举一脚，阿难举一脚，飞在虚空，往至彼冢间；其中四部之众，比丘、比丘尼、优婆塞、优婆夷，举五百比丘尼舍利至于冢间。尔时，世尊告耶输提大将曰：「汝今更办二床，二坐具，二车薪、香花供养二沙弥尼身。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The general Yaśodhara said to the Buddha, &quot;Yes, World-Honored One!&quot; He then immediately prepared the offerings.</p></td><td lang="lzh" class="agama-chi"><p>耶输提大将白佛言：「唯然，世尊！」寻时，即办供养之具。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One each gave sandalwood to the devas. At that time, the World-Honored One again told the general, &quot;You should now each take five hundred relics and make offerings to them separately. The two śrāmaṇeras should also do the same.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以栴檀木各传与诸天。是时，世尊复告大将曰：「汝今各取五百舍利，各分别而供养之，二沙弥亦复使然。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the general received the Buddha&#x27;s instruction and each took the relics for offerings. He then took the snake-like relics. At that time, the World-Honored One again placed sandalwood on Mahāprajāpatī&#x27;s body.</p></td><td lang="lzh" class="agama-chi"><p>时，大将受佛教已，各各分别而取供养，即取虵旬。尔时，世尊复以栴檀木著大爱道身上。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All conditioned phenomena are impermanent, what is born must cease, not<br/>being born is not dying, this cessation is the highest bliss.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「一切行无常，　　生者必有尽，不生则不死，　　此灭为最乐。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, all the devas and people gathered in the charnel ground, with a great assembly of devas and people numbering ten billion nayutas. When the great general&#x27;s fire was extinguished, he again took the relics and built a stupa.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸天、人民皆悉云集在于冢间；天、人大众十亿姟那术。时大将火灭已，复取舍利而起偷婆。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the general, &quot;Now take the relics of five hundred bhikshunis and build a stupa for them. You will receive immeasurable blessings for a long time. Because there are four kinds of people in the world who build stupas. What are the four? If someone builds a stupa for the Tathāgata, the Arhat, the Perfectly Enlightened One, or a wheel-turning sage king, or a stupa for a sravaka or pratyekabuddha, they will receive immeasurable blessings.&quot; At that time, the World Honored One spoke the subtle Dharma to the devas and people, encouraging them with joy. At that time, one hundred million devas and people had their defilements exhausted and attained the purity of the Dharma eye.</p></td><td lang="lzh" class="agama-chi"><p>佛告大将曰：「汝今取五百比丘尼舍利与起偷婆，长夜之中受福无量！所以然者，世间有四人起于偷婆。云何为四？若有人与如来、至真、等正觉起于偷婆，转轮圣王，与声闻、辟支佛起偷婆者，受福无量。」尔时，世尊与诸天、人民说微妙之法，劝令欢喜。尔时，天与人有一亿，诸尘垢尽，得法眼净。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the devas, people, gandharvas, asuras, and the fourfold assembly, having heard the Buddha&#x27;s teaching, rejoiced and practiced accordingly.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸天、人民、干沓和、阿须轮、四部之众，闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

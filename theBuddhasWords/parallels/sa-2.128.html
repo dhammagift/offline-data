@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.128 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.128</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 128</span><span class="mirror-right">（一二八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn42.11.html">SN 42.11</a> / <a href="../parallels/sa913.html">SĀ 913</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One was traveling through the villages of Malla, gradually arriving at the village of Upavana, staying in the mango grove of the village of Upavana. At that time, the village headman of the village of Upavana heard from afar that the World-Honored One was traveling through the villages of Malla, arriving at the village of Upavana, staying in the mango grove of the village of Upavana. He thought like this: &quot;I have heard that the Dharma spoken by the World-Honored One Gautama can extinguish all present suffering and afflictions. I also wish to extinguish all present suffering and afflictions. I should go to him to listen to this wonderful Dharma. Perhaps he will speak to me about the path to the complete extinction of suffering and afflictions.&quot; Having thought like this, the village headman of the village of Upavana immediately left the village and went to where the World-Honored One was. He bowed his head at the Buddha&#x27;s feet and sat to one side. He said to the Buddha: &quot;World-Honored One! I have heard that the Dharma spoken by the Tathāgata can extinguish the present suffering and afflictions of sentient beings. Excellent! World-Honored One, please have compassion and pity, and explain the meaning of being able to extinguish present suffering and afflictions.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊游行于末牢村邑，渐次至于优楼频螺聚落，在鹦鹉阎无果林中。时，驴姓聚落主遥闻世尊游末牢邑，至优楼频螺聚落鹦鹉阎无果林，作是思惟：「我闻世尊瞿昙所说之法，能灭现在一切苦习，我亦欲灭现在一切苦习，宜应诣彼，听斯妙法，彼或为我说于尽灭苦习之道。」时，彼驴姓思惟是已，即出聚落，往世尊所，顶礼佛足，在一面坐。白佛言：「世尊！我闻如来所说之法，能灭众生现在苦习。善哉！世尊垂哀矜愍，愿为敷演现在能灭苦习之义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One said to him: &quot;If I were to tell you about the Dharma of extinguishing immeasurable past suffering and afflictions, you might believe it or not, or be happy or unhappy. I also wish to tell you about the Dharma of extinguishing immeasurable future suffering and afflictions, but you might believe it or not, or be happy or unhappy.&quot; The Buddha said again: &quot;I will now explain the Dharma of extinguishing suffering and afflictions right here for you. You should listen attentively and uphold it in your mind. For all beings, the arising of small suffering is differentiated in various ways. These sufferings are caused by desire, born from desire, with desire as the root and cause.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即告之曰：「我若为汝说于过去曾更无量众苦灭苦习法，汝或时信，或不信，或乐不乐。我今亦欲为汝说于未来无量众苦灭苦习法，而汝或信，或不信，或乐不乐。」佛复告曰：「我于今者，即于此处，为汝说于灭苦习法，汝当谛听，至心受持。诸有众生，起小苦处，而此苦中，种种差别，是等众苦，因欲而生，皆习于欲，欲为根本，欲为因缘。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman again said to the Buddha: &quot;Excellent! World-Honored One! Now my faculties are dull and I do not understand the brief explanation. I only pray that you will have compassion and pity, and extensively explain this meaning, so that I may awaken to it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，聚落主复白佛言：「善哉！世尊！今我根钝，不解略说，唯愿垂愍，广演斯义，令我开悟。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said: &quot;Now I ask you, answer as you wish. In this Uļūvilvā village, if someone were to bind all the people, abuse them, and kill them, would you feel any suffering or distress?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告言：「今我问汝，随所乐答。此优楼频螺聚落中，所有民众，假设有人尽系缚之，加诸骂辱，皆悉斩戮，汝颇于中，生苦恼不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said: &quot;Although I would be sad, it would not necessarily cause great suffering and distress.&quot; He then said to the Buddha: &quot;World-Honored One! In this Uļūvilvā village, those whom I love can cause me sorrow, suffering, and distress, and my mind is not at ease. Those whom I do not love, do not desire, and do not think of, I have no sorrow or suffering towards them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主言：「虽复忧惨，不必一向生大苦恼。」复白佛言：「世尊！此优楼频螺聚落之中，是我爱者，则能生我忧悲苦恼，心不悦豫；非我爱者，非我所欲，非我所念，于斯等边，我则无有忧悲苦恼。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him: &quot;Village headman! Therefore, you should know that all kinds of suffering and distress arise from desire, are caused by desire, and desire is the root.&quot; The Buddha again said: &quot;Village headman! What do you think? If your son had not been born, had not relied on his mother, and had not been seen or heard of, would you have any desire to be close to him, or have a loving and caring mind towards him?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「聚落主！是故当知，一切种种苦恼之生，皆由于欲，悉因于欲，欲为根本。」佛复告言：「聚落主！于汝意云何？若汝子未生，未依于母，未见闻时，颇于彼所，有欲亲昵、爱念心不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He replied: &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>对曰：「无也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said: &quot;Village headman! If your son had relied on his mother to be born and grow, and you saw him, would you have any desire to be close to him, or have a loving and caring mind towards him?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告言：「汝子依母而生长已，汝若见时，颇生欲亲爱念以不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He replied: &quot;Indeed.&quot;</p></td><td lang="lzh" class="agama-chi"><p>对曰：「实尔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said: &quot;Village headman! If your son had relied on his mother to be born and gradually grown up, and then was destroyed, robbed by thieves or bandits, would you have any suffering, distress, sorrow, and grief?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「汝子依母生已，渐大，设当败坏，王贼劫夺，若如是者，汝生苦恼忧悲念不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said: &quot;If such a thing happened, at that time my mind would be so distressed that I would be like dead or close to death. How could I not give rise to sorrow, suffering, and distress?&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主曰：「若遭是事，当于尔时，我心愁毒，若死若近死，况复不生忧悲苦恼？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said: &quot;Therefore, you should know that all kinds of suffering and distress arise from desire, are born from desire, and desire is the root.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告言：「是故当知，一切种种苦恼之生，皆因于欲，悉从欲生，欲为根本。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said: &quot;It is rare, World-Honored One! What you have said is very good and skillfully used as an analogy.&quot; He further said to the Buddha: &quot;If my son were far away, I would send a messenger to check on him. If the messenger returned late, my mind and that of his mother would be uneasy. We would wonder why the messenger was so late, and whether my son was safe or not?&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主言：「希有世尊！所说甚善！巧为方喻。」复白佛言：「我子设当在于远处，遣使往看，使若还迟，我与其母心意不安，怪使迟晚，我子将不平安耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said: &quot;Village headman! Therefore, you should know that the suffering and distress, various sorrows and griefs of sentient beings, all arise from desire, are born from desire, and desire is the root. If the four kinds of attachment decay and change, then four kinds of sorrow, grief, and suffering arise. If three are also all born from sorrow, grief, and suffering, then if there is one kind of attachment, then one kind of sorrow, grief, and suffering arises. If there is no attachment, then there is no sorrow, grief, and suffering. Free from defilements, like a lotus in a pond, not attached to the water.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「聚落主！是故当知，众生苦恼，种种忧悲，皆因于欲，由欲而生，欲为根本。假使四爱败坏变异，便生四种忧悲苦恼，若三亦皆生于忧悲苦恼，若有一爱，便生一忧悲苦恼。若无爱者，是则无有忧悲苦恼，离于尘垢，如池莲华，不著于水。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When this teaching was spoken, the village headman Donkey Family was far removed from defilements, attained the purity of the Dharma eye, saw the Dharma, attained the Dharma, understood the Dharma, knew the Dharma, transcended doubt, was free from confusion, did not follow others&#x27; minds, did not pursue other paths, and attained the power of eloquence in the Buddha&#x27;s teachings. He then rose from his seat, adjusted his robes, joined his palms, and said to the Buddha: &quot;World-Honored One! I have already renounced and taken refuge in the Three Jewels. From this night onward, I will be an upāsaka for as long as I live, with pure faith.&quot; Having heard the Buddha&#x27;s words, he joyfully bowed and departed.</p></td><td lang="lzh" class="agama-chi"><p>说是法时，驴姓聚落主远离尘垢，得法眼净，见法得法，解法知法，度疑离惑，不从他心，不趣异道，于佛教法，获得辩力。即从坐起，整衣服，合掌白佛，而作是言：「世尊！我已出离，归依三宝，从今日夜为优婆塞，尽我形寿，生清净信。」闻佛所说，欢喜顶礼而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus, having heard the Buddha&#x27;s words, joyfully received and practiced them.</p></td><td lang="lzh" class="agama-chi"><p>诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 43 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 43: Mahāvedalla-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn42comp.html#content"></a><a id="next-sutta" href="./mn44comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn43.html">MN 43</a> / <a href="../../parallels/ma211.html">MĀ 211 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāvedalla-sutta, the “greater discourse of the question-and-answer type”, records a discussion on various topics between Mahākoṭṭhita and Sāriputta. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn43n19"><span class="details"><span class="p">[n.19] The parallel is <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790b-792b and has the title “Mahākoṭṭhita’s discourse”, 大拘絺羅經; cf. also Abhidh-k-ṭ, which similarly gives the title of the discourse as gsus po che’i mdo, “Mahākoṭṭhita’s discourse”, e.g., at D (4094) mngon pa, nyu 81a4 or Q (5595) thu 127a3. <a href="../../parallels/ma211.html">MĀ 211</a> has been studied and translated by Minh Chau 1964/1991: 73, 104-105, 145-146, 205, and 258-268. While <a href="../../mn/mn43.html">MN 43</a> takes place at Jeta’s Grove by Sāvatthī, <a href="../../parallels/ma211.html">MĀ 211</a> has the Squirrels’ Feeding Ground by Rājagaha as its location. Akanuma 1929/1990: 165 lists <a href="../../parallels/sa251.html">SĀ 251</a> at T II 60b-c as another parallel. Yet, similar to the discourses <a href="../../sn/sn22.127.html">SN 22:127</a>-132 at SN III 172-174, <a href="../../parallels/sa251.html">SĀ 251</a> only reports that Mahākoṭṭhita asked Sāriputta about the implications of ignorance and its opposite, not on a whole range of different topics as in <a href="../../mn/mn43.html">MN 43</a>. Thus <a href="../../parallels/sa251.html">SĀ 251</a> is not a parallel to <a href="../../mn/mn43.html">MN 43</a>.</span></span></span> Several sections of this discourse have also been preserved as discourse quotations in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn43n20"><span class="details"><span class="p">[n.20] Cf. below notes 24, 31, and 45.</span></span></span></p>
+<p>The Mahāvedalla-sutta begins by describing that Mahākoṭṭhita visited Sāriputta and asked him a series of questions. The Tibetan version agrees with the Pāli account in this respect,<span class="note" id="mn43n21"><span class="details"><span class="p">[n.21] D (4094) mngon pa, nyu 81a4 or Q (5595) thu 127a4.</span></span></span> whereas according to the Madhyama-āgama version it was rather Sāriputta who asked questions of Mahākoṭṭhita.<span class="note" id="mn43n22"><span class="details"><span class="p">[n.22] <a href="../../mn/mn43.html">MN 43</a> at MN I 292,7 and <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790b13; cf. in more detail Anālayo 2007i: 29-32.</span></span></span> The Mahāvedalla-sutta and its Madhyama-āgama parallel also differ on the subject matter of the ensuing discussion. Although both versions record a similar number of questions, several of these questions differ in content (see below table 5.2).<span class="note" id="mn43n23"><span class="details"><span class="p">[n.23] Minh Chau 1964/1991: 259 counts thirty-two questions in each version, out of which only seventeen are common to both.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 5.2: Main Topics Examined in <a href="../../mn/mn43.html">MN 43</a> and <a href="../../parallels/ma211.html">MĀ 211</a></caption>
+<tr><th><a href="../../mn/mn43.html">MN 43</a></th><th><a href="../../parallels/ma211.html">MĀ 211</a></th></tr>
+<tr><td>wisdom (1)</td><td>wholesome and unwholesome</td></tr>
+<tr><td>consciousness (2)</td><td>wisdom (→ 1)</td></tr>
+<tr><td>feeling (3)</td><td>consciousness (→ 2)</td></tr>
+<tr><td>perception (4)</td><td>right view (→ 6)</td></tr>
+<tr><td>mind-consciousness (5)</td><td>becoming (→ 7)</td></tr>
+<tr><td>right view (6)</td><td>feeling (→ 3)</td></tr>
+<tr><td>becoming (7)</td><td>counterpart to cessation</td></tr>
+<tr><td>1st jhāna (8)</td><td>5 faculties (→ 9)</td></tr>
+<tr><td>5 faculties (9)</td><td>cessation (→ 10)</td></tr>
+<tr><td>cessation (10)</td><td>deliverance of the mind (→ 11)</td></tr>
+<tr><td>deliverance of the mind (11)</td><td>(≠ 4-5, 8)</td></tr>
+</table>
+<p>In regard to some of these questions, an exchange between the versions of the present discourse and the versions of the Cūḷavedalla-sutta appears to have taken place, since some topics taken up in the Chinese parallel to the Cūḷavedalla-sutta occur in the Pāli Mahāvedalla-sutta, just as some topics treated in the Chinese parallel to the Mahāvedalla-sutta form part of the Pāli Cūḷavedalla-sutta.</p>
+<p>The two discourses also exchange places within the respective collections as well as exchanging the geographical locations where they took place. Thus, while the Mahāvedalla-sutta precedes the Cūḷavedalla-sutta in the Majjhima-nikāya, the Chinese parallel to the Mahāvedalla-sutta follows the Chinese parallel to the Cūḷavedalla-sutta in the Madhyama-āgama. While the Mahāvedalla-sutta takes place at Sāvatthī and the Cūḷavedalla-sutta takes place at Rājagaha, the Chinese parallel to the Mahāvedallasutta takes place at Rājagaha and the Chinese parallel to the Cūḷavedalla-sutta takes place at Sāvatthī. Perhaps due to the relatively similar nature of these two discourses, an exchange of material between the two could easily happen during the process of transmission.</p>
+<p>The first topic taken up for discussion in the Mahāvedalla-sutta is wisdom. In agreement with its Madhyama-āgama parallel, the Mahāvedalla-sutta defines wisdom to be insight into the four noble truths.<span class="note" id="mn43n24"><span class="details"><span class="p">[n.24] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790b16 precedes this with a question and answer exchange on the nature of what is wholesome and what is unwholesome. Two discourse quotation in Abhidh-k-ṭ parallel the present section: D (4094) mngon pa, nyu 95a3 or Q (5595) thu 143b8 parallels the discussion of the nature of wisdom and consciousness, leading up to the definition of consciousness in <a href="../../mn/mn43.html">MN 43</a> at MN I 292,25; cf. also Abhidh-k 9 in Lee 2005: 134,1 or Pradhan 1967: 473,23, with its Chinese counterparts in T 1558 at T XXIX 157b20 and T 1559 at T XXIX 308c19. D (4094) mngon pa, nyu 81a3 or Q (5595) thu 127a3 parallels the discussion on the nature of wisdom and consciousness in <a href="../../mn/mn43.html">MN 43</a> at MN I 292,32; cf. also Abhidh-k 9 in Lee 2005: 66,7 or Pradhan 1967: 465,7, with its Chinese counterparts in T 1558 at T XXIX 154a21 and T 1559 at T XXIX 305c11.</span></span></span> The Tibetan version, however, defines wisdom in terms of knowing as it really is what is wholesome and what is unwholesome, as well as knowing dependent arising as it really is.<span class="note" id="mn43n25"><span class="details"><span class="p">[n.25] D (4094) mngon pa, nyu 81a5 or Q (5595) thu 127a5: dge ba dang mi dge ba’i chos rnams ji lta ba bzhin rab tu shes ... rten cing ’brel bar ’byung ba rab tu dbye ba dang bcas pa ji lta ba bzhin rab tu shes te.</span></span></span></p>
+<p>The Mahāvedalla-sutta next turns to the nature of consciousness. The Pāli discourse defines consciousness as the act of cognising the three types of feeling,<span class="note" id="mn43n26"><span class="details"><span class="p">[n.26] <a href="../../mn/mn43.html">MN 43</a> at MN I 292,25; a similar definition of consciousness can be found in <a href="../../mn/mn140.html">MN 140</a> at MN III 242,11.</span></span></span> while the Chinese account and the Tibetan version speak instead of cognising the six sense objects.<span class="note" id="mn43n27"><span class="details"><span class="p">[n.27] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790c7 and D (4094) mngon pa, nyu 81a7 or Q (5595) thu 127a7.</span></span></span></p>
+<p>Still another perspective on the same matter can be found in a discourse in the Saṃyutta-nikāya, which defines consciousness in terms of cognising different tastes, while its parallel in the Saṃyukta-āgama defines consciousness in terms of cognising the objects of the six senses.<span class="note" id="mn43n28"><span class="details"><span class="p">[n.28] <a href="../../sn/sn22.79.html">SN 22:79</a> at SN III 87,16 and <a href="../../parallels/sa46.html">SĀ 46</a> at T II 11c10.</span></span></span> In each of these two instances, the Chinese and Tibetan versions are closer to the standard presentation of consciousness by way of the six sensebases, while the Pāli versions offer complementary perspectives on consciousness, defining its function with the help of different examples by way of feeling or taste.</p>
+<p>The Mahāvedalla-sutta and its two parallels agree that wisdom and consciousness are conjoined states, since to (wisely) know is to cognise. The Pāli version stands alone in explaining that the difference between wisdom and consciousness is that wisdom should be developed, while consciousness should be understood.<span class="note" id="mn43n29"><span class="details"><span class="p">[n.29] <a href="../../mn/mn43.html">MN 43</a> at MN I 293,7: paññā bhāvetabbā viññāṇaṃ pariññeyyaṃ. Hamilton 1996: 94 comments that “the difference between paññā and viññāṇa is that viññāṇa functions as the faculty which provides awareness of ... [what] is to be known (jñeyyaṃ), and this contributes to the development of wisdom, which is developed (bhāvita) and eventually culminates in liberating insight”. According to Kalupahana 1999: 39, “paññā is ... the perception of the objective world with wisdom, while viññāṇa is simply the ordinary awareness of the same objective world”. Premasiri 2004: 294 explains that “what is cognized in the way of paññā is the same as what is cognized in the way of viññāṇa”, “the difference pertains to the way the objective existence is cognized”, to which Premasiri 1987: 63 adds that “paññā is different from viññāṇa in the sense that it ... involves cognizing the nature of things on the basis of a ... systematic training of the mind”.</span></span></span></p>
+<p>The Mahāvedalla-sutta next inquires into the nature of feeling, explaining that feelings “feel”,<span class="note" id="mn43n30"><span class="details"><span class="p">[n.30] <a href="../../mn/mn43.html">MN 43</a> at MN I 293,10: vedeti vedetī ti ... tasmā vedanā ti vuccati.</span></span></span> followed by listing the three types of feeling (pleasant, painful, and neutral). The same topic occurs at a later point in the Madhyama-āgama version, which, however, does not explain that feelings “feel”. Instead, it introduces its listing of the three types of feeling by inquiring how many feelings can be found, followed by indicating that the three feelings arise in dependence on contact.<span class="note" id="mn43n31"><span class="details"><span class="p">[n.31] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791a27: 更樂, a frequently used rendering in the Madhyama-āgama for “contact”, phassa or sparśa, cf. also Minh Chau 1964/1991: 372. A discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 165a4 or Q (5595) tu 190b6 parallels the examination of the interrelatedness of feeling, perception, and consciousness in <a href="../../mn/mn43.html">MN 43</a> at MN I 293,22; cf. also Abhidh-k 3:32 in Pradhan 1967: 146,14+16, with its Chinese counterparts in T 1558 at T XXIX 53b20 and T 1559 at T XXIX 210b10.</span></span></span></p>
+<p>The Majjhima-nikāya version continues by defining perception,<span class="note" id="mn43n32"><span class="details"><span class="p">[n.32] <a href="../../mn/mn43.html">MN 43</a> at MN I 293,15: sañjānāti sañjānātī ti ... tasmā saññā ti vuccati.</span></span></span> a definition not found in its Madhyama-āgama parallel. According to the Mahāvedalla-sutta, consciousness cannot be separated from perception and feeling, since one cognises what one feels and perceives.</p>
+<p>The Madhyama-āgama presentation has a similar statement, differing in so far as instead of consciousness it speaks of “intention”, explaining that one forms intentions in regard to what one feels and perceives.<span class="note" id="mn43n33"><span class="details"><span class="p">[n.33] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791b1: 思, a character for which Hirakawa 1997: 473 lists cetanā, cintā, manas-kāra, etc.</span></span></span></p>
+<p>A discourse quotation in the Abhidharmakośabhāṣya combines the indications given in the Mahāvedalla-sutta and its Madhyama-āgama parallel. According to this discourse quotation, feeling, perception, volition, and consciousness cannot be separated from each other, since what one feels that one intends, what one intends that one perceives, and what one perceives that one cognises.<span class="note" id="mn43n34"><span class="details"><span class="p">[n.34] Abhidh-k 3:32 in Pradhan 1967: 146,14: yā ca vedanā yā ca saṃjñā yā ca cetanā yac ca vijñānaṃ, saṃsṛṣṭā ime dharmā, followed by explaining that yad vedayate tac cetayate, yac cetayate tat saṃprajānīte yat saṃprajānīte tad vijānātīti; cf. also above note 31.</span></span></span></p>
+<p>The Mahāvedalla-sutta next takes up mind-consciousness that is released from the five faculties, a topic not covered in its Madhyama-āgama parallel. The Majjhima-nikāya version continues by taking up the purpose of wisdom, which it explains to be “direct knowledge”, “penetrative knowledge”, and “abandoning”.<span class="note" id="mn43n35"><span class="details"><span class="p">[n.35] <a href="../../mn/mn43.html">MN 43</a> at MN I 293,36: paññā ... abhiññatthā pariññatthā pahānatthā. Cf. also It 2:9 at It 29,11+14, according to which the purpose of the holy life is abhiññattha and pariññattha.</span></span></span> The Madhyamaāgama version’s treatment of the same topic explains that wisdom has the purpose of leading to “disenchantment”, to “dispassion”, and to a “vision in accordance with reality”.<span class="note" id="mn43n36"><span class="details"><span class="p">[n.36] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 790c22: 智慧者有厭義, 無欲義, 見如真義.</span></span></span> The two explanations thus complement each other, each presenting a succinct definition of the purpose of wisdom in early Buddhism.</p>
+<p>The next question in the Mahāvedalla-sutta concerns the conditions for the arising of right view, a question the Madhyama-āgama version precedes by defining right view as insight into the four noble truths.<span class="note" id="mn43n37"><span class="details"><span class="p">[n.37] The same definition occurs frequently in the Pāli discourses, cf., e.g., <a href="../../sn/sn45.8.html">SN 45:8</a> at SN V 8,30.</span></span></span> Both versions agree in listing two conditions for the arising of right view:</p>
+<ul>
+<li>listening to someone else,</li>
+<li>giving thorough attention.<span class="note" id="mn43n38"><span class="details"><span class="p">[n.38] <a href="../../mn/mn43.html">MN 43</a> at MN I 294,3 stipulates “thorough attention”, yoniso manasikāra, which has its counterpart in <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791a2 in “attention within oneself”, 內自思惟. A similar mode of rendering is found, e.g., in <a href="../../parallels/sa843.html">SĀ 843</a> at T II 215b21, which employs the expression “internal right attention”, 內正思惟 as its counterpart to yoniso manasikāra in its parallel <a href="../../sn/sn55.5.html">SN 55:5</a> at SN V 347,20. Yoni literally means “womb”, so that the expression yoniso conveys a sense of directing attention “down to its origin”, which in such contexts would indeed be “internal” or “within oneself”; cf. also Anālayo 2009y. The two conditions for the arising of right view are also mentioned in the Yogācārabhūmi, cf. Delhey 2009a: 223,18 and T 1579 at T XXX 343b22.</span></span></span></li>
+</ul>
+<p>The Mahāvedalla-sutta and its Madhyama-āgama parallel next take up the conditions required for right view to lead to deliverance. According to the Majjhima-nikāya version, these conditions are:</p>
+<ul>
+<li>moral conduct,</li>
+<li>learning,</li>
+<li>conversation,</li>
+<li>tranquillity,</li>
+<li>insight.<span class="note" id="mn43n39"><span class="details"><span class="p">[n.39] <a href="../../mn/mn43.html">MN 43</a> at MN I 294,10 lists sīla, suta, sākacchā, samatha, and vipassanā, a listing found similarly in <a href="../../an/an5.25.html">AN 5:25</a> at AN III 21,2.</span></span></span></li>
+</ul>
+<p>The Madhyama-āgama presentation agrees on four of these five factors, differing in so far as it speaks of “truth” instead of “conversation”.<span class="note" id="mn43n40"><span class="details"><span class="p">[n.40] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791a10 lists truth, morality, learning, tranquillity, and insight, 真諦, 戒, 博聞, 止, and 觀. The reference to “truth” might be a misreading of sākacchā (or more precisely of whatever equivalent to this term would have been found in the Indic original of the Madhyama-āgama) for sacca.</span></span></span></p>
+<p>The Mahāvedalla-sutta next lists the three types of existence, a listing not found in its Madhyama-āgama parallel. Both versions agree, however, on relating the continuity of existence to craving and ignorance.<span class="note" id="mn43n41"><span class="details"><span class="p">[n.41] <a href="../../mn/mn43.html">MN 43</a> at MN I 294,18 and <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791a16. <a href="../../an/an3.76.html">AN 3:76</a> at AN I 223,22+29 records a similar statement.</span></span></span></p>
+<p>The Majjhima-nikāya version continues by examining the first jhāna. Although this topic is absent from its Madhyama-āgama parallel, it occurs in the Madhyama-āgama parallel to the Cūḷavedalla-sutta. This Madhyama-āgama discourse, together with a Tibetan parallel, agree with the Mahāvedalla-sutta on the five factors present in the first jhāna.<span class="note" id="mn43n42"><span class="details"><span class="p">[n.42] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788c20 and D (4094) mngon pa, ju 8a1 or Q (5595) tu 8b8. A discourse quotation from the present exposition in the *Mahāvibhāṣā, T 1545 at T XXVII 814a2, also associates this topic with the discourse given by Dhammadinnā. Given that this exposition is found in <a href="../../parallels/ma210.html">MĀ 210</a> and Abhidh-k-ṭ, its absence from <a href="../../parallels/ma211.html">MĀ 211</a> is thus not necessarily a sign of the five factor analysis being a later development, pace Deleanu 2006b: 516.</span></span></span> The same Chinese and Tibetan parallels do not, however, contrast these five factors with the five hindrances, as is the case in the Mahāvedalla-sutta.<span class="note" id="mn43n43"><span class="details"><span class="p">[n.43] <a href="../../mn/mn43.html">MN 43</a> at MN I 294,36. This contrasting of the five factors of absorption with the five hindrances in <a href="../../mn/mn43.html">MN 43</a> appears to be the only such instance in the Pāli discourses. While <a href="../../mn/mn43.html">MN 43</a> merely lists these two sets of factors one after the other, Vism 141,11 works out a one-to-one correspondence, explaining that concentration (samādhi) counters the first hindrance of sensual desire, joy (pīti) counters the hindrance of ill will, initial mental application (vitakka) counters sloth-and-torpor, happiness (sukha) counters restlessness-and-worry, and sustained mental application (vicāra) counters doubt. For a critical examination of this one-to-one correspondence cf. Stuart-Fox 1989: 100.</span></span></span></p>
+<p>The Mahāvedalla-sutta and its Madhyama-āgama parallel take up the five faculties in similar terms, explaining that the mind is the common resort of these five faculties.<span class="note" id="mn43n44"><span class="details"><span class="p">[n.44] A discourse quotation on the relationship between mind and the five faculties can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 903a9. Before turning to this topic, <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791b8 inquires about cessation, a topic not taken up in <a href="../../mn/mn43.html">MN 43</a>. Another Pāli discourse, <a href="../../sn/sn48.42.html">SN 48:42</a> at SN V 218,5, has a sequence of topics similar to <a href="../../parallels/ma211.html">MĀ 211</a>, as it explains that the mind is the common resort of the five faculties, followed by an inquiry into counterparts that leads from the mind via mindfulness and liberation to Nirvāṇa.</span></span></span> The two versions agree that the five faculties and the mind depend on vitality, and vitality in turn depends on heat.<span class="note" id="mn43n45"><span class="details"><span class="p">[n.45] Four discourse quotations in Abhidh-k-ṭ have preserved parts of the discussion on life and heat in <a href="../../mn/mn43.html">MN 43</a> at MN I 295-296: D (4094) mngon pa, ju 73b4 or Q (5595) tu 83a2 (attributed to the discourse by Dharmadinnā, i.e., to the parallel to <a href="../../mn/mn44.html">MN 44</a>), cf. also Abhidh-k 2:45 in Pradhan 1967: 73,19, with its Chinese counterparts in T 1558 at T XXIX 26a28 and T 1559 at T XXIX 184c10. D (4094) mngon pa, ju 165b2 or Q (5595) tu 191a3, cf. also Abhidh-k 3:32 in Pradhan 1967: 146,18, with its Chinese counterparts in T 1558 at T XXIX 53b23 and T 1559 at T XXIX 210b12. D (4094) mngon pa, ju 239a2 or Q (5595) tu 273a3, cf. also Abhidh-k 4.73 in Pradhan 1967: 243,21, with its Chinese counterparts in T 1558 at T XXIX 86c15 and T 1559 at T XXIX 242a23. D (4094) mngon pa, nyu 68a6 or Q (5595) thu 112a7, cf. also Abhidh-k 8.3 in or Pradhan 1967: 434,19, with its Chinese counterparts in T 1558 at T XXIX 145c29 and T 1559 at T XXIX 297a25.</span></span></span> Both illustrate the interrelation between vitality and heat with the example of the light and the flame of a lamp.<span class="note" id="mn43n46"><span class="details"><span class="p">[n.46] A minor difference is that <a href="../../mn/mn43.html">MN 43</a> at MN I 295,25 simply explains that vitality depends on heat and heat on vitality, and then illustrates this with the simile of the lamp, while <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791b27 leads over to the same topic with the question of whether vitality and heat are conjoined or disjoined phenomena, followed by explaining that they are conjoined and interdependent phenomena, which <a href="../../parallels/ma211.html">MĀ 211</a> then illustrates with the lamp simile, a passage also found in D (4094) mngon pa, ju 165b2 or Q (5595) tu 191a4.</span></span></span></p>
+<p>The Mahāvedalla-sutta next inquires whether there is a difference between vital formations and felt experience,<span class="note" id="mn43n47"><span class="details"><span class="p">[n.47] <a href="../../mn/mn43.html">MN 43</a> at MN I 295,36, Jaini 1959: 540 notes that the present passage “recognizes āyu as a factor which stabilizes the five indriyas, but does not include it in any of the nāma-khandhas”. Such an inclusion, he points out, would in fact be difficult, since to place āyu among the mental aggregates would conflict with the continuity of life in the asañña-bhava, whereas to allocate it to the aggregate of form would not suit the continuity of life in the arūpa-loka.</span></span></span> a question not found in its Madhyama-āgama parallel. The two versions agree, however, that a body bereft of vitality, heat, and consciousness is dead.<span class="note" id="mn43n48"><span class="details"><span class="p">[n.48] <a href="../../mn/mn43.html">MN 43</a> at MN I 296,16 and <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791c12. The same conditions recur in the concluding verses of <a href="../../sn/sn22.95.html">SN 22:95</a> at SN III 143,4 and of its parallel <a href="../../parallels/sa265.html">SĀ 265</a> at T II 69a25.</span></span></span> The Mahāvedalla-sutta and its Madhyama-āgama parallel contrast the case of being dead with the attainment of cessation, with which vitality has not come to an end, heat has not become dissipated, and the faculties are not broken up. A quotation of this passage in Śamathadeva’s commentary on the Abhidharmakośabhāṣya adds that during the attainment of cessation consciousness has also not ceased.<span class="note" id="mn43n49"><span class="details"><span class="p">[n.49] D (4094) mngon pa, ju 8b6 or Q (5595) tu 9b6: rnam par shes pa lus las ’da’ bar mi ’gyur ro (this discussion forms part of the parallel to <a href="../../mn/mn44.html">MN 44</a>); cf. also the Karmasiddhiprakaraṇa, T 1609 at T XXXI 784a5 and the Tibetan version in Lamotte 1936: 194,5, Schmithausen 1987/2007: 19-20, id. 1987: 339, and (on the present passage in <a href="../../mn/mn43.html">MN 43</a>) Pieris 2003.</span></span></span></p>
+<p>The Madhyama-āgama version continues investigating the attainment of cessation, a discussion whose corresponding Pāli treatment occurs in the Cūḷavedalla-sutta.</p>
+<p>The Mahāvedalla-sutta next takes up the neither-pleasant-nor-painful deliverance of the mind,<span class="note" id="mn43n50"><span class="details"><span class="p">[n.50] <a href="../../mn/mn43.html">MN 43</a> at MN I 296,24.</span></span></span> a topic covered in its Madhyama-āgama parallel under the heading “imperturbable concentration”.<span class="note" id="mn43n51"><span class="details"><span class="p">[n.51] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792a28: 不移動定.</span></span></span> This difference appears to be merely a matter of formulation, since both the “neither-pleasant-nor-painful deliverance of the mind” and the “imperturbable concentration” refer to the degree of concentration reached with the fourth jhāna. The two versions stipulate four conditions for reaching this attainment.<span class="note" id="mn43n52"><span class="details"><span class="p">[n.52] Judging from the context, in <a href="../../mn/mn43.html">MN 43</a> at MN I 296,27 these four conditions appear to be the “overcoming of happiness”, sukhassa ca pahānā, the “overcoming of pain”, dukkhassa ca pahānā, and the “previous leaving behind of joy and sadness”, pubbe va somanassadomanassānaṃ atthagamā (Be-MN I 370,16 and Ce-MN I 696,3: atthaṅgamā, Se-MN I 543,12: aṭṭhaṅgamā), four factors that form part of the standard description of the fourth jhāna (for a comparative study of the point at which domanassa is left behind during the jhānas according to different Pāli and Chinese sources cf. Kuan 2005). <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792b1, however, begins by mentioning the overcoming of sensuality and evil things, a formulation that corresponds to the standard description of the first jhāna, and then indicates that the standard treatment of the jhānas should be continued up to the attainment of the fourth jhāna, 若比丘離欲, 離惡不善之法, 至得第四禪成就遊. Thus in its presentation, the four conditions required for being able to attain imperturbability appear to be the removal of sensuality and the development of the lower three jhānas.</span></span></span></p>
+<p>The Mahāvedalla-sutta and its parallel in the Madhyama-āgama also examine the signless deliverance of the mind. They agree on the two conditions required for its attainment,<span class="note" id="mn43n53"><span class="details"><span class="p">[n.53] The same two conditions are also listed in the Yogācārabhūmi, cf. Delhey 2009a: 186,3 and T 1579 at T XXX 337b20.</span></span></span> but disagree on the conditions for its persistence, and for emerging from its attainment.<span class="note" id="mn43n54"><span class="details"><span class="p">[n.54] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792b12 speaks of the 無想定, which literally translated would be “unconscious (asaññā) concentration”. Such a concentration, however, would not fit the treatment in the present discourse, so that it seems probable that “perception”, 想, in the present context should be read “sign”, 相, instead, a suggestion which can claim for support a 聖 variant reading at T I 792b14. That the proper reading in <a href="../../parallels/ma211.html">MĀ 211</a> should indeed be 無相 finds confirmation in the Karmasiddhiprakaraṇa, which quotes the Mahākauṣṭhila-sūtra on the two conditions required for entering “signless” concentration or attainment, cf. T 1609 at T XXXI 784b18: 入無相界定 and the Tibetan version in Lamotte 1936: 196,22: mtshan ma med pa’i dbyings. Choong 1999: 116 note 220 draws attention to another similar instance in <a href="../../parallels/sa272.html">SĀ 272</a> at T II 72a26, where a counterpart to animitta in <a href="../../sn/sn22.80.html">SN 22:80</a> at SN III 93,23 reads 無相, “signless”, but has a 明 variant reading as 無想, “unconscious”. The reverse case occurs in <a href="../../parallels/ma146.html">MĀ 146</a> at T I 657c4 as part of a description of sense-restraint, which in the parallel <a href="../../mn/mn27.html">MN 27</a> at MN I 180,27 is concerned with the “sign”, nimitta, but in <a href="../../parallels/ma146.html">MĀ 146</a> reads 想, “perception”, with a 聖 variant reading 相, “sign”. A complementary case is <a href="../../parallels/ma187.html">MĀ 187</a> at T I 733c19, which uses the character 相, “sign”, to describe the practice of sense-restraint, but then has 想, “perception”, as a 宋, 元, and 明 variant reading for the same context. Again, in <a href="../../parallels/ma169.html">MĀ 169</a> at T I 701c1 the expression “not connected with benefit”, 無義相應, has 想 as a 德 variant instead of 相. <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b8+16 takes up the absence of pride with the phrase 貢高者, 都無是相, while the same discourse refers to the same absence of pride at T I 475b2 with the expression 貢高者, 都無是想, yet another instance where the characters 相 and 想 appear to have been confused with each other. Another case is T 92 at T I 916c8, where the character 相 occurs in a description of overcoming all perceptions of form in order to reach the immaterial attainments, with the better fitting 想, “perception”, as a 宋, 元, and 明 variant reading. Again, <a href="../../parallels/ea24.8.html">EĀ 24.8</a> at T II 629b1 refers to the fourth immaterial attainment as 有想無相, with the better fitting 有想無想 as a 聖 variant reading, a reading confirmed in <a href="../../parallels/ea24.8.html">EĀ 24.8</a> at T II 629b3+22+24. Another example occurs in a description of a meditation practice undertaken regularly by the Buddha in T 76 at T I 884b17, according to which he practised “unconscious” concentration, 無想之定, with the better fitting “signless concentration”, 無相之定, as a 宋, 元, and 明 variant reading. Yet another case can be found in T 6 at T I 180a16, which speaks of the samādhi used by the Buddha to overcome an illness as 不念眾想之定, “concentration by not giving attention to numerous perceptions”, while the corresponding Sanskrit fragment S 360 folio 171V4 in Waldschmidt 1950: 18 and the Tibetan version in Waldschmidt 1951: 195,1 speak instead of “not giving attention to any signs”, sarvanimi(ttānām amanasikārād) and mtshan ma thams cad yid la mi bya bar. The idea to not give attention to “signs”, sabbanimittānam amanasikārā, occurs also in the corresponding passage in <a href="../../dn/dn16.html">DN 16</a> at DN II 100,16, although not explicitly as the means used by the Buddha to overcome his illness. The Chinese (Mūla-)Sarvāstivāda Vinaya similarly speaks of the “signless concentration” at this point, T 1451 at T XXIV 387a22: 無相三昧. These instances indicate that the two characters 相 and 想 were prone to being confused with each other, so that the correct reading needs to be established in each case based on the context; cf. also Bapat 1937c: 30-31, Harrison 1990: 35, and Nattier 2003a: 300 note 619 for other instances where these two characters seem to have been confused with each other. A confusion of 相 and 想 could be due to the circumstances of translation, especially in such cases when a foreign translator would render an Indic original orally into Chinese, which in turn was written down by his Chinese collaborators (cf. Zacchetti 1996: 350). The two characters 想 and 相 are not only fairly similar in writing, differing only on the presence or absence of the heart radical 心, but also apparently had a rather similar pronunciation in Early Middle Chinese (cf. Pulleyblank 1991: 337 and 338 or Unger 1989: 89). Thus a misunderstanding between a foreign translator and a Chinese scribe could easily occur. Due to the related meaning of the two characters, such a misunderstanding would then stand good chances of not being noticed during a later checking of the translation. Yìnshùn 1985/1986: 61, based on his extensive readings in the Chinese canon, comes to the conclusion that the ‘unconscious concentration of the mind’ should simply be considered as an alternative rendering for ‘signless concentration of the mind’, (無想定是無相心定的異譯).</span></span></span> According to the Pāli version, to remain in the signless deliverance requires three conditions:</p>
+<ul>
+<li>not giving attention to any sign,</li>
+<li>giving attention to the signless element,</li>
+<li>prior determination.<span class="note" id="mn43n55"><span class="details"><span class="p">[n.55] <a href="../../mn/mn43.html">MN 43</a> at MN I 297,1.</span></span></span></li>
+</ul>
+<p>The Madhyama-āgama version agrees on the first two, but does not mention the need for prior determination. In order to emerge from the same attainment, according to the Majjhima-nikāya account two conditions are required:</p>
+<ul>
+<li>giving attention to signs,</li>
+<li>not giving attention to the signless element.</li>
+</ul>
+<p>The Madhyama-āgama version agrees on these two, to which it adds as a third condition the body together with the six sense-spheres conditioned by the life faculty.<span class="note" id="mn43n56"><span class="details"><span class="p">[n.56] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792b26. The relation of the body and the six sense-spheres conditioned by life to signless concentration is also mentioned in <a href="../../mn/mn121.html">MN 121</a> at MN III 107,35.</span></span></span> The Mahāvedalla-sutta at this point also examines the immeasurable deliverance of the mind, the deliverance through nothingness, the deliverance through emptiness, and the signless deliverance of the mind from the viewpoint of similarity or difference. This discussion does not occur in its Madhyama-āgama parallel.<span class="note" id="mn43n57"><span class="details"><span class="p">[n.57] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792b7 briefly takes up the conditions required for the attainment of nothingness, a topic also found in <a href="../../mn/mn43.html">MN 43</a> at MN I 297,32 as part of the discussion of the four types of deliverance. Since <a href="../../parallels/ma211.html">MĀ 211</a> does not refer to the immeasurable deliverance of the mind at all, the present instance is a case where the Chinese version does not mention the brahmavihāras, while the Pāli version includes them in its presentation (cf. also above p. 220 and 261). According to <a href="../../sn/sn41.7.html">SN 41:7</a> at SN IV 296,5 and <a href="../../parallels/sa567.html">SĀ 567</a> at T II 149c13, a discussion similar to the present part of <a href="../../mn/mn43.html">MN 43</a> took place on another occasion between the householder Citta and a monk.</span></span></span></p>
+<p>Instead of discussing the similarity or difference between various types of deliverance of the mind, the Madhyama-āgama version inquires into the similarity or difference between emptiness, desirelessness, and signlessness, explaining that these three are different in meaning and different in letter.<span class="note" id="mn43n58"><span class="details"><span class="p">[n.58] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792a25: 空, 無願, 無相, 此三法異義, 異文.</span></span></span></p>
+<p>This suggestion seems to stand in contrast to the Mahāvedalla-sutta, according to which unshakeable deliverance of the mind is a form of emptiness (due to being empty of lust, anger, and delusion) and at the same time also constitutes the peak of signlessness.<span class="note" id="mn43n59"><span class="details"><span class="p">[n.59] <a href="../../mn/mn43.html">MN 43</a> at MN I 298,22: “as far as there are signless deliverances of the mind, unshakeable deliverance of the mind constitutes the peak of them, this unshakeable deliverance of the mind is empty of lust, empty of anger, and empty of delusion”, yāvatā ... animittā cetovimuttiyo akuppā tāsaṃ cetovimutti aggam akkhāyati, sā kho panākuppā cetovimutti suññā rāgena suññā dosena suññā mohena.</span></span></span> Thus according to the Mahāvedalla-sutta, emptiness and signlessness can refer to the same thing, in the sense that in this instance the two terms differ only in letter, but not in meaning. According to the commentary to the Mahāvedalla-sutta, this passage is concerned with the concentration on the fruit of arahant-ship, an explanation that would allow extending the similarity to desirelessness as well.<span class="note" id="mn43n60"><span class="details"><span class="p">[n.60] Ps II 353,25: arahattaphalasamāpattiṃ sandhāy’ āha.</span></span></span> Hence from the perspective of the Mahāvedalla-sutta, it seems that, although there is a way according to which emptiness, desirelessness, and signlessness are different in meaning, there is a way according to which they only differ in letter.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

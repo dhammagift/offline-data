@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 37 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 37: Cūḷataṇhāsaṅkhaya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn36comp.html#content"></a><a id="next-sutta" href="./mn38comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn37.html">MN 37</a> / <a href="../../parallels/ma83.html">MĀ 83</a> / <a href="../../parallels/sa505.html">SĀ 505</a> / <a href="../../parallels/ea19.3.html">EĀ 19.3</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷataṇhāsaṅkhaya-sutta, the “lesser discourse on the destruction of craving”, records a visit paid by Mahāmoggallāna to Sakka, the king of gods.<span class="note" id="mn37n201"><span class="details"><span class="p">[n.201] On the role of Sakka in early Buddhism cf., e.g., Arunasiri 2006, Barua 1967: 183-184, Bingenheimer 2008: 153, Godage 1945, Gokuldas 1951: 77-79, Jones 1979: 174-177, Kinnard 2004a, Marasinghe 1974: 146, Masson 1942: 45-52, Rahula 1978: 164-165, and Verpoorten 2010: 178-180.</span></span></span> This discourse has two Chinese parallels, found in the Saṃyukta-āgama and in the Ekottarika-āgama.<span class="note" id="mn37n202"><span class="details"><span class="p">[n.202] The parallels are <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133b-134a and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 593c-594c. While <a href="../../mn/mn37.html">MN 37</a> locates the discourse in the Hall of Migāra’s Mother by Sāvatthī, <a href="../../parallels/sa505.html">SĀ 505</a> takes place in Rājagaha and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> has Jeta’s Grove as its location. <a href="../../parallels/sa505.html">SĀ 505</a> has been translated in Anālayo 2011f, <a href="../../parallels/ea19.3.html">EĀ 19.3</a> has been translated by Huyen-Vi 1998: 65-70. Akanuma 1929/1990: 58 gives “craving’s destruction”, 愛盡, as a tentative title for <a href="../../parallels/sa505.html">SĀ 505</a>. The summary verse at T II 596c13 refers to <a href="../../parallels/ea19.3.html">EĀ 19.3</a> as “the abandoning of craving”, 斷愛.</span></span></span></p>
+<p>The Majjhima-nikāya and Ekottarika-āgama versions begin by narrating that Sakka paid a visit to the Buddha and asked how a monk can reach the destruction of craving.<span class="note" id="mn37n203"><span class="details"><span class="p">[n.203] Sakka’s reference to the destruction of craving at the outset of <a href="../../mn/mn37.html">MN 37</a> at MN I 251,17 takes up a theme already broached towards the end of a discussion that according to <a href="../../dn/dn21.html">DN 21</a> at DN II 283,9 took place during his first meeting with the Buddha. This suggests the present discourse to be a follow up of their earlier discussion, cf. in more detail Anālayo 2011f. For depictions of this earlier visit in art cf., e.g., the survey in Coomaraswamy 1928b.</span></span></span> According to the Majjhima-nikāya version, the Buddha replied that a monk, who has heard that nothing is worth adhering to, develops direct understanding and contemplates the three types of feeling in terms of impermanence, fading away, cessation, and relinquishment. Contemplating in this way he goes beyond clinging as well as agitation and attains Nirvāṇa.</p>
+<p>The Ekottarika-āgama account similarly instructs to avoid clinging to anything and to contemplate the three feelings as impermanent and subject to cessation, a contemplation that leads beyond agitation and issues in realizing Nirvāṇa.<span class="note" id="mn37n204"><span class="details"><span class="p">[n.204] My presentation of the Ekottarika-āgama instruction is based on a comparison of the three instances of this instruction in <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 593c18, T II 594b12, and T II 594c3, which record the instruction given by the Buddha to Sakka, the repetition of these instructions by Sakka to Mahāmoggallāna, and another repetition of these instructions by the Buddha to Mahāmoggallāna. These three instances differ considerably from each other, even though they are records of the same statement. A comparison of all three instances shows that the remark in Huyen-Vi 1998: 65 note 4 that the instruction in <a href="../../parallels/ea19.3.html">EĀ 19.3</a> “substantially differs from the Pāli” applies especially to the first instance in <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 593c18; on the version of the present passage found at T II 594c3 cf. also Pāsādika 2010: 88.</span></span></span> The Ekottarika-āgama version provides an additional perspective on how to avoid clinging to any dharma, as it indicates that freedom from clinging comes about through insight into the empty nature of dharmas.<span class="note" id="mn37n205"><span class="details"><span class="p">[n.205] <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594c4: 一切諸法空無所有.</span></span></span> Another difference is that in the Ekottarika-āgama version avoiding worldly perceptions leads from contemplating the three feelings to the transcendence of agitation required for realising Nirvāṇa.<span class="note" id="mn37n206"><span class="details"><span class="p">[n.206] <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594b16+c7: 不起世間想.</span></span></span></p>
+<p>The Saṃyukta-āgama version does not record the instruction given by the Buddha at all. Instead, this version begins by relating that Mahāmoggallāna, who was in solitary seclusion on Mount Vulture Peak, remembered that on a former occasion Sakka had approached the Buddha and inquired about the destruction of craving.<span class="note" id="mn37n207"><span class="details"><span class="p">[n.207] <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133b26.</span></span></span> The three versions agree that Mahāmoggallāna decided to visit the heaven of the Thirty-three to find out if Sakka had taken the Buddha’s instruction to heart.</p>
+<p>The Cūḷataṇhāsaṅkhaya-sutta and its parallels report that Sakka welcomed Mahāmoggallāna, the Majjhima-nikāya discourse specifying that Sakka took a lower seat to sit down,<span class="note" id="mn37n208"><span class="details"><span class="p">[n.208] <a href="../../mn/mn37.html">MN 37</a> at MN I 252,28: sakko ... aññataraṃ nīcaṃ āsanaṃ gahetvā ekamantaṃ nisīdi. Wagle 1985: 60 explains that in “encounters involving the Buddha and the gods, the ... standard description ... is that the gods ... stand on one side”. A departure from this pattern can be found in Catuṣpariṣat-sūtra fragment S 360 folio 90V2 in Waldschmidt 1952: 13, which reports that Śakra once sat down when visiting the Buddha. Wagle 1985: 61 notes another such case in <a href="../../dn/dn32.html">DN 32</a> at DN III 194,10+14+15+16+17, where the four Heavenly Kings and a following of various spirits sit down in the presence of the Buddha, which Wagle considers to be a “later interpolation by the compilers”. While the corresponding Sanskrit fragment 531,11V3 in Hoffmann 1939: 13 and the Tibetan version in Skilling 1994a: 462,9 also report that a Heavenly King sat down, [e](kānte nya)ṣ(ī)dat and phyogs gcig tu ’dug go, according to the Chinese version in T 1245 at T XXI 217a10 he stood at one side, 住立一面. Similar variations occur when the meeting takes place in a heavenly realm and not on earth. Thus in <a href="../../dn/dn14.html">DN 14</a> at DN II 50,16 and in <a href="../../sn/sn55.20.html">SN 55:20</a> at SN V 368,2 a group of devas remain standing in the presence of the Buddha who has come to visit them, as is the case for <a href="../../parallels/da1.html">DĀ 1</a> at T I 10b14 (parallel to <a href="../../dn/dn14.html">DN 14</a>), whereas <a href="../../parallels/sa1135.html">SĀ 1135</a> at T II 299b18 (parallel to <a href="../../sn/sn55.20.html">SN 55:20</a>) reports that the devas sat down. In the Pāli version of the same encounter at Vin I 26,24, however, Sakka remains standing. Variations can also be observed in the case of encounters that do not involve the Buddha, where devas tend to remain standing when visiting humans. Thus, for example, in <a href="../../sn/sn11.9.html">SN 11:9</a> at SN I 226,22 (or SN2 255 at SN2 I 488,2), Sakka remains standing when conversing with humans. Sakka and his following also remain standing on the occasions of other visits of Mahāmoggallāna to their realm, described in <a href="../../sn/sn40.10.html">SN 40:10</a> at SN IV 270,2, <a href="../../sn/sn55.18.html">SN 55:18</a> at SN V 366,18, and <a href="../../sn/sn55.19.html">SN 55:19</a> at SN V 367,19. In <a href="../../parallels/sa507.html">SĀ 507</a> at T II 134c26 (parallel to <a href="../../sn/sn55.18.html">SN 55:18</a>) four devas visit Mahāmoggallāna and sit down to converse with him. In <a href="../../an/an6.34.html">AN 6:34</a> at AN III 332,16 and <a href="../../an/an7.53.html">AN 7:53</a> at AN IV 76,7, Mahāmoggallāna visits a Brahmā and in both instances the latter sits down. If it was indeed considered customary for devas to remain standing on the occasion of meeting humans, departures from such a pattern could be the result of transmission errors, where during the process of transmission of the discourses the pericope “he sat down”, used so frequently when describing human visitors who come to see the Buddha or his disciples, may have been applied to passages that originally spoke of remaining in the standing posture.</span></span></span> after having offered a seat to Mahāmoggallāna.</p>
+<p>The Majjhima-nikāya version also describes that, when Mahāmoggallāna arrived, Sakka was surrounded by “five hundred [types of] heavenly instruments”.<span class="note" id="mn37n209"><span class="details"><span class="p">[n.209] <a href="../../mn/mn37.html">MN 37</a> at MN I 252,18: dibbehi pañcahi turiyasatehi samappito (Be-MN I 319,6: tūriyasatehi).</span></span></span> The counterpart to this description in the Saṃyukta-āgama clarifies that Sakka was bathing in a pond together with five hundred celestial maidens, who were entertaining him with song.<span class="note" id="mn37n210"><span class="details"><span class="p">[n.210] <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c2: 五百婇女遊戲浴池. That these five hundred maidens were singing becomes clear when Sakka, on seeing Mahāmoggallāna approach, tells them to stop singing, <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c4: 莫歌.</span></span></span></p>
+<p>According to all versions, Mahāmoggallāna asked Sakka to repeat the Buddha’s instruction on the destruction of craving. Sakka, however, evaded rehearsing the instruction he had received by indicating that he was busy.<span class="note" id="mn37n211"><span class="details"><span class="p">[n.211] According to <a href="../../mn/mn37.html">MN 37</a> at MN I 252,37, Sakka explained that “what has been well heard ... that does not quickly disappear”, sussutaṃ yeva hoti ... yan no khippam eva antaradhāyati (Be-MN I 319,22 and Ce- MN I 594,28: yaṃ). In <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c11, however, he indicated that “sometimes [I] recall a previous matter, sometimes [I] do not remember [it]” 或憶先事, 或時不憶, and according to <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594a10 he explained that “what has been heard by me is quickly forgotten”, 我所聞者, 即時而忘. The Chinese renderings could be due to a misunderstanding of the negation no for being the first person plural of the personal pronoun, as it is not unusual for kings and devas to refer to themselves in this way. That the proper sense should be that Sakka had not forgotten, however, suggests itself from the later part of <a href="../../mn/mn37.html">MN 37</a> and <a href="../../parallels/ea19.3.html">EĀ 19.3</a>, which make it clear that he did remember the Buddha’s instruction.</span></span></span> The Saṃyukta-āgama version reports that he even somewhat wittily suggested that Mahāmoggallāna might best approach the Buddha with this question, so that, after having heard it from the Buddha, Mahāmoggallāna could remember it accordingly.<span class="note" id="mn37n212"><span class="details"><span class="p">[n.212] <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c12.</span></span></span></p>
+<p>The three versions report that Sakka invited Mahāmoggallāna for a tour of the heavenly palace.<span class="note" id="mn37n213"><span class="details"><span class="p">[n.213] Arunasiri 2006: 633 comments that this invitation for a tour of the palace appears to have been “to divert the attention of the elder elsewhere”, i.e., away from the question he had asked and thereby away from the topic of the destruction of craving.</span></span></span> In the Majjhima-nikāya and Ekottarika-āgama versions, Sakka explained that a former victory over the asuras had been the occasion for constructing this palace, an explanation not given in the Saṃyukta-āgama version.<span class="note" id="mn37n214"><span class="details"><span class="p">[n.214] <a href="../../mn/mn37.html">MN 37</a> at MN I 253,2 and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594a12.</span></span></span></p>
+<p>The Majjhima-nikāya version reports that when Sakka’s celestial maidens saw Mahāmoggallāna approaching the palace, they felt ashamed and retired into their room.<span class="note" id="mn37n215"><span class="details"><span class="p">[n.215] <a href="../../mn/mn37.html">MN 37</a> at MN I 253,16. An extract from the present study already appeared in Anālayo 2005b: 11-12.</span></span></span> The Saṃyukta-āgama account offers additional details that explain their embarrassment. According to its report, these celestial maidens had seen Sakka approaching the palace from afar and had come forward dancing and singing.<span class="note" id="mn37n216"><span class="details"><span class="p">[n.216] <a href="../../parallels/sa505.html">SĀ 505</a> at T II 133c16. Sakka’s maidens coming forward dancing and then withdrawing in embarrassment on realizing that they are in the presence of a monk is also mentioned in a set of stanzas by Mahāmoggallāna in <a href="../../parallels/ma131.html">MĀ 131</a> at T I 622b14. A stone carving on a pillar of the stūpa of Bharhut vividly depicts the Vejayanta palace as a three-storied building with beautiful maidens looking out of its windows and other beautiful maidens in front of the building dancing to the accompaniment of music; cf. Cunningham 1879: 109 and 118 and plate 16. Although this stone carving does not bear any explicit relation to the present discourse, its charming representation would fit the present scene only too well.</span></span></span> On coming closer they realized that Sakka was in the company of a monk, which caused them to withdraw in embarrassment. That is, their embarrassment was due to having acted in the presence of a monk in a way considered improper.</p>
+<p>The Majjhima-nikāya and Saṃyukta-āgama versions agree in comparing the embarrassment of Sakka’s maiden to the embarrassment a woman experiences on seeing her father-in-law.</p>
+<p>The same simile occurs also in a discourse in the Madhyama-āgama (not otherwise related to the Cūḷataṇhāsaṅkhaya-sutta), which specifies that the woman who is embarrassed on meeting her father-in-law is “newly married”.<span class="note" id="mn37n217"><span class="details"><span class="p">[n.217] <a href="../../parallels/ma30.html">MĀ 30</a> at T I 465a18: 初迎新婦.</span></span></span> A discourse in the Aṅguttara-nikāya explains that a newly married woman – who according to traditional customs goes to live with her husband – will be abashed and ashamed in the presence of her in-laws.<span class="note" id="mn37n218"><span class="details"><span class="p">[n.218] <a href="../../an/an4.74.html">AN 4:74</a> at AN II 78,20. Wagle 1966: 93 explains that “a bride on marriage goes to the family of her husband which is alien to her” (although Jain 1947: 160 notes exceptions to this general pattern). While “she sees her husband and his parents as a single category to whom she owes respect and obedience”, they in turn “see her as an alien coming to seek membership”. Hence, a newly married woman may indeed feel embarrassed and ashamed in the presence of her in-laws. Von Hinüber 1993: 102 draws attention to Vin IV 21,3, where a mother-in-law addresses her daughter-in-law with je, an expression elsewhere used to address a female slave, cf., e.g., <a href="../../mn/mn21.html">MN 21</a> at MN I 125,18. Norman 1994/1996: 58 adds that the same je is also used to address a courtesan, cf., e.g., <a href="../../dn/dn14.html">DN 14</a> at DN II 96,14+19 (on prostitution in ancient India cf., e.g., Bhattacharji 1987). This form of address reflects the low social position of a daughter-in-law in the household of her in-laws. Horner 1930/1990: 1 explains: “since performance of the funeral rites was thought to be essential to a man’s future happiness, he usually married chiefly in order to gain this end”, i.e., to have a son who could perform the funeral rites. “He regarded his wife simply as a child-bearer”, as a consequence of which “her life was spent in complete subservience to her husband and his parents. She was allowed little authority at home and no part in public activities”. On feelings of embarassment or shame by a newly married woman in ancient India society cf. also Hara 2006: 146.</span></span></span> These passages help clarifying the import of the comparison drawn in the Cūḷataṇhāsaṅkhaya-sutta and its Saṃyukta-āgama parallel between the embarrassment of Sakka’s celestial maidens and the embarrassment of a – presumably ‘newly’ – married woman.</p>
+<p>According to the Cūḷataṇhāsaṅkhaya-sutta and its parallels, Mahāmoggallāna acknowledged that the beauty of the palace was a fruit of Sakka’s merits. In the Pāli version, he remarks that whenever humans see anything lovely, they associate this with the splendour of the gods of the Thirty-three.<span class="note" id="mn37n219"><span class="details"><span class="p">[n.219] <a href="../../mn/mn37.html">MN 37</a> at MN I 253,28: manussā pi kiñcid eva rāmaṇeyyakaṃ diṭṭhā evam āhaṃsu, sobhati vata bho devānaṃ tāvatiṃsānan ti, which Chalmers 1926: 182 translates as: “mortals, too, jubilantly exclaim, at sight of anything delightful, that it is as splendid as the Thirty-Three”, Horner 1954/1967: 309 renders this passage as: “people seeing anything delightful speak thus: ‘Indeed it shines forth from the devas of the Thirty-three’”, while Ñāṇamoli 1995/2005: 346 translates it as: “whenever human beings see anything lovely, they say: ‘Sirs, it does credit to the gods of the Thirty-three!’”. My résumé of this sentence is oriented on the readings found in Be-MN I 320,16 and Se-MN I 467,19: sobhati vata bho yathā devānaṃ tāvatiṃsānan ti, cf. also Neumann 1896/1995: 282, who translates: “die Menschen sagen ja, wenn sie irgend etwas Entzückendes sehn: ‘Ach das glänzt wie bei den Dreiunddreißig Göttern!’”</span></span></span> The Ekottarika-āgama discourse reports him comparing Sakka’s behaviour to human beings who for any small fortune start congratulating each other, followed by explaining that Sakka’s palace and those small fortunes are just the outcome of previous good deeds.<span class="note" id="mn37n220"><span class="details"><span class="p">[n.220] <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594a22: “just like among men, on the occasion of any small happiness, they congratulate each other, the divine palace is not different, all are due to the results of one’s own formerly done meritorious deeds”, 猶如人間小有樂處, 各自慶賀, 如天宮無異, 皆由前身作福所致.</span></span></span> In this way, the Ekottarikaāgama version makes explicit what seems to be implicit in the Pāli version, namely that instead of bragging about his present fortune and possessions, Sakka should be more concerned with the type of wholesome action that results in such fortune.</p>
+<p>As this first attempt to arouse Sakka from his smugness did not have an effect, according to all versions Mahāmoggallāna decided to use stronger means to shake Sakka’s complacency by undertaking a supernormal feat and shaking the heavenly palace with his toe. The Majjhima-nikāya and Ekottarika-āgama versions report that after this supernormal feat Mahāmoggallāna asked again for the instruction delivered by the Buddha. Stirred by the feat performed by Mahāmoggallāna, Sakka right away repeated the instruction he had received earlier from the Buddha.<span class="note" id="mn37n221"><span class="details"><span class="p">[n.221] <a href="../../mn/mn37.html">MN 37</a> at MN I 254,11 and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594b8.</span></span></span></p>
+<p>The Saṃyukta-āgama discourse differs in so far as it already concludes after the supernormal feat, reporting only that Sakka explained to his celestial maidens that Mahāmoggallāna was not his teacher but a co-disciple,<span class="note" id="mn37n222"><span class="details"><span class="p">[n.222] <a href="../../parallels/sa505.html">SĀ 505</a> at T II 134a3.</span></span></span> a clarification made also in the Cūḷataṇhāsaṅkhaya-sutta.<span class="note" id="mn37n223"><span class="details"><span class="p">[n.223] <a href="../../mn/mn37.html">MN 37</a> at MN I 255,7.</span></span></span></p>
+<p>The Majjhima-nikāya and Ekottarika-āgama versions continue by reporting how Mahāmoggallāna approached the Buddha and requested another repetition of the instruction on the destruction of craving.<span class="note" id="mn37n224"><span class="details"><span class="p">[n.224] <a href="../../mn/mn37.html">MN 37</a> at MN I 255,15 and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594b27.</span></span></span> This request is puzzling, since according to both versions he had been sitting close to the Buddha when Sakka came and received this instruction in the first place.<span class="note" id="mn37n225"><span class="details"><span class="p">[n.225] <a href="../../mn/mn37.html">MN 37</a> and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> report that, when visiting Sakka, Mahāmoggallāna referred to the contents of the instruction given by the Buddha, cf. <a href="../../mn/mn37.html">MN 37</a> at MN I 252,32: “the Blessed One spoke in brief [concerning] liberation through the destruction of craving”, bhagavā saṅkhittena taṇhāsaṅkhayavimuttiṃ abhāsi, and <a href="../../parallels/ea19.3.html">EĀ 19.3</a> at T II 594a7: “the Blessed One gave you the teaching on eradicating craving and desires”, 世尊與汝說斷愛欲之法. This suggests that, when he was sitting close by while the Buddha instructed Sakka, Mahāmoggallāna had already heard what the Buddha said.</span></span></span> Thus, Mahāmoggallāna’s intention to find out if Sakka had rightly understood and remembered this instruction would have been fulfilled once Sakka had properly repeated it, without any further need to check with the Buddha. Moreover, according to a discourse in the Aṅguttara-nikāya and its parallels this particular instruction should have been quite familiar to Mahāmoggallāna, as in these discourses it forms the culmination point of a teaching he received from the Buddha previous to his own attainment of awakening and therewith previous to the events recorded in the present discourse.<span class="note" id="mn37n226"><span class="details"><span class="p">[n.226] <a href="../../an/an7.58.html">AN 7:58</a> at AN IV 88,12 and its parallels <a href="../../parallels/ma83.html">MĀ 83</a> at T I 560b4 and T 47 at T I 837c5.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

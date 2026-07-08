@@ -1,0 +1,2 @@
+- 2026-07-07 [POSITIVE] Creating an automated audit script (check_diff.py) is highly effective for verifying EBT enhancements across thousands of static HTML files.
+- 2026-07-07 [REPEATED] Do not merge outdated branches directly if they contain a mix of customizations and obsolete code/text. Instead, extract only unique EBT files and apply changes programmatically to clean upstream files.

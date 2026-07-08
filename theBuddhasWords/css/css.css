@@ -1,3 +1,4 @@
+/* css gathered into sections 20180313 */
 
 /* font converted using font-converter.net. thank you! */
 @font-face {
@@ -40,67 +41,92 @@ html {
 }
 
 body {
-	font: normal normal 1.15em/1.3em Helvetica, serif;
-	margin-left: 5px;
-	z-index:1;
- max-width: 1640px;
- max-height: auto;
- margin: 2px 2px 2px 2px;
- border-top-style: 1px solid #fff;
- border-right-style: 1px solid #fff;
- border-bottom-style: none;
- border-left-style: 1px solid #fff;
- background-color: #ffffff;
- box-shadow-top: 0px #292929;
- box-shadow-right: 7px #292929;
- box-shadow-bottom: none;
- box-shadow-left: 7px #292929;
- transition: background-color .3s;
--webkit-box-shadow: 0px 2px 7px #292929;
- border-radius: 10px;
- -moz-border-radius: 10px;
- -webkit-border-radius: 10px;
-	}
+    font: normal normal 1.15em/1.3em "URWPalladioITU", serif;
+    margin-left: 5px;
+    z-index:1;
+    max-width: 1920px;
+    max-height: auto;
+    margin: 10px auto;
+    border-top-style: 1px solid #fff;
+    border-right-style: 1px solid #fff;
+    border-bottom-style: none;
+    border-left-style: 1px solid #fff;
+    background-color: #FAF7F2;
+    color: #4A3728;
+    box-shadow-top: 0px #292929;
+    box-shadow-right: 7px #292929;
+    box-shadow-bottom: none;
+    box-shadow-left: 7px #292929;
+    transition: background-color .3s;
+    -webkit-box-shadow: 0px 2px 7px #292929;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
 
 body[light-mode=dark] {
-    background-color: #141516;
-    color: white;
+    background-color: #000;
+    color: #E8D5B8;
 }
 
 #content,
 #footer,
 #breadcrumbs {
- padding:1px;
+ padding: 15px;
 }
 
 .bwcontainer {
-  max-width:1640px;
+  max-width:100%;
   margin-top:2px;
   margin-left:0px;
-  background-color: #FFF3D6;
+  background-color: #F0E8DA;
 }
 
 #content {
-max-width:1610px
+max-width:100%
 }
 
+.comp-body {
+margin-top: 35px;
+
+}
+
+/* On Agama pages, #content (.parallel-page) wraps the h2 title directly,
+   so the 15px padding above gave Agama titles extra top space that Pali
+   titles never got (Pali's #content wraps only the sutta body, after
+   the heading). Remove just the top padding here so both page types
+   have the same gap from the search bar to the title. */
+#content.parallel-page {
+	padding-top: 0;
+}
+
+@media screen and (max-width: 1049px) {
+    body {
+        margin: 2px;
+        padding: 0;
+    }
+    #content, #footer, #breadcrumbs {
+        padding: 2px;
+    }
+}
  .bwcontainer2 {
-   max-width:1640px;
+   max-width:100%;
    margin:auto;"
  }
 
 .bwcontainer3 {
- max-width:1640px;
+ max-width:100%;
  margin:auto;
- background-color: #FFF3D6;
+ background-color: #F0E8DA;
 }
 
  .bwcontainer4  {
-   max-width:1640px;
-   margin-top:8px;
+   max-width:100%;
+   margin-top:0;
  }
 
 #bwlogo {
+  display: none;
   width:100%;
   max-width:320px;
 }
@@ -119,8 +145,8 @@ background-color:white;
 }
 
 [light-mode=dark] .searchform {
-  background-color: #141516;
-color:white;
+  background-color: #000;
+color: #E8D5B8;
 }
 /* style for red font awesome "close window" icon  */
 .red-color {
@@ -128,25 +154,25 @@ color:red;
 }
 
 [light-mode=dark] #snheading {
-  background-color: #141516;
+  background-color: #000;
 }
 
 [light-mode=dark] #searchlinks a {
-color: blue;
+color: #C8A878;
 }
 
 
 [light-mode=dark] #searchlinks a:visited, a:link, a:active {
-color: blue;
+color: #C8A878;
 }
 
 #searchlinks a span {
-color: blue;
+color: #A0784A;
 text-decoration: underline;
 }
 
 #searchlinks a:visited, a:link, a:active {
-color: blue;
+color: #A0784A;
 }
 
 td, th {
@@ -176,14 +202,97 @@ h1.left-align, h2.left-align, h3.left-align{
 
 
 h1 { /* h1 spans the two "pairs" columns -- not used */
- font-size: 100%;
+ font-family: "URWPalladioITU-Bold", serif;  
+font-size: 100%;
 }
 
 h2 {
+ font-family: "URWPalladioITU-Bold", serif; 
  font-size: 135%;
 }
 
+h2:has(+ .page-subtitle) {
+	margin-bottom: 0.4em;
+}
+
+.page-subtitle {
+	text-align: center;
+	font-family: "URWPalladioITU-Italic", serif;
+	font-style: italic;
+	font-size: 120%;
+	font-weight: normal;
+	margin: 0 0 2em 0;
+	opacity: 0.75;
+}
+
+/* Chinese parallel pages */
+.parallel-page .parallel-note {
+	font-size: 85%;
+	font-style: italic;
+	color: #7A5030;
+	border-left: 3px solid #A0784A;
+	padding-left: 0.6em;
+        margin-top: 1.5em; 
+	margin-bottom: 1em;
+}
+
+/* Centre the hgroup block (Āgama name, chapter, sutta title) */
+.parallel-page .hgroup.mirror,
+.parallel-page div.hgroup {
+	text-align: center;
+}
+
+.parallel-page .hgroup.mirror .mirror-left,
+.parallel-page .hgroup.mirror .mirror-right,
+.parallel-page div.hgroup .mirror-left,
+.parallel-page div.hgroup .mirror-right {
+	display: inline;
+}
+
+.parallel-page .hgroup.mirror p,
+.parallel-page .hgroup.mirror h1,
+.parallel-page div.hgroup p,
+.parallel-page div.hgroup h1 {
+	text-align: center;
+}
+
+/* "Parallel to:" line — now placed after the sutta title by JS */
+.parallel-page .parallel-links {
+	font-weight: bold;
+	text-align: left;
+	margin-top: 0.6em;
+	margin-bottom: 1.0em !important;
+}
+
+/* "Parallel to:" and "Other translations:" on Pali pages */
+p.parallel-links,
+p#other-translations {
+	margin-top: 0.3em !important;
+	margin-bottom: 0.6em !important;
+}
+
+/* Consistent space before the main sutta text (table.pairs), regardless of
+   whether "Other translations" is present on the page — handled directly
+   via margin-top on .pairs itself (see .pairs rule above), no extra div needed. */
+
+/* Space before the first body paragraph (我闻如是 etc.) */
+.parallel-page article > p:first-of-type {
+	margin-top: 1.6em;
+}
+
+.parallel-page div[lang="lzh"] {
+	font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+	font-size: 110%;
+	line-height: 1.8em;
+}
+
+body[light-mode=dark] .parallel-page .parallel-note {
+	color: #C8A878;
+	border-left-color: #A0784A;
+}
+
 h3 {
+ font-family: "URWPalladioITU-Bold", serif; 
  font-size: 120%;
 }
 
@@ -227,7 +336,8 @@ p, .p {
 .pairs {
 	table-layout: fixed;
 	width: 100%;
-overflow-wrap: break-word;
+	word-break: break-word;
+	margin-top: 2em;
 }
 
 .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
@@ -282,42 +392,56 @@ overflow-wrap: break-word;
 		font-weight: bold;
 	}
 }
+/* ================= used only in bmc ================= */
 
+ul, ol { margin-bottom: 0.5em; margin-top:0; }
+li { padding: 0; margin: 0 0 .5em 0 }
+li.single { margin:0; }
+ul.dec, ol.dec { list-style-type:decimal; }
+ul.alph, ol.alph { list-style-type: lower-alpha; }
+ul.dot { list-style-type: disc; }
+ul.circ { list-style-type: circle; }
+ul.circ li { margin-bottom:0; }
+ul.none { list-style-type:none;}
+blockquote { margin: 0 2em .5em 2em}
+
+/* ================= end of bmc stuff ================= */
 /* unvisited link */
 a:link {
-  color: blue;
+  color: #A0784A;
 }
 
 [light-mode=dark] a:link {
-  color: #add8e6;
+  color: #C8A878;
 }
 
 /* visited link */
 a:visited {
-  color: blue;
+  color: #A0784A;
 }
 
 [light-mode=dark] a:visited {
-  color: #add8e6;
+  color: #C8A878;
 }
 
 /* mouse over link */
 a:hover {
-  color: blue;
-font-weight:bold;
+  color: #7A5030;
+  font-weight: bold;
 }
 
 /* selected link */
 a:active {
-  color: blue;
+  color: #7A5030;
 }
 
 [light-mode=dark] a:active {
-  color: #add8e6;
+  color: #C8A878;
 }
 
 /*
 [light-mode=dark] .w3-bar w3-light-grey center {
+    color: #5C3A1E !important;
 background-color: grey;
 }*/
 
@@ -327,6 +451,10 @@ header {
 
 .raw_sutta {
 	display:none;
+}
+
+.parallel-page .raw_sutta {
+	display:block;
 }
 
 footer {
@@ -377,7 +505,7 @@ footer {
 	}
 
 #navbar {
-	background-color: #fff3d6;
+	background-color: #F0E8DA;
 	z-index:2;
 	float: none;
 	}
@@ -443,36 +571,53 @@ footer {
 
 #breadcrumbs a:after {
 	content: " ► ";
-	color: orange;
+	color: #A0784A;
  padding: 4px 4px;
  display: inline-block;
 }
 
 [light-mode=dark] #breadcrumbs {
-  background-color: #141516;
-color:white;
+  background-color: #000;
+  color: #E8D5B8;
+}
+
+/* The Pali page's top menu (.w3-main.w3-white.bwcontainer2) keeps a
+   hardcoded white background from the w3-white utility class — match
+   it to the current theme instead. */
+.bwcontainer2.w3-white {
+	background-color: #FAF7F2 !important;
+}
+
+body[light-mode=dark] .bwcontainer2.w3-white {
+	background-color: #000 !important;
+	color: #E8D5B8 !important;
+}
+
+body[light-mode=sepia] .bwcontainer2.w3-white {
+	background-color: #F5ECD9 !important;
+	color: #000 !important;
 }
 
 
 .bottomlinks {
   width: 100%;
-  background-color: #555;
-  overflow: auto;
+  background-color: #4A3728;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bottomlinks a {
-  float: left;
-  padding: 12px;
-  color: #add8e6 !important;
+  padding: 12px 20px;
+  color: #F0E8DA !important;
   text-decoration: underline;
   font-size: 17px;
-  width: 20%; /* Five links of equal widths */
   text-align: center;
 }
 
 .bottomlinks a:hover {
   font-weight: bold;
-  color:#add8e6; 
+  color: #C8A878;
 }
 
 .bottomlinks a.active {
@@ -481,39 +626,39 @@ color:white;
 
 
 [light-mode=dark] #bottom_links a:visited, a:link {
-color: white;
+color: #E8D5B8;
 }
 
 [light-mode=dark] #bottom_links a:hover {
-color: #add8e6;
+color: #C8A878;
 }
 
 [light-mode=dark] #bottom_links a:visited {
-color: #add8e6 !important;
+color: #C8A878 !important;
 }
 
 .bwnav {
-  background-color: white;
+  background-color: #FAF7F2;
   overflow: auto;
   text-align: center;
 }
 
 [light-mode=dark] .bwnav {
-  color: blue;
+  color: #C8A878;
 }
 
 .bwnav a {
   padding: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: white;
+  background-color: #FAF7F2;
   margin:1.25em auto;
   text-align: center;
 }
 
 .bwnav a:hover {
   font-weight: bold;
-  background-color: white;
+  background-color: #F0E8DA;
 }
 
 .bwnav a.active {
@@ -521,13 +666,13 @@ color: #add8e6 !important;
 }
 
 [light-mode=dark] .bwnav a {
-color: blue;
+color: #C8A878;
 }
 
 [light-mode=dark] .bwnav a:hover {
-  color:blue;
+  color: #E8D5B8;
   font-weight: bold;
-  background-color: white;
+  background-color: #000;
 }
 
 @media screen and (max-width: 600px) {
@@ -536,9 +681,6 @@ color: blue;
     display: block;
     width: 100%;
     text-align: center;
-  }
-  .body {
-   margin-left: 0;
   }
 }
 /*Sub navigation */
@@ -591,7 +733,7 @@ color: blue;
 }
 
 [light-mode=dark] .subnav a, .subnav6 a, .subnav3 a, .subnav11 a {
-color: blue !important;
+color: #C8A878 !important;
 }
 
 .bwsubmenu2  {
@@ -608,7 +750,7 @@ margin: 10px 10px 10px 2px;
 }
 
 .bwsubnav {
-background:#fdf2b8;
+background:#F0E8DA;
 }
 
 	#metaarea a {
@@ -619,7 +761,7 @@ background:#fdf2b8;
 
 .information {
 	font-size: 95%;
-	color: #141516;
+	color: #4A3728;
 	text-align: center;
 	float: none;
 	z-index: 2;
@@ -630,7 +772,7 @@ background:#fdf2b8;
 	position: relative;
 	z-index: 2;
 	font-size: 80%;
-	color: #141516;
+	color: #4A3728;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -640,7 +782,7 @@ background:#fdf2b8;
 	position: relative;
 	z-index: 2;
 	font-size: 80%;
-	color: #141516;
+	color: #4A3728;
 	text-align: left;
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 20px;
@@ -660,12 +802,12 @@ font-weight: bold;
 
 #controlpanel {
 	position: fixed;
- bottom: 15px; /* 70px; */
+ top: 15px; /* 70px; */
 	float:right;
 	right: 25px;
 	z-index: 9000;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #141516;
+	color: #4A3728;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 80%;
@@ -676,115 +818,393 @@ font-weight: bold;
 	text-shadow: 2px 2px rgba(255, 255, 255, 0.7), -2px -2px rgba(255, 255, 255, 0.7);
 }
 
-#controlpanel ul {
-	list-style:none;
+#cpbuttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-#controlpanel li {
-	text-align:center;
+#cpbuttons > li {
 	margin: 0 !important;
 	padding: 0 !important;
+	position: relative;
 }
 
-#controlpanel .inner {
-	background: rgba(172, 216, 230, 0.6 );
-	padding: 0 2px 5px 2px;
-	border-radius: 4px;
-}
-
-.inner li {
-	height: 26px;
-}
-
-#controlpanel ul ul li {
-	margin: 0.4em; /* 0.2em; */
-	width: 6em; /* 7em; */
-}
-
-#controlpanel a, #controlpanel button {
+/* Random / Pali / Parallel buttons - equal size, brown, readable in both modes */
+.cp-btn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 3px 9px;
+	font-family: "URWPalladioITU-Bold", serif;
 	font-weight: bold;
+	font-size: 75%;
+	text-align: center;
 	text-decoration: none;
-	color: #141516;
+	line-height: 1.4;
+	white-space: nowrap;
+	color: #FAF7F2;
+	background-color: #A0784A;
+	border: 1px solid #7A5030;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+@media (hover: hover) {
+	.cp-btn:hover {
+		box-shadow: 0 0 0 2px #C8A878;
+	}
+}
+
+.cp-btn.active {
+	box-shadow: 0 0 0 2px #A0784A;
+}
+
+/* Doubled-size variant for Random + Pali/Chinese buttons — equal min-width so they match */
+.cp-btn-large {
+	display: block;
+	padding: 6px 22px;
 	font-size: 90%;
-}
-
-#pali.palitoggle {
 	font-weight: bold;
-	text-decoration: none;
-	color: #141516;
-	margin-top: -3px;
+	min-width: 5.5em;
+	text-align: center;
 }
 
-#pali {
-	width: 40%;
-	border: 2px outset #B0B0B0;
- 	background: -webkit-linear-gradient(#B0B0B0, #F8F8F8); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#B0B0B0, #F8F8F8); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#B0B0B0, #F8F8F8); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#B0B0B0, #F8F8F8);
-	color: white:
+/* Force Random and Pāli buttons to identical width (same as each other) */
+#randomSutta.cp-btn {
+	min-width: 7em;
+	text-align: center;
 }
 
-#pali.active {
-	background: linear-gradient(#33CCFF, #99CCFF);
-	background: -webkit-linear-gradient(#33CCFF, #99CCFF); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#33CCFF, #99CCFF); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#33CCFF, #99CCFF); /* For Firefox 3.6 to 15 */
- border: 2px outset #3366CC;
- font-weight: bold;
-	text-decoration: none;
-	color: #141516;
+#pali.cp-btn {
+	min-width: 7em;
+	text-align: center;
+}
+
+/* Pāli <li> — no extra top margin; gap is handled by the list's natural spacing */
+#cpbuttons > li:has(#pali) {
+	padding-top: 4px !important;
+}
+
+/* Random button: invert on hover (fill background, swap colours) */
+/* Scoped to true-hover devices only — prevents the inverted style
+   from sticking on iOS/Android after a tap (touch fires :hover and
+   leaves it applied until the next interaction). */
+@media (hover: hover) {
+	#randomSutta.cp-btn:hover {
+		background-color: #F0E8DA;
+		color: #A0784A !important;
+		border-color: #A0784A;
+		box-shadow: 0 0 0 2px #C8A878;
 	}
 
-#controlpanel button.palitoggle:hover {
-	background: linear-gradient(#33CCFF, #99CCFF);
-	background: -webkit-linear-gradient(#33CCFF, #99CCFF); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#33CCFF, #99CCFF); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#33CCFF, #99CCFF); /* For Firefox 3.6 to 15 */
- border: 2px outset #3366CC;
- font-weight: bold;
-	text-decoration: none;
-	color: white;
+	body[light-mode=dark] #randomSutta.cp-btn:hover {
+		background-color: #000;
+		color: #C8A878 !important;
+		border-color: #C8A878;
+		box-shadow: 0 0 0 2px #E8D5B8;
+	}
+
+	body[light-mode=sepia] #randomSutta.cp-btn:hover {
+		background-color: #E8D5B0;
+		color: #7A5030 !important;
+		border-color: #7A5030;
+		box-shadow: 0 0 0 2px #B8956A;
+	}
 }
 
-/* Previous and Next sutta links */
-#previous-sutta, #next-sutta {
-	position:absolute;
-	line-height: 1.5em;
-	padding: 3px;
+/* Search bar in theme-btns row */
+.theme-search-row {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 8px 2px 0;
+	margin-left: 31px;
+	margin-top: 6px;
+	gap: 4px;
+	width: fit-content;
 }
 
-#next-sutta {
-	right: 5px;
-}
-
-#previous-sutta {
-	left:5px;
-}
-
-#previous-sutta:after {
-	content: "◀"; /* " ◀ "; */
-}
-
-#next-sutta:after {
-	content: "▶"; /* " ▶ "; */
-}
-
-#next-sutta, #previous-sutta, .page-topbot {
-	color:grey;
+#sutta-search {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	flex: 0 0 auto;
+	width: var(--search-width, 120px);
+	height: 1.8em;
+	padding: 2px 10px;
+	font-family: "URWPalladioITU-Bold", serif;
 	font-size: 75%;
-	text-decoration: none;
-	padding: 2px; /* 5px; */
-	width: 1.1em; /* 3.6em; */
-	margin-top: .2em;
-	padding-top: 0;
-	background: rgba(255, 255, 255, 0.6 );
+	font-weight: 700;
+	border-radius: 999px;
+	border: 1.5px solid #D9C9B0;
+	background-color: #FAF7F2;
+	background-clip: padding-box;
+	color: #4A3728;
+	outline: none;
+	box-sizing: border-box;
+	box-shadow: none;
 }
 
-.page-topbot {
-	color:red;
+body[light-mode=dark] #sutta-search {
+	background-color: #000;
+	color: #E8D5B8;
+	border-color: #4A3728;
+}
+
+body[light-mode=sepia] #sutta-search {
+	background-color: #E8D5B0;
+	color: #000;
+	border-color: #C8A878;
+}
+
+#sutta-search:focus {
+	box-shadow: 0 0 0 2px #C8A878;
+}
+
+#sutta-search-error {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	color: #c00;
+	display: none;
+}
+
+body[light-mode=dark] #sutta-search-error {
+	color: #ff8888;
+}
+
+/* Pāli button: inverted when active (ON = light fill + dark text), normal when off */
+#pali.cp-btn.active {
+	background-color: #F0E8DA;
+	color: #A0784A !important;
+	border-color: #A0784A;
+	box-shadow: 0 0 0 2px #C8A878;
+}
+
+/* Chinese button: same appearance as Pali */
+#chinese.cp-btn {
+	background-color: #A0784A;
+	color: #FAF7F2;
+	border-color: #7A5030;
+        font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+	font-weight: 700 !important;
+	-webkit-text-stroke: 0.6px currentColor;
+	margin-top: 6px; /* same distance down as Pāli button */
+}
+
+body[light-mode=dark] #chinese.cp-btn {
+	background-color: #C8A878;
+	color: #000;
+	border-color: #4A3728;
+        font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+	font-weight: 700 !important;
+	-webkit-text-stroke: 0.6px currentColor;
+}
+
+body[light-mode=sepia] #chinese.cp-btn {
+	background-color: #B8956A;
+	color: #000;
+	border-color: #7A5030;
+        font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+	font-weight: 700 !important;
+	-webkit-text-stroke: 0.6px currentColor;
+}
+
+/* Chinese (中文) and English toggle buttons: inverted when active (ON), normal when off */
+#chinese.cp-btn.active {
+	background-color: #F0E8DA;
+	color: #A0784A !important;
+	border-color: #A0784A;
+	box-shadow: 0 0 0 2px #C8A878;
+	-webkit-text-stroke: 0.6px currentColor;
+}
+
+body[light-mode=dark] #chinese.cp-btn.active {
+	background-color: #000;
+	color: #C8A878 !important;
+	border-color: #C8A878;
+	box-shadow: 0 0 0 2px #E8D5B8;
+	-webkit-text-stroke: 0.6px currentColor;
+}
+
+body[light-mode=sepia] #chinese.cp-btn.active {
+	background-color: #E8D5B0;
+	color: #7A5030 !important;
+	border-color: #7A5030;
+	box-shadow: 0 0 0 2px #B8956A;
+	-webkit-text-stroke: 0.6px currentColor;
+}
+
+/* English toggle button: same invert-when-active treatment */
+#english.cp-btn.active {
+	background-color: #F0E8DA;
+	color: #A0784A !important;
+	border-color: #A0784A;
+	box-shadow: 0 0 0 2px #C8A878;
+}
+
+body[light-mode=dark] #english.cp-btn.active {
+	background-color: #000;
+	color: #C8A878 !important;
+	border-color: #C8A878;
+	box-shadow: 0 0 0 2px #E8D5B8;
+}
+
+body[light-mode=sepia] #english.cp-btn.active {
+	background-color: #E8D5B0;
+	color: #7A5030 !important;
+	border-color: #7A5030;
+	box-shadow: 0 0 0 2px #B8956A;
+}
+
+/* Remove unused class */
+.theme-btn-chinese {
+	display: none !important;
+}
+
+body[light-mode=dark] .cp-btn {
+	background-color: #C8A878;
+	color: #000;
+	border-color: #4A3728;
+}
+
+@media (hover: hover) {
+	body[light-mode=dark] .cp-btn:hover {
+		background-color: #E8D5B8;
+	}
+}
+
+body[light-mode=dark] #pali.cp-btn.active {
+	background-color: #000;
+	color: #C8A878 !important;
+	border-color: #C8A878;
+	box-shadow: 0 0 0 2px #E8D5B8;
+}
+
+/* Chinese parallels dropdown (populated later) */
+/* Inline Chinese parallels below breadcrumbs */
+.inline-parallels {
+	padding: 4px 15px 6px 15px;
+	font-size: 90%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.inline-parallels-label {
+	font-weight: bold;
+	color: #7A5030;
+	margin-right: 0.2em;
+}
+
+body[light-mode=dark] .inline-parallels-label {
+	color: #C8A878;
+}
+
+a.inline-parallel-link {
+	color: #A0784A;
+	text-decoration: none;
+}
+
+a.inline-parallel-link:hover {
+	text-decoration: underline;
+}
+
+body[light-mode=dark] a.inline-parallel-link {
+	color: #C8A878;
+}
+
+/* Previous / next sutta links — modern circle buttons */
+/* ═══════════════════════════════════════════
+   PREVIOUS / NEXT SUTTA — circle nav buttons
+   ═══════════════════════════════════════════ */
+
+.sutta-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0.8em auto;
+  max-width: 600px;
+  width: 100%;
+  background: none;
+}
+
+.sutta-nav-container h1,
+.sutta-nav-container h2,
+.sutta-nav-container h3,
+.sutta-nav-container h4,
+.sutta-nav-container h5 {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  align-self: center;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Prevent parent container backgrounds bleeding behind the nav row */
+#content > .sutta-nav-container {
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[light-mode=dark] #content > .sutta-nav-container {
+  background-color: transparent;
+}
+
+body[light-mode=sepia] #content > .sutta-nav-container {
+  background-color: transparent;
+}
+
+#previous-sutta, #next-sutta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+  flex-shrink: 0;
+  padding: 0;
+  background-color: #F0E8DA;
+  border: 1.5px solid #A0784A;
+  color: #A0784A;
+}
+
+#previous-sutta svg, #next-sutta svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (hover: hover) {
+	#previous-sutta:hover, #next-sutta:hover {
+	  background-color: #A0784A;
+	  color: #FAF7F2 !important;
+	  box-shadow: 0 0 0 2px #C8A878;
+	}
+}
+
+body[light-mode=dark] #previous-sutta,
+body[light-mode=dark] #next-sutta {
+  background-color: #000;
+  border-color: #C8A878;
+  color: #C8A878;
+}
+
+@media (hover: hover) {
+	body[light-mode=dark] #previous-sutta:hover,
+	body[light-mode=dark] #next-sutta:hover {
+	  background-color: #C8A878;
+	  color: #000 !important;
+	  box-shadow: 0 0 0 2px #E8D5B8;
+	}
 }
 
 #find-on-page {
@@ -889,7 +1309,13 @@ input, select, textarea, .inputbox {
 
 .inputbox { border: 1px solid #ccc; background: #fff; }
 
-.inputbox:hover, .inputbox:focus { background: #ffffcc; }
+.inputbox:hover, .inputbox:focus { background: #F0E8DA; }
+
+[light-mode=dark] .inputbox { background: #000; color: #E8D5B8; border-color: #4A3728; }
+[light-mode=dark] .inputbox:hover, [light-mode=dark] .inputbox:focus { background: #4A3728; }
+
+[light-mode=sepia] .inputbox { background: #F5ECD9; color: #000; border-color: #C8A878; }
+[light-mode=sepia] .inputbox:hover, [light-mode=sepia] .inputbox:focus { background: #E8D5B0; }
 
 .left { text-align: left; }
 
@@ -914,10 +1340,17 @@ padding: 2px;
 word-wrap: break-word;
 } /* Make font larger in java generated table English and Pali */
 
-thead tr th { background: #141516; color: #fff; padding: 0px; }
+thead tr th { background: #4A3728; color: #FAF7F2; padding: 0px; }
+
+/* Centre Part/section titles inside suttalist table headers */
+.suttalist thead th,
+.suttalist tr th {
+	text-align: center;
+	padding: 6px 8px;
+}
 
 [light-mode=dark].th, [light-mode=dark].tr {
-background:  #141516 !important;
+background:  #000 !important;
 
 } 
 
@@ -932,23 +1365,59 @@ thead tr th a:active { color: #fff;}
 /* Format Sutta Indexes */
 
 table.suttalist {
-	margin-left:5px;
+	margin: 0 auto 1.5em auto;
 	font-size: 110%;
- overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	max-width: 800px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	border-collapse: separate;
+	border-spacing: 0;
 }
 
 .suttalist tr {
 	background: none;
 	margin: 0px;
 	padding: 0px;
-	border: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
 }
 
-.suttalist tr:hover a {background-color: #ffffcc}
+.suttalist tr:hover a {background-color: #F0E8DA}
 
 [light-mode=dark] .suttalist tr:hover a {
-background-color: #ffffcc;
-color: blue;
+background-color: #4A3728;
+color: #C8A878;
+}
+
+/* Dark mode: warm subtle row border */
+body[light-mode=dark] .suttalist,
+body[light-mode=dark] .suttalist tr {
+	border-color: #4A3728;
+}
+
+/* Sepia mode: match border to theme */
+body[light-mode=sepia] .suttalist,
+body[light-mode=sepia] .suttalist tr {
+	border-color: #C8A878;
+}
+
+/* Dark mode: alternating row stripe (overrides w3-striped's #f1f1f1 which is invisible on dark) */
+body[light-mode=dark] .w3-striped.suttalist tbody tr:nth-child(even) td a,
+body[light-mode=dark] .w3-striped.suttalist tr:nth-child(even) td a {
+	background-color: #4A3728;
+}
+
+/* Sepia mode: alternating row stripe */
+body[light-mode=sepia] .w3-striped.suttalist tbody tr:nth-child(even) td a,
+body[light-mode=sepia] .w3-striped.suttalist tr:nth-child(even) td a {
+	background-color: #E8D5B0;
+}
+
+/* Sepia odd rows — explicit base so stripe contrast is clear */
+body[light-mode=sepia] .w3-striped.suttalist tbody tr:nth-child(odd) td a,
+body[light-mode=sepia] .w3-striped.suttalist tr:nth-child(odd) td a {
+	background-color: #F5ECD9;
 }
 
 .suttalist td {
@@ -960,12 +1429,12 @@ color: blue;
 	display: inline-block;
 	width:100%;
 	padding: 5px;
-color: blue;
+color: #A0784A;
 }
 
 [light-mode=dark] .suttalist td a {
-	color: white;
-background-color: #141516;
+	color: #E8D5B8;
+	background-color: #000;
 }
 
 
@@ -993,7 +1462,57 @@ table.suttalist2 {
 	border: solid 1px #ddd;
 }
 
-.suttalist2 tr:hover a {background-color: #ffffcc; text-decoration:underline}
+.suttalist2 tr:hover a {background-color: #F0E8DA; text-decoration:underline}
+
+[light-mode=dark] .suttalist2 tr:hover a {
+	background-color: #4A3728;
+	color: #C8A878;
+}
+
+[light-mode=sepia] .suttalist2 tr:hover a {
+	background-color: #E8D5B0;
+}
+
+/* Dark mode: suttalist2 borders */
+body[light-mode=dark] table.suttalist2,
+body[light-mode=dark] .suttalist2 tr {
+	border-color: #4A3728;
+}
+
+/* Sepia mode: suttalist2 borders */
+body[light-mode=sepia] table.suttalist2,
+body[light-mode=sepia] .suttalist2 tr {
+	border-color: #C8A878;
+}
+
+/* Dark mode: suttalist2 base link bg (odd rows) */
+[light-mode=dark] .suttalist2 td a {
+	color: #E8D5B8;
+	background-color: #000;
+}
+
+/* Sepia mode: suttalist2 base link bg (odd rows) */
+[light-mode=sepia] .suttalist2 td a {
+	color: #000;
+	background-color: #F5ECD9;
+}
+
+/* Dark mode: alternating stripe for suttalist2 */
+body[light-mode=dark] .w3-striped.suttalist2 tbody tr:nth-child(even) td a,
+body[light-mode=dark] .w3-striped.suttalist2 tr:nth-child(even) td a {
+	background-color: #4A3728;
+}
+
+/* Sepia mode: alternating stripe for suttalist2 */
+body[light-mode=sepia] .w3-striped.suttalist2 tbody tr:nth-child(even) td a,
+body[light-mode=sepia] .w3-striped.suttalist2 tr:nth-child(even) td a {
+	background-color: #E8D5B0;
+}
+
+body[light-mode=sepia] .w3-striped.suttalist2 tbody tr:nth-child(odd) td a,
+body[light-mode=sepia] .w3-striped.suttalist2 tr:nth-child(odd) td a {
+	background-color: #F5ECD9;
+}
 
 .suttalist2 td {
 	padding: 0;
@@ -1040,18 +1559,18 @@ td.c1 {
 
  .translator {
 	font-family: Arial, Helvetica, sans-serif;
-	color: #141516;
+	color: #4A3728;
 	font-size: 95%;
 	list-style: none;
 	text-align:center; /* updated by U */
 			}
 
 [light-mode=dark] .translator {
-	color: #f0f8ff;
+	color: #E8D5B8;
 			}
 
 .minor {
-	color: #141516;
+	color: #4A3728;
 	font-size: 95%;
 	list-style: none;
 			}
@@ -1120,8 +1639,10 @@ a.seesutta {
  position:absolute;
  visibility:hidden;
  opacity:0;
- background: palegoldenrod;
- border: 2px solid goldenrod;
+ background: #F0E8DA;
+ color: #4A3728;
+ border: 2px solid #A0784A;
+ border-radius: 10px;
  transition: 0.12s;
  font-size: 90%;
  width: 90%;
@@ -1135,12 +1656,14 @@ a.seesutta {
 
 
 [light-mode=dark] .details {
-background: black;
-border: 2px solid palegoldenrod;
+background: #C8A878;
+color: #000;
+font-weight: 600;
+border: 2px solid #4A3728;
 }
 
 [light-mode=dark] .details a {
-color: #9ADBD6;
+color: #4A3728;
 }
 
 [light-mode=dark] .details a hover {
@@ -1148,7 +1671,18 @@ font-weight: bold;
 }
 
 
-.note:hover .details {
+/* Desktop/trackpad only — touch devices fake :hover during a long-press,
+   which is what caused the "hold to open" behaviour. Real tap support
+   is handled by JS toggling .is-open (see footer.js). */
+@media (hover: hover) and (pointer: fine) {
+	.note:hover .details {
+	 visibility:visible;
+	 opacity: 1;
+	 transition: 0.12s;
+	}
+}
+
+.note .details.is-open {
  visibility:visible;
  opacity: 1;
  transition: 0.12s;
@@ -1172,11 +1706,11 @@ font-weight: bold;
  position:absolute;
  visibility:hidden;
  opacity:0;
- background: palegoldenrod;
- border: 2px solid goldenrod;
+ background: #F0E8DA;
+ border: 2px solid #A0784A;
  transition: 0.12s;
  font-size: 88%;
-	color: #540;
+	color: #4A3728;
  max-width: 22em;
  z-index: 1002;
 }
@@ -1186,22 +1720,30 @@ font-weight: bold;
 	padding-left:.4em;
 }
 
-.copyrightnote:hover .details {
+@media (hover: hover) and (pointer: fine) {
+	.copyrightnote:hover .details {
+	 visibility:visible;
+	 opacity: 1;
+	 transition: 0.12s;
+	}
+}
+
+.copyrightnote .details.is-open {
  visibility:visible;
  opacity: 1;
  transition: 0.12s;
 }
 
 .copyright, .copyright a, a:visited, a:link, a:active {
-color:blue;
+color: #A0784A;
 }
 
 [light-mode=dark].copyright a:visited, a:link, a:active {
-color: blue;
+color: #C8A878;
 }
 
 [light-mode=dark].copyright a:hover {
-color: blue !important;
+color: #E8D5B8 !important;
 font-weight: bold;
 }
 
@@ -1220,11 +1762,13 @@ font-weight: bold;
  margin-left: 40px;
  margin-right: auto;
  z-index: 2002;
- border: 1px solid darkorchid;
- background: #fff3d6;
+ box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+ border: 2px solid #A0784A;
+ background: #F0E8DA;
+ color: #4A3728;
  border-radius: 5px;
  font-size:16px;
- font-weight:normal;
+ font-weight:600;
  font-style:normal;
  text-decoration: none;
  text-align: left;
@@ -1237,8 +1781,9 @@ font-weight: bold;
 }
 
 [light-mode=dark] .meaning {
- background: #a52a2a;
- border: 2px solid #E6BFAD;
+ background: #000;
+ color: #E8D5B8;
+ border: 2px solid #C8A878;
 }
 
 .lookup:hover .meaning {
@@ -1253,7 +1798,7 @@ font-weight: bold;
 
 .ms_pali,.ms_eng,.bps {
 	float:left;
-	color: #141516;
+	color: #4A3728;
 	font-size: 90%;
 	margin-left: -1em;
 	padding-right: .7em;
@@ -1288,7 +1833,7 @@ font-weight: bold;
 .pts-vp-en,
 .pts-vp-pi
  {
-	color:#141516;
+	color:#4A3728;
 	font-size: 85%;
 	padding: 0 .25em;
 	content:attr(id);
@@ -1296,20 +1841,20 @@ font-weight: bold;
 }
 
 .parno {
-	color:#141516;
+	color:#7A5030;
 	font-size: 85%;
 	padding-right:.5em;
 }
 
 [light-mode=dark] .parno {
-color: white;
+color: #9A7A5A;
 }
 
 .endsection, .endsutta, .endbook { text-align: center; }
 
 .speaker {
 	font-weight:bold;
-	color:#141516;
+	color:#4A3728;
 	}
 
 .var, p span.var {
@@ -1349,8 +1894,9 @@ hr, .pairs hr {
     height: 16px;
     position: absolute;
     border: 1px solid rgba(255,255,255,0);
-    top:0px;
-    left:0px;
+    position: static;
+    top:20px;
+    left:40px;
 }
 
 .light-mode-button:focus {
@@ -1360,7 +1906,7 @@ hr, .pairs hr {
 .light-mode-button span:nth-child(1) {
     position: absolute;
     top:17px;
-    left:0px;
+    left:21px;
     width: 30px;
     height:16px;
     background-color: #d6d7db;
@@ -1373,7 +1919,7 @@ hr, .pairs hr {
 .light-mode-button span:nth-child(2) {
     position: absolute;
     top:20px;
-    left:4px;
+    left:24px;
     width: 10px;
     height: 10px;
     background-color: #fff;
@@ -1384,31 +1930,31 @@ hr, .pairs hr {
 
 /* Light & Dark Mode Styles */ 
 body[light-mode=dark] .light-mode-button span:nth-child(2) {
-    left: 17px;
-    background-color: #141516;
+    left: 37px;
+    background-color: #000;
 }
 
 /* Label for the Light & Dark Mode button */ 
 .box-lbl {
   font-family: Arial, Helvetica, sans-serif;
-  color: #141516;
+  color: #4A3728;
   font-size: 80%;
   font-weight: 600;<div lang="pi">
   cursor: pointer;
   position: absolute;
   top:16px;
-  left:35px;
+  left:55px;
 }
 
 .w3-image {
     max-width: 100%;
     height: auto;
-    margin-left: 0px; 
-	    background-color: #FFF3D6;
+    margin-left: 30px;
+	    background-color: #F0E8DA;
 }
 
  .w3-padding {
-    padding: 0px 8px!important;
+    padding: 0px 16px!important;
 }
 
 .centered {
@@ -1417,30 +1963,28 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 }
 
 .header-background {
-  background-color: #FFF3D6;
-  background-image: url('../images/headerlogo.png');
+  background-color: #F0E8DA;
+  background-image: none;
   background-repeat: no-repeat;
   background-position: top right; /* Background image in the upper right corner */
   background-size: cover; /* Or contain, depending on your preference */
 }
 
-@media screen and (min-width: 1640px) {
-  .container {
-  margin: auto;
-  width: 50%; 
-  margin-top:10px;
-  min-width: 1640px;
+body[light-mode=dark] .header-background {
+  background-color: #000;
 }
+
+body[light-mode=sepia] .header-background {
+  background-color: #F5ECD9;
 }
-hr, .pairs hr {
- height:0px;
- margin-bottom:0;
- }
+
+/* Removed: old rule that forced body.container to 50% width on wide screens,
+   causing side gutters. Body now fills full viewport width at all sizes. */
+
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
 /* For Editing ... Move the end comment at the end of this page to the end of this line.   
-
  
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
@@ -1459,3 +2003,802 @@ hr, .pairs hr {
 }
 
 */
+
+/* ═══════════════════════════════════════════
+   SEPIA THEME  (body[light-mode=sepia])
+   ═══════════════════════════════════════════ */
+
+body[light-mode=sepia] {
+    background-color: #F5ECD9;
+    color: #000;
+}
+
+[light-mode=sepia] .searchform {
+    background-color: #E8D5B0;
+    color: #000;
+}
+
+[light-mode=sepia] #snheading {
+    background-color: #D9C9B0;
+}
+
+[light-mode=sepia] #searchlinks a {
+    color: #7A5030;
+}
+
+[light-mode=sepia] #searchlinks a:visited, a:link, a:active {
+    color: #7A5030;
+}
+
+body[light-mode=sepia] .parallel-page .parallel-note {
+    color: #7A5030;
+    border-left-color: #B8956A;
+}
+
+[light-mode=sepia] a:link {
+    color: #7A5030;
+}
+
+[light-mode=sepia] a:visited {
+    color: #4A3728;
+}
+
+[light-mode=sepia] a:active {
+    color: #4A3728;
+}
+
+[light-mode=sepia] #breadcrumbs {
+    background-color: #E8D5B0;
+    color: #000;
+}
+
+body[light-mode=sepia] .bwcontainer2.w3-white {
+	background-color: #F5ECD9 !important;
+	color: #000 !important;
+}
+
+[light-mode=sepia] #bottom_links a:visited, a:link {
+    color: #4A3728;
+}
+
+[light-mode=sepia] #bottom_links a:hover {
+    color: #7A5030;
+}
+
+[light-mode=sepia] #bottom_links a:visited {
+    color: #7A5030 !important;
+}
+
+[light-mode=sepia] .bwnav {
+    color: #7A5030;
+    background-color: #F5ECD9;
+}
+
+[light-mode=sepia] .bwnav a {
+    color: #7A5030;
+    background-color: #F5ECD9;
+}
+
+[light-mode=sepia] .bwnav a:hover {
+    color: #4A3728;
+    font-weight: bold;
+    background-color: #E8D5B0;
+}
+
+[light-mode=sepia] .subnav a, .subnav6 a, .subnav3 a, .subnav11 a {
+    color: #7A5030 !important;
+}
+
+body[light-mode=sepia] .cp-btn {
+    background-color: #B8956A;
+    color: #000;
+    border-color: #7A5030;
+}
+
+@media (hover: hover) {
+	body[light-mode=sepia] .cp-btn:hover {
+	    background-color: #C8A878;
+	}
+}
+
+body[light-mode=sepia] #pali.cp-btn.active {
+	background-color: #E8D5B0;
+	color: #7A5030 !important;
+	border-color: #7A5030;
+	box-shadow: 0 0 0 2px #B8956A;
+}
+
+body[light-mode=sepia] .inline-parallels-label {
+    color: #7A5030;
+}
+
+body[light-mode=sepia] a.inline-parallel-link {
+    color: #7A5030;
+}
+
+body[light-mode=sepia] #previous-sutta,
+body[light-mode=sepia] #next-sutta {
+  background-color: #E8D5B0;
+  border-color: #7A5030;
+  color: #7A5030;
+}
+
+@media (hover: hover) {
+	body[light-mode=sepia] #previous-sutta:hover,
+	body[light-mode=sepia] #next-sutta:hover {
+	  background-color: #7A5030;
+	  color: #F5ECD9 !important;
+	  box-shadow: 0 0 0 2px #B8956A;
+	}
+}
+
+[light-mode=sepia].th, [light-mode=sepia].tr {
+    background: #E8D5B0 !important;
+}
+
+[light-mode=sepia] .suttalist tr:hover a {
+    background-color: #E8D5B0;
+    color: #7A5030;
+}
+
+[light-mode=sepia] .suttalist td a {
+    color: #4A3728;
+    background-color: #F5ECD9;
+}
+
+[light-mode=sepia] .translator {
+    color: #000;
+}
+
+[light-mode=sepia] .add, .add1 {
+    color: #7A5030 !important;
+}
+
+[light-mode=sepia] .details {
+    background: #E8D5B0;
+    color: #000;
+    font-weight: 600;
+    border: 2px solid #7A5030;
+}
+
+[light-mode=sepia] .details a {
+    color: #7A5030;
+}
+
+[light-mode=sepia].copyright a:visited, a:link, a:active {
+    color: #7A5030;
+}
+
+[light-mode=sepia].copyright a:hover {
+    color: #4A3728 !important;
+    font-weight: bold;
+}
+
+[light-mode=sepia] .meaning {
+    background: #E8D5B0;
+    color: #000;
+    border: 2px solid #B8956A;
+}
+
+[light-mode=sepia] .parno {
+    color: #7A5030;
+}
+
+[light-mode=sepia] .var, p span.var {
+    background-color: #D9C9B0 !important;
+}
+
+/* ═══════════════════════════════════════════
+   THREE-BUTTON THEME SWITCHER
+   ═══════════════════════════════════════════ */
+
+.theme-btns {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 8px 2px 0;
+    margin-left: 31px;
+    margin-top: 14px;
+    background-color: transparent;
+}
+
+body[light-mode=dark] .theme-btns {
+    background-color: #000;
+}
+
+body[light-mode=sepia] .theme-btns {
+    background-color: #F5ECD9;
+}
+
+/* On Agama pages, theme-btns is inside bwcontainer4 which already has 16px left padding (w3-padding).
+   So subtract that offset to keep the same visual position. */
+.bwcontainer4 .theme-btns,
+.bwcontainer4 .theme-search-row {
+    margin-left: 15px;
+}
+
+.theme-btn {
+    font-family: "URWPalladioITU-Bold", serif;
+    font-size: 80%;
+    font-weight: bold;
+    height: 1.8em;
+    padding: 0 9px;
+    border-radius: 999px;
+    border: 1px solid #D9C9B0;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    line-height: 1.6em;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.theme-btn:focus {
+    outline: none;
+}
+
+.theme-btn-light {
+    background-color: #FAF7F2;
+    color: #4A3728;
+    border-color: #D9C9B0;
+}
+
+.theme-btn-sepia {
+    background-color: #E8D5B0;
+    color: #000;
+    border-color: #C8A878;
+}
+
+.theme-btn-dark {
+    background-color: #000;
+    color: #E8D5B8;
+    border-color: #4A3728;
+    border-width: 0.3px;
+}
+
+@media (hover: hover) {
+	.theme-btn:hover {
+	    box-shadow: 0 0 0 2px #C8A878;
+	}
+}
+
+.theme-btn.active-theme {
+    box-shadow: 0 0 0 2px #A0784A;
+    opacity: 1;
+}
+
+/* Legacy toggle hidden (keep in DOM to avoid JS errors if referenced) */
+.light-mode-button {
+    display: none !important;
+}
+
+/* ═══════════════════════════════════════════
+   HAMBURGER MENU BUTTON (mobile) — match page
+   background per theme instead of staying white
+   ═══════════════════════════════════════════ */
+
+[onclick="w3_open()"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #FAF7F2;
+	color: #4A3728;
+}
+
+body[light-mode=dark] [onclick="w3_open()"] {
+	background-color: #000;
+	color: #E8D5B8;
+}
+
+body[light-mode=sepia] [onclick="w3_open()"] {
+	background-color: #F5ECD9;
+	color: #000;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE SIDEBAR (Nikāya menu) — match the
+   footnote pop-out colours for each theme
+   ═══════════════════════════════════════════ */
+
+#mySidebar {
+	background-color: #F0E8DA;
+	color: #4A3728;
+	border-color: #A0784A !important;
+}
+
+#mySidebar .w3-bar-block.w3-white {
+	background-color: #F0E8DA !important;
+	color: #4A3728 !important;
+}
+
+#mySidebar a.w3-bar-item {
+	color: inherit;
+}
+
+body[light-mode=sepia] #mySidebar {
+	background-color: #E8D5B0;
+	color: #000;
+	border-color: #B8956A !important;
+}
+
+body[light-mode=sepia] #mySidebar .w3-bar-block.w3-white {
+	background-color: #E8D5B0 !important;
+	color: #000 !important;
+}
+
+body[light-mode=dark] #mySidebar {
+	background-color: #D9C9B0;
+	color: #000;
+	border-color: #7A5030 !important;
+}
+
+body[light-mode=dark] #mySidebar .w3-bar-block.w3-white {
+	background-color: #D9C9B0 !important;
+	color: #000 !important;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE: theme buttons + search bar in same row as hamburger
+   ═══════════════════════════════════════════ */
+
+@media screen and (max-width: 908px) {
+
+	/* The framework's own navbar/hamburger switch happens at ~888px —
+	   force it to wait until our breakpoint (908px) instead, so the
+	   centered mobile/tablet layout and the navbar switch happen at
+	   the same width with no in-between gap. */
+	#navbar {
+		display: none !important;
+	}
+	.w3-button.w3-hide-large {
+		display: block !important;
+	}
+
+	/* Make bwcontainer2 a flex row so hamburger and theme controls sit side-by-side */
+	.w3-main.bwcontainer2 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	/* Hamburger stays left, takes its natural width */
+	.w3-main.bwcontainer2 > .w3-button.w3-hide-large {
+		flex: 0 0 auto;
+	}
+
+	/* navbar is hidden on mobile/tablet (w3-hide-small + w3-hide-medium), so it takes no space */
+
+	/* Theme buttons sit on their own row, centered (matches both
+	   page layouts — on the Agama page these are children of
+	   bwcontainer2, on the Pali page they're siblings of it) */
+	.theme-btns {
+		justify-content: center;
+		margin: 0;
+		padding: 2px 6px;
+		width: 100%;
+	}
+
+	/* Search bar goes on its own row below, centered */
+	.theme-search-row {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		margin-top: 4px;
+		margin-bottom: 16px;
+		padding: 2px 6px 4px 0;
+		width: 100%;
+	}
+
+	/* Header bar: make searchlinks + help icon sit in one centered row */
+	.w3-bar.bwcontainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#searchlinks {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		width: auto;
+		padding: 4px 0;
+	}
+
+	/* Stop the ? icon from floating freely — bring it inline */
+	.help {
+		width: auto;
+		height: auto;
+	}
+
+	.help a {
+		position: static;
+		display: inline-flex;
+		align-items: center;
+		margin: 0 0 0 8px;
+	}
+}
+
+
+/* ═══════════════════════════════════════════
+   AGAMA BILINGUAL TABLE (agama-controlpanel.js)
+   ═══════════════════════════════════════════ */
+
+.agama-pairs {
+    table-layout: fixed;
+    width: 100%;
+    word-break: break-word;
+    margin-bottom: 2em;
+}
+
+.agama-pairs td {
+    width: 50%;
+    vertical-align: top;
+    padding: 0 0.75em;
+}
+
+/* English column */
+.agama-pairs td.agama-eng {
+    font-family: "URWPalladioITU", Georgia, serif;
+    font-size: 115%;
+    line-height: 1.8em !important;
+}
+
+/* Chinese column: NOT italic */
+.agama-pairs td.agama-chi {
+    font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+    font-size: 115%;
+    line-height: 1.6em;
+    font-style: normal !important;
+}
+
+/* Override the .pairs td:last-child italic rule */
+.agama-pairs td.agama-chi p,
+.agama-pairs td.agama-chi blockquote,
+.agama-pairs td.agama-chi blockquote p {
+    font-style: normal !important;
+    font-family: "URWPalladioITU", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+}
+
+/* Gatha indentation — explicit for both columns */
+.agama-pairs blockquote.gatha {
+    margin: 0.3em 1em 0.5em 2em;
+}
+
+/* English gatha: italic */
+.agama-pairs td.agama-eng blockquote.gatha p {
+    font-style: italic !important;
+    font-family: "URWPalladioITU", Georgia, serif;
+}
+
+/* Stack on small screens */
+@media screen and (max-width: 768px) {
+    .agama-pairs tr {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .agama-pairs td,
+    .agama-pairs td.agama-eng,
+    .agama-pairs td.agama-chi {
+        width: 100% !important;
+        display: block;
+    }
+}
+
+/* Match English line-height to sutta pages (body default) */
+.agama-pairs td.agama-eng p {
+    line-height: 1.3em;
+    margin: 0.5em 0;
+}
+.inline-parallels-label,
+.inline-parallels-label ~ * {
+    font-family: "URWPalladioITU", serif;
+}
+
+/* ── Search-page form: override hard-coded <font color=#000000> tags ────────
+   The legacy Search Maker Pro HTML uses <font color=#000000> throughout the
+   form, which forces black text even in dark/sepia modes.
+   This rule makes those font elements inherit the theme colour instead.       */
+[light-mode=dark] font[color="#000000"],
+[light-mode=dark] font[color='#000000'],
+body[light-mode=dark] font {
+	color: inherit !important;
+}
+
+[light-mode=sepia] font[color="#000000"],
+[light-mode=sepia] font[color='#000000'],
+body[light-mode=sepia] font {
+	color: inherit !important;
+}
+
+/* Also fix selects and checkboxes in the search form in dark mode */
+body[light-mode=dark] select,
+body[light-mode=dark] input[type="checkbox"] {
+	background-color: #000;
+	color: #E8D5B8;
+	border-color: #4A3728;
+	color-scheme: dark;
+}
+
+body[light-mode=dark] input[type="submit"] {
+	background-color: #000;
+	color: #E8D5B8;
+	border-color: #C8A878;
+}
+
+/* ── Sutta-search bar: matches theme-buttons row width ─────────────────────── */
+#sutta-search {
+	width: var(--search-width, 164px);
+	flex: 1 1 auto;
+}
+
+@media screen and (max-width: 908px) {
+	#sutta-search {
+		flex: 0 0 auto;
+		width: var(--search-width, 164px);
+		max-width: 260px;
+	}
+}
+/* ═══════════════════════════════════════════
+   BACK TO TOP BUTTON
+   ═══════════════════════════════════════════ */
+
+/* Smooth-scroll for the back-to-top button (and any anchor jumps).
+   Applies as long as the click handler doesn't explicitly pass
+   behavior: 'auto' / 'instant' to window.scrollTo(). */
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* Hide the in-flow container row; the button is now fixed */
+.back-to-top-row {
+	height: 0;
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+}
+
+/* Back to Top button — circle style matching #previous-sutta / #next-sutta, fixed bottom-right */
+.back-to-top-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9000;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	width: 30px !important;
+	height: 30px !important;
+	border-radius: 50% !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	flex-shrink: 0;
+	padding: 0;
+	background-color: #F0E8DA;
+	border: 1.5px solid #A0784A;
+	color: #A0784A;
+	transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+.back-to-top-btn svg {
+	width: 16px;
+	height: 16px;
+	display: block;
+	flex-shrink: 0;
+}
+
+@media (hover: hover) {
+	.back-to-top-btn:hover {
+		background-color: #A0784A !important;
+		color: #FAF7F2 !important;
+		border-color: #A0784A !important;
+		box-shadow: 0 0 0 2px #C8A878;
+	}
+}
+
+body[light-mode=dark] .back-to-top-btn {
+	background-color: #000;
+	border-color: #C8A878;
+	color: #C8A878;
+}
+
+@media (hover: hover) {
+	body[light-mode=dark] .back-to-top-btn:hover {
+		background-color: #C8A878 !important;
+		color: #000 !important;
+		border-color: #C8A878 !important;
+		box-shadow: 0 0 0 2px #E8D5B8;
+	}
+}
+
+body[light-mode=sepia] .back-to-top-btn {
+	background-color: #E8D5B0;
+	border-color: #7A5030;
+	color: #7A5030;
+}
+
+@media (hover: hover) {
+	body[light-mode=sepia] .back-to-top-btn:hover {
+		background-color: #7A5030 !important;
+		color: #F5ECD9 !important;
+		border-color: #7A5030 !important;
+		box-shadow: 0 0 0 2px #B8956A;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.back-to-top-btn {
+		bottom: 18px;
+		right: 14px;
+	}
+}
+
+/* Stop iOS/Android WebKit from substituting native button chrome
+   on the pill buttons throughout the app (theme switcher, control
+   panel, back-to-top). */
+.cp-btn,
+.theme-btn,
+.back-to-top-btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+}
+#content div[lang="en"] p,
+#content div[lang="pi"] p {
+    line-height: 2em !important;
+}
+
+.pairs td[lang="en"] p,
+.pairs td[lang="pi"] p {
+    line-height: 1.2em !important;
+    margin-bottom: 1em !important;
+}
+
+/* ═══════════════════════════════════════════
+   DESKTOP: scale up base font for comfortable
+   reading without needing browser zoom.
+   Mobile/tablet (≤ 908px) is unchanged.
+   ═══════════════════════════════════════════ */
+
+/* Desktop font scaling query removed to match upstream font size */
+
+/* ═══════════════════════════════════════════
+   Search results (engsearch.html / palisearch.html):
+   the legacy "Search Maker Pro" output wraps every
+   result snippet in <font color="#000000" size="2">.
+   Because body text already sits at font-weight:600,
+   those snippets read as fully bold. Reset them to
+   normal weight so only the actual <b> matched term
+   (which the search script already isolates) stands out.
+   ═══════════════════════════════════════════ */
+
+#content font[color="#000000"] {
+    font-weight: normal;
+}
+
+#content font[color="#000000"] b {
+    font-weight: bold;
+}
+
+/* ═══════════════════════════════════════════
+   RELOCATED RANDOM & PĀḶI BUTTONS LAYOUT
+   ═══════════════════════════════════════════ */
+
+/* Desktop Layout: align theme switcher to left, control group to far right */
+@media screen and (min-width: 909px) {
+    .theme-btns.theme-btns-relocated {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        padding-right: 25px; /* Alignment with right margin of layout */
+    }
+
+    .theme-switch-group {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .control-group {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+}
+
+/* Mobile/Tablet Layout: vertical stack, centered, distinct separation */
+@media screen and (max-width: 908px) {
+    .theme-btns.theme-btns-relocated {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px; /* Vertical gap between the two groups */
+        width: 100%;
+        margin: 0;
+        padding: 4px 6px;
+    }
+
+    .theme-switch-group {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .control-group {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Hide floating controlpanel during parse on pages that have .theme-btns,
+   preventing a flash of the old floating panel before JS relocation runs. */
+body:has(.theme-btns) #controlpanel {
+    display: none;
+}
+
+/* Button Styling: scale to match .theme-btn dimensions while keeping brown colors */
+.theme-btns-relocated .cp-btn {
+    font-family: "URWPalladioITU-Bold", serif;
+    font-size: 80%;
+    font-weight: bold;
+    height: 1.8em;
+    padding: 0 9px; /* Match .theme-btn padding exactly */
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1.6em;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #FAF7F2;
+    background-color: #A0784A;
+    border: 1px solid #7A5030;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Override ID-specificity min-width rules (#randomSutta.cp-btn, #pali.cp-btn)
+   so relocated buttons don't stay fixed at 7em inside the theme row. */
+.theme-btns-relocated #randomSutta.cp-btn,
+.theme-btns-relocated #pali.cp-btn {
+    min-width: unset;
+}
+
+@media (hover: hover) {
+    .theme-btns-relocated .cp-btn:hover {
+        background-color: #F0E8DA;
+        color: #A0784A !important;
+        border-color: #A0784A;
+        box-shadow: 0 0 0 2px #C8A878;
+    }
+
+    body[light-mode=sepia] .theme-btns-relocated .cp-btn:hover {
+        background-color: #E8D5B0;
+        color: #7A5030 !important;
+        border-color: #7A5030;
+        box-shadow: 0 0 0 2px #B8956A;
+    }
+
+    body[light-mode=dark] .theme-btns-relocated .cp-btn:hover {
+        background-color: #000;
+        color: #C8A878 !important;
+        border-color: #C8A878;
+        box-shadow: 0 0 0 2px #E8D5B8;
+    }
+}
+
+.theme-btns-relocated .cp-btn.active {
+    box-shadow: 0 0 0 2px #A0784A;
+}
+
+

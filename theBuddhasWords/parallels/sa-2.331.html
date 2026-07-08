@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.331 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.331</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 331</span><span class="mirror-right">（三三一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn15.3.html">SN 15.3</a> / <a href="../parallels/sa938.html">SĀ 938</a> / <a href="../parallels/ea51.1.html">EĀ 51.1</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the Buddha told the bhikṣus, &quot;You should know that birth and death are long and without end. No one can know their source. All sentient beings are covered by ignorance, bound by the fetters of craving, and wander in birth and death without end. The suffering of the past eons is immeasurable. It is like the Ganges River flowing into the four seas.&quot; He further told the bhikṣus, &quot;Birth and death are long. Since the past, the tears shed from sorrow and grief are more than the water in the Ganges River.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在] cf.【丽】舍卫国祇树给孤独园。尔时，佛告诸比丘：「汝等当知，生死长远，无有边际，无有能知其根源者。一切众生皆为无明之所覆盖，爱] cf.【丽】结缠缚，流转生死，无有穷已，过去亿苦] cf.【丽】无能知者，譬如恒河流注四海。」复告比丘：「生死长远，于昔过去受形已来，忧悲哭泣，所出目泪为多？为恒河多？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus said to the Buddha, &quot;World-Honored One! According to my understanding of the meaning of the Buddha&#x27;s words, the tears shed from birth and death are more than the Ganges River and the four seas.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时诸比丘白佛言：「世尊！如我解佛所说义者，生死长远，目所出泪，逾彼恒河，亦多四海。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;Excellent! Excellent! The tears shed are indeed more than the four seas. As you say, in the past, parents have abandoned us, uncles, brothers, sisters, sons, relatives, and family members have all died, and we have lost money, elephants, horses, cattle, sheep, or been beaten, maimed, injured, or imprisoned. The suffering of these things is immeasurable. It is like a flood carrying away grass and trees, blocking the road with foam. The foam of craving blocks the path of the sages. The blood-stained body repeatedly experiences hell, hungry ghosts, animals, and other evil realms.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「善哉！善哉！所集目泪，实多四海。诚如汝言，过去来世，父母弃背，伯叔、兄弟、姊妹、儿子、宗亲、眷属，悉皆死丧，及失钱财、象、马、牛、羊，或受鞭杖，或被伤刖，侵毁形体，乃至系闭，如斯众苦，悲恼流泪，不可称计。譬如瀑流，漂众草木，聚沫塞路。爱之聚沫，遮贤圣道，血渧受身，数受地狱、饿鬼、畜生，及余恶趣。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha asked the bhikṣus, &quot;Is form permanent or impermanent?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛问比丘：「色为是常？是无常乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Form is impermanent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「色是无常。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha further asked, &quot;If form is impermanent, is it suffering or not suffering?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复问言：「色若无常，为当是苦？为非苦耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Because it is impermanent, it is suffering.&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「无常故苦。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;If the impermanent and suffering are things that decay, would the noble disciples consider them to be the self or what belongs to the self?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「若无常苦是败坏法，于斯法中，贤圣弟子宁计有我，及我所不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;No, World-Honored One!&quot; The Buddha further asked, &quot;Are feeling, perception, formation, and consciousness permanent or impermanent?&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「不也。世尊！」佛又问言：「受、想、行、识为是常耶？是无常乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;They are all impermanent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「斯皆无常。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha further asked, &quot;If they are impermanent, are they suffering or not suffering?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛又问言：「若是无常，为是苦耶？为非苦乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;Because they are impermanent, they are suffering.&quot; The Buddha further asked, &quot;If they are impermanent and suffering, and subject to destruction, would the noble disciples consider them as self or belonging to self?&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「无常故苦。」又问：「若无常苦是败坏法，贤圣弟子宁计是中我、我所不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;No, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「不也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;Excellent! Excellent! Form is impermanent. Because it is impermanent, it is suffering. Suffering is without self. If there is no self, there is no possession of self. Knowing this reality with right wisdom and observing it, feeling, perception, volition, and consciousness are also like this. Therefore, bhikṣus, if there is any form, even a little bit, past, future, or present, internal or external, near or far, it is all without self and possession of self. Seeing this as it truly is with right view is called seeing. If feeling, perception, volition, and consciousness, whether much or little, internal or external, near or far, past, future, or present, are all without self and possession of self, knowing and seeing this as it truly is, the noble disciples, having seen this, are called learned. They are liberated from form, and liberated from feeling, perception, volition, and consciousness. They are liberated from all worries, sorrows, and suffering.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「善哉！善哉！色是无常，无常故苦，苦即无我。若无有我，则无我所，如是知实正慧观察，受、想、行、识，亦复如是。是故比丘，若有是色，乃至少许，过去、未来、现在，若内、若外，若近、若远，此尽无我，及以我所，如是称实正见所见。若受、想、行、识，若多、若少，若内、若外，若远、若近，过去、未来、现在，都无有我，亦无我所，如实知见，贤圣弟子见是事已，即名多闻，于色解脱，受、想、行、识，亦得解脱，忧悲苦恼一切解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken this, the Buddha finished. The bhikṣus, having heard the Buddha&#x27;s words, rejoiced and received them respectfully.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

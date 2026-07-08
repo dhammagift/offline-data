@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 73 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 73: Mahāvacchagotta-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn72comp.html#content"></a><a id="next-sutta" href="./mn74comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn73.html">MN 73</a> / <a href="../../parallels/sa964.html">SĀ 964</a> / <a href="../../parallels/sa-2.198.html">SĀ² 2.198</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāvacchagotta-sutta, the “greater discourse to Vacchagotta”, records how the wanderer Vacchagotta decided to go forth and became an arahant. This discourse has two Chinese parallels in two Saṃyukta-āgama collections,<span class="note" id="mn73n27"><span class="details"><span class="p">[n.27] The parallels are <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246b-247c and <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a-447b. <a href="../../parallels/sa964.html">SĀ 964</a> agrees with <a href="../../mn/mn73.html">MN 73</a> on locating the discourse in the Squirrels’ Feeding Ground by Rājagaha, while <a href="../../parallels/sa-2.198.html">SĀ2 198</a> simply mentions Rājagaha as the location, without further specifications. Anesaki 1908: 137 gives <a href="../../parallels/sa964.html">SĀ 964</a> the title “going forth”, 出家, an expression that is also found in an uddāna at T II 447b11 as a way of refering to <a href="../../parallels/sa-2.198.html">SĀ2 198</a>. As was the case with the Saṃyukta-āgama parallels to <a href="../../mn/mn72.html">MN 72</a>, the version found in the complete Saṃyukta-āgama translation (T 99), <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246b13, agrees with <a href="../../mn/mn73.html">MN 73</a> on introducing the Buddha’s interlocutor as the wanderer Vacchagotta, 婆蹉種出家, while the version found in the ‘other’ Saṃyukta-āgama translation (T 100), <a href="../../parallels/sa-2.196.html">SĀ2 196</a> at T II 446a11, presents the protagonist of the present event as 犢子梵志, on which cf. above p. 389 note 6.</span></span></span> and another parallel in a discourse quotation that is found in an Abhidharma treatise preserved in Chinese translation.<span class="note" id="mn73n28"><span class="details"><span class="p">[n.28] This is the 佛阿毘曇經, which according to the information given in the Taishō edition was translated by Paramārtha. The relevant part is found in T 1482 at T XXIV 963a14-965a4 (noted as a parallel by Chung 2008: 197), which mentions Rājagaha as the location and introduces its protagonist as the heterodox practitioner Vacchaputta, 犢子外道.</span></span></span></p>
+<p>The Mahāvacchagotta-sutta begins by describing that the wanderer Vacchagotta approached the Buddha and requested a teaching in brief on what is wholesome and what is unwholesome. In reply, the Buddha contrasted the three mental roots of unwholesomeness with their wholesome counterparts, illustrating both with the corresponding ten courses of action.</p>
+<p>The Saṃyukta-āgama versions report the Buddha’s exposition in similar terms, although they differ to some extent in their narration of what took place beforehand. According to them, Vacchagotta had asked the Buddha three times if he could put a question to him, but the Buddha had remained silent each time.<span class="note" id="mn73n29"><span class="details"><span class="p">[n.29] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246b17, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a14, and T 1482 at T XXIV 963a18.</span></span></span> Vacchagotta then asked the Buddha why he remained silent, in fact according to one of the Saṃyukta-āgama versions he remarked that he had been on friendly terms with the Buddha for a long time.<span class="note" id="mn73n30"><span class="details"><span class="p">[n.30] <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a15: “for a long time I have had close relations with you”, 我於長夜與汝親厚; cf. also T 1482 at T XXIV 963a22.</span></span></span></p>
+<p>Notably, a somewhat similar remark occurs also in the Mahāvacchagotta-sutta.<span class="note" id="mn73n31"><span class="details"><span class="p">[n.31] <a href="../../mn/mn73.html">MN 73</a> at MN I 489,12: “for a long time I have had conversation with sir Gotama”, dīgharattāhaṃ bhotā gotamena sahakathī.</span></span></span> While in this version the reasons for this statement by Vacchagotta are not clear and his remark appears to be just a way of beginning their conversation, in the Saṃyuktaāgama version Vacchagotta’s remark stands in a more meaningful context, as it is part of an effort to persuade the Buddha to answer Vacchagotta’s question.</p>
+<p>According to the Saṃyukta-āgama versions, when the Buddha finally agreed to answer Vacchagotta’s question, he made a point of indicating that he would just give a teaching in brief on this subject.<span class="note" id="mn73n32"><span class="details"><span class="p">[n.32] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246b25, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a23, and T 1482 at T XXIV 963b2: 略說. According to <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a23 and T 1482 at T XXIV 963b1, the Buddha indicated that he was going to teach in brief even though he would be able to expound this subject in detail, similar to a remark he made according to <a href="../../mn/mn73.html">MN 73</a> at MN I 489,15: “I could teach you in detail”, vitthārena pi kho te ahaṃ ... deseyyaṃ.</span></span></span> This additional qualification naturally follows the Buddha’s initial silence, which already would have indicated that, from his perspective, the present occasion was not appropriate for longer discussions.</p>
+<p>The Mahāvacchagotta-sutta, however, reports that it was Vacchagotta who had asked to be given only a teaching in brief. In reply, the Buddha explained that, although he would be able to teach this topic in brief and in detail, he would agree to Vacchagotta’s request and teach only in brief.<span class="note" id="mn73n33"><span class="details"><span class="p">[n.33] <a href="../../mn/mn73.html">MN 73</a> at MN I 489,14.</span></span></span> Thus, while in the Saṃyukta-āgama versions the Buddha had on his own decided that he would only give a brief exposition, and that after initially refusing to get involved in a discussion at all, in the Majjhima-nikāya version it was in order to comply with Vacchagotta’s explicit request that the Buddha decided to give only a brief answer to his visitor’s query.</p>
+<p>According to other Pāli discourses, Vacchagotta had come with his questions to the Buddha or some of his disciples on numerous occasions,<span class="note" id="mn73n34"><span class="details"><span class="p">[n.34] The Pāli Nikāyas record over sixty discourses featuring Vacchagotta’s inquiries, cf. <a href="../../mn/mn71.html">MN 71</a>-72 at MN I 481-489, <a href="../../sn/sn33.1.html">SN 33:1</a>-55 at SN III 257-263, <a href="../../sn/sn44.7.html">SN 44:7</a>-11 at SN IV 391-402, and <a href="../../an/an3.57.html">AN 3:57</a> at AN I 160-162.</span></span></span> so that the Buddha’s attitude in the Saṃyukta-āgama parallels to the Mahāvacchagotta-sutta could be seen as a teaching device to restrain Vacchagotta’s inquisitive habit.</p>
+<p>An instance of this device can in fact be found in a discourse in the Saṃyutta-nikāya and its parallels, which report that on another occasion the Buddha remained silent and did not reply at all to a question posed by Vacchagotta.<span class="note" id="mn73n35"><span class="details"><span class="p">[n.35] <a href="../../sn/sn44.10.html">SN 44:10</a> at SN IV 400,17+19, <a href="../../parallels/sa961.html">SĀ 961</a> at T II 245b12, and <a href="../../parallels/sa-2.195.html">SĀ2 195</a> at T II 444c4.</span></span></span> The Buddha’s attitude depicted in these discourses would be similar to the account given in the Saṃyukta-āgama parallels to the Mahāvacchagotta-sutta, according to which on the present occasion the Buddha was also somewhat hesitant to engage in a discussion with Vacchagotta.</p>
+<p>The Pāli commentary’s gloss on the present passage devotes some space to discussing the nature of brief and detailed expositions, explaining that the seven works of the Abhidharma should be considered as teachings “in brief”.<span class="note" id="mn73n36"><span class="details"><span class="p">[n.36] Ps III 200,19: sattapakaraṇaṃ abhidhammapiṭakañ ca sabbaṃ saṅkhittam eva.</span></span></span> What makes this remark noteworthy is that the Chinese versions also refer to the Abhidharma. This reference comes as part of their description of what went on in the Buddha’s mind before he allowed Vacchagotta to put his question. According to both versions, the Buddha decided to listen to or to reply to Vacchagotta’s question according to or by way of Abhidharma and Vinaya.<span class="note" id="mn73n37"><span class="details"><span class="p">[n.37] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246b20: “I will now by way of Abhidharma and Vinaya receive that [question]”, 我今當 以阿毘曇律納受於彼, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a18: “I will listen according to Abhidharma and Vinaya to that question”, 吾當聽之, 若阿毘曇毘尼, 隨其所問, T 1428 at T XXIV 963a25: “I shall reply to his question according to the deeper meaning of the Abhidharma and the deeper meaning of the Vinaya”, 當 如阿毘曇密義, 如律密義, 有問當為敷說.</span></span></span></p>
+<p>This specification is puzzling. The reference to the Abhidharma together with the Vinaya would correspond to a frequently found phrase in the Pāli discourses, which speaks of abhidhamma abhivinaya.<span class="note" id="mn73n38"><span class="details"><span class="p">[n.38] E.g., Vin I 64,28, Vin I 68,14, <a href="../../dn/dn33.html">DN 33</a> at DN III 267,27, <a href="../../dn/dn34.html">DN 34</a> at DN III 290,14, <a href="../../mn/mn69.html">MN 69</a> at MN I 472,5, <a href="../../an/an3.137.html">AN 3:137</a> at AN I 288,20, <a href="../../an/an3.138.html">AN 3:138</a> at AN I 290,6, <a href="../../an/an3.139.html">AN 3:139</a> at AN I 291,14, <a href="../../an/an9.22.html">AN 9:22</a> at AN IV 398,1, <a href="../../an/an10.17.html">AN 10:17</a> at AN V 24,17, <a href="../../an/an10.18.html">AN 10:18</a> at AN V 27,18, <a href="../../an/an10.50.html">AN 10:50</a> at AN V 90,27, <a href="../../an/an10.98.html">AN 10:98</a> at AN V 201,13, and <a href="../../an/an11.15.html">AN 11:15</a> at AN V 339,2.</span></span></span> In such contexts, the prefix abhi- appears to have mainly the meaning “pertaining to” or “related to”, so that abhidhamma would stand for what “pertains to the Dharma”.<span class="note" id="mn73n39"><span class="details"><span class="p">[n.39] Cf. the discussion in Geiger 1920: 118-119, Horner 1941: 298, van Zeyst 1959: 64, and von Hinüber 1996/1997: 64; cf. also above p. 213 note 50.</span></span></span> Yet, for the Buddha to reflect that he would listen to a question in a way that pertains to the Dharma or the Vinaya seems curious, since it is difficult to imagine how he could be depicted as doing otherwise. Besides, the topic of Vacchagotta’s inquiry and the ensuing exposition given by the Buddha involve rather basic teachings on wholesome and unwholesome conduct, hence the later meaning of Abhidharma as a form of profound analysis of deeper aspects of the teaching would also not fit the present context.</p>
+<p>Thus, the most natural explanation of the occurrence of this specification in the Chinese versions would be that it could have originated from a remark on the Abhidharma, presumably as representative of teachings in brief, made in an ancient Indian commentary on this discourse, similar to the remark now found in the Pāli commentary.</p>
+<p>Continuing with the comparative study of the Mahāvacchagotta-sutta, after expounding the three roots and the ten courses of action, the Pāli and Chinese versions take up the case of a monk who has reached liberation. The Chinese versions provide a transition to this topic by indicating that to understand the three roots and the ten courses of action in accordance with reality forms the basis for being able to eradicate the influxes and reach liberation.<span class="note" id="mn73n40"><span class="details"><span class="p">[n.40] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 246c3, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446a29, and T 1428 at T XXIV 963b6.</span></span></span></p>
+<p>According to the Mahāvacchagotta-sutta and its parallels, Vacchagotta next inquired after the existence of realized disciples.<span class="note" id="mn73n41"><span class="details"><span class="p">[n.41] A comparable inquiry addressed to Mahāvīra regarding the level of realization of disciples can be found in the Viyāhapaṇṇatti 5.4.59 in Lalwani 1974: 165,7, although the inquirers in this instance are gods and the conversation takes place purely on the mental level.</span></span></span> Finding out that large numbers of the Buddha’s disciples had reached distinction, males as well as females, with monastics reaching levels of awakening up to full liberation and laity up to non-return, Vacchagotta came to the conclusion that the Buddha’s teaching was complete in every respect.<span class="note" id="mn73n42"><span class="details"><span class="p">[n.42] On the levels of awakening attainable by laity cf. also above p. 373 note 176.</span></span></span></p>
+<p>The Pāli version reports that Vacchagotta illustrated this completeness by comparing the way the river Ganges inclines and flows to the ocean to the way the disciples of the Buddha are inclined towards Nirvāṇa, an image that recurs frequently in other Pāli discourses.<span class="note" id="mn73n43"><span class="details"><span class="p">[n.43] This is the case to such an extent that a recurring passage in the Saṃyutta-nikāya, which uses this image in order to illustrate how various aspects of the Dharma lead to Nirvāṇa, is called the Gaṅgāpeyyāla, the “Ganges repetition”. This “Ganges repetition” occurs at the end of the Magga-saṃyutta at SN V 38, and is then repeated at the end of the Bojjhaṅga-saṃyutta at SN V 134 and SN V 137, at the end of the Satipaṭṭhāna-saṃyutta at SN V 190, at the end of the Indriya-saṃyutta at SN V 241, at the end of the Balasaṃyutta at SN V 251, and at the end of the Iddhipāda-saṃyutta at SN V 290.</span></span></span> Instead of the Ganges imagery, the Chinese versions illustrate how the disciples of the Buddha advance towards Nirvāṇa with the example of how the water of a great rain flows downwards.<span class="note" id="mn73n44"><span class="details"><span class="p">[n.44] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247a15, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446c17, and T 1428 at T XXIV 963c22.</span></span></span> One of the Saṃyukta-āgama versions further enhances this image by indicating that the disciples advance in such a way due to receiving the ‘rain’ of the Buddha’s teaching.<span class="note" id="mn73n45"><span class="details"><span class="p">[n.45] <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446c19: 蒙佛法雨.</span></span></span></p>
+<p>The Mahāvacchagotta-sutta and its parallels record in similar ways that Vacchagotta requested to be ordained, in reply to which the Buddha explained a standard practice according to which followers of other sects need to go through a probation period of four months before they are given full ordination.<span class="note" id="mn73n46"><span class="details"><span class="p">[n.46] According to <a href="../../mn/mn73.html">MN 73</a> at MN I 494,10, Vacchagotta proclaimed that he would undergo a probation period for four years, a proposition which Horner 1957/1970: xvi considers to be slightly exaggerated. T 1428 at T XXIV 964a4 agrees with <a href="../../mn/mn73.html">MN 73</a>. In <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446c25, however, Vacchagotta only states that, even if he had to wait for four years he would do so, what to say about four months. In <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247a26 he just states that he is willing to undergo a four months’ probation period. <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247a20 and T 1428 at T XXIV 963c26 also indicate that the Buddha’s statement on the standard procedure regarding ordination of followers of other sects was prompted by an inquiry by Vacchagotta, as he had asked about the time period required for heterodox wanderers to get ordained.</span></span></span> The parallel versions agree that, nevertheless, Vacchagotta was soon admitted to the order.<span class="note" id="mn73n47"><span class="details"><span class="p">[n.47] Regarding such going forth after a probation period, the description in <a href="../../mn/mn73.html">MN 73</a> at MN I 494,3 reads as if the going forth is to be given only after the four months are over, catunnaṃ māsānaṃ accayena ... pabbājenti. Dhirasekera 1982/2007: 220 notes that this stands in contrast to the description of the probation period in Vin I 69,11, according to which the probationer should be shaved and clothed in robes. <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 446c22 seems to agree in this respect with the Theravāda Vinaya account, as it also indicates that the probationer should be shaved before the probation period begins, 先剃其鬚髮. In fact, for other monks to be able to assess the sincerity of a probationer, it would be convenient if the latter were to live in close association with them, which would be facilitated if he were given some degree of going forth. That is, the probationer would need to receive at least some form of pabbajā, so that he could set out begging alms with shaven head and wearing the robes of a Buddhist monastic, as keeping his former style of dress and hair would create a somewhat awkward situation for him as a freshly converted Buddhist in front of the donors. Hence, the formulation in <a href="../../mn/mn73.html">MN 73</a> should perhaps not be taken too literal. Thus, the point of the probation period would be, as explained by Olivelle 1974: 69, that “during this period the new recruit was excluded from the official acts of the community”, a situation thus “similar to the penal parivāsa by which a monk guilty of an offence was [temporarily] excluded from full communion with the community”. Deo 1956: 143 notes that in the Jain tradition a probation period had to be observed in general before being admitted to the monastic community, lasting either a week, or four months, or six months. According to Prasad 1972a: 89, there was, however, no special procedure for the case of those who had earlier been members of a different sect.</span></span></span></p>
+<p>Not long after his ordination, Vacchagotta went to the Buddha to receive further instructions. According to all versions, Vacchagotta made it clear that he had accomplished what was to be done by a disciple in higher training, an expression the commentary explains to imply that he had become a non-returner.<span class="note" id="mn73n48"><span class="details"><span class="p">[n.48] <a href="../../mn/mn73.html">MN 73</a> at MN I 494,18: yāvatakaṃ ... sekhena ñāṇena sekhāya vijjāya pattabbaṃ, anuppattaṃ taṃ mayā (Se-MN II 258,1 without taṃ), with the commentarial gloss at Ps III 202,5. In <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247b10, Vacchagotta proclaims that “in regard to what a sekha needs to know ... I know it all”, 我於學所應知 ... 悉知, and in <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 447a5 he declares that “in regard to the stage of a sekha, I have already realized it all”, 我於學地, 都證知已; cf. also T 1428 at T XXIV 964a18.</span></span></span></p>
+<p>According to the Pāli account, the Buddha instructed Vacchagotta to train himself further in tranquillity and insight, indicating that training in this way has the potential of leading to the attainment of the six supernormal knowledges. The Chinese versions present a broader range of benefits, as, in addition to the six supernormal knowledges,<span class="note" id="mn73n49"><span class="details"><span class="p">[n.49] The list of the six abhiññās in <a href="../../parallels/sa664.html">SĀ 664</a> appears somewhat jumbled, as <a href="../../parallels/sa664.html">SĀ 664</a> at T II 247b23 speaks first of the “divine eye”, 天眼, but after listing three other supernormal knowledges refers to the same divine eye again in terms of “knowledge of the birth and death [of beings]”, 生死智. This duplication would not be required and also stands in contrast to other discourses in the same Saṃyukta-āgama, which list the six abhiññās in the same sequence as the Pāli discourses, without any such duplication, cf., e.g., <a href="../../parallels/sa814.html">SĀ 814</a> at T II 209b10, <a href="../../parallels/sa815.html">SĀ 815</a> at T II 209c27, <a href="../../parallels/sa1042.html">SĀ 1042</a> at T II 273a23, and <a href="../../parallels/sa1142.html">SĀ 1142</a> at T II 302a25. In the case of <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 447a16, another noteworthy circumstance is that this discourse presents the divine eye and the divine ear together as a single supernormal knowledge, 天眼耳. This could be an abbreviation of 天眼天耳, an expression used in the same discourse collection in <a href="../../parallels/sa-2.117.html">SĀ2 117</a> at T II 417a19. Another discourse in the same collection, <a href="../../parallels/sa-2.119.html">SĀ2 119</a> at T II 418c27, presents the divine ear as a knowledge on its own as 天耳, followed by referring to the divine eye as “knowledge of the birth and death [of beings]”, 生死智.</span></span></span> they list:</p>
+<ul>
+<li>the four jhānas, the four brahmavihāras, the four immaterial attainments, the three lower stages of realization (see in more detail table 8.2).</li>
+</ul>
+<p>Regarding the reference in the Chinese versions to the three lower stages of realization, i.e. to the attainments of stream-entry, once-return, and non-return,<span class="note" id="mn73n50"><span class="details"><span class="p">[n.50] <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247b21, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 447a14, and T 1428 at T XXIV 964b3.</span></span></span> it is noteworthy that, according to the description given in all versions of Vacchagotta’s development at this point, he had already attained at least stream-entry, if not more. Thus, this part of their list of benefits appears to some degree redundant, as it mentions levels of attainment that he would have already reached.</p>
+<table class="comparative-table">
+<caption>Table 8.2: Listing of Benefits in <a href="../../mn/mn73.html">MN 73</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn73.html">MN 73</a></th><th><a href="../../parallels/sa664.html">SĀ 664</a></th></tr>
+<tr><td>supernormal powers (1)</td><td>4 jhānas</td></tr>
+<tr><td>divine ear (2)</td><td>4 brahmavihāras</td></tr>
+<tr><td>knowing others’ mind (3)</td><td>4 immaterial attainments</td></tr>
+<tr><td>recollecting past lives (4)</td><td>stream-entry</td></tr>
+<tr><td>divine eye (5)</td><td>once-return</td></tr>
+<tr><td>destruction of influxes (6)</td><td>non-return</td></tr>
+<tr><td></td><td>supernormal powers (→ 1)</td></tr>
+<tr><td></td><td>divine eye (→ 5)</td></tr>
+<tr><td></td><td>divine ear (→ 2)</td></tr>
+<tr><td></td><td>know others’ mind (→ 3)</td></tr>
+<tr><td></td><td>recollect past lives (→ 4)</td></tr>
+<tr><td></td><td>know birth & death of beings (→ 5)</td></tr>
+<tr><td></td><td>destruction of influxes (→ 6)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th><a href="../../parallels/sa-2.198.html">SĀ2 198</a></th><th>T 1428</th></tr>
+<tr><td>4 jhānas</td><td>1st jhāna</td></tr>
+<tr><td>4 brahmavihāras</td><td>2nd jhāna</td></tr>
+<tr><td>4 immaterial attainments</td><td>3rd jhāna</td></tr>
+<tr><td>stream-entry</td><td>4th jhāna</td></tr>
+<tr><td>once-return</td><td>4 brahmavihāras</td></tr>
+<tr><td>non-return</td><td>4 immaterial attainments</td></tr>
+<tr><td>supernormal powers (→ 1)</td><td>stream-entry</td></tr>
+<tr><td>know others’ mind (→ 3)</td><td>once-return</td></tr>
+<tr><td>recollect past lives (→ 4)</td><td>non-return</td></tr>
+<tr><td>divine eye and ear (→ 2, 5)</td><td>supernormal powers (→ 1)</td></tr>
+<tr><td>destruction of influxes (→ 6)</td><td>divine ear (→ 2)</td></tr>
+<tr><td></td><td>know others’ mind (→ 3)</td></tr>
+<tr><td></td><td>recollect past lives (→ 4)</td></tr>
+<tr><td></td><td>divine eye (→ 5)</td></tr>
+<tr><td></td><td>destruction of influxes (→ 6)</td></tr>
+</table>
+<p>The four versions report that Vacchagotta eventually realized the final goal.<span class="note" id="mn73n51"><span class="details"><span class="p">[n.51] <a href="../../mn/mn73.html">MN 73</a> at MN I 496,31, <a href="../../parallels/sa964.html">SĀ 964</a> at T II 247b28, <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 447a22, and T 1428 at T XXIV 964c26.</span></span></span> He then sent a message conveying his accomplishment to the Buddha, who in reply indicated that he already knew about Vacchagotta’s progress and had also been told about it by devas.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

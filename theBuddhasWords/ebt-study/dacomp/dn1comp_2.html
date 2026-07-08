@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 1 (Part 2) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 1: Brahmajāla-sutta (Part 2 of 4)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn1comp_1.html#content"></a><a id="next-sutta" href="./dn1comp_3.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2015 under the title "The Brahmajāla and the Early Buddhist Oral Tradition (2)" in the <i>Annual Report of the International Re</i><i>search Institute for Advanced Buddhology at Soka University</i>, 18: 79–94.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn1.html">DN 1</a> / <a href="../../parallels/da21.html">DĀ 21</a></p>
+<p class="read-links">Read: <a href="./dn1comp_1.html">Part 1</a> / <a href="./dn1comp_3.html">Part 3</a> / <a href="./dn1comp_4.html">Part 4</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>In this chapter I continue studying the <i>Brahmajāla </i>from the viewpoint of oral transmission. In the previous chapter I took a close-up look at the significance of the introductory phrase "thus have I heard", followed by zooming out, as it were, to take more distant shots of the opening narration of the <i>Brahmajāla</i> and of its exposition on morality. In the present chapter I continue along the same trajectory by taking a further step back to look at the discourse as a whole, that is, at its positioning in the <i>Dīgha-nikāya </i> and <i>Dīrgha-āgama</i> collections.</p>
+<p>In what follows I first survey the order of the <i>Dīgha-nikāya </i> and <i>Dīrgha-āgama</i> collections, and then turn to the principle of concatenation in relation to the <i>Brahmajāla</i>. Next I take a further step back to examine the basic division of these three collections and their different positioning of the section containing discourses related to morality. In the final part of the chapter I return to the early Buddhist oral transmission, considered from the viewpoint of modern-day psychological research on the functioning of memory.</p>
+<hr class="chapter-divider">
+<h3>The Order of the Collections of Long Discourses</h3>
+<p>One of the striking features of the early Buddhist discourse collections is the contrast between, on the one hand, the considerable degree of similarity in terms of content between parallel versions of a discourse transmitted by different schools and, on the other hand, the substantial degree of disagreement when it comes to the position of a discourse in different collections. In the case of the long-discourse collections this is particularly evident, since here three different versions can be compared with each other: the Theravāda <i>Dīgha-nikāya</i>, DN, the Sarvāstivāda/Mūlasarvāstivāda <i>Dīrgha-āgama </i>preserved in Sanskrit fragments, DĀ (Skt),<span class="note" id="dn1comp_2n1"><span class="details"><span class="p">[n.1] [2] Information on this collection is based on Hartmann and Wille 2014.</span></span></span> and the Dharmaguptaka <i>Dīrgha-āgama </i>extant in Chinese translation as the first text in the Taishō edition, DĀ (T 1).</p>
+<p>An impression of the degree of disparity can be gathered from the comparative chart below in table 2, which takes up only the discourses found in all three collections. The correlations are presented from the viewpoint of the <i>Dīgha-nikāya</i>. As the table clearly shows, the disagreement in the placing of discourses is remarkable.</p>
+<p>Only in one single instance do two discourses exactly follow each other in each of the three collections. This is the case for the <i>Soṇadaṇḍa-sutta</i>, DN 4, and the <i>Kūṭadanta-sutta</i>, DN 5, of the <i>Dīgha-nikāya </i>and their parallels, DĀ (Skt) 33 and DĀ (Skt) 34, as well as DĀ (T 1) 22 and DĀ (T 1) 23.<span class="note" id="dn1comp_2n2"><span class="details"><span class="p">[n.2] [4] Less than exact correspondences, however, can be seen on several occasions, showing groupings of discourses that did stay together in all three versions, albeit with minor variations in the positioning of the respective discourses vis-à-vis each other.</span></span></span> As the respective numbering shows, even this single pair occurs at different positions in the respective collections.</p>
+<p>The differing position of single discourses is quite evident in the case of the <i>Brahmajāla</i>. Whereas in the Theravāda <i>Dīgha-</i><i>nikāya</i> the <i>Brahmajāla-sutta</i> is the first of the thirty-four discourses, <span class="note" id="dn1comp_2n3"><span class="details"><span class="p">[n.3] [5] Bodhi 1978/1992: 1 takes this placing to be due to doctrinal motives: "that the Brahmajāla was assigned to this strategic position – that of the first discourse of the first collection – is not a matter of chance or haphazard arrangement, but a deliberate design on the part of the Elders who compiled the canon and set it in its present form. Its placement reflects a … keen awareness of the significance of the discourse both intrinsically and in relation to the Buddha's teaching as a whole. For just as our sutta, in terms of its position, stands at the entrance to the total collection of discourses spoken by the Buddha, so does its principal message provide a prolegomenon to the entire Dispensation itself. It is, so to speak, the sentry at the gateway to the Doctrine." Regarding the perceived doctrinal significance of the <i>Brahmajāla-sutta </i>in the Theravāda tradition, it is worth noting that the <i>Mahāvaṃsa</i> records its recitation as an important aspect of the conversion of Suvaṇṇabhūmi, Mhv 12.51; and the <i>Sa</i><i>mantapāsādikā</i> reports that the monks to be excluded from the third <i>saṅgīti </i> misrepresented the teaching of the Buddha as corresponding to the type of views taken up in the <i>Brahmajāla-sutta</i> (i.e., eternalism, semi-eternalism, etc.), Sp I 60,18 (the list of views in the Chinese counterpart, T 1462 at T XXIV 684a29, is shorter and does not correspond as closely to the basic structure of the <i>Brahmajāla </i>as the presentation in the <i>Samantapāsādikā</i>).</span></span></span> the <i>Brahmajāla-sūtra</i> is the last discourse in what appears to have been a Sarvāstivāda/Mūlasarvāstivāda<i> Dīrgha-</i><i>āgama</i> collection of forty-seven discourses.<span class="note" id="dn1comp_2n4"><span class="details"><span class="p">[n.4] [6] The position of the <i>Brahmajāla-sūtra</i> in the Sarvāstivāda/Mūlasarvāstivāda <i>Dīrgha-āgama</i> can be deduced from the <i>uddāna</i> provided in Hartmann 2004: 124f; for a detailed discussion of this <i>uddāna</i> cf. also Hartmann 2002. Confirmation comes from the indication in the <i>Abhidharmakośopāyikā</i>-<i>ṭīkā</i>, D 4094 <i>ju</i> 68a2 or Q 5595<i> tu</i> 76a1: <i>tshul khrims kyi phung po’i zhabs su tshangs </i> <i>pa’i dra ba las bshad pa</i>; reconstructed by Honjō 1984: 19 (Up 2036) as <i>śīla</i><i>skandikāyāṃ paścime brahmajālasūtre uktam</i>.</span></span></span> In the Dharmaguptaka <i>Dīrgha-āgama</i>, the corresponding discourse is the twentyfirst of thirty discourses in this collection.<span class="note" id="dn1comp_2n5"><span class="details"><span class="p">[n.5] [7] Notably, the Dharmaguptaka <i>Vinaya</i>, T 1428 at T XXII 968b15, reports that the recitation of the discourses at the first <i>saṅgīti</i> began with Mahākassapa asking Ānanda where the <i>Brahmajāla</i> had been delivered, 大迦葉即問阿難言: 梵動經在何處說? The fact that here the <i>Brahmajāla</i> is mentioned first, corresponding to the position of this discourse in the Theravāda collection as well as in the Theravāda account of the first <i>saṅgīti</i>, Vin II 287,16, has already been noted by Oldenberg 1898: 653; for a translation of this passage in T 1428 cf. Przyluski 1926: 193. Taking the listing of discourses in T 1428 to reflect a different and perhaps earlier ordering of the Dharmaguptaka <i>Dīrgha-āgama</i> would also entail, however, that the <i>Brahmajāla</i> was not part of the section on morality, as the discourses mentioned next in T 1428 do not belong to this section; cf. Anālayo 2014h: 36 note 68.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 2: The <i>Dīgha-nikāya </i>and Its Parallels</caption>
+<tr><th>DN</th><th>DĀ (Skt)</th><th>DĀ (T 1)</th></tr>
+<tr><td>1 <i>Brahmajāla-sutta</i></td><td>47</td><td>21</td></tr>
+<tr><td>2 <i>Sāmaññaphala-sutta</i></td><td>44</td><td>27</td></tr>
+<tr><td>3 <i>Ambaṭṭha-sutta</i></td><td>35</td><td>20</td></tr>
+<tr><td>4 <i>Soṇadaṇḍa-sutta</i></td><td>33</td><td>22</td></tr>
+<tr><td>5 <i>Kūṭadanta-sutta</i></td><td>34</td><td>23</td></tr>
+<tr><td>8 <i>Kassapasīhanāda-sutta</i></td><td>46</td><td>25</td></tr>
+<tr><td>9 <i>Poṭṭhapāda-sutta</i></td><td>36</td><td>28</td></tr>
+<tr><td>11 <i>Kevaddha-sutta</i></td><td>29</td><td>24</td></tr>
+<tr><td>12 <i>Lohicca-sutta</i></td><td>28</td><td>29</td></tr>
+<tr><td>13 <i>Tevijja-sutta</i></td><td>45</td><td>26</td></tr>
+<tr><td>14 <i>Mahāpadāna-sutta</i></td><td>5</td><td>1</td></tr>
+<tr><td>16 <i>Mahāparinibbāna-sutta</i><span class="note" id="dn1comp_2n6"><span class="details"><span class="p">[n.6] [3] In the case of the <i>Dīgha-nikāya</i>, the Mahāsudassana tale forms a separate discourse, DN 17.</span></span></span></td><td>6</td><td>2</td></tr>
+<tr><td>18 <i>Janavasabha-sutta</i></td><td>13</td><td>4</td></tr>
+<tr><td>19 <i>Mahāgovinda-sutta</i></td><td>14</td><td>3</td></tr>
+<tr><td>20 <i>Mahāsamaya-sutta</i></td><td>24</td><td>19</td></tr>
+<tr><td>24 <i>Pāṭika-sutta</i></td><td>9</td><td>15</td></tr>
+<tr><td>28 <i>Sampasādanīya-sutta</i></td><td>16</td><td>18</td></tr>
+<tr><td>29 <i>Pāsādika-sutta</i></td><td>15</td><td>17</td></tr>
+<tr><td>33 <i>Saṅgīti-sutta</i></td><td>3</td><td>9</td></tr>
+<tr><td>34 <i>Dasuttara-sutta</i></td><td>1</td><td>10</td></tr>
+</table>
+<hr class="chapter-divider">
+<h3>Concatenation</h3>
+<p>A central dynamic that appears to have influenced the positioning of a discourse within a collection is the principle of concatenation. Such concatenation is a recurrent feature in the early Buddhist texts, evident, for example, in the monastic code of rules. Taking the case of the Theravāda code of rules, <i>pātimokkha</i>, as an example, the phenomenon of concatenation can be illustrated with the sequence of several <i>pācittiya </i>rules for monks as follows:<span class="note" id="dn1comp_2n7"><span class="details"><span class="p">[n.7] [8] The following is based on von Hinüber 1999: 20.</span></span></span></p>
+<p><i>Pācittiya </i>4 prohibits teaching recitation word by word to someone who has not been "fully ordained".<span class="note" id="dn1comp_2n8"><span class="details"><span class="p">[n.8] [9] Norman and Pruitt 2001: 46,12: <i>yo pana bhikkhu anupasampannaṃ padaso </i> <i>dhammaṃ vāceyya, pācittiyaṃ</i>.</span></span></span> <i>Pācittiya </i>5 takes up the issue of "lying down" in the presence of someone who has not been "fully ordained".<span class="note" id="dn1comp_2n9"><span class="details"><span class="p">[n.9] [10] Norman and Pruitt 2001: 46,15: <i>yo pana bhikkhu anupasampannena uttari</i><i>dirattatirattaṃ sahaseyyaṃ kappeyya, pācittiyaṃ</i>.</span></span></span> Here the reference to someone who has not been fully ordained serves to connect otherwise unrelated rules. The same pattern continues with <i>pācittiya </i>6, which turns to "lying down" in the presence of a "woman".<span class="note" id="dn1comp_2n10"><span class="details"><span class="p">[n.10] [11] Norman and Pruitt 2001: 46,18:<i> yo pana bhikkhu mātugāmena sahaseyyaṃ </i> <i>kappeyya, pācittiyaṃ</i>.</span></span></span> In this case it is the act of lying down that connects <i>pācittiya </i>rules 5 and 6. <i>Pācittiya </i> 7 then regulates teaching the Dharma to "women",<span class="note" id="dn1comp_2n11"><span class="details"><span class="p">[n.11] [12] Norman and Pruitt 2001: 46,21: <i>yo pana bhikkhu mātugāmassa uttarichap</i><i>pañcavācāhi dhammaṃ deseyya aññatra viññunā purisaviggahena, pācittiyaṃ</i>.</span></span></span> thereby providing a connection to the presence of a woman mentioned in the preceding <i>pācittiya </i>rule.</p>
+<p>In this way, <i>pācittiya </i>rules that follow each other share a particular expression, such as "fully ordained", "lying down", or "woman". The way these particular rules are related to each other is peculiar to the Theravāda tradition, as the corresponding rules in other <i>Vi</i><i>naya</i>s do not follow the same sequence.<span class="note" id="dn1comp_2n12"><span class="details"><span class="p">[n.12] [13] Cf. the survey in Pachow 1955: 6 (appendix I).</span></span></span> In other words, such concatenation is not related to the original delivery of a particular textual item, but rather comes into being with the formation of textual collections or lists. The same principle can also be seen at work in the <i>Udāna </i>collection,<span class="note" id="dn1comp_2n13"><span class="details"><span class="p">[n.13] [14] For a study of concatenation in the <i>Udāna</i> cf. Anālayo 2009d: 50–53.</span></span></span> for example, or in other Pāli discourses.<span class="note" id="dn1comp_2n14"><span class="details"><span class="p">[n.14] [15] Cf., e.g., Allon 2001: 18–22 and Anālayo 2011b: 11–13.</span></span></span></p>
+<p>In the case of the first discourse in the <i>Dīgha-nikāya</i>, the <i>Brah</i><i>majāla-sutta</i>, the same basic principle provides connections to the next <i>Dīgha-nikāya</i> discourse in several ways. The <i>Brahmajāla-</i><i>sutta</i> shares with the second discourse, the <i>Sāmaññaphala-sutta</i>, the giving of a detailed exposition on morality. In addition to this common theme of providing an account of the training in morality (<i>sīla</i>), shared among discourses in this section of the <i>Dīgha-nikāya</i>, the <i>Sīlakkhandha-vagga</i>, the first two discourses are also related to each other by other forms of concatenation.</p>
+<p>The <i>Brahmajāla-sutta</i> and the <i>Sāmaññaphala-sutta</i> share the theme of providing a contrast between the Buddha's insightful understanding and the various views held by non-Buddhist teachers.<span class="note" id="dn1comp_2n15"><span class="details"><span class="p">[n.15] [16] My indications are based on Franke 1913c, who points out similar relations between other discourses in the <i>Dīgha-nikāya</i> as well. In view of the general lack of awareness of the nature of oral transmission it is perhaps not surprising that these findings led Franke to arrive at unconvincing conclusions regarding the authorship of the <i>Digha-nikāya </i>as well as the <i>Majjhima-nikāya</i>; cf. Franke 1913a: xff, 1913b, 1914, and 1915, as well as Sferra 2011. For critical replies to Franke cf. the references in Hartmann 2014: 149 note 15.</span></span></span> These take the form of sixty-two standpoints for views examined in the <i>Brahmajāla-sutta</i>,<span class="note" id="dn1comp_2n16"><span class="details"><span class="p">[n.16] [17] The examination of sixty-two standpoints for views shows considerable similarity in the different versions of the <i>Brahmajāla</i>, including a discourse quotation in T 1548 at T XXVIII 656b19 to 661a7; cf. below p. 115ff.</span></span></span> whereas the <i>Sāmaññaphala-sutta </i>presents six views attributed to well-known contemporary teachers.<span class="note" id="dn1comp_2n17"><span class="details"><span class="p">[n.17] [18] The parallel versions differ considerably in regard to what particular view should be associated with which of these six teachers; cf. the studies by Bapat 1948, Basham 1951: 21–23, Vogel 1970, Meisig 1987a, and MacQueen 1988.</span></span></span></p>
+<p>A formulaic parallelism occurs in the case of the fourth type of equivocation among the sixty-two standpoints for views in the <i>Brahmajāla-sutta</i>, whose description uses the same terms and expressions as the record of the position taken by the teacher Sañ- jaya Belaṭṭhiputta in the <i>Sāmaññaphala-sutta</i>.<span class="note" id="dn1comp_2n18"><span class="details"><span class="p">[n.18] [19] This parallelism involves a substantial portion of text: DN 1 at DN I 27,11 to 27,31 and DN 2 at DN I 58,24 to 59,8, which report in the same terms how someone refuses to give an answer to a series of questions, differing only in so far as in DN 1 this is worded in the third person singular, whereas in DN 2 Sañjaya is the speaker, wherefore the same comes in the first person singular.</span></span></span> Another instance of formulaic parallelism can be found in the ways those who hold eternalist views in the <i>Brahmajāla-sutta</i> qualify the self and the world. These correspond to the qualifications used for the seven basic principles on which according to the <i>Sāmaññaphala-</i><i>sutta</i> the teacher Pakudha Kaccāyana based his view.<span class="note" id="dn1comp_2n19"><span class="details"><span class="p">[n.19] [20] DN 1 at DN I 14,2 (again at 15,6, 16,1, and 16,22) and DN 2 at DN I 56,22.</span></span></span></p>
+<p>The <i>Brahmajāla-sutta </i>indicates that eternalist views can arise after one has achieved the ability to recollect one's former lives. The <i>Sāmaññaphala-sutta</i> describes this ability in recollection with the same standardized formula, differing only in so far as here such ability features as one of the fruits of living the life of a recluse.<span class="note" id="dn1comp_2n20"><span class="details"><span class="p">[n.20] [21] DN 1 at DN I 13,14 and DN 2 at DN I 81,12.</span></span></span></p>
+<p>The third of the annihilationists in the <i>Brahmajāla-sutta</i> refers to a self of mind-made nature. The same terms recur in the description of another of the fruits of living the life of a recluse in the <i>Sāmaññaphala-sutta</i>. <span class="note" id="dn1comp_2n21"><span class="details"><span class="p">[n.21] [22] DN 1 at DN I 34,24 and DN 2 at DN I 77,10.</span></span></span> The proclamations of Nirvāṇa here and now in the <i>Brahmajāla-sutta</i> also share the standard description of the four absorptions with the <i>Sāmaññaphala-sutta</i>, where these feature as other fruits of living the life of a recluse.<span class="note" id="dn1comp_2n22"><span class="details"><span class="p">[n.22] [23] For the case of the first absorption cf. DN 1 at DN I 37,1 and DN 2 at DN I 73,23. Such elements found in the standard gradual-path account recur in all the <i>Dīgha-nikāya </i>discourses that have this account. In all such discourses these particular elements could in principle have provided concatenation with DN 1. The fact that DN 2 follows DN 1 would thus be due to those shared elements that are not part of the standard gradual-path account, a relationship then further strengthened during oral transmission by elements such as the present one.</span></span></span></p>
+<p>In this way, the<i> Brahmajāla-sutta</i> and the <i>Sāmaññaphala-sutta</i> as the first two discourses in the Theravāda <i>Dīgha-nikāya</i> are related to each other through thematic and formulaic concatenation.</p>
+<p>Now in the Dharmaguptaka and the Sarvāstivāda/Mūlasarvāstivāda<i> Dīrgha-āgama </i>collections the corresponding two discourses do not occur together. Nevertheless, some degree of concatenation can be discerned in the case of the Dharmaguptaka counterpart to the <i>Brahmajāla-sutta</i>, and its neighbours.</p>
+<p>The twentieth discourse in the Dharmaguptaka<i> Dīrgha-āgama</i>, DĀ 20, shares with the next discourse, the <i>Brahmajāla</i>, DĀ 21, the fact that both of their introductory narrations involve a non- Buddhist teacher and his student. In both discourses one of these two behaves disrespectfully towards the Buddha: in DĀ 20 the student disparages the Buddha to his face, in DĀ 21 the teacher keeps speaking in dispraise of the Buddha while following him closely during a journey.<span class="note" id="dn1comp_2n23"><span class="details"><span class="p">[n.23] [25] DĀ 20 at T I 82b24 and DĀ 21 at T I 88b16.</span></span></span></p>
+<p>The two discourses also share the standard description of the four absorptions, which in DĀ 20 is part of its account of the gradual path, whereas in DĀ 21 the same description occurs in its exposition of views on Nirvāṇa here and now.<span class="note" id="dn1comp_2n24"><span class="details"><span class="p">[n.24] [26] For the case of the first absorption cf. DĀ 20 at T I 85b12 and DĀ 21 at T I 93b20.</span></span></span> Again, the ability to create a mind-made body in DĀ 20 has a counterpart in the mindmade body as the ground for one of the views in DĀ 21.<span class="note" id="dn1comp_2n25"><span class="details"><span class="p">[n.25] [27] DĀ 20 at T I 85c17 and DĀ 21 at T I 93b3.</span></span></span> The standard description of the ability to recollect one's past lives is also found in both discourses. In DĀ 20 this is part of the account of the gradual path, whereas in DĀ 21 such ability leads to eternalist views.<span class="note" id="dn1comp_2n26"><span class="details"><span class="p">[n.26] [28] DĀ 20 at T I 86b2 and DA 21 at T I 90a11; needless to say, elements found in the standard gradual-path account recur in all the <i>Dīrgha-āgama </i>discourses that have this account. In all such discourses these particular elements could have provided concatenation with DĀ 21.</span></span></span></p>
+<p>Another motif in common between the two discourses is the image of seeing fishes in water. In DĀ 20 this comes as part of a simile to illustrate the destruction of the influxes, whereas in DĀ 21 this motif features in a simile that explains the function of the whole discourse to be comparable to a fisherman who completely spreads his net over a small pond, thereby being able to catch all the beings that dwell in its water.<span class="note" id="dn1comp_2n27"><span class="details"><span class="p">[n.27] [29] DĀ 20 at T I 86c9 and DĀ 21 at T I 93c28.</span></span></span></p>
+<p>Turning from the discourse that precedes DĀ 21 to the one that follows it, the topic of the Buddha's fame, broached at the outset of DĀ 21 as something on account of which his disciples should not become elated, recurs at the outset of the next discourse in the same collection, DĀ 22. This discourse gives a detailed report of the fame of the Buddha and explains why even for a distinguished brahmin it is appropriate to approach and visit him.<span class="note" id="dn1comp_2n28"><span class="details"><span class="p">[n.28] [30] DĀ 21 at T I 88c13 and DĀ 22 at T I 95a1.</span></span></span></p>
+<p>DĀ 22 also has the account of the gradual path and thus shares with DĀ 21 the four absorptions, the mind-made body, and the recollection of one's past lives.<span class="note" id="dn1comp_2n29"><span class="details"><span class="p">[n.29] [31] DĀ 22 at T I 96c5.</span></span></span></p>
+<p>In this way, reciters of the Dharmaguptaka <i>Dīrgha-āgama </i> would have found their work facilitated by memory aids through concatenation comparable to those available for the reciters of the Theravāda <i>Dīgha-nikāya</i>. In other words, the needs of oral transmission appear to have influenced the final shape of the two collections in similar ways, albeit with different results.</p>
+<p>In the case of the Sarvāstivāda/Mūlasarvāstivāda<i> Dīrgha-āgama </i> collection the fragments that have been preserved of the <i>Brahma</i><i>jāla-sūtra </i>and the discourse that precedes it, the <i>Kāśyapa</i>-<i>sūtra</i>, are unfortunately not sufficient to enable a full study of correspondences between these two discourses.<span class="note" id="dn1comp_2n30"><span class="details"><span class="p">[n.30] [32] For published fragments of the <i>Brahmajāla-sūtra</i> cf. Hartmann 1989: 48f and 54 (including SHT X 4189), Hartmann 1991 §§13 to 16 (for §14 cf. also Ye 2009: 240), Hartmann 2002: 135, SHT III 803 and 882b, Waldschmidt et al. 1971: 5–7 and 131f (on the latter cf. Skilling 1997: 470 note 8), SHT V 1571, Sander and Waldschmidt 1985: 262f, and SHT VI 1248 and 1356, Bechert and Wille 1989: 48 and 95. For published fragments of the <i>Kāśyapa-</i><i>sūtra</i> cf. SHT VI 1296, Bechert and Wille 1989: 70, Hartmann 1991 §§69–73 (including SHT V 1119 and SHT VIII 1874), perhaps Or 15003/77, Wille 2006: 89f, and SHT X 3656, Wille 2008: 147f. I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of the as yet unpublished fragments of these two discourses from the <i>Dīrgha-</i><i>āgama</i> manuscript.</span></span></span> Nevertheless, both are located in the <i>Śīlaskandha-nipāta</i>, which at least implies that they would have shared an exposition of the theme of morality.</p>
+<hr class="chapter-divider">
+<h3>The Section on Morality</h3>
+<p>The exposition on morality in the Tibetan versions of the <i>Brahmajāla</i> is rather short.<span class="note" id="dn1comp_2n31"><span class="details"><span class="p">[n.31] [33] Cf. the discussion above p. 63ff.</span></span></span> In addition to being much shorter than the exposition on morality as part of the account of the gradual path in the Theravāda <i>Brahmajāla-sutta </i>and its Dharmaguptaka parallel, it is also shorter than the exposition on morality in a version of the gradual-path account preserved in the <i>Saṅghabheda</i>-<i>vastu</i> of the Mūlasarvāstivāda<i> Vinaya</i>.<span class="note" id="dn1comp_2n32"><span class="details"><span class="p">[n.32] [34] Gnoli 1978: 232,9 to 240,17.</span></span></span></p>
+<p>The section on morality in the Dharmaguptaka discourse is similar in length to the sections on morality in the discourses in the Dharmaguptaka<i> Dīrgha-āgama </i>that have the gradual-path account.<span class="note" id="dn1comp_2n33"><span class="details"><span class="p">[n.33] [35] DĀ 20 at T I 83c14 to T I 84c13 and DĀ 21 at T I 88c19 to T I 89c18, thus in both versions the exposition on morality corresponds to one page in the Taishō edition.</span></span></span> In the case of the Theravāda <i>Dīgha-nikāya</i>, the exposition of morality in the <i>Brahmajāla-sutta </i>is longer than its counterparts in those <i>Dīgha-nikāya</i> discourses that have the gradual path.<span class="note" id="dn1comp_2n34"><span class="details"><span class="p">[n.34] [36] The exposition on morality in DN 1 ranges from DN I 4,1 to 12,14, comprising over eight pages in Ee, whereas the same topic in DN 2 goes from DN I 63,13 to 69,31, less than seven pages in the same edition. The difference appears to be mainly due to the fact that the similar exposition of each aspect of morality is followed by a different concluding statement in the two versions, where DN 1 keeps highlighting that a worlding might praise the Tathāgata for such conduct, whereas DN 2 just briefly notes that such is the conduct (of a monk).</span></span></span></p>
+<p>In view of these respective differences in length, it seems that the positioning of the <i>Brahmajāla </i>and its counterparts in the section on morality could have been influenced by length, in that the version with the longer exposition on this topic comes first, followed by the comparatively shorter exposition.</p>
+<p>Following this rationale, the Theravāda <i>Brahmajāla-sutta</i> should indeed be the first in the <i>Sīlakkhandha-vagga </i>of the <i>Dīgha-</i><i>nikāya</i>. On the same reasoning, the Sarvāstivāda/Mūlasarvāstivāda<i> Brahmajāla-sūtra</i> should indeed be at the end of the chapter on morality, the <i>Śīlaskandha-nipāta</i>, where it comes after all the discourses that share the longer exposition on morality as part of the gradual path, given in full or in abbreviation.<span class="note" id="dn1comp_2n35"><span class="details"><span class="p">[n.35] [37] Melzer 2006: 23 notes that the full account of the gradual path is only given in the twenty-seventh discourse, which is actually the third discourse in the <i>Śīlaskandha-nipāta</i>. This alerts one to the fact that other influences must additionally have shaped the final order in the Sarvāstivāda/Mūlasarvāstivāda <i>Dīrgha-āgama </i>collection as now extant in the recently discovered fragments. Perhaps further relocations within this collection took place at a time when the requirements of oral transmission were no longer as prominent as during an earlier period, given that for one who embarks on memorizing the <i>Śīlaskan</i><i>dha-nipāta</i> it would have been natural and convenient if already the first discourse in this section gave the full account on morality.</span></span></span></p>
+<p>Thus the opposite placing of the two discourses – the Theravāda <i>Brahmajāla-sutta</i> at the beginning and the Sarvāstivāda/Mūlasarvāstivāda <i>Brahmajāla-sūtra </i>at the end of the respective collections – could be following the same logic, according to which the longer account on morality is given precedence, and the shorter one comes after it. This comes combined with the fact that their sections on morality, the <i>Sīlakkhandha-vagga </i>or <i>Śīlaskandha-ni</i><i>pāta</i>, are also found in different positions in the two collections. I will return to the positioning of the section on morality in the next part of this chapter.</p>
+<p>In the case of the Dharmaguptaka<i> Dīrgha-āgama</i>, its version of the <i>Brahmajāla</i>, DĀ 21, is the second discourse in the section on morality. DĀ 21 is preceded by DĀ 20, which gives the full account of the gradual path; it is followed by discourses that abbreviate their exposition on morality. It would perhaps have been more natural if DĀ 20 had been placed in second position, thereby functioning as the leader during oral recitation for the ensuing discourses that abbreviate not only its exposition on morality, but also its exposition of the remainder of the gradual path. Nevertheless, given that the expositions on morality in DĀ 21 and DĀ 20 are of the same length, either of the two could take the leading position, so that perhaps concatenation or still other considerations influenced the respective position of these two discourses.</p>
+<p>Needless to say, the positioning of the <i>Brahmajāla </i>in the collections of long discourses preserved by the Dharmaguptaka, Sarvāstivāda/Mūlasarvāstivāda, and Theravāda traditions does not carry any implications about the earliness or otherwise of its contents. If the shifting around of textual material results in a placing that can be identified as comparatively later, this does not mean that the contents of the text in question must also be late.<span class="note" id="dn1comp_2n36"><span class="details"><span class="p">[n.36] [38] Cf. also Anālayo 2010g: 45.</span></span></span> It is perfectly possible that a text was allocated to a different position without its contents being affected, just as a text that stays in its location can be affected by changes to its content during oral transmission.</p>
+<hr class="chapter-divider">
+<h3>The Positioning of the Section on Morality</h3>
+<p>In an oral setting, the discourses in the <i>Sīlakkhandha-vagga</i> of the <i>Dīgha-nikāya </i>that share an account of the gradual path of training are easily memorized as a group,<span class="note" id="dn1comp_2n37"><span class="details"><span class="p">[n.37] [39] For studies of this account of the gradual path cf., e.g., Franke 1917: 50– 80, Eimer 1976: 26–34, Bucknell 1984, Meisig 1987a: 35–80, Crangle 1994: 149–152, Ramers 1996, Freiberger 2000: 71–86, Melzer 2006: 12–24, and Anālayo 2016d. This gradual account has its counterpart in the <i>Brahmajāla-</i><i>sutta</i> in three graded sections on morality: a short section, a middle-length section, and a great section; for a discussion of which cf. above p. 63ff.</span></span></span> because of the substantial amount of text common to the discourses, which needs to be learned only once.</p>
+<p>After the section on morality, the <i>Dīgha-nikāya </i>continues with a group of ten discourses, most of which begin with the qualification "great", <i>mahā°</i>. Probably the best known of these "great" discourses is the <i>Mahāparinibbāna-sutta</i> (DN 16), which records the Buddha's last days, decease, and funeral. Another discourse of similar hagiographic interest is the <i>Mahāpadāna-sutta </i>(DN 14), which provides a description of former Buddhas. The third section in the <i>Dīgha-nikāya </i>then is the <i>Pāṭika-vagga</i>, which takes its name from its first discourse, the <i>Pāṭika-sutta </i>(DN 24).</p>
+<p>Regarding the division of the<i> Dīgha-nikāya </i>into these three sections, the <i>Samantapāsādikā </i>advises that a beginner in recitation should first of all start with the middle section, entitled the <i>Mahā-vagga</i>. This differs from the <i>Majjhima-nikāya</i>, where the <i>Samantapāsādikā </i>recommends the first of its three sections to a neophyte reciter, the other two sections being for those who have already memorized this first group of fifty discourses.<span class="note" id="dn1comp_2n38"><span class="details"><span class="p">[n.38] [40] Sp IV 789,14: <i>sace majjhimabhāṇako hoti, mūlapaṇṇāsako uggahetabbo, </i> <i>dīghabhāṇakena mahāvaggo</i>; cf. also the discussion below p. 427f.</span></span></span></p>
+<p>Had the <i>Mahā-vagga </i>been considered the most important section to be memorized from the outset of the formation of the collection, it would have been natural for it to stand in first place. The fact that this is not the case suggests the possibility that the present order in the <i>Dīgha-nikāya </i>might still reflect a time when the expositions on morality were considered to be the material that reciters should learn first of all. These expositions on morality would in fact provide a reciter with basic instructions similar in kind to several of the discourses found among the first of the three sections of the <i>Majjhima-nikāya</i>.</p>
+<p>With the passage of time, however, it could reasonably be expected that the inspiration provided by discourses like the <i>Mahā</i><i>padāna-sutta </i>and the <i>Mahāparinibbāna-sutta</i> acquired increasing importance. After the passing away of the Buddha, with the increase of disciples who had never had a chance to meet the master in person, or even meet someone who had been in his living presence, there would have been an increasing demand for such a type of information in order to foster inspiration and strengthen faith. With the notion of several past Buddhas in place, such interest would naturally have included former Buddhas.<span class="note" id="dn1comp_2n39"><span class="details"><span class="p">[n.39] [41] The inspirational effect of the account of former Buddhas is in fact explicitly stated in the Chinese version of the discourse itself, DĀ 1 at T I 3c9: "who, being a wise one, would on hearing this [<i>Mahā</i>]-<i>avadāna</i> not be delighted and give rise to joyful affection in the mind?", 何有智者聞此因緣而不歡喜, 起 愛樂心.</span></span></span> In this situation, it would indeed be preferable for a neophyte reciter of the <i>Dīgha-</i><i>nikaya </i>to take up first the chapter that contains such inspirational material. If there should indeed have been such a shift of interest, it did not lead to a shifting of the <i>Mahā-vagga </i>to first position within the <i>Dīgha-nikāya</i>, but only influenced the commentarial recommendation.</p>
+<p>The situation is different in the <i>Dīrgha-āgama </i>collections. The <i>Mahāvadāna-sūtra </i>and the <i>Mahāparinirvāṇa-sūtra</i> are the fifth and sixth members of the first of the three sections of the Sarvāstivāda/Mūlasarvāstivāda <i>Dīrgha-āgama</i>, entitled the <i>Ṣaṭsūtra</i><i>ka-nipāta</i>. In addition to the <i>Mahāvadāna-sūtra </i>and the<i> Mahā</i><i>parinirvāṇa-sūtra</i>, another discourse in the <i>Ṣaṭsūtraka-nipāta</i> that is comparable to these two, in the sense of providing hagiographic information, is the <i>Catuṣpariṣat-sūtra</i>.<span class="note" id="dn1comp_2n40"><span class="details"><span class="p">[n.40] [42] For a study of the <i>Catuṣpariṣat-sūtra </i>cf. Waldschmidt 1951/1967; for a translation cf. Kloppenborg 1973.</span></span></span> This discourse gives an account of the coming into existence of the four assemblies of Buddhist disciples (monastic and lay, male and female). The <i>Catuṣpariṣat-sūtra</i> has its counterparts in other Buddhist schools in the respective <i>Vinaya</i>s, a situation that suggests a process of textual movement between <i>Vinaya</i>s and discourse collections. In fact, even the <i>Mahāparinirvāṇa-sūtra </i> may have originally been a <i>Vinaya </i>narrative that was subsequently shifted to the collection of long discourses.<span class="note" id="dn1comp_2n41"><span class="details"><span class="p">[n.41] [43] Cf., e.g., Frauwallner 1956: 46 and the discussion in Hirakawa 1993/1998: 264. On the interrelation between <i>Vinaya </i>and discourse literature cf. also Anālayo 2014f and 2016e.</span></span></span></p>
+<p>The <i>Ṣaṭsūtraka-nipāta </i>was at times handed down independently of the whole collection.<span class="note" id="dn1comp_2n42"><span class="details"><span class="p">[n.42] [44] The popularity of this group of six discourses has already been noted by Schlingloff 1962: 7; cf. also Skilling 1980: 30f and Hartmann 1994 and 2014: 144–148.</span></span></span> The importance accorded to the discourses in this set of six is in line with the indication in the <i>Samantapāsādikā </i>that the grouping of discourses that contains the <i>Mahāpadāna-sutta </i> and the <i>Mahāparinibbāna-sutta </i> should be learned first.</p>
+<p>The Chinese counterparts to the <i>Mahāvadāna-sūtra </i>and the <i>Mahāparinirvāṇa-sūtra</i> are the first two discourses in the <i>Dīrgha-</i><i>āgama </i>preserved in Chinese translation, DĀ 1 and DĀ 2.<span class="note" id="dn1comp_2n43"><span class="details"><span class="p">[n.43] [45] DĀ 1 has been translated by Jin 2011, DĀ 2 by Weller 1939 and 1940 and Jin 2013, and both by Ichimura 2015: 7–171.</span></span></span> In this way the Dharmaguptaka <i>Dīrgha-āgama</i>, the Sarvāstivāda/Mūlasarvāstivāda<i> Dīrgha-āgama</i>, and the Theravāda commentary, the <i>Samantapāsādikā</i>, all give pride of place to the grouping of discourses that contains these two discourses.</p>
+<p>The overall situation could be summarized by showing the respective placement of the chapter that contains the <i>Mahāvadāna-</i><i>sūtra</i> and the <i>Mahāparinirvāṇa-sūtra</i> in the <i>Dīrgha-āgama/Dīgha-</i><i>nikāya </i>collection of each of the three traditions – Dharmaguptaka, Sarvāstivāda/Mūlasarvāstivāda, and Theravāda – followed by giving also the indication on the importance of this chapter according to the Theravāda commentary, the <i>Samantapāsādikā</i>.</p>
+<table class="comparative-table">
+<caption>Table 3: The Position of the <i>Mahā</i>-section</caption>
+<tr><th></th><th><i>Mahā-</i>section</th></tr>
+<tr><td>Dharmaguptaka</td><td>first in the collection</td></tr>
+<tr><td>Sarvāstivāda/Mūlasarvāstivāda</td><td>first in the collection</td></tr>
+<tr><td>Theravāda</td><td>second in the collection</td></tr>
+<tr><td>Theravāda commentary</td><td>first to be learned</td></tr>
+</table>
+<p>Combining the prominent place given to the section that contains the <i>Mahāvadāna-sūtra</i> and the <i>Mahāparinirvāṇa-sūtra</i> with the patterns apparently at work within the sections on morality, the diametrically opposed positions of the <i>Brahmajāla </i>as the first discourse in the Theravāda collection and the last in the Sarvāstivāda/ Mūlasarvāstivāda collection could indeed be the results of similar influences.</p>
+<p>In the case of the Theravāda <i>Dīgha-nikāya</i>, the<i> Brahmajāla-</i><i>sutta </i>would stand in leading position in the section on morality because its treatment of this topic is longer than that given in other discourses in this section. Due to what might have been an emphasis on this topic of morality at an early stage in the formation of the whole discourse collection, the <i>Sīlakkhandha-vagga</i> is still the first of the three sections in the <i>Dīgha-nikāya</i>.</p>
+<p>The Sarvāstivāda/Mūlasarvāstivāda<i> Brahmajāla-sūtra </i>has an account of morality that is shorter than the coverage given to this topic in its version of the gradual path. Therefore the <i>Brahmajāla-</i><i>sūtra </i>stands at the end of the <i>Śīlaskandha-nipāta</i>, which perhaps by yielding pride of place to the <i>Ṣaṭsūtraka-nipāta</i> has become the last of the three sections in this collection.</p>
+<p>In sum, it seems that the requirements of oral transmission could have influenced the positioning of the <i>Brahmajāla</i> in these two collections of long discourses in similar ways, even though the net results of this influence are entirely different placements of the discourse.</p>
+<p>Such different placing of the <i>Brahmajāla </i>reflects the circumstance that the order of the collection was clearly not seen as something fixed that needed to be kept at all cost, but rather as open to change in order to accommodate the particular needs of different reciter traditions. This stands in contrast to the contents of individual discourses, where accuracy in transmission was clearly an important concern.<span class="note" id="dn1comp_2n44"><span class="details"><span class="p">[n.44] [46] Cf. above p. 68ff.</span></span></span> In fact, had improvisation been characteristic for the contents of the discourses, one would expect parallel versions to be as different from each other as their order in the discourse collections. This is clearly not the case. Whereas the providing of a commentary on a discourse and its placing within a particular collection were relatively free at least during an early stage, the transmission of its actual contents was quite probably from the outset guided by a concern for accurate reproduction of what had been "thus heard" by successive generations of reciters.</p>
+<hr class="chapter-divider">
+<h3>The Issue of Memory</h3>
+<p>In order to appreciate how a concern for accurate reproduction of what had been "thus heard" could nevertheless result in the kind of differences that can be found between parallel versions of the early discourses in general and of the <i>Brahmajāla </i>in particular, modern-day research on memory provides helpful indications.<span class="note" id="dn1comp_2n45"><span class="details"><span class="p">[n.45] [47] For a more detailed discussion cf. Anālayo 2011b: 855–891, where I take up various features of the early Buddhist oral transmission in relation to memory.</span></span></span></p>
+<p>Such research has for quite some time made it clear that memory is of a constructive nature.<span class="note" id="dn1comp_2n46"><span class="details"><span class="p">[n.46] [48] This has already been pointed out by the pioneer in memory research, Bartlett 1932: 205, who explains that "if we consider evidence rather than presupposition, remembering appears to be far more decisively an affair of construction, rather than one of mere reproduction."</span></span></span> At the time of attempting to recall, the mind constructs the information anew. Moreover, already at the time of hearing something that one intends to remember, information is not simply taken in. Instead, the information received is combined with inferences. These inferences are stored in memory together with the material actually heard. As a result, on recall one is at times not able to distinguish clearly between the original information and the inferences one has drawn.</p>
+<p>As a general rule, a text will be better remembered if inferences are drawn.<span class="note" id="dn1comp_2n47"><span class="details"><span class="p">[n.47] [49] Cf., e.g., Myers and Duffy 1990 as well as Mason and Just 2004.</span></span></span> Recent research has discovered an exception to this basic pattern, which is of importance for understanding the early Buddhist oral transmission in its ancient Indian historical setting. According to this finding, someone who does not understand a particular text at all could remember it with more precision than someone who understands this text.</p>
+<p>The experiment in question presented instructions about the use of Microsoft Word and Microsoft Excel to three groups of readers, asking them to remember the text. Subsequently memory was tested through a recognition task in which the participants had to decide if a particular statement had been made in the original text. Of these participants, the first group had no experience with computer software at all, the second group had some experience, and the third group had advanced knowledge of computer software. Contrary to the expectations of the researchers, those who had no experience with computer software at all were more rapidly able to recognize sentences correctly than the other two groups.<span class="note" id="dn1comp_2n48"><span class="details"><span class="p">[n.48] [50] Caillies et al. 2002; on the need to distinguish between the bare information to be recalled and its relational processing when making sense of a text as a whole cf. also Long et al. 2012.</span></span></span></p>
+<p>This finding on the workings of human memory helps to appreciate the nature and limitations of the early Buddhist oral transmission. Situated in their historical and cultural context, the early Buddhist reciters would have had a precedent in the Vedic oral tradition. This oral transmission had acquired a high degree of precision based on a systematic training of reciters from their early youth onwards. The existence of young brahmins who at the age of sixteen had already mastered the <i>Veda</i>s is in fact reflected in the <i>Assalāyana-sutta </i>and a Chinese parallel.<span class="note" id="dn1comp_2n49"><span class="details"><span class="p">[n.49] [51] MN 93 at MN II 147,10 reports that a sixteen-year-old brahmin had acquired mastery of the three <i>Veda</i>s. The parallel T 71 at T I 876c10 also records his age to have been fifteen or sixteen, whereas another parallel, MĀ 151 at T I 663c8 (which also reports his ability, notably in terms of his knowledge of the <i>four </i> <i>Veda</i>s), does not specify his age.</span></span></span> Notably, in the Vedic model young brahmin reciters trained in memorizing texts whose meaning they only learned later.<span class="note" id="dn1comp_2n50"><span class="details"><span class="p">[n.50] [52] Cf., e.g., von Hinüber 1989: 67 and Bronkhorst 2016: 164.</span></span></span></p>
+<p>The early Buddhist oral tradition differs in two basic respects. One is that Buddhist monastics would start training in recitation of the texts only after ordination, which in most cases can safely be assumed to have taken place when they were older than young brahmins embarking on their training in Vedic lore.<span class="note" id="dn1comp_2n51"><span class="details"><span class="p">[n.51] [53] Cf. von Hinüber 1989: 67f.</span></span></span> Moreover, whereas for the Vedic reciters correct wording was of crucial importance, for their early Buddhist counterparts the content of the text to be transmitted was central.<span class="note" id="dn1comp_2n52"><span class="details"><span class="p">[n.52] [54] In the words of Lopez 1995: 37, "the śrotriyas were concerned with the precise preservation of the sounds of the Vedas while the śrāvakas were concerned with the preservation of the meaning of the Buddha's word in the vernacular."</span></span></span> This is neatly exemplified in the <i>Alagaddūpama-sutta </i>and a Chinese parallel, according to which those who learn the Buddha's teachings without endeavouring to understand them are fools.<span class="note" id="dn1comp_2n53"><span class="details"><span class="p">[n.53] [55] MN 22 at MN I 133,23 and MĀ 200 at T I 764a12. Lamotte 1949: 346 explains that "le religieux qui se borne à mémoriser les textes sans essayer de les comprendre manque à son devoir."</span></span></span></p>
+<p>In terms of modern research on memory, early Buddhist reciters were encouraged to draw inferences, unlike those memorizing the Vedas, who from early childhood were instead trained in precise textual recall without understanding and thus without drawing inferences. The reason why this worked so well for the Vedic reciters is precisely because they did not understand the text they were memorizing, as the experiment with Microsoft Word and Excel shows. Understanding the text would have hindered their ability to memorize it with high precision.</p>
+<p>This makes it only natural that the early Buddhist oral transmission could not arrive at a level of precision comparable to the Vedic reciters. In fact the Buddhist discourses reflect the use of repetition and other mnemonic aids to a much greater extent,<span class="note" id="dn1comp_2n54"><span class="details"><span class="p">[n.54] [56] Cf. von Hinüber 1994b: 6 and Allon 1997b: 363.</span></span></span> pointing to the evident need of the Buddhist reciters to boost their ability to recall with precision in a way not required by their Vedic counterparts.</p>
+<p>In view of all this, one would indeed expect variations to come into being during successive generations of Buddhist reciters, simply because their attempt to memorize with precision was hampered, if I may use this word, by their understanding. Moreover, the difficulty of distinguishing original text from inference on recall would have facilitated the intrusion of commentarial exegesis into the original discourse.</p>
+<hr class="chapter-divider">
+<h3>Conclusion</h3>
+<p>Studying the <i>Brahmajāla</i>, which I have chosen somewhat at random simply by dint of its being the first discourse in the Pāli canon, brings to light the degree to which, from the introductory phrase of the discourse all the way to its location within the longdiscourse collections, oral transmission is a key influence. This oral transmission is best understood as the result of an attempt at precise memorization that due to the vicissitudes of memory, combined with lack of training comparable to the Vedic tradition, inevitably resulted in a gradual change of the transmitted material. This manifests in variations due to the constructing nature of memory, loss of material due to memory failure, as well as the intrusion of what originally was only commentarial, due to the inability to distinguish between original and inference. Such gradual change manifesting in different ways in the course of time is precisely what enables us to reconstruct early stages in the development of Buddhist thought through comparative study of parallel versions that have been affected in different ways by the vicissitudes of their oral transmission.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn1.html">DN1</a>: Brahmajāla Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

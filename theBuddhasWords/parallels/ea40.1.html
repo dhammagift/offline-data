@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 40.1 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 40.1</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<p class="mirror-row"><span class="mirror-left latin">Chapter 40</span> <span class="mirror-right">七日品第四十之一</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">40.1</span> <span class="mirror-right">（一）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an7.66.html">AN 7.66</a> / <a href="../parallels/ma8.html">MĀ 8</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, many bhikṣus gathered in the assembly hall after the meal and discussed: &quot;This Mount Sumeru is extremely vast, not comparable to other mountains. It is very strange and special, tall and broad. However, it will soon be destroyed without any trace left. There are also other great mountains that rely on Mount Sumeru, which will also be destroyed.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘食后皆集普会讲堂，作如是论议：「此须弥山极为广大，非众山之所及，甚奇！甚特！高广极峻。如是，不久当复坏败，无有遗余，依须弥山更有大山，亦复坏败。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One heard the discussion of the many bhikṣus with his divine ear. He then rose from his seat, went to the assembly hall, and took his seat. The World-Honored One then said to the bhikṣus: &quot;What were you discussing here? What do you wish to accomplish?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以天耳闻众多比丘而作是论，即从座起，往至彼讲堂所，即就坐。尔时，世尊告诸比丘：「汝等在此为何等论？欲何所施行？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied: &quot;The people gathered here discussed the Dharma matters. What we discussed was all in accordance with the Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「诸人集此，论其法事，向所论说，皆自如法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said: &quot;Excellent! Bhikṣus! When you have left home, you should discuss the Dharma. You should also not abandon the noble silence. Because if bhikṣus gather in one place, they should practice two things. What are the two? First, they should discuss the Dharma together. Second, they should be in noble silence. If you discuss these two things, you will always attain peace and not lose the proper time. What was the meaning of the Dharma that you discussed just now?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「善哉！比丘！汝等出家正应法论，亦复不舍贤圣默然。所以然者。若比丘集聚一处，当施行二事。云何为二？一者当共法论，二者当贤圣默然。汝等论此二事，终获安隐，不失时宜。汝等向者，作何等如法之义？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied: &quot;Many bhikṣus gathered in this hall and discussed: &#x27;How amazing! How extraordinary! This Mount Sumeru is extremely tall and vast, but this Mount Sumeru will also decay and perish before long, and the surrounding iron mountains will also decay and perish in the same way.&#x27; This was the Dharma discussion we had just now.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「今众多比丘来集此堂，作如是论议：『甚奇！甚特！此须弥山极高广大，然此须弥山如是不久当复败坏，及诸四面铁围山亦当如是坏败。』向者，集此作如法论也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said: &quot;Do you wish to hear about the changes in the destruction of this world realm?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「汝等欲闻此世间境界坏败之变乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus said to the Buddha: &quot;Now is the right time. We only wish that the World-Honored One would explain it at this time, so that the minds of sentient beings may be liberated.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘白佛言：「今正是时，唯愿世尊以时演说，使众生之类心得解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said to the bhikṣus: &quot;You should think about it well and keep it in your minds.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告诸比丘曰：「汝等善思念之，藏在心怀。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied: &quot;Yes, World-Honored One!&quot; At that time, the bhikṣus received the Buddha&#x27;s instruction.</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「如是。世尊！」尔时，诸比丘从佛受教。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said: &quot;Mount Sumeru is extremely vast, not comparable to other mountains. If a bhikṣu wishes to know Mount Sumeru, it rises above the water for 84,000 yojanas, and is also submerged in the water for 84,000 yojanas. Mount Sumeru is made of four kinds of jewels: gold, silver, crystal, and lapis lazuli. It also has four corners, also made of four kinds of jewels: gold, silver, crystal, and lapis lazuli. The golden city has silver walls, the silver city has golden walls, the crystal city has lapis lazuli walls, and the lapis lazuli city has crystal walls. On Mount Sumeru, there are five kinds of gods dwelling there, all due to past causes and conditions. What are the five? Namely, in the silver city, there are the gods with slender feet dwelling there; in the golden city, there are the Śirīṣa gods dwelling there; in the crystal city, there are the Joyful gods dwelling there; in the lapis lazuli city, there are the Powerful gods dwelling there; between the golden and silver cities, there is the king of the yakṣas, Vaiśravaṇa, dwelling there, with countless yakṣas. Between the golden city and the crystal city, there is the king of the nāgas, Virūḍhaka, dwelling there with the nāgas; between the crystal city and the lapis lazuli city, there is the king of the gandharvas, Virūpākṣa, dwelling there; between the lapis lazuli city and the silver city, there is the king of the kumbhāṇḍas, Dhṛtarāṣṭra, dwelling there.</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「须弥山者极为广大，非众山所及。若比丘欲知须弥山，出水上高八万四千由旬，入水亦深八万四千由旬。然须弥山四种宝所造：金、银、水精、琉璃；又有四角，亦四种所造：金、银、水精、琉璃；金城银郭，银城金郭，水精城琉璃郭，琉璃城水精郭。然须弥山上有五种天在彼居止，皆由宿缘而住彼间。云何为五？所谓彼银城中，有细脚天在彼居止；彼金城中，有尸利沙天在彼居止；水精城中，有欢悦天在彼居止；琉璃城中，有力盛天在彼居止；金、银城中间，毘沙门天王在彼居住，将诸阅叉不可称计。金城、水精城中间，有毘留博叉天王，将诸龙神在彼居止；水精城、琉璃城中间，有毘留勒叉天王在彼居止；琉璃城、银城中间，有提头赖咤天王在彼居止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that below Mount Sumeru, there are asuras dwelling. When the asuras wish to fight with the gods of the Thirty-three Heavens, they first fight with the gods with slender feet. If they win, they then go to the golden city to fight with the Śirīṣa gods. Having defeated the Śirīṣa gods, they then go to the crystal city to fight with the Joyful gods. Having defeated them, they then go to the lapis lazuli city. Having defeated those gods, they then fight with the gods of the Thirty-three Heavens.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，须弥山下有阿须伦居止。若阿须伦欲与三十三天共鬪时，先与细脚天共鬪；设得胜，复至金城与尸利沙天共鬪；已胜尸利沙天，复至水精城与欢悦天共鬪；已胜彼，复至琉璃城；已胜彼天，便共三十三天共鬪。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that on the summit of Mount Sumeru, the gods of the Thirty-three Heavens dwell there. The illumination of day and night is due to their own mutual illumination. Relying on Mount Sumeru, the sun and moon revolve. The city of the sun god is fifty-one yojanas long and wide. The city of the moon god is thirty-nine yojanas long and wide. The largest star is one yojana long and wide, and the smallest star is two hundred steps long and wide. The summit of Mount Sumeru is eighty-four thousand yojanas long and wide in the east, west, south, and north. Near the southern side of Mount Sumeru, there is a great iron mountain, eighty-four thousand li long and eighty thousand li high. This mountain is surrounded by another mountain called Nimitta, which is surrounded by another mountain called Kharā, which is surrounded by another mountain called Bhisha, which is surrounded by another mountain called Horse Head, which is surrounded by another mountain called Vinaya, which is surrounded by another mountain called Iron Encircling Great Iron Mountain.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，须弥山顶三十三天在彼居止，昼夜照明，光自相照，故致此耳。依须弥山，日月流行，日天子城郭纵广五十一由旬，月天子城郭纵广三十九由旬，最大星纵广一由旬，最小星纵广二百步。须弥山顶东、西、南、北，纵广八万四千由旬，近须弥山南有大铁围山，长八万四千里，高八万里。又此山表，有尼弥陀山围彼山；去尼弥陀山，复有山名佉罗山；去此山，复更有山名俾沙山；去此山，复更有山名马头山；复更有山名毘那耶山；次毘那耶有山名铁围大铁围山。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Between the Iron Encircling Mountains are eight great hells, each with sixteen sub-hells. The Iron Encircling Mountains are of great benefit to the Jambudvīpa continent. If there were no Iron Encircling Mountains, this place would always be stinky. Outside the Iron Encircling Mountains is Fragrant Accumulation Mountain, where there are eighty-four thousand white elephant kings dwelling, each with six tusks adorned with gold and silver. On Fragrant Accumulation Mountain are eighty-four thousand caves, all made of gold, silver, crystal, and lapis lazuli. The best elephants are ridden by Śakra Devānām-Indra himself, while the worst are ridden by the Wheel-Turning Sage King. Next to Fragrant Accumulation Mountain is the pond of fragrant water, where blue lotus flowers and jasmine flowers grow. The elephants dig up the roots and eat them. Next to the pond of fragrant water is another mountain called Ujjayagala, where various kinds of grasses, trees, birds, insects, and shellfish all dwell. Relying on that mountain, there are those who have attained the Way through spiritual powers who go there. Next is another mountain called Gandhamādana, and next is another mountain called Vulture Peak, which is the place of reliance for the Jambudvīpa continent.</p></td><td lang="lzh" class="agama-chi"><p>「铁围中间有八大地狱，一一地狱有十六隔子。然彼铁围山于阎浮里地多所饶益，阎浮里地设无铁围山者，此间恒当臭处。铁围山表有香积山，香积山侧有八万四千白象王，止住彼间，各有六牙，金银校饰。彼香山中有八万四千窟，诸象在彼居止，皆金、银、水精、琉璃所造。最上象者，释提桓因躬自乘之，最下者，转轮圣王乘之。香积山侧有摩陀池水，皆生优钵莲华、拘牟头华，然彼诸象掘根而食。摩陀池水侧复有山名优阇伽罗，然彼山皆生若干种草木，鸟狩虫蠡悉在彼间。依彼山，皆有神通得道之人而往彼间。次复有山名般荼婆，次复有山名耆阇崛山，此是阎浮里地所依之处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that when this world is about to perish, the heavens do not rain, and the crops planted do not grow. All small rivers and springs dry up. All conditioned things return to impermanence and cannot last long. Bhikṣus, you should know that at that time, the four great swift rivers, namely the Ganges, the Sindhu, the Oxus, and the Vakṣu, will also dry up without a trace. Thus, bhikṣus, impermanence has a hundred changes, and this is precisely it.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，若此世间欲坏败时，然天不降雨，所种生苗不复长大，诸有小河泉源皆悉枯竭。一切诸行皆归无常，不得久住。比丘当知，或有是时，此四大驶河，所谓恒伽、私头、死陀、婆叉，亦复枯竭而无遗余。如是，比丘！无常百变，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, when there are two suns in this world, all grasses and trees wither. Thus, bhikṣus, impermanence changes and cannot last long. At that time, all springs and small streams dry up. Bhikṣus, when there are two suns, at that time the four great oceans will dry up to a depth of a hundred yojanas, gradually to seven hundred yojanas, and the water will naturally dry up.</p></td><td lang="lzh" class="agama-chi"><p>「比丘！或有是时，若此世间有二日出时，是时百草树木皆悉凋落。如是，比丘！无常变易，不得久停，是时诸泉源小水皆悉枯竭。比丘当知，若二日出时，尔时四大海水百由旬内皆悉枯竭，渐渐至七百由旬，水自然竭。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, when there are three suns in the world, the four great oceans will naturally dry up to a depth of a thousand yojanas, gradually to seven thousand yojanas.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，若世间三日出现时，四大海水千由旬内，水自然竭，渐渐乃至七千由旬，水自然竭。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, when there are four suns in the world, the four great oceans will remain at a depth of a thousand yojanas. Thus, bhikṣus, all conditioned phenomena are impermanent and cannot last long.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，若四日出现世时，四大海水深千由旬在。如是，比丘！一切诸行皆悉无常，不得久住。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, there may be a time when, when there are five suns in the world, the four great oceans will have only seven hundred yojanas of water left, gradually down to a hundred yojanas. Bhikṣus, when there are five suns, the seawater will be one yojana deep, gradually drying up with nothing left. When there are five suns, only seven feet of water will be left, and when there are five suns, the seawater will completely dry up with nothing left. Bhikṣus, know that all conditioned phenomena are impermanent and cannot last long.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时。若世间有五日出时，是时四大海水，余有七百由旬水，渐渐至百由旬。比丘当知，若五日出时，是时海水一由旬在，渐渐水竭而无遗余。若五日出时，余正有七尺水在，五日出时，海水尽竭无有遗余。比丘当知，一切行无常，不得久住。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, there may be a time when, when there are six suns in the world, the earth, which is sixty-eight thousand yojanas thick, will all emit smoke, and Mount Sumeru will gradually melt and disintegrate. When there are six suns, this trichiliocosm will all melt and disintegrate, just like a potter&#x27;s kiln burning pottery. At that time, the trichiliocosm will also be like this, with flames everywhere, pervading everywhere. Bhikṣus, know that when there are six suns, the eight great hells will also be destroyed, and the people there will die. The gods of the five kinds on Mount Sumeru will also die, and the gods of the Heaven of the Thirty-three, the Heaven of Yāma, up to the Heaven of the Mastery of Others&#x27; Emanations will also die, and their palaces will all be empty. When there are six suns, at that time Mount Sumeru and the trichiliocosm will all be completely burned without anything left. Thus, bhikṣus, all conditioned phenomena are impermanent and cannot last long.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，六日出时，此地厚六万八千由旬皆悉烟出，须弥山亦渐渐融坏。若六日出时，此三千大千国土皆悉融坏，犹如陶家烧瓦器也。是时，三千大千刹土，亦复如是，洞然火出，靡不周遍。比丘当知，若六日出时，八大地狱亦复消灭，人民命终。依须弥山五种之天，亦复命终，三十三天、艳天，乃至他化自在天，亦复命终，宫殿皆空。若六日出时，是时须弥山及三千大千刹土，皆悉洞然而无遗余。如是，比丘！一切行无常，不得久住。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, there may be a time when, when there are seven suns in the world, at that time, although this earth is sixty-eight thousand yojanas thick and the trichiliocosm, all will catch fire. When there are seven suns, at that time, Mount Sumeru will gradually melt and disintegrate, collapsing naturally for hundreds of thousands of yojanas, forever without anything left, and not even the slightest trace of dust or smoke will be seen, let alone ashes. At that time, the palaces of the Heaven of the Thirty-three up to the Heaven of the Mastery of Others&#x27; Emanations will all be burning with flames, and the flames here will reach up to the Heaven of Brahmā. The newly born gods in those heavenly palaces, who have never seen the burning of the eon before, will be filled with fear upon seeing these flames, fearing being burned by the fire. However, the gods who were born there before and have seen the burning of the eon will come to comfort the newly born gods, saying, &#x27;You should not be afraid. This fire will never come here.&#x27; Bhikṣus, know that when there are seven suns, from here up to the six heavens and the trichiliocosm will all become ashes and dust, without any trace of form. Thus, bhikṣus, all conditioned phenomena are impermanent and cannot last long, all returning to extinction. At that time, the people who die will all be reborn in other lands or in the heavens. If the beings in the hells have already finished their past offenses, they will be reborn in the heavens or in other lands. If the beings in the hells have not yet finished their offenses, they will be transferred to other lands. Bhikṣus, know that when there are seven suns, there will be no more light from the sun, moon, or stars. At that time, the sun and moon will have already disappeared, and there will be no more day or night. This is called, bhikṣus, the destruction caused by karmic retribution.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，若七日出，是时此地虽厚六万八千由旬及三千大千刹土，皆悉火起。若复七日出时，此须弥山渐渐融坏，百千由旬自然崩落，永无有余，亦复不见尘烟之分，况见灰乎！是时，三十三天乃至他化自在天宫殿，皆悉火然，此间火炎乃至梵天上。新生天子在彼天宫者，由来不见劫烧，见此炎光，普怀恐惧，畏为火所烧。然彼旧生天子等曾见劫烧，便来慰劳后生天子：『汝等勿怀恐惧，此火终不来至此间。』比丘当知，七日出时，从此间至六天，乃至三千大千刹土，悉为灰土，亦无形质之兆。如是，比丘！一切行无常，不可久保，皆归于尽。尔时，人民命终，尽生他方刹土，若生天上。设复地狱中众生宿罪已毕，生天上、若他方刹土；设彼地狱众生罪未毕者，复移至他方刹土。比丘当知。若七日出时，无复日月光明、星宿之兆，是时日月已灭，无复昼夜。是谓，比丘！由缘报故，致此坏败。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should also know that when the eon is about to be restored, there may be a time when the fire will naturally extinguish itself, and a great cloud will rise in the sky, gradually raining down. At that time, this trichiliocosm will be completely filled with water, up to the Heaven of Brahmā. Bhikṣus, know that at that time, this water will gradually stop and disappear by itself. Then a wind will arise, called &#x27;following the wind&#x27;, blowing this mass of water together into one place. At that time, that wind will create a thousand Mount Sumerus, a thousand Mount Yugandhara, a thousand Mount Nimimdhara, a thousand Mount Khadira, a thousand Mount Iṣādhara, a thousand Mount Vinataka, a thousand Iron Circle Mountains, and a thousand Great Iron Circle Mountains; it will also create eight thousand hells, and then create a thousand Horse-headed Mountains, a thousand Incense Accumulating Mountains, a thousand Pāṇḍava Mountains, a thousand Yugandhara Mountains, a thousand Jambudvīpas, a thousand Godānīyas, a thousand Kuru, and a thousand Uttarakurus; it will also create a thousand oceans, and then create a thousand palaces of the Four Heavenly Kings, a thousand Heaven of the Thirty-three, a thousand Yāma Heaven, a thousand Tuṣita Heaven, a thousand Nirmāṇarati Heaven, and a thousand Paranirmitavaśavartin Heaven.</p></td><td lang="lzh" class="agama-chi"><p>「比丘复当知，劫还成就时，或有是时，火还自灭，虚空之中有大云起，渐渐降雨。是时，此三千大千刹土，水遍满其中，水乃至梵天上。比丘当知，是时此水渐渐停住而自消灭。复有风起，名曰随岚，吹此水聚著一处。是时，彼风起千须弥山、千祇弥陀山、千尼弥陀山、千佉罗山、千伊沙山、千毘那山、千铁围山、千大铁围山；复生八千地狱，复生千马头山、千香积山、千般荼婆山、千优阇伽山、千阎浮提、千瞿耶尼、千弗于逮、千欝单曰；复生千海水；复生千四天王宫、千三十三天、千艳天、千兜术天、千化自在天、千他化自在天。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should also know that there may be a time when the water subsides and the earth is restored. At that time, there will naturally be earth fat on the ground, extremely fragrant and delicious, surpassing nectar. If you want to know the taste of that earth fat, it is like sweet grape wine. Bhikṣus, you should know that there may be a time when the Ābhāsvara gods will say to each other, &#x27;We want to go to Jambudvīpa to see the restored terrain.&#x27; The Ābhāsvara gods will then descend to the world and see the earth fat on the ground. They will then taste it with their fingers and eat it. At that time, the gods who eat a lot of earth fat will lose their spiritual power and light, their bodies will become heavy and flesh and bones will grow, they will lose their spiritual feet and will no longer be able to fly; while those gods who eat little earth fat will not have heavy bodies, they will also not lose their spiritual feet and will still be able to fly in the sky.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，水灭地复还生。是时，地上自然有地肥，极为香美，胜于甘露。欲知彼地肥气味，犹如甜蒲桃酒。比丘当知，或有此时，光音天自相谓言：『我等欲至阎浮提，观看彼地形还复之时。』光音天子来下世间，见地上有此地肥，便以指甞著口中而取食之。是时，天子食地肥多者，转无威神，又无光明，身体遂重而生骨肉，即失神足，不复能飞；又彼天子食地肥少，身体不重，亦复不失神足，亦能在虚空中飞行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the gods who lost their spiritual feet all cried out and said to each other, &#x27;We are now extremely poor and miserable, and have also lost our spiritual feet.&#x27; They stayed in the world and could not return to heaven, and thus ate this earth fat. They looked at each other&#x27;s faces. At that time, the gods who had strong desires became women, and thus engaged in sexual intercourse and enjoyed each other. This is called, bhikṣus, the first time the world was formed, and this sexual practice spread in the world. This is an old and constant law, that women must appear in the world; it is also an old law, not just now. At that time, the other Ābhāsvara gods saw these gods fall and all came to scold them, saying, &#x27;Why do you engage in this impure conduct?&#x27; At that time, the beings again thought, &#x27;We should make a plan to live together at night so that people cannot see us.&#x27; They gradually built houses to cover their bodies. This is called, bhikṣus, the cause and condition for the existence of houses.</p></td><td lang="lzh" class="agama-chi"><p>「是时，天子失神足者，皆共呼哭自相谓言：『我等今日极为穷厄，复失神足。』即住世间，不能复还天上，遂食此地肥。各各相视颜色。彼时天子欲意多者，便成女人，遂行情欲，共相娱乐。是谓，比丘！初世成时，有此婬法，流布世间，是旧常之法，女人必出于世；亦复旧法，非适今也。是时，余光音天见此天子以堕落，皆来呵骂而告之曰：『汝等何为行此不净之行？』是时，众生复作是念：『我等当作方便，宜共止宿，使人不见。』转转作屋舍，自覆形体。是谓，比丘！有此因缘，今有屋舍。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should also know that there may be a time when the earth fat naturally sinks into the ground, and then turns into rice, which is extremely fresh and pure; it also has no husk, is extremely fragrant and delicious, making people fat and white; harvested in the morning, it grows in the evening; harvested in the evening, it grows in the morning. This is called, bhikṣus, the first time the name of this rice came into being. Bhikṣus, there may be a time when the people are lazy and do not work hard to make a living. They will then think, &#x27;Why do I have to harvest this rice every day? I should harvest it every two days.&#x27; At that time, those people will harvest the rice every two days. At that time, the people will gradually become pregnant, and from this there will be birth.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，地肥自然入地，后转生粳米，极为鲜净；亦无皮表，极为香好，令人肥白；朝收暮生，暮收朝生。是谓，比丘！尔时始有此粳米之名生。比丘！或有是时，人民懈怠不勤生活。彼人便作是念：『我今何为日日收此粳米？应当二日一收。』是时，彼人二日一收粳米。尔时，人民展转怀妊，由此转有生分。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be sentient beings who say to other sentient beings, &#x27;Let us go together to harvest rice.&#x27; At that time, those people will reply, &#x27;I have already harvested enough for two days.&#x27; Having heard this, those people will then think, &#x27;I should store enough food for four days.&#x27; They will then prepare enough food for four days. There may be sentient beings who say to those sentient beings, &#x27;Let us go together to harvest rice outside.&#x27; Those people will reply, &#x27;I have already harvested enough for four days.&#x27; Having heard this, those people will then think, &#x27;I should prepare enough food for eight days.&#x27; They will then prepare enough food for eight days. At that time, that rice will no longer grow.</p></td><td lang="lzh" class="agama-chi"><p>「复有众生语彼众生言：『我等共取粳米。』是时，彼人报曰：『吾以取二日食粮。』此人闻已，复生此念：『我当储四日食粮。』即时办四日食粮。复有众生语彼众生：『可共相将外收粳米。』此人报曰：『吾以收四日食粮。』彼人闻已，便生此念：『吾当办八日食粮。』即办八日食储。尔时，彼粳米更不复生。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the sentient beings each had this thought: &#x27;There is a great disaster in the world. This rice is no longer as it was before. We should now divide this rice.&#x27; They then divided the rice. At that time, the sentient beings again had this thought: &#x27;I should now store my own rice and steal others&#x27; rice.&#x27; At that time, those sentient beings stored their own rice and stole others&#x27; rice. The owner saw someone stealing his rice and said to that person, &#x27;Why did you take my rice? I forgive you for this offense, but do not do it again.&#x27; At that time, there was the first thought of stealing in the world. At that time, there were also sentient beings who heard this and had this thought: &#x27;I should now store this rice and steal others&#x27; rice.&#x27; At that time, those sentient beings abandoned their own things and took others&#x27; things. The owner saw this and said to that person, &#x27;Why did you now take my rice?&#x27; But that person remained silent and did not respond. At that time, the owner immediately struck him with his fist and said, &#x27;From now on, do not encroach on each other again.</p></td><td lang="lzh" class="agama-chi"><p>「是时，众生各生此念：『世间有大灾患，今此粳米遂不如本，今当分此粳米。』即时分粳米。尔时众生复生此念：『我今可自藏粳米，当盗他粳米。』是时，彼众生自藏粳米，便盗他粳米。彼主见盗粳米，语彼人曰：『汝何故取吾粳米？今舍汝罪，后莫更犯。』尔时，世间初有此盗心。是时，复有众生闻此语，复自生念：『我今可藏此已粳米，当盗他粳米。』是时，彼众生便舍己物，而取他物。彼主见已，语彼人曰：『汝今何为取我粳米乎？』然彼人默然不对。是时，物主即时手拳相加，自今已后，更莫相侵。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, many people heard that sentient beings were stealing from each other. They gathered together and said to each other, &#x27;There is this unrighteousness in the world, where people steal from each other. We should now appoint a field guard to protect the fields. The sentient beings who are wise and talented should be appointed as the field guard.&#x27; At that time, they selected a field guard and said to him, &#x27;You should know that there is this unrighteousness of theft in the world. You should now be paid for guarding the fields. If people come to take others&#x27; rice, you should punish them.&#x27; At that time, they appointed a field guard. Bhikṣus should know that at that time, the field guard was called the kṣatriya caste. It was all the old Dharma, not unrighteous.</p></td><td lang="lzh" class="agama-chi"><p>「是时，众多人民闻众生相盗，各共运集，自相谓言：『世间有此非法，各共相盗。今当立守田人，使守护田。其有众生聪明高才者，当立为守田主。』是时，即选择田主而语之曰：『汝等当知，世间有此非法窃盗，汝今守田当雇其直，诸人民来取他粳米者，即惩其罪。』尔时，即安田主。比丘当知，尔时，其守田者，号为刹利种，皆是旧法，非为非法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>There was the beginning of the kṣatriya caste, the highest among<br/>the surnames, wise and talented people, respected by gods and humans.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「始有刹利种，　　姓中之上者，聪明高才人，　　天人所敬待。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, when there were people who encroached on others&#x27; possessions, the kṣatriya king punished them. However, those people did not reform their faults and continued to commit offenses. At that time, the kṣatriya king ordered the use of swords and sticks to behead those people. At that time, killing first appeared in the world. At that time, many people heard this order: &#x27;The kṣatriya king will kill those who steal rice.&#x27; They were all fearful and their hair stood on end. They each made grass huts to sit and meditate in, practiced the brahmanic conduct, unified their minds, abandoned their family businesses, wives and children, and secluded their intentions to practice the brahmanic conduct. From then on, the name and surname of the brahmins appeared. At that time, these two kinds of surnames appeared in the world.</p></td><td lang="lzh" class="agama-chi"><p>「尔时，其有人民侵他物者，是时刹利取惩罚之。然复彼人不改其愆，故复犯之。是时刹利之主勅作刀杖，取彼人而枭其首。尔时，世间初有此杀生。是时，众多人民闻此教令：『其有窃盗粳米者，刹利主即取杀之。』皆怀恐惧，衣毛皆竖，各作草卢于中坐禅，修其梵行，而一其心，舍离家业、妻子、儿妇独静其志，修于梵行。因此已来，而有婆罗门之名姓。是时，便有此二种姓出现世间。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that at that time, due to stealing, there was killing, and due to killing, there were swords and sticks. At that time, the kṣatriya king told the people: &#x27;Those who are handsome and talented should be appointed to govern these people.&#x27; He also told them: &#x27;If there are people who steal, punish their crimes.&#x27; At that time, this vaishya caste appeared in the world.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，彼时由盗故便有杀生，由杀故便有刀杖。是时，刹利主告人民曰：『其有端政高才者，当使统此人民。』又告之曰：『其有人民窃盗者，使惩其罪。』尔时，便有此毘舍种姓，出现于世。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;At that time, many beings had this thought: &#x27;Today, beings all kill each other, all due to karma. Now, we can travel around to make a living.&#x27; At that time, the shudra caste appeared in the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「尔时，多有众生便生此念：『今日众生之类各共杀生，皆由业之所致也，今可来往周旋以自生活。』尔时，便有首陀罗种姓，出现世间。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>First there was the kshatriya caste, then the brahmin<br/>caste, thirdly the vaishya caste, and then the shudra<br/>caste. These four castes gradually gave birth to each<br/>other. They all came from heavenly bodies and had<br/>the same color.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「初有刹利种，　　次有婆罗门，第三名毘舍，　　次复首陀姓。有此四种姓，　　渐渐而相生，皆是天身来，　　而同为一色。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikshus, you should know that at that time, although there were still thoughts of killing and stealing, there was no more of this naturally grown rice.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，尔时，有此杀、盗心，无复有此自然粳米。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;At that time, there were five kinds of grains: root seeds, stem seeds, branch seeds, flower seeds, and fruit seeds, as well as other seeds that grew. These were called the five kinds of seeds. They were blown here from other buddha lands and were used as seeds to sustain themselves. Thus, bhikshus, when there were these omens in the world, there was birth, aging, sickness, and death, which led to the five aggregates of today, not being able to end suffering. This is called the change of the formation and destruction of the eon. I have told you what the buddhas of the past always practiced. I have now told you all. You should enjoy living in quiet places, you should remember to sit in meditation, do not be lazy, for if you are not sincere now, it will be of no benefit to regret later. This is my instruction.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「尔时，便有五种谷子：一者根子，二者茎子，三者枝子，四者华子，五者果子，及余所生之种子，是谓五种之子。皆是他方刹土风吹使来，取用作种以此自济。如是，比丘！世间有此瑞应，便有生、老、病、死，致使今日有五盛阴身，不得尽于苦际，此名为劫成败时之变易也。吾与汝说，诸佛世尊常所应行，今尽与汝说之。当乐闲居静处，当念坐禅，勿起懈怠，今不精诚，后悔无益。此是我之教诲也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said, and joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

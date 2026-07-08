@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 116 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 116: Isigili-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn115comp.html#content"></a><a id="next-sutta" href="./mn117comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn116.html">MN 116</a> / <a href="../../parallels/ea38.7.html">EĀ 38.7</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Isigili-sutta, the “discourse on mount Isigili”, introduces mount Isigili as a former dwelling place of Paccekabuddhas, followed by listing the names and qualities of various Paccekabuddhas.<span class="note" id="mn116n80"><span class="details"><span class="p">[n.80] Concerning the term paccekabuddha, Norman 1983b: 97 suggests that pacceka might be a wrong backformation from pratyaya, so that the implication of the term paccekabuddha would be “one awakened by an (external) cause” (ibid. p. 99), in the sense of needing an external stimulus through some event or special circumstance in order to awaken; cf. also von Hinüber 1985/2001: 193. This would distinguish a Paccekabuddha from a disciple on the one hand, who awakens after receiving teachings, and from a Buddha on the other hand, who awakens without an external stimulus. The traditional derivation of pacceka from pratyeka (e.g., Be-Ps-pṭ I 115: paccekaṃ saccāni buddhavanto ti paccekabuddhā) rather gives the sense of a “single” or “individual” Buddha, a sense in fact found in the present discourse itself, cf. <a href="../../mn/mn116.html">MN 116</a> at MN III 69,25: paccekam ev’ ajjhagamuṃ subodhiṃ (Be-MN III 114,12: ajjhagamaṃ). This sense recurs also in the similar term paccekabrahmā found, e.g., in <a href="../../sn/sn6.6.html">SN 6:6</a> at SN I 146,24 (or SN2 177 at SN2 I 318,16) and in <a href="../../an/an10.89.html">AN 10:89</a> at AN V 171,3 (cf. also the corresponding pratyekabrahmā in the Karmavibhaṅga in Kudo 2004: 44,1 and 45,1, or in Lévi 1932a: 34,8), since a Brahmā may indeed be solitary in the sense of being without a retinue, but it would be difficult to relate his status to an external cause or condition. The same sense can also be seen in the expression paccekagātha in <a href="../../dn/dn20.html">DN 20</a> at DN II 253,16 and <a href="../../sn/sn1.37.html">SN 1:37</a> at SN I 26,14 (or SN2 37 at SN2 I 55,15), which refers to stanzas spoken by devas “individually”, in the sense of being spoken by “each” of them, an usage also found in the Saṅghabhedavastu in Gnoli 1977: 121,9 (although in a different context): pratyekapratyekaṃ gāthābhir abhiṣṭuyāma, where the Chinese counterpart, T 1450 at T XXIV 125a2, reads “each”, 各, and the Tibetan counterpart in Waldschmidt 1957a: 75,11 reads “each one”, re res. Cooray 2004: 250 note 1 sums up that in its usage in the Pāli discourses pacceka conveys “the idea of separation”; cf. also Anālayo 2010h. Wright 2001: 14 comments, regarding the suggestion by Norman that pacceka should rather convey the sense of an external cause, that “the evidence, however, points rather strongly in the opposite direction”.</span></span></span> This discourse has a parallel in the Ekottarika-āgama.<span class="note" id="mn116n81"><span class="details"><span class="p">[n.81] The parallel is <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723a-c, which agrees with <a href="../../mn/mn116.html">MN 116</a> on locating the discourse at Rājagaha. For a translation of <a href="../../parallels/ea38.7.html">EĀ 38.7</a>, together with extracts from the present study, cf. Anālayo 2010h.</span></span></span></p>
+<p>The Isigili-sutta and its parallel explain that, while four of the five mountains that surround Rājagaha had different names in ancient times, the fifth mountain was called Isigili already in former times.<span class="note" id="mn116n82"><span class="details"><span class="p">[n.82] The same Mount Isigili was the location where, according to <a href="../../sn/sn4.23.html">SN 4:23</a> at SN I 121,19 (or SN2 159 at SN2 I 266,16) and <a href="../../sn/sn22.87.html">SN 22:87</a> at SN III 123,9, the monks Godhika and Vakkali committed suicide (on Vakkali cf. also Anālayo 2011i), and where according to Jā 522 at Jā V 125,23 Mahāmoggallāna was murdered.</span></span></span> The Majjhima-nikāya version continues by giving a popular etymology for the name Isigili, an etymology not recorded in its Ekottarikaāgama parallel.<span class="note" id="mn116n83"><span class="details"><span class="p">[n.83] <a href="../../mn/mn116.html">MN 116</a> at MN III 68,27, according to which on seeing Paccekabuddhas enter the mountain and then disappear (perhaps by entering a cave?) the locals came to the conclusion that the mountain “swallows up”, gilati, those “seers”, isī, hence the mountain was called Isigili. Caillat 1968: 178 points out that the Pāli etymology gilati would be of a later origin, when ºgili was no longer understood to be equivalent to giri. In fact, <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723a15 introduces this mountain as “seer’s cave mountain”, 仙人窟山 (adopting the 宋, 元, and 明 variant reading 窟 instead of 掘), and then continues to refer to this mountain as 仙人山, corresponding to isigiri. Lüders 1954: 45 notes that the Mahābhārata 2:799 does indeed refer to one of the mountains surrounding Rājagaha as ṛṣigiri; cf. also Bapat 1970: 220 note 28 and Law 1938/1991: 3 and 10.</span></span></span></p>
+<p>Both versions list the names of several Paccekabuddhas that used to live on Mount Isigili.<span class="note" id="mn116n84"><span class="details"><span class="p">[n.84] In addition to Paccekabuddhas, according to <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723a18 Mount Isigili was also inhabited by bodhisattvas, arahants, and seers. Of the various Paccekabuddhas mentioned in <a href="../../mn/mn116.html">MN 116</a>, Ariṭṭha (阿 利吒) recurs in Be-Nett 143 and Upariṭṭha (婆利吒) in <a href="../../tha/tha16.html#p910">Th 910</a>. Tagarasikhin occurs in <a href="../../sn/sn3.20.html">SN 3:20</a> at SN I 92,4 (or SN2 131 at SN2 I 206,13, with a counterpart in <a href="../../parallels/sa1233.html">SĀ 1233</a> at T II 337c8), in Ud 5:3 at Ud 50,16, and in Jā 390 at Jā III 299,26 (according to Rhys Davids 1903/1997: 31, Tagara might refer to a location, in which case his name would be “Sikhin from Tagara”). A reference to Sudassana (善觀) can be found in Therāpadāna 514:1 at Ap II 451,4; cf. also the similarly named Paccekabuddha 善目 in <a href="../../parallels/ea38.9.html">EĀ 38.9</a> at T II 724a12. The specification in <a href="../../mn/mn116.html">MN 116</a> at MN III 68,26 that “five hundred Paccekabuddhas lived for a long time on this mount Isigili”, pañca paccekabuddhasatāni imasmiṃ isigilismiṃ pabbate ciranivāsino ahesuṃ, is noteworthy, as according to Vism 234,12 a Paccekabuddha lives a solitary life style, ekacariyanivāsena, and Pj II 64,7 explains that a Paccekabuddha is solitary in several senses, one of them being that he stands, goes, sits, and lies alone, that is, he is without a companion, adutiyaṭṭhena eko. The Mahāvastu in Basak 1968/2004: 207,21 or in Senart 1897: 347,18, however, describes a Pratyekabuddha who had various other Pratyekabuddhas as his attendants, tena dāni pratyekabuddhena ye paricāritā pratyekabuddhā, and the Saṅghabhedavastu in Gnoli 1978a: 15,6 reports how a group of five hundred Pratyekabuddhas went to beg alms together. In a similar vein, <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723b6 (cf. note 86 below) reports the self-incineration of five hundred Paccekabuddhas on Mount Isigili, which reads as if they were living together at the same time and in the same location. Another discourse in the same collection, <a href="../../parallels/ea32.5.html">EĀ 32.5</a> at T II 676c18, indicates that Paccekabuddhas have no disciples and live alone, without followers, as they do not teach the Dharma to others, 無弟子, 獨逝無伴侶, 不與他說法 (cf. also Fujita 1975: 127 note 84). Ruegg 2004: 56 explains that “in Buddhist tradition continued by both the Prajñāpāramitā and the Abhidharma, the category of Pratyekabuddha is subdivided into two”, distinguishing between those who live a solitary life and those who live in a group; cf. also Feer 1881b: 520, Kern 1896: 62 note 1, La Vallée Poussin 1918: 153 note 5, and Yonezawa 1999: 24 note 2. Ray 1994: 244 note 30 points out that “no such explicit distinction appears in the hagiographies, and pratyekabuddhas are depicted in both ways as if these were simply two modes of the same way of life”.</span></span></span> The Ekottarika-āgama discourse continues by relating that, before the Buddha was born, devas living in the Pure Abodes had come to announce to the Paccekabuddhas who were dwelling on Mount Isigili that the Bodhisattva Gotama was about to take birth.<span class="note" id="mn116n85"><span class="details"><span class="p">[n.85] <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723a27.</span></span></span> On hearing that a being destined to become a Buddha was going to be born, the Paccekabuddhas rose up into empty space and incinerated themselves.<span class="note" id="mn116n86"><span class="details"><span class="p">[n.86] <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723b6: “the Paccekabuddhas immediately [arose] into empty space and by burning their body attained parinibbāna”, 諸辟支佛即於空中燒身取般涅槃. A similar type of narration occurs in the Mahāvastu, cf. Basak 1963a: 467,1 or Senart 1882a: 357,3 (cf. also Basak 1963a: 237,11 or Senart 1882a: 197,1 and Bu ston’s “History of Buddhism” in Obermiller 1932/1986: 7) where this event forms the background narration for the Mahāvastu version of the stanzas on living a solitary life like a rhinoceros, paralleling the Khaggavisāṇa-sutta of the Sutta-nipāta, Sn 1:3 at Sn 35-75, with a Gāndhārī fragment counterpart in Salomon 2000: 105-112 (for a background narration to Sn 35-75 cf. Pj II 46,14, another commentary can be found in T 1650 at T XXXII 473a-480c). Wilson 2003: 41 comments that “these solitary Buddhas committed their bodies to the flames in what may be seen through the lenses of Vedic- Hindu mortuary rites as a sacrificial act of passing the torch to their successor”. A self-incineration of Pratyekabuddhas is also described in the Saṅghabhedavastu, Gnoli 1977: 92,16, where it forms the background narration to a gift of robes to the bodhisattva who had just gone forth. For a description of a Bhārhut relief that could be depicting such self-incineration cf. Lüders 1941/1966: 44.</span></span></span> The Ekottarika-āgama discourse explains that the Paccekabuddhas had undertaken this act of self-cremation because they knew that there could be only one Buddha at a time in the world.<span class="note" id="mn116n87"><span class="details"><span class="p">[n.87] <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723b7: 所以然者, 世無二佛. Notably, in <a href="../../mn/mn115.html">MN 115</a> at MN III 65,15 the stipulation is only that two Sammāsambuddhas cannot coexist, which would not necessarily exclude the possibility of the coexistence of a Sammāsambuddha and a Paccekabuddha. While the Tibetan parallel to <a href="../../mn/mn115.html">MN 115</a> similarly speaks of the impossibility of the existence of two completely awakened Buddhas at the same time, D (297) mdo sde, sha 300a7 or Q (963) lu 329a4: yang dag par rdzogs pa’i sangs rgyas gnyis, <a href="../../parallels/ma181.html">MĀ 181</a> at T I 724a1 and T 1537 at T XXVI 502b14 speak of the impossibility of the coexistence of two Tathāgatas, 二如來, as does the Mahāvastu in Basak 1968/2004: 121,18 or in Senart 1897: 199,11. Another parallel to <a href="../../mn/mn115.html">MN 115</a>, T 776 at T XVII 713b18, speaks just of the impossibility of the coexistence of two Buddhas, 二佛, as does a listing of impossibilities in <a href="../../parallels/da3.html">DĀ 3</a> at T I 31a15 and <a href="../../parallels/da18.html">DĀ 18</a> at T I 79a7, and in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 237a22. The Mahāvastu also reports that devas from the Pure Abodes had told the Pratyekabuddhas to clear the place in time for the bodhisattva to take birth, Basak 1963a: 467,2 or Senart 1882a: 357,4: riṃcatha buddhakṣetraṃ.</span></span></span></p>
+<p>The Ekottarika-āgama version continues by describing how a former king became a Paccekabuddha. After reflecting on the suffering in the hell realms, animal realms, and among hungry ghosts, this king had become worried about the possibility of being reborn in such conditions. Stirred by this dire prospect, he decided to renounce the throne and go forth.</p>
+<p>Having gone forth on his own, he went to dwell in a secluded place and undertook contemplation of the arising and passing away of the five aggregates, by dint of which he eventually became a Paccekabuddha.<span class="note" id="mn116n88"><span class="details"><span class="p">[n.88] <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723b16.</span></span></span></p>
+<p>The Ekottarika-āgama account concludes with the Buddha encouraging the monks to hold Mount Isigili in high regard, as even at the time of Maitreya Buddha this mountain will still have the same name.<span class="note" id="mn116n89"><span class="details"><span class="p">[n.89] <a href="../../parallels/ea38.7.html">EĀ 38.7</a> at T II 723b29.</span></span></span></p>
+<p>Instead of this tale, the Majjhima-nikāya version describes the qualities of several Paccekabuddhas in a set of stanzas.<span class="note" id="mn116n90"><span class="details"><span class="p">[n.90] <a href="../../mn/mn116.html">MN 116</a> at MN III 69-71; cf. also Franke 1912: 211. Winternitz 1920/1968: 37 considers this listing in <a href="../../mn/mn116.html">MN 116</a> of names in prose and then in verse to be a sign of lateness, as this type of pattern recurs more frequently in later Buddhist Sanskrit literature; cf. also Barua 1971/2003: 530. Skilling 1996a: 182 note 112 points out that these stanzas end with an injunction to pay homage to the Paccekabuddhas, <a href="../../mn/mn116.html">MN 116</a> at MN III 71,3: paccekabuddhā ... vandatha. Wiltshire 1990: 7 comments that this listing “would seem to imply that paccekabuddhas held or were intended to hold some special significance for those to whom the Buddha’s discourse was addressed. It therefore indicates that some form of ‘cultus’ must have existed in respect of them”.</span></span></span> Thus, whereas the Ekottarika-āgama version is predominantly narrative, the Majjhima-nikāya version is a discourse with little doctrinal or narrative content. Its listing of the names and qualities of Paccekabuddhas is still in use nowadays as a protective chant, a paritta.<span class="note" id="mn116n91"><span class="details"><span class="p">[n.91] Kloppenborg 1983: 42 explains that “images of Paccekabuddhas were used for the purpose of protection. This could well be the outcome of their reputation for extended practice of mettā, popularly believed to be a protective power which counteracts inimical influences”, a protective power she then suggests to also stand behind the use of the Isigili-sutta as a paritta; cf. also Cooray 2004: 246.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

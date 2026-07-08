@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.328 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.328</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 328</span><span class="mirror-right">（三二八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../snp/snp1.9.html">Snp 1.9</a> / <a href="../parallels/sa1329.html">SĀ 1329</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Karanda Bamboo Grove in Rājagṛha. At that time, there were two yakṣas, one named Saptādri and the other named Himgiri. These two yakṣas were close friends and made a vow, saying, &quot;If a wonderful treasure appears in your palace, you should tell me; if a wonderful treasure appears in my palace, I will also tell you.&quot; Then, in the palace of the yakṣa Himgiri, there appeared a lotus flower with a thousand petals, as large as a chariot wheel, with a stem of lapis lazuli and a pistil of vajra. Having seen this, the yakṣa Himgiri immediately sent a messenger to tell Saptādri, saying, &quot;There is this strange thing in my palace, you should come and see it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林。时二夜叉：一名七岳，二名雪山。此二夜叉共为亲友，而作誓言：「若汝宫中有妙宝出，当语于我；若我宫中有妙宝出，亦当语汝。」时雪山夜叉宫中，有千叶莲花，大如车轮，绀瑠璃茎，金刚为须。雪山夜叉覩斯事已，即便遣使语彼七岳言：「我宫中有是异物，汝可来观。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the yakṣa Saptādri, having heard these words, immediately thought in his mind, &quot;The Tathāgata, the World-Honored One, is not far away. I should send someone to tell the yakṣa Himgiri, saying, &#x27;I will definitely go there to see the jeweled lotus flower.&#x27;&quot; Having thought this, he again sent a messenger, saying, &quot;Here, I have the Tathāgata, the Arhat, the Perfectly Enlightened One, who is manifesting his form here. Although there is such a jeweled lotus flower in your palace, what is the use of it?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，七岳夜叉闻是语已，即作心念：「如来世尊近在不远，可使诣雪山夜叉所言，我当必诣彼，往看宝华。」作是念已，即复遣使言：「我此中有如来、至真、等正觉，在此现形，汝宫虽有如是宝华，为何所益？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the yakṣa Himgiri, having heard the messenger&#x27;s words, together with five hundred yakṣas, went to the palace of the yakṣa Saptādri. The yakṣa Himgiri spoke a verse to Saptādri, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，雪山夜叉闻其使语，侍从五百夜叉，往诣于彼七岳夜叉所止宫中。雪山夜叉向于七岳而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>On the fifteenth night, the moon is full and extremely<br/>bright. Having heard the message, I have now come with<br/>my followers. Whom should I pay respect to? Who is your arhat?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「十五日夜月，　　圆足极净明，闻命将徒众，　　今故来相造，应当亲近谁？　　谁是汝罗汉？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptādri replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉说偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Tathāgata is revered by the world, supreme in Rājagṛha. He<br/>teaches the Dharma of the Four Noble Truths, cutting off all<br/>suffering. He says suffering arises from causes, and the ability to<br/>generate suffering is called the origin. The Noble Eightfold Path leads<br/>to tranquility. He is my arhat, whom you should pay respect to.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「如来世所尊，　　王舍城最上，说于四谛法，　　断除一切苦。说苦从因生，　　能生苦名习，贤圣八正道，　　趣向于寂灭。彼是我罗汉，　　汝当亲近之。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgiri also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>If one has a mind of universal love and equality towards all<br/>beings, can one attain mastery over both the loved and the unloved?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「普于群生类，　　若有慈等心，于爱不爱觉，　　为得自在不？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptaparvata also replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The mind is extremely well-tamed, and towards all beings, one<br/>understands all dharmas. One becomes a great guide for the<br/>world, and towards the loved and unloved, the mind attains mastery.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「心意极调柔，　　于诸群萠类，了知一切法，　　为世大导师，于爱不爱觉，　　心皆得自在。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgupta also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>If one can speak truthfully, never speaking falsely, and<br/>compassionately towards all beings, one will eliminate killing and<br/>be far removed from carelessness, and not be empty in meditation.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「若能真实语，　　终不虚妄言，慈愍众生类，　　除断于杀生，远离于放逸，　　于禅而不空。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptaparvata also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Never speaking falsely, far removed from killing, always<br/>abandoning carelessness, the Buddha has no indeterminate time.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「终不虚妄语，　　远离于杀害，常舍诸放逸，　　佛无不定时。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgupta also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>If one is not attached to desires, the mind is<br/>free from disturbance. Is there the eye of the Dharma?<br/>Is ignorance exhausted? Can one abandon afflictions and attain liberation?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「若不著于欲，　　心无诸扰乱，为有法眼耶？　　尽于愚痴不？能舍诸烦恼，　　得于解脱不？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptaparvata also replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Transcending the mire of desires, the mind is pure and<br/>undisturbed. The Dharma eye is very clear and penetrating, attaining<br/>the exhaustion of ignorance. Forever free from all fetters, one attains liberation.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「超出欲淤泥，　　心净无扰乱，法眼甚清彻，　　得尽于愚痴，永离众结使，　　获得于解脱。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgupta also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Who is without the torment of separation? Who can not speak frivolously? Who<br/>sees things without greed? Who does not give rise to thoughts and views?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「谁无别离恼？　　谁能不绮语？谁见物不贪？　　谁不生想见？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptaparvata also replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Long ago I cut off the suffering of separation and love, and have never spoken without meaning<br/>I have eliminated the mind of greed and desire, and forever have no wrong views and thoughts.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「久断爱别苦，　　未曾无义言，除舍贪欲心，　　永无邪见想。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgupta also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Do you possess all the wisdom, with pure precepts and conduct?<br/>Are you able to exhaust all taints, and not accept future existence?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「颇具于诸明，　　戒行清净不？为能尽诸漏，　　不受后有耶？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Saptādri also replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Wisdom and conduct are fully possessed, upholding pure precepts and conduct. Long<br/>ago, all bonds and taints were severed, never again to accept future existence.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「明行悉具足，　　持戒行清净，久断诸结漏，　　永不受后有。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa Himgiri also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>In the Tathāgata&#x27;s three karmas, are there many good<br/>practices? You now follow and uphold, praising the true Dharma.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「如来三业中，　　颇具众善行，汝今得遵行，　　赞叹真实法。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣas of the seven mountains also replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>七岳夜叉复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Tathāgata&#x27;s body, speech, and mind are fully endowed with<br/>good practices, clearly penetrating and complete. I praise the true Dharma.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「如来身口意，　　具足众善行，明达悉充备，　　我赞真实法。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣas of the snow mountains also spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The sage, the hero of the heavens, sits like a lion, eating little and not attached to taste. The<br/>sages and saints dwell in the forest in meditation. We should go together to pay homage to the venerable Gautama.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「牟尼天世雄，［蹲－酋＋（十／田／ㄙ）］如伊梨延，少食不著味。　　仙圣处林禅，我等可共往，　　礼敬瞿昙尊。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the seven mountain yakṣas together with the snow mountain yakṣas, leading a thousand yakṣas, went together at the same time. Having arrived at the Buddha&#x27;s place, they each adjusted their robes, joined their palms in respect, and spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，七岳夜叉共雪山等，将千夜叉同时俱往，既到佛所，各整衣服，合掌敬礼，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Bhagavān, the hero of the world, the Buddha, the most honored of<br/>two-legged beings, what the devas do not know, the one with eyes clearly understands.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「婆伽婆世雄，　　佛陀两足尊，诸天所不知，　　具眼悉明了。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, having spoken this verse, the snow mountain and the seven mountain yakṣas sat to one side. The snow mountain yakṣa asked the Buddha in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，雪山、七岳等说此偈已，在一面坐。雪山夜叉以偈问佛：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How does one emerge from suffering? How does one abandon<br/>suffering? The World-Honored One, please tell me, where does suffering end?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「云何苦出要？　　云何舍离苦？世尊为我说，　　苦于何处尽？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The five desires and the sixth, the mind, are to be<br/>detached from here. Liberation from all suffering is the way out<br/>of suffering. Liberation from suffering is the extinction of suffering right<br/>here. You now ask me, and I explain it to you like this.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「五欲意第六，　　于此处离欲，解脱于诸苦，　　斯是苦出要。如斯解脱苦，　　即于苦处灭。汝今问于我，　　为汝如是说。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa of the Snowy Mountains again asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复以偈问：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How does the pool flow back? Where is there<br/>no establishment? Where does suffering and happiness cease without remainder?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「云何池流回？　　何处无安立？苦乐于何处，　　灭尽无有余？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The eye, ear, nose, tongue, body, and the sixth, the mind faculty - this<br/>is where the pool flows back, this is where there is no establishment. When<br/>name and form do not arise and turn, this is where they attain complete cessation.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「眼耳鼻舌身，　　意根为第六，此处池流回，　　此无安立处。名色不起转，　　此处得尽灭。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa of the Snowy Mountains further asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复以偈问：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How does the world arise? How does it come together? How<br/>many are the world&#x27;s experiences? How many things are sought for suffering?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「云何世间生？　　云何得和聚？几为世间受？　　几事为苦求？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The world arises from six, and through six it comes together<br/>From six arise experiences, and six things are constantly sought for suffering.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「世间从六生，　　因六得和集，从六生于受，　　六事恒苦求。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa of the Snowy Mountains again asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复以偈问：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>How does one cultivate good dharmas, not being lazy day and night?<br/>How does one cross the swift current, which has no place to<br/>stand, and nothing to grasp onto, yet not sink in the deep?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「云何修善法，　　昼夜不懈怠？云何度驶流，　　无有安足处，亦无所攀缘，　　处深不沉没？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All precepts are not violated, wisdom is endowed with dhyāna, contemplating the<br/>faults of the multitude, fully endowed with the power of mindfulness. This<br/>one can liberate the difficult to liberate, far removed from the union<br/>of desire, abandoning all the fetters of existence, exhausting the existence of<br/>joy. Such a person is called one who abides in the deep without sinking.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「一切戒无犯，　　智慧具禅定，思惟众过患，　　具足于念力。此能度难度，　　远离欲和合，舍诸有结使，　　尽于欢喜有。如是人名为，　　处深不沉没。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa of the Snowy Mountains again asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复以偈问：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Who can cross the swift current? Who can leap across the<br/>great ocean? Who can abandon suffering? How can one attain purity?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「谁度于驶流？　　孰能越大海？谁能舍于苦？　　云何得清净？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Faith can cross the swift current, non-distraction can leap<br/>across the ocean, diligence can abandon suffering, wisdom can<br/>make pure. Go to the various śramaṇas and brāhmaṇas<br/>each asking separately, who knows the Dharma? Who can<br/>speak of true abandonment? Apart from me, who can speak?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「信能度驶流，　　不放逸越海，精进能舍苦，　　智慧能使净。汝诣诸沙门，　　及诸婆罗门，各各种别问，　　谁有知法者？谁能说实舍？　　离我谁能说？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The yakṣa of the Snowy Mountains again asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>雪山夜叉复以偈问：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Now I have heard the Buddha speak, and all<br/>doubts are removed. Why ask separately about śramaṇas and<br/>brāhmaṇas? The World-Honored One skillfully reveals and explains in<br/>detail. The seven mountains are deeply kind, enabling me<br/>to see. The unsurpassed great guide, wherever I go<br/>in cities and villages, everywhere, day and night I<br/>always take refuge in the three Buddhas of the<br/>Tathāgata, the true Dharma among the Dharma.&quot; The thousand<br/>yakṣas were each overjoyed, all joined their palms towards<br/>the Buddha, all seeking to become disciples, taking refuge<br/>in the World-Honored Buddha.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我今闻佛说，　　疑网皆已除，何须种别问，　　沙门婆罗门？世雄善显示，　　具实分别说，七岳恩深重，　　能使我得见。无上大导师，　　我今所至处，城邑及聚落，　　在在并处处，日夜常归依，　　如来三佛陀，法中之正法。」　　一千诸夜叉，心各怀踊跃，　　皆合掌向佛，咸求为弟子，　　归依佛世尊。</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 24.6 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 24.6</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">24.6</span> <span class="mirror-right">（六）斋戒</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an3.37.html">AN 3.37–38</a> / <a href="../parallels/sa1117.html">SĀ 1117</a> / <a href="../parallels/sa-2.46.html">SĀ² 2.46</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;There are three days of fasting in the fifteenth day of the month. What are the three? The eighth, fourteenth, and fifteenth days.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「十五日中有三斋法。云何为三？八日、十四日、十五日。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that there are times when on the eighth day of fasting, the Four Heavenly Kings send their ministers to observe the world, to see who is doing good or evil. What kind of beings are filial and kind to their parents, śramaṇas, brāhmaṇas, and elders? Are there any beings who like to give, cultivate precepts, patience, diligence, samādhi, expound the meaning of the sūtras, and observe the eight precepts? Please distinguish them. If there are no beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders, then the ministers will report to the Four Heavenly Kings, &#x27;In this world now, there are no beings who are filial to their parents, śramaṇas, and brāhmaṇas, and practice the four immeasurables with compassion for all beings.&#x27; When the Four Heavenly Kings hear this, they will be sorrowful and displeased. At that time, the Four Heavenly Kings will go to the Heaven of the Thirty-three Gods and gather in the hall of good Dharma to report this matter to Śakra, saying, &#x27;Śakra should know that in this world now, there are no beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; When Śakra and the Thirty-three Gods hear this, they will all be sorrowful and displeased, reducing the number of gods and increasing the number of asuras.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，或有是时，八日斋日，四天王遣诸辅臣，观察世间，谁有作善恶者？何等众生有慈孝父母、沙门、婆罗门及尊长者？颇有众生好喜布施、修戒、忍辱、精进、三昧、演散经义、持八关斋者？具分别之。设无众生孝顺父母、沙门、婆罗门及尊长者，是时辅臣白四天王：『今此世间无有众生孝顺父母、沙门、道士，行四等心，慈愍众生。』时，四天王闻已，便怀愁忧，惨然不悦。是时四天王即往忉利天上，集善法讲堂，以此因缘具白帝释：『天帝当知，今此世间无有众生孝顺父母、沙门、婆罗门及尊长者。』是时，帝释、三十三天闻斯语已，皆怀愁忧，惨然不悦，减诸天众，增益阿须伦众。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If there are times when the beings in the world are filial to their parents, śramaṇas, brāhmaṇas, and elders, and observe the eight precepts, cultivating virtue and purity, not violating the precepts even as small as a hair, then the messengers will be overjoyed and unable to contain themselves. They will report to the Four Heavenly Kings, &#x27;Now in this world, there are many beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; When the Heavenly Kings hear this, they will be greatly delighted and immediately go to Śakra, the Lord of the Heaven of the Thirty-three Gods, to report this matter, saying, &#x27;Śakra should know that now in this world, there are many beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; Then Śakra and the Thirty-three Gods will all be overjoyed and unable to contain themselves, increasing the number of gods and decreasing the number of asuras. The tortures in hell will naturally cease, and the pain of poison will not occur.</p></td><td lang="lzh" class="agama-chi"><p>「设复有时，若世间众生之类有孝顺父母、沙门、婆罗门及尊长者，持八关斋，修德清净，不犯禁戒大如毛发。尔时，使者欢喜踊跃，不能自胜，即白四王：『今此世间多有众生孝顺父母、沙门、婆罗门及诸尊长。』天王闻已，甚怀喜悦，即往释提桓因所，以此因缘具白帝释：『天帝当知，今此世间多有众生孝顺父母、沙门、婆罗门及诸尊长。』时，帝释、三十三天皆怀欢喜，不能自胜，增益诸天众，减损阿须伦众，地狱拷掠自然休息，毒痛不行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If it is the day of fasting on the fourteenth, the prince will be sent down to observe the world, to see if there are any beings who believe in the Buddha, Dharma, and Saṃgha, who are filial to their parents, śramaṇas, brāhmaṇas, and elders, who like to give, observe the eight precepts, close off the six senses, and restrain the five desires. If there are no beings who cultivate the five practices and are filial to their parents, śramaṇas, brāhmaṇas, and elders, then the prince will report to the Four Heavenly Kings. When the Four Heavenly Kings hear this, they will be sorrowful and displeased. They will then go to Śakra, the Lord of the Heaven of the Thirty-three Gods, to report this matter, saying, &#x27;Great King, you should know that now in this world, there are no beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; Then Śakra and the Thirty-three Gods will all be sorrowful and displeased, reducing the number of gods and increasing the number of asuras. The tortures in hell will naturally cease, and the pain of poison will not occur.</p></td><td lang="lzh" class="agama-chi"><p>「若十四日斋日之时，遣太子下，察行天下，伺察人民，施行善恶，颇有众生信佛、信法、信比丘僧，孝顺父母、沙门、婆罗门及尊长者，好喜布施，持八关斋，闭塞六情，防制五欲。设无众生修五法者，孝顺父母、沙门、婆罗门。尔时，太子白四天王。四天王闻已，便怀愁忧，惨然不悦，往至释提桓因所，以此因缘具白天帝：『大王当知，今此世间无有众生孝顺父母、沙门、婆罗门及尊长者。』是时，天帝、三十三天皆怀愁忧，惨然不悦，减诸天众，增益阿须伦众。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If there are beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders, and observe the eight precepts, then the prince will be overjoyed and unable to contain himself. He will then go to report to the Four Heavenly Kings, &#x27;Great Kings, you should know that now in this world, there are many beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; When the Four Heavenly Kings hear this, they will be greatly delighted and will then go to Śakra, the Lord of the Heaven of the Thirty-three Gods, to report this matter, saying, &#x27;Holy King, you should know that now in this world, there are many beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders, who accept the Three Refuges, speak with compassion and resolve disputes, and are sincere and trustworthy.&#x27; Then Śakra, the Four Heavenly Kings, and the Thirty-three Gods will all be overjoyed and unable to contain themselves, increasing the number of gods and decreasing the number of asuras. The tortures in hell will naturally cease, and the pain of poison will not occur.</p></td><td lang="lzh" class="agama-chi"><p>「设复众生有孝顺父母、沙门、婆罗门及尊长者，持八关斋。尔时，太子欢喜踊跃，不能自胜，即往白四天王：『大王当知，今此世间多有众生孝顺父母、沙门、婆罗门及诸尊长。』是时，四天王闻此语已，甚怀喜悦，即往诣释提桓因所，以此因缘具白天帝：『圣王当知，今此世间多有众生孝顺父母、沙门、婆罗门及诸尊长，受三自归，慈心谏诤，诚信不欺。』时，天帝、四王及三十三天皆怀欢喜，不能自胜，增益诸天众，减损阿须伦众。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus, you should know that on the fifteenth day when the precepts are recited, the Four Heavenly Kings personally come down to inspect the world and observe the people. Which beings are filial to their parents, śramaṇas, brāhmaṇas, and elders, who like to give, observe the eight precepts, and practice the Tathāgata&#x27;s precepts? If there are no beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders, then the Four Heavenly Kings will be sorrowful and displeased. They will then go to Śakra, the Lord of the Heaven of the Thirty-three Gods, to report this matter, saying, &#x27;Great King, you should know that now in this world, there are no beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; Then Śakra, the Lord of the Heaven of the Thirty-three Gods, and the Thirty-three Gods will all be sorrowful and displeased, reducing the number of gods and increasing the number of asuras.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，十五日说戒之时，四天王躬自来下，案行天下，伺察人民。何等众生孝顺父母、沙门、婆罗门及尊长者，好喜布施，持八关斋如来斋法。设无众生孝顺父母、沙门、婆罗门及尊长者，时四天王便怀愁悒，惨然不悦，往至帝释所，以此因缘具白天帝：『大王当知，今此世间无有众生孝顺父母、沙门、婆罗门及诸尊长者。』是时，释提桓因、三十三天皆怀愁忧，惨然不悦，减诸天众，增益阿须伦众。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If at that time there are beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders, and observe the eight precepts, then the Four Heavenly Kings will be overjoyed and unable to contain themselves. They will then go to Śakra, the Lord of the Heaven of the Thirty-three Gods, to report this matter, saying, &#x27;Great King, you should know that now in this world, there are many beings who are filial to their parents, śramaṇas, brāhmaṇas, and elders.&#x27; Then Śakra, the Lord of the Heaven of the Thirty-three Gods, the Thirty-three Gods, and the Four Heavenly Kings will all be overjoyed and unable to contain themselves, increasing the number of gods and decreasing the number of asuras.</p></td><td lang="lzh" class="agama-chi"><p>「设复是时，众生之类有孝顺父母、沙门、婆罗门及诸尊长，持八关斋。尔时，四天王便怀欢喜，踊跃不能自胜，即往帝释所，以此因缘具白天帝：『大王当知，今此世间多有众生孝顺父母、沙门、婆罗门及诸尊长。』是时，释提桓因、三十三天及四天王皆怀欢喜，踊跃不能自胜，增益诸天众，减损阿须伦众。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One told the bhikṣus, &quot;What is the method of observing the eight precepts on the fifteenth day?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「云何十五日持八关斋法？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus addressed the World Honored One, saying, &quot;The Tathāgata is the king of all dharmas, the seal of all dharmas. We only wish that the World Honored One would explain this meaning for the bhikṣus. Having heard it, the bhikṣus will uphold it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，诸比丘白世尊曰：「如来是诸法之王，诸法之印。唯愿世尊当为诸比丘布演此义，诸比丘闻已，当奉行之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World Honored One said, &quot;Listen attentively! Listen attentively! Consider it well, and I shall explain it in detail for you. Thus, bhikṣus! If there are good men and good women, on the fourteenth and fifteenth days of the month when precepts are recited and the fast is observed, they should go to the assembly of the four groups and say, &#x27;On this fast day, I wish to observe the eight precepts of the fast. I only wish that the Venerable One would explain it to me!&#x27; At that time, the assembly of the four groups should teach and explain the eight precepts of the fast. First, they should teach them to say, &#x27;Good man, you should proclaim your name.&#x27; Having proclaimed their names, they should then be taught the eight precepts of the fast. At that time, the instructor should teach the person in front to say, &#x27;I now uphold the fast method of the Tathāgata, and until tomorrow morning, I shall cultivate pure precepts and remove evil dharmas. If I have committed evil deeds with the body, spoken evil words with the mouth, or given rise to evil thoughts with the mind, the three evil deeds of the body, the four evil deeds of the mouth, and the three evil deeds of the mind, whether already committed, to be committed, or capable of being committed due to greed, hatred, delusion, nobility, or evil friends, whether in this life, future lives, or countless lives, whether not recognizing the Buddha, not recognizing the Dharma, or causing disputes in the Sangha of bhikṣus, or killing parents or other venerable elders, I now confess and repent, not concealing them. Relying on the precepts and the Dharma, I shall perfect my practice of precepts and uphold the eight precepts of the fast of the Tathāgata.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「谛听！谛听！善思念之，吾当为汝具分别说。于是，比丘！若有善男子、善女人，于月十四、十五日说戒、持斋时，到四部众中，当作是语：『我今斋日，欲持八关斋法。唯愿尊者，当与我说之！』是时，四部之众，当教与说八关斋法。先教作是语：『善男子，当自称名字。』彼已称名字，便当与说八关斋法。是时，教授者当教前人作是语：『我今奉持如来斋法，至明日清旦，修清净戒，除去恶法。若身恶行，口吐恶语，意生恶念，身三、口四、意三诸有恶行，已作、当作，或能以贪欲故所造，或能以瞋恚所造，或能以愚痴所造，或能以豪族故造，或能因恶知识所造，或能今身、后身、无数身，或能不识佛、不识法，或能鬪比丘僧，或能杀害父母诸尊师长，我今自忏悔，不自覆藏，依戒、依法成其戒行，受八关如来斋法。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What are the eight precepts of the fast? Upholding the mind like a true person, for the duration of one&#x27;s life, not killing, without any harmful intent, having compassionate thoughts towards sentient beings. &#x27;I now proclaim my name. I observe the fast until tomorrow morning, not killing, without any harmful intent, having compassionate thoughts towards all sentient beings.</p></td><td lang="lzh" class="agama-chi"><p>「云何为八关斋法？持心如真人，尽形寿不杀，无有害心，于众生有慈心之念。『我今字某，持斋至明日清旦，不杀、无有害心，有慈心于一切众生。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, without any wrong thoughts, for the duration of one&#x27;s life, not stealing, delighting in giving. I now proclaim my name. For the duration of my life, I shall not steal. From now until tomorrow, I shall uphold the mind.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，无有邪念，尽形寿不盗，好喜布施。我今字某，尽形寿不盗，自今至明日持心。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like a true person, I now, for the duration of my life, shall not engage in sexual misconduct, without any wrong thoughts, always practicing pure conduct, with a fragrant and clean body. Today, I uphold the precept of not engaging in sexual misconduct. I shall not think of my own wife, nor shall I think of other women. Until tomorrow morning, I shall not violate this.</p></td><td lang="lzh" class="agama-chi"><p>「『如是真人，我今尽形寿，不淫泆，无有邪念，恒修梵行，身体香洁，今日持不淫之戒，亦不念己妻，复不念他女人想，至明日清旦，无所触犯。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, for the duration of one&#x27;s life, not speaking falsely, always knowing sincerity, not deceiving others. From now until tomorrow, I shall not speak falsely. From now on, I shall no longer speak falsely.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，尽形寿不妄语，恒知至诚，不欺他人，自今至明日不妄语，我自今以后不复妄语。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, not drinking alcohol, the mind not confused, upholding the Buddha&#x27;s precepts without violating them. I shall also be like this, from today until tomorrow, not drinking alcohol, upholding the Buddha&#x27;s precepts without violating them.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，不饮酒，心意不乱，持佛禁戒，无所触犯，我今亦当如是，自今日至明旦，不复饮酒，持佛禁戒，无所触犯。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, for the duration of one&#x27;s life, not violating the precepts of the fast, always eating at the proper time, eating little and being content, not attached to flavors. I shall also be like this, for the duration of my life, not violating the precepts of the fast, always eating at the proper time, eating little and being content, not attached to flavors, from today until tomorrow.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，尽形寿不坏斋法，恒以时食，少食知足，不著于味。我今亦如是，尽形寿不坏斋法，恒以时食，少食知足，不著于味，从今日至明旦。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, always not sitting on high and wide beds. So-called high and wide beds, such as gold, silver, ivory beds, or beds made of horns, Buddha seats, pratyekabuddha seats, arhat seats, and seats of honored teachers. At that time, arhats did not sit on these eight kinds of seats. I shall also not violate this sitting.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，恒不在高广之床上坐。所谓高广之床，金、银、象牙之床，或角床、佛座、辟支佛座、阿罗汉座、诸尊师座。是时，阿罗汉不在此八种座，我亦上坐不犯此坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;Like an arhat, not wearing fragrant flowers, ointments, and powder. I shall also be like this, for the duration of my life, not wearing the good things of fragrant flowers, ointments, and powder.</p></td><td lang="lzh" class="agama-chi"><p>「『如阿罗汉，不著香华、脂粉之饰。我今亦当如是，尽形寿不著香华、脂粉之好。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&#x27;I now name myself so-and-so, leaving these eight things, upholding the eight precepts of the fasting ceremony, not falling into the three evil destinies. Holding this merit, not entering the eight difficulties of hell, hungry ghosts, animals, and so on, always obtaining good spiritual friends, not associating with bad spiritual friends, always being born in good parents&#x27; families, not being born in borderlands without the Buddha&#x27;s teachings, not being born in long-lived heavens, not becoming a slave to others, not becoming a Brahma god, not becoming a Sakra god, and not becoming a wheel-turning sage king, always being born in front of the Buddha, seeing the Buddha myself, hearing the Dharma myself, and not having the faculties disturbed. If I vow to practice the three vehicles, may I quickly attain the fruit of the path.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「『我今字某，离此八事，奉持八关斋法，不堕三恶趣。持是功德，不入地狱、饿鬼、畜生八难之中，恒得善知识，莫与恶知识从事，恒得好父母家生，莫生边地无佛法处，莫生长寿天上，莫与人作奴婢，莫作梵天，莫作释身，亦莫作转轮圣王，恒生佛前。自见佛，自闻法，使诸根不乱。若我誓愿向三乘行，速成道果。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Bhikṣus, you should know that if there are upāsakas and upāsikās who uphold this eight-part fasting ceremony, those good sons and good daughters will proceed to three paths: either being born among humans, or being born in the heavens, or attaining parinirvāṇa.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，若有优婆塞、优婆夷，持此八关斋法，彼善男子、善女人，当趣三道：或生人中，或生天上，或般涅槃。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Not killing, not stealing, not engaging in sexual misconduct, not lying, avoiding alcohol<br/>staying away from fragrant flowers, indulging in flavors, and breaking the precepts. Dancing<br/>singing, performing, and learning to abandon like an arhat, now upholding the eight-part<br/>fasting ceremony, day and night without forgetting. Not having the suffering of birth<br/>and death, without a fixed period of wandering, do not gather with those<br/>you love, and do not meet with those you dislike. May the suffering<br/>of the five aggregates, all pain, and the afflictions of birth and death<br/>be extinguished. Nirvāṇa is free from all troubles, I now take refuge in it.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「不杀亦不盗，　　不淫不妄语，避酒远香花，　　著味犯斋者。歌舞作倡伎，　　学舍如罗汉，今持八关斋，　　昼夜不忘失。不有生死苦，　　无有周旋期，莫与恩爱集，　　亦莫怨憎会。愿灭五阴苦，　　诸痛生死恼，涅槃无诸患，　　我今自归之。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Therefore, bhikṣus! If there are good men and good women who wish to uphold the eight-part fasting ceremony to be free from suffering, to attain a good state, to exhaust all taints and enter the city of nirvāṇa, they should seek skillful means to accomplish this eight-part fasting ceremony. The reason is that the glory of human status is not to be valued, the happiness of the heavens is immeasurable. If good men and good women wish to seek unsurpassed blessings, they should seek skillful means to accomplish this fasting ceremony.</p></td><td lang="lzh" class="agama-chi"><p>「是故，诸比丘！若有善男子、善女人，欲持八关斋离诸苦者，得善处者，欲得尽诸漏入涅槃城者，当求方便，成此八关斋法。所以然者，人中荣位不足为贵，天上快乐不可称计。若善男子、善女人，欲求无上之福者，当求方便，成此斋法。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I now solemnly instruct you again. If there are good men and good women who uphold the eight-part fasting ceremony and wish to be reborn in the heavens of the Four Heavenly Kings, they will also attain this wish. For those who uphold the precepts, their wishes will be fulfilled. This is why I speak of this meaning. The glory of human status is not to be valued. If good men and good women uphold the eight-part fasting ceremony, when their bodies perish and their lives end, they will be reborn in good places in the heavens, also being reborn in the heavens of the Lustful, Tuṣita, Yāma, and Nirmāṇarati, and will never be in vain. The reason is that for those who uphold the precepts, their wishes will be fulfilled.</p></td><td lang="lzh" class="agama-chi"><p>「我今重告勅汝，若有善男子、善女人，成八关斋者，欲求生四天王上，亦获此愿。持戒之人，所愿者得，我以是故，而说此义耳。人中荣位不足为贵。若善男子、善女人，持八关斋者，身坏命终，生善处天上，亦生艶天、兜术天、化自在天、他化自在天，终不有虚。所以然者，以其持戒之人所愿者得。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus! I now solemnly instruct you again. If there are men and women who uphold the eight-part fasting ceremony and wish to be reborn in the heavens of desire or form, they will also attain this wish. Why is this so? Because for those who uphold the precepts, their wishes will be fulfilled. If there are good men and good women who uphold the eight-part fasting ceremony and wish to be reborn in the formless heavens, they will also fulfill their wishes.</p></td><td lang="lzh" class="agama-chi"><p>「诸比丘！我今重告汝，若有男子、女人持八关斋者，生欲天者，生色天者，亦成其愿。何以故尔？以其持戒之人所愿者得。若复善男子、善女人，持八关斋，欲得生无色天者，亦果其愿。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣus should know, if there are good men and good women who uphold the eight-part fasting ceremony and wish to be reborn in the families of the four castes, they will also be reborn there. Again, if good men and good women uphold the eight-part fasting ceremony and wish to become a heavenly king of one direction, two directions, three directions, or four directions, they will also attain their wish. If they wish to become a wheel-turning sage king, they will also attain their wish. The reason is that for those who uphold the precepts, their wishes will be fulfilled. If there are good men and good women who wish to become a śrāvaka, pratyekabuddha, or buddha, they will all fulfill their wishes. I now become a buddha because of upholding the precepts, the five precepts and ten good deeds. There is no wish that is not attained. Bhikṣus! If you wish to accomplish the path, you should study in this way.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，若善男子、善女人，持八关斋者，欲生四姓家者，亦复得生。又善男子、善女人，持八关斋人，欲求作一方天子，二方、三方、四方天子，亦获其愿。欲求作转轮圣王者，亦获其愿。所以然者，以其持戒之人所愿者得。若善男子、善女人，欲求作声闻、缘觉、佛乘者，悉成其愿。吾今成佛，由其持戒，五戒、十善，无愿不获，诸比丘！若欲成其道者，当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said and joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行◎</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

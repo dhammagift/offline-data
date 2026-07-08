@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.52 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.52</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 52</span><span class="mirror-right">（五二）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn11.16.html">SN 11.16</a> / <a href="../parallels/ea13.6.html">EĀ 13.6</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard. Once, the Buddha was staying at Vulture Peak in Rajagriha. At that time, there were ninety-six kinds of non-Buddhist practitioners in Rajagriha, each performing their own sacrifices. If there were any donors who had faith in the non-Buddhist teacher Caraka, they would say, &quot;First, we should make offerings to my teacher Caraka.&quot; If they had faith in the non-Buddhist teacher Vararuci, they would say, &quot;First, we should make offerings to my teacher Vararuci.&quot; If they had faith in the non-Buddhist teacher Gandhara, they would all say, &quot;First, we should give a large donation to my teacher Gandhara and then to the others.&quot; If they had faith in the non-Buddhist teacher called the Three Waters, they would say, &quot;We should make offerings to my teacher the Three Waters.&quot; If they had faith in the non-Buddhist teacher called the Old Sravaka, they would say, &quot;First, we should make offerings to my teacher the Old Sravaka.&quot; If they had faith in the non-Buddhist teacher called the Great Sravaka, they would also say, &quot;We should make offerings to my teacher the Great Sravaka.&quot; If they had faith in the Buddha, they would all say, &quot;First, we should make offerings to my teacher the Tathāgata and the Sangha.</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：一时，佛在王舍城耆阇崛山中。尔时，王舍城有九十六种外道，各各祠祀。设有檀越，信心于外道遮勒者，言当先供养我师遮勒；若信外道婆罗婆寔者，亦言先当供养我师婆罗婆寔；若信外道干陀者，咸言先与我师干陀大嚫后与余者；若信外道名三水者，言当供养我师三水；若信外道名老声闻者，言先供养我师老声闻；若信外道大声闻者，亦言供养我师大声闻；若信佛者，咸言应先供养我师如来及以众僧。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sakra Devendra thought, &quot;Now the people of Rajagriha have given rise to great wrong views. If the Buddha and the Sangha are in the world and wrong views arise, it is called unwholesome.&quot; At that time, Sakra Devendra transformed himself into an old brahman with an upright appearance, riding a white chariot drawn by white horses, surrounded by young men on the left and right, heading towards the temple grounds, passing straight through the middle. At that time, the people of Rajagriha all thought, &quot;Where did this old brahman go first? We shall follow him.&quot; At that time, Sakra Devendra knew what the people were thinking, turned the chariot to the south, and headed towards Vulture Peak. Arriving at the place where the carriages were parked, he stopped there. Getting off the carriage and walking forward, he went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, and sat to one side.</p></td><td lang="lzh" class="agama-chi"><p>时] cf.【丽】释提桓因作是念言：「今王舍城人生大邪见，佛僧在世，若生邪见，名为不善。」帝释尔时寻自变身为老婆罗门，容貌端正，乘以白车，驾以白马，诸摩纳等围遶左] cf.【丽】右，向于寺场，当中直过。时，王舍城人咸作是念：「今此] cf.【丽】老婆罗门先向何处，我等随从。」尔时，帝释知诸人等心之所念，回车南旋，向灵鹫山。到诸乘驾所住之处，于中而止。下车前进，往至佛所，顶礼佛足，在一面坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sakra Devendra spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，帝释即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Wheel-Turning Sage King can ferry across the shore of suffering, without<br/>enmity, hatred, or fear. I now bow my head in reverence. If<br/>a person wishes to cultivate merit, where should they give? If they<br/>wish to seek merit, they should give with pure faith and respect<br/>If they practice giving today, they will receive good rewards in the<br/>future. In which field of merit will they receive great fruit from giving little?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「转法轮圣王，　　能度苦彼岸，无怨憎恐怖，　　我今稽首礼。设人欲修福，　　当于何处施？又欲精求福，　　应生净信敬。今日修布施，　　来世得善报，于何福田中，　　少施获大果？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One was on Vulture Peak, expounding to Sakra Devendra the most excellent of sacrifices, and answered in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊在耆阇崛山中，为天帝释敷演祠中最为胜者，以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The four fruits and four stages, dhyāna, concentration, and wisdom, the power<br/>of merit and virtue is profound, like the water of the great<br/>ocean. This is called the true and excellent disciple of the Tamer<br/>who can light the lamp of wisdom in the great darkness. Always<br/>for the sake of all beings, expounding the Dharma and showing the<br/>path, this is called the field of merit of the Saṅgha, vast<br/>and boundless. If one gives to this field of merit, it is<br/>called giving well. If one sacrifices to this field of merit, it<br/>is called sacrificing well. Burning things to sacrifice to heaven is in<br/>vain and useless, and is not called burning well. If one performs<br/>little meritorious deeds in the field of merit, one will later obtain<br/>great benefits, and it is then called burning well. Sakra Devendra should<br/>know that this is called a good field of merit. Giving to<br/>one person in the Saṅgha will later definitely obtain great fruit. This<br/>is what the Knower of the World says. The Buddha with immeasurable<br/>merit praises the Saṅgha with a hundred verses. The best of sacrifices<br/>is none other than the field of merit of the Saṅgha. If<br/>a person plants a little goodness, the reward is immeasurable. Therefore, the<br/>good and wise should give to the Saṅgha. Those who can uphold<br/>the Dharma are called the Saṅgha. It is like the great ocean<br/>which has many precious treasures. The ocean of the Saṅgha is also<br/>like this, rich in the treasures of merit and virtue. If one<br/>can give to the treasure of the Saṅgha, it is called a<br/>good and wise person. Having already obtained joyful faith, if one can<br/>give with faith, one should know that such a person will obtain<br/>joy in the three times. Because of joy in the three times<br/>one can cross the three evil paths, remove all dust and defilements<br/>and be free from the poisonous arrows of afflictions. With a pure<br/>mind, giving with one&#x27;s own hands, benefiting oneself and others, being able<br/>to perform such a sacrifice, such a person is called a wise<br/>and intelligent one in the world. With pure faith, one can reach<br/>the unconditioned state, the utmost bliss in the world. The wise can<br/>be reborn there.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「四果及四向，　　禅定明行足，功德力甚深，　　犹如大海水。此名为实胜，　　调御之弟子，于大黑暗中，　　能燃智慧灯。常为诸众生，　　说法而示道，是名僧福田，　　广大无漄际。若施斯福田，　　是名为善与，若祀斯福田，　　是名为善祀。焚物而祭天，　　徒费而无补，不名为善烧。　　若于福田所，少作诸功业，　　后获大富利，乃名为善烧。　　帝释应当知，是名良福田，　　施僧次一人，后必获大果。　　此事是时说，世间解所说，　　无量功德佛，以百偈赞僧。　　祠祀中最上，无过僧福田，　　若人种少善，获报无有量。　　是以善丈夫，应当施于僧，　　能总持法者，是则名为僧。　　譬如大海中，多有众珍宝，　　僧海亦如是，多饶功德宝，　　若能施僧宝，是名善丈夫。　　已获欢喜信，若能信心施，　　当知如此人，得三时欢喜，　　以三时喜故，能度三恶道，　　除祛诸尘垢，离烦恼毒箭。　　净心手自施，自利亦利彼，　　能设如此祠，是人则名为，　　世间明智者。信心既清净，　　得至无为处，世间之极乐，　　智者得生彼。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having heard these verses, Sakra Devendra was overjoyed. He disappeared from his seat and returned to the heavenly palace. Not long after Sakra returned to the palace, the elders and Brahmins of Rajagriha rose from their seats, bared their right shoulders, touched their right knees to the ground, joined their palms towards the Buddha, and said to the Buddha, &quot;May the World-Honored One and the Sangha accept our invitation to a great sacrifice tomorrow morning.&quot; At that time, the Tathāgata silently accepted the invitation. The Brahmins and elders of Rajagriha, knowing that the Buddha had silently accepted their invitation, bowed their heads at the Buddha&#x27;s feet and returned to their abodes. When they returned home, they prepared various fragrant and delicious foods, pure and fragrant offerings. Having prepared them, they laid out seats in the morning, provided clean water, and sent a messenger to Vulture Peak to inform the World-Honored One, saying, &quot;The meal is ready.&quot; At that time, the Tathāgata put on his robe, took his bowl, and was surrounded by the Sangha. The World-Honored One went ahead, going to the city and to the place of the great sacrifice. Having arrived there, the Tathāgata laid out his seat and sat in front of the Sangha. The people of the city laid out good seats and sat with the Sangha. At that time, the elders and others, seeing that the assembly was seated, each served clean water. The Brahmins and elders personally served various fragrant and delicious foods. The people each encouraged and benefited.</p></td><td lang="lzh" class="agama-chi"><p>帝释闻是偈已，踊跃欢喜，于坐处没，还于天宫。帝释还宫未久之间，王舍城中长者婆罗门即从坐起，偏袒右肩，右膝著地，合掌向佛，而白佛言：「唯愿世尊，及比丘僧，于明晨朝，受大祠欢喜请。」尔时，如来默然许之。时，王舍城婆罗门长者知佛默然受已请已，顶礼佛足，各还所止。时，诸人等既还家已，各各办诸香美饮食，清净香洁供设。办已，晨朝敷座，具行净水，遣使往诣灵鹫山中，白世尊言：「食时已到。」尔时，如来著衣持钵，众僧围遶，世尊在前，往诣彼城，到大祠所。既至彼已，如来敷座，于僧前坐，彼城中人，敷好床座，与僧而坐。尔时，诸长者等察众坐定，各行净水，诸婆罗门长者手自斟酌种种香美饮食。时，诸人等各各劝益。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One saw that the Sangha had finished their meal and immediately put away the bowls and handed them to Ānanda. Then the people each spread out their seats and sat in front of the Buddha, respectfully looking up and seeking to hear the Dharma. At that time, the Tathāgata praised their offerings and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊观诸众僧饭食已讫，即时收钵，付于阿难。时，诸人等各自敷座，在佛前坐，专心敬仰，求欲听法。尔时，如来赞其所施，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Among the Brahmins&#x27; scriptures, fire sacrifice is the best. Among<br/>the non-Buddhist texts, the Vāpīśīla is the best. Among all<br/>worldly people, the king is the foremost. Among the many<br/>rivers, the ocean is called the best. Among the stars<br/>and constellations, the moonlight is the best. Among all lights<br/>the sunlight is the best. Above, below, and in the<br/>four directions, in the world and among gods and humans<br/>among the sages and saints, the Buddha is the most<br/>honored and foremost.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「婆罗门经书，　　祠祀火为最。外道典籍中，　　婆比室为最。于诸世人中，　　王者最为首。百川众流中，　　巨海名为最。星辰诸宿中，　　月光名为最。于众明之中，　　日光最为最。上下及四方，　　世间及天人，诸贤圣众中，　　佛最第一尊。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke various teachings for the people of Rājagṛha, showing, teaching, benefiting, and delighting them. The people rejoiced and rose from their seats to leave.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊为王舍城人种种说法，示教利喜，诸人踊跃，从坐而退。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken this, the Buddha finished. The bhikṣus, having heard the Buddha&#x27;s words, rejoiced and received them with respect.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Sūbila Sage, anger, eighth day of the month, illness, and upholding<br/>one precept, bird&#x27;s nest, and Vālin, poor man, and great sacrifice</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>须毘罗仙人　　灭瞋、月八日病并持一戒　　鸟巢及婆梨贫人及大祠</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

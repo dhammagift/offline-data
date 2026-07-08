@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Mitra AI Translation</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="pressed w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div id="content">
+<h2>Translating the Āgamas: Introducing the “Mitra” AI Translation Model</h2>
+
+<p>To make our collection of Āgama texts accessible to a modern audience, we utilize advanced artificial intelligence tailored specifically for Buddhist literature. Specifically, we use <a href="https://huggingface.co/buddhist-nlp/gemma-2-mitra-it" target="_blank">gemma-2-mitra-it</a>, an open-source, specialized large language model developed by the Buddhist NLP initiative.</p>
+
+<p>Here is an overview of what this technology is, who is behind it, and how it impacts the translations you read on this website.</p>
+
+<h3>What is Gemma-2-Mitra-IT?</h3>
+
+<p>Gemma-2-Mitra-IT (Instruction Tuned) is a 9-billion-parameter language model built on top of Google’s robust Gemma 2 architecture. What makes “Mitra” unique is that it isn’t a generic translator like Google Translate or standard ChatGPT.</p>
+
+<p>It is built from the ground up on a base model (gemma2-mitra-base) heavily exposed to Buddhist texts, technical terminology, and classical languages. This “Instruction Tuned” (IT) version is specifically optimized to follow exact translation prompts—such as converting Classical Chinese, Sanskrit, or Pāli source material into fluid, context-aware modern languages.</p>
+
+<h3>The Connection to DharmaMitra</h3>
+
+<p>This model is the brain-child of <a href="https://dharmamitra.github.io/dharmamitra-guides/" target="_blank">DharmaMitra</a>, an open-source project dedicated to bridging ancient Buddhist wisdom and cutting-edge Natural Language Processing (NLP).</p>
+
+<p>Named after the Sanskrit word for “Friend of the Dharma,” DharmaMitra is a community-driven initiative focused on training AI models specifically on Buddhist corpora. They gather, clean, and format vast collections of canonical texts, commentaries, and historical translations to teach AI models the intricate nuances of Buddhist thought. When you use gemma-2-mitra-it, you are using a tool that has been carefully shaped by DharmaMitra’s specialized training datasets to ensure it “understands” the Dharma far better than a standard commercial AI.</p>
+
+<h3>Why We Use It: The Pros</h3>
+
+<p><b>Deep Buddhist Context &amp; Terminology:</b> Standard AI often translates Buddhist terms literally or incorrectly (e.g., translating “空” (śūnyatā) simply as “empty space” instead of “emptiness/voidness,” or misidentifying complex dharma lists). Mitra is trained on Buddhist corpora, so it recognizes specific philosophical terms, doctrinal nuances, and formulas common to the Āgamas.</p>
+
+<p style="margin-top: 1.2em;"><b>Preservation of Āgama Structures:</b> The Āgamas (the Sanskrit/Classical Chinese parallels to the Pāli Nikāyas) feature heavily repetitive phrasing and specific ancient rhetorical styles. Mitra handles these repetitive structures better than generic models, ensuring a consistent tone across long text passages.</p>
+
+<p style="margin-top: 1.2em;"><b>Fluid Readability:</b> Because it is an Instruction-Tuned model, it does a remarkable job of converting dense, archaic syntax into clear, grammatically sound modern English (or other target languages) without losing the structural essence of the original verse or prose.</p>
+
+<p style="margin-top: 1.2em;"><b>Open Source &amp; Community Driven:</b> Being a model hosted by the Buddhist NLP community, it is built out of a shared devotion to preserving and translating the Dharma. It represents the cutting edge of applying open-source AI to digital humanities and Buddhist studies.</p>
+
+<h3>The Limitations: The Cons (and why human oversight is necessary)</h3>
+
+<p>While Mitra is highly advanced, machine translation of 2,000-year-old texts is incredibly complex. Visitors should keep the following limitations in mind:</p>
+
+<p style="margin-top: 1.2em;"><b>The Risk of “Hallucinations”:</b> Like all large language models, Mitra can occasionally “hallucinate”—meaning it might confidently generate a fluent sentence that sounds perfectly Buddhist but actually omits, adds, or changes a key detail present in the original text.</p>
+
+<p style="margin-top: 1.2em;"><b>Sensitivity to Line Breaks and Formatting:</b> The model requires very specific formatting input (such as substituting traditional line breaks with specific tokens like 🔽 during processing, and using # as a stop token). If the underlying source text formatting is messy, the translation quality can degrade or cut off unexpectedly.</p>
+
+<p style="margin-top: 1.2em;"><b>Difficulty with Obscure Transliterations:</b> The Āgamas frequently contain ancient Chinese transliterations of historical Indian names, places, or rare mantras. If a specific phonetic transliteration wasn’t heavily featured in the training data, the model may struggle to accurately identify the underlying Sanskrit/Pāli name.</p>
+
+<p style="margin-top: 1.2em;"><b>Loss of Deep Esoteric Nuance:</b> AI translates based on statistical patterns. While it captures the overall meaning brilliantly, it can sometimes smooth over a deliberate ambiguity or double-entendre that an ancient author intended, which only a seasoned human scholar might notice.</p>
+
+</div> <!-- End page content -->
+</div> <!-- end content container bwcontainer4 -->
+	<!-- Footer -->
+	<footer>
+ 	<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script> <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script>  
+ </body>
+ </html>

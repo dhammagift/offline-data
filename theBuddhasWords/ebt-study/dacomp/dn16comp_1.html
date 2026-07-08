@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 16 (Part 1) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 16: Mahāparinibbāna-sutta (Part 1 of 2)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn13comp.html#content"></a><a id="next-sutta" href="./dn16comp_2.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2015 under the title "Healing in Early Buddhism" in the <i>Buddhist Studies Review</i>, 32.1: 19–33; © Equinox Publishing Ltd. 2015. The paper was written as an invited contribution to the topic "Buddhism and Healing" taken up at the UKABS Conference held at the University of Leeds on the 1st and 2nd of July 2014.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn16.html">DN 16</a> / <a href="../../parallels/da2.html">DĀ 2</a> / <a href="../../parallels/ma36.html">MĀ 36</a> / <a href="../../parallels/ea28.5.html">EĀ 28.5 (~)</a> / <a href="../../parallels/ea42.5.html">EĀ 42.5</a> / <a href="../../parallels/ea42.7.html">EĀ 42.7 (~)</a> / <a href="../../parallels/t5.html">T 5 (~)</a> / <a href="../../parallels/t6.html">T 6 (~)</a> / <a href="../../parallels/t7.html">T 7 (~)</a> / <a href="../../parallels/t212.29.html">T 212.29</a> / <a href="../../parallels/t213.28.html">T 213.28</a></p>
+<p class="read-links">Read: <a href="./dn16comp_2.html">Part 2</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>In the present chapter I explore the Buddhist approach to healing in the way this emerges from the early discourses. I begin with an extract from the <i>Dīrgha-āgama </i>parallel to the <i>Mahāparinibbāna-</i><i>sutta</i>, followed by other selected passages that report how the Buddha or his eminent disciples dealt with a condition of sickness.</p>
+<p>A central source of information on the practice of healing in early Buddhism can be found in <i>Vinaya</i> narratives. In the Pāli <i>Vi</i><i>naya</i> the cures effected by the royal physician Jīvaka stand out as testimonies of an impressive medical ability, going even as far as the successful performance of cranial surgery.<span class="note" id="dn16comp_1n1"><span class="details"><span class="p">[n.1] Vin I 274,16; a survey of the cures performed by Jīvaka and their relation to <i>āyurveda </i>can be found in Zysk 1982 (or Zysk 1991: 120–127) and Mitra 1985: 326–337; on Jīvaka cf. Naqvi 2011: 57–60; on ancient Buddhist medicine cf. also, e.g., Haldar 1977 and Talim 2009. For a survey of publications on Buddhist medical ethics cf. Hughes and Keown 1995.</span></span></span> Understandably such material has been somewhat at the forefront of studies of healing as reflected in early Buddhist texts. However, Jīvaka reportedly learned his art in Takkasilā, so his abilities should be understood as reflecting general ancient medical knowledge and skills.<span class="note" id="dn16comp_1n2"><span class="details"><span class="p">[n.2] Vin II 270,1. On the assistance the ancient brahminical sources can offer for interpreting descriptions of healing preserved in the Pāli canon cf. Zysk 1995.</span></span></span> In other words, aside from the fact that he was a Buddhist lay follower and offered free medical service to Buddhist monastics, there is nothing particularly Buddhist about his cures. In contrast, a more specific Buddhist approach to healing emerges from the discourse passages surveyed below.</p>
+<hr class="chapter-divider">
+<h3>The Buddha's Overcoming of a Disease (1)</h3>
+<p>The first case I take up is part of a prolonged narrative of the events that preceded the Buddha's demise, found in the <i>Mahāpari</i><i>nibbāna-sutta </i>and its parallels. The passage in question describes how the Buddha overcame what appears to have been a rather serious case of illness. In what follows I translate the <i>Dīrgha-āgama </i> record of this event and then study the means used by the Buddha to recover. The translated portion has its placing within the overall narrative after the Buddha had met the famous courtesan Ambapālī and accepted the gift of her grove.<span class="note" id="dn16comp_1n3"><span class="details"><span class="p">[n.3] [5] The translated text is DĀ 2 at T I 15a8 to 15b15. This has already been translated into German by Weller 1939: 74–78, into French by Jin 2013: 168–182, and into English by Ichimura 2015: 86–89; for a comparative study of this part of the <i>Mahāparinirvāṇa-sūtra</i> cf. Waldschmidt 1944: 88–94.</span></span></span></p>
+<p class="quote-block">At that time in that region there was a famine and grain was expensive; it was difficult to get food by begging.<span class="note" id="dn16comp_1n4"><span class="details"><span class="p">[n.4] [6] A reference to famine and its repercussions is not found in DN 16, which at DN II 98,26 only reports the Buddha's injunction that the monks should spend the rains where they have friends. The same injunction forms the starting point for SN 47.9 at SN V 152,13, whose compass corresponds to the section I have chosen from DĀ 2 for translation. The commentaries on DN 16 and SN 47.9, Sv II 546,19 and Spk III 202,1, explain that the Buddha had told the monks to go elsewhere since there were not enough dwelling places and he anticipated that food would not be easily obtainable. A famine is mentioned in the Sanskrit fragment parallel, Waldschmidt 1951: 190 (§13.5), and in the Chinese parallels T 5 at T I 164b27 and T 6 at T I 180a5.</span></span></span> The Buddha said to Ānanda: "Tell all the monks who are now within this region to gather in the assembly hall." He replied: "Yes, indeed."</p>
+<p class="quote-block">Having received the instruction, he informed those far and near that they should all gather in the assembly hall. Then, when the great community of those within this region had gathered, Ānanda said to the Buddha: "The great community has gathered, may the Noble One know the time has come [for instructing them]."</p>
+<p class="quote-block">At that time the Blessed One rose from his seat and approached the assembly hall. He sat on a prepared seat and said to the monks: "There is a famine in this region and it is difficult to get food by begging. You should each divide into groups and go to Vesālī or the Vajjī country to spend the rains retreat, according to where you have friends, so that hopefully you will not experience want. I will spend the rains retreat here alone with Ānanda. The reason is lest there be deprivations." Then the monks received the instruction and carried it out. The Buddha and Ānanda remained alone.</p>
+<p class="quote-block">Afterwards, during that summer's rainy season, a disease arose in the Buddha's body and his whole body was completely in pain.<span class="note" id="dn16comp_1n5"><span class="details"><span class="p">[n.5] [7] The Sarvāstivāda/Mūlasarvāstivāda and Theravāda parallels specify that the feelings were of the type bordering on death, Waldschmidt 1951: 192 (§14.2) and DN 16 at DN II 99,4 (= SN 47.9 at SN V 152,22). According to T 5 at T I 164c5, the Buddha's body was in great pain and he wished to enter Nirvāṇa. DN 16 at DN II 99,5 (= SN 47.9 at SN V 152,23) notes that the Buddha endured the pain with mindfulness and clear comprehension, <i>sato sampajāno</i>.</span></span></span> The Buddha thought to himself: 'Now a disease has arisen in me and the whole body is in much pain. All my disciples are not with me.<span class="note" id="dn16comp_1n6"><span class="details"><span class="p">[n.6] [8] According to DN 16 at DN II 99,7 (= SN 47.9 at SN V 152,25) the Buddha reflected that it was not proper for him to pass away without having addressed his attendants and having taken leave from the community of monks. T 5 at T I 164c6 similarly reports the Buddha reflecting on his inability to instruct the monks. The Buddha then informed Ānanda of his wish to enter Nirvāṇa, at which point Ānanda begged him not to do so until the community of monks had been assembled. T 6 at T I 180a13 just records the Buddha's reflection that the community should be assembled before he enters Nirvāṇa.</span></span></span> It would not be appropriate for me to</p>
+<p class="quote-block">take up [entry into final] Nirvāṇa now. I shall energetically with my own strength keep on living.'<span class="note" id="dn16comp_1n7"><span class="details"><span class="p">[n.7] [9] The parallel versions differ in their description of how the Buddha kept alive; cf. the discussion below.</span></span></span></p>
+<p class="quote-block">Then the Blessed One came out of his hut and sat in a cool spot. Having seen him, Ānanda quickly approached him and said to the Buddha: "Now seeing the Venerable One's face it seems as if the disease has diminished."</p>
+<p class="quote-block">Ānanda further said: "When the Blessed One was ill, my mind was in fear and tied up with worry. I was lost and confused, no longer recognizing the directions. Yet I slightly recovered myself as your breath had not stopped,<span class="note" id="dn16comp_1n8"><span class="details"><span class="p">[n.8] [10] DN 16 and SN 47.9 do not report Ānanda reflecting that the Buddha's breath had not stopped; the corresponding section in Waldschmidt 1951: 194 (§14.9) has preserved <i>(ā)śvāsamātram</i>.</span></span></span> thinking quietly [to myself]: 'The Tathāgata has not yet attained final Nirvāṇa, the Eye of the World has not yet ceased, the great Dharma has not yet suffered a loss. Why has there up to now not been a [final] instruction to the community of disciples?'"</p>
+<p class="quote-block">The Buddha said to Ānanda: "What does the community of monks expect from me? If someone were to say of himself: 'I manage the community of monks, I control the community of monks', such a person should give a [final] instruction to the community. The Tathāgata does not say: 'I manage the community of monks, I control the community of monks.' Why should he give a [final] instruction to the community?</p>
+<p class="quote-block">"Ānanda, the Dharma I have taught is already complete, within and without. I never kept to myself what I have seen and realized. Indeed I am already old, having been eighty years for some time. My body is just like an old cart which by being</p>
+<p class="quote-block">expediently patched up and adjusted reaches the place to which it is going. By expedient strength I can maintain it alive a little [longer], through my own strength and energy,<span class="note" id="dn16comp_1n9"><span class="details"><span class="p">[n.9] [11] During my presentation of the present research at the UKABS conference it became clear that my rendering of 精進, equivalent to Pāli <i>viriya</i>, as "energy" can result in misunderstandings. Just to clarify: the term does not refer to an equivalent to the concept of <i>qì</i> (氣), but to the mental quality of making an effort. In the course of the ensuing discussion, Peter Harvey aptly summarized the chief import of <i>viriya </i>to be the principle of "get to it and keep at it" and thus a form of "active engagement".</span></span></span> putting up with these painful feelings.</p>
+<p class="quote-block">"When I do not give attention to any signs and enter ⟨signless⟩ concentration,<span class="note" id="dn16comp_1n10"><span class="details"><span class="p">[n.10] [12] DĀ 2 at T I 15b4 actually reads 不念一切想, 入無想定, according to which the Buddha did "not give attention to any perceptions and entered unconscious concentration". My translation is based on emending this to 不念一切相, 入 無相定, i.e., emending 想 to 相, following a suggestion made by Weller 1939: 77 note 292. The characters 想 and 相 are frequently confused with each other; cf. Anālayo 2011b: 274f note 54 for a survey of several instances. This makes it fairly probable that such confusion happened in the present case as well and that the Indic original used for translating DĀ 2 into Chinese referred to <i>animitta</i>, similarly to what is found in the parallels preserved in Sanskrit and Pāli.</span></span></span> then my body is at ease and there are no afflictions.</p>
+<p class="quote-block">"Therefore, Ānanda, you should be a light to yourself, a light in the Dharma, without another light;<span class="note" id="dn16comp_1n11"><span class="details"><span class="p">[n.11] [13] The corresponding term in DN 16 at DN II 100,20 (= SN 47.9 at SN V 154,5) is <i>attadīpa</i>, and in the Sanskrit fragment version, Waldschmidt 1951: 200 (§14.24), similarly <i>ātmadvīpa</i>. T 5 does not have a comparable instruction. T 6 at T I 180b2 speaks of taking the Dharma as one's "lamp", 錠, by taking refuge in oneself. On this expression cf., e.g., Bapat 1957, Brough 1962/2001: 210, Schneider 1980/1992: 113 note 69, Norman 1990/1993b: 87, Nakamura 2000b: 95, Wright 2000, and below p. 350 note 3.</span></span></span> you should be a refuge to yourself, a refuge in the Dharma, without another refuge. How can you be a light to yourself, a light in the Dhar-</p>
+<p class="quote-block">ma, without another light, a refuge to yourself, a refuge in the Dharma, without another refuge?</p>
+<p class="quote-block">"Ānanda, a monk contemplates the body internally, diligently without laxity, with undistracted mindfulness, removing desire and discontent with the world. He contemplates the body externally … contemplates the body internally and externally, diligently without laxity, with undistracted mindfulness, removing desire and discontent with the world.<span class="note" id="dn16comp_1n12"><span class="details"><span class="p">[n.12] [14] A distinction between internal, external, and internal-and-external <i>satipaṭ</i>- <i>ṭhāna </i>practice is not made in DN 16 and SN 47.9; nor does T 6 employ such a distinction. T 5 does not mention <i>satipaṭṭhāna </i>at all. The Sarvāstivāda/Mūlasarvāstivāda version, however, also refers to internal, external, and internaland-external practice; cf. Waldschmidt 1951: 200 (§14.25).</span></span></span> He contemplates feeling … mental states … dharmas … <i>also in this way</i>.</p>
+<p class="quote-block">"Ānanda, this is reckoned being a light to yourself, a light in the Dharma, without another light, being a refuge to yourself,<span class="note" id="dn16comp_1n13"><span class="details"><span class="p">[n.13] Adopting a variant without 當.</span></span></span> a refuge in the Dharma, without another refuge."</p>
+<p class="quote-block">The Buddha said to Ānanda: "After my final Nirvāṇa, those who are able to cultivate this teaching are truly my disciples and foremost in the training."</p>
+<p>In the extract translated above the Buddha falls ill and this then causes mental affliction to Ānanda. In response to being told of this mental affliction, the Buddha gives him a teaching on self-reliance through mindfulness practice. The way the Buddha overcame his own physical disease, however, was through making an effort. In addition, signless concentration receives a highlight as being particularly helpful for bringing about a sense of physical ease.</p>
+<p>The Buddha's actual overcoming of his disease in the Theravāda version in the <i>Dīgha-nikāya </i>is similar. The passage reads as follows:</p>
+<p class="quote-block">Then the Blessed One dwelled, having overcome this illness with energy, determined on the life-force. Then the illness of the Blessed One abated.<span class="note" id="dn16comp_1n14"><span class="details"><span class="p">[n.14] [15] DN 16 at DN II 99,12: <i>atha kho bhagavā taṃ ābādhaṃ viriyena paṭippaṇā</i><i>metvā </i>(Be: <i>vīriyena paṭipaṇāmetvā</i>) <i>jīvitasaṅkhāraṃ adhiṭṭhāya vihāsi</i>.<i> atha </i> <i>kho bhagavato so ābādho paṭippassambhi</i>. Unlike DN 16, SN 47.9 at SN V 153,2 does not have the last indication that the Blessed One's disease abated. This difference does not affect the meaning, since SN 47.9 continues, in agreement with DN 16, by referring to "the Blessed One who had recovered from the illness. Soon after he had recovered from the illness", <i>bhagavā gilānā </i> <i>vuṭṭhito aciravuṭṭhito gelaññā</i>, and then describes what happened next.</span></span></span></p>
+<p>Later on the Theravāda version also refers to the signless concentration as what helped the Buddha to dwell without pain.<span class="note" id="dn16comp_1n15"><span class="details"><span class="p">[n.15] [16] DN 16 at DN II 100,16 (= SN 47.9 at SN V 154,1).</span></span></span> In the Sarvāstivāda/Mūlasarvāstivāda version preserved in Sanskrit fragments, signlessness already features in the Buddha's overcoming of his actual disease, together with energy. Here is the relevant passage:</p>
+<p class="quote-block">Then the Blessed One, having overcome certain feelings by means of energy and not giving attention to any signs, dwelled having accomplished the direct realization of the signless concentration of the mind. Thereby the Tathāgata was more at ease and in a better condition.<span class="note" id="dn16comp_1n16"><span class="details"><span class="p">[n.16] [17] Waldschmidt 1951: 194 (§14.6).</span></span></span></p>
+<p>One of the parallels preserved in Chinese translation reports that the Buddha used his supernormal power and did not give attention to the pain, whereby his condition improved.<span class="note" id="dn16comp_1n17"><span class="details"><span class="p">[n.17] [18] T 5 at T I 164c13: "Now my body is totally in pain. Taking hold of the power of a Buddha to control the disease and no longer give mental attention to the disease, my condition thus slightly recovers."</span></span></span> The other individual Chinese translation describes him making an effort with his own strength and entering concentration without being aware of any signs.<span class="note" id="dn16comp_1n18"><span class="details"><span class="p">[n.18] [19] T 6 at T I 180a14: "I should make an effort with my own strength in relation to this disease, entering concentration without being aware of the multitude of signs. By entering such kind of concentrative attainment, attending to concentration without being aware of the multitude of signs, my mind will bear up with it" (my rendering is based on emending two instances of 想 to read 相).</span></span></span></p>
+<p>In this way the parallel versions can be seen to agree in referring in some way to the use of energy. In addition, signless concentration features either as what led to the actual overcoming of the disease,<span class="note" id="dn16comp_1n19"><span class="details"><span class="p">[n.19] [20] For a detailed study of signless forms of meditation cf. Harvey 1986.</span></span></span> or else as part of a description given by the Buddha of his aging condition, where with the help of this concentrative attainment he can dwell at ease.<span class="note" id="dn16comp_1n20"><span class="details"><span class="p">[n.20] [21] Here it needs to be kept in mind that in the case of DĀ 2 and T 6 my renderings are based on emending 想, "perception", to read 相, "sign".</span></span></span> What emerges from these descriptions is the Buddha's ability to deal with the diseased condition of his body through his meditative power, in particular through the exercise of energy.</p>
+<hr class="chapter-divider">
+<h3>The Buddha's Overcoming of a Disease (2)</h3>
+<p>The use of energy comes up again in another passage that describes what appears to be a different occasion when the Buddha became sick. Here is the <i>Saṃyukta-āgama </i>report of this occasion:<span class="note" id="dn16comp_1n21"><span class="details"><span class="p">[n.21] [22] The translated text is SĀ 727 at T II 195b29 to 196a11, already translated in Anālayo 2013f: 212–214.</span></span></span></p>
+<p class="quote-block">Thus have I heard. At one time the Buddha, who was travelling among the villages of the Malla people, was staying between the city Kusinārā and the river Hīraññavatī.<span class="note" id="dn16comp_1n22"><span class="details"><span class="p">[n.22] The location in SĀ 727 would fit the <i>Mahāparinirvāṇa</i> narrative, as already pointed out by Waldschmidt 1967: 243. The parallel SN 46.16 at SN V 81,1 has instead the Squirrels' Feeding Place in the Bamboo Grove at Rājagaha as its venue.</span></span></span> By the</p>
+<p class="quote-block">side of a village he said to the venerable Ānanda: "Arrange the Blessed One's outer robe by folding it four times, I now have back pain and wish to lie down to rest a little."<span class="note" id="dn16comp_1n23"><span class="details"><span class="p">[n.23] SN 46.16 at SN V 81,3 only briefly reports that the Buddha was sick and therefore has no counterpart to the narration in SĀ 727 that precedes the recitation of the awakening factors. This narration, together with the subsequent stanzas, is part of the Sanskrit fragment version of the <i>Mahāparnirvāṇa-sūtra</i>, Waldschmidt 1951: 286–292, and of the Chinese and Tibetan translations of the corresponding section in the Mūlasarvāstivāda <i>Vinaya</i>, Waldschmidt 1951: 287–293 and T 1451 at T XXIV 391c26 to 392b9. Parallels to the stanzas have been preserved in Sanskrit and Uighur fragments; cf. von Gabain 1954: 13 and Waldschmidt 1967: 244.</span></span></span></p>
+<p class="quote-block">Having received the instruction and arranged the outer robe by folding it four times, the venerable Ānanda said to the Buddha: "Blessed One, the outer robe has been arranged by being folded four times, may the Blessed One know the time [has come to lie down]."</p>
+<p class="quote-block">At that time the Blessed One, using a thick fold of the outer robe as a pillow for the head, placing one foot on the other, with collected mindfulness and clarity of perception lay down on the right side.<span class="note" id="dn16comp_1n24"><span class="details"><span class="p">[n.24] The translation is based on adopting the variant reading 想 instead of 相.</span></span></span> With right mindfulness and right comprehension he was aware of the idea of rising up again. He said to Ānanda: "Proclaim the seven factors of awakening."<span class="note" id="dn16comp_1n25"><span class="details"><span class="p">[n.25] [23] In SN 46.16 at SN V 81,8 the monk whom the Buddha requests to recite the awakening factors is Mahācunda.</span></span></span></p>
+<p class="quote-block">Then the venerable Ānanda said to the Buddha: "Blessed One, they are reckoned to be the mindfulness awakening factor, which the Blessed One realized himself through full awakening and taught as being supported by seclusion, supported by dispassion, and supported by cessation, leading to letting go.</p>
+<p class="quote-block">The investigation-of-dharmas … energy … joy … tranquillity … concentration … equanimity awakening factor, which the Blessed One realized himself through full awakening and taught as being supported by seclusion, supported by dispassion, and supported by cessation, leading to letting go."</p>
+<p class="quote-block">The Buddha said to Ānanda: "Did you say: energy?" Ānanda said to the Buddha: "I said energy, Blessed One, I said energy, Well-gone One."</p>
+<p class="quote-block">The Buddha said to Ānanda: "Energy indeed, which I cultivated, cultivated much, to reach supreme and full awakening."<span class="note" id="dn16comp_1n26"><span class="details"><span class="p">[n.26] [24] SN 46.16 at SN V 81,21 does not single out energy in particular, but only reports that the Buddha confirmed that these are the factors of awakening.</span></span></span> Having said this, he sat up with a straight body and mindfulness established.<span class="note" id="dn16comp_1n27"><span class="details"><span class="p">[n.27] [25] SN 46.16 at SN V 81,23 indicates that the Buddha recovered from the disease, with which the discourse concludes.</span></span></span></p>
+<p class="quote-block">Then another monk spoke these stanzas: "Delighting in hearing the wonderful Dharma, Enduring a disease, [the Buddha] told someone to proclaim it. A monk proclaimed the Dharma, The unfolding of the seven awakening factors. "Well done, venerable Ānanda, Skilfully you proclaimed A teaching that is superbly pure, Stainless and sublime is what you proclaimed: "Mindfulness, investigation-of-dharmas, energy, Joy, tranquillity, concentration, and the awakening [factor] of equanimity,</p>
+<p class="quote-block">These are indeed the seven awakening factors, They are sublime and well taught. "Hearing the seven awakening factors being proclaimed Thoroughly experiencing the flavour of full awakening,</p>
+<p class="quote-block">[Although] the body had been afflicted by great pain [The Buddha] sat up straight to listen, enduring the illness. "See the master of the true Dharma,<span class="note" id="dn16comp_1n28"><span class="details"><span class="p">[n.28] Adopting the variant 主 instead of 王.</span></span></span> Who always teaches it widely to people, How he delighted in hearing what was being proclaimed, How much more do those who have not yet heard it. "[Sāriputta], the one foremost in great wisdom,<span class="note" id="dn16comp_1n29"><span class="details"><span class="p">[n.29] According to the Sanskrit fragment parallel, this is a reference to Sāriputta.</span></span></span> Esteemed by the One with the ten powers,<span class="note" id="dn16comp_1n30"><span class="details"><span class="p">[n.30] The "One with the ten powers" would refer to the Buddha, who according to tradition was endowed with the ten powers of a Tathāgata; cf., e.g., MN 12 at MN I 69,31 and its parallel T 757 at T XVII 592c3 (for a survey of other references to the ten powers cf. Anālayo 2011b: 110–112).</span></span></span> He, too, on being afflicted by disease, Came to hear the right Dharma being proclaimed. "Those who are well learned and of clear understanding In the discourses and the higher teachings,<span class="note" id="dn16comp_1n31"><span class="details"><span class="p">[n.31] SĀ 727 at T II 195c29 here speaks of the Abhidharma, 阿毘曇, which I have rendered as "higher teachings"; for a survey of references to the Abhidharma in the early discourses cf. Anālayo 2014c: 69–79. The Sanskrit fragment parallel instead refers to the bearers of the <i>mātṛkā</i>s, Waldschmidt 1967: 245 (§7): <i>(sūtra)dharā mātṛk(ā)dharāś caiva</i>; on the <i>mātṛkā</i>s and their possible relationship to the Abhidharma cf. Anālayo 2014c: 21–53.</span></span></span> Capable at reciting the teachings and the discipline Should listen to it, let alone others. "Hearing the Dharma being proclaimed, as it really is, Listening with a collected mind, intelligently and wisely, To the Dharma proclaimed by the Buddha One attains delight and joy free from sensuality. "With delight and joy the body becomes tranquil, The mind also becomes happy by itself, The happy mind gains attainments,</p>
+<p class="quote-block">And proper insight into becoming, realms, and formations. "Those who are disenchanted with the three destinations, Abandon desire and liberate the mind, Being disenchanted with all becoming and destinations, They do not arise among humans or <i>deva</i>s, Without remainder, like an extinguished lamp, They [enter] final Nirvāṇa. "It is very beneficial to hear the Dharma That has been proclaimed by the supreme victor. Therefore one should, with unified attention, Listen to what the great teacher has proclaimed." Having spoken these stanzas, that other monk rose from his seat and left.</p>
+<p>The Sanskrit parallel indicates that "having heard the exposition on the awakening factors and experienced the flavour of the awakening factors … he thereby recovered from the disease."<span class="note" id="dn16comp_1n32"><span class="details"><span class="p">[n.32] [27] Waldschmidt 1967: 244 (§4): <i>bodhyaṅgakathāṃ śrutvā, bodhyaṅgānāṃ </i> <i>rasaṃ sa vijñāya </i>…<i> ābādhād vyutthitas tasmāt</i>. The Tibetan version of the <i>Mahāparinirvāṇa-sūtra</i> also explicitly states that the Buddha's recovery came about through savouring the taste of the awakening factors; cf. Waldschmidt 1951: 291,10 (§30.22):<i> byang chub yan lag ro ni rnam mkhyen pas</i>.</span></span></span> This clearly puts a spotlight on the awakening factors as what brought about a betterment of the Buddha's physical condition.<span class="note" id="dn16comp_1n33"><span class="details"><span class="p">[n.33] [28] In relation to SN 46.16 (which has no stanzas explaining what happened), de Silva 1993: 33 reasons that "when one is reminded of the spiritual qualities one has already cultivated … great joy must be arising in the mind. Such joy is perhaps capable of altering the body's chemistry in a positive manner." Regarding the power associated in the Theravāda tradition with the recitation of the awakening factors, Suvimalee 2012: 175f comments that nowadays "the <i>Bojjhaṅgaparitta-sutta </i>is recited to the sick in the devout belief that merely listening to the recitation itself has a therapeutic effect in the way the words are put together and pronounced to produce a particular sound and vibration which is thereby invested with a certain magical power." As Cathy Cantwell pointed out during the UKABS conference, the present discourse clearly shows a ritualization of the healing situation in support of the actual words spoken and the meaning conveyed, where the Buddha requests someone else to perform a recitation of what he must have been only too familiar with himself and what in principle he could also have just recited for himself.</span></span></span></p>
+<p>Most versions specifically emphasize the awakening factor of energy, which is in line with the importance given to energy in the previously translated passage, where the Buddha used energy to overcome his disease. The <i>Saṃyukta-āgama </i>version makes it clear that this is not just any type of energy, but rather the energy that led the Buddha to full awakening. In other words, energy that functions as an awakening factor.</p>
+<p>The <i>Saṃyutta-nikāya </i>reports two other such instances, where chief disciples recover their health on hearing the Buddha recite the awakening factors for them.<span class="note" id="dn16comp_1n34"><span class="details"><span class="p">[n.34] [29] SN 46.14 at SN V 79,17 and SN 46.15 at SN V 79,17. SN 46.14 has a parallel in Tibetan, D 40 <i>ka </i>281b1 or Q 756 <i>tsi </i>298a8, a discourse apparently translated from a Pāli original; cf. Skilling 1993. Another related instance can be found in EĀ 39.6 at T II 731a22, where the Buddha visits a sick monk (Cunda?) and commends that the monk should himself recite the seven awakening factors. The sick monk recites them and recovers from his disease.</span></span></span> In these two discourses, as well as in the <i>Saṃyutta-nikāya </i>parallel to the <i>Saṃyukta-āgama </i>discourse translated above, the whole set of the seven awakening factors brings about the cure, not just the third awakening factor of energy.</p>
+<p>In fact energy as an awakening factor cultivated on its own would require at the very least a foundation in well-established mindfulness. Mindfulness in the form of <i>satipaṭṭhāna </i>functions as the starting point and basis for the cultivation of the other awakening factors.<span class="note" id="dn16comp_1n35"><span class="details"><span class="p">[n.35] [30] As part of a presentation that shows which awakening factor should be cultivated at which time, SN 46.53 at SN V 115,6 and its parallels SĀ 714 at T II 192a22 and D 4094 <i>nyu </i>53a6 or Q 5595 <i>thu</i> 94a5 indicate that mindfulness is the one out of the set of seven that is always required.</span></span></span> According to the sequential building up of the awakening factors described elsewhere in the early discourses, the awakening factor of energy arises when the first two awakening factors of mindfulness and investigation-of-dharmas have been established.<span class="note" id="dn16comp_1n36"><span class="details"><span class="p">[n.36] [31] MN 118 at MN III 85,26 and its parallel SĀ 810 at T II 208b20.</span></span></span> So a reference to the awakening factor of energy would implicitly also be a reference to the first two awakening factors and thereby to mindfulness.</p>
+<p>The early discourses present the awakening factors as a distinct Buddhist teaching, proclaiming that their manifestation happens once a Tathāgata arises, comparable to the manifestation of seven treasures that were believed to come into being with the arising of a wheel-turning king.<span class="note" id="dn16comp_1n37"><span class="details"><span class="p">[n.37] [32] SN 46.42 at SN V 99,8 and its parallels MĀ 58 at T I 493a16, T 38 at T I 822a29, SĀ 721 at T II 194a19, SĀ 722 at T II 195a6, and EĀ 39.7 at T II 731b19; cf. also SHT VIII 1857, Bechert and Wille 2000: 50. Although this clearly presents the awakening factors as a distinctly Buddhist teaching, other passages show contemporaries of the Buddha also engaging in the cultivation of these qualities. As pointed out by Gethin 1992: 180 after a survey of such passages, these convey the message that "the full potential inherent in this practice is not understood or fulfilled" by such non-Buddhist practitioners.</span></span></span> This makes the use of the awakening factors of mindfulness and energy a distinctly Buddhist approach to facing a disease.</p>
+<hr class="chapter-divider">
+<h3>The Buddha Bears Pain with Mindfulness</h3>
+<p>Mindfulness comes up again in a discourse in the <i>Saṃyutta-</i><i>nikāya </i>and its parallels in the two <i>Saṃyukta-āgama </i>collections in relation to the Buddha's ability to bear pain. In what follows I translate the first part of the relevant discourse from a partially preserved <i>Saṃyukta-āgama</i>:<span class="note" id="dn16comp_1n38"><span class="details"><span class="p">[n.38] [33] The translated text is SĀ2 287 at T II 473c27 to 474a3.</span></span></span></p>
+<p class="quote-block">Thus have I heard. At one time the Buddha was dwelling at Rājagaha in the Sattapaṇṇi Cave by the side of Mount Vebhāra. Then the Buddha's foot had been pierced by a [piece] of acacia wood,<span class="note" id="dn16comp_1n39"><span class="details"><span class="p">[n.39] [34] According to SN 1.38 at SN I 27,14, his feet had been pierced by a stone splinter, which the commentary, Spk I 78,1, explains to have been the result of an attempt by Devadatta to kill the Buddha. For detailed comparative studies of the Devadatta narrative cf. Mukherjee 1966 and Bareau 1991.</span></span></span> and he was in extreme pain. The Tathāgata silently endured it. He required nothing even with recurrent strong pain.</p>
+<p class="quote-block">At that time there were eight <i>deva</i>s of beautiful complexion who approached the Buddha. One <i>deva </i>among them said: "The recluse Gotama is truly a lion among brave men. Even experiencing strong pain, he does not relinquish the awakening [factor] of mindfulness and his mind is not troubled or altered."</p>
+<p>The two parallel versions agree that the Buddha's ability to endure severe pain when his foot had been hurt was because of his mindfulness, although they do not explicitly specify that this was the awakening factor of mindfulness.<span class="note" id="dn16comp_1n40"><span class="details"><span class="p">[n.40] [35] In SN 1.38 at SN I 28,8 the <i>deva </i>compares the Buddha to a lion for his ability to endure the pain with mindfulness and clear comprehension, <i>sato </i> <i>sampajāno</i>, or right mindfulness and clear comprehension in SĀ 1289 at T II 355a21: 正智正念; cf. also DN 16 at DN II 99,5 (= SN 47.9 at SN V 152,23), quoted above p. 205 note 5, where the same two qualities of mindfulness and clear comprehension recur in relation to the Buddha's ability to endure pain.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Anuruddha Bears Pain with Mindfulness</h3>
+<p>Mindfulness also features prominently in another passage, which shows that the ability to cure oneself in this way is not confined to the Buddha. The passage reports Anuruddha being visited by other monks, after he had recovered from being sick. In what follows I translate the <i>Saṃyukta-āgama</i> version:<span class="note" id="dn16comp_1n41"><span class="details"><span class="p">[n.41] [36] The translated text is SĀ 541 at T II 140c13 to 140c24.</span></span></span></p>
+<p class="quote-block">Thus have I heard. At one time the Buddha was staying at Sāvatthī in Jeta's Grove, Anāthapiṇḍika's Park. The venerable Anuruddha was then staying at Sāvatthī in a dwelling in a pine forest, having recently recovered from being sick. <span class="note" id="dn16comp_1n42"><span class="details"><span class="p">[n.42] [37] According to SN 52.10 at SN V 302,12, Anuruddha was staying in Blind Men's Grove (also located at Sāvatthī).</span></span></span> Then a group of many monks approached [the venerable] Anuruddha. Having exchanged polite and friendly greetings, they sat to one side.</p>
+<p class="quote-block">They asked the venerable Anuruddha: "Are you happy and dwelling at peace?"<span class="note" id="dn16comp_1n43"><span class="details"><span class="p">[n.43] [38] In SN 52.10 at SN V 302,15 the visiting monks directly ask him about his [meditative] dwelling which enables him to dwell with his mind not being afflicted by the pain, without any preceding enquiry about his present condition. In fact in SN 52.10 he appears to be still sick.</span></span></span> [The venerable] Anuruddha said: "I am happy and dwelling at peace. All my bodily pains have gradually calmed down." The monks asked the venerable Anuruddha: "Dwelling in what [meditative] dwelling did all the bodily pains become gradually appeased?"<span class="note" id="dn16comp_1n44"><span class="details"><span class="p">[n.44] [39] Adopting a variant that adds 漸.</span></span></span></p>
+<p class="quote-block">The venerable Anuruddha said: "Dwelling in the four establishments of mindfulness all my bodily pains have been gradually appeased.<span class="note" id="dn16comp_1n45"><span class="details"><span class="p">[n.45] [40] SN 52.10 SN V 302,18 specifies that his way of dwelling in the four <i>sati</i><i>paṭṭhāna</i>s was with "the mind well established" in them, <i>supatiṭṭhitacitta</i>.</span></span></span> What are the four? That is, the establishment of mindfulness by contemplating the body as a body internally … <i>up to </i>… the establishment of mindfulness by contemplating dharmas as dharmas.<span class="note" id="dn16comp_1n46"><span class="details"><span class="p">[n.46] [41] SN 52.10 at SN V 302,21 does not bring in the distinction between internal and external <i>satipaṭṭhāna </i>practice.</span></span></span> These are called the four establishments of mindfulness. Because of dwelling in these four establishments of mindfulness, all my bodily pains have gradually calmed down."</p>
+<p class="quote-block">Then the worthy ones, having discussed this together, rejoiced in it and were delighted. They each rose from their seats and left.</p>
+<p>This passage clearly points to the potential of mindfulness, practised by way of the four <i>satipaṭṭhāna</i>s, to bring about a diminishing of the pains caused by a disease. When considered in conjunction with the other passages surveyed above, the mental qualities shown to be capable of healing in early Buddhist thought are the awakening factors, either the whole set or else the mental qualities of energy and mindfulness. In addition, engaging in signless concentration also has a potential to counter pain.<span class="note" id="dn16comp_1n47"><span class="details"><span class="p">[n.47] [42] A set of ten meditation practices whose recitation was able to cure a monk of his diseased condition can be found in AN 10.60 at AN V 112,16 and its Tibetan parallel, D 38 <i>ka </i>279a1 or Q 754 <i>tsi </i>295b6, which in a similar manner to the Tibetan parallel to SN 46.14, mentioned above p. 215 note 34, appears to have been translated from a Pāli original; cf. Skilling 1993. For a translation of the Tibetan version and a detailed study cf. Anālayo 2016g: 99–109.</span></span></span></p>
+<p>Not only monastics, but lay people were also expected to use their mental abilities to handle the pain of disease. When an elderly layman reports his deteriorating health condition to the Buddha, he receives the succinct instruction that he should train himself so that, when the body is sick, his mind will not be sick.<span class="note" id="dn16comp_1n48"><span class="details"><span class="p">[n.48] [43] SN 22.1 at SN III 1,16 and its parallels SĀ 107 at T II 33a15 (cf. Anālayo 2014g: 27 note 58 and 2016g: 18ff) and EĀ 13.4 at T II 573a9.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Mindfulness and Stress Reduction</h3>
+<p>The passages surveyed above show that early Buddhist texts give considerable room to psychological means of healing.<span class="note" id="dn16comp_1n49"><span class="details"><span class="p">[n.49] [44] Skorupski 1999: 153 notes that "in addition to a wide range of proper medical remedies, Buddhism also offers a great variety of religious devices to prevent and heal diseases. Within this category we find meditation, moral conduct, recitations of Buddhist texts, rituals, exorcism, and amulets."</span></span></span> In recent times, the practice of mindfulness in particular has proven its value in the modern-day clinical setting.<span class="note" id="dn16comp_1n50"><span class="details"><span class="p">[n.50] [45] Particularly well known is MBSR (Mindfulness Based Stress Reduction); cf. especially Kabat-Zinn 1982, Kabat-Zinn et al. 1985, and Kabat-Zinn et al. 1987.</span></span></span> Mindfulness, a term used by researchers with varying connotations,<span class="note" id="dn16comp_1n51"><span class="details"><span class="p">[n.51] [46] Cf. in more detail Anālayo 2013e and for a recent survey of, and contribution to, the dialogue between traditional understandings of mindfulness and its clinical employment cf. Monteiro et al. 2015.</span></span></span> has been successfully used to treat chronic pain and anxiety, binge-eating disorders, depression, fibromyalgia, etc.<span class="note" id="dn16comp_1n52"><span class="details"><span class="p">[n.52] [47] Baer 2003: 139 concludes a detailed survey of research publications by summing up that "the current literature suggests that mindfulness-based interventions may help to alleviate a variety of mental health problems." Another detailed survey by Grossman et al. 2004: 35f on MBSR in particular notes that "preliminary reports have suggested substantial benefits for individuals suffering from chronic pain, fibromyalgia, cancer, anxiety disorders, depression and the stresses of contexts as diverse as medical school and prison life". According to ibid. p. 39, "our findings suggest the usefulness of MBSR as an intervention for a broad range of chronic disorders and problems."</span></span></span></p>
+<p>Although such benefits are not the main aim of early Buddhist meditation practice, the passages surveyed above do show that the physical healing effect of awakening factors like mindfulness and energy were not lost on the early Buddhists. These were clearly recognized as benefits to be encouraged.</p>
+<p>Good health and digestion feature as one among five factors of striving, required for progress on the path.<span class="note" id="dn16comp_1n53"><span class="details"><span class="p">[n.53] [48] MN 85 at MN II 95,20 and its Sanskrit fragment parallel 343 verso2f, Silverlock 2009: 80. Kitagawa 1989: 12 notes that "Buddhism was concerned with physical health as an important condition for striving after spiritual health."</span></span></span> Health and a good digestion are also among the benefits of walking meditation.<span class="note" id="dn16comp_1n54"><span class="details"><span class="p">[n.54] [49] AN 5.29 at AN III 30,1, with parallels in EĀ² 20 at T II 879a8 and T 212 at T IV 755a15.</span></span></span> So physical health was clearly given consideration in early Buddhist thought.<span class="note" id="dn16comp_1n55"><span class="details"><span class="p">[n.55] [50] Concern with health emerges also from descriptions of the Buddha repeatedly visiting the sick, on one occasion even personally washing a sick monk; cf. Vin I 302,4 and for a study of the parallels Demiéville 1974: 236f.</span></span></span> Physical well-being then facilitates the cultivation of mental health, which a Pāli discourse considers to be more difficult to encounter than physical health.<span class="note" id="dn16comp_1n56"><span class="details"><span class="p">[n.56] [51] AN 4.157 at AN II 143,1 (of which no parallel seems to be known) distinguishes between physical and mental health, concluding that, compared to the relative ease of encountering people who are physically well, it is much harder to find those who are healthy in the mind; cf. also Wichit 2002: 96f.</span></span></span></p>
+<p>The central aim of early Buddhist practice is of course such mental health. The proper approach to the gaining of mental health emerges as the theme of the first teaching delivered according to the traditional account by the recently awakened Buddha, disclosing the four noble truths.<span class="note" id="dn16comp_1n57"><span class="details"><span class="p">[n.57] [52] For a detailed study cf. Anālayo 2012a and 2013a.</span></span></span> Notably, this teaching appears to be based on a medical diagnosis scheme. We do not have certain proof that ancient Indian medicine had such a scheme.<span class="note" id="dn16comp_1n58"><span class="details"><span class="p">[n.58] [53] Cf. Har Dayal 1932/1970: 159, Filliozat 1934: 301, and Wezler 1984: 312– 324.</span></span></span> Nevertheless, the comparison of the four truths to medical diagnosis occurs explicitly in several early Buddhist texts, a comparison that suggests some such diagnostic scheme was known and in use in daily life.<span class="note" id="dn16comp_1n59"><span class="details"><span class="p">[n.59] [54] For a more detailed discussion cf. Anālayo 2011e.</span></span></span> In this way the most fundamental teaching of early Buddhist thought seems to be intentionally couched in ancient Indian medical terms.<span class="note" id="dn16comp_1n60"><span class="details"><span class="p">[n.60] [55] Thus the assumption by Lopez 2012: 123 that the "buddha had no interest in being compatible with science" is not correct. Not only this aspect of Lopez's presentation but his entire study of "the scientific Buddha" (the title of his monograph) seems to me to suffer from a methodological problem that undermines the reliability of his presentation and conclusions. The study indiscriminately uses elements from various Buddhist traditions and historical periods as a contrast to modern Western science. As far as the historical Buddha is concerned, an assessment of the degree to which his teaching could be reckoned scientific or otherwise needs to be based on those sources that reflect the early Buddhist period, not on practices and notions that came into being many centuries later. Moreover, the scientific character of early Buddhist thought can only be adequately assessed based on a comparison with ancient Indian scientific thought and thus within its own historical and cultural context, instead of imposing modern Western definitions of science on a different culture; cf. also below p. 341f.</span></span></span></p>
+<p>One who has successfully eradicated <i>dukkha</i> would also be beyond any form of anxiety, depression, mental agitation, or fear, thereby being beyond major manifestations of stress. Not only the final goal, but even the path to this goal in the early Buddhist texts appears to involve the reduction of stress. In case one has unwholesome thoughts in the mind, for example, the <i>Vitakkasaṇ</i>- <i>ṭhāna-sutta </i>and its <i>Madhyama-āgama </i>parallel recommend five different methods. Only the last of these five requires a forceful exercise of will to emerge out of the situation, as a last resort when all else has failed. Before resorting to such an emergency brake, however, the parallel versions describe how one can gradually reduce unwholesome thoughts in one's mind through meditative attention. One mode of such deployment of mental attention finds illustration in a simile. Here is the <i>Madhyama-āgama </i>version of this simile, which is closely similar to its parallel in the <i>Vitakkasaṇṭhāna-sutta</i>:<span class="note" id="dn16comp_1n61"><span class="details"><span class="p">[n.61] [56] The translated text is MĀ 101 at T I 588b29 to 588c6, parallel to MN 20 at MN I 120,22; for a comparison of the five methods described in the <i>Vitakka</i><i>saṇṭhāna-sutta </i>with modern psychology cf. de Silva 2001.</span></span></span></p>
+<p class="quote-block">"It is just like a man who walks on a path, hurrying along quickly. He reflects: 'Why am I hurrying? Shall I rather walk more slowly now?' and so he walks slowly. He reflects again: 'Why am I walking slowly? Shall I rather stand still?' and so he stands still. He reflects again: 'Why am I standing? Shall I</p>
+<p class="quote-block">rather sit down?' and so he sits down. He reflects again: 'Why am I sitting? Shall I rather lie down?' and so he lies down. In this way that man gradually quietens the body's gross activities."</p>
+<p>This passage shows Buddhist meditation actively reducing stress, which forms part of an overall practice aimed at liberating the mind from all those qualities and factors that might cause the experience of stress.</p>
+<p>In sum, the use of meditative qualities like mindfulness for healing purposes has a precedent in the passages surveyed above. This precedent clearly comes together with a substantially different outlook on the world, a different conception of health, and perhaps most importantly a radically different overall aim. When viewed from the perspective of the final goal of total freedom, the beneficial repercussions of meditation practice on one's physical health condition are clearly secondary. In fact the Buddha's role as the supreme physician concerns his teaching of the four noble truths.</p>
+<p>Yet, alongside such differences there are noticeable similarities when compared to the modern-day clinical use of mindfulness for healing purposes. Although not constituting the final goal of practice, such healing purposes are certainly welcome aids for those engaging in the Buddhist path to liberation. As a stanza found in the different <i>Dharmapada </i>collections highlights, health is supreme among what one can gain, and supreme happiness is achieved with the attainment of Nirvāṇa.<span class="note" id="dn16comp_1n62"><span class="details"><span class="p">[n.62] [57] Dhp 204, with parallels in the Gāndhārī <i>Dharmapada</i> 162, Brough 1962/ 2001: 145, the Patna <i>Dharmapada</i> 76, Cone 1989: 123, the <i>Udānavarga </i>26.6, Bernhard 1965: 319. Health as the supreme gain and Nirvāṇa as the supreme happiness recur in MN 75 at MN I 508,30 and its parallel MĀ 153 at T I 672a28, in which case the context suggests the implications to be that, whereas non-Buddhists might mistake physical health as the final goal, from an early Buddhist viewpoint true health (especially in its mental dimension) will only be reached by realizing Nirvāṇa.</span></span></span></p>
+<p>A survey of passages in the early discourses that report how the Buddha or his disciples faced pain and disease shows that the awakening factors, in particular mindfulness and energy, were employed to handle pain and overcome disease. This in turn implies that the modern-day clinical use of mindfulness for similar purposes has a precedent in early Buddhist thought, even though this precedent is based on a substantially different value system and its conception of health goes far beyond the modern-day medical definition of health.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn16.html">DN16</a>: Mahāparinibbāna Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

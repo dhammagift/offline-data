@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.204 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.204</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 204</span><span class="mirror-right">（二〇四）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an3.64.html">AN 3.64</a> / <a href="../parallels/sa970.html">SĀ 970</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying at the banks of the Sumāgadhā Pond in Rājagṛha. At that time, the brāhman Śāradvatīputra was in a large assembly, saying, &quot;I know the teachings spoken by the Śākya son. What I know and see is superior to that of the Śākya son.&quot; At that time, many bhikṣus entered the city to beg for food. Seeing the brāhman Śāradvatīputra at the banks of the pond, they heard him say, &quot;I know the teachings of the Śākya son. What I know surpasses his.&quot; Having heard this, the bhikṣus returned to the monastery, put away their robes and bowls, washed their hands and feet, went to where the Buddha was, bowed their heads at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! Today, we entered the city to beg for food. After eating, we returned. On the way, we passed by the Sumāgadhā Pond. On the banks of the pond, there was a brāhman named Śāradvatīputra. In a large assembly, he proclaimed, &#x27;I know the teachings of the Śākya son. What I know surpasses his.&#x27; Excellent! World-Honored One! Please go to the banks of the pond.&quot; At that time, the Tathāgata silently consented. Surrounded by the bhikṣus in front and behind, he went to the Sumāgadhā Pond.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城须摩竭陀池岸。尔时，奢罗浮梵志在大众中，而作是言：「我知释子所说教法，我所知见，胜彼释子。」当于尔时，有众多比丘入城乞食，见奢罗浮梵志在彼池岸，闻其所说，作如是言：「我知释子所有法教，我所知者，出过于彼。」时诸比丘闻此语已，还至僧坊，收摄衣钵，洗手足已，往诣佛所，顶礼佛足，在一面坐。白佛言：「世尊！我等今日入城乞食，食讫已，还归于其中，路经须摩竭陀池，彼池岸上有一梵志，名奢罗浮，在大众中，唱如是言：『我知释子所有教法，我所知者，出过于彼。』善哉！世尊，唯愿当往彼池岸。」尔时，如来默然许之，与诸比丘前后围遶，往诣于彼须摩竭陀池。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāradvatīputra saw the Buddha coming from afar. He immediately rose from his seat, prepared a high seat, and said to the Buddha, &quot;Please sit here.&quot; The Buddha then sat down and said to him, &quot;Did you really say, &#x27;I know the teachings of the Śākya son. What I know surpasses his&#x27;? Is that what you said?&quot; The brāhman remained silent. The Buddha said again, &quot;Why do you remain silent and not answer me? If you understand, then speak according to your understanding; if you do not understand, I will explain it to you so that you can fully understand. If you can fully explain it now, I will rejoice with you. Brāhman, you should know that if there are people in the world who say, &#x27;The Tathāgata is not an Arhat, a Samyak-Saṃbuddha,&#x27; I would say, &#x27;Good!&#x27; and ask them, &#x27;What is the reason you say the Tathāgata is not an Arhat, a Samyak-Saṃbuddha?&#x27; These beings will not be able to answer this question. They will speak about other worldly discussions, interspersing them with various words. Arrogant and conceited, they will give rise to a mind of destruction. Unable to answer this question, they will remain silent, ashamed and with lowered heads, losing their eloquence. Śāradvatīputra, you are now also like this. If someone says, &#x27;The Śramaṇa Gautama is able to skillfully reveal this faulty Dharma,&#x27; I would also say, &#x27;Good!&#x27; and ask them, &#x27;With what wisdom do you know this matter?&#x27; They will not be able to answer. They will speak about other worldly discussions, interspersing them. When their words are exhausted and their principles are refuted, they will be ashamed and with lowered heads, remaining silent, losing their eloquence. You are now also like this, not different.</p></td><td lang="lzh" class="agama-chi"><p>时奢罗浮遥见佛来，即从坐起，敷置高座，寻白佛言：「可就此坐。」佛即便就座，坐已而告之曰：「汝实作是言：『我知释子所有法教，我所知者，出过于彼。』如是说不？」时彼梵志默然而住。佛复告曰：「何故默然而不答我？汝若解者，随汝意说；若不解者，吾当为汝分别宣说，令汝具足；汝今若能具足说者，吾助尔喜。梵志当知，世若有人说言：『如来非阿罗呵、三藐三佛陀者。』如是说者，我称善哉，当问彼言：『汝以何事，说言如来非阿罗呵、三藐三佛陀？』此众生等，于理不决，不能正答，更说世间其余谈论，以诸杂语间错其中，憍慢矜高，生毁害心。以不能答如斯问故，默然而住，惭愧低头，失于机辩。奢罗浮！汝今亦尔。设复有人作如是言：『沙门瞿昙能善显示，是有过法。』如是说者，我亦称善。当问于彼：『以何智知如斯之事？』彼不能答，更说其余世间谈论，错乱其中，辞穷理屈，惭愧低头，默然而住，失于机辩，亦如汝今无有异也。若复说言：『沙门瞿昙所有弟子无善回向，不具持戒。』我亦称善，而问于彼：『汝以何法，验知斯事？』彼不能答，更说世间其余谈论，错乱其中，辞穷理屈，惭愧低头，默然而住，失于机辩，汝今亦尔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāradvatīputra&#x27;s fellow brāhman practitioners said to Śāradvatīputra, &quot;Why are you silent and not answering? In the past, you always said in the midst of a large assembly of people, &#x27;What I know and see surpasses the teachings of Gautama.&#x27; You should now ask Śramaṇa Gautama. How could it be that Śramaṇa Gautama would turn around and ask you questions, interrogating you to speak like this: &#x27;What you say, if you can fully explain, I will rejoice with you and praise it as good; if you cannot fully explain it, I will explain it to you, enabling you to fully understand it&#x27;?&quot; When Śāradvatīputra heard these words, he also remained silent, unable to say anything.</p></td><td lang="lzh" class="agama-chi"><p>当于尔时，奢罗浮同梵行者语奢罗浮：「汝今何故默然不答？汝昔日时，恒于大众多人之中而言：『我所知见，出过瞿昙所有教法。』汝今宜问沙门瞿昙，云何乃使沙门瞿昙反问于汝？诘汝使说，作如是言：『汝所说者，若能具足，吾助尔喜，称庆善哉；如其不具，吾当为汝分别宣示，令得具足。』」时奢罗浮闻斯语已，亦复默然，无所陈说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, having roared the lion&#x27;s roar on the banks of the Sumāgadhā Pond, rose from his seat and returned to Rājagṛha.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊在须摩竭陀池岸，作师子吼已，即从坐起，还王舍城。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Not long after the Buddha left, those fellow practitioners reproached Śāradvatīputra in various ways, saying, &quot;You are like a bull with its horns cut off, roaring in a secluded place. You are also like this. You roar like a lion in a quiet place, but in the presence of Śramaṇa Gautama, you are silent and have nothing to say. It is also like a girl trying to make a man&#x27;s voice, but she cannot do it and it still sounds like a woman&#x27;s voice. You are also like this. You want to learn from Gautama to roar like a lion, but you cannot succeed. It is also like a female jackal trying to roar like a lion, but its voice is still that of a jackal, and it cannot become the voice of a lion.&quot; Having reproached Śāradvatīputra in various ways, the fellow practitioners dispersed.</p></td><td lang="lzh" class="agama-chi"><p>佛去不久，彼诸同行，种种呵责，作如是言：「汝于今者，如截角牛在屏处吼，汝亦如是。于闲静处，作师子吼；于沙门瞿昙前，默然无所说。亦如童女，欲作男子声，然不能作，还为女声，汝亦如是。欲学瞿昙作师子吼而不能成，亦如雌野干欲作师子吼，然其出声故作野干，终不能成师子之声。」诸同行者如是种种呵责奢罗浮已，各四散而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

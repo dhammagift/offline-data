@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 152 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 152: Indriyabhāvanā-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn151comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn152.html">MN 152</a> / <a href="../../parallels/sa282.html">SĀ 282</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Indriyabhāvanā-sutta, the “discourse on the development of the faculties”, describes the development of self-control in regard to sensory experience. This discourse has a parallel in the Saṃyukta-āgama.<span class="note" id="mn152n143"><span class="details"><span class="p">[n.143] The parallel is <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78a-79a, for which Akanuma 1929/1990: 44 gives “developing the faculties”, 諸根修, as a title. <a href="../../parallels/sa282.html">SĀ 282</a> has 迦微伽羅, 牟真隣陀林 as its location, counterpart to the location given in <a href="../../mn/mn152.html">MN 152</a> at MN III 298,1 as the Mukhelu Grove at Kajaṅgala, with Be-MN III 347,25 speaking of the Suveḷu Grove at Gajaṅgala, Ce-MN III 616,2 of the Mūkhelu Grove at Kajaṅgala, and Se-MN III 541,3 of a veḷuvane (bamboo grove) at Kajjaṅgala (a bamboo grove at Kajaṅgala is the location for <a href="../../an/an10.28.html">AN 10:28</a> at AN V 54,20). SHT VI 1226 folio 22Vc has preserved parts of a reference to the location of the present discourse as i[ṅga]lāyā[m]. An Avadānaśataka tale in Speyer 1909/1970: 41,5 or in Vaidya 1958a: 192,10, which otherwise is not related to the present discourse, has a vanaṣaṇḍa by Kacaṅgalā as its location. According to Vin I 197,21, Kajaṅgala formed the eastern boundary of the Middle Country.</span></span></span> Parts of this discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn152n144"><span class="details"><span class="p">[n.144] The Sanskrit fragment is SHT VI 1226 folio 22Vc to 24Vc (pp. 33-34), which has preserved several short parts of the whole discourse.</span></span></span></p>
+<p>The Indriyabhāvanā-sutta and its Saṃyukta-āgama parallel report in similar ways that the Brahmin youth Uttara, on being asked how he had been instructed in regard to the development of the faculties, explained that his teacher recommended to avoid seeing forms with the eye and hearing sounds with the ear. In both versions, this proposal meets with the rebuttal that in this case the blind and deaf would be accomplished practitioners.<span class="note" id="mn152n145"><span class="details"><span class="p">[n.145] Whereas in <a href="../../mn/mn152.html">MN 152</a> at MN III 298,17 the Buddha mentioned the blind and the deaf, andho and badhiro, according to <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b1 he only referred to someone who is blind, 盲者, while the case of someone who is deaf, 聾者, was according to <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b4 brought up by Ānanda. Another difference is that <a href="../../mn/mn152.html">MN 152</a> at MN III 298,21 describes Uttara’s silent dismay on hearing the Buddha’s reply, a reaction not recorded in <a href="../../parallels/sa282.html">SĀ 282</a>. The introductory narration in <a href="../../mn/mn152.html">MN 152</a> and <a href="../../parallels/sa282.html">SĀ 282</a> recurs as a discourse quotation in the Vibhāṣā translations, which agree with <a href="../../parallels/sa282.html">SĀ 282</a> that the remark about the deaf was made by Ānanda cf. T 1545 at T XXVII 729b6, T 1546 at T XXVIII 271a18, and T 1547 at T XXVIII 439c19. Bronkhorst 1993/2000: x and id. 1999: 86 sees a contradiction between this criticism of the “development of the faculties” through avoiding sights and sounds, proposed by Uttara’s teacher, and the approving attitude shown in other discourses towards deeper states of concentration during which sights or sounds are no longer experienced, e.g., in <a href="../../dn/dn16.html">DN 16</a> at DN II 131,20. Yet, the point made in the present discourse is how to relate to everyday experience, in fact the expression “development of the faculties”, indriyabhāvanā, is an obvious counterpart to “restraint of the faculties”, indriyasaṃvara. Thus, the present passage is not a criticism of deeper stages of concentration during which sensory experience is absent, but rather a criticism of attempting to deal with sensory impact during daily life by simply trying to avoid it, instead of developing equanimity towards whatever is experienced. For a critical review of Bronkhorst’s argument regarding <a href="../../mn/mn152.html">MN 152</a> cf. also Pāsādika 2009: 92-93.</span></span></span> Following a request by Ānanda, the Buddha then expounded his approach to the development of the faculties. In both discourses, this approach covers three aspects, although the two versions present these three aspects in a different sequence and under different headings.</p>
+<p>The first of these three aspects in the Majjhima-nikāya version is the “supreme development of the faculties”,<span class="note" id="mn152n146"><span class="details"><span class="p">[n.146] <a href="../../mn/mn152.html">MN 152</a> at MN III 299,6: anuttarā indriyabhāvanā.</span></span></span> which depicts how to establish equanimity in regard to sense experience that is agreeable, disagreeable, and both agreeable and disagreeable.<span class="note" id="mn152n147"><span class="details"><span class="p">[n.147] A counterpart to this instruction on equanimity in regard to pleasant or unpleasant experiences can be found in the Jain Āyāraṅga 2.15.5.1, which instructs to avoid being attached to or developing any desire towards agreeable or disagreeable sense experiences, Watanabe 2002/2003: 144: soteṇaṃ jīve maṇuṇṇāmaṇuṇṇāiṃ saddāiṃ suṇei, maṇuṇṇāmaṇuṇṇehiṃ saddehiṃ no sejjā, no rajjejjā, no gijjhejjā, no mujjhejjā, no ajjhovajjejjā, no viṇigghayaṃ āvajjejjā (Jacobi 1882: 136,6 reads sotaeṇaṃ, maṇunnāmaṇunnāiṃ, maṇunnāmaṇunnehiṃ and sejjejjā), translated by Jacobi 1884/1996: 208 as: “if a creature with ears hears agreeable and disagreeable sounds, it should not be attached to, nor delighted with, nor desiring of, nor infatuated by, nor covetous of, nor disturbed by the agreeable or disagreeable sounds”. The text continues by pointing out that, given that it is not possible to avoid hearing sounds, a monk should avoid desire or aversion towards them, na sakkā na souṃ saddā soyavisayaṃ āgatā, rāgadosā u je tattha taṃ bhikkhu parivajjae. Watanabe 2002/2003: 144 notes that the title of this treatment is bhāvaṇa. Compared to <a href="../../mn/mn152.html">MN 152</a>, a difference is that the Jain text begins its treatment with what is heard through the ear, before turning to what is seen through the eye, what is smelled through the nose, what is tasted through the tongue, and what is felt through the body, a difference which is a recurrent feature in Jain texts. McHugh 2007: 403 explains that this type of sequence probably reflects Jain cosmology, whereas the Buddhist sequence appears to be based on an analysis of the nature of perception (based on the relation between the perceiver and the perceived, the eye being given pride of place due to it being the most far-reaching organ).</span></span></span> In each case, one should know that such experiences are conditioned and gross, whereas equanimity is refined and peaceful. The Majjhima-nikāya version applies the same to each of the six senses and depicts this way of handling experience at each sense-door with a set of similes. These similes illustrate the swift establishment of equanimity at each sense-door in the following manner:</p>
+<ul>
+<li>eye sense-door: opening and closing one’s eyes at will,</li>
+<li>ear sense-door: snapping one’s fingers,</li>
+<li>nose sense-door: water drops roll off a lotus leaf,</li>
+<li>tongue sense-door: spitting out spittle,</li>
+<li>body sense-door: flexing or stretching one’s arm,</li>
+<li>mind sense-door: water drops fall onto a heated plate and evaporate quickly.</li>
+</ul>
+<p>The Saṃyukta-āgama version has a similar treatment as its second topic (see table 15.4), although it introduces this under the heading of being a “noble one with developed faculties”.<span class="note" id="mn152n148"><span class="details"><span class="p">[n.148] <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b21: 賢聖修根. Another difference is that <a href="../../parallels/sa282.html">SĀ 282</a> in each case explicitly mentions the type of consciousness that arises in regard to each of the six senses (e.g., the “eye-consciousness”, 眼識, in <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b22).</span></span></span> The Saṃyukta-āgama version’s presentation also differs in its use of the image of water drops that fall into a heated pan, as it employs this simile to illustrate the establishment of equanimity at the body sense-door, while the Majjhima-nikāya version applies the same simile to the mind sense-door.<span class="note" id="mn152n149"><span class="details"><span class="p">[n.149] The version of this simile in <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78c26 does not refer to the person that drops the water. While Ee-MN III 300,20 speaks of a “man” in general, puriso, Be-MN III 350,21, Ce-MN III 620,31, and Se- MN III 545,16 speak of a “strong man”, balavā puriso. Other occurrences of this simile in <a href="../../mn/mn66.html">MN 66</a> at MN I 453,26 and <a href="../../sn/sn35.203.html">SN 35:203</a> at SN IV 190,13 agree on speaking merely of a “man”, puriso. Since to let a few water drops fall into a heated pan does not require a “strong” man, the expression balavā puriso might stem from the preceding simile and could have been accidentally applied to the present instance in some Pāli editions. The image of pouring water on hot metal is also found in a simile in the Jain Viyāhapaṇṇatti 6.1.4 in Lalwani 1974: 235,27.</span></span></span> In the case of establishing equanimity at the mind sense-door, the Saṃyukta-āgama instead uses the example of beheading a Palmyra tree.<span class="note" id="mn152n150"><span class="details"><span class="p">[n.150] <a href="../../parallels/sa282.html">SĀ 282</a> at T II 79a5. Another difference can be found in regard to the first simile in <a href="../../mn/mn152.html">MN 152</a> at MN III 299,15, which illustrates the swift establishing of equanimity in regard to visual experiences with the example of opening and closing one’s eyes. This simile does not seem to have been fully preserved in <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b26, which only speaks of a strong man doing something in a short time, without indicating what this strong man does (according to a 宋, 元, and 明 variant reading, the strong man would snap his fingers, an image used in both versions to illustrate equanimity at the ear sense-door). Another minor difference is that while <a href="../../mn/mn152.html">MN 152</a> at MN III 300,1 compares the swift establishing of equanimity at the nose sense-door to water drops that roll off a lotus leaf, <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78c11 speaks only of a lotus leaf not being sullied by water.</span></span></span></p>
+<p>The Majjhima-nikāya version’s use of the simile of water drops that fall onto a heated pan to illustrate the establishment of equanimity at the mind sense-door recurs in the Laṭukikopama-sutta and its Madhyama-āgama parallel, both of which employ the same image to illustrate the overcoming of thoughts of desire.<span class="note" id="mn152n151"><span class="details"><span class="p">[n.151] <a href="../../mn/mn66.html">MN 66</a> at MN I 453,26 and <a href="../../parallels/ma192.html">MĀ 192</a> at T I 743a3.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 15.4: Development of the Faculties in <a href="../../mn/mn152.html">MN 152</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn152.html">MN 152</a></th><th><a href="../../parallels/sa282.html">SĀ 282</a></th></tr>
+<tr><td>equanimity with sense experience (1)</td><td>see agreeable as disagreeable, etc. (→ 3)</td></tr>
+<tr><td>disgust with sense experience (2)</td><td>equanimity with sense experience (→ 1)</td></tr>
+<tr><td>see agreeable as disagreeable, etc. (3)</td><td>disgust with sense experience (→ 2)</td></tr>
+</table>
+<p>The Majjhima-nikāya version next turns to the “the disciple in higher training, the one on the path”, who becomes disgusted with experiencing sense experience as agreeable, as disagreeable, or as both agreeable and disagreeable.<span class="note" id="mn152n152"><span class="details"><span class="p">[n.152] <a href="../../mn/mn152.html">MN 152</a> at MN III 300,28: sekho hoti pāṭipado.</span></span></span> The Saṃyukta-āgama version has a similar treatment as the last of its three topics.<span class="note" id="mn152n153"><span class="details"><span class="p">[n.153] <a href="../../parallels/sa282.html">SĀ 282</a> at T II 79a9 introduces this as “[having] realized the path of vision”, 覺見跡, where 覺 might be a scribal error for 學, “to train”, corresponding to the sekha mentioned in <a href="../../mn/mn152.html">MN 152</a>.</span></span></span></p>
+<p>The third and last topic in the Majjhima-nikāya version is to be a “noble one with developed faculties”, which requires to be able to view the agreeable as disagreeable, the disagreeable as agreeable, etc., and to go beyond what is agreeable or disagreeable and dwell in equanimity.<span class="note" id="mn152n154"><span class="details"><span class="p">[n.154] <a href="../../mn/mn152.html">MN 152</a> at MN III 301,8: ariyo hoti bhāvitindriyo. For a more detailed exposition of this type of practice cf. <a href="../../an/an5.144.html">AN 5:144</a> at AN III 169,13. Paṭis II 212,9 introduces such practice under the heading ariyā iddhi, “noble supernormal power”.</span></span></span> The corresponding treatment in the Saṃyukta-āgama discourse is the first of the three topics taken up in this version, introduced under the heading “supreme development of the faculties”.<span class="note" id="mn152n155"><span class="details"><span class="p">[n.155] <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b19: 無上修根.</span></span></span> The Saṃyukta-āgama version differs from the corresponding treatment in the Majjhima-nikāya discourse by having a Tathāgata as its subject and by working through a somewhat different pattern.<span class="note" id="mn152n156"><span class="details"><span class="p">[n.156] <a href="../../parallels/sa282.html">SĀ 282</a> at T II 78b10.</span></span></span> This pattern is as follows:</p>
+<ul>
+<li>repulsion towards pleasing objects,</li>
+<li>no repulsion towards displeasing objects,</li>
+<li>repulsion-and-no-repulsion towards pleasing-and-displeasing objects,</li>
+<li>no-repulsion-and-repulsion towards displeasing-and-pleasing objects,</li>
+<li>equanimity towards pleasing, displeasing, and pleasing-and-displeasing objects.</li>
+</ul>
+<p>The Majjhima-nikāya version instead adopts the following pattern:<span class="note" id="mn152n157"><span class="details"><span class="p">[n.157] <a href="../../mn/mn152.html">MN 152</a> at MN III 301,11.</span></span></span></p>
+<ul>
+<li>no repulsion towards what is repulsive,</li>
+<li>repulsion towards what is not repulsive,</li>
+<li>no repulsion towards what is repulsive-and-not-repulsive,</li>
+<li>repulsion towards what is repulsive-and-not-repulsive,</li>
+<li>equanimity.</li>
+</ul>
+<p>In sum, underlying the overall pattern of the Indriyabhāvanā-sutta a gradual build up can be discerned, which proceeds through the following topics:</p>
+<ul>
+<li>initial insight into the conditioned nature of sensory input experienced as agreeable and disagreeable,</li>
+<li>disgust with this evaluative mode of experiencing sensory data of the disciple in higher training,</li>
+<li>full mastery of reactions in regard to sense-experience by an accomplished one who has fully developed the faculties.<span class="note" id="mn152n158"><span class="details"><span class="p">[n.158] This pattern would be in accordance with the analysis given in <a href="../../mn/mn1.html">MN 1</a> at MN I 1,10 and <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a10 of the perceptual processes of different types of person, which similarly proceeds from the stage of the worldling, via the disciple in higher training, to the aloofness in regard to all perceptual experience by an arahant or the Tathāgata.</span></span></span></li>
+</ul>
+<p>The pattern in the Saṃyukta-āgama version instead does not seem to have such an underlying progression, as its main steps are, in brief:</p>
+<ul>
+<li>the stage of the Tathāgata,</li>
+<li>the development of the faculties,</li>
+<li>the disgust with sense-experience of the disciple in higher training.<span class="note" id="mn152n159"><span class="details"><span class="p">[n.159] Of the two modes of presentation, <a href="../../mn/mn152.html">MN 152</a> seems to present a more consistent pattern.</span></span></span></li>
+</ul>
+<p>From the viewpoint of textual transmission it is noteworthy that both versions begin with the “supreme development of the faculties” as their first topic, although they differ on what type of treatment should be associated with this heading. While the Majjhima-nikāya version presents the set of similes illustrative of the establishment of equanimity at each sense-door under the “supreme development of the faculties”, the Saṃyukta-āgama version makes use of a similar set of similes when examining the “noble one with developed faculties”. The “supreme development of the faculties” in the Saṃyukta-āgama discourse then resembles the Majjhima-nikāya version’s exposition of how to be a “noble one with developed faculties”.</p>
+<p>Hence, although the two versions agree on beginning their overall treatment with the same heading as the first of three topics, during the course of transmission a whole section has apparently been displaced within the discourse and been separated from its original heading. In spite of this displacement, the presentation in both versions is similar, a treatment that both conclude with an emphatic exhortation by the Buddha to meditate and thereby put his exposition into practice.</p>
+<p>Due to their similarities and differences, the Indriyabhāvanā-sutta and its Saṃyuktaāgama parallel in a way form a fitting conclusion to this series of comparative studies of Majjhima-nikāya discourses and their parallels. Comparison of these two versions shows that at least one of them has suffered from a substantial sequential alteration during transmission. This alteration not only has caused a change in the overall sequence of presentation, but also resulted in associating the three main parts of the exposition with different headings. At the same time, in spite of their variations, the Indriyabhāvanā-sutta and its Saṃyukta-āgama parallel present closely similar teachings.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

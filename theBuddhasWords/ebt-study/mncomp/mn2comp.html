@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 2 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 2: Sabbāsava-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn1comp.html#content"></a><a id="next-sutta" href="./mn3comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn2.html">MN 2</a> / <a href="../../parallels/ma10.html">MĀ 10</a> / <a href="../../parallels/ea40.6.html">EĀ 40.6</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sabbāsava-sutta, the “discourse on all the influxes”, presents seven methods for abandoning the influxes (āsava).<span class="note" id="mn2n23"><span class="details"><span class="p">[n.23] Concerning the significance of the term āsava or āsrava (which in the parallel versions has its Chinese and Tibetan equivalents in 漏, 流, and zag pa), according to Alsdorf 1965: 4 the use of this term by the Buddhists need not be a case of a borrowing from the Jains, but could rather be due to both traditions drawing on already existing ancient Indian notions. For a detailed discussion of the term cf. also Schmithausen 1992: 123-127. Hirakawa 1993/1998: 198 explains that “in Jainism the term is used with the sense of inflow because defilements are said to flow from the external world into the body, where they adhere to the ātman”, while “in Buddhist texts this term is used in the sense of outflow because the mind’s defilements move outward and affect other things”, presumably in the sense of verbal or physical behaviour that expresses itself outwardly. Norman 1997: 34, however, comments that while “the etymology of this word (the preposition ā ‘towards’ + the root sru- ‘to flow’) implies something flowing in, and this suits the Jain usage well, since there the āsavas are influences which flow into a person and discolour his soul”, in contrast, the same imagery “does not suit the Buddhist idea, where the āsavas are not attributes which are capable of flowing into a person”. The nuance of “outflow” is evident in <a href="../../an/an3.26.html">AN 3:26</a> at AN I 124,8, where āsava stands for the discharge from a festering sore. <a href="../../an/an6.63.html">AN 6:63</a> at AN III 414,16, however, distinguishes between āsavas that lead to rebirth in five different realms (cf. also <a href="../../parallels/ma111.html">MĀ 111</a> at T I 599c1 and T 57 at T I 852a6), where the sense of “outflow” would not fit the context too well. Similarly, in the present context the sense of the term āsava does not seem to be just about “outflow”, but at times describes how to avoid detrimental “influences”, e.g., by restraining the sense-doors, by enduring or avoiding difficulties. In fact, according to Schmithausen 1992: 125, “ās(r)ava may, in Buddhist texts ... also denote annoyances, trouble, suffering”, adding (p. 126) that “in the case of ās(r)ava the most archaic meaning is ‘dangers’ or ‘disturbances’ rushing in or intruding upon the ascetic”; cf. also Wayman 1991 and below p. 382-383 notes 217 and 218.</span></span></span> This discourse has a parallel in the Madhyama-āgama, another parallel in the Ekottarika-āgama, and a third parallel in an individual translation.<span class="note" id="mn2n24"><span class="details"><span class="p">[n.24] The parallels are <a href="../../parallels/ma10.html">MĀ 10</a> at T I 431c-432c, entitled “discourse on the extinction of influxes”, 漏盡經; <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 740a-741b, entitled “a teaching on purification from the influxes”, 淨諸漏法 (cf. T II 740a27); and T 31 at T I 813a-814b, entitled “discourse spoken by the Buddha on restraining the causes of all influxes”, 佛說一切流攝守因經, a discourse that according to the information given in the Taishō edition was translated by the Parthian Ān Shìgāo (安世高), an attribution that according to Zacchetti 2010a: 253 is probably correct. Char 1991: 45 notes that translations by Ān Shìgāo tend to be quite literal, in contrast to the more polished and free renderings of later translators; on Ān Shìgāo cf. also, e.g., Forte 1995 and Harrison 2004. The Saṅgītiparyāya, T 1536 at T XXVI 394c3, refers to the present discourse as the “discourse [giving] an analysis of [how to] restrain the influxes”, 防諸漏記別經; cf. also the similar reference to the “discourse on [how to] restrain the influxes” 防諸漏經 in the *Mahāvibhāṣā, T 1545 at T XXVII 713b29. While <a href="../../mn/mn2.html">MN 2</a> and <a href="../../parallels/ea40.6.html">EĀ 40.6</a> take place in Jeta’s Grove by Sāvatthī, <a href="../../parallels/ma10.html">MĀ 10</a>, T 31, and the Tibetan version have the Kuru country as their location. <a href="../../parallels/ma10.html">MĀ 10</a> has been studied and translated by Minh Chau 1964/1991: 83-84 and 215-222. The *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 243b29, translated in Lamotte 1970a: 1590, refers to a discourse in which seven ways of restraining the influxes are taught, evidently a reference to the present discourse, whose title it records as the “discourse on restraining all the influxes”, 一切漏障經. For a translation of the Pāli commentary on <a href="../../mn/mn2.html">MN 2</a> cf. Jayawickrama 2009.</span></span></span> In addition to these parallels preserved in Chinese translation, a version of the present discourse can also be found as a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn2n25"><span class="details"><span class="p">[n.25] Abhidh-k-ṭ at D (4094) mngon pa, ju 91b5-94b4 or Q (5595) tu 104b2-108a2, giving the title of the discourse as zag pa gang dag gi skye ba, “the arising of all influxes”; cf. also the discourse quotation at Abhidh-k 2:49 in Pradhan 1967: 82,25, paralleling <a href="../../mn/mn2.html">MN 2</a> at MN I 7,7, with its Chinese counterparts in T 1558 at T XXIX 30a20 and T 1559 at T XXIX 188b1. For another quotation in Abhidh-k-ṭ cf. below note 31.</span></span></span> Another discourse relevant to a comparative study of the Sabbāsava-sutta is the Āsava-sutta in the Aṅguttara-nikāya, a Pāli discourse that takes up the same topic, although its exposition appears to stem from a different occasion.<span class="note" id="mn2n26"><span class="details"><span class="p">[n.26] <a href="../../an/an6.58.html">AN 6:58</a> at AN III 387-390.</span></span></span></p>
+<p>The Sabbāsava-sutta, its Madhyama-āgama parallel, the individual translation and the Tibetan version begin by pointing out that the destruction of the influxes can be reached only by way of knowing and seeing, for which purpose wise attention (yoniso manasikāra) is of crucial importance.<span class="note" id="mn2n27"><span class="details"><span class="p">[n.27] For a more detail examination of this term cf. Anālayo 2009y.</span></span></span></p>
+<p>The Sabbāsava-sutta and its Chinese and Tibetan parallels describe an untaught worldling who does not understand that giving attention to unsuitable things and not giving attention to suitable things causes the arising and increase of the influxes.</p>
+<p>For the purpose of abandoning the influxes,<span class="note" id="mn2n28"><span class="details"><span class="p">[n.28] The reference to “abandoning” (pahāna/斷/spong ba) the influxes in <a href="../../mn/mn2.html">MN 2</a> at MN I 7,11, <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432a10, <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 740b2, T 31 at T I 813b6, and D (4094) mngon pa, ju 92b3 or Q (5595) tu 105b1 seems to be meant only as a temporary overcoming, since otherwise it would be difficult to understand how practices such as proper use of requisites and avoiding dangerous animals could in themselves suffice for a permanent “abandoning” of the three influxes of sensual desire, existence, and ignorance (to which in later times the influx of views was added as fourth; cf. below p. 382 note 217). For a discourse quotation of the reference to the seven methods in the context of a discussion on how these square with the notion of three influxes cf. also the *Mahāvibhāṣā, T 1545 at T XXVII 246b14.</span></span></span> the Sabbāsava-sutta and its Chinese and Tibetan parallels then list seven methods, with some variations in the sequence of their presentation (see table 1.2).<span class="note" id="mn2n29"><span class="details"><span class="p">[n.29] Notably, the two methods concerned with developing positive qualities (proper vision and developing the factors of awakening) form the beginning and culmination point in all parallel versions, thus differences of sequence affect only the order of the remaining five methods, which are concerned with various aspects of restraint.</span></span></span> According to the Sabbāsava-sutta, these seven methods comprise:</p>
+<ul>
+<li>seeing (dassana),</li>
+<li>restraining (saṃvara),</li>
+<li>using (paṭisevana),</li>
+<li>enduring (adhivāsana),</li>
+<li>avoiding (parivajjana),</li>
+<li>removing (vinodana),</li>
+<li>developing (bhāvanā).</li>
+</ul>
+<p>The other Pāli discourse from the Aṅguttara-nikāya, the Āsava-sutta, begins instead by announcing that a monk endowed with six qualities is worthy of offerings and respect.<span class="note" id="mn2n30"><span class="details"><span class="p">[n.30] <a href="../../an/an6.58.html">AN 6:58</a> at AN III 387,16.</span></span></span> These six qualities are the successful implementation of six out of the seven methods mentioned in the Sabbāsava-sutta and its Chinese and Tibetan parallels for the purpose of abandoning the influxes. The method not found in the Āsava-sutta is “seeing”, which is the first method in the other versions (see table 1.2). The Sabbāsava-sutta and its Chinese and Tibetan parallels explain the method of “seeing” with the example of speculations about oneself in relation to past, present and future times.<span class="note" id="mn2n31"><span class="details"><span class="p">[n.31] <a href="../../mn/mn2.html">MN 2</a> at MN I 8,4, <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432a16, <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 740b21, T 31 at T I 813b11, and D (4094) mngon pa, ju 92b5 or Q (5595) tu 105b5. A discourse quotation of the passage regarding speculation on a self can be found in Abhidh-k 3:25 in Pradhan 1967: 133,18, paralleling <a href="../../mn/mn2.html">MN 2</a> at MN I 8,4, with the Chinese counterparts in T 1558 at T XXIX 49a6 and T 1559 at T XXIX 205c26; cf. also Abhidh-k 9 in Pradhan 1967: 471,18, paralleling <a href="../../mn/mn2.html">MN 2</a> at MN I 8,18, with counterparts in T 1558 at T XXIX 156b25, T 1559 at T XXIX 307c27, and Abhidh-k-ṭ at D (4094) mngon pa, nyu 94a4 or Q (5595) thu 142b4. Such speculations are also described in <a href="../../sn/sn12.20.html">SN 12:20</a> at SN II 26,27, in its parallel <a href="../../parallels/sa296.html">SĀ 296</a> at T II 84b27, and in Sanskrit fragment S 474 folio 10V7-10 in Tripāṭhī 1962: 40, which agree in indicating that noble disciples are beyond such speculations due to their insight into dependent arising, while in <a href="../../mn/mn2.html">MN 2</a> it is the noble disciple’s insight into the four noble truths that leads beyond such speculations. This difference in presentation does not imply a major difference in meaning, since a noble disciple’s insight into the second and third noble truths would be equivalent to his or her insight into dependent arising. A listing of such unwise speculations can also be found in the Śrāvakabhūmi, Shukla 1973: 102,22 or ŚSG 1998: 156,18, with the Chinese counterpart in T 1579 at T XXX 412b19.</span></span></span> Such speculations, according to the Sabbāsava-sutta and its Chinese parallels, can lead to six types of view about the existence and nature of the self. A noble disciple, in contrast, avoids such speculations and by developing proper vision is able to eradicate the three fetters and thereby to attain stream-entry.<span class="note" id="mn2n32"><span class="details"><span class="p">[n.32] <a href="../../mn/mn2.html">MN 2</a> at MN I 9,21, <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432b2, <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 740c22, and T 31 at T I 813b27. The section on the six views is found elsewhere in Abhidh-k-ṭ, cf. D (4094) mngon pa, nyu 94a5 or Q (5595) thu 142b6 (cf. above note 31); for a discourse quotation of the exposition on the six views cf. also the *Mahāvibhāṣā, T 1545 at T XXVII 713b29.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 1.2: Order of the Methods for Abandoning the Influxes</caption>
+<tr><th><a href="../../mn/mn2.html">MN 2</a></th><th><a href="../../parallels/ma10.html">MĀ 10</a> & T 31</th><th><a href="../../parallels/ea40.6.html">EĀ 40.6</a></th><th><a href="../../an/an6.58.html">AN 6:58</a></th><th>Abhidh-k-ṭ</th></tr>
+<tr><td>seeing (1)</td><td>(→ 1)</td><td>(→ 1)</td><td>(→ 2)</td><td>(→ 1)</td></tr>
+<tr><td>restraining (2)</td><td>(→ 2)</td><td>(→ 4)</td><td>(→ 3)</td><td>(→ 2)</td></tr>
+<tr><td>using (3)</td><td>(→ 5)</td><td>(→ 3)</td><td>(→ 4)</td><td>(→ 5)</td></tr>
+<tr><td>enduring (4)</td><td>(→ 3)</td><td>(→ 5)</td><td>(→ 5)</td><td>(→ 3)</td></tr>
+<tr><td>avoiding (5)</td><td>(→ 4)</td><td>(→ 6)</td><td>(→ 6)</td><td>(→ 6)</td></tr>
+<tr><td>removing (6)</td><td>(→ 6)</td><td>(→ 2)</td><td>(→ 7)</td><td>(→ 4)</td></tr>
+<tr><td>developing (7)</td><td>(→ 7)</td><td>(→ 7)</td><td></td><td>(→ 7)</td></tr>
+<tr><td></td><td></td><td></td><td>(≠ 1)</td><td></td></tr>
+</table>
+<p>The next method listed in the Sabbāsava-sutta, a method described in similar terms in the parallel versions, is to “restrain” the six senses in order to avoid the arising of unwholesome mental states.<span class="note" id="mn2n33"><span class="details"><span class="p">[n.33] A minor difference is that <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432b7 relates sense-restraint to contemplating impurity, 不淨觀, cf. also T 31 at T I 813c5.</span></span></span></p>
+<p>The Sabbāsava-sutta continues by taking up the theme of “using”, a method concerned with the proper use of the four requisites of a monk or a nun. According to all versions, proper use of robes means to employ them just to cover the body and to protect it from the impact of weather and insects. The Madhyama-āgama and Ekottarika-āgama versions add that robes should not be used for the purpose of adornment, a point both versions also make in relation to dwelling places.<span class="note" id="mn2n34"><span class="details"><span class="p">[n.34] <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432b23+29 and <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 741a2+7.</span></span></span> The Sabbāsava-sutta and the Āsava-sutta, however, speak of avoiding adornment in relation to the proper use of food.<span class="note" id="mn2n35"><span class="details"><span class="p">[n.35] <a href="../../mn/mn2.html">MN 2</a> at MN I 10,9: “he uses alms-food ... not for ornament or adornment”, piṇḍapātaṃ paṭisevati ... na maṇḍanāya na vibhūsanāya; cf. also <a href="../../an/an6.58.html">AN 6:58</a> at AN III 388,18. T 31 at T I 813c21 similarly admonishes not to use food for the sake of attractive appearance, 不端正故. The Tibetan version speaks of adornment in relation to all four requisites, D (4094) mngon pa, ju 93a4 or Q (5595) tu 106a4. Adornment in relation to alms food is also mentioned in the Śrāvakabhūmi in Shukla 1973: 86,11 or ŚSG 1998: 132,8, reading: na maṇḍanārthaṃ na vibhūṣaṇārtham iti, with its Chinese counterpart in T 1579 at T XXX 409c6: 不為飾好, 不為端嚴, followed by a detailed explanation; cf. also below p. 539.</span></span></span> This unexpected association of adornment to food invites further examination.</p>
+<p>In other Pāli discourses, “adornment” refers to external embellishment, such as wearing garlands, bracelets, decorated sandals, jewels, and long-fringed clothes, etc.<span class="note" id="mn2n36"><span class="details"><span class="p">[n.36] <a href="../../dn/dn1.html">DN 1</a> at DN I 7,20 lists, among others, mālā, hatthabandha, citrupāhana, maṇi, and vattha dīghadasa as instances of maṇḍanavibhūsanaṭṭhānānuyoga. An example that further supports the impression that maṇḍana generally refers to external forms of “beautification” or “ornamentation” can be found in <a href="../../mn/mn91.html">MN 91</a> at MN II 139,26, which notes that the Buddha was not concerned with pādamaṇḍanānuyoga, rendered by Horner 1957/1970: 325 as “the practice of beautifying his feet” and by Ñāṇamoli 1995/2005: 748 as “grooming his feet”. An extract from the present discussion already appeared in Anālayo 2005b: 1-2.</span></span></span> Similarly, the injunction to refrain from “adornment” as part of the eight precepts undertaken on full moon days by Buddhist lay followers is concerned with external forms of beautification.<span class="note" id="mn2n37"><span class="details"><span class="p">[n.37] Khp 1,20: mālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī. Notably, a counterpart in the Karmavācanā fragment 226V8 and R1 in Härtel 1956: 29 only reads gandhamā[l]yavilepa[nadh]āraṇād, without referring to maṇḍana or vibhūṣaṇa.</span></span></span> In view of this, it would be more natural for the problem of “adornment” to arise in relation to robes. A discourse in the Saṃyutta-nikāya and its parallel in the Saṃyukta-āgama provide an example of misuse of robes for the sake of adornment, as they describe the monk Nanda incurring the Buddha’s reproach for wearing ironed robes.<span class="note" id="mn2n38"><span class="details"><span class="p">[n.38] <a href="../../sn/sn21.8.html">SN 21:8</a> at SN II 281,3 and <a href="../../parallels/sa1067.html">SĀ 1067</a> at T II 277a12.</span></span></span></p>
+<p>According to an explanation given in the Visuddhimagga, adornment in relation to food takes place when one partakes of food in order to become plump or to have a clear skin, such as harem women or actors might do.<span class="note" id="mn2n39"><span class="details"><span class="p">[n.39] Vism 32,1.</span></span></span> This explanation appears somewhat contrived. In sum, it seems that the Madhyama-āgama and Ekottarika-āgama parallels to the Sabbāsava-sutta offer a more natural presentation by relating the problem of adornment to robes instead.<span class="note" id="mn2n40"><span class="details"><span class="p">[n.40] Minh Chau 1964/1991: 84 concludes that the reference to adornment in regard to food in the Pāli version “looks rather forced here. The Chinese version seems more plausible”.</span></span></span></p>
+<p>While differing on the implications of adornment, the Chinese and Tibetan versions agree with the two Pāli versions that the proper use of alms food is for the sake of maintaining the body alive and healthy. In relation to the remaining two requisites, dwelling place and medicine, all versions agree that their proper purpose is for the protection and health of the body.</p>
+<p>Next in the Sabbāsava-sutta’s list of methods for overcoming the influxes comes “enduring”, which according to all versions is to calmly bear vicissitudes of climate, hunger, thirst, insect bites, insults, and bodily pains.<span class="note" id="mn2n41"><span class="details"><span class="p">[n.41] <a href="../../mn/mn2.html">MN 2</a> at MN I 10,24, <a href="../../an/an6.58.html">AN 6:58</a> at AN III 389,7, <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432c8, <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 740c26, and T 31 at T I 814a7. The same vicissitudes of climate, etc., recur in a definition of the practice of “patience” in <a href="../../an/an4.165.html">AN 4:165</a> at AN II 153,22 and in the Śrāvakabhūmi, Shukla 1973: 130,11 or ŚSG 1998: 216,8 and T 1579 at T XXX 417c6. Johansson 1983: 23 comments that the way to abandon the influxes in relation to these vicissitudes requires that “no emotional or defensive reaction be resorted to”. Tatia 1980: 329 (cf. also id. 1993: 5) notes that such enduring was highly valued among the Jains, whose texts give similar listings of various vicissitudes that should be endured with patience; cf., e.g., the Uttarājjhayaṇa 2.1 in Charpentier 1922: 74,18.</span></span></span> The Madhyama-āgama discourse, the individual translation, and the Tibetan version introduce this method by recommending the firm determination not to give up striving even if one’s blood should dry up and one’s body should fall apart,<span class="note" id="mn2n42"><span class="details"><span class="p">[n.42] <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432c6, T 31 at T I 814a4, and D (4094) mngon pa, ju 93b5 or Q (5595) tu 106b7. Although this determination does not occur in <a href="../../mn/mn2.html">MN 2</a>, it recurs in other Pāli discourses, cf., e.g., <a href="../../mn/mn70.html">MN 70</a> at MN I 481,1, <a href="../../sn/sn12.22.html">SN 12:22</a> at SN II 28,24, <a href="../../sn/sn21.3.html">SN 21:3</a> at SN II 276,12, <a href="../../an/an2.5.html">AN 2:1:5</a> at AN I 50,9, and <a href="../../an/an8.13.html">AN 8:13</a> at AN IV 190,8.</span></span></span> a mental attitude that would indeed enable patiently enduring any difficulty.</p>
+<p>The fifth method in the Sabbāsava-sutta takes up the practice of “avoiding”, which according to all versions refers to avoiding dangerous animals and places, bad friends, and unsuitable resorts.<span class="note" id="mn2n43"><span class="details"><span class="p">[n.43] Premasiri 2005b: 569 comments that “while the fourth method proposes that one should cultivate the ability to endure certain conditions that are unavoidable, the fifth method proposes that whenever unnecessary trouble is avoidable, it is wise to avoid it”. The Jain work Dasaveyāliya in a somewhat similar vein recommends avoiding various animals and places, cf. Lalwani 1973a: 62,13 (5.12) or Leumann 1932: 19,5 (5.12), translated in Schubring 1932: 89.</span></span></span></p>
+<p>The sixth method in the Sabbāsava-sutta is “removing”, which in all versions refers to removing thoughts of sensual desire, ill will, and cruelty. The method listed last in all versions is to develop the seven factors of awakening (bojjhaṅga), which according to the Pāli account are to be combined with seclusion, fading away, and cessation, in order to give rise to relinquishment, a point made similarly in the Madhyama-āgama, Ekottarika-āgama, and Tibetan versions.<span class="note" id="mn2n44"><span class="details"><span class="p">[n.44] <a href="../../mn/mn2.html">MN 2</a> at MN I 11,23, <a href="../../an/an6.58.html">AN 6:58</a> at AN III 390,17, <a href="../../parallels/ma10.html">MĀ 10</a> at T I 432c19, <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 741b1, and D (4094) mngon pa, ju 94a5 or Q (5595) tu 107b1. The Tibetan version introduces the development of the awakening factors by describing contemplation of the impermanent nature of the five aggregates.</span></span></span></p>
+<p>The Sabbāsava-sutta and its parallels conclude by stating that one who puts into practice these seven methods will be able to overcome the influxes and make an end of dukkha. The Ekottarika-āgama version additionally has an exhortation to meditate and not be negligent, lest one later regret it.<span class="note" id="mn2n45"><span class="details"><span class="p">[n.45] <a href="../../parallels/ea40.6.html">EĀ 40.6</a> at T II 741b13. The same type of exhortation occurs frequently in the Pāli discourses, e.g., in the Majjhima-nikāya in <a href="../../mn/mn8.html">MN 8</a> at MN I 46,9, <a href="../../mn/mn19.html">MN 19</a> at MN I 118,23, <a href="../../mn/mn106.html">MN 106</a> at MN II 266,2, and <a href="../../mn/mn152.html">MN 152</a> at MN III 302,9.</span></span></span></p>
+<p>Looking back on the different versions, the Sabbāsava-sutta and its Chinese and Tibetan parallels show a close agreement in regard to the seven methods for abandoning the influxes, except for slightly different sequencing. The Āsava-sutta in the Aṅguttaranikāya differs from the other versions in that it does not include the method concerned with “seeing”. The exposition in the Āsava-sutta also starts on a different premise, as it examines the qualities that make a monk worthy of respect and offerings. This difference raises the question of how far the first method of “seeing” forms an integral part of the set of methods for overcoming the influxes.<span class="note" id="mn2n46"><span class="details"><span class="p">[n.46] Van Zeyst 1965: 640, however, is of the opinion that the presentation in <a href="../../an/an6.58.html">AN 6:58</a> “has been partly excised to make it fit into the Book of Sixes”.</span></span></span></p>
+<p>According to other Pāli and Chinese discourses, the path to the eradication of the influxes is the noble eightfold path.<span class="note" id="mn2n47"><span class="details"><span class="p">[n.47] E.g., <a href="../../mn/mn9.html">MN 9</a> at MN I 55,12, with its Chinese parallels <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a16 and <a href="../../parallels/sa344.html">SĀ 344</a> at T II 94c22.</span></span></span> This provides a link between the seven methods for abandoning the influxes described in the present discourse and the noble eightfold path. In view of this affinity, the placement of “seeing” in the first position in the Sabbāsavasutta and its Chinese and Tibetan parallels mirrors the primacy of right view in the noble eightfold path.<span class="note" id="mn2n48"><span class="details"><span class="p">[n.48] In addition to the relationship between “seeing” and right view, “restraining” the senses could be considered as belonging to the domain of right effort; “using” one’s requisites properly as representing right livelihood for a monk or a nun; successfully “removing” unwholesome thoughts would amount to right intention; and “developing” the factors of awakening, which forms one of the contemplations listed in the Satipaṭṭhāna-sutta, would be an instance of right mindfulness.</span></span></span> According to the Mahācattārīsaka-sutta and its Chinese and Tibetan parallels, right view is in fact the forerunner of the noble eightfold path.<span class="note" id="mn2n49"><span class="details"><span class="p">[n.49] <a href="../../mn/mn117.html">MN 117</a> at MN III 71,23: “right view comes first”, sammādiṭṭhi pubbaṅgamā hoti, a statement found similarly in its parallels <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c13: 正見最在其前 and D (4094) mngon pa, nyu 44b6 or Q (5595) thu 84a8: yang dag pa’i lta ba sngon du ’gro ba. Bodhi 1984: 14 comments that “to attempt to enter the practice [of the noble eightfold path] without a foundation of right view is to risk getting lost in the futility of undirected movement”.</span></span></span> The position of right view as the first factor of the path is noteworthy, since in this way the sequence of the noble eightfold path places wisdom first,<span class="note" id="mn2n50"><span class="details"><span class="p">[n.50] <a href="../../mn/mn44.html">MN 44</a> at MN I 301,9 and its parallels <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788c12 and D (4094) mngon pa, ju 7b6 or Q (5595) tu 8b5 identify right view as a factor that belongs to the aggregate of wisdom.</span></span></span> followed by morality and concentration, whereas in other contexts one regularly finds the sequence: morality, concentration, wisdom. The noble eightfold path’s departure from this sequence highlights the function of right view as the all-important directional input for the practice of the path. The point made in this way is that without the guiding principle provided by right view, neither the noble eightfold path nor the methods for overcoming the influxes, listed in the Sabbāsava-sutta and its Chinese and Tibetan versions, will lead to deliverance.</p>
+<p>A closer examination of the Sabbāsava-sutta brings to light a noteworthy difference between its treatment of the method of “seeing” and its treatment of the other methods. While one who undertakes the six other methods is a “monk”, the one who undertakes the first method of “seeing” is a “noble disciple”.<span class="note" id="mn2n51"><span class="details"><span class="p">[n.51] <a href="../../mn/mn2.html">MN 2</a> at MN I 8,32: sutavā ... ariyasāvako.</span></span></span> The expression “noble disciple” covers not only monastics, but also lay disciples. This presentation would thus agree with the Āsava-sutta in associating the remaining six methods more closely to monks. The implication could be that whereas “seeing” the four noble truths is mainly a matter of attaining stream-entry, the remaining methods are more closely related to undertaking mental training and practice towards achieving the higher stages of awakening, for which, from an early Buddhist perspective, going forth as a monk or a nun provides the best conditions. Understood in this way, the Āsava-sutta might be concerned with a monk who is already a disciple in higher training (sekha), whereas the Sabbāsava-sutta and its parallels would be broader in scope, since by including the method of “seeing” they also cover the method most closely related to becoming a disciple in higher training.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

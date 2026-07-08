@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 93 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 93: Assalāyana-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn92comp.html#content"></a><a id="next-sutta" href="./mn94comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn93.html">MN 93</a> / <a href="../../parallels/ma151.html">MĀ 151</a> / <a href="../../parallels/ea40.9.html">EĀ 40.9 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Assalāyana-sutta, the “discourse to Assalāyana”, records a debate between the Buddha and the Brahmin youth Assalāyana on the Brahminical claim to class superiority. This discourse has a parallel in the Madhyama-āgama and another parallel in an individual translation.<span class="note" id="mn93n105"><span class="details"><span class="p">[n.105] The parallels are <a href="../../parallels/ma151.html">MĀ 151</a> at T I 663b-666c and T 71 at T I 876b-878b. According to the information given in the Taishō edition, T 71 was translated by Dharmarakṣa. <a href="../../parallels/ma151.html">MĀ 151</a> and T 71 agree with <a href="../../mn/mn93.html">MN 93</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma151.html">MĀ 151</a> has the title “discourse to the Brahmin Assalāyana”, 梵志阿攝惒經 (with a 聖 variant reading as 梵志阿攝和經), cf. also Abhidh-k-ṭ, which gives the title as rta len gyi bu’i mdo. T 71 has the title “discourse on the Brahmin Assalāyana’s questions about class superiority”, 梵志頞波羅延問種尊經. <a href="../../parallels/ma151.html">MĀ 151</a> has been studied and translated by Minh Chau 1964/1991: 61 and 313-320.</span></span></span> In addition to these, the final part of the Assalāyana-sutta has a counterpart in a discourse in the Ekottarika-āgama and in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn93n106"><span class="details"><span class="p">[n.106] <a href="../../parallels/ea40.9.html">EĀ 40.9</a> at T II 742b-743a and Abhidh-k-ṭ at D (4094) mngon pa, ju 110a4-111b5 or Q (5595) tu 126a2-128a1; cf. also Abhidh-k 3:12 in Pradhan 1967: 121,22+25, paralleling <a href="../../mn/mn93.html">MN 93</a> at MN II 157,1+4, with its Chinese counterparts in T 1558 at T XXIX 44c26 and T XXIX 45a1, as well as T 1559 at T XXIX 201c22+28. <a href="../../parallels/ea40.9.html">EĀ 40.9</a> and Abhidh-k-ṭ parallel the tale of the seven seers in <a href="../../mn/mn93.html">MN 93</a> at MN II 154,29.</span></span></span> A few parts of a version of the Assalāyana-sutta have also been preserved in Sanskrit fragments.<span class="note" id="mn93n107"><span class="details"><span class="p">[n.107] The so far unpublished fragments are no. 2380/37 and 2380/44 of the Schøyen collection, identified by Klaus Wille (I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of these fragments). The fragments correspond to the final part of the discussion with Assalāyana at MN II 154-155, in particular to his showing physical signs of being defeated and to the tale of the seven seers.</span></span></span></p>
+<p>The Assalāyana-sutta and its two Chinese parallels begin by describing how a group of Brahmins prevailed on Assalāyana that he should defend the Brahminical claim to class superiority in front of the Buddha.<span class="note" id="mn93n108"><span class="details"><span class="p">[n.108] While according to <a href="../../mn/mn93.html">MN 93</a> at MN II 147,3 these Brahmins came from different provinces of India, nānāverajjaka, <a href="../../parallels/ma151.html">MĀ 151</a> at T I 663b28 indicates that they were from Kosala, 拘薩羅. Another minor difference is that, according to <a href="../../mn/mn93.html">MN 93</a> at MN II 148,6 and T 71 at T I 876c22, it took three requests by the Brahmins to convince Assalāyana to take up their cause, whereas according to <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a9 two requests were sufficient. T 71 at T I 876c26 also makes a point of explicitly recording that Assalāyana and the Brahmins did not pay homage to the Buddha, 不為佛作禮.</span></span></span> The present and other instances in the early discourses of such debates on the presumed class superiority of Brahmins seem to reflect some degree of tension and probably also of competition between orthodox Brahmins and the Buddha as representative of the recluse (samaṇa) tradition.<span class="note" id="mn93n109"><span class="details"><span class="p">[n.109] The distinction between these two types of ancient Indian religieux was apparently evident enough to be noticed by Megasthenes, cf. McCrindle 1877: 98. According to Patañjali’s Vyākaraṇa-mahābhāṣya in Kielhorn 1880/1962: 476,9 (2.4.12.2), these two groups are opposed to each other, yeṣāṃ ca virodha ityasyāvakāśaḥ, śramaṇabrāhmaṇam. As already highlighted by, e.g., Foucher 1955: 260, these two sections of ancient Indian society were not only opposed to each other on ideological grounds, but were also in direct competition for the material support they required for their sustenance from the population (Gräfe 1974: 37 notes that the support to be given to Brahmins is reflected in references to the brāhmaṇabhojana at Vin I 44,22 and Vin I 60,25). Olivelle 1974: 6 explains that “according to the Viṣṇusmṛti a householder must turn back if he has seen ... a recluse, and a punishment of 100 paṇas is ordained ‘for hospitably entertaining ... a religious ascetic at an oblation to the gods or to the manes’ ... the sight itself of ... [a recluse] was considered by many as inauspicious. There was also a corresponding hostility towards the brāhmaṇas on the part of the recluses. In heterodox literature the brāhmaṇas are depicted as greedy social parasites living on the superstitious generosity of the common people”. Nevertheless, as pointed out by Ruegg 2008: 5 note 3, “whether ... the śramaṇas and brāhmaṇas are in fact opposed depends of course on the circumstance in each case”. Ruegg remarks that it also needs to be taken into account that quite a number of bhikkhus were of Brahmin descent (cf. the survey in Chakravarti 1996: 198-220, Nakamura 2000a: 360-362, and Sarao 1989: 93-139, and the figures given in Gokhale 1976: 96, id. 1980a: 74, or id. 1994/2001c: 61). In fact, according to Vin I 71,25, jaṭilas were allowed to join the order without observing the usual probationary period; cf. also Bronkhorst 1998b: 84. Bailey 2003: 112 explains that “the jostling for status between brahmins and Buddhists ... should not necessarily be taken as antagonism. But it is competition”. Fog 1994: 37 comments that “the religious competition between them also implied an exchange of ideas and symbols ... [which] explains the extensive use of Brāhmaṇa terminology and religious symbols ... within the world view of the Nikāyas”. On the not invariably hostile relationships between Brahmins and early Buddhists cf. also Tsuchida 1991.</span></span></span> The progression of the arguments raised during the present debate with Assalāyana shows some variations in the three parallel versions (see table 10.2)</p>
+<table class="comparative-table">
+<caption>Table 10.2: Progression of Themes in <a href="../../mn/mn93.html">MN 93</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn93.html">MN 93</a></th><th><a href="../../parallels/ma151.html">MĀ 151</a></th><th>T 71</th></tr>
+<tr><td>mothers give suck (1)</td><td>two-class society (→ 2)</td><td>child of mixed parents (→ 8)</td></tr>
+<tr><td>two-class society (2)</td><td>not obstructed by space</td><td>two-class society (→ 2)</td></tr>
+<tr><td>retribution for evil (3)</td><td>loving kindness (→ 5)</td><td>retribution for evil (→ 3)</td></tr>
+<tr><td>reward for restraint (4)</td><td>wash oneself (→ 6)</td><td>reward for restraint (→ 4)</td></tr>
+<tr><td>loving kindness (5)</td><td>able to make fire</td><td>obstructed by space</td></tr>
+<tr><td>wash oneself (6)</td><td>fire has same flame (→ 7)</td><td>wash oneself (→ 6)</td></tr>
+<tr><td>fire has same flame (7)</td><td>child of mixed parents (→ 8)</td><td>be employed in king’s service</td></tr>
+<tr><td>child of mixed parents (8)</td><td>seven seers (→ 10)</td><td>fire warms all (→ 7)</td></tr>
+<tr><td>two brothers (9)</td><td>four brothers (→ 9)</td><td>cross river</td></tr>
+<tr><td>seven seers (10)</td><td></td><td>mothers give suck (→ 1)</td></tr>
+<tr><td></td><td></td><td>child of mixed parents (→ 8)</td></tr>
+<tr><td></td><td></td><td>evil child (→ 9?)</td></tr>
+<tr><td></td><td></td><td>retribution for evil (→ 3)</td></tr>
+<tr><td></td><td></td><td>seven seers (→ 10)</td></tr>
+<tr><td></td><td>(≠ 1, 3-4)</td><td>(≠ 5)</td></tr>
+</table>
+<p>According to the Majjhima-nikāya account, the Buddha humorously contrasted the Brahminical claim to be born from the mouth of Brahmā with the empirically observable fact that Brahmin mothers go through the normal process of pregnancy.<span class="note" id="mn93n110"><span class="details"><span class="p">[n.110] <a href="../../mn/mn93.html">MN 93</a> at MN II 148,29. Gombrich 1992a: 164 comments that “this means that the brahmins have the same impurities from birth as other human beings”. According to Norman 1991/1993c: 272, by referring to “the way in which brahmans are born, the Buddha satirises the Puruṣasūkta of the Ṛgveda”; cf. also Gombrich 1988: 77 and Schmithausen 2005a: 170. Bronkhorst 2007: 212, however, doubts that the Buddha had knowledge of this Vedic hymn.</span></span></span> While the Madhyama-āgama version does not record this argument, the individual translation raises the same argument at a later point of its presentation.<span class="note" id="mn93n111"><span class="details"><span class="p">[n.111] T 71 at T I 877b24. T 71 differs in so far as it covers the pregnancy of all four classes, thereby indicating that Brahmins are not different from the other three classes in respect to birth.</span></span></span> The pregnancy of Brahmin wives as an argument against the Brahminical claim to be born from Brahmā’s mouth recurs also in the Aggañña-sutta and in its Dīrgha-āgama and Madhyama-āgama parallels.<span class="note" id="mn93n112"><span class="details"><span class="p">[n.112] <a href="../../dn/dn27.html">DN 27</a> at DN III 81,27, <a href="../../parallels/da5.html">DĀ 5</a> at T I 37a25, and <a href="../../parallels/ma154.html">MĀ 154</a> at T I 674a12, translated in Meisig 1988: 87.</span></span></span></p>
+<p>The Assalāyana-sutta and its two Chinese parallels agree in taking up some border regions of India in which a two-class society can be found,<span class="note" id="mn93n113"><span class="details"><span class="p">[n.113] According to <a href="../../mn/mn93.html">MN 93</a> at MN II 149,4, this is the case in “Yona, Kamboja, and other border regions”, yona-kambojesu aññesu ca paccantimesu janapadesu (Se-MN II 560,18: yonaka-kambojesu). Aśoka’s fifth rock edict similarly speaks of Yona and Kamboja and other western border countries that are occupied by servants and masters, cf. Bloch 1950: 103, Hultzsch 1925: 191, or Woolner 1924/1993: 8-9. Bodhi in Ñāṇamoli 1995/2005: 1299 note 872 explains that “Yona is the Pāli transliteration of Ionia. Kamboja is a region to the northwest of the Indian ‘Middle Country’”; cf. also Basak 1963a: 18, Law 1932/1979: 50, and Malalasekera 1937/1995: 526. Kamboja as one of the sixteen Indian countries recurs in <a href="../../an/an3.70.html">AN 3:70</a> at AN I 213,4, <a href="../../an/an8.42.html">AN 8:42</a> at AN IV 252,8, <a href="../../an/an8.43.html">AN 8:43</a> at AN IV 256,20, and <a href="../../an/an8.45.html">AN 8:45</a> at AN IV 261,1. King Milinda apparently came from the Yona region, as according to Mil 1,11, 82,23, and 83,1 he was a native of Kalasigāma in Alasanda, two hundred yojanas from the town of Sāgala of the Yona district. The Mahāvaṃsa 12:4-5 in Be-Mhv 68 reports that the Yona country was converted to Buddhism after the third of the councils recognized in the Theravāda tradition. While <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a18 agrees with <a href="../../mn/mn93.html">MN 93</a> on speaking of Yona and Kamboja, 餘尼及劒浮國, T 71 at T I 877a13 speaks instead of the Kuṣāṇas, 月支國.</span></span></span> a society where master and slave may exchange their roles.<span class="note" id="mn93n114"><span class="details"><span class="p">[n.114] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a19 agrees with <a href="../../mn/mn93.html">MN 93</a> at MN II 149,6 on contrasting “slave”, 奴, with “master”, 大家. T 71 at T I 877a11 instead contrasts “slave” with “clansman”, 人善家子, corresponding to kulaputta. The three versions also differ in regard to the conclusion drawn after the various arguments. <a href="../../mn/mn93.html">MN 93</a> concludes each argument by indicating that the Brahminical claim to class superiority has been invalidated, a reasoning found in similar terms (though only on one occasion) in T 71 at T I 877c18. <a href="../../parallels/ma151.html">MĀ 151</a> instead follows each argument by indicating that each of the four classes will be able to reach understanding as long as they adopt the right path, cf., e.g., <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a22: “Brahmins ... warriors, merchants, and workers, if they [practise] the right approach, they will obtain good understanding and know by themselves in accordance with the Dharma”, 梵志 ... 剎利, 居士, 工師, 若正趣者, 亦得善解, 自知如法.</span></span></span> The circumstance that the Assalāyana-sutta in this context refers to Yona has at times been taken as a sign of lateness.<span class="note" id="mn93n115"><span class="details"><span class="p">[n.115] Bronkhorst 2007: 209 holds that the mention of Yona “suggests that the passage which contains this reference was composed after − perhaps long after − the conquest of Alexander the Great”; cf. also Bechert 1961: 41 note 2, Lamotte 1947: 217, and Winternitz 1920/1968: 40, who comments that the reference to Yona points to the existence of the Greek-Bactrian kingdom and therewith to a time shortly before Aśoka.</span></span></span> Yet, closer inspection brings to light that a reference to Yona could well have arisen already at the time of the Buddha.<span class="note" id="mn93n116"><span class="details"><span class="p">[n.116] Regarding the term itself, Kent 1950/1953: 204 s.v. Yauna notes that the term Yauna occurs in an inscription by Darius I (who reigned 522-486 BC), the corresponding Sanskrit form Yavana occurs in Pāṇini 4.1.49; for a survey of references to Yavana or Yona cf. also Karttunen 1997: 316-320 and Narain 1957: 165-169. Töttössy 1955: 310-311 explains that “the term Yona-” was “taken over into Indian from the Old Persian form Yauna- some time about the end of the sixth century B.C.”; cf. also Ray 1988: 312. In regard to the reference to the writing of the Yavanas in Pāṇini, Bühler 1895/1963: 27 note 1 comments that “it seems to me not wonderful that an author ... whose countrymen, the Gandhāras, had furnished a contingent for Xerxes’s invasion of Greece, should mention the old Oriental name of the Greeks ... to me it seems absolutely impossible to make the mere occurrence of the word Yavana in Sanskrit works a mark, which proves that they must have been written after the invasion of Alexander”. Sircar 1953: 101-102 comments that “the Greeks of Ionia in Asia Minor ... and the people of northwestern India certainly came into contact with each other ... since the time of Darius I (522-486 B.C.)”. Given that “Indian archers ... formed an important element in the army of Xerxes and shared the Persian defeat ... the people of Uttarāpatha at least had direct knowledge of the Greeks as early as the sixth and fifth centuries B.C.”. It “is therefore no wonder that the very word Yauna, meaning the Greeks, used for the first time in the records of Darius I, was borrowed by the Indians without any modification”. In fact, a famous detail of Xerxes’s campaign to conquer Greece in 480 BC was the heroic resistance offered by the Spartans under Leonidas, so that it would indeed not be surprising if some knowledge of their valour, and perhaps also of their social division into two classes of master and slaves, should have been known in India already by the later part of the fifth century BC from reports given by Indians who had taken part in Xerxes’s campaign. Since this campaign was in revenge for the support given by the mainland Greeks to the Ionian revolt against Persian dominion, it would also not be surprising if the Indians referred to the Spartans as “people from Yona”. That this rumour may have been still fairly new would fit the formulations in <a href="../../mn/mn93.html">MN 93</a> at MN II 149,4 and <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a18, both of which agree that the Buddha made a point of ascertaining if Assalāyana had already ‘heard’ (suta/聞) about the conditions in these border countries. Since according to modern scholarship the Buddha’s teaching activities could be assigned to the second half of the fifth century and perhaps even early fourth century (cf., e.g., Bechert 1995: 286, Brekke 1998: 32, and Cousins 1996b: 60), it would appear entirely possible that the Buddha and his contemporaries had indeed heard of the Spartan two-class society, to which they referred to as the Yona country. Thus, as already noted by Basham 1980: 23 note 2, the reference to Yona in <a href="../../mn/mn93.html">MN 93</a> “is not ... conclusive for a late date”. Halbfass 1995: 199 sums up: “references to yona, etc., in the Pali canon need not be later interpolations, added after Alexander’s campaign. They may well go back to the oldest layers of the canon”; cf. also Anālayo 2009x.</span></span></span></p>
+<p>The individual translation offers additional details on the argument made in this passage, as it explains that by dint of good conduct a slave can become a free man, while a free man who undertakes evil conduct may end up having to sell himself as a slave.<span class="note" id="mn93n117"><span class="details"><span class="p">[n.117] T 71 at T I 877a14.</span></span></span> Thus, from the perspective of this version, the point of the argument appears to be to contrast the Brahminical belief in being the inheritors of a divinely fixed order with the existence of masters and slaves in other societies, where their respective status would be due to their own deeds.<span class="note" id="mn93n118"><span class="details"><span class="p">[n.118] The commentary Ps III 409,16, however, explains the present argument in <a href="../../mn/mn93.html">MN 93</a> by narrating how a childless Brahmin trader might go with his wife to these border countries and then pass away. His wife might then consort with a slave and have a child. This child might follow his father’s trade and eventually return to the middle country and take a Brahmin wife. Due to his impure descent, the children re- sulting from this marriage will not be pure Brahmins. As in this way it can be imagined how Brahmins can come to be of impure descent, the Brahminical claim to class superiority is rendered invalid. The point the commentary tries to make seems rather contrived and could be modelled on <a href="../../dn/dn3.html">DN 3</a> at DN I 93,16, where the Buddha humbled the pride of a young Brahmin by pointing out that he was the descendant of a slave.</span></span></span></p>
+<p>The topic of wholesome and evil deeds comes up again in the Assalāyana-sutta and the individual translation, which take up the retribution for wholesome and evil ways of conduct. The two versions point out that, just as wholesome conduct will lead to a heavenly rebirth, so evil conduct will lead to hell, independent of class affiliation.<span class="note" id="mn93n119"><span class="details"><span class="p">[n.119] <a href="../../mn/mn93.html">MN 93</a> at MN II 149,17 and MN II 150,11 illustrates the two types of conduct by listing the ten courses of action (kammapatha). Instead of describing the actual undertaking of these ten courses of action, T 71 speaks in each case of the corresponding mental state. Thus T 71 at T I 877a18+23 contrasts someone who “enjoys killing”, 憙殺, with someone who has a “mind of not killing”, 無殺心, etc. The topic of the retribution for evil conduct comes up again in T 71 at T I 877c20.</span></span></span></p>
+<p>Although the Madhyama-āgama discourse does not record this argument, it agrees with the Assalāyana-sutta on bringing up the practice of loving kindness, an argument not found in the individual translation. According to the Majjhima-nikāya and Madhyama-āgama versions, Assalāyana had to admit that members of any of the four classes (vaṇṇa) would be able to practice loving kindness, the practice of this ‘brahma’-vihāra not being a prerogative of Brahmins.<span class="note" id="mn93n120"><span class="details"><span class="p">[n.120] <a href="../../mn/mn93.html">MN 93</a> at MN II 151,6 and <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664b14.</span></span></span></p>
+<p>The Assalāyana-sutta and its Chinese parallels also point out that a member of any class will be able to wash himself, thereby punning on the Brahminical notion that only Brahmins are able to purify themselves.<span class="note" id="mn93n121"><span class="details"><span class="p">[n.121] <a href="../../mn/mn93.html">MN 93</a> at MN II 151,18 and <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664b23.</span></span></span> The individual translation additionally inquires whether anyone could recognize the dirt washed away in the water to be the dirt of a Brahmin, a warrior, a merchant, or a worker.<span class="note" id="mn93n122"><span class="details"><span class="p">[n.122] T 71 at T I 877b9.</span></span></span></p>
+<p>The Majjhima-nikāya version and its Madhyama-āgama counterpart compare the ability of high-class members to make fire with superior types of wood to low-class members who make fire with inferior types of wood. Both come to the conclusion that any of the resultant fires can be used, and their colour and flame will be similar to the other fires.<span class="note" id="mn93n123"><span class="details"><span class="p">[n.123] <a href="../../parallels/ma151.html">MĀ 151</a> presents this as two separate arguments, where the first point at T I 663a10 is that they can all produce fire, while the second point at T I 663a21 is that the flame of their fires do not differ, corresponding to the argument in <a href="../../mn/mn93.html">MN 93</a> at MN II 152,10. <a href="../../mn/mn93.html">MN 93</a> at MN II 152,1 introduces this example by speaking of “a hundred men of different births”, nānājaccānaṃ purisānaṃ purisasataṃ, which has its counterpart in <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664c9 in the expression “hundred types of people”, 百種人, an expression <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664b22 also uses in relation to the argument about washing oneself.</span></span></span> The individual translation instead describes members of the four classes that come close to a fire during the cold season and concludes that the fire will warm them all.<span class="note" id="mn93n124"><span class="details"><span class="p">[n.124] T 71 at T I 877b20.</span></span></span></p>
+<p>In addition to these practical examples concerned with washing and making a fire, the two Chinese discourses also bring up the argument that a member of any class will not be obstructed by empty space.<span class="note" id="mn93n125"><span class="details"><span class="p">[n.125] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a29 and T 71 at T I 877b5.</span></span></span> The individual translation additionally points out that members of any class will find employment in the king’s service and will also be able to cross a river with the help of a boat.<span class="note" id="mn93n126"><span class="details"><span class="p">[n.126] T 71 at T I 877b13 and T I 877b22. The second example brings to the mind the image of “crossing” the stream, found frequently in the discourses.</span></span></span></p>
+<p>The three versions also take up the class of a child born from a couple of mixed class, with one parent from the warrior class and the other parent from the Brahmin class.<span class="note" id="mn93n127"><span class="details"><span class="p">[n.127] While <a href="../../mn/mn93.html">MN 93</a> at MN II 153,18 takes up the possibility that the child is like the mother or like the father, <a href="../../parallels/ma151.html">MĀ 151</a> at T I 665a29 distinguishes between three possible cases, where the child might be like the father, it might be like the mother, or else it might not be like any of the two, 或似父, 或似母, 或不似父母.</span></span></span> According to the Majjhima-nikāya and Madhyama-āgama accounts, Assalāyana indicated that the child could belong to either the father’s or the mother’s class;<span class="note" id="mn93n128"><span class="details"><span class="p">[n.128] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 665a21 relates this argument to the previous discussion on making a fire by highlighting that class identity is simply the outcome of where one is born, just as different types of fire are simply named after the type of fuel in dependence on which they burn. The image of different types of fire reckoned in accordance to their fuel can also be found in <a href="../../mn/mn38.html">MN 38</a> at MN I 259,24, where it serves to illustrate the dependent arising of consciousness.</span></span></span> in the individual translation, Assalāyana similarly admitted that he did not know to which class the child would belong.<span class="note" id="mn93n129"><span class="details"><span class="p">[n.129] T 71 at T I 877c9, where already at the onset of the discussion at T I 877a2 the Buddha had taken up the example of children born from mixed parents of any of the four classes.</span></span></span> The three versions agree in illustrating this dilemma with the example of a mule, which could not be reckoned to be a horse or a donkey.<span class="note" id="mn93n130"><span class="details"><span class="p">[n.130] While <a href="../../mn/mn93.html">MN 93</a> and <a href="../../parallels/ma151.html">MĀ 151</a> follow this exchange with the simile of the mule, T 71 has first the simile and then the present exchange. The same dilemma, together with the mule simile, occurs also in <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798b19 (parallel to <a href="../../mn/mn92.html">MN 92</a>). According to <a href="../../parallels/ea49.6.html">EĀ 49.6</a>, a child from a couple of mixed Brahmin and warrior descent would invariably belong to the class of the father. Another instance of this dilemma can be found in <a href="../../dn/dn3.html">DN 3</a> at DN I 97,4, according to which a child from a Brahmin and warrior couple would be acceptable to Brahmins, while the members of the warrior class would not give such a child consecration. Its parallel <a href="../../parallels/da20.html">DĀ 20</a> at T I 83b6 similarly indicates that the warriors would not respect a child from a Brahmin father and a warrior mother and not consider it as a rightful heir, while the Brahmins would respect a child from a warrior father and a Brahmin mother and would consider it a rightful heir. The different opinions proposed in these texts show that the Assalāyana-sutta’s inquiry after the class of a child from parents of mixed class delves into a complex subject. According to Devi 1999: 50, “when a male of a higher varṇa marries a woman of a lower varṇa, the marriage ... and the offspring is said to be aṇuloma (... in the natural order); when there is a union of a woman of a higher varṇa with a male of a lower varṇa ... the children of the union are said to be pratiloma (... against the natural or proper order)”. Ibid. explains that while there were different opinions on whether an aṇuloma child deserves to be reckoned as a member of the father’s class, “the pratilomas ... are lower in status than any of the two parents” (ibid. p. 54). Applied to the present dilemma, this suggests that a child born from a couple where the father’s class is superior to the mother, the child might be reckoned the same class as its father or else might only receive the inferior class status of its mother. A child from a father of inferior class, however, would not seem to stand any chance of being reckoned a member of the higher class of its mother.</span></span></span></p>
+<p>The Assalāyana-sutta and its Madhyama-āgama parallel raise another argument that involves Brahmin brothers. Assalāyana had to admit that a brother who is learned will be honoured by the Brahmins over an unlearned brother.<span class="note" id="mn93n131"><span class="details"><span class="p">[n.131] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666a29 differs from <a href="../../mn/mn93.html">MN 93</a> in so far as it contrasts two learned brothers with two unlearned brothers. T 71 at T I 877c13 has a related argument, although this involves a single child of bad conduct, not brothers.</span></span></span> If, however, such an unlearned brother should be virtuous while the learned one is of evil conduct, then the Brahmins will honour virtue over learning. In both versions, the Buddha highlighted that by first agreeing to the superiority of learning and then to the superiority of moral conduct, Assalāyana had accepted the very grounds based on which the Buddha proclaimed purification of all four classes.<span class="note" id="mn93n132"><span class="details"><span class="p">[n.132] While according to <a href="../../mn/mn93.html">MN 93</a> at MN II 154,24 Assalāyana remained silent, showing signs of being defeated, <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666b15 describes that, after hearing this argument, Assalāyana got up and paid respect to the Buddha. The assembled audience was thereupon struck by wonder and expressed their admiration for the Buddha’s might and power. <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666a26 also describes that Assalāyana was reduced to silence, which according to its account, however, happened after the tale of the seven Brahmin seers, a tale <a href="../../parallels/ma151.html">MĀ 151</a> has before the present argument. This placing is less apposite, as the tale of the seven Brahmin seers fits more naturally after Assalāyana had been defeated, a placing given to it in <a href="../../mn/mn93.html">MN 93</a> and T 71. Assalāyana's paying respect and the surprised reaction of the audience, who then express their admiration for the Buddha in various terms, also do not fit too well into the narrative flow of <a href="../../parallels/ma151.html">MĀ 151</a>. According to <a href="../../parallels/ma151.html">MĀ 151</a> at T I 664a10, Assalāyana had come to the Buddha in the company of a group of Brahmins that had asked him to defeat the Buddha. As there is no indication that, apart from these Brahmins, others were also present, the audience of the discourse appears to consist of these Brahmins (judging from the flow of the narration, it would fit the situation well if these Brahmins had approached the Buddha in private, since Assalāyana’s premonition that he might be unable to defeat the Buddha in debate would have alerted them to the possibility of being unsuccessful and hence would have made it preferable to avoid challenging the Buddha in the presence of others, cf. also Ps II 284,13 for a similar type of reasoning in relation to another discourse that also records the Buddha being challenged). <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666b28 reports that after the discussion with the Buddha these Brahmins blamed Assalāyana for not having stood his ground, which makes it improbable that these same Brahmins would earlier have praised the Buddha in the way described in <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666b17. Perhaps the description of Assalāyana’s paying of respect and the reaction of the audience to this behaviour made its way into the present discourse from the account of a similar sequence of events involving the Brahmin Brahmāyu in <a href="../../parallels/ma161.html">MĀ 161</a> at T I 689a13, in which case this description suits the context and is also found in the parallels <a href="../../mn/mn91.html">MN 91</a> at MN II 144,28 and T 76 at T I 885c9.</span></span></span></p>
+<p>The Assalāyana-sutta concludes its examination of Assalāyana’s claims by narrating a former meeting between the seer Asita Devala and seven Brahmin seers, a tale also found in the partial parallel from the Ekottarika-āgama and in the discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya.<span class="note" id="mn93n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/ea40.9.html">EĀ 40.9</a> takes place at Sāvatthī and begins by reporting that King Pasenadi paid a visit to the Buddha. On seeing several ascetics pass by, Pasenadi proclaimed that he held them to be arahants. In reply, the Buddha explained that close examination was required in order to ascertain if someone was an arahant. This introductory tale is similar to an exchange between the Buddha and Pasenadi recorded in <a href="../../sn/sn3.11.html">SN 3:11</a> at SN I 78,1 (or SN2 122 at SN2 I 177,1). <a href="../../parallels/ea40.9.html">EĀ 40.9</a> at T II 742b17 then continues with the tale of the seven Brahmin seers visited by Asita Devala. Similar to <a href="../../mn/mn93.html">MN 93</a>, Asita’s appearance angered the Brahmins so that they tried to curse him. Instead of turning into ashes, Asita became ever more handsome. The reason for his visit in <a href="../../parallels/ea40.9.html">EĀ 40.9</a>, however, is different, as the wrong view of the seven Brahmin seers was that by undertaking asceticism they would be able to reach kingship on earth or in heaven. It is notable how <a href="../../parallels/ea40.9.html">EĀ 40.9</a> combines elements of <a href="../../mn/mn93.html">MN 93</a> with material found in a different discourse in the Pāli Nikāyas; for other instance where an Ekottarika-āgama discourse combines material found in the Pāli canon in different discourses cf. above pp. 472-473 notes 159 and 165, as well as p. 546 note 89).</span></span></span> The individual translation and the Pāli commentary agree in identifying the seer Asita Devala with the Buddha in one of his former lives.<span class="note" id="mn93n134"><span class="details"><span class="p">[n.134] T 71 at T I 878a5 and Ps III 411,7. Horner 1957/1970: 347 note 2 and Malalasekera 1937/1995: 210 suggest that Asita Devala may be identical with Kāla Devala in Jā 423 at Jā III 463,16. Such an identification would, however, not agree with the suggestion by the Pāli commentary and the individual translation that Asita Devala was a former birth of the Buddha, as Kāla Devala was one of the students of Sarabhaṅga, a former life of the Buddha, so that the identification proposed by Horner and Malalasekera would result in a co-existence of two former lives of the Buddha. On Asita Devala cf. also Windisch 1916: 6-13.</span></span></span> The Assalāyana-sutta and its parallels relate with minor variations how Asita Devala visited a group of Brahmin seers who were holding the same view that Assalāyana had tried to defend in front of the Buddha.<span class="note" id="mn93n135"><span class="details"><span class="p">[n.135] <a href="../../mn/mn93.html">MN 93</a> at MN II 154,29 speaks of seven Brahmin seers, brāhmaṇisayo, <a href="../../parallels/ea40.9.html">EĀ 40.9</a> at T II 742b18 and T 71 at T I 878a2 speak just of “seven Brahmins”, 七梵志 or 七婆羅門, <a href="../../parallels/ma151.html">MĀ 151</a> at T I 665b26 speaks of “numerous seers”, 眾多仙人, as does D (4094) mngon pa, ju 110a5 or Q (5595) tu 126a4: drang srong rab tu mang po dag.</span></span></span> The Brahmin seers tried to curse Asita Devala, but instead of turning into ashes he became ever more handsome.<span class="note" id="mn93n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/ea40.9.html">EĀ 40.9</a> at T II 742b29 explains that this happened because he overcame their anger through mettā.</span></span></span></p>
+<p>The Assalāyana-sutta, the individual translation, and the Tibetan version agree that Asita Devala refuted the notion of class superiority of the Brahmin seers by getting them to admit that they were not really sure of the purity of their descent through past generations. According to the Madhyama-āgama parallel, however, the Brahmins felt sure of the purity of their descent for up to seven generations. They were, however, unable to indicate to which class the being to be born belonged.<span class="note" id="mn93n137"><span class="details"><span class="p">[n.137] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666a13 adds that Asita also asked if the seers knew the sex of the being to be born, and what direction it came from; the additional argument about the direction from which the gandhabba comes is also found in D (4094) mngon pa, ju 111a7 or Q (5595) tu 127b2. On the gandhabba cf. also above p. 254 note 243.</span></span></span> The individual translation explores this point in additional detail, indicating that, while the child is growing in the womb, the parents are unable to know if it will be blind, deaf or dumb, if it is going to be hunchbacked or lame.<span class="note" id="mn93n138"><span class="details"><span class="p">[n.138] T 71 at T I 878b8.</span></span></span> If they do not know even this much, how could they claim to know that it has come from Brahmā’s mouth?</p>
+<p>While the Majjhima-nikāya version concludes with Assalāyana taking refuge as a lay disciple, according to the Madhyama-āgama discourse and the individual translation he only paid his respect.<span class="note" id="mn93n139"><span class="details"><span class="p">[n.139] <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666b28 and T 71 at T I 878b27.</span></span></span> The Madhyama-āgama version continues by describing how the other Brahmins blamed Assalāyana for having been worsted by the Buddha instead of successfully defending their claim to class superiority.<span class="note" id="mn93n140"><span class="details"><span class="p">[n.140] According to <a href="../../parallels/ma151.html">MĀ 151</a> at T I 666c2, to illustrate Assalāyana’s defeat the Brahmins used the same two similes employed in <a href="../../parallels/ma133.html">MĀ 133</a> at T I 631c10 to illustrate how the householder Upāli had been unable to stand his ground in debate with the Buddha.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

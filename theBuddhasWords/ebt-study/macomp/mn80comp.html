@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 80 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 80: Vekhanassa-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn78comp.html#content"></a><a id="next-sutta" href="./mn81comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+		<p class="origin-note"><em>Originally published 2007 under the title "The Vekhanassa-sutta and its Madhyama-āgama Parallel – A Case Study in the Transmission of the Pāli Discourses" in the <i>Journal of the Centre for Buddhist Studies, Sri Lanka</i>, 5: 89–104.</em></p>
+<p class="read-links">Read: <a href="../../mn/mn80.html">MN 80</a> / <a href="../../parallels/ma209.html">MĀ 209</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>The present chapter takes up the <i>Vekhanassa-sutta</i> as a case study in the potential of comparative studies of Pāli discourses in the light of their Chinese parallels. The discussion between the Buddha and the wanderer Vekhanassa reported in the Pāli version has counterparts in the <i>Madhyama-</i>ā<i>gama</i>, translated below, and in an individual Chinese translation.</p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p>Discourse to *Vekhanassa<span class="note" id="mn80compn1"><span class="details"><span class="p">[n.1] The translated text is MĀ 209 at T I 786b12 to 788a5. The name of the main protagonist given at T I 786b15 is 鞞摩那修, which according to Pulleyblank 1991: 39, 217, 221 and 346 would correspond to <i>p</i>ε<i>j</i>ŋ<i>' ma na' suw</i>, hence the original term must have been different from its Pāli counterpart <i>Vekhanassa</i>. The name of the protagonist of MN 80 brings to mind the Vaikhānasa hermits of the brahminical tradition; cf., e.g., Eggers 1929 for a translation and study of their <i>Dharmas</i>ū<i>tra</i><i>. </i>Besides MĀ 209, another parallel to MN 80 is T 90 at T I 913c7 to 914c23. A comparative study of MN 80 in the light of its two parallels can be found in Anālayo 2011a: 437–440.</span></span></span> 1. Thus have I heard. At one time the Buddha was dwelling at Sāvatthī, staying in Jeta's Grove, Anāthapiṇḍika's Park.</p>
+<p>2. At that time the heterodox wanderer Vekhanassa, while roaming around,<span class="note" id="mn80compn2"><span class="details"><span class="p">[n.2] Adopting the variant 彷徉 instead of 仿佯.</span></span></span> came to where the Buddha was and, after exchanging greetings, he said in an inquiring manner: "Gotama, this is the supreme appearance, the supreme appearance, Gotama, this is the supreme appearance." <span class="note" id="mn80compn3"><span class="details"><span class="p">[n.3] According to Hirakawa 1997: 1005, 色 also renders <i>var</i>ṇ<i>a</i>, so that the sense here seems to be the same as in the corresponding passage in MN 80 at MN II 40,7: <i>aya</i>ṃ<i> paramo</i> <i>va</i>ṇṇ<i>o</i>. According to the commentary Ps III 273,16 on the same proposal made by Sakuludāyi in MN 79 at MN II 32,27, the proclamation of a "supreme appearance" intends the condition to be attained on rebirth in the <i>Subhaki</i>ṇ<i>hadevaloka</i>, the heavenly realm that corresponds to the attainment of the third <i>jh</i>ā<i>na</i>.</span></span></span> The Blessed One asked: "Kaccāna, what is this appearance?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, if [there is] an appearance where no other appearance is superior, more sublime, more excellent, Gotama, that appearance is the most excellent, that appearance is supreme!"</p>
+<p>3. The Blessed One said: "Kaccāna, just as if someone were to say: 'What in the country is the most beautiful girl, I want her!' Then another man would pose such a question: 'Friend, do you know of the most beautiful girl in the country: this is her family name, this is her first name, this is her birth? [Do you know] whether she is long or short, stout or slim; whether she is of bright, or dark, or neither-bright-nor-dark [skin colour]? [Do you know] whether she is a warrior girl, or whether she is a brahmin, a merchant or a worker class girl? [Do you know] whether she lives in the eastern, the southern, the western or the northern direction?' That man would answer: 'I do not know!'</p>
+<p>"Then the other man would ask again: 'Friend you do not know or see of the most beautiful girl in the country that this is her family name, this is her first name, this is her birth. [You do not know] if she is long or short, stout or slim; if she is of bright or dark or neither-bright-nor-dark [skin] colour. [You do not know] if she is a warrior girl, if she is a brahmin, a merchant, or a worker class girl. [You do not know] if she lives in the eastern, the southern, the western, or the northern direction. Yet you make this statement: 'I want that girl'?'</p>
+<p>"Similarly, Kaccāna, you make this statement: 'that sublime appearance is the most sublime appearance, that is the most excellent appearance, that is the supreme appearance'. But when I ask you about that appearance, you don't know it."</p>
+<p>4. The heterodox wanderer Vekhanassa said: "Gotama, just like superbly refined utmost excellent gold, polished and treated so as to be pure by a goldsmith who is skilled in refining, placed on a white cotton mat under the sunshine, whose most sublime appearance would glow and shine with clear light, so too, Gotama, I say that sublime appearance is the most sublime appearance, that is the most excellent appearance, that is the supreme appearance."</p>
+<p>5. The Blessed One said: "Kaccāna, I will now ask you, you may answer in accordance with your understanding. Kaccāna, what do you think, suppose the superbly refined utmost excellent gold, polished and treated so as to be pure by a goldsmith skilled in refining, placed on a white cotton mat under the sunshine, whose most sublime appearance would glow and shine with clear light; compared to a glow-worm that would glow and shine with clear light in the middle of a dark night, of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the glow-worm is supreme and more excellent than the clear light of the superbly refined and select gold."</p>
+<p>6. The Blessed One asked: "Kaccāna, what do you think, suppose a glow-worm would glow and shine with clear light in the middle of a dark night; compared to a burning oil lamp that would glow and shine with clear light in the middle of a dark night, of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the burning oil lamp is supreme and more excellent than the clear light of the glow-worm."</p>
+<p>7. The Blessed One asked: "Kaccāna, what do you think, suppose a burning oil lamp would glow and shine with clear light in the middle of a dark night; compared to a great burning wood fire that would glow and shine with clear light in the in the middle of a dark night, of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the great burning wood fire is supreme and more excellent than the clear light of the burning oil lamp."</p>
+<p>8. The Blessed One asked: "Kaccāna, what do you think, suppose a great burning wood fire would glow and shine with clear light in the middle of a dark night; compared to the morning star that would glow and shine with clear light towards dawn in a cloudless [sky], of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the morning star is supreme and more excellent than the light of the great burning wood fire."</p>
+<p>9. The Blessed One asked: "Kaccāna, what do you think, suppose the morning star that would glow and shine with clear light towards dawn in a cloudless [sky]; compared to the light of the resplendent moon,<span class="note" id="mn80compn4"><span class="details"><span class="p">[n.4] MĀ 209 at T I 786c27: 月殿, literally "moon palace". A reference to a 'palace' is also found in the next exchange in relation to the sun, 日殿. The expression 月殿 recurs in MĀ 141 at T I 647c22, where it is the counterpart to <i>candim</i>ā<i>pabh</i>ā in SN 45.146 at SN V 44,18. My rendering as "resplendent" is based on the assumption that in the present context 殿 may also stand for <i>pa</i><i>bh</i>ā, being perhaps misread as <i>sabh</i>ā, which according to Hirakawa 1997: 694 is one of the terms rendered by 殿<i>.</i></span></span></span> which in a cloudless [sky] at mid-</p>
+<p>night would glow and shine with clear light, of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the resplendent moon is supreme and more excellent than the light of the morning star."</p>
+<p>10. The Blessed One asked: "Kaccāna, what do you think, suppose the light of the resplendent moon in a cloudless [sky] at midnight would glow and shine with clear light; compared to the light of the resplendent sun that during the time close to the midst of autumn would glow and shine with clear light in a pure sky free from clouds, of these [two] clear lights, which is the supreme one, which is the most excellent?"</p>
+<p>The heterodox wanderer Vekhanassa replied: "Gotama, the clear light of the resplendent sun is supreme and more excellent than the light of the resplendent moon."</p>
+<p>11. The Blessed One said: "Kaccāna, [beyond this] there are many gods. Now even though this sun and this moon are of such great power, such great might, such great merit, such great majesty, yet that clear light of the former [i.e., the sun and the moon] does not compare to the clear light of these gods. In former times I have been meeting and conversing with such gods, and what I said was agreeable to those gods, yet I do not make such a statement as: 'that sublime appearance is the most sublime appearance, that is the most excellent appearance, that is the supreme appearance!'</p>
+<p>"But you, Kaccāna, in regard to what is [even] inferior and worse than the light of a glow-worm, you say: 'that sublime appearance is the most sublime appearance, that is the most excellent appearance, that is the supreme appearance!', and when asked about it you do not [even] know it!"</p>
+<p>Then the heterodox wanderer Vekhanassa, after being directly criticized by the Blessed One, was upset and worried inside, with head down he kept silent, in loss of an argument and without words, as if he were searching for something.</p>
+<p>12. Then, having criticized [him] the Blessed One, in order to cheer him up, [changed topic and] said: "Kaccāna, there are five strands of sensual pleasures that are gratifying and wished for, that lead to joy [of the type] that is related to sensuality, [namely] forms known by the eye, sounds known by the ear, odours known by the nose, flavours known by the tongue, touches known by the body.</p>
+<p>13. "Kaccāna, forms could be desirable or else they could be undesirable. Suppose for a person those forms are agreeable to the mind, commendable to the mind, [productive of] joy in the mind, fulfilling to the mind, satisfying to the mind's aspirations, then these are supreme and more excellent than other types of forms that are not desired, not wanted, not aspired to, not searched for. These are the most excellent and supreme types of form [for that person]. Kaccāna, it is the same for sounds, odours, flavours and tangibles. Kaccāna, tangibles could be desirable or else they could be undesirable. Suppose for a person those tangibles are agreeable to the mind, commendable to the mind, [productive of] joy in the mind, fulfilling to the mind, satisfying to the mind's aspirations, then these are supreme and more excellent than other types of tangibles that are not desired, not wanted, not aspired to, not searched for. These are the most excellent and supreme types of tangibles [for that person].</p>
+<p>14. Then, holding his hands together [in homage] towards</p>
+<p>the Buddha, the heterodox wanderer Vekhanassa said: "Gotama, it is very profound and very unique, how the recluse Gotama has explained to me in various ways sensual pleasures and the foremost sensual pleasure. Gotama, just as if with a grass fire one were to ignite a wood fire, or with a wood fire one were to ignite a grass fire, so too the recluse Gotama has explained to me in various ways sensual pleasures and the foremost sensual pleasure."<span class="note" id="mn80compn5"><span class="details"><span class="p">[n.5] The simile used here is not found in MN 80.</span></span></span></p>
+<p>The Blessed One said: "Stop, stop, Kaccāna, because for a long time you have been of a different view, of a different belief, [affirming] a different type of joy, a different type of pleasure, a different type of thinking, you do not fully understand the meaning of what I say. Kaccāna, suppose a disciple of mine during the first and last watches of the night does not lie down to sleep, but with proper concentration and intention develops the requisites of the path, coming to know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence', such a one would fully understand what I say."</p>
+<p>15. Then the heterodox wanderer Vekhanassa got angry towards the Buddha, dislike arose [in him] and disapproval, and with a wish to slander the Blessed One, with a wish to slight the Blessed One, in order to slander the Blessed One, in order to slight the Blessed One, he said:</p>
+<p>"Gotama, there are recluses or brahmins who do not [even] know the past world, who do not [even] know the future world, who do not [even] know countless births and deaths, yet they claim to have reached final knowledge, [assuming that they] know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence'.</p>
+<p>"Gotama, I think like this: 'How come these recluses and brahmins who do not [even] know the past world, who do not [even] know the future world, who do not [even] know countless births and deaths, claim to have reached final knowledge, [assuming that they] know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence'?"</p>
+<p>16. Then the Blessed One reflected: "This heterodox wanderer Vekhanassa got angry towards me, dislike arose [in him] and disapproval, and with a wish to slander me, with a wish to slight me, in order to slander me, in order to slight me, he said:</p>
+<p>"'Gotama, there are recluses or brahmins who do not [even] know the past world, who do not [even] know the future world, who do not [even] know countless births and deaths, yet they claim to have reached final knowledge, [assuming that they] know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence'.</p>
+<p>"Gotama, I think like this: 'Why is it that these recluses and brahmins who do not [even] know the past world, who do not [even] know the future world, who do not [even] know countless births and deaths, claim to have reached final knowledge, [assuming that they] know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence'?"</p>
+<p>Knowing this the Blessed One spoke: "Kaccāna, if there are recluses or brahmins who do not [even] know the past world, who do not [even] know the future world, who do not [even] know countless births and deaths, yet they claim to have reached final knowledge, [assuming that they] know as it really is that 'birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence', for them it is fitting to make this statement: 'Let be the past world, let be the future world!'<span class="note" id="mn80compn6"><span class="details"><span class="p">[n.6] In MN 80, the Buddha instead agrees to Vekhanassa's criticism, see the discussion below.</span></span></span></p>
+<p>"Kaccāna, I [too] make such a statement: 'Let be the past world, let be the future world!' Even without recalling a single [past] life, if a disciple of mine comes who is not fraudulent and not deceitful, with a straight character, I will teach him. If he practices like that, in accordance with what I taught him, he will certainly come to know the right Dharma.</p>
+<p>"Kaccāna, just like an infant boy, young and tender, lying on his bed, whose father and mother have bound his hands and feet.<span class="note" id="mn80compn7"><span class="details"><span class="p">[n.7] The point of binding the child like this would be to keep it from doing mischief when the parents are busy and unable to keep it under surveillance.</span></span></span> But when later on he has grown up and is endowed with all faculties, the father and mother free his hands and feet. He might only recall the time of being liberated,<span class="note" id="mn80compn8"><span class="details"><span class="p">[n.8] Adopting a variant that only reads 解, without 縛.</span></span></span> but does not recall the time of being in bondage.</p>
+<p>"Just so, Kaccāna, I make such a statement: 'Let be the past world, let be the future world!' Even without recalling a single [past] life, if a disciple of mine comes who is not fraudulent and not deceitful, with a straight character, I will teach him. If he practices like that, in accordance with what I taught him, he will certainly come to know the right Dharma.</p>
+<p>"Kaccāna, take for example an oil lamp that burns in dependence on oil and wick, if nobody supplies oil and the wick is not adjusted, when the former oil is already extinguished and there are no further supplies, having nothing to grasp at, it will come quickly to cessation.<span class="note" id="mn80compn9"><span class="details"><span class="p">[n.9] This simile is not found in MN 80; a version of this imagery occurs in SN 12.53 at SN II 86,22.</span></span></span></p>
+<p>"Just so, Kaccāna, I make such a statement: 'Let be the past world, let be the future world!' Even without recalling a single [past] life, if a disciple of mine comes who is not fraudulent and not deceitful, with a straight character, I will teach him. If he practices like that, in accordance with what I taught him, he will certainly come to know the right Dharma.</p>
+<p>"Kaccāna, just as if one were to use ten or twenty or thirty or forty or fifty or sixty bundles of wood to make a fire that is bright and fully ablaze,<span class="note" id="mn80compn10"><span class="details"><span class="p">[n.10] Adopting the variant 炯 instead of 洞.</span></span></span> [so that] then [one can] see the fire blazing. If afterwards nobody supplies more grass, wood, chaff or rags, when the former firewood is already extinguished and there are no further supplies, having nothing to grasp at it will come quickly to cessation.<span class="note" id="mn80compn11"><span class="details"><span class="p">[n.11] While this simile is absent from MN 80, a counterpart can be found in SN 12.52 at SN II 85,17.</span></span></span></p>
+<p>"Just so, Kaccāna, I make such a statement: 'Let be the past world, let be the future world!' Even without recalling a single [past] life, if a disciple of mine comes who is not fraudulent and not deceitful, with a straight character, I will teach him. If he practices like that, in accordance with what I taught him, he will certainly come to know the right Dharma."</p>
+<p>17. While this teaching was given, the stainless and dustless eye of the Dharma in regard to all phenomena arose in the heterodox wanderer Vekhanassa.<span class="note" id="mn80compn12"><span class="details"><span class="p">[n.12] MN 80 does not report his stream-entry or his going forth.</span></span></span> Then the heterodox wanderer Vekhanassa saw the Dharma and attained the Dharma,</p>
+<p>realized the totally pure Dharma, [having] no more any [need] of other teachers, no longer relying on others, eradicating doubt and crossing over confusion, free from any hesitation, already established in the realization of the fruit, he attained intrepidity in the Dharma of the Blessed One.</p>
+<p>Bowing down at the Buddha's feet he said: "Blessed One, I wish to obtain the going forth from the Buddha to train in the path, [may I receive] the full ordination and become a monk to practice the holy life." The Blessed One said: "Welcome,<span class="note" id="mn80compn13"><span class="details"><span class="p">[n.13] Adopting the variant 來 instead of 哉.</span></span></span> monk, practice the holy life!"</p>
+<p>The heterodox wanderer obtained the going forth from the Buddha to train in the path, he forthwith received the full ordination and became a monk to practice the holy life. When the venerable Vekhanassa had gone forth to train in the path and had received the full ordination he, knowing the Dharma and seeing the Dharma (etc.), [eventually] attained arahantship.<span class="note" id="mn80compn14"><span class="details"><span class="p">[n.14] Adopting the variant 漢 instead of 訶.</span></span></span></p>
+<p>The Buddha spoke like this. The venerable Vekhanassa and the monks, having listened to what the Buddha said, were delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>In what follows, I take up only those differences between the two versions that help to clarify an aspect of the Pāli discourse, which is the case in relation to the treatment given to the theme of sensual pleasures in the later part of both versions.</p>
+<p>According to the Pāli version, the Buddha spoke in this context of a highest sensual happiness that is supreme among sensual types of happiness, <i>k</i>ā<i>masukh</i>ā<i> k</i>ā<i>maggasukha</i>ṃ<i> tattha aggam ak</i><i>kh</i>ā<i>yati</i>.<span class="note" id="mn80compn15"><span class="details"><span class="p">[n.15] MN 80 at MN II 43,4. Occurrences such as <i>bhavagga </i>in SN 22.76 at SN III 83,14 or <i>s</i>ī<i>lagga</i>, etc., in AN 4.75 at AN II 79,2 indicate that a <i>tappurisa </i> compound with <i>-agga</i> as its second member stands for what is the "topmost" or the "highest" among what is referred to by the first member of the compound.</span></span></span> In the Pāli discourse this proclamation is somewhat cryptic, coming as it does at the end of a treatment of the five strands of sensual pleasure, and its implications are open to conjecture. The commentary then explains that <i>k</i>ā<i>maggasukha</i> refers to Nirvāṇa,<span class="note" id="mn80compn16"><span class="details"><span class="p">[n.16] Ps III 277,19: <i>k</i>ā<i>maggasukan ti nibb</i>ā<i>na</i>ṃ<i> adhippeta</i>ṃ<i>.</i></span></span></span> to which the subcommentary adds that, since all phenomena of the three realms can be considered as a form of sensual pleasure (<i>k</i>ā<i>ma</i>), thus of all such types of happiness Nirvāṇa is the highest.<span class="note" id="mn80compn17"><span class="details"><span class="p">[n.17] Be-Ps-pṭ II 133: <i>sabbe hi tebh</i>ū<i>makadhamm</i>ā<i> k</i>ā<i>man</i>ī<i>ya</i>ṭṭ<i>hena k</i>ā<i>m</i>ā<i>, te </i> <i>pa</i>ṭ<i>icca uppajjanasukhato nibb</i>ā<i>nasukham eva aggabh</i>ū<i>ta</i>ṃ<i> sukha</i>ṃ<i>.</i> On the range of meaning of <i>k</i>ā<i>ma</i> in Sanskrit literature cf. Hara 2007: 82–87.</span></span></span></p>
+<p>This commentarial explanation is problematic. A first problem is that <i>k</i>ā<i>ma</i> in its early Buddhist usage stands for only one of the three realms, not for all three. Rebirth in the other two realms, or even just experiences that correspond to them, that is, the absorptions or the immaterial attainments, are totally beyond <i>k</i>ā<i>ma</i>. This much can be seen from the standard introduction to the attainment of the first absorption in the Pāli <i>Nik</i>ā<i>yas</i> and the Chinese Ā<i>gamas</i>, which quite explicitly indicates the condition for its attainment to be seclusion from <i>k</i>ā<i>ma</i>, <i>vivicc' eva k</i>ā<i>mehi / </i>離欲.<span class="note" id="mn80compn18"><span class="details"><span class="p">[n.18] The aloofness from <i>k</i>ā<i>ma </i>is especially highlighted in AN 9.33 at AN IV 411,5: <i>vivicc' eva k</i>ā<i>mehi ... pa</i>ṭ<i>hama</i>ṃ<i> jh</i>ā<i>na</i>ṃ<i> upasampajja viharati, ettha </i> <i>k</i>ā<i>m</i>ā<i> nirujjhanti, te ca k</i>ā<i>me nirodhetv</i>ā<i> nirodhetv</i>ā<i> viharanti</i>.</span></span></span> In fact, elsewhere the expression <i>k</i>ā<i>magga</i> refers to the highest level within the sensual realm, inhabited by the gods that delight in the creation of others,<span class="note" id="mn80compn19"><span class="details"><span class="p">[n.19] Vv 139 at Vv 17,9.</span></span></span> clearly inferior to the types of experiences of the other two realms.</p>
+<p>Another problem is that Nirvāṇa is beyond the three realms, so that it would not be appropriate to consider the happiness of Nirvāṇa as supreme among the types of happiness of the three realms. As a discourse in the <i>A</i>ṅ<i>guttara-nik</i>ā<i>ya </i>clarifies, the happiness of Nirvāṇa is the very cessation of any feeling.<span class="note" id="mn80compn20"><span class="details"><span class="p">[n.20] AN 9.34 at AN IV 415,3: <i>etad eva khv' ettha sukha</i>ṃ<i>, yad' ettha n' atthi </i> <i>vedayita</i>ṃ<i>.</i></span></span></span> This would make it clear that the happiness of Nirvāṇa is of quite a different type than the forms of happiness that can be felt within the three realms.</p>
+<p>The solution to the admittedly cryptic passage in the <i>Vekha</i><i>nassa-sutta</i> can be found in the <i>Madhyama-</i>ā<i>gama </i>version. In agreement with the individual Chinese translation, the <i>Madhya</i><i>ma-</i>ā<i>gama </i>discourse indicates that the point made by the Buddha was that desirable sense-objects appear to provide the supreme form of happiness, when they are contrasted to undesirable senseobjects.<span class="note" id="mn80compn21"><span class="details"><span class="p">[n.21] MĀ 209 at T I 787a21 and T 90 at T I 914a29.</span></span></span> Thus instead of referring to Nirvāṇa, the passage appears to be just an acknowledgement of the gratification that can be obtained through desirable sense-objects. This would then have been the first step in a treatment of sensual pleasures from the perspective of their gratification (<i>ass</i>ā<i>da</i>), their disadvantage (ā<i>d</i>ī<i>nava</i>) and the release from them (<i>nissara</i>ṇ<i>a</i>), a treatment that was not concluded due to Vekhanassa's intervention.</p>
+<p>Another clarifying perspective can be gained from the Chinese parallels in regard to Vekhanassa's reaction when being told that he had misunderstood the Buddha's exposition. The Pāli and Chinese versions agree that Vekhanassa reacted by criticizing those who claim to have reached final liberation without knowing the past and the future.<span class="note" id="mn80compn22"><span class="details"><span class="p">[n.22] MN 80 at MN II 43,22: <i>aj</i>ā<i>nant</i>ā<i> pubbanta</i>ṃ<i> apassant</i>ā<i> aparanta</i>ṃ, MĀ 209 at T I 787b9: 不知世前際, 不知世後際, 不知無窮生死, and T 90 at T I 914b17: 不知過去世, 不知當來世, 無量生世間.</span></span></span> The two Chinese versions speak in the same context also of knowing "infinite births", thereby indicating that the reference to knowing the past refers to recollection of past lives. The same understanding is also reflected in the Pāli commentary.<span class="note" id="mn80compn23"><span class="details"><span class="p">[n.23] Ps III 278,5.</span></span></span></p>
+<p>According to the Pāli version, the Buddha acknowledged Vekhanassa's criticism as being in accordance with what is proper.<span class="note" id="mn80compn24"><span class="details"><span class="p">[n.24] MN 80 at MN II 44,3: <i>tesa</i>ṃ<i> so yeva sahadhammiko niggaho hoti.</i></span></span></span> This is rather surprising, since recollection of past lives is not an indispensable requirement for reaching full liberation. Of the three higher knowledges, the decisive one, from a Buddhist perspective, is the destruction of the influxes. Such destruction can be accomplished without having developed the other two higher knowledges, and thus without knowledge of the past.</p>
+<p>Those who attain the final goal without developing the two higher knowledges would be those arahants who are described as being freed by wisdom only (<i>paññ</i>ā<i>vimutta</i>). A listing of different types of arahants in a discourse in the <i>Sa</i>ṃ<i>yutta-nik</i>ā<i>ya</i> indicates that out of a congregation of five hundred arahants sixty had reached the three higher knowledges, another sixty had the six knowledges (<i>abhiññ</i>ā), another sixty were freed both ways (<i>ubha</i><i>tobh</i>ā<i>gavimutta</i>), but the remaining three-hundred-and-twenty were released by wisdom (<i>paññ</i>ā<i>vimutta</i>).<span class="note" id="mn80compn25"><span class="details"><span class="p">[n.25] SN 8.7 at SN I 191,22.</span></span></span> The numbers given in the Chinese parallels differ, but they also clearly indicate that the majority of arahants were those released by wisdom.<span class="note" id="mn80compn26"><span class="details"><span class="p">[n.26] MĀ 121 at T I 610b25, T 63 at T I 862a4 and SĀ 1212 at T II 330b24 count ninety arahants endowed with the three higher knowledges and ninety arahants freed both ways, while the remaining three-hundred-twenty are freed by wisdom. SĀ2 228 at T II 457c11 counts ninety arahants with the three higher knowledges and one-hundred-eighty arahants freed both ways, the remainder of the five hundred being freed by wisdom.</span></span></span> Thus on reading the Pāli version of the <i>Vekhanassa-sutta </i>one would be at a loss to understand why the Buddha should accept Vekhanassa's criticism.</p>
+<p>In the Chinese versions, in fact, the Buddha does not agree to this criticism. According to them, the Buddha rather indicated that those who voice such criticism should be told to let be past and future. <span class="note" id="mn80compn27"><span class="details"><span class="p">[n.27] MĀ 209 at T I 787b28: 置世前際, 置世後際, and T 90 at T I 914b28: 置過 去世, 置當來世.</span></span></span> The two Chinese versions continue with the Buddha turning to Vekhanassa and telling him also to let be past and future. This injunction is also found in the Pāli version, where its implications are, however, less evident, as it follows after the acknowledgement of the appropriateness of Vekhanassa's criticism.<span class="note" id="mn80compn28"><span class="details"><span class="p">[n.28] MN 80 at MN II 44,3: <i>api ca, kacc</i>ā<i>na, ti</i>ṭṭ<i>hatu pubbanto ti</i>ṭṭ<i>hatu aparanto. </i></span></span></span></p>
+<p>The Pāli version then continues with a reference to the Buddha's ability to guide a sincere disciple to realization. The same is also found in the Chinese versions, which, however, also make the point that such a disciple could be led to realization even if he or she should be unable to remember a single birth. Thus what in the Pāli version appears somewhat unrelated to what went on before, in the Chinese versions is a reinforcement of the point made earlier, namely that Vekhanassa's criticism was not justified, as it is possible to reach liberation without knowing the past.</p>
+<p>By way of illustration of the Buddha's ability in leading a disciple to realization, the Pāli version comes out with a simile that describes an infant bound with a five-fold bond. After growing up, the child will be released from its bondage and will know the freedom from the bondage. The full import of this simile becomes clear in the Chinese versions, which highlight that the grown-up child's knowledge of being freed is independent of his or her ability to recall the earlier bondage. That is, the point made with this simile is that to know one's former bondage during previous existences is not required in order to reach liberation in the present.</p>
+<p>The Pāli discourse concludes with Vekhanassa taking refuge and asking to be accepted as a lay disciple.<span class="note" id="mn80compn29"><span class="details"><span class="p">[n.29] MN 80 at MN II 44,20: <i>upasaka</i>ṃ<i> ma</i>ṃ<i> bhava</i>ṃ<i> gotamo dh</i>ā<i>retu ajjatagge </i> <i>p</i>āṇ<i>upeta</i>ṃ<i> sara</i>ṇ<i>a</i>ṃ<i> gata</i>ṃ<i>. </i></span></span></span> This is also to some extent puzzling, since Vekhanassa was a wanderer, so that one would expect him to rather request ordination instead of becoming a lay disciple.<span class="note" id="mn80compn30"><span class="details"><span class="p">[n.30] Freiberger 1997: 128, in a survey of the usage of the term <i>paribb</i>ā<i>jaka </i>in the Pāli discourses, comes to the conclusion that there is no evidence for the existence of any Buddhist <i>paribb</i>ā<i>jakas</i>; cf. also Karunaratne 2004: 318. Thus for someone who has already gone forth as a wanderer and who becomes a Buddhist, the most natural thing to do would be to ordain as a member of the Buddhist monastic order.</span></span></span> According to the Chinese versions, Vekhanassa indeed requested the going forth, in fact he attained streamentry during the discourse and, after going forth, in due time became an arahant.<span class="note" id="mn80compn31"><span class="details"><span class="p">[n.31] MĀ 209 at T I 787c24 and T 90 at T I 914c15.</span></span></span></p>
+<p>In this way, the Chinese counterparts to the <i>Vekhanassa-sutta</i> help to clarify some points in the Pāli version that may have suffered from the vicissitudes of oral transmission. They reveal that the reference to the highest sensual pleasure need not concern Nirvāṇa, and that from an early Buddhist perspective a criticism of claims to awakening without knowing the past can be dismissed as inappropriate, since even without recollecting a single past life final liberation can be attained.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn80.html">MN80</a>: Vekhanassa Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

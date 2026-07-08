@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 106 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 106: Āneñjasappāya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn105comp.html#content"></a><a id="next-sutta" href="./mn107comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn106.html">MN 106</a> / <a href="../../parallels/ma75.html">MĀ 75</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Āneñjasappāya-sutta, the “discourse on [what] is suitable for [the attainment of] imperturbability”, describes approaches to the attainment of high levels of concentration and of Nirvāṇa. This discourse has a parallel in the Madhyama-āgama and in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya.<span class="note" id="mn106n142"><span class="details"><span class="p">[n.142] The parallels are <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b-543b, which agrees with <a href="../../mn/mn106.html">MN 106</a> on locating the discourse in Kammāsadhamma in the Kuru country and has the title “discourse on the path [to] pure imperturbability”, 淨不動道經, and Abhidh-k-ṭ at D (4094) mngon pa, ju 227b7-230b2 or Q (5595) tu 260a4-263a6, which sets in with the second way to imperturbability; cf. also Abhidh-k 4:46 in Pradhan 1967: 227,16, with its Chinese parallels in T 1558 at T XXIX 81a10 and T 1559 at T XXIX 237a28. <a href="../../parallels/ma75.html">MĀ 75</a> has been translated in Anālayo 2009a; cf. also Minh Chau 1964/1991: 149.</span></span></span></p>
+<p>The basic pattern of the discourse proceeds through the following themes:</p>
+<ul>
+<li>three ways to imperturbability,</li>
+<li>three ways to nothingness,</li>
+<li>one way to neither-perception-nor-non-perception,</li>
+<li>the attainment of Nirvāṇa.</li>
+</ul>
+<p>The Āneñjasappāya-sutta and its Madhyama-āgama parallel describe in similar terms how imperturbability can be developed based on insight into the true nature of sensual pleasures (the beginning part of the discourse is not covered in the discourse quotation in Śamathadeva’s commentary). A difference in formulation is that the Majjhima-nikāya version examines the true nature of sensual pleasures and of perceptions of sensuality, while the Madhyama-āgama version mentions sensual pleasures and material forms, without bringing in perceptions.<span class="note" id="mn106n143"><span class="details"><span class="p">[n.143] The presentation in <a href="../../mn/mn106.html">MN 106</a> at MN II 261,25 lists “present sensual pleasures”, diṭṭhadhammikā kāmā, “future sensual pleasures”, samparāyikā kāmā, “present sensual perceptions”, diṭṭhadhammikā kāmasaññā, and “future sensual perceptions”, samparāyikā kāmasaññā. <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b13 instead speaks of “present sensual pleasures as well as future sensual pleasures ... present forms as well as future forms”, 現世欲及後世 欲 ... 現世色及後世色. A similarly worded passage in the Śrāvakabhūmi speaks only of sensual pleasures (celestial and human), cf. Deleanu 2006a: 321,2 or Shukla 1973: 441,16 and T 1579 at T XXX 466a13. Another difference is that <a href="../../mn/mn106.html">MN 106</a> at MN II 262,13 describes how, through the removal of covetousness and aversion, the mind will become boundless and immeasurable, aparittañ ca me cittaṃ bhavissati appamāṇaṃ. Although <a href="../../parallels/ma75.html">MĀ 75</a> does not explicitly make this point, the same would be implicit in the circumstance that both versions refer to the mind that has become “great”, mahaggata/大.</span></span></span> In regard to each of the paths to imperturbability examined in the discourse, the Āneñjasappāya-sutta and its parallels indicate that, after having attained imperturbability, rebirth in the corresponding realm becomes possible.<span class="note" id="mn106n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn106.html">MN 106</a> at MN II 262,17 speaks in this context of the “evolving consciousness”, saṃvattanikam viññāṇaṃ, that reaches imperturbability, which Ps IV 61,20 identifies as the karmically resultant consciousness, vipākaviññāṇa, on the term cf. also Collins 1982: 215. <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b23 does not use such an expression, instead explaining that “because of that former state of mind, he will certainly reach imperturbability”, 因本意故, 必至不動. The discourse quotation in Śamathadeva’s commentary agrees in this respect with <a href="../../mn/mn106.html">MN 106</a>, cf. D (4094) mngon pa, ju 228a2 or Q (5595) tu 260a7 which, in relation to the second path to imperturbability (the quoted section does not cover the first way to imperturbability) speaks of the bsgrubs pas rnam par shes pa that reaches imperturbability.</span></span></span></p>
+<p>The three versions also take up the possibility of developing wisdom based on the attainment of imperturbability.<span class="note" id="mn106n145"><span class="details"><span class="p">[n.145] <a href="../../mn/mn106.html">MN 106</a> at MN II 262,16: paññāya vā adhimuccati, <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b23: 或以慧為解, D (4094) mngon pa, ju 228a2 or Q (5595) tu 260a7: shes rab rnam par grol bar ’gyur ro. The commentary relates this development of wisdom to developing the path to full awakening, Ps IV 60,11: paññāya vā adhimuccatī ti arahattamaggaṃ bhāveti.</span></span></span> The theme of wisdom is in fact central throughout each version of the discourse, as most of the ways of developing the mind described in the Āneñjasappāya-sutta and its parallels involve approaches to the development of insight.</p>
+<p>The Āneñjasappāya-sutta and its parallels describe an alternative way to reach the imperturbable based on insight into the nature of material form. The Pāli version states that all material form consists of the four elements. The Chinese presentation additionally explains that the four elements should be contemplated as impermanent, unsatisfactory, and subject to cessation, while the Tibetan version considers them as impermanent and conditioned.<span class="note" id="mn106n146"><span class="details"><span class="p">[n.146] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542b26: 四大者是無常法, 是苦, 是滅 and D (4094) mngon pa, ju 227b7 or Q (5595) tu 260a5: ’byung ba chen po bzhi gang yin pa de yang mi rtag pa ’dus byas pa.</span></span></span></p>
+<p>Another difference in regard to this second of altogether three ways to imperturbability is that the Pāli version begins its treatment by taking up the same sensual pleasures and perceptions of sensuality it had already mentioned in relation to the first way to imperturbability.<span class="note" id="mn106n147"><span class="details"><span class="p">[n.147] <a href="../../mn/mn106.html">MN 106</a> at MN II 262 note 9 refers to a Sinhalese manuscript that omits this section.</span></span></span> The description of the second way to imperturbability in the Chinese and Tibetan versions does not mention sensual pleasures or perceptions of sensuality, but only speaks of material form.</p>
+<p>The third way to imperturbability involves insight into perceptions. In their examination of the third way to imperturbability, the three versions draw attention to the impermanent nature of perceptions. While the Pāli version enjoins detachment from what is impermanent,<span class="note" id="mn106n148"><span class="details"><span class="p">[n.148] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,7: “what is impermanent is not worth delighting in, approving of, or attaching to”, yad aniccaṃ taṃ nālaṃ abhinandituṃ, nālaṃ abhivadituṃ, nālaṃ ajjhositun ti.</span></span></span> the Chinese version highlights that perceptions are impermanent, unsatisfactory, and subject to cessation, and the Tibetan version notes that perceptions are impermanent and conditioned.<span class="note" id="mn106n149"><span class="details"><span class="p">[n.149] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c5: 一切想是無常法, 是苦, 是滅 and D (4094) mngon pa, ju 228a4 or Q (5595) tu 260b2: ’du shes ’di dag ni mi rtag pa ’dus byas pa.</span></span></span></p>
+<p>The Chinese version concludes that in this way perception of imperturbability will be reached.<span class="note" id="mn106n150"><span class="details"><span class="p">[n.150] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c6: “he reaches perception of imperturbability”, 得不動想.</span></span></span> The Pāli and Tibetan versions do not refer to perception of imperturbability at this point. All three versions, however, mention the need to transcend perceptions of imperturbability when describing the next stage of practice.<span class="note" id="mn106n151"><span class="details"><span class="p">[n.151] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,17, <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c12, and D (4094) mngon pa, ju 228b1 or Q (5595) tu 260b7. This fits well with the presentation in <a href="../../parallels/ma75.html">MĀ 75</a>, according to which the attainment of the perception of imperturbability is part of the third way to imperturbability and then needs to be overcome in order to progress to the next stage of meditation.</span></span></span></p>
+<p>The Āneñjasappāya-sutta and its parallels continue by taking up three ways of attaining the sphere of nothingness. In the Pāli version, the first way to the attainment of nothingness takes place by contemplating the cessation of perceptions – related to sensuality, material form, and imperturbability – as peaceful and sublime.<span class="note" id="mn106n152"><span class="details"><span class="p">[n.152] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,17: “that is peaceful, that is sublime, namely the sphere of nothingness”, etaṃ santaṃ etaṃ paṇītaṃ, yadidaṃ ākiñcaññāyatanaṃ. The qualification “peaceful and sublime”, which <a href="../../mn/mn106.html">MN 106</a> at MN II 264,11 also applies to the sphere of neither-perception-nor-non-perception, recurs in other discourses in relation to Nirvāṇa, cf. <a href="../../mn/mn64.html">MN 64</a> at MN I 436,1, <a href="../../an/an3.32.html">AN 3:32</a> at AN I 133,1, <a href="../../an/an9.36.html">AN 9:36</a> at AN IV 423,3, <a href="../../an/an10.6.html">AN 10:6</a> at AN V 8,6, <a href="../../an/an10.60.html">AN 10:60</a> at AN V 110,22, <a href="../../an/an11.7.html">AN 11:7</a> at AN V 319,14, <a href="../../an/an11.9.html">AN 11:9</a> at AN V 322,14, <a href="../../an/an11.19.html">AN 11:19</a> at AN V 354,9, <a href="../../an/an11.20.html">AN 11:20</a> at AN V 355,27, <a href="../../an/an11.21.html">AN 11:21</a> at AN V 357,1, and <a href="../../an/an11.22.html">AN 11:22</a> at AN V 358,13. <a href="../../mn/mn152.html">MN 152</a> at MN III 299,12 uses these two qualifications to recommend equanimity in relation to pleasant and unpleasant experiences. The same two qualifications occur also in descriptions of the views of outsiders. <a href="../../mn/mn102.html">MN 102</a> at MN II 230,18, MN II 231,17, MN II 235,11+33, and at MN II 236,21 depicts recluses and Brahmins who qualify the attainment of unconsciousness, asaññā, the attainment of neither-perception-nor-non-perception, and the happiness and equanimity of the jhānas as “peaceful” and “sublime”. It 2:12 at It 44,1 records the annihilationist view that “when this self ... is annihilated and destroyed ... this is peaceful, this is sublime”, yata kira ... ayaṃ attā ... ucchijjati vinassati ... etaṃ santaṃ etaṃ paṇītaṃ (Ce-It 376,3: yato). This usage suggests these two qualifications to stand for an experience or attainment that forms the goal of practice. The same does not apply to the present instance, however, since from a Buddhist perspective the spheres of nothingness and of neitherperception-nor-non-perception are not the final goal of practice.</span></span></span> In the Chinese version, the first way to attaining the sphere of nothingness takes place by directing awareness to these perceptions as being impermanent, unsatisfactory, and subject to cessation. The Tibetan version again mentions impermanence and conditionality. In this way, the Chinese and Tibetan accounts continue with the same insight development already practised earlier, which then leads to a higher stage by broadening the scope of its application, as in the present case it covers also perception of imperturbability.</p>
+<p>The second approach to nothingness, described in the Pāli and Chinese versions, is based on contemplating emptiness in terms of the absence of a self, a contemplation that in the Tibetan version constitutes the third approach to nothingness.<span class="note" id="mn106n153"><span class="details"><span class="p">[n.153] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,26: “this is empty of a self and of what belongs to a self”, suññam idaṃ attena vā attaniyena vā, following Be-MN III 50,13, Ce-MN III 84,34, Se-MN III 77,3, and Horner 1959: 48 note 6 on reading suññam idaṃ instead of Ee: saññam idaṃ. The reading in the Burmese, Ceylonese, and Siamese editions is supported by the occurrence of 空 in the corresponding passage in <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c18 and stong pa in D (4094) mngon pa, ju 228b6 or Q (5595) tu 261a6; cf. also Minh Chau 1964/ 1991: 329. The same statement recurs in <a href="../../mn/mn43.html">MN 43</a> at MN I 297,37 and <a href="../../sn/sn41.7.html">SN 41:7</a> at SN IV 296,33, where to contemplate suññam idaṃ attena vā attaniyena vā leads to “liberation of the mind by emptiness”, suñ- ñatā cetovimutti. <a href="../../sn/sn35.85.html">SN 35:85</a> at SN IV 54,4 employs the same statement to explain why the world of experience is reckoned as “empty”. The parallel <a href="../../parallels/sa232.html">SĀ 232</a> at T II 56b25 additionally mentions 常, 恒, 不變 易法空, which Lamotte 1973/1993: 18 translates as being “empty of perpetuity and changelessness”; cf. also Choong 2000: 93.</span></span></span> In the Chinese and Tibetan versions, such contemplation of emptiness also covers the absence of permanence.<span class="note" id="mn106n154"><span class="details"><span class="p">[n.154] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c18: “this world is empty, empty of a self, empty of what belongs to a self, empty of being permanent, empty of being everlasting, empty of existing continuously, and empty of being unchanging”, 此世空, 空於神, 神所有, 空有常, 空有恒, 空長存, 空不變易 (following the gloss in the 佛 光 Madhyama-āgama edition p. 633 note 4 of the later part of this passage as: 無有常的, 無有恒的, 無長存的, 無不變易的), D (4094) mngon pa, ju 228b6 or Q (5595) tu 261a6: “the world is empty ... being empty of permanence, of stability, of changelessness, of an immutable nature, devoid of a self and what belongs to a self”, ’jig rten ni stong pa’o ... rtag pa dang brtan pa dang g.yung drung dang mi ’gyur ba’i chos can gyis stong zhing bdag dang bdag gi dang bral ba’o (with the difference that here this forms the third approach to nothingness). Baba 2004: 944 explains that this type of treatment (found also in <a href="../../parallels/sa232.html">SĀ 232</a> at T II 56b25, quoted above in note 153) makes use of “expressions of emptiness that are more recent than those in the first four Pāli Nikāyas”, as a similar treatment can be found in historically later Pāli works such as the Paṭisambhidāmagga, cf. Paṭis I 109,10: suññaṃ attena vā attaniyena vā niccena vā dhuvena vā sassatena vā avipariṇāmadhammena vā. De Jong 2000: 177 notes a similar instance of such later development, where in Āgama texts a reference to emptiness is added to listings of impermanence, unsatisfactoriness, and not-self.</span></span></span></p>
+<p>The third way to nothingness in the Pāli version is to contemplate that one does not belong to anyone else nor does anything belong to oneself. The parallel versions could reflect a similar mode of practice, expressed somewhat differently.<span class="note" id="mn106n155"><span class="details"><span class="p">[n.155] <a href="../../mn/mn106.html">MN 106</a> at MN II 263,34: “I am not anything belonging to anyone anywhere, nor is there anything belonging to me in anyone anywhere”, nāhaṃ kvacani kassaci kiñcanatasmiṃ, na ca mama kvacani kismiñci kiñcanaṃ n’ atthī ti (Ce-MN III 86,1: kassacī and kismici kiñcanatatthi, Se-MN III 77,10: kvacini na and again kvacini). <a href="../../parallels/ma75.html">MĀ 75</a> at T I 542c25: “I am not another’s possession and I do not have possessions myself”, or perhaps more literally: “I do not act for another, nor do I act for myself”, 我非 為他而有所為, 亦非自為而有所為. D (4094) mngon pa, ju 228b4 or Q (5595) tu 261a3: “there is no I in any way at all, there is no mine in any way at all”, bdag ’ga’ zhig tu ’ga’ yang cung zad med do, bdag gi ’ga’ (Q: without ’ga’) zhig tu ’ga’ yang cung zad med do (which here constitutes the second approach to nothingness). On a Gāndhārī version of this contemplation cf. Baums 2009: 434.</span></span></span> A discourse in the Aṅguttara-nikāya presents this form of contemplation as a practice undertaken by the Jains,<span class="note" id="mn106n156"><span class="details"><span class="p">[n.156] <a href="../../an/an3.70.html">AN 3:70</a> at AN I 206,18. A somewhat similar reflection can be indeed found in the Āyāraṅga 1.7.6.1 (or 1.8.6.1) of the Jain tradition, which runs: “I am alone, nobody belongs to me and I do not belong to anyone”, Schubring 1910/1966: 37,7: ego aham aṃsi, na me atthi koi na yāham avi kassai (Jacobi 1882: 36,22 reads no me), cf. also Bollée 2004: 126 note 68 and Caillat 1977: 58 note 59.</span></span></span> while another Aṅguttara-nikāya discourse, together with its Chinese parallels and a Sanskrit fragment, attribute this type of contemplation to Brahmins.<span class="note" id="mn106n157"><span class="details"><span class="p">[n.157] <a href="../../an/an4.185.html">AN 4:185</a> at AN II 177,11, <a href="../../parallels/sa972.html">SĀ 972</a> at T II 251b12, <a href="../../parallels/sa-2.206.html">SĀ2 206</a> at T II 450c24, and Sanskrit fragment folio 173b4 in Pischel 1904: 818; cf. also Lévi 1904: 304.</span></span></span></p>
+<p>The Āneñjasappāya-sutta and its parallels next turn to the attainment of neither-perception-nor-non-perception in similar ways.<span class="note" id="mn106n158"><span class="details"><span class="p">[n.158] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 543a5 speaks of the attainment of “no perception”, 無想. In several other instances, discussed above p. 274 note 54, 無想 appears to stand for signlessness, 無相, corresponding to animitta. In the present context, however, 無想 rather seems to stand for the fourth immaterial attainment, 有想 無想, mentioned later in the same discourse at T I 543a24. The Yogācārabhūmi, T 1579 at T XXX 858a22, in what appears to be a commentary on the present discourse, does speak of the fourth immaterial attainment, to which it refers as 非想非非想. The expression 有想無想 recurs in <a href="../../parallels/ma120.html">MĀ 120</a> at T I 609c15 to render the attainment of neither-perception-nor-non-perception. The more usual rendering of this attainment in Madhyama-āgama discourses is 非有想非無想, cf. <a href="../../parallels/ma85.html">MĀ 85</a> at T I 562a6, <a href="../../parallels/ma86.html">MĀ 86</a> at T I 563b24, <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c2, <a href="../../parallels/ma97.html">MĀ 97</a> at T I 581b29, <a href="../../parallels/ma106.html">MĀ 106</a> at T I 596b18, <a href="../../parallels/ma114.html">MĀ 114</a> at T I 603a12, <a href="../../parallels/ma141.html">MĀ 141</a> at T I 647c27, <a href="../../parallels/ma162.html">MĀ 162</a> at T I 691c9, <a href="../../parallels/ma163.html">MĀ 163</a> at T I 693b28, <a href="../../parallels/ma164.html">MĀ 164</a> at T I 695b16, <a href="../../parallels/ma168.html">MĀ 168</a> at T I 701b2, <a href="../../parallels/ma176.html">MĀ 176</a> at T I 714b19, <a href="../../parallels/ma177.html">MĀ 177</a> at T I 718b2, <a href="../../parallels/ma178.html">MĀ 178</a> at T I 720a19, <a href="../../parallels/ma185.html">MĀ 185</a> at T I 730b21, <a href="../../parallels/ma192.html">MĀ 192</a> at T I 743c9, <a href="../../parallels/ma204.html">MĀ 204</a> at T I 776c11, <a href="../../parallels/ma215.html">MĀ 215</a> at T I 800b13, <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802b27, and <a href="../../parallels/ma219.html">MĀ 219</a> at T I 803b22. In contrast, the expression 有想無想 can be found frequently in the Ekottarika-āgama, cf. <a href="../../parallels/ea19.8.html">EĀ 19.8</a> at T II 595a23, <a href="../../parallels/ea21.1.html">EĀ 21.1</a> at T I 602a2, <a href="../../parallels/ea24.8.html">EĀ 24.8</a> at T I 629b3, <a href="../../parallels/ea25.1.html">EĀ 25.1</a> at T II 631a26, <a href="../../parallels/ea26.9.html">EĀ 26.9</a> at T II 640a21, <a href="../../parallels/ea29.4.html">EĀ 29.4</a> at T II 656c21, <a href="../../parallels/ea30.3.html">EĀ 30.3</a> at T II 661b19, <a href="../../parallels/ea44.1.html">EĀ 44.1</a> at T II 764c29, <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a21, <a href="../../parallels/ea46.8.html">EĀ 46.8</a> at T II 779c5, and <a href="../../parallels/ea52.1.html">EĀ 52.1</a> at T II 822a15. The rendering 非有想非無想 is not found in the Ekottarika-āgama at all. Lü 1963: 242 remarks, in regard to Gautama Saṅghadeva’s translation of the Madhyama-āgama, that “some of the newly coined terms of this re-translation were afterwards again replaced by those used in the old version” (cf. also above p. 374 note 178 and below p. 785 note 143). This could also be the case for the occurrence of 有想無想 in <a href="../../parallels/ma75.html">MĀ 75</a> and in <a href="../../parallels/ma120.html">MĀ 120</a>, which might be a remnant of the earlier Madhyama-āgama translation by Zhú Fóniàn (竺佛念).</span></span></span> Once the examination of the attainment of neither-perception-nor-non-perception had been completed, according to all versions Ānanda described a contemplation that revolves around the cessation of what is and what will be, querying whether a monk would attain Nirvāṇa through such contemplation. The three versions report the Buddha explaining that this depends on whether the monk has attachment to the equanimity achieved through this contemplation, as Nirvāṇa will be attained only if such attachment is avoided.</p>
+<p>According to the Āneñjasappāya-sutta and its parallels, to be attached to the equanimity reached through this contemplation is to be attached to neither-perception-nornon-perception, which is supreme among objects of attachment. According to the Pāli version, Ānanda concluded that the Buddha had taught how to cross the flood in dependence on one support after the other, a statement not found in the other versions.<span class="note" id="mn106n159"><span class="details"><span class="p">[n.159] <a href="../../mn/mn106.html">MN 106</a> at MN II 265,21: nissāya nissāya ... oghassa nittharaṇā akkhātā (Se-MN III 79,14: oghanittharaṇā). The same expression nissāya nissāya recurs in <a href="../../dn/dn14.html">DN 14</a> at DN II 130,14, where it describes a row of chariots that follow each other “one after the other”. Chalmers 1927: 154 renders nissāya nissāya as “stage by stage”, Horner 1959: 50 as “by means of this and that”, and Ñāṇamoli 1995/2005: 873 as “in dependence upon one support or another”.</span></span></span></p>
+<p>The Āneñjasappāya-sutta and its parallels report that Ānanda also inquired about noble liberation. In all versions, such liberation transcends all the types of perception mentioned so far, which are mere constituents of personality. The Chinese and Tibetan versions draw out the implications of this statement by bringing in the theme of birth, old age, disease, and death.<span class="note" id="mn106n160"><span class="details"><span class="p">[n.160] <a href="../../parallels/ma75.html">MĀ 75</a> at T I 543b14 and D (4094) mngon pa, ju 230a5 or Q (5595) tu 263a1.</span></span></span></p>
+<p>The three versions conclude with the Buddha’s emphatic recommendation to retire to secluded spots and meditate, lest one later regret it.<span class="note" id="mn106n161"><span class="details"><span class="p">[n.161] While <a href="../../parallels/ma75.html">MĀ 75</a> at T I 543b27 reports that Ānanda and the other monks rejoiced in the discourse, <a href="../../mn/mn106.html">MN 106</a> at MN II 266,5 only records Ānanda rejoicing. As mentioned above p. 66, it is a stylistic device in the early discourses that by mentioning the most important member of a group, anyone else present is implicitly included. The presence of other monks can in fact be seen in the recurrent address bhikkhave used by the Buddha throughout the discourse, and also in <a href="../../mn/mn106.html">MN 106</a> at MN II 266,1, where the Buddha addresses Ānanda with the plural personal pronoun vo, making it clear that his final injunction was addressed to Ānanda and to whatever other monks were present during the delivery of the discourse.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

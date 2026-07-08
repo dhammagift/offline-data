@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ² 2.46 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ² 2.46</h2>
+<div class="hgroup mirror">
+<p class="division"><span class="mirror-left latin">Ekottarikāgama 2nd</span><span class="mirror-right">佛说七处三观经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">EA2 46</span><span class="mirror-right">（四六）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an3.69.html">AN 3.69</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was staying in the country of Shravasti, at the Jetavana Anathapindika Monastery. The Buddha then addressed the monks, saying, &quot;There are three roots of evil: greed is one root of evil, hatred is the second root of evil, and delusion is the third root of evil. Because of greed, there is also the root of stinginess. Due to stinginess, one cannot be free from stinginess. One then engages in evil bodily actions, evil verbal actions, and evil mental actions. This is also considered evil. Due to stinginess, one does not sincerely accept things with the body or mind. This is also an evil root. Due to stinginess and attachment to stinginess, one destroys oneself and also destroys others. This is also evil. Due to stinginess, one does not know oneself, others, or both. This is also evil. Due to stinginess and attachment to stinginess, one may kill, imprison, bind, or destroy others in order to give to others. This is also evil. Due to stinginess and attachment to stinginess, one may give to others with a joyful mind and a mind that is satisfied. This is also evil. Such a monk is said to speak at the wrong time, to speak contrary to the Dharma, and to speak without stopping evil. Why is this? Because such a monk speaks at the wrong time and does not stop evil. Moreover, such a monk deceives himself and others, and increases his own delusion. If someone speaks sincerely, he does not want to accept it. If someone speaks insincerely, he speaks unpleasantly and is sick. He does not have what he says. Therefore, such a person is said to speak evil, to speak insincerely, to speak contrary to the Dharma, and to speak without stopping evil. Such a monk, due to stinginess and its causes and conditions, gives rise to many unwholesome dharmas. Hatred and delusion also arise in the same way. Such a person later gives rise to many unwholesome dharmas of greed, hatred, and delusion. They cover and fill him up. Now, seeing such a Dharma, he stops suffering and worries about being burned and falling into evil. It is like a tree, O monks! The sprouts in front are covered and filled up. In the same way, many unwholesome dharmas of greed, hatred, and delusion cover and fill him up. He sees present suffering and stops suffering and worries, burning himself and falling into evil.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国，行在祇树给孤独园。佛便告比丘：「有三恶本：贪为一恶本，恚为二恶本，痴为三恶本。以贪为恶本，悭亦贪本，以悭不得离悭，便身行恶、口行恶、意行恶，是名亦恶。以悭便身不谛受，是心不谛受，是亦恶本。以悭著悭，便自坏身，亦坏身奇，亦两坏是亦恶，以悭便不知，自身亦不知，奇亦不知，两是亦恶。以悭著悭，奇欲施，若杀、若系、若缚、若灭亡、若论议，是亦恶，以悭著、悭奇、欲施苦以施，若杀、若系、若缚、若灭亡、若论议，受心喜心得如愿，是亦恶。如是人比丘，名为不时说，亦名不如非法说，亦名不止恶说。何以故？比丘！是人不时说，亦名不止恶说，但比丘，自身亦奇为欺，自痴复增痴，若人说至诚，知不欲受至诚，若人说不至诚，不可意说病，是不是，如是我无有，是故如是人名为恶，说不至诚，不致好非法说，不止恶说。如是人比丘，悭从悭因缘多非一，麁恶法从是致，恚痴从是致亦如是。如是人从后若干非一，贪恚痴、麁恶非法，布覆开满拘，今见如是法说止苦，更并忧恼畏坏身望堕恶。譬喻，比丘！如树前芽栽［夫＊夫］拮布覆闭满封，如是非一，若干贪恚痴不好能法，亦为己布覆闭满封，如是为见在苦，止苦忧恼自烧己身堕恶。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There are three roots of good: non-greed is one root of good, non-hatred is the second root of good, and non-delusion is the third root of good. If one is not greedy, that is also good. If one is not stingy, one engages in good bodily actions, good verbal actions, and good mental actions. That is also good. One sincerely accepts things with the body and mind. That is also good. If one does not think of harming oneself, or others, or both, that is also good. If one is not stingy and does not cling to stinginess, if one knows oneself, others, or both, that is also good. If one is not stingy, and does not cling to stinginess, and does not cause others to be stingy, if one gives to others with a joyful mind and a mind that is satisfied, that is also good. Such a person is said to speak at the right time, to speak as it is, to speak what is wholesome, to speak the Dharma, and to stop evil. That is also good. Why is this? Because such a monk speaks at the right time, speaks as it is, speaks the Dharma, and stops evil. He knows his own nature and also knows the nature of others. He does not conceal or cover up. If he knows his own delusion, arrogance, and other natures, if he awakens and speaks to others, he does not conceal it. He accepts what is said and says, &#x27;I do not know.&#x27; If someone speaks insincerely and argues, he immediately understands and replies, &#x27;This matter is not insincere. It is not mine, nor is it mine.&#x27; Therefore, such a person is said to speak at the right time, to speak as it is, to speak what is wholesome, to speak the Dharma, and to stop evil. Non-stinginess and its causes and conditions also give rise to many wholesome dharmas. Non-hatred and non-delusion also arise in the same way. Such a person later gives rise to many wholesome dharmas of non-greed, non-hatred, and non-delusion. They cover and fill him up. Now, seeing such a Dharma, he stops suffering and worries about being burned and falling into evil. It is like a tree, O monks! The sprouts in front are covered and filled up. In the same way, many wholesome dharmas of non-greed, non-hatred, and non-delusion cover and fill him up. He sees present peace and stops suffering and worries, burning himself and falling into evil.</p></td><td lang="lzh" class="agama-chi"><p>「有三福好本，一为不贪好本，二为不恚好本，三为不惑好本。若不贪，是亦好，若不悭，身行好行，口行好行，心行好行，是亦好，身谛受，口谛受，心谛受，是亦好。若不念自身侵，若不念奇身侵，若不念两侵，是亦好。若不悭亦不连悭，若自身知，若奇身知，若两知，是亦好。若不悭，若连若不奇，人为有苦有忧，不若令有若杀、若斫、若捶、若谗、若亡、若论议，是亦好。若不悭、若不著悭、若不令奇，人若忧，不令有若杀、若斫、若捶、若谗、若亡、若论议，心不受，心喜，令奇，人如愿，是亦好。如是人名为时说、如说、福说、法说、止恶说，是亦好。何以故？比丘！如是人名为时说、如说、法说、止恶说，为自知态亦知余态，不匿不覆。若自知愚痴、憍慢亦余态，若觉发人说不匿，受言不言我不知，或人不至诚作论议，即时自晓意报是事，我无有不至诚，无有是我亦无有是为，是故人时说、如说、福说、法说、止恶说，不悭悭因缘亦如是非一。若干好法，从是致死无有恚，亦如是无有痴，亦好从是致，如是比丘人非一，若干贪恚痴、弊恶法已舍已，更不复生，为见法安行，无有苦、无有恼、无有忧、无有热，已坏身便望好处。譬喻，比丘！如树前芽栽，［夫＊夫］拮便布覆闭满封。若有人来不可［夫＊夫］拮，不欲令有不驻，不欲令隐，不欲令通，便［夫＊夫］拮掘根，便断本；已断本，便断枝；已断枝，便破碎；已破碎，便劈；已劈便风暴燥，风暴燥已，便火烧；已火烧，便作灰；已作灰，便大风飏；亦投彼河中，为是［夫＊夫］拮。从是本因缘已，已断本，上下不复见，后不复生，如是不比丘自如是譬，上人行者亦如是非一。若贪恚痴、弊恶法已舍，已便不复生，为见法安行，无有苦、无有恼、无有忧、无有热，已坏身便望好处。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus.</p></td><td lang="lzh" class="agama-chi"><p>佛说如是。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarikāgama 2nd, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

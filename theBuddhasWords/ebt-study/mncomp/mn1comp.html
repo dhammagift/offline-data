@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 1 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 1: Mūlapariyāya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./intro.html#content"></a><a id="next-sutta" href="./mn2comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn1.html">MN 1</a> / <a href="../../parallels/ma106.html">MĀ 106 (~)</a> / <a href="../../parallels/ea44.6.html">EĀ 44.6</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mūlapariyāya-sutta, the “discourse on the root instruction”,<span class="note" id="mn1n1"><span class="details"><span class="p">[n.1] Premasiri 2003b: 52 explains the title Mūlapariyāya to imply that this discourse explores the “root of existence ... by a thorough analysis of the workings of the perceptual and cognitive processes of human beings with a view to unravelling the psychological sources of human bondage”.</span></span></span> analyses the perceptual processes of different types of person.<span class="note" id="mn1n2"><span class="details"><span class="p">[n.2] A somewhat similar exposition on penetrative knowledge in regard to the elements and various heavenly beings occurs in <a href="../../mn/mn49.html">MN 49</a> at MN I 329,12 and its parallel <a href="../../parallels/ma78.html">MĀ 78</a> at T I 548a3. A description of stages of conceiving by way of the accusative, locative and ablative cases, although in this case in relation to the six senses, can also be found in <a href="../../sn/sn35.30.html">SN 35:30</a> at SN IV 22,5.</span></span></span> This discourse has a Chinese parallel in the Ekottarika-āgama.<span class="note" id="mn1n3"><span class="details"><span class="p">[n.3] The parallel is <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a-b. <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a7 gives the discourse’s title as “the root of all dharmas”, 一切諸法之本, while the summary verse (uddāna) at T II 769b6 just reads 法之本. <a href="../../parallels/ea44.6.html">EĀ 44.6</a> agrees with <a href="../../mn/mn1.html">MN 1</a> in locating the discourse at Ukkaṭṭhā (優迦羅), a town in the district of Kosala, situated in the foothills of the Himālaya (cf. Malalasekera 1937/1995: 329). According to an account of the first council in the 撰集三藏及雜藏傳, T 2026 at T XLIX 3a16, however, the present discourse was spoken among the Sakyans. For a translation of <a href="../../parallels/ea44.6.html">EĀ 44.6</a> cf. Pāsādika 2008a: 142-145.</span></span></span> Besides this parallel, a discourse from the Madhyama-āgama and an individual Chinese translation found outside of the four Āgamas offer a similar presentation, although they differ to such an extent from the Majjhima-nikāya and Ekottarikaāgama versions as to make it probable that these two discourses go back to a different original.<span class="note" id="mn1n4"><span class="details"><span class="p">[n.4] These two discourses are <a href="../../parallels/ma106.html">MĀ 106</a> at T I 596b-c and T 56 at T I 851a-b. Unlike <a href="../../mn/mn1.html">MN 1</a> and <a href="../../parallels/ea44.6.html">EĀ 44.6</a>, <a href="../../parallels/ma106.html">MĀ 106</a> and T 56 have Jeta’s Grove by Sāvatthī as their location. <a href="../../parallels/ma106.html">MĀ 106</a> has the title “discourse on perception”, 想經, while T 56 has the title “discourse spoken by the Buddha on delighting in perception”, 佛說 樂想經. According to the information given in the Taishō edition, T 56 was translated by Dharmarakṣa. <a href="../../parallels/ma106.html">MĀ 106</a> has been examined and translated by Minh Chau 1964/1991: 34-35, 204, and 211-214. On the problem of categorizing these two discourses as ‘parallels’ to <a href="../../mn/mn1.html">MN 1</a> cf. also Anālayo 2008d: 11. Regarding the qualification of T 56 as a discourse “spoken by the Buddha”, 佛說, this character couplet appears regularly in the titles of works in the Chinese canon, where in most cases it probably does not render an expression present in the original, but serves as a formula of authentication of the translated scripture.</span></span></span></p>
+<p>The theme of the Mūlapariyāya-sutta and its Ekottarika-āgama parallel is the perceptual reaction to a variety of phenomena by four types of person:</p>
+<ul>
+<li>a worldling,</li>
+<li>a disciple in higher training (sekha),</li>
+<li>an arahant,</li>
+<li>a Tathāgata.</li>
+</ul>
+<p>The other two Chinese discourses differ, as their presentation is based on taking up three types of person:</p>
+<ul>
+<li>recluses and Brahmins that fall prey to conceivings in regard to phenomena,</li>
+<li>recluses and Brahmins that do not fall prey to such conceivings,</li>
+<li>the Buddha.</li>
+</ul>
+<p>In regard to the worldling,<span class="note" id="mn1n5"><span class="details"><span class="p">[n.5] On the notion of a puthujjana cf., e.g., Kariyawasam 2005.</span></span></span> the Mūlapariyāya-sutta explains how perceiving earth leads to conceiving “earth” in various ways, such as “earth”, “in earth”, and “from earth”, followed by treating earth as “mine” and by delighting in earth. In this way, the Pāli discourse depicts a series of conceivings (maññanā),<span class="note" id="mn1n6"><span class="details"><span class="p">[n.6] Ñāṇavīra 1987/2001: 97 explains that “this tetrad of maññānā, of ‘conceivings’, represents four progressive levels of explicitness in the basic structure of appropriation. The first, ‘he conceives X’, is so subtle that the appropriation is simply implicit in the verb”.</span></span></span> which establish a relationship between the perceiving subject and the perceived object by way of the accusative, locative, and ablative cases, a series of conceivings that culminates in the arising of delight.</p>
+<p>The Ekottarika-āgama discourse agrees with the Mūlapariyāya-sutta that the worldling perceives earth as earth, which it follows up by indicating that the worldling then takes earth to be really earth.<span class="note" id="mn1n7"><span class="details"><span class="p">[n.7] <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a13: “this is earth, certainly like this is earth, truly like this is earth”, 此是地, 如審是地, 如實是地. This passage on its own could also be taken to instruct how to properly contemplate earth, but the remark made a little later that this happens because such a person “is one without knowledge”, <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a26: 非智者, shows that a form of misconceiving is intended, as is the case in the corresponding passage in <a href="../../mn/mn1.html">MN 1</a>.</span></span></span></p>
+<p>The Madhyama-āgama discourse describes taking earth to be the self, or earth being part of the self, or the self being part of earth.<span class="note" id="mn1n8"><span class="details"><span class="p">[n.8] <a href="../../parallels/ma106.html">MĀ 106</a> at T I 596b13: “in regard to earth he has the perception: ‘earth’, ‘earth now is the self’, ‘earth belongs to the self’, ‘the self belongs to earth’”, 於地有地想, 地即是神, 地是神所, 神是地所.</span></span></span> The individual translation speaks of delighting in earth and identifying with it.<span class="note" id="mn1n9"><span class="details"><span class="p">[n.9] T 56 at T I 851a28: “in regard to earth he has the perception: ‘earth’, he delights in earth, he speculates that earth is for me, and he declares: ‘earth is the self!’”, 於地有地想, 樂於地, 計於地為我, 彼言: 地是我.</span></span></span></p>
+<p>The four discourses agree that such conceivings take place due to the absence of true understanding. From the first example of conceiving earth, the four discourses apply their respective treatments to various other phenomena, thereby demonstrating the comprehensive scope of such conceivings. The Pāli and Chinese versions differ on the phenomena covered in their respective expositions (see table 1.1). They agree, however, in mentioning:</p>
+<ul>
+<li>the four elements, various heavenly beings, the four immaterial spheres, what is seen, heard, sensed, and cognised, unity, diversity, all.</li>
+</ul>
+<p>Of particular interest is that the Majjhima-nikāya version and its Ekottarika-āgama parallel include Nirvāṇa in their respective lists.<span class="note" id="mn1n10"><span class="details"><span class="p">[n.10] <a href="../../mn/mn1.html">MN 1</a> at MN I 4,3 and <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766a25. Nirvāṇa is not taken up in <a href="../../parallels/ma106.html">MĀ 106</a> or in T 56.</span></span></span> The Mūlapariyāya-sutta’s presentation of Nirvāṇa as a phenomenon prone to lead to conceivings and to appropriation in terms of ‘mine’ should, according to the Pāli commentary, be understood to refer to wrong notions of Nirvāṇa, held by those who mistake sensual enjoyment or attainment of a jhāna to be the final goal.<span class="note" id="mn1n11"><span class="details"><span class="p">[n.11] Ps I 38,27, translated in Jayawickrama 2004: 18. These correspond to the five claims to “ultimate Nirvāṇa here and now”, parama diṭṭhadhamma nibbāna, listed in the Brahmajāla-sutta, <a href="../../dn/dn1.html">DN 1</a> at DN I 36,17, and found similarly in its Chinese parallel <a href="../../parallels/da21.html">DĀ 21</a> at T I 93b15 and in its Tibetan parallel in Weller 1934: 56,36.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 1.1: Objects of Conceivings in <a href="../../mn/mn1.html">MN 1</a> and its Parallels<span class="note" id="mn1n12"><span class="details"><span class="p">[n.12] Here and elsewhere, the use of → in the tables shows which sections in the parallel version(s) correspond to the Majjhima-nikāya presentation. In case sections from the Majjhima-nikāya discourse have no counterpart, I list these at the bottom of the table, marking them with ≠.</span></span></span></caption>
+<tr><th><a href="../../mn/mn1.html">MN 1</a></th><th><a href="../../parallels/ea44.6.html">EĀ 44.6</a></th></tr>
+<tr><td>4 elements (1-4)</td><td>4 elements (→ 1-4)</td></tr>
+<tr><td>beings (5)</td><td>human being(s) (→ 5)</td></tr>
+<tr><td>various gods (6-12)</td><td>various gods (→ 6-12)</td></tr>
+<tr><td>immaterial spheres (13-16)</td><td>immaterial spheres (→ 13-16)</td></tr>
+<tr><td>sense experience (17-20)</td><td>sense experience (→ 17-20)</td></tr>
+<tr><td>unity and diversity (21-22)</td><td>unity and diversity (→ 21-22)</td></tr>
+<tr><td>all (23)</td><td>all (→ 23)</td></tr>
+<tr><td>Nirvāṇa (24)</td><td>Nirvāṇa (→ 24)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ma106.html">MĀ 106</a></td><td>T 56</td></tr>
+<tr><td>4 elements (→ 1-4)</td><td>4 elements (→ 1-4)</td></tr>
+<tr><td>various gods (→ 6-12)</td><td>various gods (→ 6-12)</td></tr>
+<tr><td>purity</td><td>purity</td></tr>
+<tr><td>immaterial spheres (→ 13-16)</td><td>immaterial spheres (→ 13-16)</td></tr>
+<tr><td>unity, diversity, variety (→ 21-22)</td><td>unity, diversity, variety (→ 21-22)</td></tr>
+<tr><td>sense experience (→ 17-20)</td><td>sense experience (→ 17-20)</td></tr>
+<tr><td>insight</td><td>insight</td></tr>
+<tr><td>this world and that world</td><td>this world and that world</td></tr>
+<tr><td>all (→ 23)</td><td></td></tr>
+<tr><td>(≠ 5, 24)</td><td>(≠ 5, 23-24)</td></tr>
+</table>
+<p>The commentarial explanation is not entirely convincing, since the Mūlapariyāya-sutta instructs the disciple in higher training (sekha), someone who already has experienced at least stream-entry and is ‘training’ for the attainment of full awakening, to avoid conceivings and delight in regard to Nirvāṇa.<span class="note" id="mn1n13"><span class="details"><span class="p">[n.13] <a href="../../mn/mn1.html">MN 1</a> at MN I 4,30.</span></span></span> This instruction would make little sense if the Nirvāṇa the present discourse refers to were indeed a wrong notion of Nirvāṇa. There would be no need to advise a disciple in higher training, someone who has already experienced Nirvāṇa, to avoid conceivings and delighting in regard to a mistaken notion of Nirvāṇa, since such conceivings and delight would not occur in the first place.<span class="note" id="mn1n14"><span class="details"><span class="p">[n.14] Ñāṇananda 2005: 282.</span></span></span> This suggests that the instructions in the Mūlapariyāya-sutta and its Ekottarika-āgama parallel have the Buddhist conception of Nirvāṇa in mind.<span class="note" id="mn1n15"><span class="details"><span class="p">[n.15] Gethin 1997b: 222 (in the context of an examination of right and wrong view) points out that the “Buddhist tradition recognises that what is formally Buddhist theory can be grasped and held in a manner such that it constitutes wrong view”. From this perspective, even a concept like Nirvāṇa would have the potential of leading to misguided conceivings and appropriations. This appears to have been an understanding of the present passage held among the Pubbaseliyas, who according to Kv 404,15 referred to the Mūlapariyāyasutta in support of their opinion that the deathless (amata) as an object of the mind can become a fetter (saṃyojana).</span></span></span></p>
+<p>The rationale behind the need to refrain from delighting, the Mūlapariyāya-sutta explains, is that delight is a root cause for the arising of dukkha.<span class="note" id="mn1n16"><span class="details"><span class="p">[n.16] <a href="../../mn/mn1.html">MN 1</a> at MN I 6,11: nandī dukkhassa mūlaṃ (Ce-M I 18,4 and Se-M I 11,1: nandi).</span></span></span> In general, the expression “to delight”, abhinandati, need not carry negative connotations. It recurs, for example, as part of the standard conclusion to a discourse, according to which the monks “delight” in what the Buddha has said.</p>
+<p>In the present instance in the Mūlapariyāya-sutta, however, delight comes as the climax of a set of conceivings and imaginings, a climax immediately preceded by taking Nirvāṇa as “mine”. This indicates that the type of delight envisaged in this particular context is related to craving and grasping, which explains why a disciple in higher training should better avoid such delight.</p>
+<p>The corresponding passage in the Ekottarika-āgama version speaks of not “having attachment” to Nirvāṇa, instead of not “delighting” in it, which indicates that, from its perspective, the attitude towards Nirvāṇa in the present context clearly has unwholesome connotations. Thus, the point made in both versions of the present discourse appears to be highlighting the need to avoid developing any form of conceivings and attachment even in relation to the final goal.</p>
+<p>In regard to the stage of the arahant, the Majjhima-nikāya and Ekottarika-āgama versions agree in clarifying that the perceptual mastery of arahants is due to their eradication of lust, anger, and delusion.<span class="note" id="mn1n17"><span class="details"><span class="p">[n.17] <a href="../../mn/mn1.html">MN 1</a> at MN I 5,4+16+28 and <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766b10. Chaudhary 1994c: 71 notes that stanzas in the Bhagavad-gīta (cf. especially 2:56-58) offer a description of an accomplished saint that has several elements in common with the present passage.</span></span></span> When taking up the Buddha’s perceptual mastery, the Mūlapariyāya-sutta and the Ekottarika-āgama version highlight his successful eradication of craving and his transcendence of the dependent arising of birth, old age, and death.</p>
+<p>Several editions of the Mūlapariyāya-sutta conclude by reporting that the monks were not delighted with this discourse.<span class="note" id="mn1n18"><span class="details"><span class="p">[n.18] Be-MN I 8,19, Ce-MN I 18,9, and Se-MN I 11,6 record that the monks did not delight in what the Buddha had said. Only Ee at MN I 6,24 reports that the monks delighted in the discourse. According to <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766b15, “the monks did not accept that teaching”, 諸比丘不受其教. An extract from the present discussion already appeared in Anālayo 2008a: 9-10.</span></span></span> This rather unusual ending was also known to the Pāli commentators. They explain that the Buddha preached this discourse to humble a group of five hundred monks, who had developed conceit on account of their intellectual mastery of the Buddha’s teaching.<span class="note" id="mn1n19"><span class="details"><span class="p">[n.19] Ps I 56,8; cf. also the introduction to the Mūlapariyāya-jātaka, Jā 245 at Jā II 259,14. A similar episode recurs in the Kāśyapaparivarta, which reports how a group of five hundred monks, being unable to appreciate a teaching given by the Buddha, get up and leave, cf. the Sanskrit text in Vorobyova-Desyatovskaya 2002: 48, folio 69v2-3 (§ 138), Chinese versions found in T 310.43 at T XI 637b13, T 350 at T XII 193b15, T 351 at T XII 199b26, T 352 at T XII 214c21, T 659 at T XVI 282a7, a Khotanese version in Skjærvø 2003: 417 (§ 142), and a Tibetan version at D (87) dkon brtsegs, cha 146b6 or Q (760.43) ’i 132a3, with a synoptic edition in von Staël-Holstein 1926: 200-201, and translations in Chang 1983/1991: 406-407, Pāsādika 1980: 52, Weller 1966: 339, id. 1966/1967: 422, and id. 1970: 149.</span></span></span> Their lack of delight, the commentary explains, was because they had been unable to understand what the Buddha had taught them.<span class="note" id="mn1n20"><span class="details"><span class="p">[n.20] According to an alternative interpretation suggested by Bodhi 1980/1992: 20, Ñāṇananda 2005: 286, and Thanissaro 2002: 156, perhaps the very fact that the monks understood this discourse caused them to be unable to delight in it.</span></span></span></p>
+<p>The Ekottarika-āgama version agrees with the Pāli commentary in as much as it reports that the monks had been unable to grasp the teaching the Buddha had delivered to them. It attributes their inability in this respect to the fact that their minds had been obstructed by Māra.<span class="note" id="mn1n21"><span class="details"><span class="p">[n.21] <a href="../../parallels/ea44.6.html">EĀ 44.6</a> at T II 766b15. <a href="../../parallels/ea44.6.html">EĀ 44.6</a> continues after this explanation with the Buddha instructing the monks to meditate and not be negligent, followed by the monks delighting in what the Buddha had said. According to the commentarial explanation at Ps I 59,5, the group of monks who had been the audience of <a href="../../mn/mn1.html">MN 1</a> received a short discourse by the Buddha on a later occasion, the Gotamaka-sutta, a discourse whose conclusion reports that this time the monks did delight in what the Buddha had taught to them, cf. <a href="../../an/an3.123.html">AN 3:123</a> at AN I 276,23. Ps I 59,18 explains that they all became arahants during the delivery of this discourse.</span></span></span></p>
+<p>Looking back on the Mūlapariyāya-sutta and its Ekottarika-āgama parallel, the close similarity between these two discourses stands in marked contrast to the Madhyama-āgama discourse and the individual translation.<span class="note" id="mn1n22"><span class="details"><span class="p">[n.22] The suggestion by Minh Chau 1964/1991: 204, based on comparing <a href="../../mn/mn1.html">MN 1</a> only with <a href="../../parallels/ma106.html">MĀ 106</a>, that the Pāli reciters could have added the negation na to the conclusion “to earmark its expunging from the Pāli Tipiṭaka, but the later Pāli compilers forgot to do so”, needs to be revised in the light of <a href="../../parallels/ea44.6.html">EĀ 44.6</a>. Thus already the present study of the first discourse in the Majjhima-nikāya shows the importance of taking into account all known parallels for a proper assessment of the Pāli version.</span></span></span> These two discourses vary from the Majjhima-nikāya and Ekottarika-āgama versions not only in regard to title and location, but also in regard to the basic pattern adopted in their treatments: instead of taking up the worldling, the disciple in higher training, the arahant and the Buddha, they discuss deluded recluses and Brahmins, their wiser counterparts, and the Buddha. These two versions, moreover, do not include Nirvāṇa in their treatment, nor do they mention the unusual reaction of the listening monks.</p>
+<p>These differences and the contrast provided by the similarity between the Mūlapariyāya-sutta and its Ekottarika-āgama parallel give the impression, mentioned at the outset of the present study, in that the Madhyama-āgama discourse and the individual translation may go back to a different original.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

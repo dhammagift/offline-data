@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.187 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.187</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 187</span><span class="mirror-right">（一八七）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn143.html">MN 143 (~)</a> / <a href="../sn/sn1.48.html">SN 1.48 (~)</a> / <a href="../sn/sn2.20.html">SN 2.20</a> / <a href="../sn/sn55.26.html">SN 55.26 (~)</a> / <a href="../parallels/ma28.html">MĀ 28 (~)</a> / <a href="../parallels/sa593.html">SĀ 593</a> / <a href="../parallels/sa1032.html">SĀ 1032 (~)</a> / <a href="../parallels/ea51.8.html">EĀ 51.8 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the elder Sudatta was gravely ill. When the World-Honored One heard of his serious illness, he put on his robe in the morning, took his alms bowl, and went to his house. When the elder Sudatta saw the Buddha coming from afar, he tried to rise, but the Buddha said to the elder, &quot;You need not rise.&quot; At that time, the World-Honored One sat down on a separate seat. The Buddha said to the elder, &quot;Is your illness bearable? Is the treatment effective, not increasing?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，须达多长者遇病困笃。于时世尊闻其病甚，即于晨朝，著衣持钵，往诣其家。须达长者遥见佛来，动身欲起，佛告长者：「不须汝起。」尔时世尊别敷座坐，佛告长者：「汝所患苦，为可忍不？医疗有降，不至增乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said to the Buddha, &quot;The present suffering is very difficult to bear. The pain I feel is gradually increasing. The pain is pressing and very unbearable. It is like a strong man tying a rope around the head of a weak person and pulling and twisting it. My headache is also like this. It is like a butcher opening a cow&#x27;s belly with a sharp knife and stirring its internal organs. My abdominal pain is also like this. It is like two strong men holding a very weak and sick person and roasting them over a fire. My body is also hot and painful like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者白佛：「今所患苦，甚为难忍，所受痛苦，遂渐增长，苦痛逼切，甚可患厌。譬如力人以绳系于弱劣者头，［打－丁＋（稯－禾）］搣掣顿，揉捺其头，我患首疾，亦复如是。譬如屠家以彼利刀，而开牛腹，挠搅五内，我患腹痛，亦复如是。譬如二大力士，捉彼羸瘦极患之人，向火燺炙，我患身体，烦热苦痛，亦复如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the elder, &quot;You should now generate indestructible faith in the Buddha, the Dharma, the Sangha, and the precepts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者：「汝于今者，应于佛所生不坏信，法僧及戒，亦当如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said, &quot;As the Buddha has said, I also possess the four indestructible faiths.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者白言：「如佛所说，四不坏信，我亦具得。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the elder, &quot;Based on the four indestructible faiths, you should now cultivate the six recollections. You should recollect the Buddha&#x27;s virtues, remember the ten epithets of the Buddha: Tathāgata, Arhat, Perfectly Enlightened One, Perfect in Knowledge and Conduct, Well-Gone, Knower of the World, Unsurpassed, Tamer of Men, Teacher of Gods and Men, Buddha, Blessed One. This is called recollecting the Buddha. What is recollecting the Dharma? The Dharma taught by the Tathāgata is supreme and wonderful, equal to rejoicing in goodness, obtaining benefits in the present, and attaining realization, free from all afflictions, not choosing the time, able to lead to good destinies. It is revealed in the present, and even the wise know it for themselves. This is called recollecting the Dharma. What is recollecting the Sangha? One should always recollect the virtues of the Sangha, the Tathāgata&#x27;s noble Sangha, which has attained perfection, prescribes medicine according to the illness, and practices the true path in stages, not exceeding the limits, and follows the Buddha&#x27;s teachings. The fruits of the stream-enterer, the path to the stream-enterer, the fruits of the once-returner, the path to the once-returner, the fruits of the non-returner, the path to the non-returner, and the fruits of the arhat, the path to the arhat, are called the Tathāgata&#x27;s śrāvaka Sangha. Fully endowed with precepts, concentration, wisdom, liberation, and the knowledge and vision of liberation, invited by others, such a Sangha should be respectfully bowed to and paid homage to. This is called recollecting the Sangha. What is recollecting the precepts? Recollecting one&#x27;s own practice of fulfilling the precepts, the pure precepts, the flawless precepts, the unbroken precepts, the unpunctured precepts, the pure precepts, the unstained precepts, the precepts not seeking material things, the precepts that are pleasing to the wise, and the precepts that are beyond reproach. Then one should recollect oneself. This is called recollecting the precepts. What is recollecting giving? Recollecting one&#x27;s own practice of giving, I have obtained good benefits. One should be free from stinginess and practice giving, with an unattached mind, able to let go of everything. When giving, one should give with one&#x27;s own hands, always delighting in giving, without weariness, with a fully developed mind of giving. When there are requests, one should always open up and share. This is called recollecting giving. What is recollecting the gods? One should always protect the mind and recollect the six desire heavens, and recollect the stream-enterers and once-returners born in those six heavens.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者：「依四不坏，尔今次应修于六念，汝当念佛诸功德，忆佛十号，如来、应供、正遍知、明行足、善逝、世间解、无上士、调御丈夫、天人师、佛、世尊，是名念佛。云何念法？如来所说胜妙之法，等同庆善，现在得利，及获得证，离诸热恼，不择时节，能向善趣。现在开示，乃至智者自知，是名念法。云何念僧？常当忆念僧之德行，如来圣僧，得向具足，应病授药，正真向道，所行次第，不越限度，能随于佛。所行之法，须陀洹果，向须陀洹，斯陀含果，向斯陀含，阿那含果，向阿那含，阿罗汉果，向阿罗汉，是名如来声闻僧。具足戒、定、慧、解脱、解脱知见，为他所请，如是等僧，宜应敬礼，合掌向之，是名念僧。云何念戒？自念所行满足之戒，白净戒，不瑕戒，不缺戒，不穿漏戒，纯净戒，无垢秽戒，不求财物戒，智者所乐戒，无可讥嫌戒。次应自念，是名念戒。云何念施？己所行施，我得善利，应离悭贪，行于布施，心无所著，悉能放舍。若施之时，手自授与，心常乐施，无有厌倦，舍心具足。若有乞索，常为开分，是名念施。云何念天？常当护心，念六欲天，念须陀洹、斯陀含，生彼六天。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta said to the Buddha, &quot;World-Honored One! As the Buddha has said, I have already fully cultivated the six recollections.&quot; Sudatta said to the Buddha, &quot;I only wish that the World-Honored One would take a meal here.&quot; The Buddha silently accepted the invitation. When it was time, Sudatta the elder prepared various delicacies for the Tathāgata, all complete and pure and fragrant. Having prepared the offerings, he joined his palms towards the Buddha and said, &quot;The World-Honored One&#x27;s appearance in the world is difficult to encounter.&quot; The Buddha spoke various teachings to the elder, showing, teaching, benefiting, and delighting him, then rose from his seat and departed.</p></td><td lang="lzh" class="agama-chi"><p>须达多白佛言：「世尊！如佛所说，六念之法，我已具修。」须达白佛：「唯愿世尊，在此中食。」佛默受请。日时既到，须达长者为于如来设众肴馔，种种备具，清净香洁。设是供已，合掌向佛，而作是言：「世尊出世，难可值遇。」佛为长者种种说法，示教利喜，从座而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>After Sudatta the elder, when the Buddha had left, his body was destroyed and his life ended that night, and he was reborn in the heavens. Having been reborn in the heavens, he immediately returned to where the Buddha was. The light and color of Sudatta the heavenly son doubled as usual, illuminating the Jetavana Grove, all becoming greatly bright. He bowed his head at the Buddha&#x27;s feet, sat to one side, and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>须达长者于佛去后，寻于其夜，身坏命终，得生天上。既生天上，寻还佛所，须达天子光色倍常，照于祇洹，悉皆大明，顶礼佛足，在一面坐，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>This Jetavana Grove is still here, the abode of sages<br/>and saints, the forest and ponds are very peaceful and<br/>quiet. The Dharma Master dwells within it, I now give<br/>rise to joy and delight. Faith, precepts, concentration, wisdom, and<br/>right livelihood can purify. If one can cultivate such superior<br/>practices, it is not through family lineage or wealth that<br/>one can attain this. The wise Śāriputra, peacefully upholding the<br/>precepts, delights in the empty place, most supreme and incomparable.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「此今犹故是，　　祇洹之园林，仙圣所住处，　　林池甚闲静。法主居其中，　　我今生喜乐，信戒定慧业，　　正命能使净。若能修如是，　　向来之上行，非种姓财富，　　能得获斯事。智慧舍利弗，　　寂然持禁戒，空处乐恬静，　　最胜无伦匹。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the heavenly being, &quot;So it is! So it is!&quot; At that time, the World-Honored One then spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>佛告天曰：「如是！如是。」尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Faith, precepts, concentration, wisdom, and right livelihood can purify<br/>It is not through family lineage or wealth that<br/>one can attain this. The wise Śāriputra, peacefully upholding<br/>the precepts, delights in the empty place, most supreme and incomparable.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「信戒定慧业，　　正念能使净，非种姓财富，　　能获如斯事。智慧舍利弗，　　寂灭能持戒，空处乐恬静，　　最上无伦匹。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Prince Sudatta, having heard the Buddha&#x27;s teaching, was delighted and bowed his head in reverence. He then disappeared from his seat and returned to his heavenly palace.</p></td><td lang="lzh" class="agama-chi"><p>须达天子闻佛所说，欢喜顶礼，于座上没，还于天宫。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, before dawn, the World-Honored One entered the lecture hall, arranged his seat, and sat down. He told the bhikṣus, &quot;Last night a god came to me with a radiance twice as bright as usual. His light illuminated Jetavana, making it very bright. After paying homage at my feet, he sat to one side and spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊于天未晓，入讲堂中，敷座而坐，告诸比丘：「向有一天，光色倍常，来诣我所，其光晖曜，普照祇洹，悉皆大明。礼我足已，却坐一面，而说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>This Jetavana Grove is still here, the abode of sages<br/>and saints, the forest and ponds are very peaceful and<br/>quiet. The Dharma Master resides within it, I am now<br/>filled with joy and delight. Faith, precepts, concentration, wisdom, and<br/>right livelihood can purify. If one can cultivate these, one<br/>will attain the supreme state. It is not through family<br/>or wealth that one can attain this. The wise Śāriputra<br/>peacefully upholding the precepts, delights in solitude and tranquility, unsurpassed and incomparable.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『此今犹故是，　　祇洹之园林，仙圣所住处，　　林池甚闲静。法主居其中，　　我今生悦乐，信戒定慧业，　　正命能使净。若能修如是，　　向来之上事，非种姓财富，　　能获如斯事。智慧舍利弗，　　寂然持禁戒，空处乐恬静，　　最胜无伦匹。』」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda was behind the Tathāgata. Hearing the god speak the verse, he said to the Buddha, &quot;This must be the elder Sudatta who has been reborn in heaven. That is why he has come back to praise Śāriputra.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者阿难在如来后，闻天说偈，即白佛言：「此必是须达长者，得生天上，是故还来赞舍利弗。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Indeed! Indeed! Sudatta, having been reborn in heaven, came to me and spoke these verses.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「如是！如是。彼须达多生天上，来至我所，说如斯偈。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda and the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难及诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

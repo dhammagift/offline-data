@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.149 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.149</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 149</span><span class="mirror-right">（一四九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an8.13.html">AN 8.13 (~)</a> / <a href="../an/an8.14.html">AN 8.14</a> / <a href="../parallels/sa924.html">SĀ 924</a> / <a href="../parallels/sa925.html">SĀ 925 (~)</a> / <a href="../parallels/sa-2.150.html">SĀ² 2.150 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the World-Honored One addressed the bhikṣus, saying, &quot;There are eight kinds of horses that surpass what is known in the world and can be seen in the present. What are the eight? First, when a horse rider holds the reins and whip and is about to set out on a long journey, that bad horse bites, kicks, and jumps, breaking the reins and damaging the riding equipment and body. This is called a horse fault. Second, when the rider mounts it, it refuses to move forward. That bad horse leaps and is uncontrollable, breaking the riding equipment. Third, when the rider mounts it, it refuses to follow the road but only jumps over ditches and pits. Fourth, when mounted, it refuses to move forward but instead goes back. Fifth, it is not afraid at all of the pain of the whip and reins. Sixth, when the horse rider whips it, it rears up on its hind legs. Seventh, when the horse rider wants to gallop, it instead lies down on the ground and refuses to move forward. Eighth, when the horse rider wants it to go, it stops.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，世尊告诸比丘：「马有八种，过世间所知，现在可见。何等为八？一者，乘马之人控辔秉策，将即远路，而彼恶马啮衔跳踯，顿绝羁勒，破碎乘具，伤毁形体，是名马过。其第二者，御者乘之，不肯前进，而此恶马腾跃叵制，破碎乘具。其第三者，御者乘之，不肯著路，但逾坑堑。其第四者，若乘之时，不肯前进，返更却行。其第五者，都不畏于御乘之人、鞭策之痛。其第六者，御马之人，以鞭策之，方便距地二足双立。其第七者，御马之人意欲驰骤，返更卧地，不肯进路。其第八者，御马之人意欲令行，而返停住。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>In the Buddha&#x27;s teachings, those who study and practice as gentlemen also have these eight kinds of faults. What are the eight? If a bhikṣu is accused by fellow practitioners of having seen, heard, or suspected something, he says, &#x27;You are young and ignorant, not good at understanding. You should accuse others. How can you accuse me? You have faults yourself and are turning them around to accuse me.&#x27; Such a person is like the first horse. Second, if a bhikṣu sees another bhikṣu with an offense of seeing, hearing, or suspicion, he tells him, &#x27;You have committed such an offense.&#x27; The one with the offense then says, &#x27;You have committed such an offense yourself. If you repent, then I will accuse you of my offense.&#x27; Such a person is like the second horse. Third, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused, he speaks differently, following his feelings of love, anger, fear, or delusion. Such a person is like the third horse. Fourth, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused, he says, &#x27;I do not remember committing such an offense.&#x27; Such a person is like the fourth horse. Fifth, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused by a fellow practitioner, he then packs up his robes and bowl and leaves as he pleases, without any fear or respect for the Sangha or the accuser. Such a person is like the fifth horse. Sixth, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused by a fellow practitioner, he then sits in a high place and argues with the elder bhikṣus, raising his hands and shouting, &#x27;All of you have committed offenses of seeing, hearing, or suspicion, and yet you accuse me of such an offense.&#x27; Such a person is like the sixth horse. Seventh, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused by a pure bhikṣu, he remains silent, neither admitting nor denying the offense, causing trouble for the Sangha. Such a person is like the seventh horse. Eighth, if a bhikṣu commits an offense of seeing, hearing, or suspicion and is accused by a pure bhikṣu, he then abandons the precepts, loses the wholesome roots, gives up the monastic life, and returns to lay life. After giving up the monastic life, he stands at the temple gate and says to the bhikṣus, &#x27;Now that I have returned to lay life, is this fulfilling your wishes? Are you now very happy?&#x27; Such a person is like the eighth horse.</p></td><td lang="lzh" class="agama-chi"><p>「于佛法中，修学丈夫亦有如是八种过患。何等为八？若比丘同梵行者，有见闻疑事觉触己身，即语彼言：『汝于今者，稚小无智，不善不了，汝今应当觉触余人，云何乃欲觉触于我？汝自有过，反举他事。』如是之人] cf.【丽】犹第一] cf.【丽】马。其第二者，见他比丘有见闻疑罪，同梵行者即便语彼：『有罪人言，汝于今者，犯如是罪。』时有罪人复语彼言：『汝今自犯如是之罪，若忏悔者，然后乃可𫄙举我罪。』如是之人犹第二马所有过失。其第三者，若有比丘作见闻疑罪，为他所举，便作异语，随于爱瞋及以怖，痴心生忿怒，如是之人犹第三马所有过失。其第四者，若有比丘亦复作于见闻疑罪，为他所举，即便语彼举事人言：『我都不忆犯如是罪。』当知此人同第四马所有过失。其第五者，若有比丘亦复犯于见闻疑罪，同梵行者而来举之。时，犯罪人即摄衣钵，随意而去，其心都无畏忌众僧及举事者。当知斯人同第五马所有过失。其第六者，若有比丘亦复犯于见闻疑罪，同梵行者而举其事。时犯罪人即便于彼高处而坐，与诸长老比丘诤论道理，举手大唤，作如是言：『汝等诸人，悉皆自犯见闻疑罪，而更说我犯如是罪。』当知斯人同第六马所有过患。其第七者，若有比丘亦复犯于见闻疑罪，清净比丘𫄙举其事，彼有罪人嘿然而住，亦复不言有罪无罪，恼乱众僧。当知斯人同第七马所作过失。其第八者，若有比丘亦复犯于见闻疑罪，清净比丘发举其事，彼犯罪人即便舍戒，退失善根，罢道还俗。既休道已，在寺门边，住立一面，语诸比丘：『我今还俗，为满汝等所愿以不？汝今欢喜极快乐不？』当知是人同第八马所有过患。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus, having heard the Buddha&#x27;s words, rejoiced and received them with respect.</p></td><td lang="lzh" class="agama-chi"><p>诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

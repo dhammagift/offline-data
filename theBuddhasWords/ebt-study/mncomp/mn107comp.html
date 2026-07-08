@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 107 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 107: Gaṇakamoggallāna-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn106comp.html#content"></a><a id="next-sutta" href="./mn108comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn107.html">MN 107</a> / <a href="../../parallels/ma144.html">MĀ 144</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Gaṇakamoggallāna-sutta, the “discourse to the accountant Moggallāna”, takes as its main theme the gradual path. This discourse has a parallel in the Madhyama-āgama and another parallel in an individual translation.<span class="note" id="mn107n162"><span class="details"><span class="p">[n.162] The parallels are <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652a-653c and T 70 at T I 875a-876b, both of which agree with <a href="../../mn/mn107.html">MN 107</a> on locating the discourse in the Hall of Migāra’s Mother by Sāvatthī. <a href="../../parallels/ma144.html">MĀ 144</a> also agrees with <a href="../../mn/mn107.html">MN 107</a> on the title “discourse to the accountant Moggallāna”, 算數目揵連經, while the title of T 70 is simply “discourse spoken by the Buddha to an accountant”, 佛說數經. Skilling 2000b: 341 notes that the Vyākhyāyukti-ṭīkā, D (4069) sems tsam, si 284a4 or Q (5570) i 171a8, similarly refers to the present discourse by the title “the accountant”, rtsis mkhan. According to the information given in the Taishō edition, T 70 was translated by Făjù (法炬). For a remark on <a href="../../parallels/ma144.html">MĀ 144</a> cf. Minh Chau 1964/1991: 32.</span></span></span></p>
+<p>According to the Gaṇakamoggallāna-sutta and its parallels, the accountant Moggallāna wanted to know if the training in the Dharma could be compared to the gradual training seen in other crafts. The three versions agree that he illustrated his inquiry with the example of the gradual nature of the steps of the staircase leading up to the Hall of Migāra’s Mother,<span class="note" id="mn107n163"><span class="details"><span class="p">[n.163] The reference in <a href="../../mn/mn107.html">MN 107</a> at MN III 1,10 to a pacchima sopānakaḷevara (Ce-MN III 90,9: sopānakaḷebara) recurs in <a href="../../mn/mn85.html">MN 85</a> at MN II 92,22, where it also refers to the “last step of a staircase” that leads up to a building, in this case the staircase to Prince Bodhi’s Kokanada Palace. <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652a15 and T 70 at T I 875a20 additionally specify that the staircase to the Hall of Migāra’s Mother had four steps.</span></span></span> as well as with the examples of the gradual training required for the study of the Brahminical scriptures, for archery, and for accounting. According to the two Chinese versions, he also mentioned the gradual training given to elephants and horses.<span class="note" id="mn107n164"><span class="details"><span class="p">[n.164] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652a16 and T 70 at at T I 875a21.</span></span></span> In the Pāli version, however, it is the Buddha who comes out with the image of training a horse, which he employs as an introduction to his exposition of the gradual training of his disciples.<span class="note" id="mn107n165"><span class="details"><span class="p">[n.165] <a href="../../mn/mn107.html">MN 107</a> at MN III 2,3.</span></span></span></p>
+<p>The Gaṇakamoggallāna-sutta begins its account of the gradual path with observance of the monastic rules.<span class="note" id="mn107n166"><span class="details"><span class="p">[n.166] <a href="../../mn/mn107.html">MN 107</a> at MN III 2,7. Although a reference to the monastic rules is absent from the parallels to <a href="../../mn/mn107.html">MN 107</a>, a similar description can be found in <a href="../../parallels/ma145.html">MĀ 145</a> at T I 654c16, paralleling an occurrence of such a description in <a href="../../mn/mn108.html">MN 108</a> at MN III 11,17.</span></span></span> The two parallels speak instead of developing bodily, verbal, and mental purity (see table 11.6).<span class="note" id="mn107n167"><span class="details"><span class="p">[n.167] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b1 and T 70 at T I 875b6. While the basic import of this passage in the parallel versions is the same, in as much as they present virtuous conduct as the basis for the gradual path, their formulations set a different emphasis. <a href="../../mn/mn107.html">MN 107</a> highlights in particular the importance of closely adhering to the rules, whereas <a href="../../parallels/ma144.html">MĀ 144</a> and T 70 give more emphasis to the purpose of the rules in form of bodily, verbal, and mental purification. This to some extent parallels a difference in emphasis noted above p. 47.</span></span></span></p>
+<p>The Gaṇakamoggallāna-sutta next takes up restraint at the sense-doors, a practice described in similar terms in its parallels. A minor but noteworthy difference is that the Chinese versions explicitly refer to the role of mindfulness in relation to sense-restraint.<span class="note" id="mn107n168"><span class="details"><span class="p">[n.168] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b11 instructs to “guard and protect the mind with mindfulness and become accomplished [in such protection]”, 守護念心而得成就. T 70 at T I 875b12 similarly recommends that one should “protect one’s own mind [by] protecting the mind [through] mindfulness”, 自護其意護意念. Yit 2004a: 185 relates this additional specification to <a href="../../an/an5.114.html">AN 5:114</a> at AN III 138,20, which associates senserestraint with “protective mindfulness”, ārakkhasatino, and also speaks of being “endowed with a mind protected by mindfulness”, satārakkhena cetasā samannāgata. The idea of protection through mindfulness is also found in relation to sense-restraint in the Mahāvastu in Basak 1968/2004: 31,30 or in Senart 1897: 52,4: ārakṣāsmṛti ... araktena cetasā samanvāgataḥ. Similar nuances occur in the Saṅghabhedavastu in Gnoli 1978a: 240,20, which speaks of guptasmṛtimānasaḥ; cf. also the Śrāvakabhūmi, Shukla 1973: 64,6, 65,9, and 66,4 or ŚSG 1998: 100,8+18 and 101,2, with the Chinese version in T 1579 at T XXX 406b24 and T XXX 406c3+10, which under the heading of indriyasaṃvara gives a detailed exposition of the implications of ārakṣitasmṛti/防守正念, nipakasmṛti/委正念, and smṛtyārakṣitamānasa/念防護意. On mindfulness as a form of protection cf. also Anālayo 2011e.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 11.6: Gradual Path in <a href="../../mn/mn107.html">MN 107</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn107.html">MN 107</a></th><th><a href="../../parallels/ma144.html">MĀ 144</a></th></tr>
+<tr><td>observing rules (1)</td><td>purify body, speech, mind (→ 1)</td></tr>
+<tr><td>sense-restraint (2)</td><td>satipaṭṭhāna</td></tr>
+<tr><td>moderation with food (3)</td><td>satipaṭṭhāna without thoughts</td></tr>
+<tr><td>wakefulness (4)</td><td>sense-restraint (→ 2)</td></tr>
+<tr><td>mindfulness of activities (5)</td><td>mindfulness of activities (→ 5)</td></tr>
+<tr><td>removal of 5 hindrances (6)</td><td>removal of 5 hindrances (→ 6)</td></tr>
+<tr><td>attainment of 4 jhānas (7)</td><td>attainment of 4 jhānas (→ 7)</td></tr>
+<tr><td></td><td>(≠ 3-4)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>T 70</td></tr>
+<tr><td>purify body, speech, mind (→ 1)</td></tr>
+<tr><td>satipaṭṭhāna</td></tr>
+<tr><td>sense-restraint (→ 2)</td></tr>
+<tr><td>mindfulness of activities (→ 5)</td></tr>
+<tr><td>removal of 5 hindrances (→ 6)</td></tr>
+<tr><td>attainment of 4 jhānas (→ 7)</td></tr>
+<tr><td>(≠ 3-4)</td></tr>
+</table>
+<p>Other discourses illustrate the role of mindfulness in relation to sense-restraint with various similes, indicating among others that mindfulness keeps the streams (of desire) in check,<span class="note" id="mn107n169"><span class="details"><span class="p">[n.169] Sn 5:2 at Sn 1035.</span></span></span> so that its function can be compared to the gatekeeper of a town,<span class="note" id="mn107n170"><span class="details"><span class="p">[n.170] <a href="../../an/an7.63.html">AN 7:63</a> at AN IV 110,28 and its parallel <a href="../../parallels/ma3.html">MĀ 3</a> at T I 423c14 (another parallel, <a href="../../parallels/ea39.4.html">EĀ 39.4</a> at T II 730b26, uses instead the image of a firm door at a city gate to illustrate mindfulness).</span></span></span> or to a strong post to which wild animals (representing the senses) are bound.<span class="note" id="mn107n171"><span class="details"><span class="p">[n.171] <a href="../../sn/sn35.206.html">SN 35:206</a> at SN IV 198,26 and its parallels <a href="../../parallels/sa1171.html">SĀ 1171</a> at T II 313b8 and <a href="../../parallels/ea38.8.html">EĀ 38.8</a> at T II 723c29.</span></span></span> The relevance of mindfulness to sense-restraint is thus a recurrent theme in other discourses, yet the same is not explicitly taken into account in the standard description of sense-restraint in the Pāli discourses.</p>
+<p>The emphasis on mindfulness in the two Chinese versions continues to be prominent, as even before turning to sense-restraint they take up the four satipaṭṭhānas,<span class="note" id="mn107n172"><span class="details"><span class="p">[n.172] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b4 and T 70 at T I 875b9.</span></span></span> a practice not mentioned explicitly in the gradual path scheme in the Gaṇakamoggallāna-sutta or in the standard exposition of the gradual path in other Pāli discourses.<span class="note" id="mn107n173"><span class="details"><span class="p">[n.173] The four satipaṭṭhānas are also not explicitly mentioned in the account of the gradual path given in <a href="../../parallels/ma146.html">MĀ 146</a> (parallel to <a href="../../mn/mn27.html">MN 27</a>) and in <a href="../../parallels/ma187.html">MĀ 187</a> (parallel to <a href="../../mn/mn112.html">MN 112</a>). An account of the gradual path of training in <a href="../../mn/mn125.html">MN 125</a> at MN III 136,4 and in its parallel <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b3, however, does take up the four satipaṭṭhānas, cf. also below p. 718. The four satipaṭṭhānas also occur in two consecutive versions of the gradual path in the Saṃyukta-āgama, where in one case, <a href="../../parallels/sa636.html">SĀ 636</a> at T II 176b15, they occur after the removal of the hindrances (i.e., in the position where normally the four absorptions are found), while in the other, <a href="../../parallels/sa637.html">SĀ 637</a> at T II 176b26, they instead come right after contentment. The four satipaṭṭhānas occur also in an account of the gradual path in <a href="../../parallels/da20.html">DĀ 20</a> at T I 85a6, in which case they are not found in the corresponding Pāli discourse, <a href="../../dn/dn3.html">DN 3</a> at DN I 100,9. The absence of any explicit reference to satipaṭṭhāna in the standard accounts of the gradual path of training in the Pāli discourses is noteworthy. According to the Satipaṭṭhāna-sutta and its parallels, the practice of satipaṭṭhāna constitutes the path to the realization of Nirvāṇa, cf. above p. 75. Thus, to undertake satipaṭṭhāna would be a necessary step for reaching the goal of the gradual path, in fact, according to <a href="../../an/an10.95.html">AN 10:95</a> at AN V 195,11, all those who realize awakening (here expressed in terms of “escaping from the world”) do so by way of overcoming the hindrances, being well established in satipaṭṭhāna, and having developed the awakening factors. In view of this, satipaṭṭhāna would merit explicit treatment in an account of the gradual path to awakening. In a way, satipaṭṭhāna may be implicitly included in those parts of the gradual path that mention the practice of mindfulness and clear comprehension in regard to a set of physical activities. This exercise is also part of the scheme of contemplating the body in the Satipaṭṭhāna-suttas, cf. <a href="../../mn/mn10.html">MN 10</a> at MN I 57,5 (or <a href="../../dn/dn22.html">DN 22</a> at DN II 292,24) and <a href="../../parallels/ma98.html">MĀ 98</a> at T I 582b25. In the context of the gradual path, such mindfulness and clear comprehension in regard to physical activities then leads up to more formal meditation in a secluded place, where the abandoning of the hindrances paves the way for the development of the four jhānas. Yet, the same practice of mindfulness and clear comprehension is already taken into account in <a href="../../mn/mn107.html">MN 107</a> and its parallels <a href="../../parallels/ma144.html">MĀ 144</a> and T 70, which similarly present mindfulness and clear comprehension in regard to physical activities as the basis for approaching a secluded place, removing the hindrances, and developing the four jhānas. As <a href="../../parallels/ma144.html">MĀ 144</a> and T 70 nevertheless refer to the four satipaṭṭhānas separately, it becomes evident that, from their perspective, the four satipaṭṭhānas are not implicitly covered by mindfulness and clear comprehension in regard to physical activities.</span></span></span></p>
+<p>The Madhyama-āgama discourse indicates that satipaṭṭhāna should be developed in such a way that it leads to leaving behind sensual and unwholesome thoughts.<span class="note" id="mn107n174"><span class="details"><span class="p">[n.174] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b7 instructs: “do not think a thought related to sensuality”, 莫念欲相應念, and “do not think a thought related to what is unrightful”, 莫念非法相應念. A similar instruction can be found in <a href="../../mn/mn125.html">MN 125</a> at MN III 136,22 and its parallel <a href="../../parallels/ma198.html">MĀ 198</a> at T I 758b15, cf. below p. 719 notes 167 and 168.</span></span></span> This then leads over to the practice of mindfulness in regard to restraint at the sense-doors, where the task is to avoid the arising of states of covetousness or dejection.<span class="note" id="mn107n175"><span class="details"><span class="p">[n.175] <a href="../../mn/mn107.html">MN 107</a> at MN III 2,16: abhijjhādomanassā ... dhammā, <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652b14: 貪伺, 憂慼 ... 法, and T 70 at T I 875b14: 貪憂慼意 ... 法. The removal of covetousness and dejection is in fact a central task of mindfulness, mentioned as such also in the introductory sections of the Satipaṭṭhāna-sutta, <a href="../../mn/mn10.html">MN 10</a> at MN I 56,5 (or <a href="../../dn/dn22.html">DN 22</a> at DN II 290,13): vineyya loke abhijjhādomanassaṃ. Ps I 243,35 explains vineyya to be a gerund, vinayitvā. Although gerund forms usually indicate that an action is completed, in Sanskrit usage the gerund can also express simultaneousness, cf., e.g., Geiger 1923: 86 and Macdonnel 1927/1990: 202. In the present context, vineyya may similarly refer to an action that takes place concurrently with the main action of the sentence, i. e., concurrently with anupassī viharati, so that vineyya loke abhijjhādomanassaṃ can be understood to refer to “removing covetousness and dejection”, thereby highlighting what takes place while undertaking satipaṭṭhāna. That to overcome unwholesome states is a task of satipaṭṭhāna, instead of being a precondition for its practice, is in fact reflected in other discourses, as according to <a href="../../an/an9.64.html">AN 9:64</a> at AN IV 458,4 satipaṭṭhāna is the tool to overcome the five hindrances, while according to <a href="../../an/an9.65.html">AN 9:65</a> at AN IV 458,21 through satipaṭṭhāna one overcomes the attraction of sensual pleasures.</span></span></span></p>
+<p>Thus from the perspective of the Madhyama-āgama parallel to the Gaṇakamoggallāna-sutta, it seems that mindfulness by way of the four satipaṭṭhānas builds up a mental condition aloof from sensual and unwholesome thoughts. This mental condition will then be further developed by maintaining mindfulness at the sense-doors in order to avoid a re-arising of sensual and unwholesome thoughts.</p>
+<p>Based on such mindful sense-restraint, the practice of mindfulness can then be combined with clear comprehension in relation to any type of bodily activity. The continuity of mindfulness that has been developed in this way would in turn form the basis for overcoming the hindrances and developing the jhānas, where mindfulness again plays a central role.<span class="note" id="mn107n176"><span class="details"><span class="p">[n.176] That satipaṭṭhāna may be relevant already to initial stages of the practice of the gradual path can also be seen in <a href="../../sn/sn47.4.html">SN 47:4</a> at SN V 144,15 and its parallel <a href="../../parallels/sa621.html">SĀ 621</a> at T II 173c16, according to which the four satipaṭṭhānas should be taught right away to newly ordained monks.</span></span></span></p>
+<p>While the two Chinese versions give additional emphasis to the practice of mindfulness, they do not take into account moderation with food and the practice of wakefulness, two steps of the gradual path covered in the Pāli version (see above table 11.6).<span class="note" id="mn107n177"><span class="details"><span class="p">[n.177] <a href="../../mn/mn107.html">MN 107</a> at MN III 2,29: bhojane mattaññū hohi and <a href="../../mn/mn107.html">MN 107</a> at MN III 3,2: jāgariyaṃ anuyutto viharāhi. Even within the Majjhima-nikāya collection descriptions of the gradual path can be found that do not mention moderation with food or the practice of wakefulness, cf. <a href="../../mn/mn27.html">MN 27</a> at MN I 181, <a href="../../mn/mn38.html">MN 38</a> at MN I 269, <a href="../../mn/mn51.html">MN 51</a> at MN I 346, <a href="../../mn/mn94.html">MN 94</a> at MN II 162, <a href="../../mn/mn101.html">MN 101</a> at MN II 226, and <a href="../../mn/mn112.html">MN 112</a> at MN III 35. The same two practices are also absent from accounts of the gradual path in the Dīgha-nikāya, but are taken into account, as noted by Meisig 1984: 130, in the gradual path scheme found in the Dīrghaāgama, cf., e.g., <a href="../../parallels/da10.html">DĀ 10</a> at T I 84c20.</span></span></span></p>
+<p>The Gaṇakamoggallāna-sutta and its parallels depict the remainder of the gradual path in similar terms, from mindfulness and clear comprehension via the abandoning of the hindrances to the four jhānas.<span class="note" id="mn107n178"><span class="details"><span class="p">[n.178] A minor difference is that <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652c5 and T 70 at T I 875b30 explicitly mention the sitting mat used for meditation (cf. above p. 20). In relation to abandoning the hindrances, <a href="../../parallels/ma144.html">MĀ 144</a> and T 70 take up the implications of covetousness in additional detail, explaining it to be a state of mind that desires to possess what belongs to others, cf. <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652c7: “seeing another’s wealth ... don’t [let] covetousness arise, wishing: ‘may I get it’”, 見他財物 ... 莫起貪伺, 欲令我得, and T 70 at T I 875c2: “don’t develop covetousness for the wealth of others, thinking: ‘may the possessions of others be mine’”, 莫於他財發於貪, 謂他物令我有. A Pāli counterpart to this explanation can be found, e.g., in <a href="../../mn/mn41.html">MN 41</a> at MN I 287,8.</span></span></span></p>
+<p>The Pāli version explains that these instructions are meant for monks who have not yet reached the final goal, adding that monks who have reached the final goal nevertheless continue to undertake the same practices. The Chinese versions point out that these instructions are particularly beneficial for newly ordained monks, while in the case of senior monks the Buddha will continue to teach them the way to the total eradication of the influxes.<span class="note" id="mn107n179"><span class="details"><span class="p">[n.179] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652c13 explains that by giving these instructions “the Tathāgata is of much benefit for young monks”, 如來為諸年少比丘多有所益, after which it indicates that “if there are senior monks, elders who have trained in the holy life during the past, the Tathāgata teaches them further, namely the ultimate and complete destruction of the influxes”, 若有比丘長老, 上尊, 舊學梵行, 如來復上教, 謂 究竟訖一切漏盡. T 70 at T I 875c7 similarly indicates that “the Tathāgata is of much benefit to monks who have started to train”, 如來為初學比丘多有所益, and then explains that “in regard to elder monks ... who are established in diligent practice of the holy life, the Tathāgata ... [leads them] to attaining the cessation of existence and the destruction of the influxes”, 彼諸比丘上尊 ... 無懈怠住行於梵行, 如來 ... 至竟盡有漏盡.</span></span></span> This presentation is in accord with the way the Chinese versions approached the subject of the gradual path, as in these two accounts the gradual path is concerned with a newly ordained monk,<span class="note" id="mn107n180"><span class="details"><span class="p">[n.180] In <a href="../../parallels/ma144.html">MĀ 144</a> at T I 652a29 the disciple who is taught the gradual path is a “young monk who has just come to train in the path and started to enter this Dharma and discipline”, 年少比丘初來學道, 始入法律者, and in T 70 at T I 875b5 a “monk who has just started to train and recently come to this Dharma and discipline”, 比丘初學不久至此法律. <a href="../../mn/mn107.html">MN 107</a> at MN III 2,6 is less explicit, as it indicates that when the Tathāgata “has obtained a person to be tamed, he at first trains him thus”, purisadammaṃ labhitvā, paṭhamaṃ evaṃ vineti, which, however, also gives the impression that the disciple would be a beginner.</span></span></span> paralleling the accountant Moggallāna’s description of how a newcomer to accountancy will be instructed gradually.</p>
+<p>The Gaṇakamoggallāna-sutta and its parallels continue in similar ways by employing the example of the path to Rājagaha to illustrate why, in spite of the Buddha’s instructions, some monks do not reach the goal. According to all versions, the accountant Moggallāna came to the conclusion that the Buddha did not associate with persons possessed of bad qualities, but only with persons who are endowed with good qualities.<span class="note" id="mn107n181"><span class="details"><span class="p">[n.181] Ps IV 70,15 explains that the accountant Moggallāna made this proclamation because he had understood why some disciples do not reach the goal.</span></span></span> The Chinese versions illustrate this conclusion by describing how someone looks after a grove of sāla trees in various ways, providing water and taking out weeds, thereby ensuring the growth and welfare of the trees.<span class="note" id="mn107n182"><span class="details"><span class="p">[n.182] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 653b12 and T 70 at T I 876a21. The image of looking after a grove of sāla trees recurs in <a href="../../mn/mn21.html">MN 21</a> at MN I 124,28 and its parallel <a href="../../parallels/ma193.html">MĀ 193</a> at T I 744b20. The contrast highlighted in <a href="../../mn/mn107.html">MN 107</a> at MN III 6,10 between those who have bad qualities and those who have the corresponding good qualities recurs in the same terms in <a href="../../mn/mn5.html">MN 5</a> at MN I 32,7. Similar to <a href="../../parallels/ma144.html">MĀ 144</a> and T 70, <a href="../../mn/mn5.html">MN 5</a> introduces this exposition with a simile, although it makes use of a different image, not employing the simile of the grove of sāla trees.</span></span></span></p>
+<p>Applied to the present context, this comparison suggests that persons possessed of bad qualities, with whom the Buddha does not associate, are comparable to weeds taken out by those who care for the sāla grove, while good persons, with whom the Buddha associates, would correspond to the sāla trees.</p>
+<p>The parallel versions record that the accountant Moggallāna compared the superiority of the Buddha’s teaching to exquisite fragrance.<span class="note" id="mn107n183"><span class="details"><span class="p">[n.183] While <a href="../../mn/mn107.html">MN 107</a> at MN III 6,27 takes up two types of incense and one type of flower to illustrate the Buddha’s superiority, <a href="../../parallels/ma144.html">MĀ 144</a> at T I 653b26 and T 70 at T I 876b7 take up two types of incense and two types of flower, namely the supreme fragrance among flowers that grow in water and the supreme fragrance among flowers that grow on land.</span></span></span> While the Pāli version only indicates that the advice given by the Buddha is supreme among things of today,<span class="note" id="mn107n184"><span class="details"><span class="p">[n.184] <a href="../../mn/mn107.html">MN 107</a> at MN III 7,2: bhoto gotamassa ovādo paramajjadhammesu.</span></span></span> according to the Chinese versions his teaching is able to subdue all heterodox teachings.<span class="note" id="mn107n185"><span class="details"><span class="p">[n.185] <a href="../../parallels/ma144.html">MĀ 144</a> at T I 653c7: 能伏一切外道異學 and T 70 at T I 876b15: 能攝一切異學. The Pāli commentary in a similar vein explains that the reference in <a href="../../mn/mn107.html">MN 107</a> to “things of today” should be understood to intend the six heterodox teachers (i.e. Pūraṇa Kassapa, etc.), Ps IV 70,18: ajjadhammā nāma cha satthāradhammā.</span></span></span> The three versions conclude with the accountant Moggallāna taking refuge.<span class="note" id="mn107n186"><span class="details"><span class="p">[n.186] Before expressing his going for refuge, according to <a href="../../mn/mn107.html">MN 107</a> at MN III 7,2 the accountant Moggallāna praised the Buddha’s exposition by using the image of setting something upright, revealing something hidden, showing the path, and holding up a lamp in the dark, a set of images not mentioned in <a href="../../parallels/ma144.html">MĀ 144</a> or T 70.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

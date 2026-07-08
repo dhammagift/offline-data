@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 4 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 4: Bhayabherava-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn3comp.html#content"></a><a id="next-sutta" href="./mn5comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn4.html">MN 4</a> / <a href="../../parallels/ea31.1.html">EĀ 31.1</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bhayabherava-sutta, the “discourse on fear and dread”, expounds the difficulties of living in seclusion. This discourse has a parallel in the Ekottarika-āgama.<span class="note" id="mn4n63"><span class="details"><span class="p">[n.63] The parallel is <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 665b-667a, parts of which have been translated by Bareau 1963: 37-39 and 68; for a full translation cf. Anālayo 2011c. <a href="../../parallels/ea31.1.html">EĀ 31.1</a> agrees with <a href="../../mn/mn4.html">MN 4</a> in locating the discourse in Jeta’s Grove by Sāvatthī. The summary verse at T II 673c11 refers to <a href="../../parallels/ea31.1.html">EĀ 31.1</a> as “higher”, 增上, perhaps an abbreviation of 增上之心, the “higher mind”, which is found in <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666b21 (in fact, this whole chapter of EĀ is called the “chapter [on what is] higher”, 增上品, a title presumably taken from its first discourse, <a href="../../parallels/ea31.1.html">EĀ 31.1</a>).</span></span></span> A few parts of a parallel to the Bhayabherava-sutta have also been preserved in the form of Sanskrit fragments.<span class="note" id="mn4n64"><span class="details"><span class="p">[n.64] The Sanskrit fragments are SHT I 164c+g (p. 93, identified in Schlingloff 1967: 421), SHT IV 32 folios 33-41 (pp. 128-134), SHT IV 165 folios 15-16 (pp. 190-191, cf. also SHT VII p. 240), SHT IV 500 folio 4 (pp. 221-222), and SHT IX 2401 (p. 195). SHT IV 32 folio 33 agrees with <a href="../../mn/mn4.html">MN 4</a> on the location of the discourse. SHT IV 500 folio 4 has a few words paralleling the Brahmin’s first question at MN I 16,20; SHT IV 32 folios 34-36 correspond to the recurring reference to dwelling in lonely places in the forest, found, e.g., at MN I 17,12; SHT IV 32 folio 37 and 38, SHT IV 165 folio 15, and SHT IX 2401 describe the Buddha attaining the first and the fourth absorption, as well as turning the mind to recollection of past lives, paralleling MN I 21,34 and MN I 22,10. SHT IV 32 folio 41 corresponds to the concluding part of <a href="../../mn/mn4.html">MN 4</a> at MN I 23,34 and MN I 24,8. A reference to the present discourse as the (bhaya)[bh]airavaparyāye can be found in SHT I 36A2 (p. 27) and in SHT IV 36V2 (p. 259). Hartmann 2004b: 126 notes another parallel among the newly discovered Dīrgha-āgama preserved in Sanskrit fragments.</span></span></span></p>
+<p>The Bhayabherava-sutta and its Chinese parallel report a visit paid by the Brahmin Jāṇussoṇi to the Buddha, during which Jāṇussoṇi takes up the Buddha’s inspirational role as a leader for his disciples and the difficulties of living in seclusion and solitude.<span class="note" id="mn4n65"><span class="details"><span class="p">[n.65] <a href="../../mn/mn4.html">MN 4</a> at MN I 16,20 and <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 665b19. The difficulties of living in seclusion come up again in <a href="../../an/an10.99.html">AN 10:99</a> at AN V 202,4.</span></span></span></p>
+<p>The two versions differ in so far as they have these two topics in the opposite order (see table 1.3). According to the Majjhima-nikāya version, the Brahmin first spoke of the Buddha’s role as a leader and then turned to the difficulties of a solitary life in the forest. On reading the Pāli account, these two statements seem like two separate ideas the Brahmin had on his mind.</p>
+<p>According to the Chinese version, however, the Brahmin first spoke of the difficulty of living in seclusion and then turned to the Buddha’s role as a guide and inspiration for his disciples. The Ekottarika-āgama discourse, moreover, explains that it is precisely due to seeing the Buddha that his disciples get a sufficiently strong sense of urgency that motivates them to retire into seclusion on mountains and in caves.<span class="note" id="mn4n66"><span class="details"><span class="p">[n.66] <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 665c1 speaks of the disciples experiencing “embarrassment” or “shame”, 慚愧, on seeing the Buddha, which in the present context seems to convey a sense of “urgency”, saṃvega.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 1.3: Main Topics in <a href="../../mn/mn4.html">MN 4</a> and <a href="../../parallels/ea31.1.html">EĀ 31.1</a></caption>
+<tr><th><a href="../../mn/mn4.html">MN 4</a></th><th><a href="../../parallels/ea31.1.html">EĀ 31.1</a></th></tr>
+<tr><td>Brahmin notes Buddha’s role as guide (1)</td><td>Brahmin refers to dwelling in solitude (→ 2)</td></tr>
+<tr><td>Brahmin refers to dwelling in solitude (2)</td><td>Brahmin notes Buddha’s role as guide (→ 1)</td></tr>
+<tr><td>Buddha gives his autobiography (3)</td><td>Buddha gives his autobiography (→ 3)</td></tr>
+</table>
+<p>With this additional information, a relation between these two statements emerges. Thus the main topic that, according to the Ekottarika-āgama account, the Brahmin Jāṇussoṇi had in mind was the difficulty of living in seclusion. That the disciples of the Buddha nevertheless engaged in such seclusion he then attributed to the inspirational role of the Buddha as their teacher.</p>
+<p>This reasoning of the Brahmin finds its confirmation in both discourses in the Buddha’s detailed account of his own practice of seclusion and consequent attainment of awakening, thereby filling out in detail what made him a guide and inspiration for his disciples. In this way, the Ekottarika-āgama’s presentation clarifies why the Brahmin would come out with these two statements and why the Buddha would dwell at length on his own practice of seclusion and attainment of awakening.</p>
+<p>The two versions continue by turning to the case of recluses and Brahmins who practise impure bodily, verbal, or mental conduct, who are of impure livelihood or under the influence of a set of unwholesome qualities. In contrast to such recluses and Brahmins, the Buddha found solace in living in seclusion, due to his purified conduct and due to his freedom from unwholesome qualities.<span class="note" id="mn4n67"><span class="details"><span class="p">[n.67] While according to <a href="../../mn/mn4.html">MN 4</a> at MN I 17,21 the Buddha “found even more solace” in forest seclusion, bhiyyo pallomam āpādiṃ, <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 665c9 indicates that he “delighted in seclusion, [experiencing] increasing joy”, 樂閑居之處, 倍復喜悅.</span></span></span></p>
+<p>Regarding the listing of these unwholesome qualities, the two versions show some variations (see table 1.4). Qualities mentioned in both versions are:</p>
+<p>the habit of disparaging others and lauding oneself,</p>
+<p>the presence of fear,</p>
+<p>desires for material gains,</p>
+<p>the absence of energy,</p>
+<p>the absence of mindfulness,</p>
+<p>the absence of concentration,</p>
+<p>the absence of wisdom. The Majjhima-nikāya version additionally lists manifestations of the five hindrances.<span class="note" id="mn4n68"><span class="details"><span class="p">[n.68] <a href="../../mn/mn4.html">MN 4</a> at MN I 17,32 and MN I 18,4+14+23+32: abhijjhālū ... byāpannacittā ... thīnamiddhapariyuṭṭhitā ... uddhatā avūpasanatacittā ... kaṅkhī vecikicchī (Be-M I 22,20 and Se-M I 32,9: vicikicchī, Ce-M I 42,21: avupasantaº), which, although not employing exactly the same terminology as usually found in listings of the five hindrances, do correspond to the five hindrances in meaning.</span></span></span> To mention the five hindrances as part of the unwholesome states to be overcome fits the present context well, as both versions later on turn to the attainment of the four jhānas.</p>
+<table class="comparative-table">
+<caption>Table 1.4: Unwholesome Qualities in <a href="../../mn/mn4.html">MN 4</a> and <a href="../../parallels/ea31.1.html">EĀ 31.1</a></caption>
+<tr><th><a href="../../mn/mn4.html">MN 4</a></th><th><a href="../../parallels/ea31.1.html">EĀ 31.1</a></th></tr>
+<tr><td>covetous (1)</td><td>fear (→ 7)</td></tr>
+<tr><td>ill will (2)</td><td>disparaging others and self-praise (→ 6)</td></tr>
+<tr><td>sloth-and-topor (3)</td><td>seeking for material benefits (→ 8)</td></tr>
+<tr><td>restless (4)</td><td>lazy (→ 9)</td></tr>
+<tr><td>doubting (5)</td><td>forgetful (→ 10)</td></tr>
+<tr><td>self-praise and disparaging others (6)</td><td>not concentrated (→ 11)</td></tr>
+<tr><td>fearful (7)</td><td>ignorant (→ 12)</td></tr>
+<tr><td>desirous of gains and honour (8)</td><td></td></tr>
+<tr><td>lazy (9)</td><td></td></tr>
+<tr><td>lacking mindfulness (10)</td><td></td></tr>
+<tr><td>not concentrated (11)</td><td></td></tr>
+<tr><td>lacking wisdom (12)</td><td>(≠ 1-5)</td></tr>
+</table>
+<p>The Bhayabherava-sutta and its Chinese parallel next describe how the Buddha – during the time when he was still a bodhisattva – confronted fear, which could arise because of external circumstances, such as noise caused by wild animals passing by, when being alone in the forest.<span class="note" id="mn4n69"><span class="details"><span class="p">[n.69] The point of the present passage appears to be in particular the arising of fear caused by such external factors as noise, etc., as the case of fear related to a lack of internal purity has already been taken up in both discourses earlier. The topic of the arising of fear when being alone in a forest recurs in <a href="../../sn/sn1.15.html">SN 1:15</a> at SN I 7,3 (or SN2 15 at SN2 I 14,2) and its parallels <a href="../../parallels/sa1335.html">SĀ 1335</a> at T II 368b27 and <a href="../../parallels/sa-2.355.html">SĀ2 355</a> at T II 490b8. While according to the commentary to <a href="../../sn/sn1.15.html">SN 1:15</a>, Spk I 35,1, fear had arisen to a deva, according to <a href="../../parallels/sa1335.html">SĀ 1335</a> and <a href="../../parallels/sa-2.355.html">SĀ2 355</a> it was a monk who had become afraid, and who was then told by a deva that there was nothing to be afraid of. For a survey of the arising of fear as described in <a href="../../mn/mn4.html">MN 4</a> cf. also Weerasinghe 1997: 615-616; on fear in general cf., e.g., Brekke 1999b and Karunaratne 1991; for a listing of eight qualifications for dwelling in solitude according to the Jain tradition cf. Ṭhāṇaṅga 8.594 in Jambūvijaya 1985: 243,1.</span></span></span> In this case, he would not change posture until the fear had subsided. The Majjhima-nikāya version stands alone in reporting that he went to particular shrines on auspicious nights to encounter frightful situations.<span class="note" id="mn4n70"><span class="details"><span class="p">[n.70] <a href="../../mn/mn4.html">MN 4</a> at MN I 20,27. On the auspicious dates listed in <a href="../../mn/mn4.html">MN 4</a> cf. Dietz 1997. Perhaps the present instance in <a href="../../mn/mn4.html">MN 4</a> intends to depict a pre-awakening belief the bodhisattva may have had in the auspiciousness of particular dates and places, since in general, as pointed out by von Simson 1995: 172, “the powers of nature and the sacredness of place and time are as unimportant in the Buddhist doctrine as are the year myths and fertility rites”. In fact, even the adoption of the ancient Indian custom of regularly convening the monks on uposatha days was, according to Vin I 101,20, because of a suggestion by King Bimbisāra, who had seen other ascetics gain lay support by this practice and wanted the Buddhist monks to do the same.</span></span></span></p>
+<p>The Majjhima-nikāya account continues with the Buddha referring to some recluses and Brahmins who mistake day for night, or night for day. In contrast to these, the Buddha recognized day as being day and night as being night. The Majjhima-nikāya version highlights that due to this ability he rightly deserves praise as a being free from delusion, who has appeared in the world for the benefit and welfare of gods and men.<span class="note" id="mn4n71"><span class="details"><span class="p">[n.71] <a href="../../mn/mn4.html">MN 4</a> at MN I 21,20. The same praise recurs in <a href="../../mn/mn12.html">MN 12</a> at MN I 83,14. An extract from the present discussion already appeared in Anālayo 2005b: 2-3.</span></span></span></p>
+<p>The Pāli commentary takes this statement in a literal sense and describes how someone attains jhāna with a white kasiṇa and emerges from this jhāna during the night. Due to the nature of the kasiṇa, he mistakes night for day. Or else some birds usually active only during the day may chirp at night and cause someone who hears them from inside a dwelling to mistake night for day.<span class="note" id="mn4n72"><span class="details"><span class="p">[n.72] Ps I 121,18. The commentary works out both examples in the opposite way as well by describing how someone attains a jhāna with a dark kasiṇa and emerges at daytime, and how someone hears the chirping of a night bird during daytime. Jayatilleke 1973: 30 takes the passage in a symbolic sense, in that the Buddha’s ability to recognize day as day and night as night implies that he “frankly accepts the existence of both good and evil in the world of conditioned existence”.</span></span></span> These commentarial explanations appear somewhat contrived and do not fit the presentation in the Bhayabherava-sutta too well, since the statement in the discourse does not seem to be concerned with only a momentary mistaking of night for day.</p>
+<p>The Pāli commentary is evidently trying to find some way of making sense of this passage, since is it difficult to imagine someone mistaking day for night or night for day. It is also somewhat perplexing that, just because of being able to recognize day as day, one should be considered as a being free from delusion who has appeared in the world for the benefit of gods and men.</p>
+<p>The Ekottarika-āgama discourse has preserved this statement in a somewhat different manner. According to its report, the Buddha instead pointed out that some recluses and Brahmins, whether it be day or night, do not understand the path of Dharma. In contrast to these, the Buddha does understand the path of Dharma, whether it be day or night.<span class="note" id="mn4n73"><span class="details"><span class="p">[n.73] <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666b11:日夜之中解於道法. The expression 道法 regularly stands for the Buddha’s teaching, something other recluses and Brahmins might indeed not have fully understood, be it day or night. Hirakawa 1997: 1160 lists dharma and mārga-dharma as equivalents to 道法, which Soothill 1937/2000: 416 translates as “the way or methods to obtain Nirvāṇa”.</span></span></span> This way of presenting the Buddha’s statement reads more straightforward than its Pāli counterpart.</p>
+<p>Although the Ekottarika-āgama presentation appears more straightforward, the Sanskrit fragment parallels support the Pāli reading.<span class="note" id="mn4n74"><span class="details"><span class="p">[n.74] SHT IV 32 folio 37V2: (saṃ)jñ[o] divaṃse ca [d](i)vasa [sa], which would be a counterpart to <a href="../../mn/mn4.html">MN 4</a> at MN I 21,24: divā yeva samānaṃ divā ti sañjānāmi; cf. also T 374 at T XII 521a29 or T 375 at T XII 765b29, where the same image recurs: 若以晝為夜是即顛倒.</span></span></span> Thus either a transmission error occurred early enough to affect the Pāli and Sanskrit versions, or else the Chinese translators rendered a knotty passage in such a way as to make it more easily comprehensible.</p>
+<p>Be that as it may, the Bhayabherava-sutta and its Ekottarika-āgama parallel continue with the Buddha’s attainment of the four jhānas. The Chinese version links these to the joy experienced when retiring into seclusion, mentioned earlier in both versions, by reporting that the Buddha identified these jhānas to be his experience of happiness when living in secluded places.<span class="note" id="mn4n75"><span class="details"><span class="p">[n.75] <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666b14.</span></span></span></p>
+<p>The two versions continue with the Buddha’s attainment of the three higher knowledges. In both versions, the Buddha explains that his secluded life style should not be misconceived as an indication that he still has to eradicate defilements, since his motivation for living in seclusion is simply the pleasure derived from such dwelling for himself, and his concern for others.<span class="note" id="mn4n76"><span class="details"><span class="p">[n.76] While <a href="../../mn/mn4.html">MN 4</a> at MN I 23,35 speaks of the Buddha “having compassion for future generations”, pacchimañ ca janataṃ anukampamāno, <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666c25 refers to the same in terms of his motivation “to deliver sentient beings”, 度眾生. The Buddha’s own comfort and his compassion for others as the two underlying reasons for his practice of seclusion recur in <a href="../../an/an2.9.html">AN 2:3:9</a> at AN I 60,30.</span></span></span></p>
+<p>The second part of this statement, found in both versions, seems to imply that the Buddha’s way of teaching is not confined to verbal communication. By retiring into meditative seclusion, he sets an example to be emulated by those walking the path he taught. This point comes out with additional clarity in the Ekottarika-āgama version, since in its account the inspirational role of the Buddha’s own practice of seclusion is a prominent theme throughout the whole discourse.</p>
+<p>The two versions conclude by describing that the Brahmin Jāṇussoṇi was sufficiently delighted by this discourse to take refuge.<span class="note" id="mn4n77"><span class="details"><span class="p">[n.77] <a href="../../mn/mn4.html">MN 4</a> at MN I 24,7 and <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 667a1.</span></span></span> In the Pāli discourses, this constitutes one out of numerous instances in which he takes refuge.<span class="note" id="mn4n78"><span class="details"><span class="p">[n.78] Other discourses that report the Brahmin Jāṇussoṇi taking refuge are, e.g., <a href="../../mn/mn27.html">MN 27</a> at MN I 184,16, <a href="../../sn/sn12.47.html">SN 12:47</a> at SN II 77,1, <a href="../../an/an2.7.html">AN 2:2:7</a> at AN I 57,15, <a href="../../an/an3.55.html">AN 3:55</a> at AN I 159,21, <a href="../../an/an3.59.html">AN 3:59</a> at AN I 168,7, <a href="../../an/an4.184.html">AN 4:184</a> at AN II 176,5, <a href="../../an/an6.52.html">AN 6:52</a> at AN III 364,3, <a href="../../an/an7.47.html">AN 7:47</a> at AN IV 56,18, <a href="../../an/an10.119.html">AN 10:119</a> at AN V 236,1, <a href="../../an/an10.167.html">AN 10:167</a> at AN V 251,24, and <a href="../../an/an10.177.html">AN 10:177</a> at AN V 273,13. Tsuchida 1991: 77 comments that this “warns us against using the canonical narratives as ... historical sources without due critical considerations”. The beginning of what appears to be yet another meeting of Jāṇussoṇi with the Buddha can be found in SHT V 1343R3-6 (p. 232), for still another meeting of the two cf. Skilling 2011; on the notion of taking refuge cf., e.g., Carter 1979.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

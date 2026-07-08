@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.91 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.91</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 91</span><span class="mirror-right">（九一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an8.54.html">AN 8.54 (~)</a> / <a href="../an/an8.55.html">AN 8.55</a> / <a href="../parallels/sa91.html">SĀ 91</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, there was a young brahmin named Buddhamitra who went to where the Buddha was, bowed his head in greeting, and sat to one side. He said to the Buddha, &quot;World-Honored One! How many teachings are there that instruct lay people to dwell in their homes and attain present benefits and happiness?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，有一摩纳名曰佛移，往诣佛所，稽首问讯，在一面坐。白佛言：「世尊！为有几法，教在家人处于家中得现报利，并得利乐？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the young brahmin, &quot;There are four teachings that can bring present benefits and happiness to lay people. What are the four? First, being diligent; second, guarding the senses; third, having good friends; fourth, properly managing one&#x27;s livelihood. What is diligence? Whatever work one does, whether it is managing the household, working for the king, farming, doing business, or herding, one should not be weary of the hardships of cold, heat, wind, rain, hunger, thirst, fullness, mosquitoes, flies, bees, etc. One should not give up one&#x27;s work for the sake of completing it, and should not stop in the end. This is called diligence. What is guarding the senses? If a noble son accumulates wealth according to the Dharma, and has plans to prevent it from being robbed by kings, thieves, water, fire, or enemies, and to prevent the birth of evil children, this is called guarding. What is having good friends? If a noble son befriends a good friend who is virtuous by nature, who is not deceitful or negligent, who speaks the truth without deception, and who can help one eliminate the causes of suffering and attain the causes of happiness, this is called having good friends. What is properly managing one&#x27;s livelihood? If a noble son knows his wealth and measures its amount, and manages his expenses within his income, and does not spend it lightly, it is like a person eating an udumbara fruit. When one first eats it, there are many on the tree. After eating it, one sleeps for seven days. When one wakes up, one realizes that one has lost the fruit. One should use reason to find a balance between extravagance and frugality. If one has money and wealth but cannot clothe and feed oneself, or cannot give to others, and is extremely frugal, others will say, &#x27;This person dies like a dog.&#x27; One should measure oneself and not be extravagant or frugal. This is called properly managing one&#x27;s livelihood.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告摩纳：「有四法使在家人得现世报，获利益乐。何谓为四？一能精勤，二能守护诸根，三得善知识，四正理养命。云何精勤？随所作业，家计资生，或为王臣，或为农夫，或复治生，或复牧人，随其所作，不惮劬劳，寒暑风雨，饥渴饱满，蚊虻蝇蜂，虽有勤苦，不舍作业，为成业故，终不休废，是名精勤。云何名为守护诸根？若族姓子如法聚财，设有方计，不为王贼水火之所劫夺，怨憎之处悉不得侵，不生恶子，是名守护。云何名为近于善友？若族姓子近于善友，而此善友资性贤良，终不奸盗，亦不放逸饮酒醉乱，吐出实言，不为欺诳。与如此人共为亲友，未生忧恼能令不生，已生忧恼能使灭除，未生喜乐能使得生，已生喜乐能使不失，是名善友。云何名为正理养命？若族姓子知其财物，量其多少，节其财用，入多于出，莫苟轻用。譬如有人食优昙果，初食之时，树上甚多。既食之已，醉眠七日。既醒悟已，方觉失果。宜处以理，奢俭得中。若有钱财，不能衣食，不能惠施，极自俭用，众人咸言：『如此之人，死如狗死。』宜自筹量，不奢不俭，是名正理养命。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The young brahmin again said to the Buddha, &quot;What practices can make lay people receive benefits in this life and obtain blessings in the next life?&quot;</p></td><td lang="lzh" class="agama-chi"><p>摩纳复白佛言：「修何等法，令在家人现受其利，后世得福？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the young brahmin, &quot;There are four practices that can bring about blessings. What are the four? They are faith, precepts, giving, and wisdom. What is meant by precepts? It means practicing non-killing, up to not drinking alcohol. What is meant by giving? It means giving to śramaṇas, brāhmaṇas, teachers, parents, and the poor, giving them clothing, food, bedding, bedding, and medical treatment for illness, and all kinds of necessities. This is called giving. What is meant by wisdom? It means truly knowing suffering, knowing the truth of suffering; truly knowing the origin, knowing the truth of the origin; truly knowing the path, knowing the truth of the path; truly knowing cessation, knowing the truth of cessation. This is called the perfection of wisdom.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告摩纳：「有四种法能获福报。何谓为四？所谓信戒及施、闻、慧。云何名戒？能行不杀，乃至不饮酒。云何名施？施沙门、婆罗门、师长、父母、贫穷之者，乞与衣食、床敷、卧具、病瘦医药，种种所须，尽能惠与，名之为施。云何闻慧？如实知苦，知苦谛；如实知习，知习谛；如实知道，知道谛；如实知灭，知灭谛；是名闻慧具足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Diligent in cultivating work, diligently guarding and not losing it<br/>befriending good friends, able to properly nourish life. Faith, precepts<br/>giving, hearing, and wisdom, eliminating stinginess and greed. If one<br/>can do this, one will quickly attain the pure path<br/>These eight kinds of dharmas can bring present benefits and<br/>joy, and in the future, one will also attain heavenly bliss.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「精心修事业，　　勤守护不失，亲近于善友，　　能正理养命。信戒施闻慧，　　除断于悭贪，若能如是者，　　速获清净道。如是八种法，　　能得现利喜，于未来之世，　　亦得天上乐。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken thus, the Buddha finished. The Brahmin student Mo-na, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，佛移摩纳闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

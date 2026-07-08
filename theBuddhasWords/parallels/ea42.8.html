@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 42.8 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 42.8</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">42.8</span> <span class="mirror-right">（八）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an2.35.html">AN 2.35 (~)</a> / <a href="../parallels/ma127.html">MĀ 127 (~)</a> / <a href="../parallels/sa992.html">SĀ 992 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder Anāthapiṇḍada went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. The World-Honored One then said to the elder, &quot;Elder, are you widely giving in your household?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿那邠邸长者往至世尊所，头面礼足，在一面坐。是时，世尊告长者曰：「长者家中广施不乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder said to the Buddha, &quot;In my poor household, giving is uninterrupted day and night. At the four city gates, in the great market, in the house, on the road, and to the Buddha and the bhikṣus, these are the eight places of giving. Thus, World-Honored One! Whatever is needed, if they need clothes, I give clothes, if they need food, I give food. The treasures of the country are never refused. Clothing, food, bedding, and medical supplies for the sick are all given. There are also devas who come to me and tell me in the sky: &#x27;Distinguish between high and low, this one upholds the precepts, this one violates the precepts, giving to this one brings merit, giving to that one brings no reward.&#x27; However, my mind is impartial, without this and that, without giving rise to a mind of increase or decrease, with a universally equal compassionate mind towards all sentient beings. There are sentient beings who rely on the life-sustaining faculty to maintain their form. If they have food, they survive, without food, their lives cannot be sustained. Giving to all sentient beings, the reward is immeasurable. Receiving the fruits of the reward, there is no increase or decrease.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者白佛：「贫家惠施，昼夜不断，四城门中，及大市中，家中行路，及佛、比丘僧，是为八处惠施。如是，世尊！其有所须，须衣惠衣，须食与食，国中珍宝终不违逆，衣被、饮食、床卧具、病瘦医药，悉给施之。亦有诸天来至我所，在虚空中而告我曰：『分别尊卑，此者持戒，此者犯戒，与此获福，与彼无报。』然我心正无有彼此，不起增减之心，普等慈心于一切众生。有其众生依命根存形，有食则存，非食命不济。施惠一切众生，其报无量，受其果报，无有增减。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the elder, &quot;Excellent, excellent! Elder! Equal giving is the most honored merit. However, the minds of sentient beings are also superior. Giving to those who uphold the precepts is superior to those who violate the precepts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者：「善哉，善哉！长者！平等施者福第一尊。然众生之心复有胜，如施持戒人胜犯戒者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the devas and gods in the sky praised and rejoiced immeasurably, and immediately spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，虚空神、天，称庆无量，即时而说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Buddha said that choosing the recipient is supreme. The ignorant have increase<br/>and decrease. Seeking a good field of merit, what surpasses the Tathāgata&#x27;s assembly?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「佛说择施尊，　　愚众有增减，求其良福田，　　何过如来众。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;But now the World-Honored One&#x27;s words are extremely wonderful. Giving to those who uphold precepts is superior to those who violate them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「然今世尊所说极为快哉，施持戒人，胜犯戒者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the elder Anāthapiṇḍada, &quot;Now I will tell you about the assembly of sages. Think about it well and keep it in your mind. Sometimes giving little brings much merit, and sometimes giving much brings much merit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告阿那邠邸长者：「今当与汝说贤圣之众，善思念之，抱在心怀。或施少获福多，或施多获福多。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder Anāthapiṇḍada said to the Buddha, &quot;I only wish the World-Honored One would explain the meaning! How does giving little bring much merit? How does giving much bring much merit?&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿那邠邸长者白佛言：「唯愿世尊敷演其义！云何施少获福多？云何施多获福多？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the elder, &quot;Those who are on the path to arahantship, those who have attained arahantship, those who are on the path to non-return, those who have attained non-return, those who are on the path to once-return, those who have attained once-return, those who are on the path to stream-entry, and those who have attained stream-entry. These, elder, are the assembly of sages. Giving little to them brings much merit, and giving much to them brings much merit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长者：「向阿罗汉、得阿罗汉、向阿那含、得阿那含、向斯陀含、得斯陀含、向须陀洹、得须陀洹。是谓，长者！贤圣之众，施少获福多，施多获福多。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Those who have accomplished the four stages of the path, and those who have attained<br/>the four fruits, are called the assembly of sages. Giving to them brings vast merit.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「四向成就人，　　四者成果实，此名贤圣众，　　惠施获福广。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;The past buddhas of the world also had this assembly of sages, no different from mine today. The future buddhas who will appear in the world will also have such an assembly of sages. Therefore, householder, rejoice and joyfully make offerings to the assembly of sages.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「过去久远诸佛世尊，亦复有此贤圣之众，如我今日无异；正使当来诸佛世尊出现于世者，亦得如此贤圣之众。是故，长者！欢喜悦心，供养圣众。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke the subtle Dharma to the householder, establishing him in the stage of non-retrogression. Having heard the Dharma, the householder was overjoyed and boundless. He then rose from his seat, bowed his head at the Buddha&#x27;s feet, circumambulated the Buddha three times, and then departed.</p></td><td lang="lzh" class="agama-chi"><p>是时，世尊与彼长者说微妙法，立不退转之地。长者闻法已，喜庆无量，即从坐起，头面礼足，绕佛三匝，便退而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the householder Anāthapiṇḍada, having heard the Buddha&#x27;s teaching, joyfully accepted it.</p></td><td lang="lzh" class="agama-chi"><p>是时，阿那邠邸长者闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

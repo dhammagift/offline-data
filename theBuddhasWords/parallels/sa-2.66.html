@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.66 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.66</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 66</span><span class="mirror-right">（六六）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn3.17.html">SN 3.17 (~)</a> / <a href="../sn/sn45.141.html">SN 45.141–148</a> / <a href="../parallels/ma141.html">MĀ 141</a> / <a href="../parallels/sa1239.html">SĀ 1239</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, King Prasenajit was in a quiet place, thinking, &quot;Is there one Dharma that can bring present benefits and future benefits?&quot; Having thought this, he went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! Is there one Dharma that can bring present benefits and future benefits?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，波斯匿王于闲静处作是思惟：「颇有一法能得现利，及后世利？」作是念已，往诣佛所，顶礼佛足，退坐一面，白佛言：「世尊！颇有一法能得现利、后世利不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;I have one Dharma that, when practiced and expanded, brings much benefit in the present and future. It is called the Dharma of not being negligent. Practicing it brings present benefits and future benefits. It is like the great earth, which can produce a hundred grains. All grasses and trees and all good dharmas also arise from not being negligent. Not being negligent increases and expands. Great King! It is like the great earth, where all seeds grow and increase. All sentient beings are also like this, arising from not being negligent. Among all root fragrances, black solid fragrance is the best. This is also so. All good dharmas arise from not being negligent. Among solid fragrances, red sandalwood is the best. This is also so. All good dharmas arise from not being negligent as their basis. Not being negligent is the cause of true dharmas. Not being negligent is the place where good dharmas arise. Among all flower garlands, the Gandhabbari flower garland is the best. Among all good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「我有一法，修行增广，现在未来多所饶益。所谓修行不放逸法，现得利益，来世亦利。譬如大地，能生百谷。一切草木一切善法，亦因不放逸生。不放逸增长，不放逸广大。大王！犹如大地，一切种子，因地而生，因地增广。一切众生，因不放逸，亦复如是。一切根香中，黑坚实香最为第一，此事亦尔，一切善法，因不放逸。坚实香中，赤栴檀为第一，此事亦尔，一切善法，因不放逸为本。不放逸者，是实法因。不放逸者，善法生处。一切华鬘中，干陀婆梨琴华鬘最为第一。一切善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all water-born flowers, the blue lotus is the best. Among all good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切水生华中，青莲华第一。一切善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all animal tracks, the elephant track is the largest. Among all good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切畜生迹中，象迹最大。一切善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When fighting with thieves, being able to emerge victorious first is called the best. Among all good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「如与贼战，能先出] cf.【丽】鬪，名为第一。一切善法，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all animals, the lion is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切兽中，师子第一。善法之中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all towers, the high pavilion is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切楼观，高波那写最为第一。善法之中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all trees in Jambudvīpa, the tree on the top of Jambudvīpa is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切阎浮提树，阎浮提界上树最为第一。善法之中，不放逸为第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all jambu trees, the jambu tree is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切詹婆罗树中，鸠罗苦婆罗最为第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all banyan trees, the variegated banyan tree is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切波咤罗树中，锦文芭咤罗为第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all trees, the pārijāta tree is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切树中，波利质多罗为第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all mountains, Mount Sumeru is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切山中，须弥山第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all gold, the Jambūnada gold is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切金中，阎浮檀金第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all fine garments, the Kāśika cloth is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切妙衣，迦尸衣第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all colors, white is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切色中，白为第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all birds, the garuḍa is the best. Among good dharmas, not being negligent is the best. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切鸟中，金翅为第一。诸善法中，不放逸第一。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Among all lights, the sunlight is the best. The Dharma of not being negligent is also like this. The rest is as explained above.</p></td><td lang="lzh" class="agama-chi"><p>「一切明中，日光为第一。不放逸法，亦复如是。余如上说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>As explained above, all those who practice good conduct, not being negligent is their root and the cause of their birth. Therefore, great king, you should now cultivate the Dharma of not being negligent, and also rely on the Dharma of not being negligent. If the king does so, his queens and consorts will also not be negligent; his princes, ministers, and officials will also be the same. If they are not negligent, it is to guard the inner and outer palace. Because of not being negligent, the granaries will be full. If the king is not negligent, it is to protect himself and also to protect all.</p></td><td lang="lzh" class="agama-chi"><p>「如上说诸修行善行，不放逸者是其根本，是其生因。是故大王，汝今应修不放逸法，亦应依止不放逸法。王若如是，王之夫人，及以妃后，亦不放逸；王子大臣，及诸官属亦复如是。若不放逸，即是守护中宫内外。以不放逸故，仓库盈满。王不放逸，则为自护，并护一切。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Not being negligent is supreme, while being negligent is much criticized. In<br/>this life, not being negligent, in the next life, one attains great<br/>benefit. The benefits of this life and the other world, understanding the<br/>benefits of both, is called a hero, the practice of the wise.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「不放逸最胜，　　放逸多讥嫌；今世不放逸，　　后世得大利。现利他世利，　　解知二俱利，是名为健夫，　　明哲之所行。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken this, the Buddha finished. The bhikṣus, having heard the Buddha&#x27;s teaching, rejoiced and upheld it.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

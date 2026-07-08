@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 144 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 144: Channovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn143comp.html#content"></a><a id="next-sutta" href="./mn145comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn144.html">MN 144</a> / <a href="../../parallels/sa1266.html">SĀ 1266</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Channovāda-sutta, the “discourse on an instruction to Channa”, records the events related to Channa’s suicide. This discourse recurs in the Saṃyutta-nikāya and has a parallel in the Saṃyukta-āgama.<span class="note" id="mn144n25"><span class="details"><span class="p">[n.25] The Pāli parallel is <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 55-60 and has the title Channa-sutta. The Chinese parallel is <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347b-348a, for which Akanuma 1929/1990: 112 notes “Channa”, 闡陀, as a tentative title; for a translation of <a href="../../parallels/sa1266.html">SĀ 1266</a>, together with extracts from the present study, cf. Anālayo 2010b. The three versions agree on locating the discourse at Rājagaha.</span></span></span></p>
+<p>The Channovāda-sutta and its parallels begin by narrating that Sāriputta and another monk went to visit Channa, who was sick. The Pāli and Chinese versions disagree on the identity of this other monk, as according to the Pāli versions Sāriputta was accompanied by Mahācunda, while according to the Saṃyukta-āgama version he was in the company of Mahākoṭṭhita.<span class="note" id="mn144n26"><span class="details"><span class="p">[n.26] <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347b18: 摩訶拘絺羅.</span></span></span></p>
+<p>When Sāriputta and his companion came to Channa’s presence,<span class="note" id="mn144n27"><span class="details"><span class="p">[n.27] According to <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347b22, on seeing the two monks coming from afar, Channa tried to get up from his bed as a sign of respect, but Sāriputta told him to stay where he was. A similar pericope can be found, e.g., in <a href="../../sn/sn22.87.html">SN 22:87</a> at SN III 120,1, <a href="../../sn/sn22.88.html">SN 22:88</a> at SN III 125,3, <a href="../../sn/sn35.74.html">SN 35:74</a> at SN IV 46,14, <a href="../../sn/sn35.75.html">SN 35:75</a> at SN IV 47,32, or <a href="../../an/an6.56.html">AN 6:56</a> at AN III 379,15.</span></span></span> Channa told his visitors that his condition was getting worse and that he had decided to commit suicide. According to all versions, Sāriputta attempted to stop Channa from committing suicide and offered to get supplies for him or to act as his attendant,<span class="note" id="mn144n28"><span class="details"><span class="p">[n.28] While according to <a href="../../mn/mn144.html">MN 144</a> at MN III 264,14 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 57,11 Sāriputta offered to supply Channa with food and medicine, according to <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347c2 he only offered medicine.</span></span></span> to which Channa replied by indicating that he did not lack any of these. According to the Pāli versions, at this point Channa proclaimed that his suicide was going to be blameless.<span class="note" id="mn144n29"><span class="details"><span class="p">[n.29] <a href="../../mn/mn144.html">MN 144</a> at MN III 264,26 (cf. also <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 57,26): “‘the monk Channa will use the knife blamelessly’, remember it like this, friend Sāriputta”, anupavajjaṃ channo bhikkhu satthaṃ āharissatī ti, evam etaṃ, āvuso sāriputta, dhārehī ti.</span></span></span> According to the Saṃyukta-āgama account, however, Channa only indicated that the pains he had were hard to bear.<span class="note" id="mn144n30"><span class="details"><span class="p">[n.30] <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347c7: “yet, my disease oppresses this body with extreme pain that is difficult to bear. I wish to kill myself, [since] I do not delight in a life of pain”, 但我疾病苦痛逼身, 難可堪忍, 欲自殺, 不 樂苦生.</span></span></span></p>
+<p>The parallel versions report that Sāriputta inquired if Channa took the senses, the corresponding consciousness, or the objects of the senses as a self or as belonging to a self.<span class="note" id="mn144n31"><span class="details"><span class="p">[n.31] <a href="../../mn/mn144.html">MN 144</a> at MN III 265,7 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 58,10 mention, besides each sense and the corresponding type of consciousness, also the “things”, dharmas, to be experienced through this type of consciousness, e.g., in the case of the eye, cakkhuviññāṇaviññātabbe dhamme. <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347c9 differs in formulation in regard to the last of these three, as it explicitly names the type of sense object, e.g., “form(s) cognisable through the eye”, 眼所識色.</span></span></span> Channa explained that he did not take any of these as a self or as belonging to a self, as he had seen and known their cessation. The monk who had come together with Sāriputta intervened at this point and reminded Channa of a statement made by the Buddha, according to which only one who is free from agitation and dependencies has fully transcended dukkha.<span class="note" id="mn144n32"><span class="details"><span class="p">[n.32] <a href="../../mn/mn144.html">MN 144</a> at MN III 266,6 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 59,10 examine the negative case only in short by proclaiming that “for one who is dependent there is agitation”, nissitassa calitaṃ, after which they take up the positive case of being free from such dependencies. <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347c25 takes up both cases in full, explaining that “if there is dependency, there is agitation. If there is agitation, there is inclination. If there is inclination, there is no tranquillity. If there is no tranquillity, then there arises coming and going. If coming and going arises, then there is future birth and death ... in this way, this entire great mass of dukkha arises”, 有所依者, 則為動搖, 動搖者, 有所趣向, 趣向者, 為不休息, 不休息者, 則隨趣往來, 隨趣往來者, 則有未來生死 ... 如是純大苦聚集 (adopting the 宋, 元, and 明 variant reading 大 instead of 一), followed by presenting the positive case in the same terms, i.e., “when there is no dependency ... in this way this entire great mass of dukkha ceases”. A version of the statement found in <a href="../../mn/mn144.html">MN 144</a> and <a href="../../sn/sn35.87.html">SN 35:87</a> recurs in Ud 8:4 at Ud 81,6 (with the reading rati instead of nati). <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 347c28 does not have a counterpart to the indication, given in <a href="../../mn/mn144.html">MN 144</a> at MN III 266,9 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 59,14, that for one who is free from agitation, etc., there is no here, no beyond, and “no in-between”, na ubhayam anatarena, an expression that Somaratne 1999: 150 suggests to refer to an intermediate existence (Ps V 83,12, in line with the Theravāda position that denies an intermediate existence, glosses as na ubhayattha hoti, “not being in both places”).</span></span></span> According to the Saṃyukta-āgama account, in reply to this admonishment Channa declared to have honoured the Buddha with what is pleasing, adding that he had done what should be done, thereby implicitly laying claim to being an arahant.<span class="note" id="mn144n33"><span class="details"><span class="p">[n.33] <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 348a7: 所作, 於今已作. The expression “having done what should be done”, 所作已作, is a standard pericope in descriptions of the attainment of full liberation.</span></span></span> Channa’s claim to have honoured the Buddha with what is pleasing is also found at an earlier junction in the Pāli versions, where it comes together with Channa’s declaration that his suicide will be blameless.<span class="note" id="mn144n34"><span class="details"><span class="p">[n.34] <a href="../../mn/mn144.html">MN 144</a> at MN III 264,24 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 57,23. References to having honoured the teacher recur elsewhere in the discourses as part of a declaration of having attained full awakening, cf. <a href="../../mn/mn73.html">MN 73</a> at MN I 497,5, <a href="../../tha/tha2.html#p178">Th 178</a>, <a href="../../tha/tha11.html#p604">Th 604</a>, <a href="../../tha/tha14.html#p656">Th 656</a>, <a href="../../tha/tha15.html#p687">Th 687</a>, <a href="../../tha/tha16.html#p792">Th 792</a>, <a href="../../tha/tha16.html#p891">Th 891</a>, <a href="../../tha/tha16.html#p918">Th 918</a>, <a href="../../tha/tha17.html#p1016">Th 1016</a>, <a href="../../tha/tha17.html#p1050">Th 1050</a>, <a href="../../tha/tha18.html#p1088">Th 1088</a>, and <a href="../../tha/tha20.html#p1185">Th 1185</a>; cf. also <a href="../../an/an6.103.html">AN 6:103</a> AN III 443,24, where full awakening could also be implicit, as here the reference to having honoured the teacher is preceded by kiccakārī ca bhavissāmi. References to a behaviour that is pleasing occur also in <a href="../../an/an4.87.html">AN 4:87</a> at AN II 88,12 and <a href="../../an/an5.104.html">AN 5:104</a> at AN III 131,25 in a description of the conduct displayed by monks towards the Buddha.</span></span></span></p>
+<p>The three versions report that Channa committed suicide, after which Sāriputta approached the Buddha and asked where Channa had been reborn. In reply, according to the Pāli versions the Buddha reminded Sāriputta of Channa’s earlier declaration of blamelessness,<span class="note" id="mn144n35"><span class="details"><span class="p">[n.35] <a href="../../mn/mn144.html">MN 144</a> at MN III 266,21 and <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 59,26.</span></span></span> while in the Saṃyukta-āgama version he reminded Sāriputta of Channa’s claim to having honoured the Buddha with what is pleasing.<span class="note" id="mn144n36"><span class="details"><span class="p">[n.36] <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 348a17.</span></span></span> Thus the Buddha’s reply in the Pāli and Chinese versions, although differing in formulation, clearly endorses Channa’s earlier claim.</p>
+<p>According to the Channovāda-sutta and its parallels, Sāriputta remarked that Channa had closely associated with lay families,<span class="note" id="mn144n37"><span class="details"><span class="p">[n.37] <a href="../../mn/mn144.html">MN 144</a> at MN III 266,24 indicates that Channa had “families that were his friends, with whom he was intimate, that he could approach”, mittakulāni suhajjakulāni upavajjakulānī ti (on upavajja in this passage cf. also Bodhi 2000: 1407 notes 56 and 57), cf. also <a href="../../sn/sn35.87.html">SN 35:87</a> at SN IV 59,29. <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 348a22 indicates that Channa “had families of supporters, he was very intimate with these families and was spoken well of in these families”, 有供養家, 極親厚家, 善言語家.</span></span></span> a remark apparently meant to explain why Sāriputta had thought Channa’s claim to be mistaken. In reply, the Buddha clarified that he did not deem such association blameworthy, as he only considered it blameworthy if someone were to give up the body and then take up another body, which had not been the case with Channa.</p>
+<p>The Buddha’s reply in the Pāli and Chinese versions indicates that Channa passed away as an arahant. According to the commentarial explanation, at the time of committing suicide Channa was still a worldling and it was only during the interval between using the knife and passing away that he developed insight and became an arahant.<span class="note" id="mn144n38"><span class="details"><span class="p">[n.38] Ps V 83,19. Keown 1996: 27 comments that “why the commentary should take such pains to establish that Channa was not an Arhat ... is that the tradition simply found it inconceivable that an Arhat would be capable of suicide ... by maintaining that Channa was unenlightened until the very end, the image of the Arhat remains untarnished”.</span></span></span> This commentarial explanation does not seem to fit the discourse too well, as in the Pāli and Chinese versions the Buddha explicitly states that Channa had used the knife without incurring blame.<span class="note" id="mn144n39"><span class="details"><span class="p">[n.39] <a href="../../mn/mn144.html">MN 144</a> at MN III 266,31: anupavajjo (Se-MN III 479,20: anupavajjaṃ), SN 35: 87 at SN IV 60,4: anupavajjaṃ, and <a href="../../parallels/sa1266.html">SĀ 1266</a> at T II 348a27: 無大過故. The wording in <a href="../../parallels/sa1266.html">SĀ 1266</a> does not support Keown 1996: 23, who suggests taking anupavajja in the sense of “not being reborn” (following the commentarial gloss at Ps V 82,9: anupavajjan ti anuppattikaṃ appaṭisandhikaṃ), instead of understanding anupavajja to mean “not blameworthy”. According to Delhey 2009b: 87, from an early Buddhist perspective “the released one ... can, at least if he is gravely ill, end his life by his own hand”. Filliozat 1963: 36 comments that “l’attentat ā sa propre vie est un péché grave, mais il n’en est pas de même de l’abandon d’un corps devenu inutile et dont on est déjà tout ā fait détaché affectivement”. Lamotte 1965/1987: 106 explains that “from the point of view of Early Buddhism, suicide is a normal matter in the case of the Noble Ones who, having completed their work, sever their last link with the world and voluntarily pass into Nirvāṇa”. Schmithausen 2000a: 36 comments that “in contrast to ordinary living beings, saints (i.e. fully liberated persons, arhats) do not regard their biological life as something valuable and are indifferent to it”. De La Vallée Poussin 1922: 25 remarks that “the arhat ... if he is not, like a Buddha, capable of abandoning life in a quiet way, there is no reason why he should not have recourse to more drastic methods”; cf. also Thakur 1963: 109. Wayman 1982: 290 comments that “the example of Channa shows the acknowledgement of exceptional cases where suicide was justified”. Wiltshire 1983: 137 concludes that “if this body has lost its essential usefulness ... then the body can be relinquished”; cf. also Anālayo 2007f: 162, Becker 1990: 547, Berglie 1986: 34, Filliozat 1967: 73, and Oberlies 2006: 218.</span></span></span> This would imply that Channa was already blameless at the time he used the knife to commit suicide, not only when he passed away.<span class="note" id="mn144n40"><span class="details"><span class="p">[n.40] Delhey 2006: 35 concludes that there is “no reason for doubting that he already was released from rebirth when he decided to commit suicide”.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

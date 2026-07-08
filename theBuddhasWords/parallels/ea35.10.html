@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 35.10 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 35.10</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">35.10</span> <span class="mirror-right">（一〇）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../ud/ud1.8.html">Ud 1.8 (~)</a> / <a href="../parallels/sa1072.html">SĀ 1072 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder&#x27;s son Saṃgāma went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. The elder&#x27;s son then said to the Buddha, &quot;May the World-Honored One allow me to follow the path.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，僧迦摩长者子往至世尊所，头面礼足，在一面坐。是时，长者子白佛言：「唯愿世尊听在道次。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder&#x27;s son immediately became a monk and practiced diligently in a secluded place, attaining the fruit of the Dharma. The reason for the noble sons shaving their heads and beards and leaving home to study the path is that they have exhausted birth and death, established the practice of purity, accomplished what was to be done, and will no longer take rebirth, knowing it as it is. At that time, Saṃgāma became an arhat. At that time, in a secluded place, he had this thought: &quot;The appearance of the Tathāgata is extremely rare, like the appearance of a Tathāgata, like the appearance of an udumbara flower. It is also like this, the appearance of the Tathāgata in the world is rare, the cessation of all activities is also rare, the way out is also rare, the exhaustion of desire, the absence of desire, and nirvāṇa, this is the way out.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，长者子即得为道，在闲静之处，克己修行，成其法果。所以族姓子剃除须发，出家学道：生死已尽，梵行已立，所作已办，更不复受胎，如实知之。是时，僧迦摩便成阿罗汉。是时，在闲静之处，便生此念：「如来出现甚为难遇，多萨阿竭时时乃出，亦如优昙钵花时时乃出。此亦如是，如来出现于世时时乃有，一切行灭亦复难遇，出要亦难，爱尽、无欲、涅槃，此乃为要。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the mother of Saṃgāma&#x27;s wife heard that her son-in-law had become a monk, no longer attached to desires, abandoned his family, and also abandoned her daughter, like spitting out a lump of saliva. At that time, the mother went to her daughter and said, &quot;Is it true that your husband has become a monk?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，僧迦摩妇母闻女聟作道人，不复著欲，舍于家累，又捐我女，如弃聚唾。尔时，此母往至女所，而语女曰：「汝聟实作道乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The daughter replied, &quot;I don&#x27;t know if you have become a monk or not?&quot;</p></td><td lang="lzh" class="agama-chi"><p>其女报曰：「女亦不详为作道不耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The old mother said, &quot;You should now adorn yourself, put on nice clothes, and take the boy and girl to Saṃgāma.&quot; At that time, the mother and daughter went together to where Saṃgāma was. At that time, Venerable Saṃgāma was sitting cross-legged under a tree. At that time, the wife and mother stood silently in front.</p></td><td lang="lzh" class="agama-chi"><p>其老母曰：「汝今可自庄严著好衣裳，抱此男、女，往至僧迦摩所。」尔时，母及女共相将至僧迦摩所。尔时，尊者僧迦摩在一树下结加趺坐。是时，妇、母二人在前，默然而立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the old mother and daughter looked at Saṃgāma from head to toe and said to Saṃgāma, &quot;Why don&#x27;t you speak to my daughter now? These children were born from you. What you are doing now is truly unreasonable and unacceptable to others. What you are thinking now is not the way of a human being.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，老母及女观僧迦摩从头至足，而语僧迦摩曰：「汝今何故不与我女共语乎？今此儿女由汝而生，汝今所为实为非理，人所不许，汝今所思惟者，非是人行。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Saṃgāma immediately spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者僧迦摩即时便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>There is no greater good, no greater<br/>excellence, no greater truth than this good thought.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「此外更无善，　　此外更无妙，此外更无是，　　善念无过是。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the mother of the wife said to Saṃgāma, &quot;What crime has my daughter committed? What is unlawful? Why do you abandon her to go forth and study the path?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，妇母语僧迦摩曰：「我女今有何罪？有何非法？今何故舍之出家学道？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Saṃgāma spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，僧迦摩便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The unclean practice of the stinking place, anger, and fondness for<br/>lying, jealousy, and an improper mind, are said by the Tathāgata.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「臭处不净行，　　瞋恚好妄语，嫉妬心不正，　　如来之所说。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the old mother said to Saṃgāma: &quot;It is not only my daughter who has this matter, all women are the same. The people of Śrāvastī who see my daughter are all confused in mind, wanting to have intercourse with her, like thirsty people wanting to drink, gazing at her without satiation, all giving rise to attachment. How can you now abandon her to study the path and further slander her? If you do not take my daughter today, you should take back the sons and daughters you have given birth to.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，老母语僧迦摩曰：「非独我女而有此事，一切女人皆同此耳。舍卫城中人民之类，见我女者，悉皆意乱，欲与交通，如渴欲饮，覩无厌足，皆起想著。汝今云何舍之学道，方更谤毁？设汝今日不用我女者，汝所生男、女，还自录之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Saṃgāma again spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，僧迦摩复说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I also have no sons or daughters, fields, or<br/>property, nor any slaves, attendants, or retinue. Walking alone<br/>without companions, I enjoy quiet places, practicing the way<br/>of a monk, seeking the true Buddha&#x27;s path. Those<br/>who have sons and daughters are practiced by fools<br/>I am always without a self, how could there<br/>be sons and daughters?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我亦无男女，　　田业及财宝，亦复无奴婢，　　眷属及营从。独步无有侣，　　乐于闲静处，行作沙门法，　　求于正佛道。有男有女者，　　愚者所习行，我常无我身，　　岂有男女哉。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the wife, mother, son, and daughter, having heard this verse, each thought, &quot;Judging from my observation of his intention today, he will definitely not return home.&quot; They further observed from head to toe, sighed deeply, and knelt before him, saying, &quot;We all forgive any unwholesome deeds committed by body, speech, or mind.&quot; They then circumambulated him three times and left.</p></td><td lang="lzh" class="agama-chi"><p>是时，妇、母、男、女闻说此偈已，各作是念：「如我今日观察此意，必不还家。」复更观察从头至足，长叹息已，前自长跪，而作是语：「设身、口、意所造非法者，尽共忍之。」即遶三匝而退所在。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda, at the time, put on his robe, took his alms bowl, entered Śrāvastī to beg for food, and saw from afar the old mother and daughter. He asked them, &quot;Have you seen Saṃgāma before?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者阿难到时，著衣持钵，入舍卫城乞食，遥见老母及女而问之曰：「向者颇见僧迦摩乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The old mother replied, &quot;Although I saw him, I did not see him.&quot;</p></td><td lang="lzh" class="agama-chi"><p>其老母报曰：「虽见亦不为见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda asked, &quot;Did you speak with him?&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难报曰：「颇共言语乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The old mother replied, &quot;Although I spoke with him, it did not enter my mind.&quot;</p></td><td lang="lzh" class="agama-chi"><p>老母报曰：「虽共言语，不入我意。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者阿难便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Wishing to make fire arise from water, and water arise from fire, Wishing<br/>to make the empty dharmas have existence, and the desireless to have desire.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「欲使火生水，　　复使水生火，空法欲使有，　　无欲欲使欲。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda, having begged for alms, returned to Jetavana Anāthapiṇḍada-ārāma. He went to Saṃgāma and sat to one side. He said to Saṃgāma, &quot;Do you know the true Dharma?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者阿难乞食已，还诣祇树给孤独园。往至僧迦摩所，在一面坐。语僧迦摩曰：「已知如真法乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Saṃgāma replied, &quot;I have already realized the true Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>僧迦摩报曰：「我已觉知如真法也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda said, &quot;How did you realize the true Dharma?&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难报曰：「云何觉知如真法乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Saṃgāma replied, &quot;Form is impermanent, and the meaning of impermanence is suffering; suffering is non-self; non-self is emptiness. Feeling, perception, formation, and consciousness are all impermanent, and the meaning of impermanence is suffering; suffering is non-self; non-self is emptiness. These five aggregates of clinging are the meaning of impermanence; the meaning of impermanence is the meaning of suffering; I do not possess them, they do not possess me.&quot; At that time, Saṃgāma spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>僧迦摩报曰：「色者无常，此无常义即是苦；苦者即无我；无我者即是空也。痛、想、行、识皆悉无常，此无常义即是苦；苦即无我；无我者即是空也。此五盛阴是无常义；无常义者即是苦义；我非彼有，彼非我有。」是时，僧迦摩便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Suffering arises from suffering, and liberation from suffering is also like this. The<br/>eightfold noble path leads to the place of complete cessation. One will not<br/>return to this birth, and will no longer wander in the heavens and<br/>human realms. One will exhaust the original source of suffering, and forever cease<br/>without moving. I now see the empty traces, as the Buddha has said<br/>Now I have attained arahantship and will no longer accept rebirth in the womb.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「苦苦还相生，　　度苦亦如是，贤圣八品道，　　乃至灭尽处。更不还此生，　　流转天人间，当尽苦原本，　　永息无移动。我今见空迹，　　如佛之所说，今得阿罗汉，　　更不受胞胎。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda exclaimed, &quot;Excellent! The true Dharma is well able to resolve and understand.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者阿难叹曰：「善哉！如真之法善能决了。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，阿难便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Well guarding the traces of the holy life, also able to cultivate<br/>the path well, cutting off all bonds, a true disciple of the Buddha.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「善守梵行迹，　　亦能善修道，断诸一切结，　　真佛之弟子。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, after Ānanda had spoken this verse, he immediately rose from his seat and departed. He went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and stood to one side.</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难说此偈已，即从坐起而去。往至世尊所，头面礼足，在一面立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda, with this cause and condition, fully informed the World-Honored One. At that time, the World-Honored One told the bhikṣus, &quot;If one wishes to discuss equality among arhats, one should say that it is Bhikṣu Saṃgāma. The one who can subdue the demon&#x27;s retinue is also Bhikṣu Saṃgāma. The reason is that Bhikṣu Saṃgāma went to subdue the demon seven times before finally attaining the Way. From now on, I allow seven transformations to be made for the Way. If one goes beyond this limit, it is not the Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难以此因缘，具白世尊。尔时，世尊告诸比丘：「欲平等论阿罗汉，当言僧迦摩比丘是也。能降伏魔官属者，亦是僧迦摩比丘。所以然者，僧迦摩比丘七变往降魔，今方成道。自今已后，听七变作道。过此限者，则为非法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;Among my śrāvakas, the bhikṣu who can subdue the demon and now finally attain the Way is Bhikṣu Saṃgāma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「我声闻中第一比丘能降伏魔，今方成道者，所谓僧迦摩比丘是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

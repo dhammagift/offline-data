@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 3 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 3: Dhammadāyāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn2comp.html#content"></a><a id="next-sutta" href="./mn4comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn3.html">MN 3</a> / <a href="../../parallels/ma88.html">MĀ 88</a> / <a href="../../parallels/ea18.3.html">EĀ 18.3</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Dhammadāyāda-sutta, the “discourse on heirs in the Dharma”, reports a brief instruction by the Buddha, which is followed by an explanation given by Sāriputta. This discourse has a parallel in the Madhyama-āgama and in the Ekottarika-āgama.<span class="note" id="mn3n52"><span class="details"><span class="p">[n.52] The parallels are <a href="../../parallels/ma88.html">MĀ 88</a> at T I 569c-571b, entitled “discourse on seeking the Dharma”, 求法經, and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 587c-589a. While <a href="../../mn/mn3.html">MN 3</a> and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> take place in Jeta’s Grove by Sāvatthī, the capital of Kosala, <a href="../../parallels/ma88.html">MĀ 88</a> locates the discourse in a grove near the village Pañcasālā in the same district of Kosala. A village Pañcasālā is also mentioned in <a href="../../sn/sn4.18.html">SN 4:18</a> at SN I 113,29 (or SN2 154 at SN2 I 252,16), which is, however, situated in the district of Magadha. Comments on <a href="../../parallels/ma88.html">MĀ 88</a> can be found in Minh Chau 1964/1991: 30, 58, and 205. <a href="../../parallels/ea18.3.html">EĀ 18.3</a> has been translated by Huyen-Vi 1995: 51-57.</span></span></span></p>
+<p>The Dhammadāyāda-sutta and its two Chinese parallels open with an exhortation given by the Buddha to the monks that they should accord priority to the Dharma and not to material things, since to seek after material things would bring reproach on them and also on their teacher.<span class="note" id="mn3n53"><span class="details"><span class="p">[n.53] <a href="../../mn/mn3.html">MN 3</a> at MN I 12,14 refers to being a “heir”, dāyāda, in the Dharma or in material things, <a href="../../parallels/ma88.html">MĀ 88</a> at T I 570a2 speaks of “seeking” for these two, 求, and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 587c28 instructs to keep the gift of Dharma in mind instead of training for [the sake of] material gifts, 念法施, 勿學財施. While in <a href="../../mn/mn3.html">MN 3</a> and <a href="../../parallels/ma88.html">MĀ 88</a> the Buddha just continues his exposition, according to <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 588a1 at this point the monks beg the Buddha to explain in more detail what he meant. The image of becoming a “heir”, dāyāda, to the Buddha’s teachings recurs in, e.g., <a href="../../sn/sn35.95.html">SN 35:95</a> at SN IV 72,17, <a href="../../sn/sn47.3.html">SN 47:3</a> at SN V 143,7, <a href="../../an/an4.254.html">AN 4:254</a> at AN II 248,21, <a href="../../an/an8.63.html">AN 8:63</a> at AN IV 299,18, <a href="../../tha/tha18.html#p1058">Th 1058</a>, <a href="../../tha/tha20.html#p1168">Th 1168</a>-1169, and <a href="../../thi/thi4.html#p63">Thī 63</a>. <a href="../../parallels/ma88.html">MĀ 88</a> at T I 569c26 also differs from <a href="../../mn/mn3.html">MN 3</a> and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> in that it gives a listing of the names of chief disciples who were present on this occasion.</span></span></span></p>
+<p>The three versions draw out the implication of this exhortation with the help of a hypothetical situation in which the Buddha would offer leftover food from his own meal to two hungry monks. In contrast to one of these monks, who takes the food, the more praiseworthy of the two monks does not accept the food in order to avoid succumbing to the attraction of material things.<span class="note" id="mn3n54"><span class="details"><span class="p">[n.54] Mahāsi 1982/2006a: 20-21 explains that “the monk who restrains his desire to the point of declining the Buddha’s offer of food ... will be able to ... cultivate contentment ... [and] will not get disheartened in the face of hardships and privations”.</span></span></span></p>
+<p>The Madhyama-āgama discourse next describes the detrimental situation of a teacher, who practises seclusion himself, but whose disciples do not follow their teacher’s example. Having said that much, in the Madhyama-āgama account the Buddha indicates that he has back pain and asks Sāriputta to continue instructing the monks.<span class="note" id="mn3n55"><span class="details"><span class="p">[n.55] <a href="../../parallels/ma88.html">MĀ 88</a> at T I 570b22. Several Pāli discourses report a similar situation, with the Buddha taking a rest due to back pains and asking one of his eminent disciples to deliver a discourse in his stead, cf., e.g., <a href="../../dn/dn33.html">DN 33</a> at DN III 209,17, <a href="../../mn/mn53.html">MN 53</a> at MN I 354,24, <a href="../../sn/sn35.202.html">SN 35:202</a> at SN IV 184,7, and <a href="../../an/an10.67.html">AN 10:67</a> at AN V 123,1. These instances differ from <a href="../../parallels/ma88.html">MĀ 88</a> in as much as in each case it is late at night and the Buddha has already spent a considerable amount of time in giving a discourse. Another such instance can be found in the Saṅghabhedavastu in Gnoli 1977: 6,10+20, according to which the Buddha told one of his disciples that he had back pains and wanted to rest, asking the disciple to answer a question about the origin of the Sakyans in his stead. According to the Saṅghabhedavastu account, the real reason for delegating the question to one of his disciples was that the Buddha wanted to avoid answering it himself, as he thought that if he were to disclose the origins of the Sakyans this might be misunderstood as self-praise on his part. Thus in the Saṅghabhedavastu account the Buddha refers to his back pain mainly as a polite excuse in order to be able to hand over the teaching duty to one of his disciples. A similar perspective on the Buddha’s back pain can be found in some Pāli commentaries. The Dīgha-nikāya commentary on the above quoted passage simply explains the Buddha’s back pain to be an after-effect of the ascetic practices undertaken before his awakening, Sv III 974,16: bhagavato hi chabbassāni mahāpadhānaṃ padahantassa mahantaṃ kāyadukkhaṃ ahosi. athassa aparabhāge mahallakakāle piṭṭhivāto uppajji, so that from its perspective the Buddha appears to have had real pain and needed to take a rest. The Majjhima-nikāya commentary and the Saṃyuttanikāya commentary, Ps III 28,13 and Spk III 52,14, however, record also an alternative explanation, according to which the Buddha wanted to make use of the new hall of the Sakyans in all four postures, santhāgārasālaṃ pana catūhi iriyāpathehi paribhuñjitukāmo ahosi. They explain that in speaking of back pain the Buddha only used the slight discomfort caused by the sitting posture as a polite excuse. A similar perspective can be found in the Aṅguttara-nikāya commentary, Mp V 44,18, with the difference that according to its presentation the Buddha mentioned his back pain because he wanted to give his disciple an occasion to deliver teachings, therassa okāsakaraṇatthaṃ evam āha. These commentarial explanations seem to reflect a tendency of glossing over physical afflictions of the Buddha, which would no longer have been compatible with the status accorded to him in later times. For a discussion of another manifestation of the same tendency, in relation to the Buddha’s last meal, cf. An 2006.</span></span></span></p>
+<p>In the Majjhima-nikāya version, however, the Buddha had already retired into his dwelling after having described the behaviour of the two monks in regard to the leftover food, without broaching the topic of seclusion.<span class="note" id="mn3n56"><span class="details"><span class="p">[n.56] According to Ps I 99,1, the Buddha had left thinking that Sāriputta would continue his discourse.</span></span></span> According to the Pāli discourse, it was Sāriputta who then addressed the monks by broaching the topic of a teacher who dwells in seclusion, while his disciples do not follow this example.</p>
+<p>The Ekottarika-āgama account also reports that the Buddha left right after describing the two monks’ behaviour in regard to his leftover food. In the Ekottarika-āgama version, the listening monks then wonder who could give a detailed explanation of this short instruction of the Buddha and finally decide to approach Sāriputta.<span class="note" id="mn3n57"><span class="details"><span class="p">[n.57] <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 588a26. This, too, is a common procedure in the Pāli discourses, thus one finds the monks asking Mahākaccāna to explain a brief saying made by the Buddha in <a href="../../mn/mn18.html">MN 18</a> at MN I 110,22, <a href="../../mn/mn133.html">MN 133</a> at MN III 194,9, <a href="../../mn/mn138.html">MN 138</a> at MN III 224,3, and <a href="../../an/an10.172.html">AN 10:172</a> at AN V 255,24; Ānanda is asked to do the same in <a href="../../sn/sn35.116.html">SN 35:116</a> at SN IV 94,1, <a href="../../sn/sn35.117.html">SN 35:117</a> at SN IV 98,28, and <a href="../../an/an10.115.html">AN 10:115</a> at AN V 225,20.</span></span></span></p>
+<p>In the Majjhima-nikāya discourse, it is not obvious why Sāriputta should turn to the topic of seclusion right after the Buddha had brought up the example of the behaviour of the two monks towards his leftover food. Here the Madhyama-āgama version helps to bridge the two topics, since in its account it was the Buddha who had raised the subject of seclusion, so that here Sāriputta simply takes up a topic that had already been broached by the Buddha.</p>
+<p>The Madhyama-āgama version continues with Sāriputta asking the other monks for their understanding of the Buddha’s statement about living in seclusion. In reply, two monks expressed their opinion by describing the delight that other monks experience when a senior monk declares to have reached the final goal or when they witness a monk of middle standing or even a new monk who is intent on reaching awakening.<span class="note" id="mn3n58"><span class="details"><span class="p">[n.58] <a href="../../parallels/ma88.html">MĀ 88</a> at T I 570c14.</span></span></span> According to the Madhyama-āgama account, Sāriputta was not satisfied with these replies and presented his way of understanding the Buddha’s statement. He did so by contrasting three grounds for blame incurred by those who do not train in seclusion with three grounds for praising monks who train in seclusion and thereby follow their teacher’s example.</p>
+<p>While in the Majjhima-nikāya and the Ekottarika-āgama versions Sāriputta’s exposition also begins by putting a question to the other monks, in these two versions this query appears to be merely a rhetorical question.<span class="note" id="mn3n59"><span class="details"><span class="p">[n.59] <a href="../../mn/mn3.html">MN 3</a> at MN I 14,2 and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 588b5.</span></span></span> Instead of expressing their own opinion on the matter, the monks simply ask Sāriputta to explain, in reply to which he takes up the same three grounds for blame or praise as found in the Madhyama-āgama discourse.</p>
+<p>By examining the grounds for blame and praise, Sāriputta’s exposition takes up the contrast between reproach and absence of reproach mentioned in the Buddha’s initial statement at the outset of the discourse, according to which monks who seek after material things will bring reproach onto themselves and also onto their teacher.</p>
+<p>The Madhyama-āgama presentation offers an additional rationale for Sāriputta’s treatment of the contrast between the blameworthy neglect of seclusion and its praiseworthy opposite. Its account suggests that Sāriputta’s exposition serves to counterbalance the one-sided interpretation of the two monks. By discussing the blameworthiness of neglecting seclusion, Sāriputta’s exposition highlights that the important distinction is not whether one delights in the practice of others, but whether one avoids the blame incumbent on not dedicating oneself to the practice of seclusion.</p>
+<p>The Dhammadāyāda-sutta and its two parallels agree that Sāriputta concluded his explanation by listing a standard set of mental defilements and by presenting the noble eightfold path as the path to their removal and to the attainment of awakening.<span class="note" id="mn3n60"><span class="details"><span class="p">[n.60] <a href="../../mn/mn3.html">MN 3</a> at MN I 15,25, <a href="../../parallels/ma88.html">MĀ 88</a> at T I 571a29, and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 588c25. In its treatment of these defilements, <a href="../../parallels/ma88.html">MĀ 88</a> seems to make the additional point that the task is not only to abandon mental defilements, but also to go beyond aversion to these mental defilements. Thus, in relation to thoughts of desires, <a href="../../parallels/ma88.html">MĀ 88</a> at T I 571a29 explains that “sensual thoughts are evil, aversion to sensual thoughts is also evil”, 念欲惡, 惡念欲亦惡, and describes how one “removes sensual thoughts and also removes the aversion towards sensual thoughts”, 彼斷念欲, 亦斷惡念欲 (my translation follows a suggestion in the 佛光 Madhyamaāgama edition vol. 2 p. 775 note 2, according to which the first 惡 stands for <i>è</i>, “unwholesome” or “bad”, while the second 惡 stands for w<i>ù</i>, “to loathe”, “to dislike”; on this polyphonic character cf. also Bucknell 1999a: 59).</span></span></span> The Madhyama-āgama version concludes with the Buddha expressing his approval of Sāriputta’s exposition,<span class="note" id="mn3n61"><span class="details"><span class="p">[n.61] <a href="../../parallels/ma88.html">MĀ 88</a> at T I 571b13.</span></span></span> while the other two versions only report that the monks rejoiced in Sāriputta’s exposition.<span class="note" id="mn3n62"><span class="details"><span class="p">[n.62] <a href="../../mn/mn3.html">MN 3</a> at MN I 16,11 and <a href="../../parallels/ea18.3.html">EĀ 18.3</a> at T II 589a7.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

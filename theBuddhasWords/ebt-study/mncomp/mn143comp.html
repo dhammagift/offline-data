@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 143 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 143: Anāthapiṇḍikovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn142comp.html#content"></a><a id="next-sutta" href="./mn144comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn143.html">MN 143</a> / <a href="../../parallels/ma28.html">MĀ 28 (~)</a> / <a href="../../parallels/sa593.html">SĀ 593 (~)</a> / <a href="../../parallels/sa1032.html">SĀ 1032 (~)</a> / <a href="../../parallels/sa-2.187.html">SĀ² 2.187 (~)</a> / <a href="../../parallels/ea51.8.html">EĀ 51.8</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Anāthapiṇḍikovāda-sutta, the “discourse on an instruction to Anāthapiṇḍika”, records the teachings given by Sāriputta to the dying Anāthapiṇḍika. The Anāthapiṇḍikovāda-sutta has a parallel in the Ekottarika-āgama.<span class="note" id="mn143n1"><span class="details"><span class="p">[n.1] The parallel is <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819b-820c, which agrees with <a href="../../mn/mn143.html">MN 143</a> on locating the discourse in Jeta’s Grove by Sāvatthī. Akanuma 1929/1990: 171 also lists <a href="../../parallels/ma28.html">MĀ 28</a> at T I 458b-461b as a parallel to <a href="../../mn/mn143.html">MN 143</a>. The instructions given by Sāriputta to Anāthapiṇḍika in <a href="../../parallels/ma28.html">MĀ 28</a>, however, rather parallel <a href="../../sn/sn55.26.html">SN 55:26</a> at SN V 380-385, a discourse that also agrees with <a href="../../parallels/ma28.html">MĀ 28</a> in reporting that Anāthapiṇḍika recovered from his disease. Hence <a href="../../parallels/ma28.html">MĀ 28</a>, together with a Sanskrit fragment parallel to <a href="../../parallels/ma28.html">MĀ 28</a>, SHT VI 1397 (pp. 116-117), are better reckoned as parallels to <a href="../../sn/sn55.26.html">SN 55:26</a>. Yet another discourse given to Anāthapiṇḍika at a time when he was sick is <a href="../../sn/sn55.27.html">SN 55:27</a> at SN V 385-387, in which Ānanda is the speaker.</span></span></span> The first part of the Anāthapiṇḍikovāda-sutta, which reports Sāriputta’s visit to Anāthapiṇḍika, has also a parallel in the Saṃyukta-āgama,<span class="note" id="mn143n2"><span class="details"><span class="p">[n.2] The parallel to Sāriputta’s visit to Anāthapiṇḍika is <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c-270a, which agrees with <a href="../../mn/mn143.html">MN 143</a> on locating the discourse in Jeta’s Grove by Sāvatthī. For a translation of <a href="../../parallels/sa1032.html">SĀ 1032</a>, together with extracts from the present study, cf. Anālayo 2010n.</span></span></span> while the later part of the Anāthapiṇḍikovāda-sutta, which takes place after Anāthapiṇḍika’s death, has a Pāli parallel in the Saṃyutta-nikāya and two Chinese parallels found in two Saṃyukta-āgama collections.<span class="note" id="mn143n3"><span class="details"><span class="p">[n.3] The parallels to Anāthapiṇḍika’s post mortem visit to the Buddha are <a href="../../sn/sn2.20.html">SN 2:20</a> at SN I 55-56 (or SN2 101 at SN2 I 126-129), <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158b-c, and <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441a-442a. <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441a28 also covers the events that took place before, although, according to its account, it was not Sāriputta who went to visit Anāthapiṇḍika on his deathbed, but rather the Buddha himself. According to <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441b13, the instruction given by the Buddha on this occasion was concerned with the six recollections.</span></span></span></p>
+<p>The Anāthapiṇḍikovāda-sutta begins by narrating that Anāthapiṇḍika, who was sick, dispatched a messenger to Sāriputta with an invitation to visit him.<span class="note" id="mn143n4"><span class="details"><span class="p">[n.4] <a href="../../mn/mn143.html">MN 143</a> at MN III 258,5.</span></span></span> The Saṃyukta-āgama and Ekottarika-āgama versions do not record such an invitation, in fact according to them, Sāriputta had decided on his own to pay a visit to Anāthapiṇḍika. While the Saṃyukta-āgama version indicates that Sāriputta had heard about the sick condition of Anāthapiṇḍika,<span class="note" id="mn143n5"><span class="details"><span class="p">[n.5] <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c9.</span></span></span> according to the Ekottarika-āgama version, Sāriputta had come to know about it through his divine eye.<span class="note" id="mn143n6"><span class="details"><span class="p">[n.6] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819b13.</span></span></span></p>
+<p>The Anāthapiṇḍikovāda-sutta reports that, when Sāriputta arrived together with Ānanda at Anāthapiṇḍika’s dwelling place, the householder described his deteriorating condition to the visiting monks with a set of similes.<span class="note" id="mn143n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn143.html">MN 143</a> at MN III 259,6. The corresponding part in <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c14 is abbreviated.</span></span></span> According to the Ekottarika-āgama version, however, Anāthapiṇḍika merely stated that his condition was getting worse, without making use of any simile.<span class="note" id="mn143n8"><span class="details"><span class="p">[n.8] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819b20. Notably, the description of Sāriputta’s visit to Anāthapiṇḍika in <a href="../../sn/sn55.26.html">SN 55:26</a> at SN V 381,19 (a discourse which is not a parallel to <a href="../../mn/mn143.html">MN 143</a>) also does not employ any simile to illustrate the householder’s sick condition. In contrast, <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441b5 (a discourse that otherwise does not parallel the first part of <a href="../../mn/mn143.html">MN 143</a>) does report that Anāthapiṇḍika illustrated his sick condition with the image of a rope tightened around the head, of a butcher cutting up the belly of an ox, and of two strong man roasting a weak man over a fire, thereby paralleling similes used in <a href="../../mn/mn143.html">MN 143</a>.</span></span></span></p>
+<p>The Anāthapiṇḍikovāda-sutta and its two parallels in the Saṃyukta-āgama and the Ekottarika-āgama agree that Sāriputta instructed Anāthapiṇḍika on the development of detachment towards various aspects of experience.<span class="note" id="mn143n9"><span class="details"><span class="p">[n.9] Preceding these instructions, according to <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819b21 Sāriputta also told Anāthapiṇḍika to develop recollection of the Buddha, the Dharma, and the Saṅgha. <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441b13 similarly reports that the Buddha taught Anāthapiṇḍika these recollections, as well as recollection of morality, of generosity, and of devas. The descriptions of a noble disciple’s unwavering confidence, found as part of the instructions given to Anāthapiṇḍika in <a href="../../sn/sn55.26.html">SN 55:26</a> at SN V 381,26 and SN V 382,3+11, also uses the formulations employed in these three recollections, although without explicitly instructing on the practice of recollection. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c2 continues by proclaiming that undertaking the three recollections will ensure that rebirth does not take place in the three evil realms. For another instance where these recollections are given particular importance in the Ekottarika-āgama cf. above p. 513 note 340.</span></span></span> In all versions, these instructions take up the six objects of the senses, encouraging Anāthapiṇḍika to avoid clinging to them and not to let his consciousness become dependent on them. While the Majjhimanikāya version simply speaks of consciousness being dependent on the senses or their objects, <span class="note" id="mn143n10"><span class="details"><span class="p">[n.10] <a href="../../mn/mn143.html">MN 143</a> at MN III 259,13.</span></span></span> the Saṃyukta-āgama version specifies that such dependence takes place through the arising of desire and lust.<span class="note" id="mn143n11"><span class="details"><span class="p">[n.11] <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c16 instructs (in the case of the eye): “I will not be attached to the eye and in dependence on the eye-element there will be no arising of lust and desire in my consciousness”, 不著眼, 不依眼界生貪欲識.</span></span></span> The Anāthapiṇḍikovāda-sutta stands alone in also applying the instructions to the six types of consciousness, the six types of contact, and the six types of feeling that arise based on them (see table 15.1).</p>
+<table class="comparative-table">
+<caption>Table 15.1: Instructions to Anāthapiṇḍika in <a href="../../mn/mn143.html">MN 143</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn143.html">MN 143</a></th><th><a href="../../parallels/sa1032.html">SĀ 1032</a></th><th><a href="../../parallels/ea51.8.html">EĀ 51.8</a></th></tr>
+<tr><td>6 sense-organs (1)</td><td>6 sense-organs (→ 1)</td><td>3 recollections</td></tr>
+<tr><td>6 sense-objects (2)</td><td>6 sense-objects (→ 2)</td><td>6 sense-objects (→ 2)</td></tr>
+<tr><td>6 consciousness (3)</td><td>6 elements (→ 6)</td><td>this/next world (→ 9)</td></tr>
+<tr><td>6 contacts (4)</td><td>5 aggregates (→ 7)</td><td>craving, which causes grasping,</td></tr>
+<tr><td>6 feelings (5)</td><td></td><td>becoming, etc.</td></tr>
+<tr><td>6 elements (6)</td><td></td><td>5 aggregates are not-self</td></tr>
+<tr><td>5 aggregates (7)</td><td></td><td>senses arise from nowhere</td></tr>
+<tr><td>4 immaterial attainments (8)</td><td></td><td>12 links of dependent arising</td></tr>
+<tr><td>this/next world (9)</td><td></td><td></td></tr>
+<tr><td>sensed, heard, etc. (10)</td><td>(≠ 3-5, 8-10)</td><td>(≠ 1, 3-8, 10)</td></tr>
+</table>
+<p>The Ekottarika-āgama version’s instructions on detachment do not mention the senses, but only their objects, although later on this discourse takes up the senses for a more detailed treatment, explaining that, when a sense arises, one does not know from where it comes, and when it ceases, one does not know where it goes.<span class="note" id="mn143n12"><span class="details"><span class="p">[n.12] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c14: “at the time of the arising of the eye, when it arises one does not know from where it comes, at the time of the cessation of the eye, when it ceases one does not know where it goes”, 若眼起時, 則起亦不知來處, 若眼滅時, 則滅亦不知去處 (adopting a 宋, 元, and 明 variant reading that adds 則起 after 時 in the case of arising, in analogy to the case of cessation), a treatment that <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c21 then applies also to the sense-objects (with the first of the sense-objects, form, not being explicitly mentioned). Baba 2004: 946 points out that this type of presentation is not found in the Pāli discourses, but occurs only in commentarial Pāli literature, such as Vism 484,6, according to which the sense-spheres “do not come from anywhere before they arise, do not go anywhere after they cease”, na hi tāni pubbe udayā kutoci āgacchanti, na pi uddhaṃ vayā kuhiñci gacchanti. Baba concludes that this instance exemplifies a tendency for Āgama discourses to incorporate modes of presentation that in the Pāli tradition have not made their way into the discourses, but are found only in commentarial literature (cf. also above p. 616 note 154).</span></span></span> The Ekottarika-āgama discourse continues by highlighting that all things manifest by way of dependent arising (paṭicca samuppāda), a principle it then expounds by way of the twelve links from ignorance to old age and death.<span class="note" id="mn143n13"><span class="details"><span class="p">[n.13] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c18. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> also differs from the other versions in as much as it turns to the senses only at this point of its treatment. In contrast, <a href="../../mn/mn143.html">MN 143</a> at MN III 259,12 and <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c16 take up the senses as their first topic, together with the objects of the senses, a passage whose counterpart in <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c5 only covers the sense-objects. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c24 concludes by explaining that to develop insight into the dependent arising of the senses and their objects is the supreme dwelling in emptiness.</span></span></span></p>
+<p>The Saṃyukta-āgama version agrees with the Majjhima-nikāya account in examining the six elements and the five aggregates in a similar manner.<span class="note" id="mn143n14"><span class="details"><span class="p">[n.14] <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c20.</span></span></span> These are not found in the Ekottarika-āgama version, which, however, agrees with the Majjhima-nikāya discourse in taking up this world and the next world.<span class="note" id="mn143n15"><span class="details"><span class="p">[n.15] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c9.</span></span></span> The Majjhima-nikāya version stands alone in also taking up the four immaterial attainments and what is seen, heard, sensed, and cognised as experiences in regard to which Anāthapiṇḍika should avoid clinging and dependencies.<span class="note" id="mn143n16"><span class="details"><span class="p">[n.16] <a href="../../mn/mn143.html">MN 143</a> at MN III 260,34. Whereas what is seen, heard, sensed, and cognised fits the present context well, the reference to the four immaterial attainments is to some extent puzzling, as the way other discourses depict Anāthapiṇḍika does not give any indication that he might have been a meditator of such proficiency as to be capable of entering the immaterial attainments. This impression is confirmed by the fact that, according to all versions, on passing away Anāthapiṇḍika was reborn in a heavenly world of the sensual sphere. From this it would follow that he had not been even a jhāna attainer. Thus, it is surprising to find him being instructed on avoiding clinging to experiences that would have been far beyond his range of experience.</span></span></span></p>
+<p>The parallels report that, at the end of Sāriputta’s instruction, Anāthapiṇḍika was in tears, as in spite of his devoted service to the Buddha and the monks he had never received such a penetrative instruction. In the Majjhima-nikāya and Saṃyukta-āgama versions, Anāthapiṇḍika is told that such discourses are generally not given to laity.<span class="note" id="mn143n17"><span class="details"><span class="p">[n.17] <a href="../../mn/mn143.html">MN 143</a> at MN III 261,22: “such talk on the Dharma, householder, is [usually] not given to lay people clothed in white. Such talk on the Dharma, householder, is [usually] given to those gone forth”, na kho, gahapati, gihīnaṃ odātavasanānaṃ evarūpi dhammī kathā paṭibhāti. pabbajitānaṃ kho, gahapati, evarūpī dhammī kathā paṭibhātī ti (Be-MN III 305,19, Ce-MN III 534,16, and Se-MN III 471,2: evarūpī, Se also reads dhammikathā and does not have the second kho). Ps V 80,13 explains the reason for this to be that lay followers usually do not like such instructions, since they live immersed in possessions and do not appreciate being instructed to give up desire and attachment to these. The identity of the speaker of this explanation is not clear in <a href="../../mn/mn143.html">MN 143</a>, since no explicit indication is made and the preceding sentence is spoken by Ānanda, while Anāthapiṇḍika’s reply is addressed to Sāriputta. According to <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 269c27, it was Sāriputta who explained to Anāthapiṇḍika that for a long time he had not given such teachings to householders. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 819c30 reports that Ānanda gave a longer explanation to Anāthapiṇḍika, distinguishing between two types of disciple. The point made by this explanation might be that teaching methods differ according to the propensity of individual disciples. For a discussion of why Anāthapiṇḍika did not receive such instructions earlier cf. Anālayo 2010n: 8-12 and Falk 1990: 130.</span></span></span> In reply, Anāthapiṇḍika requested that such instructions be given to lay followers in the future.<span class="note" id="mn143n18"><span class="details"><span class="p">[n.18] <a href="../../parallels/sa1032.html">SĀ 1032</a> at T II 270a3 adds that Anāthapiṇḍika also offered food to Sāriputta, after which this discourse ends. For the remainder of <a href="../../mn/mn143.html">MN 143</a>, the relevant parallel in the Saṃyukta-āgama is <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158b24, which begins by reporting that Anāthapiṇḍika had just passed away.</span></span></span></p>
+<p>The Anāthapiṇḍikovāda-sutta and its Chinese parallels report that Anāthapiṇḍika passed away soon after Sāriputta’s visit. According to the Majjhima-nikāya discourse and one of the Saṃyukta-āgama versions that parallel this part of the Anāthapiṇḍikovāda-sutta, he was reborn in the Tusita heaven,<span class="note" id="mn143n19"><span class="details"><span class="p">[n.19] <a href="../../mn/mn143.html">MN 143</a> at MN III 262,1 and <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158b25. <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441c12 does not specify in which heaven he had been reborn.</span></span></span> while the Ekottarika-āgama version locates his rebirth in the heaven of the Thirty-three.<span class="note" id="mn143n20"><span class="details"><span class="p">[n.20] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 820a16. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> notes that, as a devaputta, Anāthapiṇḍika excelled other devas in life span, beauty, happiness, might, and radiance.</span></span></span></p>
+<p>The Anāthapiṇḍikovāda-sutta and its parallels report that, reborn as a deva, Anāthapiṇḍika visited the Buddha and spoke a set of stanzas.<span class="note" id="mn143n21"><span class="details"><span class="p">[n.21] <a href="../../mn/mn143.html">MN 143</a> at MN III 262,8 (on these stanzas cf. also Franke 1912: 218-221) and <a href="../../sn/sn2.20.html">SN 2:20</a> at SN I 55,12 (or SN2 101 at SN2 I 126,13). The first of these stanzas, in which Anāthapiṇḍika expresses joy at beholding Jeta’s Grove inhabited by sages and the king of the Dharma, recurs in all Chinese versions, although <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158c3 speaks of “kings”, 諸王, instead of the king or lord of Dharma, dhammarāja/法主/法 王, mentioned in <a href="../../mn/mn143.html">MN 143</a> at MN III 262,9, <a href="../../sn/sn2.20.html">SN 2:20</a> at SN I 55,13 (or SN2 101 at SN2 I 126,15), <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441c17, and <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 820a26. <a href="../../parallels/ea51.8.html">EĀ 51.8</a> has only this first stanza. <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158c4 and <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 441c18 also have a counterpart to the second stanza in <a href="../../mn/mn143.html">MN 143</a> at MN III 262,10 and <a href="../../sn/sn2.20.html">SN 2:20</a> at SN I 55,14 (or SN2 101 at SN2 I 126,17), according to which purity is to be reached through deeds and morality. The same two discourses also have a counterpart to the fourth stanza in <a href="../../mn/mn143.html">MN 143</a> at MN III 262,14 and <a href="../../sn/sn2.20.html">SN 2:20</a> at SN I 55,18 (or SN2 101 at SN2 I 127,6), although their praises of Sāriputta differ from the Pāli versions. According to <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 820b1, the visiting deva also informed the Buddha of his identity and scattered heavenly flowers on the Buddha as well as on Ānanda and Sāriputta. This would imply that Ānanda was present when the deva revealed his identity, which does not fit too well with the remainder of the same discourse, as according to <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 820b12 the Buddha asked Ānanda who that deva could have been and then praised Ānanda for rightly divining that it had been Anāthapiṇḍika. The four stanzas found in <a href="../../mn/mn143.html">MN 143</a> and <a href="../../sn/sn2.20.html">SN 2:20</a> recur again as a discourse on its own in <a href="../../sn/sn1.48.html">SN 1:48</a> at SN I 33,23 (or SN2 48 at SN2 I 71,3). In regard to the first of these four stanzas, it may also be worthwhile to note that this stanza does not imply that the Buddha had already passed away and Sāriputta was now the leader of the community, as assumed by Aramaki 2005: 789, in fact according to <a href="../../sn/sn47.13.html">SN 47:13</a> at SN V 161,24, <a href="../../parallels/sa638.html">SĀ 638</a> at T II 176c1, and <a href="../../parallels/ea26.9.html">EĀ 26.9</a> at T II 640c14 Sāriputta passed away earlier than the Buddha. Regarding the motif of a visit paid by a deceased disciple, Feer 1884a: 22 notes that in the Avadānaśataka it is a standard procedure that former disciples, on being reborn as devas, pay a visit to the Buddha.</span></span></span> The next day, when the Buddha told the monks about this visit, Ānanda was quick to divine that this deva had been Anāthapiṇḍika.</p>
+<p>The Majjhima-nikāya version and one of the two Saṃyukta-āgama versions end with the Buddha’s approval of Ānanda’s inference.<span class="note" id="mn143n22"><span class="details"><span class="p">[n.22] <a href="../../mn/mn143.html">MN 143</a> at MN III 263,8 and <a href="../../parallels/sa-2.187.html">SĀ2 187</a> at T II 442a15.</span></span></span> The other of the two Saṃyukta-āgama versions adds a stanza spoken by the Buddha in praise of Sāriputta,<span class="note" id="mn143n23"><span class="details"><span class="p">[n.23] <a href="../../parallels/sa593.html">SĀ 593</a> at T II 158c25.</span></span></span> while according to the Ekottarika-āgama account the Buddha delivered a long prose passage in praise of Ānanda.<span class="note" id="mn143n24"><span class="details"><span class="p">[n.24] <a href="../../parallels/ea51.8.html">EĀ 51.8</a> at T II 820b21.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

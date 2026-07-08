@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 50.6 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 50.6</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">50.6</span> <span class="mirror-right">（六）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn12.html">MN 12 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;I now clearly understand hell, and I also know the path leading to hell, and I also know the origins of the beings in hell. If there are beings who create various evil and unwholesome actions, and upon the destruction of the body and the end of life, enter hell, I also know that. Moreover, bhikṣus! I also clearly understand the animal realm, and I also know the path leading to the animal realm, and I also know the origins of the animal realm. I also clearly understand those who create the fundamental causes of evil and are born there. I now also know the path of hungry ghosts, and those who create the fundamental causes of evil and are born among hungry ghosts, I also know that. I now also know the path of humans, and those beings who attain a human body, I also know that. I also know the path leading to the heavens, and those beings who create various roots of virtue and are born in the heavens, I also know that. I also know the path to nirvāṇa, and those beings who exhaust the taints and attain the absence of taints, who attain liberation of mind and liberation through wisdom, and realize the fruit in the present life, I also know that.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「我今明晓地狱，亦知趣地狱之径，亦复知彼地狱众生之本。设复众生造诸恶不善之行，身坏命终，入地狱中，我亦知之。又复，比丘！我亦知明晓畜生，亦知趣畜生之道，亦复知畜生之本，作诸恶元生彼者亦悉晓了。我今亦知饿鬼之道，其有作恶根元者，生饿鬼中，我亦知之。我今亦知人道向人之趣，其有众生得人身者，我亦知之。我亦知趣天之道，其有众生作诸德本，生彼天上，我亦知之。我亦知涅槃之趣，其有众生有漏尽成无漏，心解脱、智慧解脱，于现法中而取证果，我亦知之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Bhikṣus, you should know that I know the path to hell. For what reasons do I say this?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，我知地狱之趣，以何因缘而说斯言乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;I now observe the minds and thoughts of sentient beings. That is to say, I observe that this person, upon the destruction of the body and the end of life, will enter hell. Then, I observe that this person enters hell and undergoes countless tortures and sufferings, with sorrow and distress beyond description. It is like a large pit of fire without any smoke or dust. If someone comes and heads towards this place, and a person with eyes observes where this person is heading, it is certain that they will fall into the fire and not be in vain. Then, I observe that this person falls into the pit of fire. What I call a person is one who falls into the pit of fire. Now, I observe the thoughts in the minds of sentient beings, and they will definitely enter hell without doubt. As I later observe that this person will definitely enter hell and undergo indescribable suffering and distress, how will this person enter hell? This is what I call observing sentient beings who create various evil and unwholesome actions, and upon the destruction of the body and the end of life, enter hell. I know all this. What I say is precisely this.</p></td><td lang="lzh" class="agama-chi"><p>佛告诸比丘：「我今观察众生心意，所谓此人身坏命终，应入地狱中，然后时观此人以入地狱中，受苦酸酷考掠无数，愁忧苦恼不可称记。犹如一大火坑无有尘烟，设有人来迳趣斯处，又且有目之士观此人所趣，必当坠火终不虚也。然复后时观此人以堕火坑，吾所谓人者以堕火坑。今观察众生心意所念，必入地狱不疑，如我后时观察此人，以定入地狱，受苦酸酷不可称记。云何斯人以入地狱？是谓我观趣地狱众生作诸恶行不善之业，身坏命终，入地狱中，我悉知之。吾所说者，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I know the path of the animal realm, and I also know those who will be reborn in the animal realm. For what reasons do I say this? Bhikṣus, I observe the thoughts in the minds of sentient beings. I observe that this person, upon the destruction of the body and the end of life, will be reborn in the animal realm. I then observe that this person is reborn in the animal realm, with sorrow and distress beyond description. How will this person fall into the animal realm? It is like a village with a large cesspit full of excrement. If a person were to head towards this place, a person with eyes would see this person coming and heading towards this place, and it is certain that this person will soon fall into the cesspit. Then, I observe that this person has already fallen into the cesspit, undergoing indescribable suffering and distress. How has this person already fallen into the cesspit? I now observe that sentient beings are also like this. This person, upon the end of life, will be reborn in the animal realm. I then observe that they have already been reborn in the animal realm, undergoing immeasurable suffering. I now observe all the sentient beings in the animal realm, and I know them all clearly. What I say is precisely this.</p></td><td lang="lzh" class="agama-chi"><p>「我知畜生之道，亦知趣畜生者，以何缘本而说此乎？于是，比丘！我观察众生心中所念，此人身坏命终，生畜生中。有我后时观察此人，以生畜生中，愁忧苦恼不可称计。云何斯人以堕畜生中乎？犹如村落有大圊厕，屎满其中。设有斯人径趣斯处，有目之士，见斯人来径趣斯处，此人不久径堕于厕。然后时观此人已堕于厕，受厄穷困不可称记。云何斯人已堕于厕？我今观众生类亦复如是，斯人命终应生畜生中。又复时观已生畜生中，受苦无量。我今观畜生众生皆悉明了。我所说者，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I also know the hungry ghost realm and the path of hungry ghosts. I also know those whose bodies are destroyed and lives end, and who are reborn in the hungry ghost realm. I also know those sentient beings whose bodies are destroyed and lives end, and who take the path of hungry ghosts. I know all this. I then observe at a later time that these sentient beings enter the hungry ghost realm and undergo suffering and pain. How will these people enter the hungry ghost realm? It is like a large village with a large tree nearby, growing in a dangerous place, with withered branches and leaves. If a person were to come and head towards this place, a person with eyes would see this person heading towards the tree without doubt. Then, I observe at a later time that this person either sits or lies under the tree, experiencing the retribution of suffering and happiness. How has this person come to sit or lie under the tree? Now, I observe that sentient beings are also like this. Upon the destruction of the body and the end of life, they will definitely take the path of hungry ghosts without doubt, experiencing the retribution of suffering and happiness beyond description. I know the hungry ghost realm and the path of hungry ghosts, and I know them all clearly. What I say is precisely this.</p></td><td lang="lzh" class="agama-chi"><p>「我亦知饿鬼众生，饿鬼之道，其身坏命终，生饿鬼者，我亦知之。其有众生身坏命终，趣饿鬼之道，我悉知之。我复于后时观见此众生，以入饿鬼受苦痛、乐痛。云何斯人以入饿鬼中乎？犹如大村落侧有一大树，生危崄之处，枝叶凋落。设有人来，往趣斯处，有目之士遥观此人，必趣树不疑。复后时观此人，或坐、或卧，受其苦乐之报。云何斯人以至树下坐卧乎？今我观众生之类亦复如是，身坏命终，必趣饿鬼不疑，受其苦乐之报不可称记。我知饿鬼趣，饿鬼之道，皆悉分明，我所说者，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I know the human realm and the path of humans. I also know those who create actions, and upon the destruction of the body and the end of life, are reborn among humans. Bhikṣus, I observe the thoughts in the minds of sentient beings. I observe that this person will definitely, upon the destruction of the body and the end of life, be reborn among humans. I then observe at a later time that this person has already been reborn among humans. How has this person already been reborn among humans? It is like a large village with a large tree nearby, growing in a level place, with much shade. If a person were to come directly from one path, a person with eyes would see this and know that this person is definitely heading towards this tree without doubt. I then observe at a later time that this person has already come to this tree, experiencing immeasurable happiness. How has this person come to this place? It is also like this. I observe that the thoughts in the minds of sentient beings are also like this. Upon the destruction of the body and the end of life, they will definitely be reborn among humans without doubt. I then observe at a later time that this person has already been reborn among humans, experiencing immeasurable happiness. I know the human realm and the path of humans. I also know those who are now reborn among humans. What I say is precisely this.</p></td><td lang="lzh" class="agama-chi"><p>「我知人道，亦知趣人道， 其有造行，身坏命终，生人中者，我亦知之。于是，比丘！我观众生类心中所念，此人必当身坏命终，应生人中。我复于后时观此人已生人中。云何斯人已生人中？犹如村落侧有一大树，在平正处，多诸阴凉。若有人直从一道来，有目之士见已便知之，斯人所趣向，定至此树不疑。我复于后时观此人，已至此树，受乐无量。云何斯人得至斯处？此亦如是，我观众生心意所念亦如是，身坏命终，必生人中不疑。我复于后时，观此人已生人中受乐无量。我知人趣，亦知趣人之道，今生人中者，我亦知之，我所说者，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>I also know the heavenly realm and the path to the heavens. I also know those sentient beings who create various meritorious deeds and are reborn in the heavens. I also know this. For what reason do I say this? I now observe the thoughts in the minds of sentient beings. I observe that this person will definitely, upon the destruction of the body and the end of life, be reborn in the heavens of good places, and then later observe that this person has already been reborn in the heavens of good places, experiencing natural blessings and incomparable happiness. This is called this person has already been reborn in the heavens, experiencing natural blessings and incomparable happiness. It is like a village with a large, high, and wide lecture hall nearby, carved and incised, with hanging silk banners and canopies, sprinkled with fragrant water, with fine cushions, woolen blankets, embroidered and brocade. If a person were to come directly from one path, a person with eyes would see this and know that this person is definitely heading towards the large, high, and wide lecture hall without doubt. Then, I observe at a later time that this person has already arrived at the lecture hall, either sitting or lying down, experiencing incomparable blessings and happiness. It is also like this. I now observe that sentient beings, upon the destruction of the body and the end of life, will definitely be reborn in the heavens of good places, experiencing incomparable happiness. How will this person be reborn in the heavens of good places? I know the heavenly realm and the path to the heavens. What I say is precisely this.</p></td><td lang="lzh" class="agama-chi"><p>「我亦知天，亦知趣天之道，其有众生作诸功业生天者，我亦知之。以何因缘而说此乎？我今观众生之类心中所念，此人必当身坏命终，生善处天上，然后时观此人身坏命终，生善处天上，于彼受自然之福，快乐无比。是谓斯人已生天上，于彼受自然之福，快乐无比。犹如村落侧有好高广讲堂，雕文刻镂，悬缯幡盖，香汁洒地，敷好坐具，氍毹毾［登＊毛］，文绣綩𫄧。若有人直从一道来，有目之士直从一道来，此人所趣向，定至高广讲堂必不疑，复于后时观见此人，已到讲堂上，或坐、或卧，于中受福快乐无比。此亦如是，吾今观众生类身坏命终，应生善处天上，于彼受乐快不可计。云何斯人以生善处天上乎？我知天道，趣天之路乎？我所说者，正谓此耳。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;I now know nirvāṇa and the path to nirvāṇa. I also know those sentient beings who are suitable for parinirvāṇa. There are sentient beings who exhaust their afflictions and attain the absence of afflictions, liberation of the mind and liberation through wisdom, and realize it in this body, wandering and transforming on their own. I know all this. For what reason do I say this? Bhikṣus, I observe the thoughts in the minds of sentient beings. I observe that this person will exhaust their afflictions and attain the absence of afflictions, liberation of the mind and liberation through wisdom. This is called this person has exhausted their afflictions and attained the absence of afflictions. It is like a large pond not far from a village, with extremely clear water. If a person were to come directly from one path, a person with eyes would see this person coming from afar and know that this person will definitely go to the pond without doubt. Then, I observe at a later time that this person has already gone to the pond, bathed and washed, removed all impurities, and sat aside, also not quarreling with others. I now observe that sentient beings are also like this. They exhaust their afflictions and attain the absence of afflictions, liberation of the mind and liberation through wisdom; the end of birth and death, the establishment of the holy life, the completion of what was to be done, and the true knowledge of name and form. This is called this person has already come to this place. I know the path to nirvāṇa and also know those sentient beings who attain parinirvāṇa. I know all this. The Tathāgata, Arhat, Perfectly Enlightened One has this knowledge, fearlessness, and power, all fully accomplished. The Tathāgata&#x27;s knowledge is immeasurable. The Tathāgata is able to observe the unlimited, immeasurable, and incalculable events of the past, all knowing them. The unlimited and immeasurable of the future and present are all fully discerned. Therefore, bhikṣus, you should seek the means to fully accomplish the ten powers and fearlessness. Thus, bhikṣus, you should train in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「我今知涅槃，亦知涅槃之道，亦知众生应般涅槃者。或有众生尽有漏成无漏，心解脱、智慧解脱，现身取证而自游化，我悉知之。由何因缘而说此乎？于是，比丘！我观众生类心中所念，此人尽有漏成无漏，心解脱、智慧解脱，是谓斯人以尽有漏成无漏。犹如去村落不远有大池，水极清彻。若有人直从一道来，有目之士遥见斯人来，知此人必至池水不疑，又后时观此人已至池水，沐浴澡洗，除诸秽污，去诸垢坋，在侧而坐，亦不与人共相诤竞。我今观众生类亦复如是，尽有漏成无漏，心解脱、智慧解脱；生死已尽，梵行已立，所作已办，名色知如真。是谓斯人已至此处，我知涅槃之道，亦知众生般涅槃者，皆悉知之。如来、至真、等正觉有此之智、无畏、力具，皆悉成就。如来智无有量，如来能观过去无限无量不可计事，皆悉知之。将来现在无限无量皆悉分别。是故，比丘！当求方便，具足十力、无畏。如是，比丘！当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said, and joyfully practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

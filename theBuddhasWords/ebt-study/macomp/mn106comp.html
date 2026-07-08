@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 106 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 106: Āneñjasappāya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn88comp.html#content"></a><a id="next-sutta" href="./mn112comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+		<p class="origin-note"><em>Originally published 2009 under the title "The Āneñjasappāya-sutta and its Parallels on Imperturbability and on the Contribution of Insight to the Development of Tranquillity", in <i>Buddhist Studies Review</i>, 26(2): 177–195, © Equinox Publishing Ltd 2009.</em></p>
+<p class="read-links">Read: <a href="../../mn/mn106.html">MN 106</a> / <a href="../../parallels/ma75.html">MĀ 75</a></p>
+<div class="comp-body">
+<h3>Introduction:</h3>
+<p>With the present chapter I study the meditative approaches to imperturbability depicted in the Ā<i>neñjasapp</i>ā<i>ya-sutta </i>(MN 106) and its Chinese and Tibetan parallels.<span class="note" id="mn106compn1"><span class="details"><span class="p">[n.1] For the title of the discourse I follow Be, Ce and Se. Ee reads Āṇ<i>añjasapp</i>ā<i>ya-</i><i>sutta. </i></span></span></span> By way of introduction to the main theme broached in this discourse, I briefly survey discourses relevant to the early Buddhist notion of imperturbability. Next I translate the <i>Madhyama-</i>ā<i>gama </i>parallel to the Ā<i>neñjasap</i><i>p</i>ā<i>ya-sutta </i>part by part, after each of the main sections of the discourse examining variations between the <i>Madhyama-</i>ā<i>gama </i>version, the Ā<i>neñjasapp</i>ā<i>ya-sutta </i>and a Tibetan version extant in Śamathadeva's compendium of discourse quotations in the <i>Abhidhar</i><i>mako</i>ś<i>abh</i>āṣ<i>ya. </i>By way of conclusion, I turn to the relationship between tranquillity and insight reflected in the parallel versions.</p>
+<p>In the early discourses, "imperturbability" regularly represents the degree of mental stability obtained through the fourth absorption (<i>jh</i>ā<i>na</i>).<span class="note" id="mn106compn2"><span class="details"><span class="p">[n.2] Thus, e.g., DN 2 at DN I 76,15 describes the mental condition resulting from the fourth <i>jh</i>ā<i>na </i>as "having reached imperturbability", ā<i>nejjapatte </i>(Be, Ce and Se: ā<i>neñjappatte</i>), a qualification similarly made in the parallel versions DĀ 20 at T I 85c7: 無動之地, T 22 at T I 275a13: 堅住不動, and in the <i>Sa</i>ṅ<i>gha</i><i>bhedavastu</i>, Gnoli 1978a: 245,15: ā<i>niñjyapr</i>ā<i>ptam</i>, with its Tibetan counterpart at D 1<i> nga </i>278b4 or Q 1030 <i>ce </i>256a6: <i>mi g.yo bar gnas pa thob po. </i>The <i>Bodhisattvabh</i>ū<i>mi</i>, Wogihara 1930: 90,16, sums up: ā<i>ni</i>ṃ<i>jya-caturtha</i><i>dhy</i>ā<i>na-vih</i>ā<i>ra</i>ḥ.</span></span></span> With this level of deep concentration, all "perturbations" have been left behind, including those mental factors or qualities that are still present in the lower absorptions.<span class="note" id="mn106compn3"><span class="details"><span class="p">[n.3] The <i>La</i>ṭ<i>ukikopama-sutta</i> and its parallel, MN 66 at MN I 454,28 and MĀ 192 at T I 743b2, reckon the applied and sustained mental application characteristic of the first <i>jh</i>ā<i>na</i>, the rapture of the second <i>jh</i>ā<i>na</i>, and the happiness present in the third <i>jh</i>ā<i>na</i> as "perturbations". These are left behind once the imperturbability of the fourth <i>jh</i>ā<i>na </i>has been reached.</span></span></span> Besides such mental "perturbations", according to the discourses with the imperturbability of the fourth absorption even the process of breathing has apparently ceased.<span class="note" id="mn106compn4"><span class="details"><span class="p">[n.4] According to SN 36.11 at SN IV 217,8, with the attainment of the fourth <i>jh</i>ā<i>na</i> in- and out-breaths cease, <i>ass</i>ā<i>sapass</i>ā<i>s</i>ā<i> niruddh</i>ā<i> honti</i>, an indication made similarly in its parallel SĀ 474 at T II 121b4: 出入息寂滅; cf. also AN 10.72 at AN V 135,3, which indicates that breathing constitutes a "thorn" for the attainment of the fourth absorption, <i>catutthassa jh</i>ā<i>nassa ass</i>ā<i>sapass</i>ā<i>s</i>ā<i> ka</i>ṇṭ<i>a</i><i>ko </i>(with v.l. <i>ka</i>ṇṭ<i>ak</i>ā, in fact Se reads<i> ass</i>ā<i>sapass</i>ā<i>s</i>ā<i> ka</i>ṇṭ<i>ak</i>ā, while Be reads <i>ass</i>ā<i>sapass</i>ā<i>so ka</i>ṇṭ<i>ako</i>; Ce agrees with Ee), a statement made similarly in its parallel MĀ 84 at T I 561a9: 入第四禪者以入息出息為刺. Nevertheless, or perhaps precisely because of this, mindfulness of breathing appears to be particularly apt for developing imperturbability of body and mind; cf. SN 54.7 at SN V 316,12, which indicates that developing mindfulness of breathing leads to the absence of perturbations or motions of body or mind, <i>neva k</i>ā<i>yassa iñji</i><i>tatta</i>ṃ<i> v</i>ā<i> hoti ... na cittassa iñjitatta</i>ṃ<i> v</i>ā<i> hoti</i>. Whereas SN 54.7 makes this indication in relation to concentration on mindfulness of breathing as such, according to its parallel SĀ 806 at T II 207a5 such bodily and mental imperturbability, 身心不動, is the outcome of undertaking mindfulness of breathing in sixteen steps. On these sixteen steps cf. also Anālayo 2007b and Dhammajoti 2008.</span></span></span></p>
+<p>As part of an extended simile that illustrates the progress of a disciple with the example of taming a forest elephant, the <i>Danta</i><i>bh</i>ū<i>mi-sutta </i>and its <i>Madhyama-</i>ā<i>gama</i> parallel depict an elephant trained in imperturbability. Such a trained elephant is able to face unflinchingly a situation resembling an actual battle situation, such as being surrounded by men who shout and brandish weapons.<span class="note" id="mn106compn5"><span class="details"><span class="p">[n.5] MN 125 at MN III 133,16 and MĀ 198 at T I 758a9, for a translation cf. below page 395.</span></span></span> As the <i>Madhyama-</i>ā<i>gama </i>version of this discourse indicates, this imagery exemplifies the level of imperturbability a disciple reaches through attaining the fourth absorption.<span class="note" id="mn106compn6"><span class="details"><span class="p">[n.6] MĀ 198 at T I 758b29.</span></span></span></p>
+<p>According to recurrent descriptions given in the discourses, once such imperturbability has been reached, the mind can be turned to the development of various higher knowledges (<i>abhiñ</i>- <i>ñ</i>ā) or to the attainment of the immaterial spheres. The four immaterial spheres are in fact at times reckoned as forms of imperturbability.<span class="note" id="mn106compn7"><span class="details"><span class="p">[n.7] AN 4.190 at AN II 184,29 indicates that with the attainment of the four immaterial spheres a monk qualifies for "having reached imperturbability", ā<i>nejjap</i><i>patto</i> (Be, Ce and Se: ā<i>neñjappatto</i>); cf. also the <i>Dharmaskandha</i>, Dietz 1984 27,12: ā<i>ni</i>ṃ<i>jy</i>āḥ<i> sa</i>ṃ<i>sk</i>ā<i>r</i>ā<i>(</i>ḥ<i>) katame, </i>ā<i>ha: catv</i>ā<i>ry </i>ā<i>r</i>ū<i>py</i>āṇ<i>y </i>ā<i>ni</i>ṃ<i>jyam ity </i> <i>ucyate</i>, with its Chinese counterpart, T 1537 at T XXVI 506a23: "what are volitional formations [related to the] imperturbable? They are said to be the four immaterial concentrations", 云何不動行? 謂四無色定; or Vibh 135,21: <i>tattha katamo </i>ā<i>neñj</i>ā<i>bhisa</i>ṅ<i>kh</i>ā<i>ro? kusal</i>ā<i> cetan</i>ā<i> ar</i>ū<i>p</i>ā<i>vacar</i>ā<i> – aya</i>ṃ<i> vuc</i><i>cati </i>ā<i>neñj</i>ā<i>bhisa</i>ṅ<i>kh</i>ā<i>ro.</i></span></span></span> However, the usage in the discourses is not uniform in this respect, as at times only some of the immaterial attainments come under this label.</p>
+<p>Thus the <i>Sunakkhatta-sutta</i> of the <i>Majjhima-nik</i>ā<i>ya </i> distinguishes between someone with a keen interest in:</p>
+<ul>
+<li>imperturbability,</li>
+<li>the sphere of nothingness,</li>
+<li>the sphere of neither-perception-nor-non-perception.</li>
+</ul>
+<p>Here imperturbability must be different from the two higher immaterial attainments and appears to cover only the fourth <i>jh</i>ā<i>na</i> and the two lower immaterial attainments.<span class="note" id="mn106compn8"><span class="details"><span class="p">[n.8] Bodhi in Ñāṇamoli 1995/2005: 1313 note 1000 comments that "since the highest two immaterial attainments are dealt with separately, it seems that in this sutta only the fourth jhāna and the lower two immaterial attainments are intended as 'the imperturbable'".</span></span></span> In fact, the <i>Su</i><i>nakkhatta-sutta</i> explicitly indicates that one who has a keen interest in the sphere of nothingness has gone beyond the fetter of imperturbability.<span class="note" id="mn106compn9"><span class="details"><span class="p">[n.9] MN 105 at MN II 255,5: ā<i>kiñcaññ</i>ā<i>yatan</i>ā<i>dhimuttassa purisapuggalassa ye </i> āṇ<i>añjasa</i>ṃ<i>yojane se bhinne </i>(Be: ā<i>neñjasa</i>ṃ<i>yojane, </i>Ce and Se: ā<i>neñjasaññoja</i><i>ne</i>)<i>. </i></span></span></span></p>
+<p>Yet, the <i>Pañcattaya-sutta</i>, found in the same <i>Majjhima-nik</i>ā<i>ya</i>, in agreement with its Tibetan parallel qualifies the sphere of nothingness as "imperturbable".<span class="note" id="mn106compn10"><span class="details"><span class="p">[n.10] MN 102 at MN II 230,2: <i>akiñcaññ</i>ā<i>yatana</i>ṃ<i> ... </i>āṇ<i>añja</i>ṃ (Be and Ce: ā<i>neñja</i>ṃ; Se: <i>aneñja</i>ṃ), with its counterpart in Skilling 1994b: 318,3: <i>ci yang med pa’i </i> <i>skye mched bsgrubs te gnas pa</i> <i>... mi g.yo ba</i>.</span></span></span> Evidently, there is some fluctuation in the use of this qualification in the early discourses.<span class="note" id="mn106compn11"><span class="details"><span class="p">[n.11] Cf. also AN 3.114 at AN I 267,1, which covers only the first three immaterial attainments (as part of a description of the difference between the rebirth of a worldling and a noble disciple in the realms corresponding to these three). Nevertheless, the Burmese edition carries the title "Discourse on Imperturbability", Ā<i>neñja-sutta</i>, and the Ceylonese and Siamese editions, which do not provide a title, refer to imperturbability in the corresponding section of their respective <i>udd</i>ā<i>na</i>s.</span></span></span></p>
+<p>In whatever way imperturbability may have been reached through deeper levels of concentration, an arahant has gone beyond any volitional formations rooted in ignorance regarding such types of imperturbability.<span class="note" id="mn106compn12"><span class="details"><span class="p">[n.12] SN 12.51 at SN II 82,15: <i>avijj</i>ā<i>vir</i>ā<i>g</i>ā<i> vijjupp</i>ā<i>d</i>ā<i> ... na </i>ā<i>nej</i>ā<i>bhisa</i>ṅ<i>kh</i>ā<i>ram </i> <i>abhisa</i>ṅ<i>kharoti</i> (Be and Ce: ā<i>neñj</i>ā<i>bhisa</i>ṅ<i>kh</i>ā<i>ram</i>). The Sanskrit fragment parallel makes the same point, though phrased as a question; cf. S 474 folio 9 V2, Tripāṭhī 1962: 35: <i>avidy</i>ā<i> virakt</i>ā<i> bhavati vidy</i>ā<i> utpann</i>ā<i> ... apy=</i>ā<i>nijy</i>ā<i>n=a[pi </i> <i>sa](</i>ṃ<i>)[s](k</i>ā<i>)r</i>ā<i>n=abhi(sa</i>ṃ<i>)[sku](ry</i>ā<i>d=av)[i](dy</i>ā<i>)pratyay</i>ā<i>? no bhada</i>ṃ<i>ta </i> (Tripāṭhī 1962: 135 emends to <i>vidyotpann</i>ā, <i>abhisa</i>ṃ<i>sk</i>ā<i>r</i>ā<i>n</i>, <i>avidy</i>ā<i>pratyay</i>ā<i>n </i> and<i> bhadanta</i>). The parallel SĀ 292 at T II 83b14 instead speaks of leaving behind "volitional formations [related to] nothingness", 無所有行.</span></span></span> Nevertheless, imperturbability is also a quality of an arahant; in fact full liberation constitutes the highest form of imperturbability. A "perturbation" left behind with full liberation is any conceiving based on the notion of a substantial "I" at the core of experience.<span class="note" id="mn106compn13"><span class="details"><span class="p">[n.13] SN 35.207 at SN IV 202,29 and its parallel SĀ 1168 at T II 312a9 illustrate such conceiving with examples like: "I shall be", "I shall not be", "I shall be material", "I shall be immaterial", "I shall be percipient", "I shall be impercipient", etc.; cf. also Vibh 390,22. Sn 1041 notes that a liberated monk is free from perturbations, <i>nibbuto bhikkhu, tassa no santi iñjit</i>ā; cf. also Sn 750: <i>ya</i>ṃ <i>kiñci dukkha</i>ṃ<i> sambhoti, sabba</i>ṃ<i> iñjitapaccay</i>ā<i>, iñjit</i>ā<i>na</i>ṃ<i> nirodhena, n’ atthi </i> <i>dukkhassa sambhavo</i>, according to which all <i>dukkha</i> has its origin in perturbations. Kv 615,1 (§22.3) clarifies that an arahant, however, does not necessarily pass away while being in the attainment of imperturbability (of the concentrative type).</span></span></span> Fear is similarly no longer able to perturb a liberated mind.<span class="note" id="mn106compn14"><span class="details"><span class="p">[n.14] SN 4.11 reports an unsuccessful attempt by Māra to scare the Buddha, who calmly replies that a fully awakened Buddha would not be perturbed even if Māra were to shake the whole mountain, SN I 109,23: <i>n’eva samm</i>ā<i>vimutt</i>ā<i>na</i>ṃ<i> buddh</i>ā<i>na</i>ṃ<i> atthi iñjitan</i>. The parallel SĀ 1088 at T II 285b10 indicates that Māra would not be able to perturb even a single hair of a fully awakened Buddha , 於佛等解脫, 不能動一毛 (another parallel, SĀ2 27 at T II 382a17, does not speak of "perturbing", but only of "making his hair stand on end"; cf. the translation in Bingenheimer 2011: 133).</span></span></span></p>
+<p>The imperturbability reached with full awakening manifests also in regard to sensory input by way of the sense-organs. An arahant's mind cannot be perturbed by any sense-experience, just as a column firmly planted in the ground or a mountain will not be shaken by wind from the four directions.<span class="note" id="mn106compn15"><span class="details"><span class="p">[n.15] The image of the mountain occurs in AN 6.55 at AN III 378,7 = Vin I 184,27; the metaphor of the column is found in AN 9.26 at AN IV 404,21. The parallel to AN 9.26, SĀ 499 at T II 131b16, employs both similes to illustrate the freedom of an arahant’s mind from lust, anger and delusion. Among the parallels to AN 6.55, the image of the mountain unshaken by winds as an illustration of mental imperturbability in regard to sense experience occurs in MĀ 123 at T I 612c20, SĀ 254 at T II 63a22 (cf. also 63b6), T 1428 at T XXII 844c25 (cf. also 845a8), Gnoli 1978a: 146,6, fragment 142 SB 35, Hoernle 1916: 169f, and fragment 412 folio 21 V6, Waldschmidt 1968: 781.</span></span></span> Nor will the experience of pleasure or pain be able to perturb a truly awakened one.<span class="note" id="mn106compn16"><span class="details"><span class="p">[n.16] Ud 3.3 at Ud 27,18, a verse that also employs the image of a firm mountain unshaken by winds. The verse is preceded by a prose narration according to which the Buddha and a company of monks dwelled in imperturbable concentration while sitting in meditation, explained in Ud-a 185,15 to stand for concentration on the highest fruition (i.e. full liberation); cf. also the <i>Mah</i>ā<i>vyutpatti</i> no. 554, Sakaki 1926: 43, which in a listing of types of concentrations mentions <i>aniñjyo n</i>ā<i>ma sam</i>ā<i>dhi</i>ḥ. The counterpart to Ud. 3.3 in T 212 at T IV 767c11 employs the imagery of a mountain to illustrate aloofness from <i>dukkha</i>.</span></span></span></p>
+<p>The above brief survey brings to light two main aspects of imperturbability in the discourses: tranquillity and insight.<span class="note" id="mn106compn17"><span class="details"><span class="p">[n.17] For a listing of various types of imperturbability cf. also Paṭis II 206,14.</span></span></span> These two implications of the term are not always neatly set apart, as at times imperturbability occurs in a way that involves both. This is the case in the Ā<i>neñjasapp</i>ā<i>ya-sutta</i>, whose depiction of various approaches to imperturbability reveals an intriguing perspective on the relationship between tranquillity and insight.</p>
+<p>The Ā<i>neñjasapp</i>ā<i>ya-sutta </i>of the <i>Majjhima-nik</i>ā<i>ya </i>has a parallel in the <i>Madhyama-</i>ā<i>gama </i>and another parallel in a nearly complete discourse quotation extant in the Tibetan translation of Śamathadeva's compendium of discourse quotations in the <i>Abhi</i><i>dharmako</i>ś<i>abh</i>āṣ<i>ya</i>.<span class="note" id="mn106compn18"><span class="details"><span class="p">[n.18] D 4094<i> ju </i>227b7 to 230b2 or Q 5595 <i>tu </i>260a4 to 263a6; the quotation sets in with the second way to imperturbability. For a comparative study of MN 106 cf. Anālayo 2011a: 613–617. "realm", <i>visaya</i>, and Māra’s "pasture", <i>gocara</i>.</span></span></span></p>
+<p>The three versions of this discourse cover three "approaches to imperturbability" (1), three "approaches to nothingness" (2), and three approaches that lead either to the attainment of "neitherperception-nor-non-perception" or to "liberation" (3). My examination takes up these three topics in turn, each time providing a translation of the relevant section from the <i>Madhyama-āgama </i> version, followed by a discussion of the significance of the respective passages.</p>
+<hr class="chapter-divider">
+<h3>Translation (1)</h3>
+<p>Discourse on the Path to Pure Imperturbability<span class="note" id="mn106compn19"><span class="details"><span class="p">[n.19] </span></span></span></p>
+<p>1. Thus have I heard. At one time the Buddha was dwelling among the Kurus, staying in the Kuru town of Kammāsadhamma.</p>
+<p>innumerable evil and unwholesome qualities arise in the mind, [such as] covetousness and anger that leads to quarrelling, which for one reckoned a noble disciple under training create an obstruction'.</p>
+<p>"He [further] reflects like this: 'I could dwell attaining a vast state of mind, completely overcoming the world [by] taking hold of that state of mind. If I dwell attaining a vast state of mind, completely overcoming the world [by] taking hold of that state of mind, then in this way innumerable evil and unwholesome qualities will not arise in the mind, nor covetousness or anger that leads to quarrelling, which for one reckoned a noble disciple under training create an obstruction'.<span class="note" id="mn106compn22"><span class="details"><span class="p">[n.22] MN 106 at MN II 262,13 moreover indicates that by abandoning unwholesome mental states the mind will be "free from narrowness", <i>aparitta</i>, "boundless", <i>appam</i>āṇ<i>a</i>, and "well developed", <i>subh</i>ā<i>vita</i>.</span></span></span></p>
+<p>"By employing this practice and this training, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk<span class="note" id="mn106compn23"><span class="details"><span class="p">[n.23] MĀ 75 at T I 542b22 here changes from the earlier "noble disciple", 聖弟 子 (still mentioned two lines earlier at T I 542b20), to a "monk", 比丘. In MN 106 at MN II 262,14 the one who attains imperturbability at this point appears to still be the noble disciple (since no subject is explicitly referred to, the earlier mentioned <i>ariyas</i>ā<i>vaka</i> would still be the subject of the sentence), as is the case for the Tibetan version (in its description of the second approach to imperturbability), D 4094 <i>ju</i> 228a2 or Q 5595 <i>tu</i> 260a7, which at this junction refers to the noble disciple, <i>’phags pa nyan thos. </i></span></span></span> will attain entry into imperturbability herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the imperturbable.<span class="note" id="mn106compn24"><span class="details"><span class="p">[n.24] MN 106 at MN II 262,17 speaks in this context of the "evolving consciousness" that reaches imperturbability, <i>sa</i>ṃ<i>vattanikaviññ</i>āṇ<i>a</i>, which Ps IV 61,20 identifies as the karmically resultant consciousness, <i>vip</i>ā<i>kaviññ</i>āṇ<i>a</i>; on the <i>sa</i>ṃ<i>vattanikaviññ</i>āṇ<i>a</i> cf. also Collins 1982: 215. D 4094 <i>ju </i>228a2 or Q 5595 <i>tu </i>260a7 (in relation to the second path to imperturbability) similarly speaks of the "accomplishing consciousness", <i>bsgrubs pas rnam par shes pa</i>, that reaches imperturbability; cf. also the <i>Dharmaskandha</i>, Dietz 1984: 29,28, which in a discussion of how the formation of imperturbability leads to rebirth employs the expression <i>sa</i>ṃ<i>vartan</i>ī<i>ya</i>, though not explicitly related to consciousness.</span></span></span> This is reck-</p>
+<p>oned the first explanation of the path to pure imperturbability.</p>
+<p>"Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into imperturbability herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the imperturbable. This is reckoned the second explanation of the path to pure imperturbability.</p>
+<p>"At that time he will certainly attain the perception of imperturbability.<span class="note" id="mn106compn28"><span class="details"><span class="p">[n.28] MĀ 75 at T I 542c6: 得不動想, an indication not made in the parallel versions. This reference to attaining the "perception of imperturbability" in MĀ 75 fits the context, as all versions in their next step refer to leaving behind the "perception of imperturbability"; cf. MN 106 at MN II 263,17, MĀ 75 at T I 542c12 and D 4094 <i>ju </i>228b1 or Q 5595 <i>tu </i>260b7.</span></span></span> Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into imperturbability herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the imperturbable. This is reckoned the third explanation of the path to pure imperturbability."</p>
+<hr class="chapter-divider">
+<h3>Study (1)</h3>
+<p>Looking back on these approaches to imperturbability, the object(s) of each of these three differ to some extent in the Pāli, Chinese and Tibetan versions, as can be seen in table 8 below.</p>
+<p>MN 106</p>
+<p>MĀ 75</p>
+<table class="comparative-table">
+<caption>Table 8: Three Approaches to Imperturbability</caption>
+<tr><th>1 sensual pleasures,</th><th>sensual pleasures,</th><th>(not extant)</th></tr>
+<tr><td>sensual perceptions</td><td>material forms</td><td></td></tr>
+<tr><td>2 sensual pleasures,</td><td>material forms</td><td>material forms</td></tr>
+<tr><td>sensual perceptions,</td><td></td><td></td></tr>
+<tr><td>material forms</td><td></td><td></td></tr>
+<tr><td>3 sensual pleasures,</td><td>sensual pleasures,</td><td>sensual pleasures,</td></tr>
+<tr><td>sensual perceptions,</td><td>material forms,</td><td>material forms,</td></tr>
+<tr><td>material forms,</td><td>sensual perceptions,</td><td>sensual perceptions,</td></tr>
+<tr><td>perceptionsofforms</td><td>perceptions of forms</td><td>perceptions of forms</td></tr>
+</table>
+<p>Śamathadeva</p>
+<p>In regard to the first approach, the Pāli and Chinese versions agree on mentioning sensual pleasures, with the Pāli version also bringing in sensual perceptions, while the Chinese version instead refers to material forms (the corresponding section is unfortunately not covered in the quote preserved in Tibetan). In the second case, the Chinese and Tibetan versions mention just material forms, while the Pāli version also lists sensual pleasures and sensual perceptions. In the third case, the three versions agree in their listing, except for the sequence of their presentations.</p>
+<p>Evidently some alteration during transmission must have occurred, in order for these variations to have come into being. However, it seems difficult to come to an unequivocal decision on which version, if any, represents the original reading. Perhaps the simplest approach would thus be to leave aside the items not found in all versions. Thus, the three versions can be seen to agree on the following basic pattern:</p>
+<ul>
+<li>sensual pleasures,</li>
+<li>material forms,</li>
+<li>the above two and the corresponding perceptions.</li>
+</ul>
+<p>In regard to each of these three approaches, the Ā<i>neñjasap</i><i>p</i>ā<i>ya-sutta </i>and its parallels present insightful reflections that enable reaching imperturbability. In the case of these insightful reflections, the parallel versions also show some variations, as can be seen from table 9.</p>
+<p class="table-caption">Table 9: Three Modes of Approaching Imperturbability</p>
+<p>MN 106</p>
+<p>MĀ 75</p>
+<table class="comparative-table">
+<tr><th>1 defile & obstruct</th><th>defile & obstruct</th><th>(not extant)</th></tr>
+<tr><td>2 consist of 4 elements</td><td>consist of 4 elements;</td><td>consist of 4 elements;</td></tr>
+<tr><td></td><td>impermanent &</td><td>impermanent &</td></tr>
+<tr><td></td><td><i>dukkha</i></td><td>conditioned</td></tr>
+<tr><td>3 impermanent &</td><td>impermanent &</td><td>impermanent &</td></tr>
+<tr><td><i>dukkha</i></td><td><i>dukkha</i></td><td>conditioned</td></tr>
+</table>
+<p>Śamathadeva</p>
+<p>In regard to the first approach, the extant versions agree that the insight to be developed is the tendency of sensual pleasures to defile the mind, creating an obstruction for progress towards liberation; an obstruction exemplified by identifying sensual pleasures as the bait and domain of Māra.</p>
+<p>In the case of the second approach, while the Pāli discourse only mentions that material form consists of the four elements, the parallel versions further indicate that the four elements are impermanent and <i>dukkha</i> (Chinese version) or that they are impermanent and conditioned (Tibetan version).</p>
+<p>In support of the Pāli version's presentation, it could be noted that, according to the <i>Mah</i>ā<i>gop</i>ā<i>laka-sutta </i>and a range of parallels, knowledge of material form involves precisely the realization that form is made up of the four elements and their derivatives.<span class="note" id="mn106compn29"><span class="details"><span class="p">[n.29] MN 33 at MN I 222,37, AN 11.18 at AN V 351,8, SĀ 1249 at T II 342c25 (this is the negative case of not knowing form, as the positive case is not given in full), translated in Anālayo 2010b: 4, EĀ 49.1 at T II 794c10 and T 123 at T II 546c24; cf. also the *<i>Mah</i>ā<i>prajñ</i>ā<i>p</i>ā<i>ramit</i>ā<i>-</i>(<i>upade</i>ś<i>a-</i>)śā<i>stra</i>, 大智度論, T 1509 at T XXV 74a11, translated in Lamotte 1944/1981: 149.</span></span></span> This much of insight apparently suffices, as according to the <i>Mah</i>ā<i>gop</i>ā<i>laka-sutta </i> and its parallels someone who is endowed with the insight that form consists of the four elements is ready for progress towards liberation.</p>
+<p>In this way, the <i>Mah</i>ā<i>gop</i>ā<i>laka-sutta </i>and its parallels, as well as the Ā<i>neñjasapp</i>ā<i>ya-sutta</i>, point to the same basic insight into the four elements as qualities common to all material phenomena. That is, however beautiful or ugly any particular material form may appear, mental imperturbability can be achieved by reflecting that this form is just a combination of the four elements and thus not essentially different from any other occurrence of matter in the world.</p>
+<p>Regarding the third approach, the three versions are in agreement on impermanence forming the central insight that should be developed. The <i>Madhyama-</i>ā<i>gama </i>version's brief reference to the unsatisfactory nature of perceptions receives a more detailed exposition in the <i>Majjhima-nik</i>ā<i>ya</i> version, which explains that due to being impermanent perceptions are "not worth delighting in, approving of, or attaching to".<span class="note" id="mn106compn30"><span class="details"><span class="p">[n.30] See above note 27.</span></span></span> In spite of differing formulations, the two versions thus agree that the main thrust of insight requires a progression from impermanence to detachment. The Tibetan version also turns to the conditioned and dependently arisen nature of perceptions, thereby highlighting another important facet of their impermanent nature.</p>
+<p>Summing up the key aspects of these three approaches, what leads to imperturbability are the insights that:</p>
+<ul>
+<li>sensual pleasures are defiling and obstructing,</li>
+<li>material forms are made up of the four elements,</li>
+<li>the above [two] and perceptions are impermanent.</li>
+</ul>
+<p>These three types of insight are in themselves not surprising, as they well concord with what other discourses have to say on these themes. What is noteworthy, however, is that the Ā<i>neñjasapp</i>ā<i>ya-</i><i>sutta </i>and its parallels agree in depicting how such insights can lead to attaining imperturbability, with the development of wisdom introduced as an alternative option to simply attaining imperturbability.<span class="note" id="mn106compn31"><span class="details"><span class="p">[n.31] MN 106 at MN II 262,26 employs <i>v</i>ā and MĀ 75 at T I 542b29 或, both conveying the sense of an alternative option. The Tibetan version, D 4094 <i>ju </i> 228a2 or Q 5595 <i>tu </i>260a7, employs <i>cing</i>, which could convey a sense of an alternative, though in its general usage <i>cing</i> rather stands for "and" (references are in all three cases to the second approach to imperturbability, as the first approach is not included in the quote preserved in Tibetan).</span></span></span> The fact that all versions speak of the possibility of achieving a corresponding rebirth makes it unmistakeably clear that the imperturbability spoken of in the present context must be the concentrative type of imperturbability, that is, at least the fourth absorption.</p>
+<p>It would be making too much of the present passage if one were to assume that insight alone leads to such deep concentration,<span class="note" id="mn106compn32"><span class="details"><span class="p">[n.32] The commentary, Ps IV 59,16, bases the development of insight into sensual pleasures (that then leads to imperturbability) on the third absorption. Yet, insight into sensual pleasure is already a condition for reaching the first absorption, whose standard description stipulates the need of being (at least temporarily) free from sensuality; cf., e.g., DN 1 at DN I 37,1: <i>vivicc' eva k</i>ā<i>mehi</i>, with its parallels DĀ 21 at T I 93b20: 去欲 and Weller 1934: 58,3: <i>’dod pa </i> <i>dag las dben</i>. Similar formulations from other Chinese Ā<i>gama</i>s can be found, e.g., in MĀ 2 at T I 422b11: 離欲, SĀ 347 at T II 97a6: 離欲, SĀ2 198 at T II 447a11: 離欲, EĀ 28.6 at T II 653b19: 無欲; for a Sanskrit version of this specification cf., e.g., Gnoli 1978a: 242,22: <i>vivikta</i>ṃ<i> k</i>ā<i>mair</i>.</span></span></span> in fact the reference given in regard to the first approach to imperturbability to "attaining a vast state of mind" that is then developed "in a broad and extensive manner" may well be an implicit reference to the development of tranquillity. Nevertheless, it is remarkable that the Ā<i>neñjasapp</i>ā<i>ya-sutta </i>and its parallels do clearly depict insight making a rather substantial contribution to the development of deep stages of concentration. The same theme continues with the next section of the discourse, which presents approaches to the attainment of nothingness.</p>
+<hr class="chapter-divider">
+<h3>Translation (2)<span class="note" id="mn106compn33"><span class="details"><span class="p">[n.33] The section translated here ranges from T I 542c10 to 543a1.</span></span></span></h3>
+<p>"At that time he will attain the perception of the sphere of nothingness.<span class="note" id="mn106compn36"><span class="details"><span class="p">[n.36] MĀ 75 at T I 542c13: 得無所有處想, an indication not made in the parallel versions; cf. also above note 28.</span></span></span> Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into 〈nothingness〉 herein,<span class="note" id="mn106compn37"><span class="details"><span class="p">[n.37] MĀ 75 at T I 542c15 actually reads "attain entry into imperturbability", 得 入不動, an evident error which I emend to 得入無所有處, the reading required by the context and found in the description of the next two contemplations; an emendation also supported by the parallel versions, MN 106 at MN II 263,20: ā<i>kiñcaññ</i>ā<i>yatana</i>ṃ<i> sam</i>ā<i>pajjati </i>and D 4094 <i>ju </i>228b2 or Q 5595 <i>tu </i>260b8: <i>ci yang med pa la mos par ’gyur zhing</i>.</span></span></span> or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the 〈sphere of nothingness〉.<span class="note" id="mn106compn38"><span class="details"><span class="p">[n.38] Similar to the error mentioned above in note 37, MĀ 75 at T I 542c17 reads 必至不動, which I emend to 必至無所有處; cf. also MN 106 at MN II 263,23: ā<i>kiñcaññ</i>ā<i>yatan</i>ū<i>paga</i>ṃ and D 4094 <i>ju </i>228b2 or Q 5595 <i>tu </i>261a1: <i>ci yang </i> <i>med pa la snyoms par ’jug cing.</i></span></span></span> This is reckoned the first explanation of the path to the sphere of pure nothingness.</p>
+<p>7. "Again, a learned noble disciple contemplates like this: 'This world is empty, empty of a self, empty of what belongs to a self, empty of what is permanent, empty of what is everlasting, empty of existing continuously and empty of being unchanging'.<span class="note" id="mn106compn39"><span class="details"><span class="p">[n.39] MN 106 at MN II 263,26 reads: "this is empty of a self and of what belongs to a self", <i>suññam ida</i>ṃ<i> attena v</i>ā<i> attaniyena v</i>ā (following Be, Ce, Se and Horner 1959: 48 note 6 on reading <i>suññam ida</i>ṃ instead of Ee <i>saññam </i> <i>ida</i>ṃ; cf. also Minh Chau 1991: 329). Similar to MĀ 75, D 4094 <i>ju </i>228b6 or Q 5595 <i>tu </i>261a6 also speaks of being empty of permanence (with the difference that here this forms the 3rd approach to nothingness), reading: "the world is empty ... of permanence, of stability, of changelessness, of an immutable nature, devoid of a self and of what belongs to a self", <i>’jig rten ni stong pa</i>’<i>o ... </i> <i>rtag pa dang, brtan pa dang, g.yung drung dang, mi ’gyur ba’i chos can gyis </i> <i>stong zhing bdag dang bdag gi dang bral ba’o</i>. Baba 2004: 11 explains that such a type of treatment makes use of "expressions of emptiness that are more recent than those in the first four Pāli Nikāyas", as similar descriptions can be found only in historically later works such as the <i>Pa</i>ṭ<i>isambhid</i>ā<i>magga</i>; cf. Paṭis I 109,10: <i>suñña</i>ṃ<i> attena v</i>ā<i> attaniyena v</i>ā<i> niccena v</i>ā<i> dhuvena v</i>ā<i> sassa</i><i>tena v</i>ā<i> avipari</i>ṇā<i>madhammena v</i>ā.</span></span></span></p>
+<p>"Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into the sphere of nothingness herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the sphere of nothingness. This is reckoned the second explanation of the path to the sphere of pure nothingness.</p>
+<p>8. "Again, a learned noble disciple contemplates like this: 'I am not another's possession and I do not have possessions myself'.<span class="note" id="mn106compn40"><span class="details"><span class="p">[n.40] MĀ 75 at T I 542c25: 我非為他而有所為, 亦非自為而有所為; my translation of this cryptic passage is conjectural, alternatively the same passage could also be rendered as: "I do not act for another, nor do I act for myself", though this would seem less meaningful in the present context. MN 106 at MN II 263,34 reads: "I am not anything belonging to anyone anywhere, nor is there anything belonging to me in anyone anywhere", <i>n</i>ā<i>ha</i>ṃ<i> kvacani kassaci </i> <i>kiñcanatasmi</i>ṃ (Se: <i>kvacini na</i>, Ce: <i>kassac</i>ī)<i>, na ca mama kvacani kismiñci </i> <i>kiñcana</i>ṃ<i> n' atthi </i>(Se: <i>kvacini</i>, Ce: <i>kismici kiñcanatatthi</i>). A similar reflection recurs in AN 3.70 at AN I 206,18, where the parallel passage in MĀ 202 at T I 770b13 reads: "I am without parents, I have no parents, I am without wife and children, I have no wife and children, I am without male or female slaves, I have no ownership over male or female slaves", 我無父母, 非父母有, 我無妻 子, 非妻子有, 我無奴婢, 非奴婢主 (adopting a variant reading 主 instead of 生). The counterpart to the present passage in MĀ 75 in D 4094 <i>ju </i>228b4 or Q 5595 <i>tu </i>261a3 reads: "there is no I in any way at all, there is no mine in any way at all", <i>bdag ’ga’ zhig tu ’ga’ yang cung zad med do, bdag gi ’ga’ </i>(Q: without <i>’ga’</i>) <i>zhig tu ’ga’ yang cung zad med do </i>(which in the Tibetan version constitutes the 2nd approach to nothingness)<i>.</i> A comparable mode of reflection can be found in the Jain Ā<i>y</i>ā<i>ra</i>ṅ<i>ga</i> 1.7.6.1 (or alternatively 1.8.6.1), which runs: "I am alone, nobody belongs to me and I do not belong to anyone", Schubring 1910/1966: 37,7: <i>ego aham a</i>ṃ<i>si, na me atthi koi na y</i>ā<i>ham avi kas</i><i>sai</i>; cf. also Caillat 1977: 58 note 59 and Jacobi 1882: 36,22, reading <i>no me</i> instead of <i>na me</i>.</span></span></span></p>
+<p>"Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into the sphere of nothingness herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the sphere of nothingness. This is reckoned the third explanation of the path to the sphere of pure nothingness".</p>
+<hr class="chapter-divider">
+<h3>Study (2)</h3>
+<p>The variations between these three approaches to nothingness are summarized in table 10 below.</p>
+<p>MN 106</p>
+<p>MĀ 75</p>
+<table class="comparative-table">
+<caption>Table 10: Three Modes of Approaching Nothingness</caption>
+<tr><th>1 cessation of</th><th>perceptions are im-</th><th>perceptions are imper-</th></tr>
+<tr><td>perceptions</td><td>permanent & <i>dukkha</i></td><td>manent & conditioned</td></tr>
+<tr><td>2 empty of self</td><td>empty of self & of</td><td>no I at all</td></tr>
+<tr><td></td><td>permanence</td><td></td></tr>
+<tr><td>3 I am not any-</td><td>no possession</td><td>empty of self & of</td></tr>
+<tr><td>thing, etc.</td><td></td><td>permanence</td></tr>
+</table>
+<p>Śamathadeva</p>
+<p>In the first case, the Chinese and Tibetan accounts continue with the same insight already employed earlier to reach imperturbability. This leads to a higher stage because the scope of its application has been broadened, covering also the perception of imperturbability. The Pāli version instead presents the reflection that the cessation of these perceptions is peaceful and sublime.</p>
+<p>Regarding the second approach to nothingness (which in the Tibetan version forms the third), there is general agreement on its main theme being emptiness. A difference between the three presentations is that the Chinese and Tibetan versions note that perceptions are also empty of permanence, thereby directing insight to the quality of impermanence as well.</p>
+<p>In the case of the third approach to nothingness (the second in the Tibetan version), the phrasing in the three versions differs, perhaps in part due to translation difficulties (at least in the case of the <i>Madhyama-</i>ā<i>gama </i>passage). The Pāli version's reflection that "I am not anything belonging to anyone anywhere, nor is there anything belonging to me in anyone anywhere" recurs elsewhere in the Pāli <i>Nik</i>ā<i>ya</i>s as a mode of contemplation employed by Jains or by brahmins.<span class="note" id="mn106compn41"><span class="details"><span class="p">[n.41] AN 3.70 at AN I 206,18 and AN 4.185 at AN II 177,11; cf. also the parallel versions to AN 4.185: SĀ 972 at T II 251b12, SĀ2 206 at T II 450c24 and Sanskrit fragment fol. 173b4, Pischel 1904: 818; cf. also Lévi 1904: 304.</span></span></span></p>
+<p>Of these three modes for approaching nothingness, the second is particularly noteworthy, as it takes up a form of contemplation that is distinctly Buddhist: insight into the absence of a self. This brings out with increased clarity a point noted already above in relation to the approaches to imperturbability, namely the contribution insight can make to the development of deep stages of concentration (in the present case to the attainment of the sphere of nothingness).</p>
+<p>Another passage that relates emptiness to imperturbability can be found in the <i>Mah</i>ā<i>suññata-sutta</i> and its parallels, which describe a mode of practice where attention given to emptiness leads to imperturbability.<span class="note" id="mn106compn42"><span class="details"><span class="p">[n.42] MN 122 at MN III 112,25, MĀ 191 at T I 739a8 (translated below page 354) and Skilling 1994b: 220,5.</span></span></span> Yet another relevant discourse is the <i>C</i>ūḷ<i>asuññata-sutta</i>, which in agreement with its parallels depicts a gradual meditation on emptiness that proceeds through the immaterial attainments.<span class="note" id="mn106compn43"><span class="details"><span class="p">[n.43] Differing in so far as MN 121 at MN III 107,10 covers also the fourth immaterial attainment among the stages that precede the attainment of signlessness. The parallel versions only mention the first three immaterial attainments before turning to signlessness; cf. MĀ 190 at T I 737c2 (translated below page 331, cf. also Choong 1999: 71 and Schmithausen 1981: 235) and the Tibetan parallel in Skilling 1994b; 172,3 (on which cf. also Skilling 1997: 355).</span></span></span></p>
+<p>That contemplation of emptiness can lead to imperturbability (<i>Mah</i>ā<i>suññ</i>ā<i>ta-sutta</i>) or to attaining the sphere of nothingness (Ā<i>neñjasapp</i>ā<i>ya-sutta</i>) not only highlights the contribution that insight can make to the development of tranquillity; it also shows that contemplation of emptiness can at times fall short of being truly liberating.</p>
+<p>In fact, the<i> C</i>ūḷ<i>asuññ</i>ā<i>ta-sutta</i> and its Tibetan parallel make a point of clearly distinguishing between various emptiness experiences and the destruction of the influxes, explicitly qualifying only the last as an "unsurpassable" form of emptiness.<span class="note" id="mn106compn44"><span class="details"><span class="p">[n.44] MN 121 at MN III 109,1: <i>param</i>ā<i>nuttar</i>ā<i> suññat</i>ā<i>vakkanti</i> and Skilling 1994b: 178,2: <i>stong pa nyid la ’jug pa bla na med pa.</i></span></span></span> In contrast, other emptiness experiences are still surpassable, in as much as they are not completely liberating. That is, an experience of emptiness need not be a liberating experience, as it could just be an – from the subjective viewpoint certainly profound – experience of mental tranquillity.</p>
+<p>The topic of insight contemplation resulting in deep concentration or leading to liberation underlies the remaining section of the Ā<i>neñjasapp</i>ā<i>ya-sutta</i>, which turns to the attainment of neitherperception-nor-non-perception and to the gaining of liberation.</p>
+<hr class="chapter-divider">
+<h3>Translation (3)<span class="note" id="mn106compn45"><span class="details"><span class="p">[n.45] The section translated here ranges from T I 543a1 to 543b28.</span></span></span></h3>
+<p>"At that time he will attain [the perception of the sphere of neither-perception-nor]-non-perception.<span class="note" id="mn106compn47"><span class="details"><span class="p">[n.47] MĀ 75 at T I 543a8 just reads "no perception", 無想. Though <i>Madhyama</i>ā<i>gama</i> discourses usually employ 非有想非無想 to render "neither-perception-nor-non-perception", another exception to this pattern can be found in MĀ 120 at T I 609c15, which reads 有想無想, a reading found also at a later point in the present discourse, MĀ 75 at T I 543a24. Moreover, in MĀ 164 at T I 695b17 無想 features as an abbreviated reference to 非有想非無想, mentioned just before in the same line. This suggests that the present instance of 無想 stands for "neither-perception-nor-non-perception" (to which in accordance with the earlier exposition on nothingness I have added the "perception of the sphere"), in line with the reading found in the two parallels, MN 106 at MN II 264,14: <i>nevasaññ</i>ā<i>n</i>ā<i>saññ</i>ā<i>yatana</i>ṃ and D 4094 <i>ju </i>229a4 or Q 5595 <i>tu </i> 261b5: <i>’du shes med ’du shes med min skye mched</i>; and in line with a reference to the present passage in the <i>Yog</i>ā<i>c</i>ā<i>rabh</i>ū<i>mi</i>, T 1579 at T XXX 858a22, which also speaks of "neither-perception-nor-non-perception", 非想非非想.</span></span></span> Practising and training like this, developing [the mind] like this in a broad and extensive manner, he easily attains purity of the mind in regard to that sphere. Having attained purity of the mind in regard to that sphere, a monk will attain entry into [neither-perceptionnor]-non-perception herein, or else employ wisdom for the sake of liberation. At a later time, when the body breaks up at death, because of that former mental disposition he will certainly reach the sphere of [neither-perception-nor]-non-perception. This is reckoned the explanation of the path to pure [neither-perception-nor]-non-perception."</p>
+<p>10. At that time the venerable Ānanda was holding a fan and fanning the Buddha. Then the venerable Ānanda held his hands together [in homage] towards the Buddha and said: "Blessed One, suppose a monk practises like this: 'There is no I, nor anything belonging to me, I will not be, what belongs to me will not be. What has earlier [come to] exist, will be extinguished', <span class="note" id="mn106compn48"><span class="details"><span class="p">[n.48] On this type of contemplation cf. also de La Vallée Poussin 1931, Bodhi 2000: 1060 to 1063 note 75 and Anālayo 2009d.</span></span></span> and he attains equanimity [by practising like this]. Blessed One, a monk who practises like this, will he completely attain final Nirvāṇa?"</p>
+<p>The Blessed One answered: "Ānanda, this matter is uncertain. There are some who attain it, there are some who do not attain it." The venerable Ānanda said: "Blessed One, practising in what way will a monk not attain final Nirvāṇa?"</p>
+<p>The Blessed One said: "Ānanda, suppose a monk practises like this: '[There is] no I, nor anything belonging to me, I will not be, what belongs to me will not be. What has earlier [come to] exist, will be extinguished', and he attains equanimity [by practising like this]. Ānanda, if the monk delights in that equanimity, becomes attached to that equanimity, becomes established in that equanimity, Ānanda, then practising like that the monk will certainly not attain final Nirvāṇa."</p>
+<p>The venerable Ānanda said: "Blessed One, if a monk has such clinging, he will not attain final Nirvāṇa?" The Blessed One said: "Ānanda, if a monk has such clinging, he will certainly not attain final Nirvāṇa!"</p>
+<p>The venerable Ānanda said: "Blessed One, so that monk is practising with a remainder of clinging?" The Blessed One said: "Ānanda, in this way the monk is indeed practising with a remainder of clinging!"</p>
+<p>The venerable Ānanda said: "Blessed One, practising in what way will a monk certainly attain final Nirvāṇa?"</p>
+<p>12. The Blessed One said: "Ānanda, suppose a monk practises like this: 'There is no I, nor anything belonging to me, I will not be, what belongs to me will not be. What has earlier [come to] exist, will be extinguished', and he attains equanimity [by practising like this]. Ānanda, if the monk does not delight in that equanimity, does not become attached to that equanimity, does not become established in that equanimity, Ānanda, practising like this the monk will certainly attain final Nirvāṇa."</p>
+<p>The venerable Ānanda said: "Blessed One, if a monk clings to nothing, will he certainly attain final Nirvāṇa?" The Blessed One said: "Ānanda, if a monk clings to nothing, he will certainly attain final Nirvāṇa!"</p>
+<p>13. Then the venerable Ānanda held his hands together [in homage] towards the Buddha and said: "The Blessed One has explained the path to pure imperturbability, he has explained the path to the sphere of pure nothingness, he has explained the path to pure [neither-perception-nor]-non-perception, he has explained Nirvāṇa without remainder.<span class="note" id="mn106compn49"><span class="details"><span class="p">[n.49] MN 106 at MN II 265,21 speaks at this point also of "crossing the flood in dependence on one thing after another", <i>niss</i>ā<i>ya niss</i>ā<i>ya</i> <i>... oghassa nitthara</i>ṇā (the expression <i>niss</i>ā<i>ya niss</i>ā<i>ya </i>recurs in DN 16 at DN II 130,14, where it describes a row of chariots that follow each other "one after another").</span></span></span> Blessed One, what is noble liberation?"</p>
+<p>"A noble [disciple] contemplates like this: 'What is [this dharma] certainly has the nature of liberation. What is Nirvāṇa without remainder, that is called the deathless'. With such contemplation and such view he will certainly attain liberation of the mind from the influx of sensuality, from the influx of existence, and liberation of the mind from the influx of ignorance. Being liberated, he knows that he is liberated: 'Birth has been extinguished, the holy life has been established, what had to be done has been done, there will be no experiencing of a further existence', knowing this as it really is.</p>
+<p>14. "Ānanda, now I have explained to you the path to pure imperturbability,<span class="note" id="mn106compn52"><span class="details"><span class="p">[n.52] MĀ 75 at T I 542b20: 淨; the qualification "pure" is not made in the parallel versions.</span></span></span> I have explained the path to the sphere of pure nothingness, I have explained the path to pure [neither-perception-nor]-non-perception, I have explained Nirvāṇa without remainder and I have explained noble liberation.</p>
+<p>The Buddha spoke like this. The venerable Ānanda and the monks, having listened to what the Buddha said, were delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study (3)</h3>
+<p>In the case of the first of these three modes of development, the three versions vary in ways similar to the variations found in regard to the first approach towards nothingness, see table 11.</p>
+<p class="table-caption">Table 11: The Three Last Modes of Development</p>
+<p>MN 106</p>
+<p>MĀ 75</p>
+<table class="comparative-table">
+<tr><th>1 cessation of</th><th>perceptions are im-</th><th>perceptions are imper-</th></tr>
+<tr><td>perceptions</td><td>permanent & <i>dukkha</i></td><td>manent & conditioned</td></tr>
+<tr><td>2 attachment?</td><td>attachment?</td><td>attachment?</td></tr>
+<tr><td>3 just individual</td><td>just individual exis-</td><td>just individual exis-</td></tr>
+<tr><td>existence</td><td>tence</td><td>tence</td></tr>
+</table>
+<p>Śamathadeva</p>
+<p>The second mode of development is similar in kind to the second approach to nothingness, in that here again an insight contemplation – this time phrased in terms of what "will not be" – has the potential of leading to a concentration attainment, here the sphere of neither-perception-nor-non-perception. The crucial question is whether the practitioner is able to avoid attachment to the equanimity of this experience, as such attachment prevents progress towards final liberation. The third mode then presents noble liberation as being reached by realizing that all experiences discussed so far are simply occurrences of individual existence (<i>sakk</i>ā<i>ya</i>). Hence letting go of such individual existence, in the sense of not identifying with these experiences, will lead to the supreme.</p>
+<p>The exposition in the Ā<i>neñjasapp</i>ā<i>ya-sutta </i>and its parallels can be seen to touch on various nuances of imperturbability. The explicit usage of the term appears to correspond to its implications in the <i>Sunakkhatta-sutta</i>, where it stands for the fourth absorption and the two lower immaterial attainments. In addition to this explicit usage, the Ā<i>neñjasapp</i>ā<i>ya-sutta </i>and its parallels also cover the two higher immaterial attainments – nothingness and neither-perception-nor-non-perception – concentrative experiences that are elsewhere in the discourses also reckoned as manifestations of imperturbability. The topic of the last section of the discourse is then the supreme type of imperturbability: the attainment of liberation. The different nuances of imperturbability covered in this way, ranging from tranquillity to insight, exemplify the implicit message of the discourse on their close interrelationship.</p>
+<p>When evaluating this presentation, it needs to be kept in mind that in the thought world of the early discourses tranquillity and insight are regularly presented as interrelated with and dependent upon each other. This can be seen in the <i>Yuganaddha-sutta</i>, for example, which depicts four modes of approaching liberation. One of these four modes in the <i>Yuganaddha-sutta</i> does not explicitly refer to tranquillity or insight, hence it can be left aside for the purpose of the present discussion.<span class="note" id="mn106compn54"><span class="details"><span class="p">[n.54] The description of this mode in AN 4.170 at AN II 157,20 speaks of overcoming restlessness in regard to the Dharma<i>, dhamm' uddhacca</i>; for a discussion of which cf. Anālayo 2009i. According to the parallel version SĀ 560 at T II 147a5, however, even the approach that involves overcoming restlessness eventually results in tranquillity and insight.</span></span></span> The other three are:</p>
+<ul>
+<li>tranquillity followed by insight,</li>
+<li>insight followed by tranquillity,</li>
+<li>tranquillity and insight conjoined.<span class="note" id="mn106compn55"><span class="details"><span class="p">[n.55] AN 4.170 at AN II 157,4 reports that a monk or a nun may either "develop insight preceded by tranquillity ... [or] develop tranquillity preceded by insight ... [or] develop tranquillity and insight conjoined", <i>samathapubba</i>ṅ<i>ga</i><i>ma</i>ṃ<i> vipassana</i>ṃ<i> bh</i>ā<i>veti ... vipassan</i>ā<i>pubba</i>ṅ<i>gama</i>ṃ<i> samatha</i>ṃ<i> bh</i>ā<i>veti ... </i> <i>samathavipassana</i>ṃ <i>yuganaddha</i>ṃ <i>bh</i>ā<i>veti.</i> The parallel SĀ 560 at T II 146c24 indicates that a monk or a nun may either, while "sitting in meditation thus settle the mind, well settle the mind, definitely settle the mind and train the mind in tranquillity and insight ... [or, while] sitting properly, give attention to investigation-of-phenomena and through [such] contemplation settle the mind, well settle it, definitely settle it and train it in tranquillity and insight ... [or] practice both tranquillity and insight in conjunction", 坐作如是住心, 善住心, 局住心, 調伏心止觀 ... 正坐思惟, 於法選擇, 思量住心, 善住, 局住, 調伏止 觀 ... 止觀和合俱行.</span></span></span></li>
+</ul>
+<p>This presentation indicates that not only may tranquillity lead to insight, but insight can also lead to tranquillity. This suggestion is well in line with the exposition in the Ā<i>neñjasapp</i>ā<i>ya-sutta</i>.</p>
+<p>The specific contribution made in the Ā<i>neñjasapp</i>ā<i>ya-sutta </i> and its parallels is to highlight in what way insight can make its contribution to the development of tranquillity. Such insight is not merely awareness of the factors of the mind that need to be overcome in order to reach a deeper level of concentration, but much rather employs themes that stand at the very heart of early Buddhist meditative wisdom, such as contemplation of emptiness in terms of the absence of a self. In this way, the Ā<i>neñjasapp</i>ā<i>ya-</i><i>sutta </i>and its parallels throw a spotlight on a significant aspect of the relationship between tranquillity and insight, thereby putting them into proper perspective as two qualities that in mutual collaboration will lead to liberation.</p>
+<p>"There is no absorption for one bereft of wisdom [just as] there is no wisdom for one who does not meditate, one who has [both] absorption and wisdom, such a one is close to Nirvāṇa indeed<i>.</i>"<span class="note" id="mn106compn56"><span class="details"><span class="p">[n.56] Dhp 372: <i>n’ atthi jh</i>ā<i>na</i>ṃ<i> apaññ</i>ā<i>ssa, paññ</i>ā<i> n’ atthi ajh</i>ā<i>yato, yamhi jh</i>ā<i>nañ ca paññ</i>ā<i> ca, sa ve nibb</i>ā<i>nasantike</i> (Ce: <i>nibb</i>āṇ<i>asantike</i>); with similarly worded Indic language counterparts in Gāndhārī <i>Dharmapada</i> stanza 58, Brough 1962/2001: 127, Patna <i>Dharmapada</i> stanza 62, Cone 1989: 119 or Roth 1980: 103, and Uv 32.25, Bernhard 1965: 439.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn106.html">MN106</a>: Āneñjasappāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

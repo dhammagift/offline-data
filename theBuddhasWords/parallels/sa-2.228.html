@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.228 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.228</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 228</span><span class="mirror-right">（二二八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn8.7.html">SN 8.7</a> / <a href="../parallels/ma121.html">MĀ 121</a> / <a href="../parallels/sa1212.html">SĀ 1212</a> / <a href="../parallels/ea32.5.html">EĀ 32.5</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林，夏坐安居。尔时，世尊与大比丘众五百人俱，皆是阿罗汉，诸漏已尽，所作已办，舍于重担，尽诸有结，正智心得解脱，唯除一人，如来记彼现身尽漏。于七月十五日，自恣时到，佛于僧前，敷座而坐。尔时，世尊告诸比丘：「汝等当知我是婆罗门，于般涅槃，受最后身，无上良医，拔于毒箭。汝等皆是我子，悉从于我心口而生，是我法子，从法化生，我今欲自恣，我身口意无过失不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śāriputra was sitting in the assembly. He rose from his seat, adjusted his robes, joined his palms towards the Buddha, and said, &quot;World-Honored One! As the Buddha has said: &#x27;I am a brāhmaṇa, who has attained parinirvāṇa and is in my final body. I am the unsurpassed physician who has extracted the poisonous arrow. You are all my sons, born from my mind and mouth. You are my Dharma sons, born from the Dharma and transformed by the Dharma.&#x27; We do not see any faults in the Tathāgata&#x27;s body or speech. Why is that? The World-Honored One can tame the untamed, bring peace to the unpeaceful, give relief to the suffering, and lead those not yet in nirvāṇa to nirvāṇa. The Tathāgata is the knower of the path, the teacher of the path, the expounder of the path, the guide of the path, leading disciples in an unbroken succession. The World-Honored One&#x27;s teachings are to cultivate the path in stages, always teaching and practicing together, in accordance with the true Dharma, which should always be upheld and cherished. We do not see any faults in the World-Honored One&#x27;s body, speech, or mind.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者舍利弗在众中坐，从坐而起，整其衣服，合掌向佛白言：「世尊！如佛所说：『我是婆罗门，于般涅槃，受最后身，无上良医，拔于毒箭。汝等皆是我子，悉从于我心口而生，是我法子，从法化生。』我等不见如来身口有少过失。何以故？世尊能使不调者调，不寂灭者，使得寂灭。苦恼之者，能使安隐。未入涅槃者，使得涅槃。如来是知道者，是示道者，是说道者，是导道者，将来弟子相续不绝。世尊教法，次第修道，恒相教习，随顺正法，常应拥护，亲爱善法。我等不见世尊若身口意有少过失。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;World-Honored One! Please speak of any faults in my body, speech, or mind.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「世尊自恣，说我若身口意有所阙短，垂哀教勅。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Śāriputra, &quot;I do not see any faults in you. Why is that? You, Śāriputra, uphold pure precepts, are learned, have few desires, are content, are far from worldly affairs, enjoy solitude, are diligent, have attained concentration, wisdom, quick wisdom, sharp wisdom, successive wisdom, have great wisdom, discerning wisdom, and have deep wisdom, except for the Tathāgata. No one else&#x27;s wisdom can match yours. You have accomplished true wisdom, and you teach, benefit, and delight others. Your mind is free from jealousy. When you see others with abilities, you teach, benefit, and delight them, and rejoice and praise them. Whether for the four assemblies of monks, nuns, male lay followers, or female lay followers, you teach the Dharma without weariness. Therefore, now your body, speech, and mind have no faults.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告舍利弗：「我不见汝有少过失。何以故？汝舍利弗坚持净戒，多闻、少欲、知足、远离愦閙、乐于闲静，有精进，具足定心、智慧，疾智、捷智、展转智、有大种智、别智，唯除如来，诸余智慧，无能及汝，深远之智，成就实智，示教利喜。心无嫉妬，见他有能，示教利喜，随喜赞叹。若为四众比丘、比丘尼、优婆塞、优婆夷，说法无有疲厌，是故汝今若身口意无有少过。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;World-Honored One! Do you see any faults in these five hundred monks in their body, speech, or mind?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗白言：「世尊！颇见是五百比丘于身口意有少过不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Śāriputra, &quot;I do not see any faults in these five hundred monks in their body, speech, or mind. Why is that? These five hundred monks are all arhats, their taints are exhausted, their work is done, they have put down the heavy burden, attained their own benefit, exhausted all bonds, and their minds are liberated with right knowledge. For this reason, I do not see any faults in these five hundred monks in their body, speech, or mind.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告舍利弗：「我不见五百比丘于身口意有少过失。何以故？是五百比丘，皆是阿罗汉，诸漏已尽，所作已办，舍于重担，逮得己利，尽诸有结，正智心得解脱。以是义故，我不见是五百比丘若身口意有少过失。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra again addressed the Buddha, saying, &quot;World-Honored One! You would never criticize their minor faults, and you do not see any faults in these five hundred monks in their body, speech, or mind. World-Honored One! How many of these five hundred monks possess the three insights? How many have attained liberation through both means? How many have attained liberation through wisdom?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗复白佛言：「世尊！终不讥彼小阙，亦不见五百比丘若身口意有少过失。世尊！此五百比丘几具三明？几得俱解脱？几得慧解脱？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Among these monks, ninety monks possess the three insights, one hundred and eighty have attained liberation through both means, and the rest have attained liberation through wisdom.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「此比丘众中，九十比丘具于三明，有百八十得俱解脱，其余之者，尽慧解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;These five hundred people are free from defilements and impurities, without any corruption, all of them are pure and genuine.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「此五百人离诸尘垢，无有腐败，悉皆贞实。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Vāgīśa was in the assembly and thought, &quot;The Buddha is now in the self-indulgent state. I now wish to speak a verse praising the self-indulgent state.&quot; Vāgīśa joined his palms towards the Buddha and said to the Buddha, &quot;World-Honored One! Please allow me to speak.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时婆耆奢在彼众中，而作是念：「佛今自恣，我今欲说赞自恣偈。」婆耆奢合掌向佛，白佛言：「世尊！唯愿听我所说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said, &quot;Vāgīśa! Speak as you wish.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛言：「婆耆！随汝所说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Vāgīśa then spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>婆耆奢即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>On this fifteenth day of purity, five hundred bhikṣus dwell together, all having severed the bonds<br/>of afflictions, the great sages who have exhausted future existence. With sincere hearts, they approach the<br/>Pure World Honored One, all attaining liberation and leaving future existence behind. Having severed birth and<br/>death, their tasks are done, their taints exhausted, and they have extinguished agitation and regret. They<br/>have eliminated greed, pride, and the bonds of existence, pulled out the poisoned arrow of craving<br/>and extinguished craving and existence. The lion among humans has left behind all grasping, exhausted the<br/>bonds of existence, and extinguished fear. Like a great sage wheel-turning king, surrounded by a retinue<br/>of ministers, roaming the great earth to the great ocean, it is like a great victory<br/>in battle. The disciples of the unsurpassed merchant leader, all possessing the three knowledges and extinguishing<br/>death, are all true sons of the Buddha, free from defilements and utterly pure. I now<br/>pay homage to the sun-like friend.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「此十五日清净朝，　　五百比丘同共处，皆悉断于结使缚，　　尽于后有之大仙。诚心亲近净世尊，　　悉得解脱离后有，断于生死所作办，　　诸漏已尽灭掉悔。除贪憍慢断有结，　　拔爱毒箭灭爱有，人中师子离诸取，　　尽诸有结灭怖畏。如似转轮大圣王，　　群臣翼从而围遶，游行大地至巨海，　　譬如鬪战得大胜。无上商主弟子众，　　悉具三明灭于死，斯等皆是佛真子，　　离诸垢秽纯清净，如日亲友今敬礼。」</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

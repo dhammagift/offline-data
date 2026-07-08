@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.211 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.211</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 211</span><span class="mirror-right">（二一一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn36.21.html">SN 36.21</a> / <a href="../parallels/sa977.html">SĀ 977</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Kalandaka Bamboo Grove in Rājagṛha. At that time, the Brāhman Śiṣṭa went to where the Buddha was, asked about his well-being, and sat to one side. He said, &quot;Gautama! If there are Brāhmanas who say, &#x27;All actions are due to past causes. In the present world, all actions can increase the causes of unwholesomeness in the past. In the present world, if one does not create karma, one can destroy the bridge of birth and death, forever sever the four streams, and no longer transmigrate. Because karma is exhausted, suffering can also be exhausted. When suffering is exhausted, the limit of suffering is exhausted.&#x27; Gautama! What is the meaning of this?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林。尔时，尸卜梵志往诣佛所，问讯已讫，在一面坐，而作是言：「瞿昙！若有婆罗门作是说：『随所作业，悉是过去，本所作因，于现在世，所作诸业，能增过去不善之因。现在之世，若不造业，则能破坏生死之桥，四流永绝，更不流转。以业尽故，苦亦得尽，苦尽则苦边际尽。』瞿昙！此事云何？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Śiṣṭa, &quot;As you say, those śramaṇas and brāhmaṇas say, &#x27;All actions are due to past causes. Up to the exhaustion of suffering.&#x27; If so, what are the causes and conditions for the various wind, cold, and other illnesses in the present world due to the increase and decrease of the four great elements? If so, are they self-created or created by others?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告尸卜：「如汝所言，彼诸沙门、婆罗门等，作如是说：『随所造业，悉是过去本业因缘，乃至尽苦边际。』若如是者，以何因缘，于现在世，而有种种风、冷、病等四大增损？若如是者，为自所作？为他所作？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śiṣṭa said to the Buddha, &quot;Created by others.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尸卜白佛：「他之所作。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Śiṣṭa, &quot;What is self-created? Constantly pulling out hair and beard, or standing with hands raised, not sitting on a bed, or squatting, making that one&#x27;s practice. Or sitting or lying on thorns, or sitting or lying on a side beam, or sitting or lying on ashes and soil, or smearing cow dung on the ground and sitting or lying on it. Or raising one foot and turning with the sun, in the hot summer months, scorching the body with five fires, or eating vegetables, or eating millet, or eating śāluka, or eating dregs, or eating oil residue, or eating cow dung. Or three fires a day, or in winter, freezing and shivering. There are such immeasurable practices of afflicting the body. This is called self-created. What is called suffering created by others? Being struck by others&#x27; hands, feet, and weapons, tiles, and stones. Such suffering is called created by others. All worldly people have the increase and decrease of the four great elements, or suffer from wind and cold. Such illnesses are seen in the present. How can those brāhmaṇas have such a view and say that this can exhaust suffering? This is a self-created fault. Such faults are all known by the world. They falsely say that five causes and conditions can cause the body and mind to suffer. What are the five? Namely, greed, anger, agitation, regret, and doubt. These five dharmas can cause sentient beings to suffer in the present world. There are also five causes and conditions that can cause the body and mind to always be happy and not suffer in the present world. What are the five? Namely, being able to cut off the mind of greed, which can cause the body and mind to experience the happiness of the Dharma in the present. Because of greed, anger, agitation, and regret, sentient beings suffer. If one can eliminate them, one will experience happiness without worries. Therefore, one should eliminate such greed, anger, and agitation. If one eliminates them, there will be no heat or trouble. One will attain liberation without waiting for the right time and will surely attain nirvāṇa. Śiṣṭa! This is called the Dharma attained in the present. There is also the Dharma attained in the present, namely, right view, right speech, right action, right livelihood, right effort, right intention, right mindfulness, and right concentration.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告尸卜：「云何自己所作？常拔须发，或举手立，不在床坐。或复蹲坐，以之为业。或复坐卧于棘刺之上，或边椽坐卧，或坐卧灰土，或牛屎涂地，于其中坐卧。或翘一足，随日而转，盛夏之月，五热炙身，或食菜，或食稗子，或食舍楼伽，或食糟，或食油滓，或食牛粪。或日三事火，或于冬节，冻氷衬体。有如是等无量苦身法，是名自己所作。云何名为从他作苦？为他手足，及以力杖、瓦石打掷，如是等苦，是则名为从他得苦。一切世人，四大增损，或为风冷而起是患。如是等患，现所见事，云何彼诸婆罗门等，若作是见，言以此故，能尽苦际，即是自作过咎。如是等咎，一切世人，皆共知之，彼自虚说，以五因缘故，能令身心受诸苦恼。何等为五？所谓贪欲、瞋恚、掉悔、疑，如斯五法，能令众生现在之世身心苦恼。复有五因缘故，于现在世，能令身心常得快乐，不受苦恼。何等为五？所谓能断贪欲之心，则于现在，能令身心受法快乐。何以故？以有贪欲、瞋恚、掉悔故，能令众生受诸苦恼，若能断除，则受快乐，无有忧患，是故应当断除如是贪欲、瞋恚、掉悔。若断除者，无热无恼，不待时节，当得解脱，必趣涅槃，尸卜！是名现在所得法。复有现前所得法，所谓正见、正语、正业、正命、正方便、正志、正念、正定。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When this teaching was spoken, the brāhmaṇa Śiṣṭa was far removed from defilements and attained the pure Dharma eye with regard to all dharmas. Having attained the path, he immediately adjusted his robes, joined his palms towards the Buddha, and said to the Buddha, &quot;World-Honored One! I only pray that the Tathāgata, out of compassion and pity, will allow me to go forth.&quot; The Tathāgata immediately allowed him to go forth. Having gone forth, he diligently practiced in an empty and quiet place and attained arahantship.</p></td><td lang="lzh" class="agama-chi"><p>说是法时，尸卜梵志远离尘垢，于诸法中，得法眼净。既得道已，即整衣服，合掌向佛，而白佛言：「世尊！唯愿如来慈哀怜愍，听我出家。」如来即听出家，既出家已，于空静处，慇懃精进，得阿罗汉。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

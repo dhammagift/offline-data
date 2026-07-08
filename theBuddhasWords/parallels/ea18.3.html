@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 18.3 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 18.3</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">18.3</span> <span class="mirror-right">（三）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn3.html">MN 3</a> / <a href="../parallels/ma88.html">MĀ 88</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;You should always give the Dharma, not give food. The reason is, you now have the support of karmic retribution, causing my disciples to respect the Dharma and not be greedy for material gain. If one is greedy for material gain, there is a great fault in the Tathāgata&#x27;s place. Why is that? It means that sentient beings do not distinguish the Dharma, and they destroy the World-Honored One&#x27;s teachings. Having destroyed the World-Honored One&#x27;s teachings, they will not attain the path to nirvāṇa in the future, and I will then be ashamed. The reason is, it means that the Tathāgata&#x27;s disciples are attached to material gain, do not practice the Dharma, do not distinguish the Dharma, destroy the World-Honored One&#x27;s teachings, and do not follow the true Dharma. Having destroyed the World-Honored One&#x27;s teachings, they will not attain the path to nirvāṇa. You bhikṣus should now remember the Dharma-giving, not think of giving out of desire. Then you will be praised, have much learning, be respected from afar, respect the Dharma, and not be greedy for wealth. This is without shame. The reason is, the Tathāgata&#x27;s disciples give the good Dharma, not give out of desire. This is called, bhikṣus, you should remember the Dharma-giving, not study giving of wealth. You bhikṣus, I speak of this meaning, for what meaning do I speak of this condition?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「常当法施，勿习食施。所以然者，汝等今有果报之祐，使我弟子恭敬于法，不贪利养。设贪利养者，则有大过于如来所。何以故？谓众生类不分别法，毁世尊教；已毁世尊教，后不复得至涅槃道，我便有耻。所以然者，谓如来弟子贪著利养，不行于法，不分别法，毁世尊教，不顺正法；已毁世尊教，复不至涅槃道。汝今，比丘！当念法施，勿思欲施，便得称誉，多闻四远，恭敬于法，不贪财物，此则无有羞耻。所以然者，如来弟子以好法施，不贪思欲之施。是谓，比丘！当念法施，勿学财施。汝等比丘，吾说此义，为因何义而说此缘乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus addressed the World-Honored One, saying, &quot;May the World-Honored One please explain this in detail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘白世尊曰：「唯愿世尊事事分别。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;Once there was a person who invited me for a meal. At that time, I had leftover Dharma that could be discarded. Two bhikṣus came from afar, their bodies exhausted and their complexions changed. I then told those bhikṣus, saying, &#x27;There is leftover Dharma that can be discarded. If needed, you may take it and use it for yourself.&#x27; At that time, one bhikṣu thought, &#x27;The World-Honored One has leftover Dharma that can be discarded today. If needed, it can be taken. If we do not take the food, it will be discarded on the pure ground or thrown into the water. Now we should take this food to fill our hunger and gain strength.&#x27; At that time, that bhikṣu further thought, &#x27;The Buddha also said this: &quot;One should practice Dharma-giving, not giving out of desire. The reason is, among all giving, none surpasses giving of wealth. However, Dharma-giving is the most supreme.&quot; I can now fast for a whole day and still sustain myself. I do not need to accept the merit of that offering.&#x27; At that time, that bhikṣu then gave up the idea of taking that offering. His body was exhausted and he did not care about his life.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「昔有一人请吾供养，然吾尔时有遗余法而可除弃。有二比丘从远方来，形体困笃，颜色变易。尔时，我便语彼比丘，作是语：『有遗余法而可除弃，随时须者，便可取之而自营己。』时，一比丘便作是念：『世尊今日有遗余法而可除弃，随时须者，便可取之。设复我等不取食者，便当以此食舍于净地。若著水中。然今我等宜取此食，以充虚乏，加得气力。』尔时，彼比丘复作是学：『佛亦作是说：「当行法施，莫行思欲之施。所以然者，施中之上无过财施，然复法施于中最尊。」我今堪任竟日不食，犹得自济，不须受彼信施之福。』尔时，彼比丘便自息意，不取彼施，形体困笃，不自顾命。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;At that time, the second bhikṣu also thought, &#x27;The World-Honored One also has leftover Dharma that can be discarded. If we do not take the food, we will be exhausted. Now we should use this food to fill our hunger and gain strength, so that we can be at ease day and night.&#x27; At that time, that bhikṣu then took the food and was at ease day and night, with sufficient strength and energy.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「彼时，第二比丘复作是念：『世尊亦有遗余之法而可除者，设我等不取食者，便当困笃。今以此食用充虚乏，加得气力，昼夜安宁。』尔时，彼比丘便取食之，昼夜安隐，气力充足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣus, &quot;Although that bhikṣu took that offering to remove hunger and gain strength, he was not as respectable, precious, and highly venerable as the previous bhikṣu. That bhikṣu&#x27;s fame spread far and wide for a long time. He was content with the precepts and easy to fill. Bhikṣus should learn Dharma-giving, not giving out of desire. The reason I said that before is for this cause and condition.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告诸比丘：「彼比丘虽复取彼供养，除去虚乏，气力充足，不如先前比丘可敬，可贵，甚可尊重。彼比丘长夜名称远闻，于律知足，易充易满。诸比丘当学法施，勿学思欲之施。我前所说者，由此因缘。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, having spoken these words, immediately rose from his seat and departed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊说此语已，便从坐起而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus again thought: &quot;The World-Honored One has just spoken briefly without elaborating, and then rose from his seat and entered the quiet room. Who among this assembly is able to explain the meaning of this brief teaching?&quot; At that time, the many bhikṣus again thought: &quot;The Venerable Śāriputra is praised by the World-Honored One. We should all go to him.&quot; At that time, the many bhikṣus went to the Venerable Śāriputra, paid homage to him, and sat to one side. Having sat to one side, the many bhikṣus told Śāriputra everything they had heard from the World-Honored One.</p></td><td lang="lzh" class="agama-chi"><p>是时，众多比丘复作是念：「向者，世尊略说其要，竟不广普，便从坐起，入寂静室。今此众中谁能堪任于此略义而广普演其义者也？」是时，众多比丘复作是念：「今尊者舍利弗，世尊所誉，我当尽共诣彼舍利弗所。」是时，众多比丘便往至尊者舍利弗所，共相礼拜，在一面坐。在一面坐已。是时，众多比丘所可从世尊闻事，尽向舍利弗说之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Venerable Śāriputra said to the bhikṣus: &quot;How can the World-Honored One&#x27;s disciples be attached to material gain and not practice the Dharma? How can the World-Honored One&#x27;s disciples be attached to practicing the Dharma and not be attached to material gain?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者舍利弗告诸比丘：「云何世尊弟子贪著利养，不修行法？云何世尊弟子贪修行法，不贪利养？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus said to Śāriputra: &quot;We have come from afar to ask about the meaning, so that we may practice it. Venerable Śāriputra, if you are able, please explain the meaning to us in detail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘白舍利弗曰：「我等乃从远来，请问其义，得修行之。尊者舍利弗堪任者，便与我等广演其义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Listen carefully! Listen carefully! Consider it well, and I shall explain the meaning to you in detail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗告曰：「谛听！谛听！善思念之，吾当与汝广演其义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus replied, &quot;Yes.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘对曰：「如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;The disciples of the World-Honored One learn tranquil mindfulness, but the disciples of the hearers do not learn in this way. The World-Honored One expounds the teachings to be eliminated, but the bhikṣus do not eliminate them. They are lazy and give rise to various confused thoughts. They do not practice what should be done and practice what should not be done. At that time, the venerable elder bhikṣus are ashamed in three places. What are the three? The World-Honored One always delights in tranquil places, but at that time the hearers do not learn in this way. The elder bhikṣus are ashamed. The World-Honored One teaches people to eliminate this Dharma, but the bhikṣus do not eliminate this Dharma. The elder bhikṣus are ashamed. They give rise to confused thoughts in this, and their minds are not focused. The elder bhikṣus are ashamed.</p></td><td lang="lzh" class="agama-chi"><p>舍利弗告曰：「世尊弟子所学寂静念安，声闻弟子不如是学；世尊吐教所应灭法，而诸比丘亦不灭之；于中懈怠起诸乱想，所应为者而不肯行，所不应为者便修行之。尔时，诸贤长老比丘于三处便有羞耻。云何为三？世尊常乐寂静之处，尔时声闻不作是学，长老比丘便有羞耻。世尊教人当灭此法，然比丘不灭此法，长老比丘便有羞耻。于中起乱想之念，意不专一，长老比丘便有羞耻。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable ones, you should know that the middle bhikṣus are ashamed in three places. What are the three? The World-Honored One always delights in tranquil places, but at that time the hearers do not learn in this way. The middle bhikṣus are ashamed. The World-Honored One teaches people to eliminate this Dharma, but those bhikṣus do not eliminate this Dharma. The middle bhikṣus are ashamed. They give rise to confused thoughts in this, and their minds are not focused. The middle bhikṣus are ashamed.</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，中比丘于三处便有羞耻。云何为三？世尊常乐寂静之处，尔时声闻不作是学，中比丘便有羞耻。世尊教人当灭此法，然彼比丘不灭此法，中比丘便有羞耻。于中起乱想之念，意不专一，中比丘便有羞耻。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable ones, you should know that the young bhikṣus are ashamed in three places. What are the three? The disciples of the World-Honored One always delight in tranquil places. At that time, the hearers do not learn in this way. The young bhikṣus are ashamed. The World-Honored One teaches people to eliminate this Dharma, but those bhikṣus do not eliminate this Dharma. The young bhikṣus are ashamed. They give rise to confused thoughts in this, and their minds are not focused. The young bhikṣus are ashamed. This is called, venerable ones, being attached to wealth and not being attached to the Dharma.</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，年少比丘于三处便有羞耻。云何为三？世尊弟子常乐寂静之处，尔时声闻不作是学，年少比丘便有羞耻。世尊教人当灭此法，然彼比丘不灭此法，年少比丘便有羞耻。于中复起乱想之念，意不专一，年少比丘便有羞耻。是谓，诸贤！贪著于财，不著于法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus said to Śāriputra, &quot;How are bhikṣus attached to the Dharma and not attached to wealth?&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘白舍利弗曰：「云何比丘贪著于法，不著于财？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;In this way, bhikṣu! The World-Honored One delights in tranquil places, and the hearers also learn to delight in the tranquil places of the Tathāgata; the World-Honored One says to eliminate this Dharma, and the bhikṣus then eliminate this Dharma; they are not lazy, and they are not confused. They practice what should be practiced and do not practice what should not be practiced. Venerable ones, you should know that the elder bhikṣus have a reputation in three places. What are the three? The World-Honored One delights in tranquil places, and the hearers also delight in tranquil places. The elder bhikṣus then have a reputation. The World-Honored One teaches people to eliminate this Dharma, and at that time the bhikṣus then eliminate this Dharma. The elder bhikṣus then have a reputation. They do not give rise to confused thoughts in this, and their minds are always focused. The elder bhikṣus then have a reputation.</p></td><td lang="lzh" class="agama-chi"><p>舍利弗曰：「于是，比丘！世尊乐寂静之处，声闻亦学如来乐寂静之处；世尊所说当灭此法，诸比丘便灭此法；不懈怠，亦不乱，所应行者便修行之，所不应行者便不行之。诸贤当知，长老比丘于三处便有名称。云何为三？世尊乐寂静之处，声闻亦乐寂静之处，长老比丘便有名称。世尊教人当灭此法，尔时比丘便灭此法，长老比丘便有名称。于中不起乱想之念，意常专一，长老比丘便有名称。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable ones, you should know that the middle bhikṣus have a reputation in three places. What are the three? The World-Honored One delights in tranquil places, and the hearers also delight in tranquil places. The middle bhikṣus then have a reputation. The World-Honored One teaches people to eliminate this Dharma, and at that time the bhikṣus then eliminate this Dharma. The middle bhikṣus then have a reputation. They do not give rise to confused thoughts in this, and their minds are always focused. The middle bhikṣus then have a reputation.</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，中比丘于三处便有名称。云何为三？世尊乐寂静之处，声闻亦乐寂静之处，中比丘便有名称。世尊教人当灭此法，尔时比丘便灭此法，中比丘便有名称。于中不起乱想之念，意常专一，中比丘便得名称。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable ones, you should know that the young bhikṣus have a reputation in three places. What are the three? In this way, bhikṣu! The World-Honored One delights in tranquil places, and the young bhikṣus also delight in tranquil places. The young bhikṣus then have a reputation. The World-Honored One teaches people to eliminate this Dharma, and at that time the bhikṣus then eliminate this Dharma. The young bhikṣus then have a reputation. They do not give rise to confused thoughts in this, and their minds are always focused. The young bhikṣus then have a reputation.</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，年少比丘于三处便有名称：云何为三？于是，比丘！世尊乐寂静之处，年少比丘亦乐寂静之处，年少比丘便有名称。世尊教人当灭此法，尔时比丘便灭此法，年少比丘便有名称。于中不起乱想之念，意常专一，年少比丘便有名称。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Venerable ones, you should know that greed is a disease, a great calamity. Anger is also like this. When greed and anger are eliminated, one attains the middle way, the eye of wisdom arises, all bonds are at rest, and one attains nirvāṇa. Stinginess is a disease, also extremely heavy, afflictions burn and cook, and arrogance is also deep. Deceit is not true, without shame or conscience, unable to let go of greed and desire, which destroys the right. Arrogance and excessive arrogance are also not let go of. When these two arrogances are eliminated, one attains the middle way, the eye of wisdom arises, all bonds are at rest, and one attains nirvāṇa.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，贪之为病，甚大灾患，瞋恚亦然。贪婬、瞋恚灭者，便得处中之道，眼生、智生，诸缚休息，得至涅槃。悭疾为病，亦复极重，烦恼烧煮，憍慢亦深。幻伪不真，无惭、无愧，不能舍离，婬欲败正，慢、增上慢亦复不舍。此二慢灭，便得处中之道，眼生、智生，诸缚休息，得至涅槃。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu asked, &quot;Venerable Śāriputra, what is the middle way, the arising of the eye of wisdom, the resting of all bonds, and the attainment of nirvāṇa?&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘白曰：「云何，尊者舍利弗！处中之道，眼生、智生，诸缚休息，得至涅槃？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Venerable ones, you should know that the eightfold noble path is the middle way. Namely, right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right samādhi. This is called, venerable ones, the middle way, the arising of the eye of wisdom, the resting of all bonds, and the attainment of nirvāṇa.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「诸贤当知，所谓贤圣八品道是。所谓正见、正治、正语、正行、正命、正方便、正念、正三昧。是谓，诸贤！处中之道，眼生、智生、诸缚休息，得至涅槃。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the many bhikṣus, having heard what was spoken by Venerable Śāriputra, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘闻尊者舍利弗所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 120 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 120: Saṅkhāruppatti-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn119comp.html#content"></a><a id="next-sutta" href="./mn121comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn120.html">MN 120</a> / <a href="../../parallels/ma168.html">MĀ 168 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The <i>Saṅkhāruppatti-sutta</i>, the “discourse on re-arising [in a particular way by means of an] aspiration”, describes how an aspiration can influence the mode of one's rebirth. A discourse in the <i>Madhyama-āgama </i>takes up the same topic, although its mode of presentation is different to such an extent that these two discourses do not seem to be “parallels” properly speaking.<span class="note" id="mn120n175"><span class="details"><span class="p">[n.175] <a href="../../parallels/ma168.html">MĀ 168</a> at T I 700b-701b, which agrees with <a href="../../mn/mn120.html">MN 120</a> on locating the discourse in Jeta’s Grove by Sāvatthī and has the title “discourse on mental practice”, 意行經. Although 行 usually stands for saṅkhāra, judging from the way 行 is used in <a href="../../parallels/ma168.html">MĀ 168</a>, it seems to stand rather for “practice” in the present context. Minh Chau 1964/1991: 143 highlights the degree to which the theme of the conditions for rebirth “is ... differently treated in both versions”. On <a href="../../parallels/ma168.html">MĀ 168</a> cf. also Schmithausen 1987: 355 note 204. Besides <a href="../../parallels/ma168.html">MĀ 168</a>, another probable parallel is Senior Kharoṣṭhī fragment 10 (I am indebted to Mark Allon for kindly providing me with a preliminary draft transliteration of this fragment); cf. also Allon 2008: 166. Fragment 10 recto b5 appears to have preserved a reference to rebirth among wealthy families and recto c-h10-11 to rebirth among what in Pāli are the nimmānaratī and paranimmitavasavattino devā. Fragment 10 verso h-c10+13 refers to the Brahmā of Five Thousand and verso b2 and a2 to the Brahmā of Ten Thousand, cf. also recto c-h16.</span></span></span></p>
+<p>The Saṅkhāruppatti-sutta lists various possible rebirths, covering:</p>
+<ul>
+<li>the human realm,</li>
+<li>the sensuous heavens,</li>
+<li>the Brahmā worlds,</li>
+<li>the immaterial realms.</li>
+</ul>
+<p>According to its exposition, a monk may be reborn in any of these realms if he aspires to such rebirth and has:</p>
+<ul>
+<li>faith,</li>
+<li>virtue,</li>
+<li>learning,</li>
+<li>renunciation,</li>
+<li>wisdom.</li>
+</ul>
+<p>The Madhyama-āgama discourse only covers rebirth in the Brahmā worlds and the four immaterial realms. According to its presentation, to be reborn in these realms requires developing the corresponding meditative attainment. One who develops the first jhāna, for example, will later on be reborn in the Brahmā world corresponding to the first jhāna.</p>
+<p>In this way, the Madhyama-āgama discourse indicates that meditation practice undertaken successfully leads to rebirth in these realms.<span class="note" id="mn120n176"><span class="details"><span class="p">[n.176] <a href="../../parallels/ma168.html">MĀ 168</a> at T I 700c9: “he is reborn according to his mental practice”, 如是意行生.</span></span></span> It explains that rebirth takes place in this way because the experience of the particular jhāna that has been developed corresponds to the experience of the respective Brahmā world.<span class="note" id="mn120n177"><span class="details"><span class="p">[n.177] E.g., in relation to the first jhāna, <a href="../../parallels/ma168.html">MĀ 168</a> at T I 700c7 explains that “these two [types of] joy and happiness arisen from seclusion are not different, the two are completely equal ... one who first practises this concentration will later be reborn there”, 此二離生喜樂, 無有差別, 二俱等等 ... 先此行定, 然 後生彼.</span></span></span></p>
+<p>The treatment given in these two discourses thus differs not only in regard to the range of rebirth modes taken into account, but also about the principle responsible for such rebirth. While the Madhyama-āgama discourse relates rebirth in a particular realm to having developed the corresponding meditative attainment, the Majjhima-nikāya version’s exposition centres on the idea of being reborn through the power of an aspiration, based on a set of qualities that do not mention the development of concentration.</p>
+<p>A related treatment can be found in the Saṅgīti-sutta and a discourse in the Aṅguttara-nikāya, which describe how on giving a gift someone may aspire to rebirth in upper families or in the heavenly realms of the sensuous sphere. These two discourses present the development of such an aspiration in terms similar to the Saṅkhāruppatti-sutta,<span class="note" id="mn120n178"><span class="details"><span class="p">[n.178] <a href="../../dn/dn33.html">DN 33</a> at DN III 258,25 (cf. also <a href="../../an/an8.35.html">AN 8:35</a> at AN IV 239,13): taṃ cittaṃ dahati, taṃ cittaṃ adhiṭṭhāti, taṃ cittaṃ bhāveti, which parallels <a href="../../mn/mn120.html">MN 120</a> at MN III 99,27: taṃ cittaṃ dahati, taṃ cittaṃ adhiṭṭhāti, taṃ cittaṃ bhāveti (Se-MN III 217,12: padahati instead of dahati).</span></span></span> and also stipulate the need of a foundation in morality for such an aspiration to come true.<span class="note" id="mn120n179"><span class="details"><span class="p">[n.179] <a href="../../dn/dn33.html">DN 33</a> at DN III 259,1: “I say this [is the case] of a virtuous one, not of one who is not virtuous. Friends, the mental aspiration of the virtuous one thrives due to its purity”, tañ ca kho sīlavato vadāmi, no dussīlassa. ijjhat’, āvuso, sīlavato cetopaṇidhi suddhattā (Be-DN III 214,19, Ce-DN III 442,12, and Se-DN III 272,8: visuddhattā); cf. also <a href="../../an/an8.35.html">AN 8:35</a> at AN IV 239,17. An exposition of rebirth due to an aspiration in the Saṅgītiparyāya, T 1536 at T XXVI 442c15, similarly highlights the causal function of the purity of virtue, 尸羅淨故, which a treatment of the same subject in the Dharmaskandha presents in terms of pure action by way of the three doors, T 1537 at T XXVI 506b3: 三妙行.</span></span></span> Although the Saṅgīti-sutta and the Aṅguttara-nikāya discourse do not explicitly identify the person who develops such an aspiration,<span class="note" id="mn120n180"><span class="details"><span class="p">[n.180] <a href="../../dn/dn33.html">DN 33</a> at DN III 258,17 and <a href="../../an/an8.35.html">AN 8:35</a> at AN IV 239,4 simply speak of “some”, ekacco, corresponding to 一類 in the Saṅgītiparyāya, T 1536 at T XXVI 442c6, and in the Dharmaskandha, T 1537 at T XXVI 506a29.</span></span></span> the circumstance that the aspiration is based on giving a gift suggests that a lay aspirant is intended. In the Saṅkhāruppatti-sutta, however, the one who aspires to rebirth in an upper-class human family or in a sense-sphere heaven is a monk.<span class="note" id="mn120n181"><span class="details"><span class="p">[n.181] <a href="../../mn/mn120.html">MN 120</a> at MN III 100,17 introduces the aspiration to be reborn in a heavenly realm of the sense-sphere by describing that the aspirant has heard that the inhabitants of this realm are “long-lived, beautiful and enjoy great happiness”, dīghāyukā vaṇṇavanto sukhabahulā ti. Thus, what motivates the wish to be reborn in such a realm is quite different from the aspiration to reach liberation from any type of rebirth, which according to a standard pericope in the early discourses is the normative motivation for going forth, cf., e.g., <a href="../../mn/mn7.html">MN 7</a> at MN I 40,2. Vetter 2000: 45 remarks that, although wisdom is mentioned as one of the prerequisites for the aspiration to lead to a particular rebirth, the same quality has clearly not been fully “developed. If it were, the monk would not wish to be reborn somewhere”. In fact, for a monk to aspire to rebirth in a sense-sphere heaven is something <a href="../../mn/mn16.html">MN 16</a> at MN I 102,9 considers a mental bondage, cetaso vinibandha. <a href="../../an/an7.47.html">AN 7:47</a> at AN IV 55,21 scornfully treats such an aspiration as being bound to sexuality; cf. above p. 129 note 148. The disdain for such aspiration is of such degree that, if someone were to ask the monks if they were living the holy life for the sake of being born in a heavenly sphere, this would cause them to feel repelled, ashamed, and disgusted, cf. <a href="../../an/an3.18.html">AN 3:18</a> at AN I 115,4. In view of this, it is remarkable that according to <a href="../../mn/mn120.html">MN 120</a> the one who formulates such an aspiration is a monk.</span></span></span> The Saṅgīti-sutta and the Aṅguttara-nikāya discourse also envisage rebirth in the Brahmā world, in relation to which they additionally stipulate the need to go beyond sensuality.<span class="note" id="mn120n182"><span class="details"><span class="p">[n.182] <a href="../../dn/dn33.html">DN 33</a> at DN III 260,1: “I say this [is the case] for a virtuous one, not for one who is not virtuous, for one who is free from lust, not for one who is with lust. Friends, the mental aspiration of the virtuous one thrives due to its freedom from lust”, tañ ca kho sīlavato vadāmi, no dussīlassa, vītarāgassa, no sarāgassa. ijjhat’, āvuso, sīlavato cetopaṇidhi vītarāgattā; cf. also <a href="../../an/an8.35.html">AN 8:35</a> at AN IV 241,7. The Saṅgītiparyāya, T 1536 at T XXVI 442c19, similarly highlights the importance of freedom from lust for rebirth in the Brahmā world, 離欲. The Dharmaskandha, T 1537 at T XXVI 506b14, however, stipulates the corresponding meditative attainment, similar to <a href="../../parallels/ma168.html">MĀ 168</a>; cf. also Schmithausen 1987: 356 note 211b. This highlights another curiosity in the treatment in <a href="../../mn/mn120.html">MN 120</a>, which presents the same set of conditions for all of its rebirth perspectives, without making any distinctions. Thus, just as faith, virtue, learning, renunciation, and wisdom are required for rebirth in a good householder family, so the same qualities serve their purpose for rebirth in the different Brahmā worlds, including the Pure Abodes and the immaterial realms. For rebirth in these quite different realms, some additional specification would fit the context better, such as the removal of lust stipulated in <a href="../../dn/dn33.html">DN 33</a> and <a href="../../an/an8.35.html">AN 8:35</a>, or the development of the different jhānas, mentioned in <a href="../../parallels/ma168.html">MĀ 168</a>. As it is, the presentation in <a href="../../mn/mn120.html">MN 120</a> runs the risk of giving the misleading impression that the five qualities it mentions are all that is required for such elevated rebirths. Ps IV 149,9 makes up for this by explaining that, in addition to the five qualities mentioned in the discourse, the corresponding jhānas need to be developed, and for rebirth in the Pure Abodes insight up to non-return is required.</span></span></span></p>
+<p>Similar to the Madhyama-āgama version, another discourse in the Aṅguttara-nikāya explains that rebirth in the Brahmā worlds is to be expected of those who develop the jhānas.<span class="note" id="mn120n183"><span class="details"><span class="p">[n.183] <a href="../../an/an4.123.html">AN 4:123</a> at AN II 126-128.</span></span></span> The next discourse in the same Aṅguttara-nikāya collection then presents insightful contemplation of such jhāna attainment as the condition for rebirth in the Pure Abodes.<span class="note" id="mn120n184"><span class="details"><span class="p">[n.184] <a href="../../an/an4.124.html">AN 4:124</a> at AN II 128.</span></span></span></p>
+<p>The examination of various modes of rebirth in the Saṅkhāruppatti-sutta culminates with the destruction of the influxes. According to its presentation, a monk who aspires to this goal will realize the destruction of the influxes and thereby go beyond any mode of rebirth, if he has faith, virtue, learning, renunciation, and wisdom.<span class="note" id="mn120n185"><span class="details"><span class="p">[n.185] <a href="../../mn/mn120.html">MN 120</a> at MN III 103,23: “such a monk does not re-arise anywhere at all”, ayaṃ ... bhikkhu na katthaci uppajjati na kuhiñci uppajjatīti (Be-MN III 146,4: na katthaci upapajjatī ti, Se-MN III 225,8: na katthaci uppajjatī ti, Be and Se do not have the second part: na kuhiñci uppajjati).</span></span></span></p>
+<p>The Madhyama-āgama discourse also has the destruction of the influxes as its culmination point. In line with its presentation of levels of rebirth reached through developing the jhānas and the immaterial attainments, it describes how a monk goes beyond the attainment of neither-perception-nor-non-perception and attains the cessation of perceptions and feelings,<span class="note" id="mn120n186"><span class="details"><span class="p">[n.186] <a href="../../parallels/ma168.html">MĀ 168</a> at T I 701b12. Hence this is a case where the Chinese version mentions the attainment of cessation while the same is absent in the Pāli version.</span></span></span> which it reckons the supreme and most excellent type of concentration,<span class="note" id="mn120n187"><span class="details"><span class="p">[n.187] <a href="../../parallels/ma168.html">MĀ 168</a> at T I 701b13 illustrates the superiority of cessation attainment by comparing it to obtaining ghee from milk. This simile occurs also in other Pāli discourses, cf., e.g., <a href="../../dn/dn9.html">DN 9</a> at DN I 201,24, <a href="../../sn/sn34.1.html">SN 34:1</a>-55 at SN III 264-278, <a href="../../an/an4.95.html">AN 4:95</a> at AN II 95,28, <a href="../../an/an5.181.html">AN 5:181</a>-190 at AN III 219-220, and <a href="../../an/an10.91.html">AN 10:91</a> at AN V 182,6.</span></span></span> as a monk who has reached it has completely transcended dukkha.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

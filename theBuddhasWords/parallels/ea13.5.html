@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 13.5 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 13.5</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">13.5</span> <span class="mirror-right">（五）孙陀利</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn7.html">MN 7</a> / <a href="../parallels/ma93.html">MĀ 93</a> / <a href="../parallels/sa1185.html">SĀ 1185 (~)</a> / <a href="../parallels/sa-2.98.html">SĀ² 2.98 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One was surrounded by tens of millions of people, expounding the Dharma. At that time, a brāhman on the riverbank, carrying a heavy load, came to where the World-Honored One was. Having put down his load, he stood silently to one side. At that time, the brāhman thought: &quot;Today Śramaṇa Gautama is surrounded by tens of millions of people, expounding the Dharma. I am now pure, no different from Śramaṇa Gautama. The reason is that Śramaṇa Gautama eats fine rice and various delicacies, while I now eat fruits and vegetables to sustain my life.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊与数千万众，前后围遶而为说法。尔时，江侧婆罗门身负重担，便至世尊所。到已舍担，一面在世尊所，默然而住。尔时，彼婆罗门作是思惟：「今日沙门瞿昙与数千万众，前后围遶而为说法。我今清净，与沙门瞿昙等无有异。所以然者，沙门瞿昙食好粳粮，种种肴馔，今我食菓蓏以自济命。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, knowing the brāhman&#x27;s thoughts, told the bhikṣus: &quot;Those sentient beings whose minds are tainted by the twenty-one fetters will definitely fall into evil destinies and not be reborn in good places. What are the twenty-one fetters? The fetters of anger, malice, sleepiness, playfulness, doubt, anger, jealousy, vexation, haste, hatred, shamelessness, guiltlessness, deception, cunning, pretense, contention, arrogance, pride, envy, conceit, and greed. Bhikṣus! If a person has these twenty-one fetters tainting their mind, one should know that they will definitely fall into evil destinies and not be reborn in good places. It is like a new white cloth that, after a long time, becomes old and dirty. If one wants to dye it blue, yellow, red, or black, it will not be able to be dyed. Why? Because it is dirty. In the same way, bhikṣus! If a person has these twenty-one fetters tainting their mind, one should know that they will definitely fall into evil destinies and not be reborn in good places.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以知婆罗门心中所念，告诸比丘：「其有众生以二十一结染著心者，当观彼人必堕恶趣，不生善处。云何为二十一结？瞋心结、恚害心结、睡眠心结、调戏心结、疑是心结、怒为心结、忌为心结、恼为心结、疾为心结、憎为心结、无惭心结、无愧心结、幻为心结、奸为心结、伪为心结、诤为心结、憍为心结、慢为心结，妬为心结、增上慢为心结、贪为心结，诸比丘！若有人有此二十一结染著心者，当观其人必堕恶趣，不生善处。犹如白［叠＊毛］新衣，久久朽故，多诸尘垢，意欲染成其色，青、黄、赤、黑终不得成。何以故？以有尘垢故。如是，比丘！若有人以此二十一结染著心者，当观其人必堕恶趣，不生善处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If there are people who do not have these twenty-one fetters tainting their minds, one should know that they will definitely be reborn in the heavens and not fall into hell. It is like a new, clean white cloth that can be dyed any color, blue, yellow, red, or black, and it will definitely be dyed, without failure. Why? Because it is clean. It is the same with this. If there are people who do not have these twenty-one fetters tainting their minds, one should know that they will definitely be reborn in the heavens and not fall into evil destinies.</p></td><td lang="lzh" class="agama-chi"><p>「设复有人无此二十一结染著心者，当知斯人必生天上，不堕地狱中。犹如新净白［叠＊毛］，随意欲作何色，青、黄、赤、黑，必成其色，终不败坏。所以然者，以其净故。此亦如是，其有无此二十一结染著心者，当观其人必生天上，不堕恶趣。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If those noble disciples give rise to the fetter of anger, they should observe and be able to extinguish it. They should give rise to the fetters of malice, sleepiness, playfulness, doubt, anger, jealousy, vexation, haste, hatred, shamelessness, guiltlessness, deception, cunning, pretense, contention, arrogance, pride, envy, conceit, and greed.</p></td><td lang="lzh" class="agama-chi"><p>「若彼贤圣弟子起瞋恚心结，观已，便能息之。起恚害心结、起睡眠心结、起调戏心结、起疑心结、起怒心结、起忌心结、起恼心结、起疾心结、起憎心结、起无惭心结、起无愧心结、起幻心结、起奸心结、起伪心结、起诤心结、起憍心结、起慢心结、起妬心结、起增上慢心结、起贪心结。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If those noble disciples are without anger, malice, or delusion, their minds are harmonious and joyful. They can fill one direction with loving-kindness and enjoy themselves. It is the same in the second, third, and fourth directions. In the four intermediate directions and above and below, in all places, all directions, and all worlds, they fill them all with immeasurable, limitless, and incalculable loving-kindness, without anger or malice, and enjoy themselves. Having filled them all with loving-kindness, they attain joy and their minds become upright.</p></td><td lang="lzh" class="agama-chi"><p>「若彼贤圣弟子无瞋、无恚、无有愚惑，心意和悦，以慈心普满一方而自娱乐，二方、三方、四方亦尔。四维上下，于一切中，一切亦一切，一切世间以无限无量，不可称计，心无恚怒而自游戏。以此慈心，遍满其中，得欢喜已，心意便正。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also fill one direction with compassion and enjoy themselves. It is the same in the second, third, and fourth directions. In the four intermediate directions and above and below, in all places, all directions, and all worlds, they fill them all with immeasurable, limitless, and incalculable compassion, without anger or malice, and enjoy themselves. Having filled them all with compassion, they attain joy and their minds become upright.</p></td><td lang="lzh" class="agama-chi"><p>「复以悲心普满一方而自娱乐，二方、三方、四方亦尔，四维上下，于一切中，一切亦一切，一切世间以无量无限，不可称计，心无恚怒而自游戏。以此悲心，遍满其中，得欢喜已，心意便正。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also fill one direction with joy and enjoy themselves. It is the same in the second, third, and fourth directions. In the four intermediate directions and above and below, in all places, all directions, and all worlds, they fill them all with immeasurable, limitless, and incalculable joy, without anger or malice, and enjoy themselves. Having filled them all with joy, they attain joy and their minds become upright.</p></td><td lang="lzh" class="agama-chi"><p>「复以喜心普满一方而自娱乐，二方、三方、四方亦尔，四维上下，于一切中，一切亦一切，一切世间，以无量无限不可称计，心无恚怒而自游戏。以此喜心，遍满其中，得欢喜已，心意便正。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also fill one direction with equanimity and enjoy themselves. It is the same in the second, third, and fourth directions. In the four intermediate directions and above and below, in all places, all directions, and all worlds, they fill them all with immeasurable, limitless, and incalculable equanimity, without anger or malice, and enjoy themselves. Having filled them all with equanimity, they attain joy and their minds become upright.</p></td><td lang="lzh" class="agama-chi"><p>「复以护心普满一方而自娱乐，二方、三方、四方亦尔，四维上下，于一切中，一切亦一切，一切世间以无量无限不可称计，心无恚怒而自游戏。以此护心，遍满其中，得欢喜已，心意便正。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also establish the foundation of faith in the Tathāgata, which is unshakable and cannot be moved by any celestial, dragon, spirit, asura, śramaṇa, brāhmaṇa, or worldly person. They can attain joy in this, and their minds become upright. This is the joy and uprightness of mind attained by the Tathāgata, the Arhat, the Perfectly Enlightened One, the One of Perfect Wisdom and Conduct, the Well-Gone One, the Knower of the World, the Unsurpassed One, the Trainer of those to be tamed, the Teacher of gods and men, the Buddha, the Blessed One. They can also attain joy and uprightness of mind in the Dharma. The Dharma of the Tathāgata is very pure and cannot be moved. It is loved and respected by people. Those who are wise should contemplate it in this way, and they can attain joy in it. They can also attain joy and uprightness of mind in the Saṃgha. The noble Saṃgha of the Tathāgata is very pure, with pure conduct and practice, and accomplished in the Dharma. They are accomplished in precepts, samādhi, wisdom, liberation, and the knowledge and vision of liberation. The noble Saṃgha consists of the four pairs and eight individuals. This is the noble Saṃgha of the Tathāgata, which is lovable, precious, and truly worthy of service. They can attain joy in this, and their minds become upright.</p></td><td lang="lzh" class="agama-chi"><p>「便于如来所成于信根，根本不移，竖高显幢，不可移动。诸天、龙、神、阿须伦、沙门、婆罗门，或世人民，于中得欢喜，心意便正。此是如来、至真、等正觉、明行成为、善逝、世间解、无上士、道法御、天人师，号佛、众祐，于中得欢喜，心意便正，亦复成就于法。如来法者，甚为清净，不可移动，人所爱敬。如是智者当作是观，便于中而得欢喜，亦复成就于众。如来圣众甚为清净，性行纯和，法法成就，戒成就、三昧成就、智慧成就、解脱成就、解脱见慧成就。圣众者，四双八辈，此是如来圣众，可爱可贵，实可承事。于中得欢喜，心意便正。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also attain the purity of mind in this samādhi, without any defilements or taints. Their nature and conduct become gentle, and they attain supernatural powers. They can then recollect their own past lives, knowing where they came from. They can recollect one life, two lives, three lives, four lives, five lives, ten lives, twenty lives, thirty lives, forty lives, fifty lives, a hundred lives, a thousand lives, a hundred thousand lives, the eons of formation and destruction, the eons of non-formation and destruction, the eons of formation and destruction and non-formation and destruction, countless eons of formation and destruction, and countless eons of non-formation and destruction. They know, &#x27;I was named so-and-so, with such-and-such a surname, in such-and-such a place. I was born like this, ate like this, experienced such-and-such suffering and happiness, and lived for such-and-such a long time. I died there and was reborn here.&#x27; They can recollect their own past lives in this way.</p></td><td lang="lzh" class="agama-chi"><p>「彼复以此三昧，心清净无瑕秽，诸结便尽，亦无沾污，性行柔软，逮于神通，便得自识无量宿命事，所从来处，靡不知之。若一生、二生、三生、四生、五生、十生、二十生、三十生、四十生、五十生、百生、千生、百千生，成败劫、不成败劫、成败不成败劫、无数成败劫、无数不成败劫，我曾在彼，字某、名某、姓某，如是生、如是食、受如是苦乐，受命长短，从彼终生彼间，从彼终生此间。如是自识无数宿命事。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also attain the purity of mind in this samādhi, without any defilements or taints. They can know the thoughts of sentient beings. They can also use their divine eye to observe the classes of sentient beings, those who are born and those who die, those with good appearances and those with bad appearances, those in good destinies and those in bad destinies, those who are beautiful and those who are ugly. They know the causes and effects of the actions of sentient beings. They know that some sentient beings engage in evil actions with their bodies, speech, and minds, slander the sages, have wrong views and engage in wrong views. When their bodies perish and their lives end, they are reborn in the three evil destinies, in the hells. They also know that some sentient beings engage in good actions with their bodies, speech, and minds, do not slander the sages, have right views and are free from wrong views. When their bodies perish and their lives end, they are reborn in the good destinies in the heavens. This is called the pure divine eye that observes the classes of sentient beings: those who are born and those who die, those with good appearances and those with bad appearances, those in good destinies and those in bad destinies, those who are beautiful and those who are ugly. They know the causes and effects of the actions of sentient beings.</p></td><td lang="lzh" class="agama-chi"><p>「复以此三昧，心清净无瑕秽，知众生心所念之事。彼复以天眼观众生类，有生者、有终者，善色、丑色，善趣、恶趣，若好、若丑，随众生行所作果报，皆悉知之。或有众生，身行恶、口行恶、心行恶，诽谤贤圣，邪见造邪见行，身坏命终，生三恶道，趣泥黎中。或复有众生，身行善、口行善、意行善，不诽谤贤圣，正见、无有邪见，身坏命终，生天上善处。是谓清净天眼观众生类：有生者、有终者，善色、丑色，善趣、恶趣，若好、若丑，随众生行所作果报，皆悉知之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>They can also attain the purity of mind in this samādhi, without any defilements or taints. They can attain the liberation of the mind from the defilements of desire, existence, and ignorance. Having attained liberation, they attain the knowledge of liberation: &#x27;Birth and death are exhausted, the holy life has been established, what was to be done has been done, there will be no more of this state of existence.&#x27; Thus, bhikṣus, the noble disciples attain liberation of the mind. Even if they eat rice, various delicious foods, or lumps as big as Mount Sumeru, there is no fault. Because they are without desire, have exhausted desire, are without anger, have exhausted anger, and are without ignorance, have exhausted ignorance. This, bhikṣus, is called the supreme inner bathing of the bhikṣus.</p></td><td lang="lzh" class="agama-chi"><p>「彼复以此三昧，心清净无瑕秽，无有结使，心性柔软，逮于神通。复以漏尽通而自娱乐。彼观此苦，如实知之；复观苦习，复观苦尽，复观苦出要，如实知之。彼作是观已，欲漏心得解脱，有漏心、无明漏心得解脱。已得解脱，便得解脱智：生死已尽，梵行已立，所作已办，更不复受有，如实知之。如是，比丘！贤圣弟子心得解脱，虽复食粳粮、善美种种肴饍，抟若须弥，终无有罪。所以然者，以无欲、尽爱故，以无瞋、尽恚故，以无愚痴、尽愚痴故，是谓比丘中比丘！则内极沐浴已。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman by the river said to the World-Honored One, &quot;Śramaṇa Gautama! Please go to the bank of the Sundarika River to bathe.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，江侧婆罗门白世尊曰：「瞿昙沙门！可往至孙陀罗江侧沐浴。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;How is it called the Sundarika River?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「云何，婆罗门！名之为孙陀罗江水？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The brāhman said, &quot;The water of the Sundarika River is a deep pool of blessings, a light for the world. If any person bathes in that river, all their evils will be completely eliminated.&quot;</p></td><td lang="lzh" class="agama-chi"><p>婆罗门曰：「孙陀罗江水是福之深渊，世之光明，其有人物在彼河水浴者，一切诸恶皆悉除尽。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>This body has experienced countless eons, bathing in that river and<br/>all the small ponds, without exception. The foolish always enjoy that<br/>walking in darkness and not being pure. Past sins fill their<br/>bodies, how can that river save them? The pure are always<br/>joyful, with pure precepts and joy. The pure do pure deeds<br/>their wishes will surely be fulfilled. If one protects against taking<br/>what is not given, practices kindness and does not kill, guards<br/>sincerity and does not speak falsely, with an equal mind without<br/>increase or decrease. You now bathe here, you will surely attain<br/>a place of peace. Where does that river lead? It is<br/>like the blind throwing themselves into darkness.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「此身无数劫，　　经历彼河浴；及诸小陂池，　　靡不悉周遍。愚者常乐彼，　　暗行不清净；宿罪内充躯，　　彼河焉能救？净者常快乐，　　禁戒清亦快；清者作清行，　　彼愿必果成。设护不与取，　　行慈不杀生；守诚不妄语，　　心等无增减。汝今于此浴，　　必获安隐处；彼河何所至，　　犹盲投乎冥。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman said to the World-Honored One, &quot;Stop, stop, Gautama! It is like a cripple finding relief, a blind person seeing light, a lost person being shown the way, lighting a lamp in a dark room for the blind. In this way, Śramaṇa Gautama! Please listen to the path with countless skillful means explaining this wonderful Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，婆罗门白世尊曰：「止！止！瞿昙！犹如軁者得伸，暗者见明，迷者示道，于暗室然明，无目者为作眼目。如是，沙门瞿昙！无数方便说此妙法，愿听为道。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the brāhman by the river attained the path and received full ordination. The reason for the noble sons leaving home to study the path and cultivate the unsurpassed pure practice is: the cycle of birth and death is exhausted, the pure practice is established, what is to be done is accomplished, and one will not again experience rebirth, knowing it as it is. At that time, Venerable Sundarananda became an arhat.</p></td><td lang="lzh" class="agama-chi"><p>尔时，江侧婆罗门即得作道，受具足戒。所以族姓子，出家学道，修无上梵行：生死已尽，梵行已立，所作已办，更不复受有，如实知之。是时，尊者孙陀罗谛利即成阿罗汉。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Sundarananda, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者孙陀罗谛利闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 44 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 44: Cūḷavedalla-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn43comp.html#content"></a><a id="next-sutta" href="./mn45comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn44.html">MN 44</a> / <a href="../../parallels/ma210.html">MĀ 210</a> / <a href="../../parallels/sa568.html">SĀ 568</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷavedalla-sutta, the “lesser discourse of the question-and answer type”, records the answers given by the nun Dhammadinnā to a series of questions. This discourse has a Chinese parallel in the Madhyama-āgama,<span class="note" id="mn44n61"><span class="details"><span class="p">[n.61] The parallel is <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788a-790b and has the title “discourse by the nun [called] Delight in the Dharma”, 法樂比丘尼經 (where, as noted by Minh Chau 1964/1991: 24, the rendering of the proper name could be based on Dharmanandī, or perhaps Dharmanandā). While <a href="../../mn/mn44.html">MN 44</a> takes place in the Bamboo Grove by Rājagaha, <a href="../../parallels/ma210.html">MĀ 210</a> and Abhidh-k-ṭ take place in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma210.html">MĀ 210</a> has been studied and translated by Minh Chau 1964/1991: 56, 75, 76, 98, 105-106, 113, and 269-278; <a href="../../mn/mn44.html">MN 44</a> has been studied by Foley 1894 and Krey 2010.</span></span></span> in addition to which a complete version of this discourse has been preserved as a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn44n62"><span class="details"><span class="p">[n.62] Abhidh-k-ṭ at D (4094) mngon pa, ju 6b2-11a5 or Q (5595) tu 7a7-12b1, cf. also Abhidh-k 1:6 in Pradhan 1967: 4,7, paralleling <a href="../../mn/mn44.html">MN 44</a> at MN I 304,19, with its Chinese counterparts in T 1558 at T XXIX 1c23 and T 1559 at T XXIX 162b21. Abhidh-k-ṭ gives the title of the discourse as chos sbyin gyi mdo, “the discourse by Dharmadinnā”, on the Tibetan version cf. Schmithausen 1987: 338-343, Skilling 2001a:148, and Vetter 2000: 121-127, for a translation cf. Anālayo 2011b. For discourse quotations in Abhidh-k-ṭ that parallel parts of <a href="../../mn/mn44.html">MN 44</a> (not all of them necessarily specific to the present discourse), cf. below notes 68, 72, 75, 86, 106, and 107).</span></span></span></p>
+<p>The Cūḷavedalla-sutta begins by describing how the male lay follower Visākha visited the nun Dhammadinnā.<span class="note" id="mn44n63"><span class="details"><span class="p">[n.63] Ps II 355,29 offers some additional background to this meeting. According to its account, the merchant Visākha was the former husband of Dhammadinnā and as a lay disciple of the Buddha had progressed to the level of non-return. Since he was no longer able to continue his marital relationship as before, he offered Dhammadinnā his wealth and the freedom to do whatever she felt appropriate, upon which she decided to go forth as a nun. Once gone forth, she left Rājagaha for seclusion and intensive practice and within a short time became an arahant, after which she returned to Rājagaha. On hearing that she had returned so soon from seclusion, her former husband decided to visit her in order to find out the reasons for her return. Thus according to the commentarial account, the questions posed by the non-returner Visākha in the Cūḷavedalla-sutta had the purpose of testing out Dhammadinnā’s wisdom, in order to find out if she had reached realization, or if she had just been unable to adapt to the living conditions of being in seclusion. The same tale recurs with some variations in Mp I 360,17, translated by Bode 1893: 562-566 and summarized by Talim 1972: 117-118; and in Thī-a 15,15, translated or summarized by Rhys Davids 1909/1989: 12, Murcott 1991: 62, and Pruitt 1998/1999: 26-30. Another occurence of the tale is Dhp-a IV 229,1, translated in Burlingame 1921c: 226-227. For an account of her past and present experiences cf. Therī-apadāna, Ap 23.1-36 at Ap 567-569. A different account of Dhammadinnā’s going forth can be found in the (Mūla-)Sarvāstivāda Vinaya, cf. Finnegan 2009: 157-160 and 202-207.</span></span></span> According to the Madhyama-āgama report, however, the person who came to put questions to Dhammadinnā was the female lay follower Visākhā, also known as “Migāra’s Mother”.<span class="note" id="mn44n64"><span class="details"><span class="p">[n.64] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788a17: 毘舍佉優婆夷. The *Mahāvibhāṣā translation by Xuánzàng (玄奘) quotes part of this discourse and agrees with <a href="../../mn/mn44.html">MN 44</a> on speaking of the male lay follower Visākha, T 1545 at T XXVII 780c7: 毘舍佉鄔波索迦. The Vibhāṣā translation by Buddhavarman, however, agrees with <a href="../../parallels/ma210.html">MĀ 210</a> on speaking of the female lay follower Visākhā, T 1546 at T XXVIII 337b7: 毘舍佉優婆夷. For a more detailed discussion of this difference on the identity of Dhammadinnā’s visitor cf. Anālayo 2007i: 32-34.</span></span></span> In accordance with the different identity of their protagonists, the Pāli version is situated in Rājagaha, the hometown of Dhammadinnā’s husband, the merchant Visākha, while the Madhyama-āgama version takes place at Sāvatthī, the town where lady Visākhā was living. Although the Tibetan version is also located at Sāvatthī, it agrees with the Pāli version in as much as here Dhammadinnā’s visitor is the male Visākha.<span class="note" id="mn44n65"><span class="details"><span class="p">[n.65] Abhidh-k-ṭ introduces “[Vi-]śākha” by qualifying him with the Tibetan equivalent to āyuṣmān, D (4094) mngon pa, ju 6b3 or Q (5595) tu 7b1: tshe dang ldan pa sa ga, but then classifies him as a layman, D (4094) mngon pa, ju 6b4 or Q (5595) tu 7b2: dge bsnyen sa ga, although then Dharmadinnā addresses him again as āyuṣmān, D (4094) mngon pa, ju 6b4 or Q (5595) tu 7b2: tshe dang ldan pa, a form of address she continues using throughout; cf. also the discussion below p. 517 on the use of āyasma or āyuṣmān to address laity.</span></span></span></p>
+<p>The series of questions and answers taking place between the nun Dhammadinnā and her interlocutor differ in the three versions, with some questions from the Pāli discourse not found in its Chinese and Tibetan parallels, and other questions from the Chinese and Tibetan discourse not occurring in the Pāli version. In fact, even the Chinese and Tibetan versions, although presumably stemming from closely related lines of transmission, differ from each other (see table 5.3).<span class="note" id="mn44n66"><span class="details"><span class="p">[n.66] Minh Chau 1964/1991: 270 counts thirty questions in the Chinese and thirty-four in the Pāli version, out of which twenty-two are common to both. Where the Chinese and the Tibetan versions differ, the Tibetan presentation tends to be closer to the Pāli discourse. Thus the present case does not fully conform to a general tendency of Madhyama-āgama quotations in Śamathadeva’s commentary to be similar to their Chinese Madhyama-āgama counterparts, noted by Skilling 2004: 6. For another exception to this pattern cf. Schmithausen 1987: 338.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 5.3: Main Topics Examined in <a href="../../mn/mn44.html">MN 44</a> and its Parallels<span class="note" id="mn44n67"><span class="details"><span class="p">[n.67] For ease of reference I follow the division of topics adopted in Ñāṇamoli 1995/2005: 396-403. This does not fully reflect the differences between the three versions, as sometimes such differences affect only part of the treatment of a particular topic. Also, some topics take up more space than others in the actual discussion, thus, e.g., the inquiry in <a href="../../parallels/ma210.html">MĀ 210</a> and Abhidh-k-ṭ regarding cessation is rather brief. Yet, to try to reflect all such variations within the limited space of a table would not be feasible.</span></span></span></caption>
+<tr><th><a href="../../mn/mn44.html">MN 44</a></th><th><a href="../../parallels/ma210.html">MĀ 210</a></th></tr>
+<tr><td>personality (1)</td><td>personality (→ 1)</td></tr>
+<tr><td>personality view (2)</td><td>personality view (→ 2)</td></tr>
+<tr><td>noble eightfold path (3)</td><td>noble eightfold path (→ 3)</td></tr>
+<tr><td>concentration (4)</td><td>cessation</td></tr>
+<tr><td>3 formations (5)</td><td>factors of 1st jhāna (cf. <a href="../../mn/mn43.html">MN 43</a>)</td></tr>
+<tr><td>cessation attainment (6)</td><td>concentration (→ 4)</td></tr>
+<tr><td>feelings (7)</td><td>difference death/cessation (cf. <a href="../../mn/mn43.html">MN 43</a>)</td></tr>
+<tr><td>underlying tendencies (8)</td><td>difference cessation/no perception</td></tr>
+<tr><td>counterparts (9)</td><td>cessation attainment (→ 6)</td></tr>
+<tr><td></td><td>feelings (→ 7)</td></tr>
+<tr><td></td><td>underlying tendencies (→ 8)</td></tr>
+<tr><td></td><td>counterparts (→ 9)</td></tr>
+<tr><td></td><td>(≠ 5)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td>Abhidh-k-ṭ</td></tr>
+<tr><td>personality (→ 1)</td></tr>
+<tr><td>personality view (→ 2)</td></tr>
+<tr><td>noble eightfold path (→ 3)</td></tr>
+<tr><td>cessation</td></tr>
+<tr><td>factors of 1st jhāna (cf. <a href="../../mn/mn43.html">MN 43</a>)</td></tr>
+<tr><td>concentration (→ 4)</td></tr>
+<tr><td>3 formations (→ 5)</td></tr>
+<tr><td>difference death/cessation (cf. <a href="../../mn/mn43.html">MN 43</a>)</td></tr>
+<tr><td>cessation attainment (→ 6)</td></tr>
+<tr><td>feelings (→ 7)</td></tr>
+<tr><td>underlying tendencies (→ 8)</td></tr>
+<tr><td>counterparts (→ 9)</td></tr>
+</table>
+<p>The Cūḷavedalla-sutta and its parallels begin with an inquiry into “personality” or “identity” (sakkāya).<span class="note" id="mn44n68"><span class="details"><span class="p">[n.68] As its counterpart to sakkāya, mentioned in <a href="../../mn/mn44.html">MN 44</a> at MN I 299,7, <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788a26 speaks of “own body”, 自身, which, as already noted by Vetter 2000: 120 note 39, renders svakāya instead of satkāya (although for “personality view”, <a href="../../parallels/ma210.html">MĀ 210</a> at times just uses 身見, cf. the quote in note 69 below). An additional discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 268b1 or Q (5595) thu 11b4 parallels the definition of sakkāya in <a href="../../mn/mn44.html">MN 44</a> at MN I 299,8; cf. also Abhidh-k 5:6 in Pradhan 1967: 281,20, with its Chinese counterparts in T 1558 at T XXIX 100a3 and T 1559 at T XXIX 253c28.</span></span></span> The three versions define personality in terms of the five aggregates [affected by] clinging. The Pāli discourse continues by tracing the arising of personality to craving and its cessation to the cessation of craving, highlighting that the noble eightfold path is the way to the cessation of personality. Such a question and answer exchange does not occur in the Chinese version,<span class="note" id="mn44n69"><span class="details"><span class="p">[n.69] Perhaps an examination of the arising and cessation of personality was also found earlier in <a href="../../parallels/ma210.html">MĀ 210</a>, since its analysis of personality view proceeds from inquiring after the non-existence of “personality view”, <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788b4: 云何無身見耶?, to inquiring about the cessation of “personality”, <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788b12, 云何滅自身耶? This stands a little out of context and may be a remnant of an earlier examination of the arising and cessation of personality. A presentation corresponding to this section of <a href="../../mn/mn44.html">MN 44</a> can be found in <a href="../../sn/sn22.105.html">SN 22:105</a> at SN III 159,9 and its parallels <a href="../../parallels/sa71.html">SĀ 71</a> at T II 18c2 and D (4094) mngon pa, ju 268b1 or Q (5595) thu 11b4, which agree with <a href="../../sn/sn22.105.html">SN 22:105</a> in mentioning the arising, cessation, and path to the cessation of personality.</span></span></span> although an inquiry regarding the arising and cessation of personality can be found in the Tibetan parallel.</p>
+<p>The three versions agree that clinging is neither identical with the five aggregates [affected by] clinging nor different from them. While the Pāli version indicates that the expression “clinging” stands for desire and lust in relation to the five aggregates [affected by] clinging,<span class="note" id="mn44n70"><span class="details"><span class="p">[n.70] <a href="../../mn/mn44.html">MN 44</a> at MN I 300,2.</span></span></span> the Chinese and Tibetan version instead differentiate between the “five aggregates [affected by] clinging” and the “five aggregates”, the difference being whether the influxes and attachment are present or else absent.<span class="note" id="mn44n71"><span class="details"><span class="p">[n.71] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788b19 and D (4094) mngon pa, ju 7a7 or Q (5595) tu 8a5; cf. also D (4094) mngon pa, ju 12a3 or Q (5595) tu 13a7. The distinction between the five aggregates [affected by] clinging and the five aggregates recurs in <a href="../../sn/sn22.48.html">SN 22:48</a> at SN III 47,9; for a discussion of which cf. Bodhi 1976, Boisvert 1995/1997: 20-30, and Anālayo 2008k: 405-406.</span></span></span></p>
+<p>The Cūḷavedalla-sutta and its parallels agree in tracing personality view to self-notions in regard to any of the five aggregates.<span class="note" id="mn44n72"><span class="details"><span class="p">[n.72] An additional discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 12a3 or Q (5595) tu 13a7 parallels the discussion of the five aggregates in <a href="../../mn/mn44.html">MN 44</a> at MN I 300,1; cf. also Abhidh-k 1:8 in Pradhan 1967: 5,8, with its Chinese counterparts in T 1558 at T XXIX 2a22 and T 1559 at T XXIX 162c20.</span></span></span> Such self-notions can, according to all versions, take four forms:</p>
+<ul>
+<li>taking the aggregate to be the self,</li>
+<li>postulating the self as the owner of the aggregate,</li>
+<li>assuming the aggregate to exist within the self,</li>
+<li>locating the self within the aggregate.<span class="note" id="mn44n73"><span class="details"><span class="p">[n.73] For an examination of how a sense of identity can manifest in regard to each of the five aggregates cf. de Silva 1984; for a survey of the twenty modes of such self-notions in various texts cf. Wayman 1979.</span></span></span></li>
+</ul>
+<p>The next topic is the noble eightfold path, which according to all versions should be reckoned a conditioned phenomenon.<span class="note" id="mn44n74"><span class="details"><span class="p">[n.74] A difference in sequence is that in Abhidh-k-ṭ, D (4094) mngon pa, ju 7b7 or Q (5595) tu 8b6, the inquiry about the conditioned nature of the path comes after the discussion on the three aggregates.</span></span></span> The three versions also agree that the noble eightfold path can be subsumed under the three aggregates of morality, concentration, and wisdom.<span class="note" id="mn44n75"><span class="details"><span class="p">[n.75] An additional discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 62a5 or Q (5595) tu 69a1 parallels the exposition of the relation between the factors of the noble eightfold path and the three aggregates (of morality, concentration, and wisdom), a theme discussed at MN I 301,9; cf. also Abhidh-k 2:26 in Pradhan 1967: 55,14, with its Chinese counterparts in T 1558 at T XXIX 19b13 and T 1559 at T XXIX 178c6.</span></span></span> They differ, however, on the implications of these three aggregates. According to the Pāli version, right effort belongs to the aggregate of concentration, while the Chinese and Tibetan versions include right effort in the aggregate of wisdom.<span class="note" id="mn44n76"><span class="details"><span class="p">[n.76] <a href="../../mn/mn44.html">MN 44</a> at MN I 301,8 as against <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788c12 and D (4094) mngon pa, ju 7b6 or Q (5595) tu 8b5. The placing of right effort into the aggregate of wisdom in <a href="../../parallels/ma210.html">MĀ 210</a> recurs as a discourse quotation in Abhidh-k 2:26 in Pradhan 1967: 55,14 (cf. also above note 75); cf. also the Śrāvakabhūmi, Shukla 1973: 327,4 or ŚSG 2007: 230,6 and T 1579 at T XXX 445a11, and the Saundaranandakāvya 16:32 in Johnston 1928: 115,17. The same could perhaps also be implicit in a sequential difference in the listing of the factors of the noble eightfold path in the Mahāvastu in Basak 1968/2004: 197,32 or in Senart 1897: 331,13, which places right effort in third position, after right view and right intention, and thus before right action, right livelihood, right speech, right mindfulness, and right concentration. This mode of listing would provide a closer relationship between right effort and the two factors that according to all traditions are part of the aggregate of wisdom, right view and right intention. The *Mahāprajñāpāramitā-(upadeśa-)śāstra in T 1509 at T XXV 203a24, however, agrees in this respect with <a href="../../mn/mn44.html">MN 44</a>, as it counts only two members in the aggregate of wisdom.</span></span></span></p>
+<p>According to the standard definition given in the discourses, right effort stands for making an effort to prevent and overcome unwholesome qualities, and to arouse and develop their wholesome counterparts.<span class="note" id="mn44n77"><span class="details"><span class="p">[n.77] Cf., e.g., <a href="../../sn/sn49.1.html">SN 49:1</a> at SN V 244,2.</span></span></span> Keeping in mind this basic definition, in order to further investigate the above difference the Mahācattarīsaka-sutta and its parallels can be taken into account. The three versions of this discourse indicate that right view and right effort, together with right mindfulness, are needed to develop the other factors of the noble eightfold path.<span class="note" id="mn44n78"><span class="details"><span class="p">[n.78] <a href="../../mn/mn117.html">MN 117</a> at MN III 72,24, <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c22, and D (4094) mngon pa, nyu 44b5 or Q (5595) thu 84a7. On the role of right view in regard to the noble eightfold path cf. also Anālayo 2006f: 677.</span></span></span> Here to discriminate between right and wrong manifestations of each path factor is the task of right view, while right effort stands for the actual overcoming of what is wrong and the establishing of what is right. Thus the wise distinction between what is wholesome and what is unwholesome should be attributed to right view, which the Cūḷavedalla-sutta and its parallels do indeed place in the aggregate of wisdom.</p>
+<p>Hence right effort as the actual implementation of the wise distinction engendered by right view is what keeps the mind on the proper track, and thereby in turn leads to concentration, so that the concentration aggregate does seem to be the most appropriate placing for right effort.</p>
+<p>This conclusion receives further support from two discourses in the Aṅguttara-nikāya. One of these two discourses identifies the activities described in the standard formulation of the four right efforts to be efforts at “restraining”, “removing”, “developing”, and “protecting”.<span class="note" id="mn44n79"><span class="details"><span class="p">[n.79] <a href="../../an/an4.69.html">AN 4:69</a> at AN II 74,3 lists saṃvarappadhāna, pahānappadhāna, bhāvanappadhāna, and anurakkhanap- padhāna (Be-AN I 385,25: anurakkhaṇāppadhāna, Ce-AN II 138,16: pahāṇappadhāna and anurakkhaṇappadhāna, Se-AN II 96,8: bhāvanāppadhāna and anurakkhanāppadhāna).</span></span></span> The other Aṅguttara-nikāya discourse explains these four terms to refer to sense-restraint, to removing unwholesome thoughts, to developing the factors of awakening (bojjhaṅga), and to protecting the sign of concentration (samādhinimitta).<span class="note" id="mn44n80"><span class="details"><span class="p">[n.80] <a href="../../an/an4.14.html">AN 4:14</a> at AN II 16,5.</span></span></span> These explanations further support the close relationship between right effort and concentration.<span class="note" id="mn44n81"><span class="details"><span class="p">[n.81] Ps II 362,7 illustrates the supportive role of right effort for the development of concentration, which according to its explanation provides the rationale for placing right effort in the aggregate of concentration, with the example of a man who climbs on another man’s back to pluck a flower high up on a tree.</span></span></span></p>
+<p>The same conclusion suggests itself also from the continuation of the series of questions and answers in the Cūḷavedalla-sutta and its parallels, where the Pāli version reckons the four right efforts to be the “requisites” of concentration.<span class="note" id="mn44n82"><span class="details"><span class="p">[n.82] <a href="../../mn/mn44.html">MN 44</a> at MN I 301,14: cattāro sammappadhānā samādhiparikkhārā.</span></span></span> The Chinese and Tibetan versions present them similarly as the “strength” or perhaps “power” of concentration.<span class="note" id="mn44n83"><span class="details"><span class="p">[n.83] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788c26: 四正斷, 是謂定力也, D (4094) mngon pa, ju 8a3 or Q (5595) tu 9a2: yang dag par spong ba bzhi ni ting nge ’dzin gyi stobs so. Minh Chau 1964/1991: 327 notes that the translation 正斷 in <a href="../../parallels/ma210.html">MĀ 210</a> follows the Sanskrit samyakprahāna, “right eradication”, as is also the case for the yang dag par spong ba in Abhidh-k-ṭ, as against the “right striving” mentioned in <a href="../../mn/mn44.html">MN 44</a>.</span></span></span> Hence all versions, although using different terminology, agree on the close relation of right effort to concentration, which would support the Cūḷavedalla-sutta’s placing of right effort into the aggregate of concentration.</p>
+<p>The three parallel versions continue by explaining concentration to be one-pointedness of mind, followed by identifying the four satipaṭṭhānas as the “sign” of concentration (samādhinimitta).<span class="note" id="mn44n84"><span class="details"><span class="p">[n.84] Swearer 1973: 442 comments that the present “passage points to the close relationship between sati and samādhi. That is, concentration appears to presuppose the four objects of mindfulness”.</span></span></span> The Madhyama-āgama discourse, moreover, explains that the four ways to [psychic] power (iddhipāda) are the “achievement” of concentration.<span class="note" id="mn44n85"><span class="details"><span class="p">[n.85] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788c26: 定功.</span></span></span> The three versions conclude this topic by indicating that the development of concentration consists in the cultivation of these practices.</p>
+<p>The Cūḷavedalla-sutta next takes up the three types of formation (saṅkhāra), a topic not covered in its Chinese parallel, although the same is taken up in the Tibetan version. The otherwise similar treatment in the Pāli and Tibetan versions varies on the nature of mental formations, which according to the Cūḷavedalla-sutta are perception and feeling, whereas the Tibetan version speaks of perception and intention.<span class="note" id="mn44n86"><span class="details"><span class="p">[n.86] <a href="../../mn/mn44.html">MN 44</a> at MN I 301,21: saññā ca vedanā ca, D (4094) mngon pa, ju 8a5 or Q (5595) tu 9a5: ’du shes dang sems pa. Additional discourses quotation in Abhidh-k-ṭ parallel the present section: D (4094) mngon pa, ju 66a7 or Q (5595) tu 73b8 parallels the definition of verbal formations given in <a href="../../mn/mn44.html">MN 44</a> at MN I 301,21; cf. also Abhidh-k 2:33 in Pradhan 1967: 61,5, with its Chinese counterparts in T 1558 at T XXIX 21b27 and T 1559 at T XXIX 180b16. D (4094) mngon pa, ju 43a3 or Q (5595) tu 46b5 parallels the definition of perception and feeling as mental phenomena in <a href="../../mn/mn44.html">MN 44</a> at MN I 301,28; cf. also Abhidhk 1:35 in Pradhan 1967: 24,12, with its Chinese counterparts in T 1558 at T XXIX 8c24 and T 1559 at T XXIX 168c18.</span></span></span></p>
+<p>The same difference recurs in regard to a reference to the three formations in a discourse in the Saṃyutta-nikāya and in its Saṃyukta-āgama parallel,<span class="note" id="mn44n87"><span class="details"><span class="p">[n.87] <a href="../../sn/sn41.6.html">SN 41:6</a> at SN IV 293,8 and <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150a22. <a href="../../sn/sn41.6.html">SN 41:6</a> and <a href="../../parallels/sa568.html">SĀ 568</a> continue, similar to <a href="../../mn/mn43.html">MN 43</a> at MN I 296,11, by examining the difference between someone who has attained cessation and someone who is dead.</span></span></span> where the Saṃyutta-nikāya discourse defines mental formation by way of perception and feeling,<span class="note" id="mn44n88"><span class="details"><span class="p">[n.88] <a href="../../sn/sn41.6.html">SN 41:6</a> at SN IV 293,16: saññā ca vedanā ca.</span></span></span> while the Saṃyukta-āgama version instead speaks of perception and intention.<span class="note" id="mn44n89"><span class="details"><span class="p">[n.89] <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150a25: 想, 思. Another instance of 思, found in the same Saṃyukta-āgama collection in <a href="../../parallels/sa214.html">SĀ 214</a> at T II 54a28, corresponds to ceteti in its Pāli counterpart <a href="../../sn/sn35.93.html">SN 35:93</a> at SN IV 68,15.</span></span></span> The definition by way of perception and intention recurs also in other works, such as the *Mahāvibhāṣā and the Śāriputrābhidharma.<span class="note" id="mn44n90"><span class="details"><span class="p">[n.90] T 1545 at T XXVII 127a17 and T 1548 at T XXVIII 694b14, which have 思 as their counterpart to vedanā in the Pāli definition of mental formation, cf. also Schmithausen 1987: 396-397. The same 思 also stands instead of viññāṇa in the parallel to <a href="../../mn/mn43.html">MN 43</a>, <a href="../../parallels/ma211.html">MĀ 211</a> at T I 791b1, cf. above p. 271 note 33.</span></span></span></p>
+<p>The Cūḷavedalla-sutta next examines the cessation of perceptions and feelings (sañ- ñāvedayitanirodha).<span class="note" id="mn44n91"><span class="details"><span class="p">[n.91] Mahāsi 1981/2006a: 118 explains that “this question was asked [by Visākha] to find out whether Dhammadinnā had ever achieved attainment of cessation ... whether she was able to accomplish it”.</span></span></span> The three versions agree that to attain cessation depends on having previously developed the mind accordingly.<span class="note" id="mn44n92"><span class="details"><span class="p">[n.92] <a href="../../mn/mn44.html">MN 44</a> at MN I 301,35, <a href="../../parallels/ma210.html">MĀ 210</a> at T I 789a29, and D (4094) mngon pa, ju 8b7 or Q (5595) tu 9b8; the same indication can also be found in a discourse quotation in the *Mahāvibhāṣā, T 1545 at T XXVII 780c7.</span></span></span> While the Pāli and Tibetan versions give the same reason for emerging from cessation, according to the Chinese account emergence from cessation is due to the body and the six sense-spheres conditioned by the life faculty.<span class="note" id="mn44n93"><span class="details"><span class="p">[n.93] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 789b6: 因此身及六處緣命根.</span></span></span> The three versions agree that the mind of one who emerges from cessation inclines to seclusion.<span class="note" id="mn44n94"><span class="details"><span class="p">[n.94] Abhidh-k-ṭ at D (4094) mngon pa, ju 9a5 or Q (5595) tu 10a6 adds that the mind also inclines towards liberation, thar pa, and towards Nirvāṇa, mya ngan las ’das pa. For an examination of the difficulties involved in explaining emergence from the attainment of cessation and how different Buddhist schools attempted to tackle this problem cf. Griffiths 1986/1991.</span></span></span></p>
+<p>When discussing different aspects in relation to the attainment of cessation, the Cūḷavedalla-sutta states that:</p>
+<ul>
+<li>first the verbal formation ceases (i.e., initial and sustained mental application),</li>
+<li>next the bodily formation (i.e., breathing in and out),</li>
+<li>then the mental formation ceases (i.e., perception and feeling).<span class="note" id="mn44n95"><span class="details"><span class="p">[n.95] <a href="../../mn/mn44.html">MN 44</a> at MN I 302,4: paṭhamaṃ nirujjhati vacīsaṅkhāro, tato kāyasaṅkhāro, tato cittasaṅkhāro.</span></span></span></li>
+</ul>
+<p>The Tibetan version also stipulates that the verbal formation ceases first, followed by the bodily and mental formations.<span class="note" id="mn44n96"><span class="details"><span class="p">[n.96] D (4094) mngon pa, ju 9a3 or Q (5595) tu 10a3: dang po nyid du ngag gi ’du byed ’gag par ’gyur ro, de nas ni lus dang yid kyi ’du byed do.</span></span></span> Although the Madhyama-āgama parallel to the Cūḷavedalla-sutta does not cover this topic, a counterpart to this discussion can be found in the Madhyama-āgama parallel to the Mahāvedalla-sutta, whose presentation is as follows:</p>
+<ul>
+<li>first the bodily formation ceases,</li>
+<li>next the verbal formation,</li>
+<li>then the mental formation.<span class="note" id="mn44n97"><span class="details"><span class="p">[n.97] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792a9: 先滅身行, 次滅口行, 後滅意行.</span></span></span></li>
+</ul>
+<p>In the case of emergence from cessation, the same difference recurs, although obviously in the reverse order.</p>
+<p>That is, according to the Pāli and Tibetan versions the verbal formation is the last to arise,<span class="note" id="mn44n98"><span class="details"><span class="p">[n.98] <a href="../../mn/mn44.html">MN 44</a> at MN I 302,17: paṭhamaṃ uppajjati cittasaṅkhāro, tato kāyasaṅkhāro, tato vacīsaṅkhāro, D (4094) mngon pa, ju 9a4 or Q (5595) tu 10a5: dang po nyid du yid kyi ’du byed skye bar ’gyur ro, de nas ni lus dang ngag gi ’du byed do.</span></span></span> while according to the Chinese presentation the bodily formation arises last.<span class="note" id="mn44n99"><span class="details"><span class="p">[n.99] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792a14: 先生意行, 次生口行, 後生身行.</span></span></span></p>
+<p>In relation to the sequence in which the three formations cease, other Pāli discourses indicate that during progress through the jhānas (required in order to be able to attain cessation), the verbal formation of initial and sustained mental application would be left behind on attaining the second jhāna, while the bodily formation of in- and outbreathing would only cease with the attainment of the fourth jhāna.<span class="note" id="mn44n100"><span class="details"><span class="p">[n.100] <a href="../../dn/dn33.html">DN 33</a> at DN III 270,18 and <a href="../../an/an10.20.html">AN 10:20</a> at AN V 31,25 indicate that with the fourth jhāna, the bodily formation will be tranquillized, an attainment with which, according to <a href="../../sn/sn36.11.html">SN 36:11</a> at SN IV 217,8, breathing ceases, a point also made in the *Mahāvibhāṣā, T 1545 at T XXVII 136b12.</span></span></span> This corresponds to the sequence proposed in the Cūḷavedalla-sutta and its Tibetan parallel. This sequence receives further support from a discourse in the Saṃyukta-āgama and its Pāli parallel. According to these two discourses, on attaining cessation the first formation to cease is indeed the verbal formation of initial and sustained mental application.<span class="note" id="mn44n101"><span class="details"><span class="p">[n.101] <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150b20, parallel to <a href="../../sn/sn41.6.html">SN 41:6</a> at SN IV 294,8.</span></span></span> The *Mahāvibhāṣā also agrees with the sequence proposed in the Cūḷavedalla-sutta and its Tibetan parallel.<span class="note" id="mn44n102"><span class="details"><span class="p">[n.102] T 1545 at T XXVII 780c25. The *Mahāvibhāṣā not only agrees in this respect with <a href="../../mn/mn44.html">MN 44</a>, but also quotes this whole discussion on the topic of cessation as part of a discourse spoken by the nun Dhammadinnā, unlike <a href="../../parallels/ma211.html">MĀ 211</a>, which assigns this topic to a discussion between Mahākoṭṭhita and Sāriputta.</span></span></span></p>
+<p>Another disagreement between the Cūḷavedalla-sutta and its parallels concerns the three contacts experienced by one who emerges from cessation. According to the Pāli presentation, these three contacts are:</p>
+<ul>
+<li>empty contact,</li>
+<li>signless contact,</li>
+<li>desireless contact.<span class="note" id="mn44n103"><span class="details"><span class="p">[n.103] <a href="../../mn/mn44.html">MN 44</a> at MN I 302,22 lists suññato phasso, animitto phasso, and appaṇihito phasso.</span></span></span></li>
+</ul>
+<p>The Chinese and Tibetan versions list:</p>
+<ul>
+<li>imperturbable contact,</li>
+<li>nothingness contact,</li>
+<li>signless contact.<span class="note" id="mn44n104"><span class="details"><span class="p">[n.104] <a href="../../parallels/ma211.html">MĀ 211</a> at T I 792a19: 不移動觸, 無所有觸, 無相觸, D (4094) mngon pa, ju 9a6 or Q (5595) tu 10a8: mi g.yo ba, cung zad med pa, and mtshan ma med pa; on this difference between <a href="../../mn/mn44.html">MN 44</a> and <a href="../../parallels/ma211.html">MĀ 211</a> cf. also Choong 1999: 62-63. A discourse quotation of this statement in the Karmasiddhiprakaraṇa, T 1609 at T XXXI 784b6, similarly reads 不動觸, 無所有觸, 及無相觸, cf. also the Tibetan version in Lamotte 1936: 195,33: mi g.yo ba dang, ci yang med pa dang, mtshan ma me pa la’o. The quotation presents itself as belonging to the Mahākauṣṭhila-sūtra, thereby following <a href="../../parallels/ma211.html">MĀ 211</a> in presenting this topic as part of a discussion between Sāriputta and Mahākoṭṭhita. These three contacts are also mentioned (as part of a discussion on the attainment of cessation that touches on several points made in the present discourse) in the Yogācārabhūmi, cf. Delhey 2009a: 208,3 and T 1579 at T XXX 341a8.</span></span></span></li>
+</ul>
+<p>The presentation in the Chinese and Tibetan versions of the three types of contact experienced when emerging from cessation recurs in a discourse in the Saṃyukta-āgama and in other works.<span class="note" id="mn44n105"><span class="details"><span class="p">[n.105] <a href="../../parallels/sa568.html">SĀ 568</a> at T II 150c3, the *Mahāvibhāṣā, T 1545 at T XXVII 781b8, the *Tattvasiddhi, T 1646 at T XXXII 346a24, and the Yogācārabhūmi, T 1579 at T XXX 341a8; cf. also Schmithausen 1987: 396- 397.</span></span></span> These agree with the Chinese and Tibetan parallels to the Cūḷavedalla-sutta that these three contacts are indeed imperturbable contact, nothingness contact, and signless contact.</p>
+<p>The Cūḷavedalla-sutta and its parallels next take up the three types of feeling. They agree that:</p>
+<ul>
+<li>pleasant feeling is pleasant while it lasts, but unpleasant when it changes,</li>
+<li>painful feeling is unpleasant while it lasts, but pleasant when it changes,</li>
+<li>neutral feeling is pleasant when known, but unpleasant when not known.<span class="note" id="mn44n106"><span class="details"><span class="p">[n.106] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 789c4 actually indicates that neutral feeling is unpleasant when not known and pleasant when not known, 不知苦, 不知樂, which I take to be a textual error. Another point worthy of note is that <a href="../../mn/mn44.html">MN 44</a> at MN I 303,4 speaks of each feeling as being either “present” or else “changing”, ṭhiti or viparināma, whereas <a href="../../parallels/ma210.html">MĀ 210</a> at T I 789c1 and D (4094) mngon pa, ju 10b4 or Q (5595) tu 11b7 deal with the same topic in a threefold manner by additionally also mentioning the “arising” of feeling, 生 ... 住 ... 變易, skye ba, gnas pa, yongs su ’gyur ba. Thus in the case of pleasant feelings, for example, according to <a href="../../parallels/ma210.html">MĀ 210</a> their arising is pleasant, their presence is pleasant, but their change is unpleasant. Such a three-fold mode of presentation is also found in the Abhidharmakośabhāṣya, Abhidh-k 6:3 in Pradhan 1967: 329,5: utpāda ... sthiti ... vipariṇāma, with its Chinese counterparts in T 1558 at T XXIX 114b15 and T 1559 at T XXIX 266c1, and a more extensive discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, nyu 4b2 or Q (5595) thu 36a1, which thus parallels the examination of the nature of pleasant feeling in <a href="../../mn/mn44.html">MN 44</a> at MN I 303,3.</span></span></span></li>
+</ul>
+<p>The three versions also concur that:</p>
+<ul>
+<li>the tendency to lust does not underlie pleasant feelings that arise during the first jhāna,<span class="note" id="mn44n107"><span class="details"><span class="p">[n.107] Abhidh-k-ṭ at D (4094) mngon pa, ju 10a3 or Q (5595) tu 11a5 makes the same statement also for the second and the third absorption. An additional discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 51b4 or Q (5595) tu 56a5 refers to the relationship between feelings and underlying tendencies, described in <a href="../../mn/mn44.html">MN 44</a> at MN I 303,20; cf. also Abhidh-k 2:3 in Pradhan 1967: 39,19, with its Chinese counterparts T 1558 at T XXIX 14a12 and T 1559 at T XXIX 173c2.</span></span></span></li>
+<li>the tendency to aversion does not underlie unpleasant feelings that arise due to the wish for liberation,</li>
+<li>the tendency to delusion does not underlie neutral feelings that are experienced in the fourth jhāna.</li>
+</ul>
+<p>The Cūḷavedalla-sutta and its parallels continue by delineating a series of counterparts. These proceed from pleasant feeling to Nirvāṇa. The three versions begin this series of counterparts by presenting pleasant feeling and painful feeling as mutual counterparts. The Pāli version next turns to the counterpart to neutral feeling. Before taking up the counterpart to neutral feeling, the Chinese and Tibetan versions inquire after the counterpart to pleasant and painful feelings together, which they explain to be neutral feeling.<span class="note" id="mn44n108"><span class="details"><span class="p">[n.108] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 790a1 and D (4094) mngon pa, ju 10b6 or Q (5595) tu 12a2.</span></span></span> In this way, they provide a transition from pleasant and painful feelings to neutral feelings, so that their series of questions consistently proceeds by inquiring into the counterpart of the item mentioned in the preceding answer (see table 5.4).</p>
+<table class="comparative-table">
+<caption>Table 5.4: Listing of Counterparts in <a href="../../mn/mn44.html">MN 44</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn44.html">MN 44</a></th><th><a href="../../parallels/ma210.html">MĀ 210</a> & Abhidh-k-ṭ</th></tr>
+<tr><td>pleasant feeling - painful feeling (1)</td><td>pleasant feeling - painful feeling (→ 1)</td></tr>
+<tr><td>painful feeling - pleasant feeling (2)</td><td>painful feeling - pleasant feeling (→ 2)</td></tr>
+<tr><td>neutral feeling - ignorance (3)</td><td>pleasant & painful feeling - neutral feeling</td></tr>
+<tr><td>ignorance - knowledge (4)</td><td>neutral feeling - ignorance (→ 3)</td></tr>
+<tr><td>knowledge - deliverance (5)</td><td>ignorance - knowledge (→ 4)</td></tr>
+<tr><td>deliverance - Nirvāṇa (6)</td><td>knowledge - Nirvāṇa (→ 6)</td></tr>
+<tr><td></td><td>(≠ 5)</td></tr>
+</table>
+<p>The three versions agree that the counterpart to neutral feeling is ignorance, and that the counterpart to ignorance is knowledge. The Pāli version continues by indicating that liberation is the counterpart to knowledge, and Nirvāṇa is the counterpart to liberation.<span class="note" id="mn44n109"><span class="details"><span class="p">[n.109] Similarly, a series of questions in <a href="../../sn/sn48.42.html">SN 48:42</a> at SN V 218,11, which proceeds along the same lines of finding a counterpart, also precedes Nirvāṇa with liberation. However, this series does not include knowledge, and instead presents liberation as the counterpart to mindfulness. Another example is <a href="../../sn/sn23.1.html">SN 23:1</a> at SN III 189,24, which also proceeds along a similar series of topics, although it does not treat these in terms of counterparts, a series where again liberation precedes Nirvāṇa.</span></span></span> The Chinese and Tibetan versions proceed directly from knowledge to Nirvāṇa, without mentioning liberation as an intermediate step.</p>
+<p>The examination of counterparts culminates in an inquiry about the counterpart to Nirvāṇa. In all versions, Dhammadinnā explains that such a question cannot be answered, for Nirvāṇa is the final goal of the holy life.<span class="note" id="mn44n110"><span class="details"><span class="p">[n.110] <a href="../../parallels/ma210.html">MĀ 210</a> at T I 790a16 adds that Nirvāṇa has no counterpart, a statement also made in Ps II 370,18 and Mil 316,1. Another exchange that similarly culminates in a query after Nirvāṇa, which cannot be given a proper reply, can be found in <a href="../../parallels/ma159.html">MĀ 159</a> at T I 682a29, a discourse without a Pāli parallel.</span></span></span></p>
+<p>This completes the series of questions and answers in both versions. According to the Pāli version, the layman Visākha reported the whole conversation to the Buddha, who approved of the answers given and indicated that he would have answered in just the same way. According to the Chinese and Tibetan versions, however, the nun Dhammadinnā was the one to inform the Buddha about the conversation, which led to the same approval. Although the three versions disagree on the identity of who gave an account of this discussion to the Buddha, they agree that the Buddha authenticated and praised Dhammadinnā’s exposition.<span class="note" id="mn44n111"><span class="details"><span class="p">[n.111] The three versions of the present discourse thus corroborate that from an early Buddhist perspective gender is not relevant when it comes to realization and the development of wisdom, which is in fact explicitly stated in <a href="../../an/an8.51.html">AN 8:51</a> at AN IV 276,10 and its parallel <a href="../../parallels/ma116.html">MĀ 116</a> at T I 605b28; cf. also <a href="../../sn/sn1.46.html">SN 1:46</a> at SN I 33,11 (or SN2 46 at SN2 I 70,1) and its parallels <a href="../../parallels/sa587.html">SĀ 587</a> at T II 156a22 and <a href="../../parallels/sa-2.171.html">SĀ2 171</a> at T II 437a24.</span></span></span> Her wisdom is also highlighted in the Aṅguttara-nikāya and Ekottarika-āgama lists of outstanding disciples, both of which mention her as foremost in the ability to expound the Dharma.<span class="note" id="mn44n112"><span class="details"><span class="p">[n.112] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 25,21 qualifies her as a dhammakathikā, “speaker on the Dharma”, while <a href="../../parallels/ea5.2.html">EĀ 5.2</a> at T II 559a13 speaks of her ability to “discriminate the meaning” and to “widely discourse on divisions and parts” [of the teaching], 分別義趣, 廣說分部. Dhammadinnā’s wisdom is also reflected in the Pāli commentaries: According to Thī-a 55,25, Dhammadinnā was the teacher under whom the nun Sukkā went forth, learnt meditation, and became an arahant, a nun who then became an outstanding teacher herself. Thī-a 74,27 reports that another nun, who had been unable to gain concentration for twenty-five years, was able to develop her practice and eventually attain the six supernormal knowledges (abhiññās) after hearing a discourse spoken by Dhammadinnā. According to a discourse in the Ekottarika-āgama, on one occasion Dhammadinnā also lectured Devadatta on the need to repent his evil deeds. <a href="../../parallels/ea49.9.html">EĀ 49.9</a> at T II 803c25 reports that Devadatta got so infuriated by this reprimand that he hit Dhammadinnā until she passed away. Devadatta’s killing of a nun is also reported in the Saṅghabhedavastu, Gnoli 1978a: 254,20, and in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 165a4, cf. also T 1464 at T XXIV 857c20, although in these texts the nun in question is Utpalavarṇā. According to Deeg 1999: 197 and Lamotte 1949/1981: 875 note 1, this tale is a late development whose function is to arrive at a triad of heinous crimes committed by Devadatta (in addition to his creating a schism and wounding the Buddha).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

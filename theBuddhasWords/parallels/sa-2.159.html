@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.159 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.159</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 159</span><span class="mirror-right">（一五九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn55.23.html">SN 55.23</a> / <a href="../parallels/sa935.html">SĀ 935</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying in the Niqūṭa Garden in the country of Kapilavastu. At that time, the Śākya Cāruskandha went to Mahānāma and said to him, &quot;The Buddha has spoken of the stream-enterer. How many kinds of unshakable faith are there?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在迦毘罗卫国尼俱陀园林中。时麁手释往诣摩诃男所，语摩诃男言：「如来说须陀洹，有几不坏信？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahānāma Śākya replied, &quot;The Buddha has spoken of the stream-enterer. There are four kinds of unshakable faith. Namely, unshakable faith in the Buddha, unshakable faith in the Dharma, unshakable faith in the Saṃgha, and unshakable faith in the precepts given by the sages.&quot;</p></td><td lang="lzh" class="agama-chi"><p>摩诃男释答言：「如来所说须陀洹人，有四支不坏信。所谓于佛不坏信，于法不坏信，于僧不坏信，圣所授戒得不坏信。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Cāruskandha Śākya said, &quot;You should not say that the Buddha speaks of four unshakable faiths. Why? The Buddha only speaks of three unshakable faiths, namely, unshakable faith in the Three Jewels.&quot; The second and third times he said the same thing, and Mahānāma also replied, &quot;You should not say three unshakable faiths. The Tathāgata truly speaks of four unshakable faiths.&quot; The two argued, each insisting on their own view, unable to reach a conclusion. They went to the Buddha, bowed at his feet, sat to one side, and asked to resolve their doubts.</p></td><td lang="lzh" class="agama-chi"><p>麁手释言：「汝今不应说言，如来说四不坏信。所以者何？如来唯说三不坏信，所谓于三宝所，得不坏信。」第二第三亦作是说，摩诃男亦作是答：「汝莫说言三不坏信，如是◎如来实说四不坏信。」二人纷纭，各竞所见，不能得定，往诣佛所，顶礼佛足，在一面坐，请决所疑。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāma said to the Buddha, &quot;World-Honored One! That Cāruskandha Śākya came to me and said, &#x27;The Tathāgata speaks of how many unshakable faiths?&#x27; I replied, &#x27;The Tathāgata speaks of four unshakable faiths, namely, the Three Jewels and the precepts given by the sages.&#x27; Cāruskandha Śākya said, &#x27;The Tathāgata only speaks of three unshakable faiths. How can you say four? Namely, the Three Jewels.&#x27; The second and third times he said the same thing, and the second and third times I also replied, &#x27;The Tathāgata speaks of four, not three.&#x27; What he said, I cannot understand. What I said, he also does not understand.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，摩诃男白佛言：「世尊！彼麁手释来至我所，作是言：『如来为说几不坏信？』我即答言：『如来说于四不坏信，所谓三宝、圣所授戒。』麁手释言：『如来唯说三不坏信，云何言四？所谓三宝。』第二第三亦作是说，第二第三我亦答言：『如来说四，实不说三。』彼之所说，我不能解。我之所说，彼亦不解。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Cāruskandha Śākya immediately rose from his seat and said to the Buddha, &quot;World-Honored One! If the Buddha does not teach me, the Sangha does not teach me, the bhikṣuṇīs, upāsakas, upāsikās, devas, māras, or brahmas, if none of these people teach me, I will still single-mindedly turn towards the Buddha, the Dharma, and the Sangha.</p></td><td lang="lzh" class="agama-chi"><p>时，麁手释即从坐起，白佛言：「世尊！假设佛不教我，僧不教我，比丘尼、优婆塞、优婆夷、若天、若魔、若梵，此诸人等，都不教我，向于佛者，我亦一心回向于佛，法僧亦然。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Mahānāma, &quot;Cāruskandha Śākya spoke like this. How did you answer him?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告摩诃男言：「麁手释作如是语，◎汝云何答？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahānāma said to the Buddha, &quot;World-Honored One! If it is like this, I have no other answer. Apart from the Buddha&#x27;s teachings, there is no other good place. Apart from the Buddha&#x27;s teachings, there is no other true place. There is no other good place, no other true place.&quot;</p></td><td lang="lzh" class="agama-chi"><p>摩诃男白佛言：「世尊！若如是者，我更无答。异于佛法，更无善处。离于佛法，更无真处。无异处善，无异处真。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said to Mahānāma, &quot;From today onwards, you should understand that possessing four things is called unshakable faith, namely faith in the Buddha, Dharma, Saṃgha, and the precepts cherished by the sages. Cāruskandha Śākya spoke like this because of not understanding. Upon hearing the Buddha&#x27;s explanation, he immediately gained understanding.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告摩诃男：「汝从今日，应如是解，具足四事，名不坏信，所谓于佛、法、僧、圣所念戒。麁手释以不解故，作如是语，即闻佛说，即得解了。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāma and Cāruskandha Śākya, having heard the Buddha&#x27;s teachings, joyfully bowed their heads in reverence and departed.</p></td><td lang="lzh" class="agama-chi"><p>时摩诃男及麁手释闻佛所说，欢喜顶礼而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

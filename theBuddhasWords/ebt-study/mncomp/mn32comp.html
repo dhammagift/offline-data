@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 32 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 32: Mahāgosiṅga-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn31comp.html#content"></a><a id="next-sutta" href="./mn33comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn32.html">MN 32</a> / <a href="../../parallels/ma184.html">MĀ 184</a> / <a href="../../parallels/ea37.3.html">EĀ 37.3</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāgosiṅga-sutta, the “greater discourse in the Gosiṅga [Grove]”, records a meeting of eminent disciples during which each of them described praiseworthy qualities reflecting his own outstanding traits. This discourse has three Chinese parallels, two of which are found in the Madhyama-āgama and in the Ekottarika-āgama, while the third parallel is an individual translation.<span class="note" id="mn32n32"><span class="details"><span class="p">[n.32] The parallels are <a href="../../parallels/ma184.html">MĀ 184</a> at T I 726c-729b, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 710c-711c, and T 154.16 at T III 80c-82c, a discourse that according to the information given in the Taishō edition was translated by Dharmarakṣa; cf. also Boucher 1996: 269. <a href="../../parallels/ma184.html">MĀ 184</a> and <a href="../../parallels/ea37.3.html">EĀ 37.3</a> agree with <a href="../../mn/mn32.html">MN 32</a> on the location of the discourse. Similar to <a href="../../parallels/ea24.8.html">EĀ 24.8</a> (parallel to <a href="../../mn/mn31.html">MN 31</a>, cf. above p. 203 note 7), <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 710c5 gives the location as the “Lion’s Park”, 師子國, although later on <a href="../../parallels/ea37.3.html">EĀ 37.3</a> uses the expression “Cow-lion’s Park”, 牛師子 園, e.g., at T II 710c15, counterpart to a reference to the Gosiṅgasālavana in <a href="../../mn/mn32.html">MN 32</a> at MN I 216,3. <a href="../../parallels/ma184.html">MĀ 184</a> has the title “discourse on the Cattle’s Horn Sāla Wood”, 牛角娑羅林經, thereby not employing the qualification “greater” used in the title of <a href="../../mn/mn32.html">MN 32</a>. <a href="../../parallels/ma184.html">MĀ 184</a> has been studied and translated by Minh Chau 1964/1991: 21, 73, and 251-257.</span></span></span> Besides these three parallels, a few lines of a version of the present discourse have also been preserved in a Sanskrit fragment.<span class="note" id="mn32n33"><span class="details"><span class="p">[n.33] SHT V 1346 (pp. 232-233, cf. also SHT VII p. 293) parallels <a href="../../mn/mn32.html">MN 32</a> at MN I 218-219. Hartmann 1992: 39 notes another as yet unpublished fragment of the Hoernle collection that parallels <a href="../../mn/mn32.html">MN 32</a>. For a discourse quotation in Abhidh-k-ṭ cf. below p. 215 note 62.</span></span></span></p>
+<p>The Mahāgosiṅga-sutta and its Chinese parallels report how several eminent monks visited Sāriputta, who welcomed them and asked their opinion about what kind of a monk would be able to enhance the beauty of the moonlit Gosiṅga Grove.</p>
+<p>The four versions agree that Mahāmoggallāna, Mahākassapa, Anuruddha, Revata, and Ānanda were present on this occasion.<span class="note" id="mn32n34"><span class="details"><span class="p">[n.34] <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 710c6 omits Anuruddha when listing the disciples present in the Gosiṅga Wood, but then at T II 710c8 mentions him in its description of the monks that approached Sāriputta. The fact that <a href="../../parallels/ea37.3.html">EĀ 37.3</a> reports the presence of six eminent disciples could be why this discourse was included among the sixes of the <i>Ekottarika-āgama</i>.</span></span></span> In addition to these, the Madhyama-āga- <i>ma </i>version and the individual translation also mention the presence of Mahākaccāna (see table 4.3).<span class="note" id="mn32n35"><span class="details"><span class="p">[n.35] <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727a1 and T 154.16 at T III 81a2, which in addition to Mahākaccāna also lists several other eminent disciples not mentioned in <a href="../../mn/mn32.html">MN 32</a>. The Pāli commentary, Ps II 248,9, similarly reports the presence of other eminent disciples, without, however, giving their names.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 4.3: Qualities of the Monks in <a href="../../mn/mn32.html">MN 32</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn32.html">MN 32</a></th><th><a href="../../parallels/ma185.html">MĀ 185</a></th></tr>
+<tr><td>Ānanda (a): learned & teaching (1)</td><td>Ānanda (a): learned & teaching (→ 1)</td></tr>
+<tr><td>Revata (b): meditate in seclusion (2)</td><td>Revata (b): meditate in seclusion (→ 2)</td></tr>
+<tr><td>Anuruddha (c): divine eye (3)</td><td>Anuruddha (c): divine eye (→ 3)</td></tr>
+<tr><td>Mahākassapa (d): exemplary conduct (4)</td><td>Mahākaccāna (≠): Abhidharma talk (→ 5)</td></tr>
+<tr><td>Mahāmoggallāna (e): Abhidharma talk (5)</td><td>Mahākassapa (d): exemplary conduct (→ 4)</td></tr>
+<tr><td>Sāriputta (f): mental mastery (6)</td><td>Mahāmoggallāna(e):supernormal powers</td></tr>
+<tr><td></td><td>Sāriputta (f): mental mastery (→ 6)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea37.3.html">EĀ 37.3</a></td><td>T 154.16</td></tr>
+<tr><td>Ānanda (a): learned & teaching (1)</td><td>Ānanda (a): various qualities & teaching (→ 1)</td></tr>
+<tr><td>Revata (b): meditate in seclusion (→ 2)</td><td>Revata (b): meditate in seclusion (→ 2)</td></tr>
+<tr><td>Anuruddha (c): divine eye (→ 3)</td><td>Anuruddha (c): divine eye (→ 3)</td></tr>
+<tr><td>Mahākassapa (d): exemplary conduct (→ 4)</td><td>Mahākassapa (d): exemplary conduct (→ 4)</td></tr>
+<tr><td>Mahāmoggallāna(e):supernormal powers</td><td>Mahāmoggallāna(e):supernormal powers</td></tr>
+<tr><td>Sāriputta (f): mental mastery (→ 6)</td><td>Sāriputta (f): mental mastery (→ 6)</td></tr>
+<tr><td>(≠ 5)</td><td>(≠ 5)</td></tr>
+</table>
+<p>Each of the monks described qualities that mirror his own personal traits. Thus Ānanda spoke in praise of a learned monk who is able to teach the Dharma, Revata commended a monk who retires into seclusion for intensive meditation, and Anuruddha extolled the ability to exercise the divine eye.</p>
+<p>According to the <i>Majjhima-nikāya</i> version, Anuruddha illustrated his ability to survey a thousand worlds with the divine eye with the example of surveying a thousand “wheel-rims” from an upper storey.<span class="note" id="mn32n36"><span class="details"><span class="p">[n.36] <a href="../../mn/mn32.html">MN 32</a> at MN I 213,29: <i>nemimaṇḍala</i>, adopting the translation by Ñāṇamoli 1995/2005: 308, in accordance with the commentarial gloss at Ps II 254,24. Chalmers 1926: 154 translates <i>nemimaṇḍala</i> as “concentric distances girdling him round”, and Horner 1954/1967: 265 as “concentric circles”.</span></span></span> In the <i>Madhyama-āgama</i> version, he instead describes surveying a thousand “clay bricks” on the ground below.<span class="note" id="mn32n37"><span class="details"><span class="p">[n.37] <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727b14: 於下露地有千土墼; cf. also <a href="../../parallels/ma80.html">MĀ 80</a> at T I 554a12: 觀下露地, 見千土墩 (adopting the 宋, 元, and 明 variant 墩 instead of 塹). An illustration of Anuruddha's ability to survey a thousand worlds in another discourse, <a href="../../parallels/sa537.html">SĀ 537</a> at T II 140a2, speaks of seeing “many things”, 種種之物, on the ground below.</span></span></span> Although the idea of a wheel-rim may fit as an illustration of a world system, it is a little difficult to imagine why someone should spread a thousand wheel-rims on the ground. In contrast, the production of clay bricks requires them to be laid out on the ground for drying in the air, so that to see a thousand clay bricks spread out on the ground could easily have happened in ancient India.<span class="note" id="mn32n38"><span class="details"><span class="p">[n.38] According to H„rtel 1995: 142, during this period “burnt bricks were not yet in regular use for buildings in India”, although their use is attested for the Mauryan period, cf. Verardi 2007: 115.</span></span></span></p>
+<p>The other <i>Ekottarika-āgama</i> version and the individual translation also differ in regard to the simile used to illustrate the ability to survey a thousand worlds. The <i>Ekot-</i> <i>tarika-āgama</i> version compares this ability to looking at the sky, while the individual translation speaks of looking down from a high building and seeing people come and go.<span class="note" id="mn32n39"><span class="details"><span class="p">[n.39] <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a3: 觀空中 and T 154.16 at T III 81b9: 從上視下, 悉見所有人民行來, 出入, 進退. According to the <i>Mahāvastu </i>in Basak 1968/2004: 108,23 or in Senart 1897: 177,6, already before going forth Anuruddha had been endowed with superior sight. On one occasion, when he was enjoying himself in female company, he immediately noticed that, instead of the usual thousand lamps, only nine-hundred-ninety-nine lamps had been lit.</span></span></span> The image used in the individual translation thereby closely resembles the standard illustration for the exercise of the divine eye in the Pāli discourses, which speaks of standing on a high building and seeing people below who walk on the road and enter or leave a house.<span class="note" id="mn32n40"><span class="details"><span class="p">[n.40] E.g., in <a href="../../dn/dn2.html">DN 2</a> at DN I 83,4.</span></span></span> However, since the present context emphasizes the spatial extent of Anuruddha's exceptional ability,<span class="note" id="mn32n41"><span class="details"><span class="p">[n.41] According to <a href="../../an/an1.14.html">AN 1:14</a> at AN I 23,20 and <a href="../../parallels/ea4.2.html">EĀ 4.2</a> at T II 557b9, Anuruddha was outstanding among the Buddha's disciples in regard to this quality; cf. also T 1509 at T XXV 247b23, translated in Lamotte 1970a: 1630.</span></span></span> the similes found in the <i>Majjhima-nikāya</i> and the <i>Madhyama-āgama</i> versions seem more adequate to the occasion, as they compare Anuruddha's ability to survey a thousand worlds with the divine eye to the ability to survey a thousand objects.</p>
+<p>The <i>Mahāgosiṅga-sutta</i> next turns to Mahākassapa. According to all versions, he extolled a monk who has certain exemplary qualities and also encourages others to develop these qualities. The Pāli and Chinese versions differ to some extent on the qualities mentioned by Mahākassapa (see table 4.4).</p>
+<p>According to all versions, Mahākassapa spoke in praise of contentment and of achieving concentration, wisdom, and liberation. The <i>Ekottarika-āgama</i> version and the individual translation agree with the <i>Majjhima-nikāya</i> presentation that Mahākassapa mentioned the wearing of rag robes as well as being endowed with virtue and with knowledge and vision of liberation.<span class="note" id="mn32n42"><span class="details"><span class="p">[n.42] <a href="../../mn/mn32.html">MN 32</a> at MN I 214,4+10+15, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a9+11+12, and T 154.16 at T III 81b17+21+22.</span></span></span> The <i>Madhyama-āgama</i> version and the individual translation agree with the <i>Majjhima-nikāya</i> discourse that Mahākassapa also mentioned being energetic and having few wishes.<span class="note" id="mn32n43"><span class="details"><span class="p">[n.43] <a href="../../mn/mn32.html">MN 32</a> at MN I 214,6+9, <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727c3+5, and T 154.16 at T III 81b18+19. Just as in the case of the <i>Madhyama-āgama </i>parallel to <a href="../../mn/mn24.html">MN 24</a> (cf. above p. 162), <a href="../../parallels/ma184.html">MĀ 184</a> at T I 726b21 includes right mindfulness in its list, a quality not mentioned in <a href="../../mn/mn32.html">MN 32</a> or in <a href="../../parallels/ea37.3.html">EĀ 37.3</a>. T 154.16 at T III 81b20 lists 定意. Although according to Brough 1977: 90 Dharmarakṣa elsewhere uses the character 意 to render “mindfulness”, in the present context the expression 定意 seems to stand just for “concentration”, cf. also Karashima 1998: 103.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 4.4: Mahākassapa's Qualities in <a href="../../mn/mn32.html">MN 32</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn32.html">MN 32</a></th><th><a href="../../parallels/ma185.html">MĀ 185</a></th></tr>
+<tr><td>forest dwelling (1)</td><td>forest dwelling (→ 1)</td></tr>
+<tr><td>alms food (2)</td><td>few wishes (→ 5)</td></tr>
+<tr><td>rag robes (3)</td><td>contented (→ 6)</td></tr>
+<tr><td>3 robes (4)</td><td>secluded (→ 7)</td></tr>
+<tr><td>few wishes (5)</td><td>energetic (→ 9)</td></tr>
+<tr><td>contented (6)</td><td>right mindfulness & clear comprehension</td></tr>
+<tr><td>secluded (7)</td><td>concentration (→ 11)</td></tr>
+<tr><td>not socializing (8)</td><td>wisdom (→ 12)</td></tr>
+<tr><td>energetic (9)</td><td>influxes destroyed (→ 13)</td></tr>
+<tr><td>virtue (10)</td><td>inspires others</td></tr>
+<tr><td>concentration (11)</td><td></td></tr>
+<tr><td>wisdom (12)</td><td></td></tr>
+<tr><td>liberation (13)</td><td></td></tr>
+<tr><td>knowledge & vision of liberation (14)</td><td>(≠ 2-4, 8, 10, 14)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea37.3.html">EĀ 37.3</a></td><td>T 154.16</td></tr>
+<tr><td>forest dwelling (→ 1)</td><td>secluded (→ 7)</td></tr>
+<tr><td>rag robes (→ 3)</td><td>wise44</td></tr>
+<tr><td>contented & secluded (→ 6, 7)</td><td>rag robes (→ 3)</td></tr>
+<tr><td>virtue (→ 10)</td><td>contented (→ 6)</td></tr>
+<tr><td>concentration (→ 11)</td><td>few wishes (→ 5)</td></tr>
+<tr><td>wisdom (→ 12)</td><td>peaceful</td></tr>
+<tr><td>liberation (→ 13)</td><td>energetic (→ 9)</td></tr>
+<tr><td>knowledge & vision of liberation (→ 14)</td><td>controlled mind</td></tr>
+<tr><td>teaches others</td><td>concentration (→ 11)</td></tr>
+<tr><td></td><td>devoted to development</td></tr>
+<tr><td></td><td>virtue (→ 10)</td></tr>
+<tr><td></td><td>concentration (→ 11)</td></tr>
+<tr><td></td><td>wisdom (→ 12)</td></tr>
+<tr><td></td><td>liberation (→ 13)</td></tr>
+<tr><td></td><td>knowledge & vision of liberation (→ 14)</td></tr>
+<tr><td></td><td>teaches others</td></tr>
+<tr><td>(≠ 2, 4-5, 8-9)</td><td>(≠ 1-2, 4, 8)</td></tr>
+</table>
+<p>In regard to Mahākassapa, it is noteworthy that according to the <i>Madhyama-āgama</i> version Sāriputta addressed Mahākassapa with “venerable sir”, and Mahākassapa replied with “friend”.<span class="note" id="mn32n45"><span class="details"><span class="p">[n.45] In <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727c1 Sāriputta addressed Mahākassapa with 尊者, “venerable sir”, corresponding to <i>bhante</i>, to which Mahākassapa replied with 賢者, “friend”, corresponding to <i>āvuso</i>.</span></span></span> This would be an anachronism, since according to a passage in the <i>Mahā-</i> <i>parinibbāna-sutta </i>and its Chinese and Sanskrit counterparts these ways of addressing each other in accordance with seniority were instituted by the Buddha immediately before his passing away, at a time when Sāriputta was presumably no longer alive.<span class="note" id="mn32n46"><span class="details"><span class="p">[n.46] <a href="../../dn/dn16.html">DN 16</a> at DN II 154,8, <a href="../../parallels/ea42.3.html">EĀ 42.3</a> at T II 752c17, and fragment 501V3 in Waldschmidt 1950: 75.</span></span></span> According to the Madhyama-āgama parallel to the Mahāgosiṅga-sutta, all of the other monks addressed Sāriputta with “venerable sir”, to which he replied by using the address “friend”, so that the Madhyama-āgama account presents Mahākassapa as the most senior of all eminent disciples.</p>
+<p>Yet, it appears as if Sāriputta and Mahāmoggallāna would have ordained earlier than Mahākassapa.<span class="note" id="mn32n47"><span class="details"><span class="p">[n.47] Cf., e.g., T 1425 at T XXII 412c26.</span></span></span> That is, had this mode of address already been in use before the Buddha’s injunction, it should be the reverse of what is found in the Madhyama-āgama version. The role of being the eldest monk would only seem to suit Mahākassapa at the time of the so-called first council, when several of the monks mentioned in the present discourse had apparently passed away and Mahākassapa could indeed have become the most senior monk.<span class="note" id="mn32n48"><span class="details"><span class="p">[n.48] Vin II 286,17 reports that Mahākassapa addressed the assembled monks as āvuso saṅgho and was addressed by them as bhante.</span></span></span> Thus, the use of this mode of address in the Madhyama-āgama version appears to be the outcome of a later change of wording.<span class="note" id="mn32n49"><span class="details"><span class="p">[n.49] According to Minh Chau 1964/1991: 21, the present passage in <a href="../../parallels/ma184.html">MĀ 184</a> reflects the attitude of the Sarvāstivāda tradition, which “accepts Mahākassapa as the foremost and highest patriarch ... while the Theravāda tradition ... considers Sāriputta as the foremost and highest Ācariya”.</span></span></span></p>
+<p>The Mahāgosiṅga-sutta next reports that Mahāmoggallāna spoke in praise of the ability of two monks to reply to each other on questions related to the Dharma, literally “talk about Abhidharma”, without faltering.<span class="note" id="mn32n50"><span class="details"><span class="p">[n.50] <a href="../../mn/mn32.html">MN 32</a> at MN I 214,24 speaks of abhidhammakathā. The corresponding statement (although attributed to a different disciple) in <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727b24 similarly refers to “Abhidharma”, 阿毘曇. Anderson 1999/2001: 157 suggests that abhidhammakathā stands for “a question-and-answer exchange, a form of debate among equals which has the capacity to clarify one’s understanding and teaching of dhamma”. Bodhi in Ñāṇamoli 1995/2005: 1226 note 362 points out that even “though the word cannot refer here to the Piṭaka of that name – obviously the product of a phase of Buddhist thought later than the Nikāyas – it may well indicate a systematic and analytical approach to the doctrine that served as the original nucleus of the Abhidhamma Piṭaka”. Muck 1980: 19 understands abhidhamma as representing the “essence of the teaching”, in the sense of “basic essential truths”. Von Hinüber 1996/1997: 64 explains that “the word abhidhamma occurs in earlier parts of the canon, but without any technical connotation, simply meaning ‘things relating to the teaching’”; cf. also Geiger 1920: 118, Gethin 2005: 10020, Horner 1941, Sujāto 2009: 228-230, van Zeyst 1959, and Watanabe 1983/1996: 18-36. Hirakawa 1980: 173 (cf. also Sung 1999: 174) notes that in the Mahāsāṅghika tradition the entire “nine-fold canon of the word of the Buddha ... is referred to as abhidharma”, cf. Roth 1970: 248,17: abhidharmo nāma nava-vidhaḥ sūtrāntaḥ and T 1425 at T XXII 536b21: 阿毘曇者九部修多羅, with T 1425 at T XXII 281c18 explaining that the expression “nine types of discourse” stands for the nine aṅgas. Watanabe 1983/1996: 27 draws attention to the qualification “profound” or “deep”, 甚深, used in <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727b24 to qualify 阿毘曇, a qualification which he takes to indicate that the present context intends “talk on dhammas (they may be specific doctrines) in the form of question and answers”, in order to reveal “the intrinsic value or the profound theory” of these dharmas. As 29,1 takes up the reference to abhidhammakathā in <a href="../../mn/mn32.html">MN 32</a> as an argument in support of the authenticity of the Abhidhammapiṭaka as original Buddha-word.</span></span></span> Judging from the way other discourses portray Mahāmoggallāna, this type of ability would not be one of his typical traits. According to the list of eminent disciples found in the Aṅguttara-nikāya and in its parallel in the Ekottarika-āgama, Mahāmoggallāna was rather outstanding for his exercise of supernormal powers.<span class="note" id="mn32n51"><span class="details"><span class="p">[n.51] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 23,17: iddhimanta, <a href="../../parallels/ea4.2.html">EĀ 4.2</a> at T II 557b6: 神足; cf. also the Divyāvadāna in Cowell 1886: 395,9 or Vaidya 1999: 252,28, according to which he was ṛddhimatām agro nirdiṣṭo bhagavatā. Horner 1941: 309 comments: “Moggallāna is chiefly famed for his psychic powers, and there is little reason to suppose him to have had gifts of an abhidhamma nature or we should have heard more about them”; cf. also Gifford 2003 on the importance of psychic powers for the role Mahāmoggallāna assumes in the Theravāda tradition. Abhidharmic abilities are, however, associated with him in the Sarvāstivāda tradition. As already noted by Hirakawa 1993/1998: 132, the Abhidharmakośavyākhyā attributes one of the Sarvāstivāda Abhidharma treatises, the Prajñaptiśāstra, to Mahāmoggallāna, cf. Wogihara 1971b: 11,28.</span></span></span> This ability appears to have been considered such a characteristic trait of this great disciple that the Catuṣpariṣat-sūtra and the Mahāvastu report that the Buddha already predicted this disciple’s pre-eminence in supernormal powers at the time of their first meeting, when Mahāmoggallāna approached the Buddha to request the going forth.<span class="note" id="mn32n52"><span class="details"><span class="p">[n.52] Fragment S 360 (32)R6 in Waldschmidt 1952: 24 and Basak 1968/2004: 38,17 or Senart 1897: 63,18.</span></span></span> Hence it comes as no surprise that in the three Chinese parallels and in the Sanskrit fragment parallel Mahāmoggallāna extols such supernormal powers instead, describing the ability to magically multiply oneself, to fly through the air, to pass through solid earth, etc. (see above table 4.3).<span class="note" id="mn32n53"><span class="details"><span class="p">[n.53] <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727c16, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a18, T 154.16 at T III 81b29, and SHT V 1346 V2-6. Extracts from the present discussion already appeared in Anālayo 2005b: 9 and id. 2007i: 27.</span></span></span></p>
+<p>That to associate Mahāmoggallāna with such supernormal powers would be a more fitting version of his pronouncement on this occasion can also be seen in a discourse in the Saṃyutta-nikāya, which similarly takes the characteristic qualities of several eminent disciples as its theme. This discourse agrees with the Mahāgosiṅga-sutta on associating Ānanda with extensive learning, Anuruddha with the exercise of the divine eye, and Kassapa with the ascetic practices.<span class="note" id="mn32n54"><span class="details"><span class="p">[n.54] <a href="../../sn/sn14.15.html">SN 14:15</a> at SN II 155,9, after depicting how each of the eminent disciples practises walking meditation surrounded by a group of disciples, explains that those of similar inclination tend to associate with each other. <a href="../../sn/sn14.15.html">SN 14:15</a> at SN II 156,18 then describes that the monks associating with Ānanda were all of much learning, while the monks that associated with Anuruddha were, according to SN II 156,6, endowed with the divine eye, those who associated with Mahākassapa were, according to SN II 156,2, practitioners of the ascetic practices, and the monks who were associating with Mahāmoggallāna were, according to <a href="../../sn/sn14.15.html">SN 14:15</a> at SN II 155,31, all of great [supernormal] power, mahiddhika.</span></span></span> Unlike the Mahāgosiṅga-sutta, however, this Saṃyutta-nikāya discourse associates Mahāmoggallāna with the exercise of supernormal powers, thereby agreeing in this respect with the Chinese and Sanskrit parallels to the Mahāgosiṅga-sutta.</p>
+<p>Regarding the statement in the Mahāgosiṅga-sutta that extols the ability to answer questions about deeper aspects of the Dharma without faltering, the Madhyama-āgama version attributes a similar statement to Mahākaccāna (see above table 4.3).<span class="note" id="mn32n55"><span class="details"><span class="p">[n.55] <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727b24. T 154.16 does not record Mahākaccāna being questioned by Sāriputta. Once, however, all disciples gather in the presence of the Buddha, T 154.16 at T III 82a12 associates Mahākaccāna and several other disciples (such as Upāli, Subhūti, Rāhula, etc.) with short statements, which in the case of Mahākaccāna is concerned with his vision of the four truths, 四諦 (notably not using the qualification “noble”, cf. also below p. 803).</span></span></span> According to the list of eminent disciples found in the Aṅguttara-nikāya, Mahākaccāna was outstanding for his skill in explaining short sayings in detail, while the listing of outstanding disciples in the Ekottarika-āgama extols his ability in analysis and teaching.<span class="note" id="mn32n56"><span class="details"><span class="p">[n.56] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 23,25: saṅkhittena bhāsitassa vitthārena atthaṃ vibhajantānaṃ, <a href="../../parallels/ea4.2.html">EĀ 4.2</a> at T II 557b14: 善分別義, 敷演道教, translated by Huyen-Vi 1986: 133 as: “capable d’analyser de façon très subtile le sens profond du Dharma et de l’expliquer par la suite”.</span></span></span></p>
+<p>The most frequent role assumed by Mahākaccāna in the Pāli discourses is as an elucidator of brief sayings, a role in which he figures more as a teacher than as a participant in a discussion. However, at least in one instance Mahākaccāna does feature as a participant in a discussion with other monks.<span class="note" id="mn32n57"><span class="details"><span class="p">[n.57] <a href="../../an/an6.28.html">AN 6:28</a> at AN III 321,20.</span></span></span> To speak in praise of two monks engaged in a talk on the Dharma would also fit Puṇṇa Mantāniputta, who according to the Aṅguttara-nikāya’s list of eminent disciples was outstanding as one who delivers talks on the Dharma,<span class="note" id="mn32n58"><span class="details"><span class="p">[n.58] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 23,24: dhammakathikānaṃ (cf. also <a href="../../sn/sn14.15.html">SN 14:15</a> at SN II 156,10), an expression that brings to mind the abhidhammakathā mentioned in <a href="../../mn/mn32.html">MN 32</a> at MN I 214,24.</span></span></span> or else Mahākoṭṭhita, who was apparently a frequent participant in Dharma discussions with other monks.</p>
+<p>Although to reply to questions about the Dharma would fit Mahākoṭṭhita even better than Mahākaccāna, the same statement does fit both of them much better than Mahāmoggallāna. Perhaps, during the process of transmission of the Pāli discourse, the presence of Mahākaccāna was lost, as a consequence of which what was originally his reply ended up in the mouth of Mahāmoggallāna.<span class="note" id="mn32n59"><span class="details"><span class="p">[n.59] Cf. also Anesaki 1901: 899, Minh Chau 1964/1991: 76, and Prasad 1998: 417.</span></span></span></p>
+<p>According to all versions, Mahāmoggallāna in turn questioned Sāriputta, who spoke in praise of a monk who has mastery over his own mind, being able to attain whatever he wishes at any time of the day, comparable to the ability to choose any garment from a full wardrobe.<span class="note" id="mn32n60"><span class="details"><span class="p">[n.60] <a href="../../mn/mn32.html">MN 32</a> at MN I 214,36, <a href="../../parallels/ma184.html">MĀ 184</a> at T I 727c29, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a28, and T 154.16 at T III 81c14. The description of mastery over the mind (cittaṃ vasaṃ vatteti, no ca cittassa vasena vattati) receives a more detailed explanation in <a href="../../an/an7.38.html">AN 7:38</a> at AN IV 34,1; a reference to such mastery of the mind can also be found in the Śikṣāsamuccaya in Bendall 1902/1970: 122,1.</span></span></span></p>
+<p>The monks then approached the Buddha, who approved each monk’s declaration, followed by offering his own description of a monk able to enhance the beauty of the moonlit Gosiṅga Wood. This was a monk who sits down cross-legged with the determination not to change posture until the destruction of the influxes has been attained.<span class="note" id="mn32n61"><span class="details"><span class="p">[n.61] <a href="../../mn/mn32.html">MN 32</a> at MN I 219,31, <a href="../../parallels/ma184.html">MĀ 184</a> at T I 729b21, <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711c20, and T 154.16 at T III 82b8, which at T III 82b7 specifies that the practice undertaken at this point is to contemplate the whole world as impermanent, 觀於世一切無常.</span></span></span> Other discourses indicate that this type of strong determination had been a characteristic trait of the Buddha.<span class="note" id="mn32n62"><span class="details"><span class="p">[n.62] <a href="../../parallels/ma204.html">MĀ 204</a> at T I 777a12 (for a translation cf. Bareau 1963: 72), reports that on the eve of his awakening the Buddha formed the same determination; cf. also <a href="../../parallels/ma157.html">MĀ 157</a> at T I 679c11 and T 212 at T IV 644c14. The Buddha’s unwavering commitment to keep striving, even if his body should dry up, is also recorded in <a href="../../an/an2.5.html">AN 2:1:5</a> at AN I 50,9, in Sn 3:2 at Sn 434, in the Lalitavistara in Lefmann 1902: 262,3 or Vaidya 1958b: 192,1, in the Mahāvastu in Basak 1965: 332,13 or in Senart 1890: 239,3, in the Saṅghabhedavastu in Gnoli 1977: 113,23, and in Bu ston’s “History of Buddhism” in Obermiller 1932/1986: 35. A discourse quotation in Abhidh-k 2:44 in Pradhan 1967: 71,12 parallels the description of the determination to remain seated until the influxes are destroyed (not necessarily specific to the present instance) found in <a href="../../mn/mn32.html">MN 32</a> at MN I 219,31, with counterparts in T 1558 at T XXIX 25b12, T 1559 at T XXIX 183c15, and D (4094) mngon pa, ju 68b1 or Q (5595) tu 76b3.</span></span></span></p>
+<p>A minor difference in relation to this passage is that while according to the Majjhima-nikāya discourse and the individual translation the Buddha spoke only of the determination to attain the destruction of the influxes, according to the Ekottarika-āgama account he included the successful carrying through of this determination in his description of what qualifies a monk for being able to enhance the beauty of the moonlit Gosiṅga Wood.<span class="note" id="mn32n63"><span class="details"><span class="p">[n.63] <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711c21. <a href="../../parallels/ma184.html">MĀ 184</a> at T I 729b22 could be indicating the same, since after referring to the monk’s determination not to change posture, it reports that the monk did indeed not change posture (cf. the similar pattern in the Mahāvadāna-sūtra fragment S 360 folio 137R4-5 in Fukita 2003: 18 or in Waldschmidt 1953: 27, which also first records the bodhisattva Vipassī’s determination to refrain from changing posture, followed by reporting that he did indeed not change posture, thereby implicitly indicating that he stood up from this sitting as a fully awakened Buddha).</span></span></span> Due to this minor difference, the Buddha’s reply not only describes one of his outstanding personal qualities, but also highlights the supremacy of the destruction of the influxes over all other achievements, thereby rounding off the different achievements extolled by his disciples.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

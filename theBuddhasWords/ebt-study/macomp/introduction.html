@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>Introduction — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">Introduction</h2>
+<div id="nextprev"><a id="previous-sutta" href="./foreword.html#content"></a><a id="next-sutta" href="./mn26comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+<div class="comp-body">
+<p>The <i>Madhyama-</i>ā<i>gama</i> was, according to the information that has come down to us, translated into Chinese during the period 397–398 C.E. under the leadership of the Kashmirian monk Gautama Saṅghadeva.<span class="note" id="introductionn1"><span class="details"><span class="p">[n.1] T I 809b26 reports that Saṅghadeva's translation was based on an original read out to him by the Kashmirian Saṅgharakṣa, the scribe was Dàocí (道慈), who was assisted by Lĭbăo (李寶) and Kànghuà (康化). Having studied this translation for several years, I am under the impression that, in spite of several translation errors, in general terms Gautama Saṅghadeva and his team have to a remarkable degree remained faithful to the original. Thus, for example, they do not seem to have introduced variations when rendering stereotyped expressions in the Indic original in order to accommodate the preferences of the Chinese reader, something quite common with other Ā<i>gama </i>translators. Zürcher 1991: 288 describes this penchant of Chinese translators as follows: "there is a strong tendency to avoid the monotonous effect of ... verbatim repetition ... by introducing a certain amount of diversification and irregularity", as a result of which "in the same translated scripture we often find various alternative forms and longer or shorter versions of the same cliché". Regarding the <i>Madhyama</i>ā<i>gama</i>, Chung 2011: 16 note 19 comments that its discourses "seem to reflect an Indic original passed down in good condition".</span></span></span> According to what appears to be a general consensus among most scholars so far, the <i>Madhyama-</i>ā<i>gama</i> collection would have been transmitted by reciters belonging to the Sarvāstivāda tradition.<span class="note" id="introductionn2"><span class="details"><span class="p">[n.2] Cf. the discussion below page 516.</span></span></span></p>
+<p>This <i>Madhyama-</i>ā<i>gama</i> collection contains 222 discourses, assigned to 18 chapters, while the <i>Majjhima-nik</i>ā<i>ya</i> contains 152 discourses in 15 chapters. Regarding the chapter division in the two collections, 4 chapters in the <i>Madhyama-</i>ā<i>gama</i> and the <i>Maj</i><i>jhima-nik</i>ā<i>ya </i>share the same headings and also have several discourses in common.<span class="note" id="introductionn3"><span class="details"><span class="p">[n.3] Cf. below page 441f and Anālayo 2009k: 828.</span></span></span> Of the discourses in the <i>Majjhima-nik</i>ā<i>ya</i>, 95 have counterparts in the <i>Madhyama-</i>ā<i>gama</i>, which, as a single <i>Majjhima-nik</i>ā<i>ya </i>discourse has two <i>Madhyama-</i>ā<i>gama</i> parallels,<span class="note" id="introductionn4"><span class="details"><span class="p">[n.4] MĀ 107 and MĀ 108 are both parallels to MN 17.</span></span></span> count up to 96 discourses shared by the two collections.<span class="note" id="introductionn5"><span class="details"><span class="p">[n.5] Cf. Anālayo 2011a: 9 note 69.</span></span></span> Most of the remaining <i>Madhyama-</i>ā<i>gama</i> discourses have parallels in other Pāli <i>Nik</i>ā<i>ya</i>s, although a few discourses are unknown to the Pāli canon.<span class="note" id="introductionn6"><span class="details"><span class="p">[n.6] A survey of <i>Madhyama-</i>ā<i>gama</i> discourse that do not have a Pāli parallel can be found in Minh Chau 1991: 348–355; for a study of indications given in two such discourses regarding <i>jh</i>ā<i>na </i>practice cf. Anālayo 2012b.</span></span></span> The distribution of parallels over the two collections differs to such an extent that the allocation of discourses within each collection clearly is the outcome of a process specific to the respective reciter traditions.<span class="note" id="introductionn7"><span class="details"><span class="p">[n.7] Cf. table 2 in Anālayo 2007a: 36.</span></span></span></p>
+<p>The impact of the prolonged period of oral transmission shows itself not only in differences in the distribution of discourses, but also in relation to the content of the discourses found in the <i>Madh</i><i>yama-</i>ā<i>gama </i> and the <i>Majjhima-nik</i>ā<i>ya</i>. Detecting errors that would have occurred at some point during the transmission of the discourses through a comparative study is thus a recurrent theme in the collected papers assembled in the present monograph. Here my emphasis is mainly on the rectification of errors in the much better known Pāli version of a discourse. Obviously, the same potential applies to an even greater degree to using Pāli discourses as a means to correct errors in their Chinese parallels, which were affected not only by problems in transmission, but also by translation errors. Readers of the Chinese Ā<i>gama</i>s, however, appear to be well aware of this potential,<span class="note" id="introductionn8"><span class="details"><span class="p">[n.8] Cf., e.g., the extensive footnoting based on the Pāli parallels found in the 佛光 Fóguāng edition (publ. 1983) of the Ā<i>gama</i>s.</span></span></span> whereas such potential seems to be less known among those who study the Pāli discourses. To draw attention to this potential is therefore a central aim of the papers collected here.</p>
+<h3>Contents</h3>
+<p>The studies in the following chapters are revised versions of articles published previously. Each study is based on partial or complete translations of the <i>Madhyama-</i>ā<i>gama </i>discourse in question – one exception being the parallel to the <i>C</i>ūḷ<i>avedalla-sutta</i>, where I instead translate the Tibetan parallel – followed by an examination of some aspects that I felt to be of further interest.<span class="note" id="introductionn9"><span class="details"><span class="p">[n.9] A discourse not included in the present selection is my translation of the <i>Madhyama-</i>ā<i>gama </i>parallel to the <i>Satipa</i>ṭṭ<i>h</i>ā<i>na-sutta </i>(MN 10), which will be published in Anālayo 2013b.</span></span></span> In relation to the first discourse taken up for study, the <i>Madhyama</i>ā<i>gama</i> parallel to the <i>Ariyapariyesan</i>ā<i>-sutta </i>(MN 26), I investigate the role of Brahmā in early Buddhism and in particular the episode according to which Brahmā Sahampati invites the Buddha to teach. The next discourse taken up is the Tibetan parallel to the <i>C</i>ūḷ<i>avedalla-sutta </i>(MN 44), where my study explores the portrayal in the parallel versions of the <i>bhikkhun</i>ī Dhammadinnā as an eloquent teacher. The <i>V</i>ī<i>ma</i>ṃ<i>saka-sutta</i> (MN 47) and its <i>Madh</i><i>yama-</i>ā<i>gama </i>parallel, taken up next, demonstrate the importance given to investigation in early Buddhism, where the Buddha is on record for encouraging a thorough scrutiny of his own claim to being fully awakened by a prospective disciple.</p>
+<p>The <i>Madhyama-</i>ā<i>gama </i>parallels to the <i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta </i> (MN 77), the <i>Sama</i>ṇ<i>ama</i>ṇḍ<i>ik</i>ā<i>-sutta </i>(MN 78) and the <i>Vekhanas</i><i>sa-sutta </i>(MN 80) illustrate how a comparative study can rectify what appear to be errors of transmission on the side of the Pāli version; in the case of the <i>Sama</i>ṇ<i>ama</i>ṇḍ<i>ik</i>ā<i>-sutta </i>(MN 78) I also survey the notion of a <i>sama</i>ṇ<i>a </i>in the early Buddhist discourses.</p>
+<p>The <i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta </i>(MN 81) and its parallel pertain to the genre of canonical <i>j</i>ā<i>taka</i>s, reflecting the interest that tradition developed in past life accounts of the Buddha. The <i>B</i>ā<i>hitika-sutta </i> (MN 88) and its parallel exemplify the influence of the reciters on formulations employed in each of the two discourses, in this particular case apparently due to the discomfort caused by the discourse's portrayal of the Buddha's ethical integrity being scrutinized by a contemporary king.</p>
+<p>The relationship between meditative tranquillity and insight is a central theme in my exploration of the Ā<i>neñjasapp</i>ā<i>ya-sutta </i> (MN 106) and its parallels. The <i>Chabbisodhana-sutta </i>(MN 112) provides yet another example for the potential of comparative studies, as even though the discourse's title refers to six types of purities, the actual discourse lists only five. The missing sixth purity can then be found in its <i>Madhyama-</i>ā<i>gama </i>parallel. In the case of the <i>Bahudh</i>ā<i>tuka-sutta </i>(MN 115), my comparative study takes up the dictum that a woman cannot be a Buddha, etc., for closer examination.</p>
+<p>The <i>Mah</i>ā<i>catt</i>ā<i>r</i>ī<i>saka-sutta </i>(MN 117), when compared to its parallels, affords us a glimpse of the beginnings of Abhidharma thought. With the<i> C</i>ū<i>lasuññata-sutta </i>(MN 121), taken up together with the first part of the<i> Mah</i>ā<i>suññata-sutta </i>(MN 122), I study a gradual meditative approach to the realization of emptiness. In the case of the <i>Bakkula-sutta </i>(MN 124), the arahant ideal is a central theme of my examination.</p>
+<p>The <i>Dantabh</i>ū<i>mi-sutta </i>(MN 125) and its parallel provide yet another example of how the presentation in a Pāli discourse can be improved by consulting its Ā<i>gama </i>parallel. The <i>Mah</i>ā<i>kacc</i>ā<i>na</i><i>bhaddekaratta-sutta </i>(MN 133) and its parallels then testify to the influence of notions held by the reciters on the present shape of the discourse.</p>
+<p>The final two discourses taken up have parallels in the <i>A</i>ṅ<i>gut</i><i>tara-nik</i>ā<i>ya</i>. In the case of the <i>Gotam</i>ī<i>-sutta </i>(AN 8.51), based on a comparative study I develop a new perspective on the canonical account of the foundation of the order of nuns. With the <i>Karaja</i><i>k</i>ā<i>ya-sutta </i>(AN 10.208), I examine the relationship between karma and liberation.</p>
+<p>In an appendix to the present collection I critically examine the conclusions by Chung (2011) and Fukita regarding the question of the school affiliation of the <i>Madhyama-</i>ā<i>gama</i>, a suggestion made concerning the appropriate way of translating the concluding phrase of Ā<i>gama </i>discourses by Bingenheimer (2011), and some points raised by Minh Chau (1991) in his comparative study of the <i>Madhyama-</i>ā<i>gama </i>and the <i>Majjhima-nik</i>ā<i>ya.</i></p>
+<hr class="chapter-divider">
+<h3>Conventions</h3>
+<p>Since a considerable part of my target audience would be familiar with the Pāli canon only, in what follows I employ Pāli terminology, except for anglicised terms like "Dharma" or "Nirvāṇa", without thereby intending to take a position on the original language of the <i>Madhyama-</i>ā<i>gama </i>discourses or on Pāli language being in principle preferable. I am of course aware of the fact that in academic circles Sanskrit is the preferred language, since it best represents the pan-Buddhist literary traditions. But I hope that my colleagues will bear with me for what I believe to be a decision that will greatly facilitate access to my studies by those who are only familiar with Pāli terms.<span class="note" id="introductionn10"><span class="details"><span class="p">[n.10] Gómez 1995: 187 points out that there is a tendency for "scholars [to be] dedicated to a professional discourse of recondite jargon and <i>érudition pure</i>, with no sense of an audience outside the limited circle of the professional", followed by noting several "forgotten communities of readers that we often neglect". While the use of Sanskrit as such is certainly not a question of being dedicated to recondite jargon, it seems to me that having a sense for the probable audience of my writings makes it advisable to avoid the unfamiliar Sanskrit in order to make my writings easily accessible to a readership that to a great part can be expected to have so far had exposure mainly to Pāli terminology.</span></span></span> For the same reason, I have arranged my studies in the sequence in which the respective discourses are found in the Pāli canon. The original order of the <i>Madhyama-</i>ā<i>gama </i>discourses translated and studied in the present monograph can be seen in table 1 below.</p>
+<p>In the case of those <i>Madhyama-</i>ā<i>gama </i>discourses that have their parallel in the <i>Majjhima-nik</i>ā<i>ya</i>, I adopt the paragraph numbering used in the English translation of these discourses by Bodhi and Ñāṇamoli (1995/2005) in order to facilitate comparison, even though in several cases this results in irregular numbering. In the notes to the translations, I focus on selected differences in relation to the Pāli parallel.<span class="note" id="introductionn11"><span class="details"><span class="p">[n.11] A comparative study of the <i>Majjhima-nik</i>ā<i>ya </i>discourses covered in the present monograph in the light of their parallels has recently appeared in Anālayo 2011a. Unavoidably there is some degree of overlap between that publication and the present collection of papers, especially as nearly all of the articles were published earlier. Nevertheless, since in Anālayo 2011a I do not provide translations and given that the present set of studies often focuses on specific issues in detail, I hope to be excused for occasional reduplication.</span></span></span> Abbreviations in the translation are usually found as such in the original.</p>
+<p>In the translated text, I use square brackets [ ] to indicate supplementation and angle brackets 〈 〉 to mark emendation. In order to facilitate cross-referencing, I have also used square brackets to provide the pagination of the original Chinese text on which the translation is based, and to indicate the pagination and footnote or endnote numbering of the original paper, whenever these differ from the present annotation.<span class="note" id="introductionn12"><span class="details"><span class="p">[n.12] My placing of square bracket is usually after a comma or full stop, and in case a new page starts with a table after the first section of the ensuing text, to avoid disturbing the textual flow or detracting from the table.</span></span></span> When quoting various text editions, I have occasionally standardized or adjusted the punctuation.</p>
+<hr class="chapter-divider">
+<h3>Translation Terminology</h3>
+<p>When translating the discourses of the <i>Madhyama-</i>ā<i>gama</i>, I have attempted to stay close to the terminology adopted by Bhikkhu Bodhi in his renderings of the Pāli equivalents, to facilitate comparison. In the case of 苦, equivalent to <i>dukkha</i>, however, I simply keep the Pāli term, which at times does stand for outright "pain", but on many an occasion refers to "unsatisfactoriness", where translations like "suffering" or "pain" fail to adequately convey the sense of the passage in question. The standard rendering of <i>bhagavant</i> in the <i>Madhyama-</i>ā<i>gama </i> is 世尊, literally "World Honoured One", where I follow Bhikkhu Bodhi's translation of the corresponding Pāli term and adopt the rendering "Blessed One".</p>
+<p>In the case of 念處, literally "mindfulness sphere", an expression that corresponds to <i>satipa</i>ṭṭ<i>h</i>ā<i>na</i>, I opt for "establishing of mindfulness".<span class="note" id="introductionn13"><span class="details"><span class="p">[n.13] On the inadequacy of the rendering "foundation of mindfulness" cf. Anālayo 2003c: 29f.</span></span></span> For 慈, equivalent to <i>mett</i>ā, I use the translation "benevolence"; with 漏, corresponding to ā<i>sava</i>, I employ the rendering "influx";<span class="note" id="introductionn14"><span class="details"><span class="p">[n.14] For a more detailed discussion of the significance of the term ā<i>sava</i> cf. Anālayo 2011c.</span></span></span> and for 覺, counterpart to <i>bodhi</i>, I use "awakening".<span class="note" id="introductionn15"><span class="details"><span class="p">[n.15] On the significance of the term <i>bodhi</i> cf. Anālayo 2011a: xxiii and on the use of the philologically less apt rendering "enlightenment" as an aspect of Buddhist modernism Cohen 2010: 101.</span></span></span></p>
+<p>MĀ no.:</p>
+<p>Pāli no.:</p>
+<table class="comparative-table">
+<caption>Table 1: Translated <i>Madhyama-</i>ā<i>gama </i>Discourses</caption>
+<tr><th>MĀ 15</th><th>AN 10.208</th><th><i>Karajak</i>ā<i>ya-sutta</i></th></tr>
+<tr><td>MĀ 34</td><td>MN 124</td><td><i>Bakkula-sutta</i></td></tr>
+<tr><td>MĀ 63</td><td>MN 81</td><td><i>Gha</i>ṭī<i>k</i>ā<i>ra-sutta</i></td></tr>
+<tr><td>MĀ 75</td><td>MN 106</td><td>Ā<i>neñjasapp</i>ā<i>ya-sutta</i></td></tr>
+<tr><td>MĀ 116</td><td>AN 8.51</td><td><i>Gotam</i>ī<i>-sutta</i></td></tr>
+<tr><td>MĀ 165</td><td>MN 133</td><td><i>Mah</i>ā<i>kacc</i>ā<i>nabhaddekaratta-sutta</i></td></tr>
+<tr><td>MĀ 179</td><td>MN 78</td><td><i>Sama</i>ṇ<i>ama</i>ṇḍ<i>ik</i>ā<i>-sutta</i></td></tr>
+<tr><td>MĀ 181</td><td>MN 115</td><td><i>Bahudh</i>ā<i>tuka-sutta</i></td></tr>
+<tr><td>MĀ 186</td><td>MN 47</td><td><i>V</i>ī<i>ma</i>ṃ<i>saka-sutta</i></td></tr>
+<tr><td>MĀ 187</td><td>MN 112</td><td><i>Chabbisodhana-sutta</i></td></tr>
+<tr><td>MĀ 189</td><td>MN 117</td><td><i>Mah</i>ā<i>catt</i>ā<i>r</i>ī<i>saka-sutta</i></td></tr>
+<tr><td>MĀ 190</td><td>MN 121</td><td><i>C</i>ū<i>lasuññata-sutta</i></td></tr>
+<tr><td>MĀ 198</td><td>MN 125</td><td><i>Dantabh</i>ū<i>mi-sutta</i></td></tr>
+<tr><td>MĀ 204</td><td>MN 26</td><td><i>Ariyapariyesan</i>ā<i>-sutta</i></td></tr>
+<tr><td>MĀ 207</td><td>MN 77</td><td><i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta</i></td></tr>
+<tr><td>MĀ 209</td><td>MN 80</td><td><i>Vekhanassa-sutta</i></td></tr>
+<tr><td>MĀ 214</td><td>MN 88</td><td><i>B</i>ā<i>hitika-sutta</i></td></tr>
+<tr><td>Titles of Original Publications:</td><td></td><td></td></tr>
+<tr><td>The Ā<i>neñjasapp</i></td><td>ā<i>ya-sutta</i> and its Parallels on Imperturbability</td><td></td></tr>
+</table>
+<p>Pāli title:</p>
+<p>and on the Contribution of Insight to the Development of Tranquillity; cf. below page 195. The Arahant Ideal in Early Buddhism – The Case of Bakkula; cf.</p>
+<p>below page 365. The <i>Bahudh</i>ā<i>tuka-sutta</i> and its Parallels on Women’s Inabilities;</p>
+<p>cf. below page 249. The Bodhisattva and Kassapa Buddha – A Study Based on the</p>
+<p><i>Madhyama-</i>ā<i>gama</i> Parallel to the <i>Gha</i>ṭ<i>ik</i>ā<i>ra-sutta</i>; cf. below</p>
+<p>page 155. Brahmā's Invitation, The <i>Ariyapariyesan</i>ā<i>-sutta</i> in the Light of its</p>
+<p><i>Madhyama-</i>ā<i>gama</i> Parallel; cf. below page 11. The Buddha's Truly Praiseworthy Qualities – According to the</p>
+<p><i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta</i> and its Chinese Parallel; cf. below page 81. The Chinese <i>Madhyama-</i>ā<i>gama</i> and the Pāli <i>Majjhima-nik</i>ā<i>ya</i> –</p>
+<p>In the Footsteps of Thich Minh Chau; cf. below page 515. The Chinese Version of the <i>Dantabh</i>ū<i>mi Sutta</i>; cf. below page</p>
+<p>395. <i>Chos sbyin gyi mdo</i>, Bhikṣuṇī Dharmadinnā Proves Her Wisdom;</p>
+<p>cf. below page 39. A Gradual Entry into Emptiness, Depicted in the Early Buddhist</p>
+<p>Discourses; cf. below 325. Karma and Liberation <i>– </i>The <i>Karajak</i>ā<i>ya-sutta</i> (AN 10.208) in the</p>
+<p>Light of its Parallels; cf. below page 489. The <i>Mah</i>ā<i>catt</i>ā<i>r</i>ī<i>saka-sutta</i> in the Light of its Parallels – Tracing</p>
+<p>the Beginnings of Abhidharmic Thought; cf. below page 289. Mahāpajāpatī's Going Forth in the <i>Madhyama-</i>ā<i>gama</i>; cf. below</p>
+<p>page 449. Qualities of a True Recluse (<i>Sama</i>ṇ<i>a</i>) – According to the <i>Sama</i>-</p>
+<p>ṇ<i>ama</i>ṇḍ<i>ik</i>ā<i>-sutta</i> and its <i>Madhyama</i>-ā<i>gama</i> Parallel; cf. below page 105. The Scope of Free Inquiry – According to the <i>V</i>ī<i>ma</i>ṃ<i>saka-sutta</i></p>
+<p>and its<i> Madhyama-</i>ā<i>gama</i> Parallel; cf. below page 67. The Sixfold Purity of an Arahant, According to the <i>Chabbisodha</i>-</p>
+<p><i>na-sutta</i> and its Parallel; cf. below page 223. The <i>Vekhanassa-sutta</i> and its <i>Madhyama-</i>ā<i>gama</i> Parallel – A</p>
+<p>Case Study in the Transmission of the Pāli Discourses; cf. below page 139. The Verses on an Auspicious Night, Explained by <i>Mah</i>ā<i>kacc</i>ā<i>na</i></p>
+<ul>
+<li>A Study and Translation of the Chinese Version; cf. below page 421. and its <i>Madhyama-</i>ā<i>gama </i>parallel; cf. below page 175.</li>
+</ul>
+<p>What the Buddha would not do, According to the <i>B</i>ā<i>hitika-sutta</i></p>
+<hr class="chapter-divider">
+<h3>Acknowledgement and Dedication</h3>
+<p>I am indebted to Bhikkhu Bodhi, Bhikkhu Brahmāli, Rod Bucknell, Jin-il Chung, Alice Collett, Jake Davis, Mitsuyo Demoto, Sean Fargo, Guo Gu, Peter Harvey, Christian Luczanits, William Magee, Jan Nattier, Giuliana Martini, Shi Kongmu, Ken Su, Bhikkhunī Tathālokā, Vincent Tournier and Monika Zin for comments and suggestions made in regard to one or more of the articles collected in this volume, and to the editors of the respective journals and books for their kind permission to reprint the material.</p>
+<p>I would like to dedicate this book to the memory of the Vietnamese scholar monk Thich Minh Chau (1918–2012). His groundbreaking comparative study of the <i>Majjhima-nik</i>ā<i>ya</i> and the <i>Madh</i><i>yama-</i>ā<i>gama</i> was what originally inspired me to learn Chinese and engage in comparative studies of the Ā<i>gama</i>s myself.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a>: Introduction</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

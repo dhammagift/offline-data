@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 25.6 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 25.6</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">25.6</span> <span class="mirror-right">（六）结</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn5.html">MN 5</a> / <a href="../parallels/ma87.html">MĀ 87</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Venerable Śāriputra and the Venerable Maudgalyāyana were staying in the Kalandaka Bamboo Grove near Rajagaha.</p></td><td lang="lzh" class="agama-chi"><p>一时，尊者舍利弗、尊者目揵连在罗阅城迦兰陀竹园所。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra addressed the bhikkhus, saying: &quot;In the world, there are these four kinds of people. What are the four? The first person is one who is bound by fetters, but does not know it. There is one person who is bound by fetters, but knows it as it really is. There is one person who is not bound by fetters, but does not know it. There is one person who is not bound by fetters, and knows it as it really is.</p></td><td lang="lzh" class="agama-chi"><p>尔时，舍利弗告诸比丘：「世间有此四人。云何为四？所谓第一人者与结相随，然内有结而不知。或有一人与结相随，然内有结如实知之。或有一人不与结相随，然内无结如实而不知。或有一人不与结相随，然内无结如实知之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Venerable friends, you should know that the first person is bound by fetters, but does not know it. Among those bound by fetters, this person is the most inferior. The second person is bound by fetters, but knows it as it really is. This person is the most excellent. The third person is not bound by fetters, but does not know it. Among those not bound by fetters, this person is the most inferior. The fourth person is not bound by fetters, and knows it as it really is. This person is the most excellent among those not bound by fetters. Venerable friends, you should know that there are these four kinds of people in the world.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「诸贤当知，第一人者与结相随，然内有结而不知，此二有结人中，此人最为下贱。所谓彼第二人与结相随，内有结如实知之，此人极为妙。彼第三人不与结相随，内无结如实而不知，此人于二无结人中，此人最为下贱。所谓彼第四人不与结相随，内无结如实知之，此人于无结人中最为第一。诸贤当知，世间有此四人。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Maudgalyayana asked Śāriputra: &quot;What are the causes and conditions that make the person bound by fetters, who does not know it, inferior, and the person bound by fetters, who knows it as it really is, excellent? What are the causes and conditions that make the two people not bound by fetters, who do not know it, inferior, and the person not bound by fetters, who knows it as it really is, excellent?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者目连问舍利弗曰：「有何因缘，有结相随人，一人下贱，一人最妙？复有何因缘，此二无结人相随，一人下贱，一人最妙？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied: &quot;The person bound by fetters, who does not know it, thinks: &#x27;I should cultivate the thought of purity.&#x27; When cultivating the thought of purity, lustful thoughts arise. With the arising of lustful thoughts, there are then thoughts of greed, anger, and delusion, and one dies. At that time, not seeking means to extinguish these lustful thoughts, there are then thoughts of anger and delusion, and one dies. Maudgalyayana should know, it is like a person going to the market to buy a copper vessel, which is covered with dust and dirt, extremely impure. That person does not clean it from time to time, does not wash it from time to time, and that copper vessel becomes even more encrusted with dirt, extremely impure. This first person is also like this. Bound by defilements, with fetters within, not knowing it as it really is, he then thinks: &#x27;I should cultivate the thought of purity.&#x27; Having cultivated the thought of purity, lustful thoughts arise. With the arising of lustful thoughts, there are then thoughts of greed, anger, and delusion, and one dies. Not seeking means to extinguish these lustful thoughts,</p></td><td lang="lzh" class="agama-chi"><p>舍利弗对曰：「彼与结相随，内有结如实不知。彼人作是念：『我当作净想。』彼便思惟作净想。当作净想时，便起欲心，以起欲心已，便有贪欲、瞋恚、痴心而命终。尔时，不求方便，灭此欲心，便有瞋恚、愚痴之心而命终。目连当知，犹如有人诣市买得铜器，尘土垢坌，极为不净。彼人不随时摩抆，不随时净洗，然彼铜器倍更生垢，极为不净。此第一人亦复如是，与垢相随，内有结如实不知，彼便作是念：『我当思惟净想。』已思惟净想，便生欲心，已生欲心，则有贪欲、瞋恚、愚痴而命终，不求方便，灭此欲心。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;The second person, bound by fetters, knows it as it really is. He thinks: &#x27;I should now abandon the thought of purity and cultivate the thought of impurity.&#x27; Having abandoned the thought of purity, he cultivates the thought of impurity. Cultivating the thought of impurity, lustful thoughts do not arise. Seeking means, not obtaining, he obtains; not acquiring, he acquires; not attaining, he attains. There are then no thoughts of greed, anger, and delusion, and also no fetters at the time of death. It is like a person who buys a copper vessel from the market, covered with dust and dirt. That person cleans and washes it from time to time. This person is also like this. Bound by defilements, with fetters within, knowing it as it really is, he then abandons the thought of purity and cultivates the thought of impurity. Cultivating the thought of impurity, he further seeks means. Not obtaining, he obtains; not acquiring, he acquires; not attaining, he attains. There are then no lustful thoughts, no thoughts of anger and delusion, and he dies without fetters. This is called, Maudgalyayana, the two people bound by fetters, one inferior and one excellent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「彼第二人与结相随，内有结如实知！『我今可舍净想，思惟不净想。』彼已舍净想，思惟不净想，彼以思惟不净想，便不生欲心，求方便，不得者得、不获者获、不及者及，便无贪欲、瞋恚、愚痴，亦复无结而命终。犹如有人从市中买得铜器，尘垢所染，彼人随时修治，洗荡使净。此人亦复如是。与结相随，内有结如实知之。彼人便舍净想，思惟不净想，彼思惟不净想，更求方便，不得者得、不获者获、不作证者教令得证，已无欲心、无瞋恚、愚痴而命终。是谓，目连！有此二人与结相随，一人下贱，一人最妙。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Maudgalyayana said: &quot;For what other reasons do these two people not become bound by fetters, one inferior and one excellent?&quot;</p></td><td lang="lzh" class="agama-chi"><p>目连曰：「复以何因缘，使此二人不与结相随，一人下贱，一人最妙？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The third person is not bound by fetters. He does not know it as it really is. He thinks: &#x27;I should not seek means to cultivate. Not obtaining, I obtain; not acquiring, I acquire; not attaining, I attain.&#x27; He has lustful thoughts, thoughts of anger and delusion, and dies bound by them. It is like a person who goes to the market to buy a copper vessel, covered with dust and dirt. He does not clean and wash it from time to time, nor does he repair it from time to time. This third person is also like this. He is not bound by fetters. He does not know it as it really is. He does not think: &#x27;I should seek means to eliminate these fetters.&#x27; He has thoughts of greed, anger, and delusion, and dies bound by them.</p></td><td lang="lzh" class="agama-chi"><p>舍利弗曰：「彼第三人不与结相随，内无结如实而不知。彼便作是思惟，我不求方便思惟，不得者得、不获者获、不作证者而作证。彼人有欲心、瞋恚、愚痴所缚而命终。犹如有人诣市买铜器，尘垢所染，然不随时洗治，亦不随时修治；此第三人亦复如是，不与结相随，内无结如实不知，亦不作是学，我当求方便，灭此诸结；而有贪欲、瞋恚、愚痴之心而命终。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The fourth person is not bound by fetters. He knows it as it really is. He thinks: &#x27;I should seek means to cultivate. Not obtaining, I obtain; not acquiring, I acquire; not attaining, I attain.&#x27; He dies without these fetters. It is like a person who goes to the market and buys a fine copper vessel, very clean. He cleans and washes it from time to time, and repairs it from time to time. At that time, the vessel becomes even cleaner and better. This fourth person is also like this. He is not bound by fetters. He knows it as it really is. He thinks: &#x27;I should seek means to cultivate. Not obtaining, I obtain; not acquiring, I acquire; not attaining, I attain.&#x27; He dies without the fetters of greed, anger, and delusion.</p></td><td lang="lzh" class="agama-chi"><p>「彼第四人不与结俱，内无结如实知之。彼便作是思惟，求方便，不得者得、不获者获、不作证者令作证。彼以无此结而命终，犹如有人诣市，得好铜器极净洁，复加随时修治，磨洗其器。尔时，彼器倍复净好，此第四人亦复如是，不与结相随，内无结如实知之，彼便作是思惟，求方便，不获者获、不得者得、不作证者而作证，彼便无结使贪欲、瞋恚、愚痴，身坏命终。是谓，目连！有此二人不与结相随，内无结如实知之，一人为上，一人下贱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Maudgalyāyana asked Śāriputra, &quot;Why are they called fetters? &quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者目连问舍利弗曰：「何以故名曰结？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Maudgalyāyana should know that evil and unwholesome dharmas give rise to various wrong views, which are called fetters. There may be someone who thinks like this: &#x27;The Tathāgata asks me about the meaning, and then teaches the Dharma to the bhikṣus. He does not ask the meaning of other bhikṣus, and the Tathāgata teaches the Dharma to the bhikṣus.&#x27; There may be such a time when the World-Honored One speaks the Dharma to other bhikṣus, but not to that bhikṣu. The Tathāgata does not speak the Dharma to me and the bhikṣus.&#x27; There may be unwholesomeness, or there may be greed and desire. Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>舍利弗曰：「目连当知，恶不善法，起诸邪见，故名为结。或复有人而作是念：『如来问我义已，然后与诸比丘说法，不问余比丘义，而如来与比丘说法。』或复有是时，世尊语余比丘而说法，然不语彼比丘如来说法。『如来不语我与比丘说法。』或有不善，或有贪欲。既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;I always enter the village to beg for alms before other bhikṣus, not allowing other bhikṣus to enter the village to beg for alms before me.&#x27; There may be a time when other bhikṣus enter the village to beg for alms before him, not allowing that bhikṣu to enter the village to beg for alms before other bhikṣus. &#x27;I do not enter the village to beg for alms before other bhikṣus.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我恒在诸比丘前而入村乞食，不使余比丘在比丘前而入村乞食。』或有是时，余比丘在前而入村乞食，不使彼比丘在比丘前而入村乞食。『我不在比丘前而入村乞食。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Maudgalyāyana should know that there may be a time when a bhikṣu thinks like this: &#x27;I should sit before other bhikṣus, receive water first, and obtain food first. I do not allow other bhikṣus to sit before other bhikṣus, receive water first, and obtain food first.&#x27; There may be a time when other bhikṣus sit before other bhikṣus, receive water first, and obtain food first. They do not allow that bhikṣu to sit before other bhikṣus, receive water first, and obtain food first. &#x27;I do not sit before other bhikṣus, receive water first, and obtain food first.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「目连当知，或复有是时，比丘作是念：『我当在比丘前坐，先前受水，先前得食，不使余比丘先比丘坐，先前受水，先前得食。』或复有时，余比丘在比丘前坐，先前受水，先前得食，不使彼比丘在比丘前坐，先前受水，先前得食。『我不在比丘前坐，先前受水，先前得食。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;After I have eaten, I will expound the Dharma for the layperson. I do not allow other bhikṣus to expound the Dharma for the layperson after they have eaten.&#x27; There may be a time when other bhikṣus expound the Dharma for the layperson after they have eaten. They do not allow that bhikṣu to expound the Dharma for the layperson after he has eaten. &#x27;I do not expound the Dharma for the layperson after I have eaten.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我食已与檀越说法，不使余比丘食讫与檀越说法。』或复有时，余比丘食竟与檀越说法，不使彼比丘食竟与檀越说法。『不使我食竟与檀越说法。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;I should go to the garden and expound the Dharma for the elders and brāhmaṇas. I do not allow other bhikṣus to go to the garden and expound the Dharma for the elders and brāhmaṇas.&#x27; There may be a time when other bhikṣus go to the garden and expound the Dharma for the elders and brāhmaṇas. They do not allow that bhikṣu to go to the garden and expound the Dharma for the elders and brāhmaṇas. &#x27;I do not go to the garden and expound the Dharma for the elders and brāhmaṇas.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我当至园中，与长者婆罗门说法，不使余比丘至园中，与长者婆罗门说法。』或复有时，余比丘至园中，与长者婆罗门说法，不使余比丘至园中，与长者婆罗门说法。『不使我至园中，与长者婆罗门说法。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;I have now broken the precepts. I do not want the other bhikṣus to know that I have broken the precepts.&#x27; There may be a time when that bhikṣu has broken the precepts. The other bhikṣus know that that bhikṣu has broken the precepts. Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我今犯戒，使诸比丘不知我犯戒。』或复有时，彼比丘犯戒，诸比丘知此比丘犯戒，既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;I have now broken the precepts. I do not want the other bhikṣus to tell me that I have broken the precepts.&#x27; There may be a time when that bhikṣu has broken the precepts. The other bhikṣus tell him that he has broken the precepts. Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我今犯戒，不使余比丘语我言犯戒。』或复有时，彼比丘犯戒，余比丘语言犯戒。既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when that bhikṣu thinks like this: &#x27;I have now broken the precepts. I want the pure bhikṣus to tell me, and I do not want the impure bhikṣus to tell me.&#x27; There may be a time when an impure bhikṣu tells that bhikṣu: &#x27;That bhikṣu has broken the precepts.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，彼比丘作是念：『我今犯戒，使清净比丘告我，不使不清净比丘告我。』或复有时，不清净比丘告彼比丘言：『彼比丘犯戒。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>There may be a time when a bhikṣu thinks like this: &#x27;I have now broken the precepts. If there are bhikṣus who tell me, they should do so in private, not in the midst of the assembly.&#x27; There may be a time when that bhikṣu has broken the precepts. They tell him in the midst of the assembly, not in private. The bhikṣu again thinks like this: &#x27;These bhikṣus tell me in the midst of the assembly, not in private.&#x27; Since there is unwholesomeness, and there is greed and desire, these two are both unwholesome.</p></td><td lang="lzh" class="agama-chi"><p>「或复有时，比丘作是念：『我今犯戒。若有比丘告我者，当在屏处，不在大众之中。』或复有时，彼比丘犯戒，在大众中告语，不在屏处。比丘复作是念：『此诸比丘在大众中告我，不在屏处。』既有不善，又有贪欲，此二俱不善。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mañjuśrī should know that the basis of these dharmas, the arising of these practices, is called afflictions. Mañjuśrī should also know that the four groups of followers who violate these practices all hear and know about them. Although they say they practice araṇya, dwelling in secluded places, even if they wear the five-piece robe and always beg for food without discriminating between the poor and the rich, and their conduct is not abrupt, whether walking, standing, sitting, lying down, speaking, or silent, those bhikṣus think like this: &#x27;May these bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās, these practitioners of the Brahma-way, always come to make offerings to me.&#x27; Although those bhikṣus have this thought, the four groups of followers do not make offerings according to the time. The reason is that those bhikṣus have not yet eliminated unwholesome and unskillful practices, and they are seen, heard, remembered, and known. It is like a person who has a copper vessel that is extremely pure, but then puts something impure into the copper vessel and covers it with another vessel, and carries it to a country. When people see it, they ask that person, &#x27;What is it that you are carrying? We want to see it.&#x27; At that time, the people, who were already suffering from hunger and scarcity, think, &#x27;It must be good food,&#x27; and then open the lid of the vessel. But it is impure, and they all see it. This bhikṣu is also like this. Although he practices araṇya, begs for food according to the time, wears the five-piece robe, and focuses his body and mind on the present, although he has this thought, &#x27;I want the practitioners of the Brahma-way to come and make offerings according to the time,&#x27; still the practitioners of the Brahma-way do not make offerings according to the time. The reason is that those bhikṣus have not yet exhausted the afflictions of unwholesome and unskillful dharmas.</p></td><td lang="lzh" class="agama-chi"><p>「目连当知，此诸法之本，兴起此行者，名为结使。目连！复知诸有四部之众，犯此行者，皆共闻知。虽言我行阿练若，在闲静之处，正使著五纳衣，恒行乞食，不择贫富，行不卒暴，往来住止，坐起动静，言语默然，彼比丘作是念：『使比丘、比丘尼、优婆塞、优婆夷斯诸梵行者，恒来供养我。』彼比丘虽有是念，然四部众亦不随时供养。所以然者，以彼比丘恶不善行未除故，见闻念知。犹如有人，一铜器极为清净，复以不净盛著铜器中，复以余器盖其上，持行诣国界。众人见已，问彼人曰：『君所持者是何物乎？我等欲得观见。』是时，众人素既饥俭，谓呼：『是好饮食。』寻发器盖，然是不净，皆共得见。此比丘亦复如是。虽有阿练若行，随时乞食，著五纳衣，正身正意，系念在前，彼虽生此念：『欲使诸梵行者，随时来供养。』然复诸梵行人，不随时供养。所以然者，以彼比丘恶不善法结使未尽故。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mañjuśrī should know that bhikṣus who do not have these unwholesome and unskillful dharmas, whose afflictions have been exhausted, are seen, heard, remembered, and known. Although they practice in the vicinity of cities, they are still upholders of the Dharma. Whether accepting invitations or receiving offerings from elders, those bhikṣus have no thoughts of greed and desire. At that time, the four groups of followers and practitioners of the Brahma-way all come to make offerings. The reason is that those bhikṣus practice purity, and they are all seen, heard, remembered, and known. It is like a person who has a copper vessel with delicious food, the aroma of which is extremely fragrant, and they cover it with something and carry it to a country. When people see it, they ask that person, &#x27;What is this? We want to see it.&#x27; At that time, they open it and see the food, and all come to take and eat it. This is also like this. Although bhikṣus are seen, heard, remembered, and known, they practice in the vicinity of cities and accept offerings from elders, but they do not think like this: &#x27;May the practitioners of the Brahma-way come to make offerings to me.&#x27; Still, the practitioners of the Brahma-way all come to make offerings to them. The reason is that those bhikṣus have eliminated unwholesome and unskillful practices.</p></td><td lang="lzh" class="agama-chi"><p>「目连当知，诸有比丘无此恶不善法，结使已尽，见闻念知，虽在城傍行，犹是持法之人。或受人请，或受长者供养，彼比丘无此贪欲之想。是时，四部之众及诸梵行者，皆来供养。所以然者，以彼比丘行清净故，皆见闻念知。犹如有人有好铜器，盛好饮食，气味极香，复以物盖其上，持行诣国界，众人见已，问彼人曰：『此是何物，我等欲得观见。』时寻发看，见是饮食，皆共取食。此亦如是，比丘见闻念知，虽在城傍行，受长者供养，彼不作是念：『使诸梵行者来供养我。』然复诸梵行者，皆来供养之。所以然者，以彼比丘恶不善行以除尽故。是故，目连！以此诸行故，名为结使。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Mahāmaudgalyāyana praised, &#x27;Excellent! Excellent! Śāriputra! The reason is that I once traveled to the Kalandaka Bamboo Grove in Rājagṛha. At mealtime, I put on my robe, took my bowl, entered Rājagṛha to beg for food, and arrived at the carpenter&#x27;s house. I stood silently outside the door. At that time, the carpenter was chopping wood with an axe in his hand. At that time, there was another elder carpenter who came to the carpenter&#x27;s house for some minor matter. At that time, the carpenter was repairing wooden boards. At that time, the elder carpenter had this thought: &#x27;Does this young carpenter chop wood according to my intention? I should observe it now.&#x27; At that time, the carpenter took and chopped exactly where the elder carpenter disliked. At that time, the elder carpenter was very joyful and thought like this: &#x27;Excellent! Excellent! You chop wood exactly according to my intention.&#x27; This is also like this. Bhikṣus whose minds are not gentle and harmonious, who abandon the practice of śramaṇas, who are deceitful in mind, who do not follow the Dharma of śramaṇas, whose nature and conduct are coarse and rude, who do not know shame and conscience, who endure humiliation with a strong face, who engage in lowly conduct, who lack vigor and courage, who are often forgetful and do not remember what they have done, whose minds are unstable and confused in their actions, whose faculties are unstable, now Venerable Śāriputra observes their nature and conduct and repairs them.</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者大目揵连叹曰：「善哉！善哉！舍利弗！所以然者，我昔游此罗阅城迦兰陀竹园所，到时著衣持钵，入罗阅城乞食，至彼车师舍，在门外默然而立。是时，彼工师手执斧而斫材。是时，更有长老工师有少事缘，来至此工师舍。是时，彼工师修治材板。是时，彼老工师而生此念：『此小工师斫材如我意不？我今当观之。』是时，彼工师所嫌之处，彼工师尽取斫之。是时，彼老工师甚怀欢喜，而作是念：『善哉！善哉！卿所斫材尽如我意。』此亦如是，诸有比丘心不柔和，舍沙门行，心怀奸伪，不从沙门之法，性行麁踈，不知惭愧，强颜耐辱，为卑贱行，无有勇猛。或喜多忘失，不忆所行，心意不定，所作错乱，诸根不定，然今尊者舍利弗观察性行已，而修治之。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Those sons of noble families who, with firm faith, have left home to study the path, who are very respectful of the precepts, do not abandon the virtuous and holy Dharma of śramaṇas, are without deceit, do not engage in sudden violence, have gentle and harmonious minds, always speak with a smile, do not hurt others&#x27; feelings, always have a single-pointed mind, are without right and wrong, and whose faculties are not confused. Having heard the words of Venerable Śāriputra, they immediately accept and do not forget them. It is like a man or woman who is extremely handsome and beautiful, who bathes well and puts on new clothes, and uses fragrant ointments on the body. If someone else gives them a lotus flower, they receive it and place it on their head, rejoicing and leaping with joy, unable to contain themselves. This is also like this. If there are sons of noble families who, with firm faith, have left home to study the path, are respectful of the precepts, do not lose the Dharma of śramaṇas, are without deceit, do not engage in sudden violence, have gentle and harmonious minds, always speak with a smile, do not hurt others&#x27; feelings, always have a single-pointed mind, are without right and wrong, and whose faculties are not confused. Having heard these words from Venerable Śāriputra, they are very joyful and cannot contain themselves, and accept his teachings. These sons of noble families teach this Dharma.</p></td><td lang="lzh" class="agama-chi"><p>「诸有族姓子，以信坚固，出家学道，甚恭敬戒，不舍沙门贤圣之法，无有幻伪，不行卒暴，心意柔和，言常含笑，不伤人意，心恒一定，无有是非，诸根不乱。彼闻尊者舍利弗语已，便自承受，亦不忘失。犹如若男、若女，端正无双，极自沐浴，著好新衣，用香涂身。若复有人，复加以优钵华，持用奉上，彼人得已，即著头上，欢喜踊跃，不能自胜。此亦如是，若有族姓子，以信坚固，出家学道，恭敬于戒，不失沙门之法，无有幻伪，不行卒暴，心意柔和，言常含笑，不伤人意，心恒一定，无有是非，诸根不乱。彼从尊者舍利弗闻是语已，甚怀欢喜，不能自胜，而受其教。如此诸族姓子说此法教。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the wise ones each heard what was said and joyfully accepted it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸贤各各闻其所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

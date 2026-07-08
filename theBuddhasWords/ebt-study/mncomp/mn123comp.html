@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 123 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 123: Acchariyabbhutadhamma-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn122comp.html#content"></a><a id="next-sutta" href="./mn124comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn123.html">MN 123</a> / <a href="../../parallels/ma32.html">MĀ 32</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Acchariyabbhutadhamma-sutta, the “discourse on [the Buddha’s] wonderful and marvellous qualities”, presents a description given by Ānanda of a range of various extraordinary qualities and events related to the birth of ‘the bodhisattva’, who was to become the Buddha Gotama. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn123n83"><span class="details"><span class="p">[n.83] The parallel is <a href="../../parallels/ma32.html">MĀ 32</a> at T I 469c-471c and agrees with <a href="../../mn/mn123.html">MN 123</a> on location and title (未曾有法經). An examination of <a href="../../mn/mn123.html">MN 123</a> and <a href="../../parallels/ma32.html">MĀ 32</a>, together with the Mahāpadāna-sutta and its parallels, can be found in Bareau 1974a: 203-209, a comparison of <a href="../../mn/mn123.html">MN 123</a> with <a href="../../parallels/ma32.html">MĀ 32</a> in Minh Chau 1964/1991: 66, 159-165, and 205, a study of the Sanskrit counterparts to <a href="../../mn/mn123.html">MN 123</a> in Windisch 1908: 107-143. For a quotation in the Tarkajvāla that lists three of the adbhutadharmas in verse form cf. Skilling 1997b: 610-611; on the significance of the presentation in <a href="../../mn/mn123.html">MN 123</a> cf. also Anālayo 2010f: 28-46.</span></span></span> The Acchariyabbhutadhamma-sutta begins by relating that a group of monks had been conversing about the Buddha’s detailed knowledge of Buddhas of the past. On being informed about the topic the monks had been discussing, the Buddha encourages Ānanda to continue by expounding other marvellous qualities of the Buddha. Ānanda thereon delivers an exposition of the wonderful qualities of his teacher, beginning each exposition by proclaiming that he had heard about the respective quality from the Buddha himself.<span class="note" id="mn123n84"><span class="details"><span class="p">[n.84] <a href="../../mn/mn123.html">MN 123</a> at MN III 119,18: “I heard this, venerable sir, from the Blessed One’s own mouth, I received it from his own mouth”, sammukhā me taṃ, bhante, bhagavato sutaṃ, sammukhā paṭiggahītaṃ (Be-MN III 161,1, Ce-MN III 288,1, and Se-MN III 247,18: paṭiggahitaṃ). As the Buddha presumably had related these qualities on a previous occasion to Ānanda and now requests him to recount them in front of the monks, <a href="../../mn/mn123.html">MN 123</a> could even give the impression that the Buddha was keen to hear his own praises. This is not the case in <a href="../../parallels/ma32.html">MĀ 32</a>, according to which Ānanda extolled the Buddha on his own accord.</span></span></span></p>
+<p>According to the Madhyama-āgama discourse, however, after arising from seclusion and approaching the Buddha, Ānanda had on his own begun to proclaim the Buddha’s marvellous qualities. The Madhyama-āgama version also does not specify the Buddha as the source from which Ānanda had received his information, as in its presentation Ānanda only remarks that he had heard about the Buddha’s marvellous qualities.<span class="note" id="mn123n85"><span class="details"><span class="p">[n.85] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 469c24: “I heard”, 我聞.</span></span></span></p>
+<p>The list of wonderful and marvellous qualities in the two versions differs considerably and several qualities listed in one version are not found in the other (see table 13.2).<span class="note" id="mn123n86"><span class="details"><span class="p">[n.86] Minh Chau 1964/1991: 165 comments: “the accounts of the Buddha’s ... marvellous qualities are not the same in both versions, each seems to derive from an independent source”.</span></span></span></p>
+<p>The Acchariyabbhutadhamma-sutta begins its account of wonderful and marvellous qualities with the bodhisattva’s sojourn in the Tusita heaven, describing that he was mindful and clearly comprehending when arising in the Tusita heaven, during his stay, and when passing away from the Tusita heaven to enter his mother’s womb.<span class="note" id="mn123n87"><span class="details"><span class="p">[n.87] <a href="../../mn/mn123.html">MN 123</a> at MN III 119,19+25+35.</span></span></span> The Madhyama-āgama version only mentions the bodhisattva’s clear awareness when passing away from the Tusita heaven and entering his mother’s womb.<span class="note" id="mn123n88"><span class="details"><span class="p">[n.88] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470a14 speaks of the presence of his “knowledge”, 知. A presentation of the same quality in the Mahāsaṃvartanīkathā, Okano 1998: 113, speaks of his possession of mindfulness, smṛti. Minh Chau 1964/1991: 165 notes that <a href="../../parallels/ma32.html">MĀ 32</a> does not use the expression bodhisattva, but instead refers to the Buddha even before his awakening with the expression the “Blessed One”, 世尊; for other comparable instances cf. Anālayo 2010f: 16 note 3.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 13.2: Marvellous Qualities of the Bodhisattva in <a href="../../mn/mn123.html">MN 123</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn123.html">MN 123</a></th><th><a href="../../parallels/ma32.html">MĀ 32</a></th></tr>
+<tr><td>mindful birth in Tusita (1)</td><td>initial vow as monk under Kassapa Buddha</td></tr>
+<tr><td>mindful stay in Tusita (2)</td><td>birth in Tusita (→ 1)</td></tr>
+<tr><td>whole life span in Tusita (3)</td><td>excels other devas in Tusita</td></tr>
+<tr><td>mindfully passes away from Tusita (4)</td><td>knowingly enters womb, great light, earth-</td></tr>
+<tr><td>great light and earthquake on conception (5)</td><td>quake (→ 4, 5)</td></tr>
+<tr><td>4 deities guard foetus (6)</td><td>stays knowingly on right side of womb</td></tr>
+<tr><td>mother is virtuous (7)</td><td>remains with stretched body in womb</td></tr>
+<tr><td>mother is free from sensuality (8)</td><td>is unsullied while in womb</td></tr>
+<tr><td>mother is endowed with 5 sense pleasures (9)</td><td>great light and earthquake at birth (→ 19)</td></tr>
+<tr><td>mother sees child in womb, like beryl (10)</td><td>is born with body stretched</td></tr>
+<tr><td>mother dies 7 days after birth (11)</td><td>is born without being sullied (→ 16)</td></tr>
+<tr><td>pregnancy lasts 10 months (12)</td><td>newborn received by devas (→ 14, 15)</td></tr>
+<tr><td>mother gives birth standing (13)</td><td>fearlessly takes 7 steps (→ 18)</td></tr>
+<tr><td>newborn first received by devas (14)</td><td>in front of mother a pond manifests</td></tr>
+<tr><td>without touching ground received by devas (15)</td><td>2 streams of water appear (→ 17)</td></tr>
+<tr><td>newborn is unsullied, like gem (16)</td><td>divine music and shower of flowers</td></tr>
+<tr><td>2 streams of water appear (17)</td><td>1st jhāna experience in youth</td></tr>
+<tr><td>takes 7 steps and makes proclamation (18)</td><td>shadow of tree does not move</td></tr>
+<tr><td>great light and earthquake at birth (19)</td><td>monkey offers honey</td></tr>
+<tr><td>aware of feelings & perceptions (20)</td><td>rain cloud stops until mat is dry</td></tr>
+<tr><td></td><td>shadow of tree does not move</td></tr>
+<tr><td></td><td>meditates without hearing storm</td></tr>
+<tr><td></td><td>during flood earth emerges for walking</td></tr>
+<tr><td></td><td>Māra followed him for 6 years in vain</td></tr>
+<tr><td></td><td>7 years mindfulness of body</td></tr>
+<tr><td></td><td>aware of feelings and perceptions (→ 20)</td></tr>
+<tr><td></td><td>(≠ 2-3, 6-13)</td></tr>
+</table>
+<p>The presence of mindfulness on the occasion of departing from the Tusita heaven recurs in the description of the qualities of former Buddhas in the Mahāpadāna-sutta and its Dīrgha-āgama parallel.<span class="note" id="mn123n89"><span class="details"><span class="p">[n.89] <a href="../../dn/dn14.html">DN 14</a> at DN II 12,4: sato sampajāno. While <a href="../../parallels/da1.html">DĀ 1</a> at T I 3c16 records the bodhisattva’s unmuddled mindfulness on entry into the womb, 正念不亂, T 2 at T I 152b26 does not mention mindfulness or clear comprehension. According to Jiṇacariya 3 in Jacobi 1879/1966: 34,7 (translated Jacobi 1884/ 1996: 219), Mahāvīra was aware of being about to descend into his mother’s womb and of having descended, only at the actual moment of descending he was not aware, caissāmi ’tti jāṇai, cayamāṇe na jāṇai, cue ’mi ’tti jāṇai.</span></span></span></p>
+<p>Instead of describing the bodhisattva’s stay in the Tusita heaven from the perspective of his possession of mindfulness and clear comprehension, the Madhyama-āgama version highlights that, during this stay in the Tusita heaven, the bodhisattva excelled all the other previously born devas in regard to such qualities as length of life, beauty, and glory.<span class="note" id="mn123n90"><span class="details"><span class="p">[n.90] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470a2. The bodhisattva’s excellence in this respect is also recorded in <a href="../../dn/dn30.html">DN 30</a> at DN III 146,3, which adds his excellence in happiness, power, divine sights, divine sounds, divine smells, divine tastes, and divine touches.</span></span></span></p>
+<p>The Madhyama-āgama account precedes its depiction of the bodhisattva’s sojourn in the Tusita heaven by proclaiming that another marvellous and wonderful quality of the Buddha, which comes as the first in its listing, was the bodhisattva’s initial vow to become a Buddha when he lived the holy life under Kassapa Buddha.<span class="note" id="mn123n91"><span class="details"><span class="p">[n.91] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 469c24: “the Blessed One at the time of Kassapa Buddha made his initial vow to [realize] Buddhahood [while] practising the holy life”, 世尊迦葉佛時, 始願佛道, 行梵行. For a more detailed examination of this passage and its implications cf. Anālayo 2010f: 84-92.</span></span></span> Notably the Ghaṭīkāra-sutta and its Madhyama-āgama parallel, whose topic is the lifetime of the bodhisattva under Kassapa Buddha, do not mention such a vow at all.<span class="note" id="mn123n92"><span class="details"><span class="p">[n.92] <a href="../../mn/mn81.html">MN 81</a> MN II 45-54 and <a href="../../parallels/ma63.html">MĀ 63</a> at T I 499a-503a; although the Mahāvastu does adopt this perspective and even reports that he received a corresponding prediction from Kassapa Buddha, cf. in more detail above p. 450. <a href="../../parallels/ma32.html">MĀ 32</a> at T I 469c27 presents the life of the bodhisattva under Kassapa Buddha as the last life before his stay in the Tusita heaven, as does the Saṅghabhedavastu in Gnoli 1977: 21,1, while according to Jā I 47,16 and Ps IV 169,7 the life that preceded his stay in the Tusita heaven was as Vessantara, described, e.g., in Jā 547 at Jā VI 479,1 (the Saṅghabhedavastu’s counterpart to this tale can be found in Gnoli 1978a: 119,10).</span></span></span></p>
+<p>According to the Acchariyabbhutadhamma-sutta and its Madhyama-āgama parallel, the bodhisattva’s entry into his mother’s womb was accompanied by the manifestation of a great light and an earthquake.<span class="note" id="mn123n93"><span class="details"><span class="p">[n.93] <a href="../../mn/mn123.html">MN 123</a> at MN III 120,8+15 and <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470a15. According to the Mahāvastu in Basak 1963a: 251,6 or in Senart 1882a: 206,16 and in Basak 1965: 14,9 or in Senart 1890: 10,9, the bodhisattva’s mindful and clearly comprehending descent into his mother’s womb was accompanied by six earthquakes, a number of earthquakes also recorded in the Lalitavistara in Hokazono 1994: 376,4 or in Lefmann 1902: 51,19 or in Vaidya 1958b: 39,10, whereas the Saṅghabhedavastu in Gnoli 1977: 41,7 only reports a single great earthquake accompanied by light. For a study of earthquakes in Buddhist literature cf. Ciurtin 2009. Reynolds 1985: 214 comments that “the Buddha’s birth is presented as a cosmic event in which his character as a mahāpurisa ... is evident to those who have the eyes to see”.</span></span></span> The presence of a great radiance on this occasion is also reported in a discourse in the Aṅguttara-nikāya that is concerned with four marvellous qualities of the Buddha, of which the other three are the manifestation of a great light when the bodhisattva left the womb, when he reached awakening, and when he started to teach.<span class="note" id="mn123n94"><span class="details"><span class="p">[n.94] <a href="../../an/an4.127.html">AN 4:127</a> at AN II 130,20. According to <a href="../../an/an1.6.html">AN 1:13:6</a> at AN I 22,28, with the manifestation of a Tathāgata, a great eye, a great clarity, and a great light manifest, mahato cakkhussa ... mahato ālokassa ... mahato obhāsassa pātubhāvo hoti. Judging from this reference to a “great eye”, the manifestations mentioned in this passage may not be meant literally, but may rather intend to symbolically depict the effect of the teaching activities of a Tathāgata. Could the descriptions of actual light that accompanied the bodhisattva’s entry into the womb or his birth, such as found in <a href="../../mn/mn123.html">MN 123</a> or in <a href="../../an/an4.127.html">AN 4:127</a>, have their origin in a literal interpretation of a similar passage? On the other hand, however, such notions appear to be part of a shared heritage, in fact the Jain Ṭhāṇaṅga 4.324 in Jambūvijaya 1985: 141,4 also lists four occasions for the manifestation of a great radiance, namely when [future] arahants take birth, when they go forth, when they attain realization, and when they attain final Nirvāṇa.</span></span></span> According to the Mahāpadāna-sutta and its Chinese and Sanskrit counterparts, the manifestation of a great light and an earthquake are the rule on the occasion when a bodhisattva’s descends into his mother’s womb.<span class="note" id="mn123n95"><span class="details"><span class="p">[n.95] <a href="../../dn/dn14.html">DN 14</a> at DN II 12,6, <a href="../../parallels/da1.html">DĀ 1</a> at T I 3c14, and the Sanskrit version in fragment 420dR6 in Fukita 2003: 53 (93.6) or in Waldschmidt 1953: 45. Gokhale 1994/2001e: 98 explains that “these events are explained as the result of dhammatā ... implying that they are not causally connected with the [respective] Buddha as such, but occur because it is the nature or order of things”.</span></span></span> In fact, most of the qualities of Gotama Buddha described in the remainder of the Acchariyabbhutadhamma-sutta are, according to the Mahāpadāna-sutta and its parallels, normative for Buddhas in general.<span class="note" id="mn123n96"><span class="details"><span class="p">[n.96] Bareau 1974a: 240, 245, and 254 suggests that several elements of the account of Gotama’s youth may at first have been developed as part of a fictional account of the former Buddha Vipassī. Subsequently this fictional account would have been understood to exemplify the rule for all Buddhas and would then have been applied to the case of Gotama as well.</span></span></span></p>
+<p>The Acchariyabbhutadhamma-sutta next takes up the outer conditions of the bodhisattva’s sojourn in his mother’s womb, describing that four devas protected him,<span class="note" id="mn123n97"><span class="details"><span class="p">[n.97] <a href="../../mn/mn123.html">MN 123</a> at MN III 120,22. The presence of four guardian deities is also recorded in the Lalitavistara in Hokazono 1994: 372,5 or in Lefmann 1902: 50,5 or in Vaidya 1958b: 38,3, in the Mahāvastu in Basak 1965: 15,5 or in Senart 1890: 10,19, and in the Saṅghabhedavastu in Gnoli 1977: 42,3. Ps IV 179,5 explains that these were the Four Great Kings, catunnaṃ mahārājānaṃ vasena vuttaṃ, to whom the Lalitavistara refers as the four “protectors of the four directions”, caturdiśāsu pālāḥ, and the Mahāvastu as the four “world protectors”, lokapālā. In the Saṅghabhedavastu the protectors are instead Śakra together with four devaputras.</span></span></span> and that his mother was virtuous, free from sensual thoughts and affliction, but at the same time enjoyed the five types of sense pleasure and was able to see the bodhisattva in her womb.<span class="note" id="mn123n98"><span class="details"><span class="p">[n.98] <a href="../../mn/mn123.html">MN 123</a> at MN III 120,30 and MN III 121,3+10+17+19. According to the Lalitavistara in Hokazono 1994: 352,1 or in Lefmann 1902: 41,18 or in Vaidya 1958b: 29,26, as well as according to the Mahāvastu in Basak 1965: 8,3 or in Senart 1890: 6,2, the virtuous conduct of the bodhisattva’s mother had already begun before the bodhisattva descended into her womb. <a href="../../mn/mn123.html">MN 123</a> at MN III 121,20 illustrates the ability of the mother to see the child in her womb with the image of a coloured thread strung through a beryl gem, an image found in the same context also in the Saṅghabhedavastu in Gnoli 1977: 42,16. The Lalitavistara in Hokazono 1994: 418,16 or in Lefmann 1902: 72,9 or in Vaidya 1958b: 53,20 compares her vision of the bodhisattva to looking at one’s own face in a clean mirror. According to the Mahāvastu in Basak 1965: 23,10 or in Senart 1890: 16,16, she saw him as if she were seeing a body of gold, a vision comparable to a beryl placed in a crystal casket. On the parallelism that these descriptions establish between the mother and a caitya cf. Drewes 2007: 107-110. Durt 2003: 44 notes that as part of “a larger programme of quasi-deification of the Buddha ... Māyā appears as a living tabernacle sheltering her son”. Rhys Davids 1910: 10 note 1 remarks that “the myth of the visible embryo recurs in medieval Christian art”.</span></span></span></p>
+<p>The Madhyama-āgama version does not mention these circumstances. Instead, it focuses on the bodhisattva’s condition inside the womb by describing that he rested in the womb on his right side, was able to stretch his body, and was not sullied by blood or any other bodily filth.<span class="note" id="mn123n99"><span class="details"><span class="p">[n.99] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470a27. That the bodhisattva was not sullied while staying in the womb is also recorded in the Saṅghabhedavastu in Gnoli 1977: 42,7. For a study of marvels related to the bodhisattva’s birth, in contrast to ancient Indian perceptions of the average conditions of being born, cf. Hara 1980.</span></span></span></p>
+<p>Another marvellous quality of the Buddha, listed in the Acchariyabbhutadhamma-sutta, is that the bodhisattva’s mother passed away seven days after giving birth and was reborn in the Tusita heaven.<span class="note" id="mn123n100"><span class="details"><span class="p">[n.100] <a href="../../mn/mn123.html">MN 123</a> at MN III 122,2: “seven days after the bodhisattva has been born, his mother passes away and arises in the Tusita heaven ... this too, venerable sir, I remember as a wonderful and marvellous quality of the Blessed One”, sattāhajāte ... bodhisatte bodhisattamātā kālaṃ karoti, tusitaṃ kāyaṃ uppajjatī ti ... idam p’ ahaṃ, bhante, bhagavato acchariyaṃ abbhutadhammaṃ dhāremi. References to the death of the mother seven days after giving birth can also be found in the Lalitavistara in Hokazono 1994: 470,5 or in Lefmann 1902: 98,3 or in Vaidya 1958b: 70,25, in the Mahāvastu in Basak 1965: 5,1 or in Senart 1890: 3,18 (in this instance the same is implicit in the indication that she would live only for seven days in addition to the time of pregnancy), in the Saṅghabhedavastu in Gnoli 1977: 51,18, and in several biographies of the Buddha, preserved in Chinese, cf., e.g., T 184 at T III 465a23, T 185 at T III 474b7, T 188 at T III 618b14, and T 189 at T III 623b9. Obeyesekere 1997: 475 suggests that “the death of Māyā seven days after the Buddha’s birth cannot be taken literally, or even to mean that ‘she died soon after’ ... rather, Māyā’s death is a structural requirement of the myth: the pure womb from which the Buddha was born could not thereafter be contaminated by childbirth or sexual pollution”. Regarding the name of the bodhisattva’s mother, which <a href="../../dn/dn14.html">DN 14</a> at DN II 52,10 gives as māyā devī, von Hinüber 1995b: 189 suggests that perhaps this “was not originally meant to be a personal name, but simply is the eastern form corresponding to mātādevī”.</span></span></span> The Madhyama-āgama version does not mention the mother’s death at all.</p>
+<p>In relation to this difference, it is noteworthy that the two parallel versions present the qualities they enumerate in a chronological order. Thus, the Acchariyabbhutadhamma-sutta begins with the bodhisattva’s arising in the the Tusita heaven, then mentions the qualities related to his sojourn in the Tusita heaven, followed by taking up his departure from the Tusita heaven and entry into the mother’s womb, after which it turns to the qualities related to his stay in the mother’s womb. In continuation of this pattern, qualities related to the mother’s pregnancy and her giving birth should come next. Instead, the Acchariyabbhutadhamma-sutta takes up the death of the bodhisattva’s mother, after which it continues by describing her pregnancy and giving birth.</p>
+<p>Thus, the reference to the death of the bodhisattva’s mother comes out of sequence, a circumstance that points to a later addition. In fact, as part of a list of wonderful and marvellous qualities of the Buddha, the premature death of his mother does not fit the context too well.</p>
+<p>The Udāna dedicates a whole discourse to the premature death of the bodhisattva’s mother. This discourse, which also has the Buddha and Ānanda as its protagonists, qualifies the mother’s premature death as something that is wonderful and marvellous as such.<span class="note" id="mn123n101"><span class="details"><span class="p">[n.101] Ud 5:2 at Ud 48,4.</span></span></span> That is, unlike the Acchariyabbhutadhamma-sutta, the Udāna discourse does not reckon her early death as a marvellous quality of the Buddha, but only as something marvellous in general. This way of presentation seems more natural than the inclusion of her death in a list of wonderful and marvellous qualities of the Buddha.</p>
+<p>In view of the out-of-sequence placing of the mother’s death in the Acchariyabbhutadhamma-sutta, it could be that, at some point during the transmission of the Pāli discourses, this passage from the Udāna came to be added to the account of the marvellous qualities of the Buddha in the Acchariyabbhutadhamma-sutta, an addition made without proper regard for the chronological sequence of the qualities in this discourse.</p>
+<p>After referring to the death of the bodhisattva’s mother, the Acchariyabbhutadhamma-sutta continues by noting the length of her pregnancy and by describing that she remained standing while giving birth,<span class="note" id="mn123n102"><span class="details"><span class="p">[n.102] <a href="../../mn/mn123.html">MN 123</a> at MN III 122,7+15. The length of her pregnancy is also recorded in the Lalitavistara in Hokazono 1994: 420,15 or in Lefmann 1902: 73,11 or in Vaidya 1958b: 54,7, as well as in the Mahāvastu in Basak 1965: 25,11 or in Senart 1890: 18,7. Franke 1914b: 337 note 1 and Printz 1925: 120 explain that the reference to ten months of pregnancy would refer to lunar months; cf. also Durt 2002: 46, who speaks of a ten month period of gestation “according to the classical Indian method of calculation”.</span></span></span> details not mentioned in its Madhyama-āgama counterpart. This unusual manner of giving birth recurs regularly in various Buddha biographies, often accompanied by the further specification that the bodhisattva issued from the right side of his mother.<span class="note" id="mn123n103"><span class="details"><span class="p">[n.103] This is recorded, e.g., in the Buddhacarita 1:9 in Johnston 1936/1995a: 1, in the Mahāvastu in Basak 1963a: 250,8 or in Senart 1882a: 206,4, in T 184 at T III 463c13, in T 185 at T III 473c1, in T 188 at T III 618a17, in T 189 at T III 625a24, in T 193 at T IV 58b21, and in Bu ston’s “History of Buddhism” in Obermiller 1932/1986: 11. For Ajaṇṭā cave paintings that represent the same event cf. Schlingloff 1988a: 4 and id. 2000a: 4-5 and 60-61; for sculptural representations in Gandhāran art cf., e.g., Dehejia 1997: 51 fig. 42, Foucher 1905: 301-321, Kurita 1988: 12 plates P1-V to VI and pp. 31-38 plates 31-53, Klimburg-Salter 1995: 274 and figure 157, Luczanits 2008a: 217 plate 147, Stoye 2008a: 186 plate 4, id. 2008b: 194 plate 3, Tanabe 2007: 18-20 figures I-6 to I-9.1, Zwalf 1996: 89-95 plates 145-152 and 154; for a representation in the art of Nāgārjunikoṇḍa cf., e.g., Rama 1995: 50-51 and plate 4 or Rao 1956: 84-85 plate 25, on the iconography of the Buddha’s nativity in general cf. also Foucher 1934/1991. That the Buddha issued from the side of his mother was also known to Hieronymus, cf. Dihle 1965: 38. <a href="../../parallels/ea48.3.html">EĀ 48.3</a> at T II 788b2 predicts that the future Buddha Maitreya will take birth in the same manner. Bollée 2005: 15 suggests that “the lateral birth idea ... perhaps ... originated in the custom of carrying children on the hip”. Dayal 1932/1970: 298 notes that “the idea of being born from the mother’s side is referred to in a hymn of the Ṛgveda (iv, 18.1)”. Printz 1925: 125 explains that, according to ancient Indian beliefs, when a foetus is on the right side of the mother’s womb it will be a boy, while a foetus on the left side shows that it will be a girl, which would explain why according to the traditional account the bodhisattva dwelled on the right side of his mother’s womb and issued from her right side (that he dwelled on the right side of his mother’s womb is explicitly mentioned as one of the marvellous qualities in <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470a27). The association of a male child with the right side occurs, e.g., in the Divyāvadāna, Cowell 1886: 2,7 or Vaidya 1999: 1,17: saced dārako bhavati dakṣiṇaṃ kukṣiṃ niśritya tiṣṭhati, saced dārikā bhavati vāmaṃ kukṣiṃ niśritya tiṣṭhati; cf. also Abhidh-k 3:15 in Pradhan 1967: 126,24, T 1558 at T XXIX 46c17 or T 1559 at T XXIX 203b27. Bucknell 1980: 40 explains that in ancient Indian religious thought the female is associated with the left side of the body, as well as with the moon, water, the out-breath, and vowels, while the male is associated with the right side of the body, with the sun, fire, the in-breath, and consonants.</span></span></span> The Mahāvastu of the Mahāsāṅghika-Lokottaravāda Vinaya reports the same and then takes up the question how he managed to come out without hurting her, a dilemma the Mahāvastu solves with the ingenious suggestion that a Tathāgata takes birth through a mind-made body.<span class="note" id="mn123n104"><span class="details"><span class="p">[n.104] The Mahāvastu in Basak 1963a: 266,14 or Senart 1882a: 218,15 and Basak 1965: 29,3 or Senart 1890: 20,16 explains that manomayena rūpeṇa prādurbhonti tathāgatā, a proposition which Jones 1949/1973: 174 note 1 classifies as a typical “tenet of the Lokottaravādins”. Rahula 1978: 74 notes that, soon after giving this explanation, “the justification is forgotten in an attempt to reason the seven strides, which was necessary, according to the tradition (āgama), because the bodhisattva was tired of the ten months’ uterine confinement”, cf. Basak 1965: 29,10 or Senart 1890: 21,3.</span></span></span></p>
+<p>The Acchariyabbhutadhamma-sutta and its parallel agree that, on being born, the bodhisattva was received by gods.<span class="note" id="mn123n105"><span class="details"><span class="p">[n.105] <a href="../../mn/mn123.html">MN 123</a> at MN III 122,21 considers this as two qualities, as it distinguishes between the circumstance that the bodhisattva was first received by devas and the circumstance that, without touching the ground, he was received by four gods and presented to his mother. <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470b22 present this issue as a single quality and does not explicitly mention that he did not touch the ground. For an early depiction of this event in art cf. Schlingloff 1981a: 186-188 (with references to other representations).</span></span></span> The two versions describe that his body was not sullied by any dirt, but nevertheless two fountains of cold and warm water appeared miraculously to bathe him.<span class="note" id="mn123n106"><span class="details"><span class="p">[n.106] <a href="../../mn/mn123.html">MN 123</a> at MN III 122,33 and MN III 123,11, with its counterparts in <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470b2 and T I 470c7, in the Lalitavistara in Hokazono 1994: 440,16 and 442,8 or in Lefmann 1902: 83,10+22 or in Vaidya 1958b: 61,21 and 62,1, in the Mahāvastu in Basak 1965: 33,3 and 34,4 or in Senart 1890: 24,1+20 (the miraculous appearance of the two fountains of water comes up again in Basak 1968/2004: 228,8 or in Senart 1897: 380,13), and in the Saṅghabhedavastu in Gnoli 1977: 45,5+16. The Saṅghabhedavastu in Gnoli 1977: 40,6 expands on the theme of the purity of the mother’s womb, as it reports that, already before the bodhisattva descended into the womb, Śakra had cleaned up the mother’s womb to make it ready for receiving the bodhisattva (for a Jain counterpart to this motif cf. Alsdorf 1947: 125 and Roth 1983: 182). Klimkeit 2000: 222 explains that the emphasis in these passages is to contrast the purity of the bodhisattva with the defilement of worldliness symbolized by the mother’s womb. Robinson 1970/ 1982: 7 remarks that “the purpose of all the mythical elements in the nativity cycle is to show that the Bodhisattva was innately different from ordinary man”. Schlingloff 1962b: 86 explains that descriptions of the Buddha’s life were not meant as historical records, hence to treat them as such misunderstands their purpose (“die Lebensbeschreibungen wollten nicht historische Reminiszenzen an tatsächliche Ergeinisse ... überliefern; sie wollten auch nicht etwa durch erfundene Berichte Authentizität vortäuschen. Wenn wir derartige Absichten voraussetzen, unterstellen wir den Erzählern ein historisches Bewußtsein, daß jener Zeit völlig fremd war”); cf. also Klimkeit 1990: 35. Thus, e.g., the appearance of fountains of water to bathe the anyway unsullied bodhisattva has simply a symbolic function.</span></span></span> To this the Madhyama-āgama version adds the miraculous appearance of a lake so that the mother could also take a bath, as well as a rain of heavenly flowers showered on the newborn baby.<span class="note" id="mn123n107"><span class="details"><span class="p">[n.107] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470c3+11; cf. also the Saṅghabhedavastu in Gnoli 1977: 45,18. According to <a href="../../mn/mn123.html">MN 123</a> at MN III 122,14, the two fountains of water were for the use of the bodhisattva and of his mother, so that in its account there is no need for an additional source of water for the mother to clean herself.</span></span></span></p>
+<p>The two parallel discourses agree that a great radiance and an earthquake accompanied the bodhisattva’s birth, after which he took seven steps.<span class="note" id="mn123n108"><span class="details"><span class="p">[n.108] <a href="../../mn/mn123.html">MN 123</a> at MN III 123,19+30 and MN III 124,4, with its counterpart in <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470b6+29.</span></span></span> The Pāli commentary explains, in agreement with two Chinese biographies of the Buddha, that the seven steps taken by the bodhisattva right after his birth symbolize his later revelation of the seven factors of awakening (bojjhaṅga).<span class="note" id="mn123n109"><span class="details"><span class="p">[n.109] Ps IV 186,1: sattapadagamanaṃ sattabojjhaṅgaratanapaṭilābhassa pubbanimittaṃ, T 193 at T IV 59a8, and T 194 at T IV 122c3; cf. also the Mahāvastu in Basak 1968/2004: 69,4+5 or in Senart 1897: 112,12+ 13. Dayal 1932/1970: 299, commenting on the symbolic nature of these seven steps, notes that in “Hindu marriage ceremony, the bride and the bridegroom take seven steps together round the sacred fire”.</span></span></span></p>
+<p>According to the Majjhima-nikāya discourse, not only was the bodhisattva able to walk right after being born, he even spoke at this point, proclaiming that he was the highest being in the world and that this was his last birth.<span class="note" id="mn123n110"><span class="details"><span class="p">[n.110] <a href="../../mn/mn123.html">MN 123</a> at MN III 123,21: aggo ’ham asmi lokassa ... ayam antimā jāti, n’ atthi dāni punabbhavo. According to <a href="../../dn/dn3.html">DN 3</a> at DN I 93,6 and its parallel <a href="../../parallels/da20.html">DĀ 20</a> at T I 83a8, the ability to speak right after birth was not a prerogative of the bodhisattva, as the boy Kaṇha had also been able to speak right after his birth. Unlike the bodhisattva, however, instead of making a majestic proclamation he asked his mother to wash him, because he had such dark skin. For another instance where a baby is able to speak right on being born cf. Ud. 2:8 at Ud 17,27; for accounts of the future Buddha’s ability to speak as a newly born baby in former lives cf. Jā 546 at Jā VI 331,15 and Jā 547 at Jā VI 485,14. Derrett 1992: 54 notes occurrences of the motif of a newly-born baby able to walk and speak in ancient Greek mythology. Karetzky 1992: 16 comments that “because no child can immediately walk or talk, let alone make proclamations at birth, it is by these acts that the Buddha’s prodigious nature, even as an infant, is revealed”. On the significance of this event cf. also, e.g., Anālayo 2010f: 38-46, Eliade 1948, and Irwin 1981.</span></span></span> The Madhyama-āgama discourse does not record any proclamation made on this occasion. Other biographies of the Buddha preserved in Chinese, Sanskrit, and Tibetan concur with the Majjhimanikāya report that the newborn bodhisattva made a proclamation.<span class="note" id="mn123n111"><span class="details"><span class="p">[n.111] Gaffney 1996: 84 notes that in <a href="../../mn/mn123.html">MN 123</a> “the description of his [the Buddha’s] birth is full of what might almost be called doecetic tendencies”. Nakamura 1980/1999: 18 comments that “the verse ... proclaimed by the Buddha at his birth was composed very late”. Silk 2003: 864 comments that according to the proclamation of supremacy the bodhisattva “is virtually fully awakened (‘enlightened’) from the moment of his birth”, highlighting the resulting contrast where “the infant, upon his birth, knows everything; the young man he becomes knows nothing”.</span></span></span> While some only record his proclamation of being supreme,<span class="note" id="mn123n112"><span class="details"><span class="p">[n.112] T 184 at T III 463c14, T 185 at T III 473c2, and T 188 at T III 618a19.</span></span></span> others agree with the Acchariyabbhutadhamma-sutta that the bodhisattva also claimed that this was his last birth.<span class="note" id="mn123n113"><span class="details"><span class="p">[n.113] T 189 at T III 625a27, the Buddhacarita 1:15 in Johnston 1936/1995a: 2, the Lalitavistara in Hokazono 1994: 444,8 or in Lefmann 1902: 85,1 or in Vaidya 1958b: 62,18, the Mahāvastu in Basak 1965: 33,10 or in Senart 1890: 24,8, the Saṅghabhedavastu in Gnoli 1977: 45,13, and Bu ston’s “History of Buddhism” in Obermiller 1932/1986: 11.</span></span></span></p>
+<p>Numerous other discourses associate the proclamation to have reached the last birth with the Buddha’s awakening.<span class="note" id="mn123n114"><span class="details"><span class="p">[n.114] <a href="../../dn/dn29.html">DN 29</a> at DN III 134,12, <a href="../../mn/mn26.html">MN 26</a> at MN I 167,28 and at MN I 173,19, <a href="../../mn/mn128.html">MN 128</a> at MN III 162,25, <a href="../../sn/sn14.31.html">SN 14:31</a> at SN II 171,2, <a href="../../sn/sn14.32.html">SN 14:32</a> at SN II 172,12, <a href="../../sn/sn22.26.html">SN 22:26</a> at SN III 28,33, <a href="../../sn/sn22.27.html">SN 22:27</a> at SN III 29,29, <a href="../../sn/sn35.13.html">SN 35:13</a> at SN IV 8,2, <a href="../../sn/sn35.14.html">SN 35:14</a> at SN IV 8,26, <a href="../../sn/sn35.15.html">SN 35:15</a> at SN IV 9,30, <a href="../../sn/sn35.16.html">SN 35:16</a> at SN IV 10,21, <a href="../../sn/sn48.21.html">SN 48:21</a> at SN V 204,12, <a href="../../sn/sn48.28.html">SN 48:28</a> at SN V 206,6, <a href="../../sn/sn56.11.html">SN 56:11</a> at SN V 423,10, <a href="../../an/an3.101.html">AN 3:101</a> at AN I 259,11+32, <a href="../../an/an7.47.html">AN 7:47</a> at AN IV 56,15, <a href="../../an/an8.64.html">AN 8:64</a> at AN IV 305,4, and <a href="../../an/an9.41.html">AN 9:41</a> at AN IV 448,19. Only the Mahāpadāna-sutta and its Sanskrit parallel associate such a statement with the birth of a bodhisattva, cf. <a href="../../dn/dn14.html">DN 14</a> at DN II 15,12 and fragment 360 folio 123V4 in Fukita 2003: 9 or in Waldschmidt 1953: 19. According to the Chinese parallel, <a href="../../parallels/da1.html">DĀ 1</a> at T I 4c2, after proclaiming to be supreme the newly born bodhisattva said: “[my] aim is to deliver sentient beings from birth, old age, disease, and death”, 要度眾生生老病死.</span></span></span> For the bodhisattva to make such a proclamation already right after his birth would imply that he was inevitably destined to awakening. From this perspective, his struggle to reach awakening by various methods was anyway destined to end successfully. The assumption that the Buddha’s awakening was inevitable already at his birth shows the beginning of tendencies that in the course of time led some traditions to assume that he was already awakened at birth and that his activities were merely an illusory display for the sake of saving sentient beings.<span class="note" id="mn123n115"><span class="details"><span class="p">[n.115] Kv-a 172,4 refers to such a view, attributed to the Vetullakas, according to which the Buddha did not really leave the Tusita heaven and what was seen in the human world was only a magical apparition, bhagavā tusitabhavane nibbatto tatth’ eva vasati, na manussalokaṃ āgacchati, nimmitarūpamattakaṃ pan’ ettha dasseti. According to Guang Xing 2004: 45, <a href="../../mn/mn123.html">MN 123</a> “provides some vital statements that served as repositories of the transcendental Buddha” conception.</span></span></span> While in the Majjhima-nikāya version Ānanda’s account of wonderful and marvellous qualities of the Buddha comes to an end at this point, the Madhyama-āgama discourse continues to explore the same theme in relation to later events in the Buddha’s life, describing that:</p>
+<ul>
+<li>on several occasions the shadow of a tree did not move in order to give protection to the Buddha who was seated at its roots in meditation,<span class="note" id="mn123n116"><span class="details"><span class="p">[n.116] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 470c16 (this is the first meditation while still being a bodhisattva), T I 471a1, and T I 471b8.</span></span></span></li>
+<li>a monkey took the Buddha’s bowl, filled it with honey, and offered it to him,<span class="note" id="mn123n117"><span class="details"><span class="p">[n.117] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471a16; cf. also the Saṅghabhedavastu in Gnoli 1978a: 47,21.</span></span></span></li>
+<li>a cloud did not rain until the Buddha had recovered his sitting mat, which he had put out in the sun to dry,<span class="note" id="mn123n118"><span class="details"><span class="p">[n.118] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471a29.</span></span></span></li>
+<li>the Buddha was in such deep meditation that he did not hear a storm that killed four oxen and two men,<span class="note" id="mn123n119"><span class="details"><span class="p">[n.119] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471b18. The same event recurs in <a href="../../dn/dn16.html">DN 16</a> at DN II 131,20 and its parallels <a href="../../parallels/da2.html">DĀ 2</a> at T I 19a25, T 5 at T I 168b13, T 6 at T I 183c24, T 7 at T I 198a17, and in fragment 360 folio 190R and 191V in Waldschmidt 1950: 27-28.</span></span></span></li>
+<li>after a great rain and flooding the path for the Buddha to practise walking meditation stayed dry,<span class="note" id="mn123n120"><span class="details"><span class="p">[n.120] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471c9, an event also recorded in the Dharmaguptaka Vinaya, T 1428 at T XXII 796a16, in the Mahīśāsaka Vinaya, T 1421 at T XXII 109a21, in the (Mūla-)Sarvāstivāda Vinaya, T 1450 at T XXIV 133b16 (cf. also the Catuṣpariṣat-sūtra fragment S 362 (56)V5 in Waldschmidt 1952: 34, also in Gnoli 1977: 227,32), and in the Theravāda Vinaya at Vin I 32,6.</span></span></span></li>
+<li>Māra followed the Buddha for six years,<span class="note" id="mn123n121"><span class="details"><span class="p">[n.121] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471c14. Sn 3:2 at Sn 446 speaks instead of seven years, while the Lalitavistara in Lefmann 1902: 260,17 or in Vaidya 1958b: 191,2 agrees with <a href="../../parallels/ma32.html">MĀ 32</a> on six years. Oldenberg 1881/1961: 366 note 50 suggests that references to seven years may intend the whole period of going forth, while those to six years may only cover the period spent in ascetic practices. Nakamura 2000a: 170 instead explains that “in ancient India periods of time were expressed both in terms of full years (how much time had actually elapsed) and calendar years. The difference in the number of years mentioned may arise from different methods of counting”.</span></span></span></li>
+<li>the Buddha practised mindfulness of the body uninterruptedly for seven years.<span class="note" id="mn123n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471c17: 七年念身, 常念不斷. This brings to mind the prediction in the Satipaṭṭhāna-sutta and its parallels, according to which non-returning or awakening can be reached within a maximum period of seven years of satipaṭṭhāna practice, cf. <a href="../../dn/dn22.html">DN 22</a> at DN II 314,11, <a href="../../mn/mn10.html">MN 10</a> at MN I 62,34, and <a href="../../parallels/ma98.html">MĀ 98</a> at T I 584b16.</span></span></span></li>
+</ul>
+<p>The Acchariyabbhutadhamma-sutta and its Madhyama-āgama counterpart agree that, in reply to Ānanda’s exposition of wonderful and marvellous qualities, the Buddha also came out with one of his outstanding qualities. This was his ability to know clearly the arising, the presence, and the disappearance of feelings, perceptions, and thoughts, thereby presenting a quality related to meditative mastery of the mind as the culmination point of the present listing of marvellous qualities.<span class="note" id="mn123n123"><span class="details"><span class="p">[n.123] <a href="../../mn/mn123.html">MN 123</a> at MN III 124,11 and <a href="../../parallels/ma32.html">MĀ 32</a> at T I 471c21, which speaks of feelings, thoughts/intentions, and perceptions, 覺, 思 and 想, as the objects of such knowledge. This type of contemplation recurs in other Pāli discourses, cf., e.g., <a href="../../dn/dn33.html">DN 33</a> at DN III 223,11 and <a href="../../an/an4.41.html">AN 4:41</a> at AN II 45,17, where the counterpart passage in the Saṅgītiparyāya, T 1536 at T XXVI 395c21, agrees with the Pāli versions on speaking of feelings, perceptions, and thoughts, 受, 想, 尋 (the Saṅgīti-sūtra restored in Stache-Rosen 1968: 113 only lists the four types of samādhibhāvanāḥ, without giving details of their implications). Another occurrence is <a href="../../an/an8.9.html">AN 8:9</a> at AN IV 168,12, in which case the parallels <a href="../../parallels/sa275.html">SĀ 275</a> at T II 73b24 and <a href="../../parallels/sa-2.6.html">SĀ2 6</a> at T II 375b10 list “feelings”, 受, “perceptions”, 想, and then 覺, which judging from the context might stand for “thought”, in fact a Sanskrit fragment of the same discourse, SHT VI 1226 folio 5V2 (p. 22) has preserved (vi)[d](i)tā vivar[k]ā [u]tpadyanti, which, as the editors in footnote 43 suggest, should be corrected to vitarkā, “thoughts”.</span></span></span></p>
+<p>Thus, even though a major part of the description of wonderful and marvellous qualities in the Acchariyabbhutadhamma-sutta is different from its Madhyama-āgama parallel and appears to be reflecting later tendencies and ideas, the final point made in both versions remains the same, in that attention is directed back to the ability to observe the functioning of the mind.<span class="note" id="mn123n124"><span class="details"><span class="p">[n.124] A minor difference is that in <a href="../../mn/mn123.html">MN 123</a> Ānanda repeats this statement, wherefore <a href="../../mn/mn123.html">MN 123</a> concludes with the monks rejoicing in Ānanda’s statement, while <a href="../../parallels/ma32.html">MĀ 32</a> concludes with the monks and Ānanda rejoicing in the Buddha’s exposition.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

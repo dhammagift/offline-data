@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.16 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.16</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 16</span><span class="mirror-right">（一六）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn86.html">MN 86</a> / <a href="../parallels/sa1077.html">SĀ 1077</a> / <a href="../parallels/ea38.6.html">EĀ 38.6</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was wandering and teaching in the peach river forest in Magadha. He saw some shepherds who said that there was a bandit named Angulimala in the forest who often harmed people. The Buddha told the shepherds, &quot;That bandit may not harm you.&quot; He then continued on his way. He saw more shepherds who said the same thing, and the Buddha answered as before. This happened a third time, and the Buddha still answered, &quot;That evil person may not harm you.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游化摩竭陀国桃河树林。见放牧人，称此林中有鸯掘魔罗贼，或伤害人。佛告牧人言：「彼贼或能不见伤害。」即便前进。复见牧人，亦作是语，佛如前答，至于再三。佛故答言：「彼恶人者，或不见害。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha reached the forest, and Angulimala saw the Buddha coming from afar. He held the scabbard in his left hand and drew his sword with his right hand, leaping forward. Although he ran, the Tathāgata walked slowly and could not catch up. Angulimala ran to the limit of his strength and said to the Buddha, &quot;Stop! Stop! Monk!&quot; The Buddha said to him, &quot;I am always still, but you are not still.&quot; Angulimala then spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>佛到林中，鸯掘魔罗遥见佛来，左手持鞘，右手拔刀，腾跃而来，彼虽奔走，如来徐步，不能得及。鸯掘魔罗极走力尽，而语佛言：「住！住！沙门。」佛语之言：「我今常住，汝自不住。」鸯掘魔罗即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The monk does not stop walking, yet says he is always still. I<br/>am truly still now, yet you say I am not still. How can<br/>you say you are still, while saying I am walking and not still?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「沙门行不止，　　自言我常住。我今实自住，　　今言我不住。云何尔言住，　　道我行不住？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have long abandoned harming sentient beings with weapons. You torment<br/>sentient beings and do not abandon this evil karma. Therefore, I<br/>say I am still, while you are called not still. I<br/>have abandoned all harmful poisons towards all living beings. You do<br/>not stop evil karma and always do unwholesome karma. Therefore, I<br/>say I am still, while you are called not still. I<br/>have abandoned all harm towards all living beings. You harm living<br/>beings and have not eliminated dark karma. Therefore, I say I<br/>am still, while you are called not still. I delight in<br/>my own Dharma, concentrating my mind without negligence. You do not<br/>see the four assemblies, and are not still in all respects<br/>This is called my true stillness, while you are called not still.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我于诸众生，　　久舍刀杖害，汝恼乱众生，　　不舍是恶业，是故我言住，　　汝名为不住。我于有形类，　　舍诸毒恶害，汝不止恶业，　　常作不善业，是故我言住，　　汝名为不住。我于诸有命，　　舍除众恼害，汝害有生命，　　未除黑暗业，以是我言住，　　汝名为不住。我乐于己法，　　摄心不放逸，汝不见四部，　　一切所不住，是名我实住，　　汝名为不住。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Angulimala also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>鸯掘魔罗复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have long dwelt in the wilderness, yet I have never seen such<br/>a person. The Bhagavan has come here and shown me the good Dharma<br/>I have long cultivated evil karma, but today I have completely abandoned it<br/>I now listen to your words, following the Dharma to eliminate all evils.&quot;<br/>He put his sword back in its sheath and threw it into a<br/>deep pit. He then bowed his head and took refuge in the World<br/>Honored One. With a very fierce and sharp faith, he resolved to go<br/>forth and leave home. The Buddha arose with a mind of great compassion<br/>benefiting all worlds. He said, &quot;Come, you are good!&quot; and he immediately became a monk.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我久处旷野，　　未见如此人，婆伽婆来此，　　示我以善法。我久修恶业，　　今日悉舍离，我今听汝说，　　顺法断诸恶。」以刀内鞘中，　　投弃于深坑，即便稽首礼，　　归命于世尊，信心甚猛利，　　发意求出家。佛起大悲心，　　饶益诸世间，寻言汝善来，　　便得成沙门。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the clansman Angulimala&#x27;s beard and hair fell out by themselves, he put on the Dharma robes, and he had already gone forth. Dwelling in emptiness and tranquility, his mind was not negligent. He diligently practiced the path and diligently cultivated diligence. By being able to concentrate and focus his mind, he practiced the unsurpassed pure conduct, exhausted all suffering, and in the present life, he personally attained realization and personally knew the Dharma. He knew that his birth was already ended, the pure conduct was already established, what was to be done was already accomplished, and he would not experience future existence.</p></td><td lang="lzh" class="agama-chi"><p>尔时，鸯掘魔罗族姓子，须发自落，被服法衣，已得出家，处于空静，心无放逸，专精行道，勤修精进。以能专精，摄心正念，修无上梵行，尽诸苦际，于现法中，自身取证明知，己法自知，我生已尽，梵行] cf.【丽】已立，所作已办，不受后有。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Agyata had already attained arahantship and attained the bliss of liberation. He then spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者无害已成罗汉，得解脱乐。即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Now my name is Agyata, but later I will be a great<br/>destroyer. My name now is true, truly I am Agyata. Now my<br/>body is free from harm, and so are my speech and mind<br/>I will never harm others, this is truly called Agyata. I was<br/>once covered in blood, therefore called Angulimala. I was carried away by<br/>a great rushing stream, therefore I take refuge in the Buddha. Taking<br/>refuge, I received the precepts, and immediately attained the three insights. I<br/>fully knew the Buddha&#x27;s teachings and practiced them. The world&#x27;s great charioteer<br/>governs with swords, clubs, and whips, iron hooks, whips, and reins, and<br/>various kinds of beatings. The World-Honored One, the great charioteer, abandons all<br/>evil dharmas, and is free from swords, clubs, and whips. He is<br/>truly the right charioteer. To cross water, one needs a bridge or<br/>boat. To straighten an arrow, one needs fire. A carpenter relies on<br/>an axe to be correct. Wisdom is self-disciplined with prajña. If a<br/>person first commits evil, but later stops and does not do it<br/>again, this illuminates the world, like the moon when the clouds have<br/>cleared. If a person first indulges in carelessness, but later stops and<br/>is not careless, with right mindfulness, one leaves behind the poison of<br/>thorns and single-mindedly crosses to the other shore. Having already completed evil<br/>karma, one must fall into evil destinies. But being forgiven by the<br/>Buddha for my sins, I am spared from evil karma. May all<br/>people who hear my words remove their resentful and knotted minds. With<br/>the pure eye of patience, the Buddha says that non-contentiousness is supreme.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我今字无害，　　后为大残害，我今名有实，　　真实是无害。我今身离害，　　口意亦复然，终不害于他，　　是真名无害。我本血涂身，　　故名鸯掘摩，为大驶流漂，　　是故归依佛。归依得具戒，　　即逮得三明，具知佛教法，　　遵奉而修行。世间调御者，　　治以刀杖捶，铁钩及鞭辔，　　种种诸楚挞。世尊大调御，　　舍离诸恶法，去离刀杖捶，　　真是正调御。渡水须桥船，　　直箭须用火，匠由斤斧正，　　智以慧自调。若人先造恶，　　后止不复作，是照于世间，　　如月云翳消。若人先放逸，　　后止不放逸，正念离棘毒，　　专心度彼岸。作恶业已讫，　　必应堕恶趣，蒙佛除我罪，　　得免于恶业。诸人得我说，　　皆除怨结心，当以忍净眼，　　佛说无诤胜。」</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

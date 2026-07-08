@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 132 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 132: Ānandabhaddekaratta-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn131comp.html#content"></a><a id="next-sutta" href="./mn133comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn132.html">MN 132</a> / <a href="../../parallels/ma167.html">MĀ 167</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Ānandabhaddekaratta-sutta, the “discourse by Ānanda on an auspicious night”, reports an explanation by Ānanda of the stanzas on an auspicious night, which is then repeated by the Buddha. This explanation is the same as the exposition given in the Bhaddekaratta-sutta. The Ānandabhaddekaratta-sutta has a parallel in the Madhyamaāgama.<span class="note" id="mn132n4"><span class="details"><span class="p">[n.4] The parallel is <a href="../../parallels/ma167.html">MĀ 167</a> at T I 699c-700b, which has the title “discourse spoken by Ānanda”, 阿難說經, and agrees with <a href="../../mn/mn132.html">MN 132</a> in locating the discourse in Jeta’s Grove by Sāvatthī. Sanskrit fragments in Minayeff 1983: 242-243 have also preserved a discourse on the verses on an auspicious night, with Ānanda as the main protagonist. Judging from what has been preserved of the introductory narration, this discourse begins with a tale found also in the Divyāvadāna in Cowell 1886: 611,2 and in the Śūraṅgamasūtra, T 945 at T XIX 106c9. According to this tale, Ānanda had been overpowered by a magic spell cast by a woman whose daughter had fallen in love with him. He was rescued by a magical counterspell by the Buddha just in time to prevent him from having sexual intercourse with the girl. Winternitz 1912: 249 comments that “the whole great literature of mantras and dhāraṇīs, of spells and incantations, found in later Mahāyāna, finds its explanation in this episode. The common people felt a need for mantras and spells, and Buddhism had to take this need into account. In order to be able to confront the mantras of other sorcerers, the Buddhist monks needed their own mantras. At first these ‘mantras’ were moral sayings like the Maṅgala-sutta and the Ratana-sutta ... but eventually that did not suffice” (“die ganze große Literatur der Mantras und Dhāraṇīs, der Zaubersprüche und Beschwörungsformeln, im späteren Mahāyāna, findet in dieser kleinen Episode ihre Erklärung. Es war das Bedürfnis nach Mantras, nach Zaubersprüchen, im Volke vorhanden und diesem Bedürfnis mußte auch der Buddhismus Rechnung tragen. Um den Mantras der Zauberer entgegenzutreten, mußten auch die buddhistischen Mönche ihre ‘Mantras’ haben. Zuerst waren diese ‘Mantras’ noch moralische Sprüche wie Maṅgalasutta und Ratanasutta ... das genügte aber auf die Dauer nicht”). Similar to the Sanskrit fragment in Minayeff 1983: 242-243, SHT III 816, as well as the individual Chinese parallel and the three Tibetan parallels to <a href="../../mn/mn133.html">MN 133</a>, continue after the verses on an auspicious night with dhāraṇīs.</span></span></span></p>
+<p>The Ānandabhaddekaratta-sutta and its Madhyama-āgama counterpart begin by relating that Ānanda had taught other monks the stanzas on an auspicious night, together with an explanation. The Madhyama-āgama version adds that he had given this instruction at the beginning of the night, which would indeed provide a suitable occasion for delivering such a teaching.<span class="note" id="mn132n5"><span class="details"><span class="p">[n.5] <a href="../../parallels/ma167.html">MĀ 167</a> at T I 700a1: 夜集.</span></span></span></p>
+<p>According to the Majjhima-nikāya version, the Buddha came to join the monks and asked them who had just given an exposition on the bhaddekaratta stanzas.<span class="note" id="mn132n6"><span class="details"><span class="p">[n.6] According to the commentary, the Buddha knew who had given the exposition and only asked in order to start the conversation, Ps V 4,12: jānantova kathāsamuṭṭhāpanatthaṃ pucchi.</span></span></span> On being informed that Ānanda had been the speaker, the Buddha told Ānanda that he should repeat his exposition.</p>
+<p>The Madhyama-āgama account instead reports that, once the night was over, a monk went to visit the Buddha and told him about the teachings given by Ānanda. The Buddha then called Ānanda to his presence and asked him to repeat what he had taught.</p>
+<p>The subject of Ānanda’s exposition in both versions are the stanzas on an auspicious night, which begin by enjoining the letting go of past and future, as the past is gone and the future has not yet come.<span class="note" id="mn132n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn132.html">MN 132</a> at MN III 190,20: “one should not follow after the past, one should not yearn for the future, what is past has been abandoned and the future has not yet come”, atītaṃ nānvāgameyya, nappaṭikaṅkhe anāgataṃ, yad atītaṃ pahīnan taṃ, appattañ ca anāgataṃ (Be-MN III 229,5 and Ce-MN III 404,24: pahīnaṃ); on this and the subsequent stanzas cf. also Franke 1912: 216-218. <a href="../../parallels/ma167.html">MĀ 167</a> at T I 700a15: “be careful not to think about the past, and do not long for the future, matters of the past have already ceased, the future has not yet come”, 慎莫念過去, 亦勿願未來, 過去事已滅, 未來復未至.</span></span></span> Besides the Ānandabhaddekaratta-sutta and its Madhyama-āgama parallel, these stanzas can be found in Sanskrit fragments as well as in the Chinese and Tibetan parallels to the Mahākaccānabhaddekaratta-sutta and the Lomasakaṅgiyabhaddekaratta-sutta. In relation to the first of these stanzas, the Chinese, Sanskrit, and Tibetan versions agree closely with the Pāli presentation.<span class="note" id="mn132n8"><span class="details"><span class="p">[n.8] Sanskrit fragment 3a2-3 in Minayeff 1983: 243 has preserved part of this verse: atitaṃ nānvāgamayed ... yad atitaṃ niruddhaṃ tad asaṃprāptam anāgatam. In T 77 at T I 886b14 (parallel to <a href="../../mn/mn134.html">MN 134</a>) this verse runs: “do not recall the past, do not have thoughts that seek the future, the past has already ceased, the future is not obtainable”, 過去當不憶, 當來無求念, 過去已盡滅, 當來無所得. T 1362 at T XXI 882a3 (partial parallel to <a href="../../mn/mn133.html">MN 133</a>) has only preserved the first part of this verse: “it is not proper to think of the past, do not long for the future”, 過去不應念, 未來不希求. The Tibetan parallels to this verse at D (313) mdo sde, sa 162b1 or Q (979) shu 172a7, D (617) rgyud ’bum, ba 57a6 or Q (599) ya 97b3, and D (974) gzungs ’dus, waṃ 91a2 (all of which are partial parallels to <a href="../../mn/mn133.html">MN 133</a>) indicate that “what is past, one does not get back, one [should] not long for the future, the past has ceased, the future has not [yet] come”, ’das pa rjes su phrad mi byed, ma ’ongs pa la re ba med, ’das pa gang yin de ’gags te, ma ’ongs de ni ma phyin pa’o (D (313) 162b1: ’das la and Q (979) 172a7 ’dis la instead of ’das pa). Notably, the reference to the past having “ceased”, niruddha/滅/’gags te, would be quite appropriate to the context, whereas the Pāli version’s pahīna employs an expression that is more usual in contexts where an active abandoning or giving up is implied, an implication that would fit the first part of the verse better than the present section. This verse is cited in the Yogācārabhūmi, T 1579 at T XXX 387c28 and D (4035) sems tsam, tshi 260b3 or Q (5536) dsi 303b3, cf. Enomoto 1989b: 35 and Wayman 1989: 209.</span></span></span></p>
+<p>The next stanza in the Ānandabhaddekaratta-sutta recommends seeing with insight whatever arises in the present moment.<span class="note" id="mn132n9"><span class="details"><span class="p">[n.9] <a href="../../mn/mn132.html">MN 132</a> at MN III 190,22: “[whatever] thing that arises now, here and there, he sees it with insight, immovable and unshakeable, having known it let him [continue to] cultivate [in this way]”, paccuppannañ ca yo dhammaṃ, tattha tattha vipassati, asaṃhīraṃ asaṅkuppaṃ, taṃ vidvā-m-anubrūhaye (Be-MN III 229,8: asaṃkuppaṃ, Se-MN III 353,4: viddhā).</span></span></span> Instead of the Pāli version’s injunction to remain “unshakeably” (asaṅkuppa) established in this practice, the Sanskrit fragments recommend avoiding “deliberations” (vikalpa).<span class="note" id="mn132n10"><span class="details"><span class="p">[n.10] Sanskrit fragment 3a3-4 in Minayeff 1983: 243: pratyutpannāṃc ca ye dharmā ... saṃhārya vikalpāṃc ca vidvāṃs tān nāvagamyate; SHT III 816V4-5: pratyutpannā ca ddharme tatra tatra vipaśakaḥ asaṃhāry(ā)vikalpast[h]aḥ vidvas-taṃ. The couplet asaṃhīraṃ asaṅkuppaṃ recurs in Sn 5:17 at Sn 1149 and in <a href="../../tha/tha14.html#p649">Th 649</a>.</span></span></span> Some of the Chinese translations could be based on a similar reading, as they speak of thoughts that are unstable.<span class="note" id="mn132n11"><span class="details"><span class="p">[n.11] <a href="../../parallels/ma167.html">MĀ 167</a> at T I T I 700a17: “as for phenomena in the present moment, one should attend with mindfulness to [their] lack of stability, the wise awaken in this way”, 現在所有法, 彼亦當為思, 念無有堅強, 慧者覺如是. T 77 at T I 886b16: “[what are] reckoned presently existing things, on these one should reflect, that thoughts are not stable, the wise are able to realize themselves”, 謂現在之法, 彼彼當思惟, 所念非牢固, 智者能自覺. T 1362 at T XXI 882a4: “in relation to the present, contemplate all according to the Dharma, erroneous thinking is difficult to dispel, the wise should contemplate properly”, 於現在 時中, 皆如法觀察, 妄想心難遣, 智人應善觀. The Tibetan parallels to this verse at D (313) mdo sde, sa 162b1 or Q (979) shu 172a8, D (617) rgyud ’bum, ba 57a6 or Q (599) ya 97b3, and D (974) gzungs ’dus, waṃ 91a2 indicate that “having observed here and there, whatever phenomena that have arisen now, one [should] thoroughly understand them without being led astray by false discrimination”, gang dag da ltar byung pa’i chos, de dang de la rab bltas nas, rnam par rtog pas mi ’phrogs par, de dag mkhas pas khong du chud (D (617) 57a7: thams cad instead of mkhas pas).</span></span></span></p>
+<p>The third stanza recommends that one should begin practising diligently at once, since the time of death is unpredictable.<span class="note" id="mn132n12"><span class="details"><span class="p">[n.12] <a href="../../mn/mn132.html">MN 132</a> at MN III 190,25: “right now diligence should be done, who knows if death will come tomorrow, there is no bargaining with death and its great armies”, ajj’ eva kiccam ātappaṃ, ko jaññā maraṇaṃ suve, na hi no saṅgaraṃ tena, mahāsenena maccunā (Ce-MN III 404,27: kiccaṃ, Se-MN III 353,6: saṅgaran).</span></span></span> The Sanskrit and Tibetan versions of this stanza are similar to the Pāli version.<span class="note" id="mn132n13"><span class="details"><span class="p">[n.13] Sanskrit fragment 3a4+b1 in Minayeff 1983: 243: adyaiva kuryād ātaptaṃ ko ... na hi vaḥ saṃganitena mahāsainyena mṛtyunā; SHT III 816V5: ady-eva k[u]ryyam-ādaptaṃ, ko jāne maranaṃn-hi. The Tibetan parallels to this verse at D (313) mdo sde, sa 162b2 or Q (979) shu 172a8, D (617) rgyud ’bum, ba 57a7 or Q (599) ya 97b4, and D (974) gzungs ’dus, waṃ 91a3 enjoin: “should one die just tomorrow – who knows? Already today one should be diligent, lest the Lord of Death and [his] big army should know oneself”, sang tsam ’chi ’am su shes kyis (D (974) 91a3: ’chi ’am sus, D (313) 162b2 and Q (979) 172a8: shi yang su, Q (599) 97b4: su shes kyi), de ring nyid du brtun te bya (D (617) 57a7 and D (974) 91a3: rtun te bya, Q (599) 97b4: rten te bya, Q (979) 172b1: brtun ta byas), ’chi bdag sde chen de dang ni, bdag tu shes pa ma yin no (D (313) 162b2 and Q (979) 172b1: bshes pa).</span></span></span> Even though the Chinese versions of this stanza differ to some extent, the main import of this injunction remains the same.<span class="note" id="mn132n14"><span class="details"><span class="p">[n.14] <a href="../../parallels/ma167.html">MĀ 167</a> at T I T I 700a19: “if one undertakes [such] practice of noble ones, who [would] be worried about death? I shall disengage from that [which is related to death], [so that this] great suffering and misery comes to an end”, 若作聖人行, 孰知愁於死, 我要不會彼, 大苦災患終. The use of 會 could reflect a mistaking of saṃ + √gṛ for saṃ + √han. The parallel to this verse in T 77 at T I 886b18 indicates that “having attained [such knowledge] one is able to proceed, why [should] the wise be dejected about the end of life? [If] my mind does not detach from this [dejection], I will not be able to escape from the [fate of] the great multitude”, 得已能進行, 何智憂命終, 我心不離此, 大眾不能脫. In T 1362 at T XXI 882a6, the verse enjoins that “it is fitting to quickly make an effort, who knows what will happen tomorrow, because that Lord of Death [and his] assembly are closely following you”, 宜可速勤修, 焉知至明日, 由彼死王眾, 與汝鎮相隨.</span></span></span></p>
+<p>The last of these four stanzas concludes that practice undertaken continuously in this manner deserves to be reckoned a way of spending an “auspicious night”,<span class="note" id="mn132n15"><span class="details"><span class="p">[n.15] <a href="../../mn/mn132.html">MN 132</a> at MN III 190,27: “dwelling diligently like this, day and night without laziness, to him, indeed, the night is auspicious, so the peaceful sage has explained”, evaṃ vihārim ātapiṃ, ahorattam atanditaṃ, taṃ ve bhaddekaratto ti, santo ācikkhate munī ti (Be-MN III 228,11: vihāriṃ and muni, without ti).</span></span></span> a conclusion found in similar terms in the Chinese, Sanskrit and Tibetan versions.<span class="note" id="mn132n16"><span class="details"><span class="p">[n.16] <a href="../../parallels/ma167.html">MĀ 167</a> at T I T I 700a21: “practise diligently like this, day and night without negligence! Therefore, the verses on an auspicious night should regularly be taught”, 如是行精勤, 晝夜無懈怠, 是故常當說, 跋地羅帝偈. T 77 at T I 886b20: “like this firmly established, without forsaking it day and night, for this reason [these are] the verse on noble wholesomeness, people should undertake this contemplation”, 如是堅牢住, 晝夜不捨之, 是故賢善偈, 人當作是觀. T 1362 at T XXI 882a8 has only preserved the last part of this verse, according to which “for this reason I, the sage, have now expounded the discourse on the auspicious night”, 是故我牟尼, 善夜經今說. Sanskrit fragment 3b3 in Minayeff 1983: 243: bhadrakarātriyaḥ sadaiva munir abhravīt. The Tibetan parallels to this verse at D (313) mdo sde, sa 162b3 or Q (979) shu 172b2, D (617) rgyud ’bum ba 57b1 or Q (599) ya 97b5, and D (974) gzungs ’dus, waṃ 91a4 indicate that “abiding very diligently in this way, without being lazy day and night, it is for this reason that the discourse of the auspicious night has always been taught by the sage”, de ltar gnas shing rab brtson la (Q (979) 172b2: shing bar), nyin mtshan snyom las med pas na, de phyir mtshan mo bzang po yi, mdo sde thub pas rtag tu gsungs (Q (599) 97b6: mdo sde phub bas).</span></span></span></p>
+<p>The idea that such diligent practice of meditation in the present moment can be considered a way of spending an “auspicious night” might be intending to set a contrast to more external or ritualistic ways of spending a night that is considered spiritually auspicious.<span class="note" id="mn132n17"><span class="details"><span class="p">[n.17] Ñāṇaponika 1977: 346 note 966 relates the expression bhaddekaratta to ekarātri, which he explains to stand for the Brahminical custom of spending a religious observance night by fasting, staying awake, and meditating, “der Ausdruck bhaddekaratta ... bezieht sich auf eine, auch heute noch begangene und als ekarātri bekannte brahmanische Feier-Nacht, die fastend, wachend und meditierend verbracht wurde”. This suggests that the expression bhaddekaratta was perhaps indeed “a popular phrase taken over by the Buddha and given a special sense by him”, cf. also the discussion in Ñāṇamoli 1995/2005: 1343 note 1210, who expressed some uncertainty about this suggestion. Yet, the idea of taking advantage of a religiously auspicious night can be seen, for example, in <a href="../../dn/dn2.html">DN 2</a> at DN I 47,12, where the night of the uposatha, the ancient Indian religious observance day, serves as the suitable occasion for visiting some recluses or Brahmins. Although the central idea of the bhaddekaratta verses might indeed revolve around such a spiritually auspicious night, the last verse makes it clear that the recommendations given are not meant for a single night only, as according to all versions such practice should be undertaken “day and night”, that is to say, continuously. Ñāṇananda 1973/1984: 3 explains that “the Bhaddekaratta-suttas do not appear to envisage withdrawal from thoughts of the past, future and present for so little as one night. On the contrary, the verses ... say that the person to be called bhaddekaratta is he who abides ardently and unweariedly day and night, that is, surely for some consecutive time lasting longer than ‘one night’”. In fact according to Thanissaro 2002: 346, the reference to a night in the expression bhaddekaratta “should be interpreted in light of the custom – common in cultures that follow the lunar calendar – of calling a 24-hour period of day-and-night a ‘night’”; cf. also Winternitz 1908: 361 note 1, who notes that in India time is reckoned in “nights”, instead of “days”.</span></span></span></p>
+<p>The Ānandabhaddekaratta-sutta and its Madhyama-āgama parallel agree that to let go of past and future requires avoiding desire and attachment towards past or future manifestations of the five aggregates.<span class="note" id="mn132n18"><span class="details"><span class="p">[n.18] While <a href="../../mn/mn132.html">MN 132</a> at MN III 190,30 speaks of delight, nandi, in regard to past or future manifestations of the five aggregates, <a href="../../parallels/ma167.html">MĀ 167</a> at T I 700a24 mentions “delight”, 樂, “desire”, 欲, “attachment”, 著, and being “established”, 住, in regard to past or future manifestations of the five aggregates.</span></span></span> A difference in their mode of presentation is that, while in the Majjhima-nikāya version the whole exposition is a repetition by Ānanda of what he had been teaching the monks earlier, in the Madhyama-āgama version the same takes the form of a question and answer exchange between the Buddha and Ānanda, with the Buddha asking after the meaning of each key expression, in reply to which Ānanda offers his explanations.</p>
+<p>In regard to presently arisen phenomena, the Ānandabhaddekaratta-sutta enjoins to avoid any of the twenty modes of construing a sense of self in regard to the five aggregates, while its Madhyama-āgama counterpart simply speaks of avoiding any desire or attachment towards the five aggregates.<span class="note" id="mn132n19"><span class="details"><span class="p">[n.19] <a href="../../mn/mn132.html">MN 132</a> at MN III 190,32 employs the standard formula for such construction of a sense of self, which takes up four modes of considering each of the five aggregates as self, making up twenty ways of construing a self in total. <a href="../../parallels/ma167.html">MĀ 167</a> at T I 700b13 instead uses the same set of terms it had earlier employed in relation to past and future, as it recommends “not delighting”, 不樂, “not desiring”, 不欲, “not attaching”, 不著, and “not being established”, 不住, in relation to the five aggregates of clinging.</span></span></span></p>
+<p>The Madhyama-āgama version concludes with the Buddha praising Ānanda’s exposition and telling the monks that they should bear it in mind.<span class="note" id="mn132n20"><span class="details"><span class="p">[n.20] <a href="../../parallels/ma167.html">MĀ 167</a> at T I 700b17.</span></span></span> According to the Majjhima-nikāya version, after expressing his approval in this way, the Buddha repeated the whole exposition given by Ānanda.<span class="note" id="mn132n21"><span class="details"><span class="p">[n.21] <a href="../../mn/mn132.html">MN 132</a> at MN III 191,11.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

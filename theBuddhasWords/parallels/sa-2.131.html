@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.131 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.131</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 131</span><span class="mirror-right">（一三一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn42.8.html">SN 42.8</a> / <a href="../parallels/sa916.html">SĀ 916</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying in the Selling Cloth Forest in the city of Nārājanapada. At that time, the village headman who was a debater had this thought: “I should not go to see the Nirgrantha Jains, but go to see the Buddha.” Having thought this, he went to see the Buddha, greeted him, and sat to one side. The Buddha then said to the village headman who was a debater: “What kind of teachings does the Nirgrantha Jains’ son teach his disciples?”</p></td><td lang="lzh" class="agama-chi"><p>一时，佛住那罗健陀城卖叠林中。尔时，结集论者聚落主作是思惟：「我今不应往见尼干，当到佛所。」作是念已，寻往诣佛，问讯已讫，在一面坐。尔时，佛告结集论者聚落主：「彼尼乾陀若提之子，为诸弟子说何等法？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman said to the Buddha: “World-Honored One! The Nirgrantha Jains always say: ‘If one commits the act of killing, then according to the number of times one kills, one will definitely fall into the evil realms and enter hell. Stealing, sexual misconduct, and false speech are also like this. According to the number of times one commits them, one will definitely fall into hell.’”</p></td><td lang="lzh" class="agama-chi"><p>时，聚落主白佛言：「世尊！彼尼乾陀常作是说：『若作杀业，随杀时多，必堕恶趣，入于地狱。偷盗邪婬及妄语等，亦复如是，随作时多，必堕地狱。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One said to the village headman: &quot;If it is as the Nirgrantha Jains say, then sentient beings would not at all fall into the evil realms and enter hell. Why is that? As the Nirgrantha Jains say, if one commits the act of killing, then according to the number of times one kills, one will definitely fall into the evil realms and enter hell. Stealing, sexual misconduct, and false speech are also like this. If that is so, then all sentient beings kill living beings less often and do not kill more often. If those who do not kill more often fall into hell, then those who kill less often and do not kill more often should not fall into the evil realms and enter hell. Stealing, sexual misconduct, and false speech are also like this. The time spent doing these actions is less, and the time spent not doing them is more. They should all not fall into the evil realms and enter hell.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告聚落主：「若如尼干之所说者，众生都无坠堕恶趣，入于地狱。所以者何？如尼干说，若作杀业，随杀时多，必堕恶趣，入于地狱。偷盗邪婬及妄语等，亦如是者。一切众生，杀生时少，不杀时多。若以时多入地狱者，杀生时少，不杀时多，是故不应堕恶趣中，入于地狱。偷盗邪婬及妄语等，亦复如是，作业时少，不作时多，悉皆不应坠堕恶趣，入于地狱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said to the village headman: &quot;If it is as you say, then there are no people at all who enter hell.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告聚落主：「如汝说者，都无有人入于地狱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman said to the Buddha: &quot;Indeed, Gautama.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，聚落主即白佛言：「实尔，瞿昙。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said to the village headman: &quot;If there are teachers in the world who are able to measure well, have wisdom and discernment, are on the ground of contemplation, and speak with their own eloquence, this is the ground of ordinary beings. They teach their disciples the Dharma like this: &#x27;Those who kill will all fall into evil paths and enter hell, according to the amount of killing they do. The more killing they do, the more they will be pulled into hell. The same is true for stealing, sexual misconduct, and false speech. According to the amount of these actions, one will fall into evil paths and enter hell.&#x27; Those disciples wholeheartedly believe and enjoy what their teacher says, and they accept it with utmost sincerity, saying: &#x27;Our teacher knows the objects in front of him and sees what he sees.&#x27; Those disciples also have disciples of their own, and they tell them: &#x27;Our teacher says that when one kills, one will fall into evil paths and enter hell according to the amount of killing one does.&#x27; Those great-grandchildren think: &#x27;I have killed before, and I will definitely fall into hell. When I steal, engage in sexual misconduct, and speak falsely, I will definitely fall into evil paths and enter hell.&#x27; Because of this view, they attain this view, which is called wrong view. They do not abandon this view, do not understand or doubt it, and do not regret their evil karmic causes. They still constantly do such evil deeds, their minds unwilling to change, and they are not satisfied. They are not satisfied with the liberation of the mind, nor with the liberation of wisdom. Because they are not satisfied with the liberation of the mind and wisdom, they slander the sages. Because they slander the sages, this is wrong view.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告聚落主：「世间若有教导者，出能善量，有慧分别，在思量地，以己言辩才，是凡夫地，为诸弟子说如是法。若杀生者，尽堕恶道，入于地狱，随作业时多，以是多业，牵入地狱。盗窃邪婬并妄语时，亦复如是，随作业时多，堕于恶趣，入于地狱。其诸弟子专心信乐彼师所说，至心受持，作如是言：『我教导主，知彼前境，见彼所见。』此诸弟子复有弟子，而语之言：『我教导主作如是说，若有杀生时，随杀时多，堕于恶趣，入于地狱。』彼孙弟子作是念言：『我先杀生，必堕地狱。偷盗、邪婬及妄语时，必堕恶道，入于地狱。』因此作见，即得是见，是名邪见。不舍是见，不解疑惑，不悔所作，恶业之因，而犹常作如是恶业，心不肯改，不能满足。心所解脱，亦不满足。慧解脱，亦不满足。以心解脱、慧解脱，不满足故，诽谤贤圣。谤贤圣故，即是邪见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha again said to the village headman: &quot;If there is a person who has this wrong view and falls into evil paths, entering hell, all sentient beings have causes and conditions that defile their minds. Because of this, all sentient beings obtain karmic afflictions. Even if a Buddha appears, a Tathāgata, Arhat, Samyak-Saṃbuddha, the Buddha rebukes killing, stealing, sexual misconduct, and false speech in various ways, and also praises those superior dharmas, with definite faith and understanding.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告聚落主：「设有一人，作是邪见，堕在恶道，入于地狱。一切众生，皆有因缘染污心垢，以是缘故，一切众生得业结使。设有佛出，如来、应、正遍知、阿罗呵、三藐三佛陀，佛以种种因缘呵于杀生、偷盗、邪婬，及妄语等，亦复如是。兼赞叹彼胜法，有决定信解。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He again said to the Buddha: &quot;My World-Honored One truly knows and sees, and teaches the Dharma in various ways, enabling me to teach my disciples the Dharma like this. He rebukes killing in various ways and praises not killing. He praises not lying, not sexual misconduct, and not stealing in various ways. I have previously killed, stolen, engaged in sexual misconduct, and lied. I always regret these causes and conditions. Although I regret them, I am called one who does not commit evil karma. Therefore, I deeply regret these evil karmas. Because of repentance, all doubts and regrets are eliminated, and good karma is furthered. I no longer kill, steal, engage in sexual misconduct, or lie. I regret what I have done in the past and will not commit various evil karmas again. Therefore, my mind is satisfied and I attain liberation, and I am also able to satisfy wisdom liberation. Because my mind and wisdom are satisfied, I do not slander the sages. Because I do not slander the sages, I attain right view.&quot;</p></td><td lang="lzh" class="agama-chi"><p>复白佛言：「我之世尊，真实知见，种种说法，令我得与弟子说如是法，种种因缘呵责杀生，赞叹不杀生。种种因缘赞不妄语、不邪婬、不偷盗。我于昔时，已曾杀生、偷盗、邪婬，及妄语等，我以此因缘，常自悔责。虽自悔责，而得名为不作罪业。是故深自悔责，如是恶业，以忏悔故，皆除疑悔，增进善业。更不杀生、偷盗、邪婬，及妄语等，悔责先造，后更不作种种恶业。以是之故，心得满足，而获解脱，亦能满足慧解脱。心慧满故，不谤贤圣。不谤贤圣故，便得正见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the village headman: &quot;Because of being able to cultivate right view, when the body perishes and life ends, one can go to the good realms and be reborn in the heavens. Because of being able to repent and have right view, one can purify the minds of all sentient beings and also purify the afflictions and karmic hindrances of sentient beings. When the noble disciples hear this, they immediately practice and study. Whether it is the right time, the wrong time, or the time in between, the day and night have already passed. In this time, is the time of killing more or the time of not killing more? By reasoning, the time of killing is less, and the time of not killing is more. I have intentionally killed in the past. It is truly unwholesome and not reasonable. From now on, I will not kill again. I will not give rise to dislike, hatred, or jealousy towards anyone. I will deeply give rise to joy. Because of giving rise to joy, I deeply give rise to delight. Because of giving rise to delight, I deeply attain ease. Because of deeply attaining ease, I attain happiness. Because of attaining happiness, my mind becomes concentrated. Because the noble disciples&#x27; minds become concentrated, they attain being together with loving-kindness. Because of being together with loving-kindness, there is no resentment, hatred, or jealousy. Their minds are vast, their aspirations are broad and boundless. Because of well cultivating loving-kindness, towards all sentient beings in the east, there is no resentment or hatred. The same is true in the south, west, north, the four intermediate directions, and above and below. In all worlds, one universally gives rise to a mind of loving-kindness. One should resolve to establish such a good mind and abide in goodness.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告聚落主：「以能修于正见缘故，身坏命终，得向善趣，生于天上。以能忏悔正见之故，能净一切众生之心，亦能净于众生结业烦恼罪垢。贤圣弟子得闻此事，即时修学。若时及时分，时分中间，中间昼夜已过，如是时中，为杀时多，不杀时多？以义推之，杀生时少，不杀时多。我于彼时故作杀生，我实不善，所作非理。我从今已后，更不复杀。我于一切更不生嫌，更不生恨，亦不生嫉，深生欢喜。生欢喜故，深生爱乐。生爱乐故，深得猗乐。深猗乐故，得受于乐。以受乐故，其心得定。贤圣弟子心得定故，得与慈俱。与慈俱故，无怨嫌恨，得于无嫉，其心广大，志趣弘博，无量无边。善修慈故，于彼东方一切众生都无怨嫌，南西北方，四维上下，亦复如是，于一切世界普生慈心，作是意解，当修立如是善心，于善中住。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One took a small amount of soil from the ground and placed it on his fingernail, and asked the village headman who composed the treatise: &quot;Which is more, the soil of the great earth or the soil on my fingernail?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊取地少土，置于爪上，问造论姓聚落主言：「大地土多？爪] cf.【丽】上土多？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said: &quot;The soil on the fingernail is extremely small and cannot be compared. The soil of the great earth is not comparable to even a hundredth, a thousandth, or a trillionth of the soil on the fingernail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主言：「爪上之土极为尠少，不可方喻。大地之土，百分、千分、千亿分，不得比喻，共相挍量。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the village headman: &quot;All the evil karma is like the soil on the fingernail. The soil of the great earth cannot be measured by calculation or analogy.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告聚落主：「所有罪业，如爪上土，大地之土算数譬喻不能量度。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said: &quot;It is so, it is so. The comparison of evil karma can be known like this. Such a small amount of karma cannot lead people to fall into evil paths, nor can it stay there, nor can it be counted. The merit obtained by practicing loving-kindness is like the soil of the great earth; the sin of killing is like the soil on the fingernail. The merit of compassion is like the soil of the great earth; the sin of stealing is like the soil on the fingernail. The merit of joy is like the soil of the great earth; the sin of sexual misconduct is like the soil on the fingernail. The merit of equanimity is like the soil of the great earth; the sin of false speech is like the soil on the fingernail.&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主言：「如是，如是。恶业挍量，可知如是少业，不能牵人令堕恶道，亦不能住，亦不可计。夫行慈者，所得功德，如大地土；杀生之罪，如爪上土。悲之功德，如大地土；偷盗之罪，如爪上土。喜之功德，如大地土；邪婬之罪，如爪上土。舍之功德，如大地土；妄语之罪，如爪上土。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When the Tathāgata was expounding the Dharma in this way, the village headman who composed the treatise heard the Buddha&#x27;s words, and his mind was free from defilements, his Dharma-eye became pure, he attained the Dharma, realized the Dharma, saw the Dharma, understood the Dharma, reached the limit of the Dharma, transcended doubts, did not follow others&#x27; beliefs, and attained the state of having accomplished what was to be done. He then rose from his seat, arranged his robe, joined his palms, and said to the Buddha, &quot;World-Honored One! I have been liberated! I have been liberated! Now I take refuge in the Buddha, the Dharma, and the Saṃgha. I become a lay devotee, and for as long as I live, my faith is pure.&quot; The village headman further said to the Buddha, &quot;World-Honored One! It is like someone who, for the sake of profit, engages in evil slander, and it becomes worse day by day. They lose their own wealth, let alone gain any profit. I am also like this. For the sake of profit, I associated with foolish and unwholesome Nirgranthas. I was deluded and associated with them, making offerings and showing respect. I did not gain any good benefits from them, but was led astray and was about to fall into hell. The World-Honored One has pulled me out and liberated me from the evil destinies. Now I take refuge in the Buddha, Dharma, and Saṃgha again. For as long as I live, I become a lay devotee. I have abandoned all faith, affection, and respect for those foolish Nirgranthas. I now take refuge in the Three Jewels of the Buddha, Dharma, and Saṃgha for a third time. For as long as I live, I become a lay devotee, and I will not give rise to disbelief.&quot;</p></td><td lang="lzh" class="agama-chi"><p>如来分别如是法时，造论姓聚落主闻佛所说，远尘离垢，得法眼清净，得法证法，见法知法，得法边际，度诸疑惑，不随他信，寻得已办。即起离坐，整衣合掌，白佛言：「世尊！我已得度！我已得度！今归依佛，归依法僧，为优婆塞，尽其形命，信心清净。」聚落主复白佛言：「世尊！譬如为利养故，作于恶骂，日日转恶，尚失己财，况复得利。我亦如是，为得利故，亲近愚痴不善尼干。我以狂惑，亲近于彼，供养恭敬，我于彼所，不得善利，为其所陷，将堕地狱。世尊拔我，得离恶趣，今重归佛法僧，我尽形寿为优婆塞。我先于彼愚痴尼干所，有信心、爱念、恭敬，悉皆舍弃。我今第三亦重归依佛法僧宝，尽我形寿为优婆塞，不生不信。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman who composed the treatise heard the Buddha&#x27;s words, rejoiced, bowed his head to the Buddha&#x27;s feet, and left.</p></td><td lang="lzh" class="agama-chi"><p>时，造论姓聚落主闻佛所说，欢喜顶礼而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Agitation and dispute, taming horses and evil nature, topknot<br/>and sage, royal hair and donkey surname, famine and<br/>farming, what treatise is said to be the tenth?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>动摇及鬪诤　　调马与恶性顶发并牟尼　　王发及驴姓饥馑与种田　　说何论为十</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

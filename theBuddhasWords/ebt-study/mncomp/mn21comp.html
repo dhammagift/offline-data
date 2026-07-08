@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 21 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 21: Kakacūpama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn20comp.html#content"></a><a id="next-sutta" href="./mn22comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn21.html">MN 21</a> / <a href="../../parallels/ma193.html">MĀ 193</a> / <a href="../../parallels/ea50.8.html">EĀ 50.8 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Kakacūpama-sutta, the “discourse on the simile of the saw”, is the first discourse in the third chapter of the Majjhima-nikāya, which in the Asian editions has the title “chapter on similes”.<span class="note" id="mn21n1"><span class="details"><span class="p">[n.1] Be-MN I 173,1, Ce-MN I 308,4, and Se-MN I 248,1 (adopted also by Chalmers 1926: x and Neumann 1896/ 1995: 143). Ee speaks instead of the Tatiya-vagga, “Third Chapter”. As Norman 1983a: 45 comments, “since six of the ten suttas have the word upama in their title”, it would indeed be “appropriate to call it Opammavagga”; cf. also Horner 1954/1967: xi.</span></span></span> The Kakacūpama-sutta offers a detailed instruction on the importance of patience. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn21n2"><span class="details"><span class="p">[n.2] The parallel is <a href="../../parallels/ma193.html">MĀ 193</a> at T I 744a-746b, has the title “discourse on Moliya Phagguna”, 牟犁破群那經, and agrees with <a href="../../mn/mn21.html">MN 21</a> in locating the discourse in Jeta’s Grove by Sāvatthī. For an extract from <a href="../../parallels/ma193.html">MĀ 193</a> cf. Minh Chau 1964/1991: 198-199. A partial parallel is <a href="../../parallels/ea50.8.html">EĀ 50.8</a> at T II 812c-813b, which begins with the same situation concerning Moliya Phagguna. In <a href="../../parallels/ea50.8.html">EĀ 50.8</a>, however, he proclaims his conviction that sensuality is not an obstruction, similar to Ariṭṭha’s proclamation in <a href="../../mn/mn22.html">MN 22</a> at MN I 130,5 and its parallel <a href="../../parallels/ma200.html">MĀ 200</a> at T I 763b4. The remainder of <a href="../../parallels/ea50.8.html">EĀ 50.8</a> describes how the Buddha rebuffs this mistaken belief and delivers the simile of the snake, so that this part of <a href="../../parallels/ea50.8.html">EĀ 50.8</a> is a partial parallel to <a href="../../mn/mn22.html">MN 22</a>. Anesaki 1934b: 290 notes a reference to the present discourse under the title “discourse to Phagguna”, 破群那經, in the *Mahāprajñāpāramitā<i>-(</i>upadeśa<i>-)</i>śāstra, T 1509 at T XXV 60a7; cf. also Lamotte 1944/1981: 32.</span></span></span></p>
+<p>The Kakacūpama-sutta and its Madhyama-āgama parallel report that the monk Moliya Phagguna was living in too close association with the nuns, to the extent that he would get irritated and upset when someone criticized the nuns, just as they would get irritated and upset if someone criticized him.</p>
+<p>According to both versions, the Buddha called Moliya Phagguna to his presence and told him that, since he had left behind the household life, he should also leave behind sensual thinking related to the household life.<span class="note" id="mn21n3"><span class="details"><span class="p">[n.3] Elsewhere the discourses indicate that this admonition did not have a lasting effect on him, since according to <a href="../../sn/sn12.32.html">SN 12:32</a> at SN II 50,19 and its parallel <a href="../../parallels/ma23.html">MĀ 23</a> at T I 451a3 he eventually disrobed.</span></span></span> The Majjhima-nikāya version stands alone in envisaging the possibility that the nuns or Moliya Phagguna might be abused or even physically attacked, in which case Moliya Phagguna should remain unaffected and full of compassion.<span class="note" id="mn21n4"><span class="details"><span class="p">[n.4] <a href="../../mn/mn21.html">MN 21</a> at MN I 123,30.</span></span></span></p>
+<p>The Kakacūpama-sutta and its parallel continue by illustrating the willing compliance of the monks of earlier times to the Buddha’s injunction to eat only once a day with the examples of a skilled charioteer,<span class="note" id="mn21n5"><span class="details"><span class="p">[n.5] Regarding this reference to the readiness of the monks to follow the injunction to eat only once, it is noteworthy that <a href="../../mn/mn65.html">MN 65</a> at MN I 437,25 and its parallels <a href="../../parallels/ma194.html">MĀ 194</a> at T I 746b27 and <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c2 (cf. also T 1425 at T XXII 359b14) report that the monk Bhaddāli, far from showing willing compliance, publicly refused to follow the Buddha’s injunction to eat only once a day at the very time when this injunc- tion appears to have been promulgated. According to <a href="../../mn/mn70.html">MN 70</a> at MN I 474,2 and <a href="../../parallels/ma195.html">MĀ 195</a> at T I 749c27, what seems to be an earlier injunction to refrain from eating at night also met with open opposition by some monks.</span></span></span> who is able to drive a chariot wherever he likes, and of a grove of sāla trees that is cared for and therefore grows well.<span class="note" id="mn21n6"><span class="details"><span class="p">[n.6] <a href="../../mn/mn21.html">MN 21</a> at MN I 124,18+28 and <a href="../../parallels/ma193.html">MĀ 193</a> at T I 744b17+20.</span></span></span></p>
+<p>The Kakacūpama-sutta and its Madhyama-āgama counterpart next narrate the tale of the slave girl Kālī who successfully tested her mistress Vedehikā’s reputation for being forbearing and gentle.<span class="note" id="mn21n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn21.html">MN 21</a> at MN I 125,3 and <a href="../../parallels/ma193.html">MĀ 193</a> at T I 744c12.</span></span></span> Both versions use the moral of this tale to explain that a monk’s patience can be seen when he is confronted with disagreeable speech, and that a monk should not be considered obedient if he is submissive only in order to get requisites.</p>
+<p>The two versions next take up different types of speech, instructing that one should remain unaffected by them and avoid retaliation, keeping one’s mind full of loving kindness.<span class="note" id="mn21n8"><span class="details"><span class="p">[n.8] <a href="../../mn/mn21.html">MN 21</a> at MN I 126,30 and <a href="../../parallels/ma193.html">MĀ 193</a> at T I 745a29.</span></span></span> Cultivation of this attitude leads in both discourses to the meditative development of loving kindness as a boundless radiation in all directions, a radiation the Madhyama-āgama version presents also with the help of the other three brahmavihāras of compassion, sympathetic joy, and equanimity.<span class="note" id="mn21n9"><span class="details"><span class="p">[n.9] <a href="../../mn/mn21.html">MN 21</a> at MN I 127,6 refers to this radiation in an abbreviated manner in terms of “having pervaded the whole world”, sabbāvantaṃ lokaṃ ... pharitvā. <a href="../../parallels/ma193.html">MĀ 193</a> at T I 745b6 presents the same in the more detailed way often employed in the discourses, which describes a meditative radiation applied to each of the four directions, above and below, pervading the whole world.</span></span></span></p>
+<p>Both versions compare the unshakeable nature of this attitude to the impossibility of trying to dig up the whole earth with a spade, of trying to paint on space, of trying to heat up and evaporate the Ganges river with a grass torch, and of trying to cause a soft leather bag to rustle. They differ in the sequence in which they present these images (see table 3.1).</p>
+<table class="comparative-table">
+<caption>Table 3.1: Similes to Illustrate Patience in <a href="../../mn/mn21.html">MN 21</a> and its Parallel</caption>
+<tr><th><a href="../../mn/mn21.html">MN 21</a></th><th><a href="../../parallels/ma193.html">MĀ 193</a></th></tr>
+<tr><td>dig up whole earth (1)</td><td>dig up whole earth (→ 1)</td></tr>
+<tr><td>paint on space (2)</td><td>burn up Ganges (→ 3)</td></tr>
+<tr><td>burn up Ganges (3)</td><td>paint on space (→ 2)</td></tr>
+<tr><td>cause soft leather bag to rustle (4)</td><td>cause soft leather bag to rustle (→ 4)</td></tr>
+<tr><td>simile of the saw (5)</td><td>simile of the saw (→ 5)</td></tr>
+</table>
+<p>The exposition in the Kakacūpama-sutta and its Madhyama-āgama parallel culminates by illustrating the need for patience with the famous simile of the saw, according to which even in the case of being cut into pieces by bandits, no aversion should arise in one’s mind.<span class="note" id="mn21n10"><span class="details"><span class="p">[n.10] <a href="../../mn/mn21.html">MN 21</a> at MN I 129,15 and <a href="../../parallels/ma193.html">MĀ 193</a> at T I 746a13. A reference to this simile occurs, e.g., in <a href="../../mn/mn28.html">MN 28</a> at MN I 186,11 and its parallel <a href="../../parallels/ma30.html">MĀ 30</a> at T I 465a6, cf. also <a href="../../parallels/sa497.html">SĀ 497</a> at T II 130a23, and the *Mahāvibhāṣā, T 1545 at T XXVII 190a28, instances indicating that it was a well-known simile in early Buddhist circles.</span></span></span></p>
+<p>The two versions conclude by highlighting the benefit of keeping this simile in mind, to which the Madhyama-āgama version adds that those who regularly keep this simile in mind will attain either full awakening or non-return.<span class="note" id="mn21n11"><span class="details"><span class="p">[n.11] <a href="../../parallels/ma193.html">MĀ 193</a> at T I 746b7.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

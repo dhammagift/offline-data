@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 51.8 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 51.8</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">51.8</span> <span class="mirror-right">（八）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn143.html">MN 143</a> / <a href="../sn/sn1.48.html">SN 1.48 (~)</a> / <a href="../sn/sn2.20.html">SN 2.20 (~)</a> / <a href="../sn/sn55.26.html">SN 55.26 (~)</a> / <a href="../parallels/ma28.html">MĀ 28 (~)</a> / <a href="../parallels/sa593.html">SĀ 593 (~)</a> / <a href="../parallels/sa1032.html">SĀ 1032 (~)</a> / <a href="../parallels/sa-2.187.html">SĀ² 2.187 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder Anāthapiṇḍada was seriously ill. Śāriputra, with his pure and flawless divine eye, saw that the elder Anāthapiṇḍada was seriously ill. He then told Ānanda, &quot;Come, let us go to the elder Anāthapiṇḍada to inquire about his condition.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿那邠祁长者身抱重患。时，舍利弗以天眼观清净无瑕秽，见阿那邠祁长者身抱重患，寻告阿难曰：「汝来共至阿那邠祁长者所问讯。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda replied, &quot;The time is right.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，阿难报曰：「宜知是时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda, holding his alms bowl, entered Śrāvastī to beg for food. He gradually arrived at the house of the elder Anāthapiṇḍada and took his seat. Śāriputra then said to the elder Anāthapiṇḍada while seated, &quot;Is your illness increasing or decreasing? Do you feel that the pain is gradually subsiding, not getting worse?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿难到时持钵，入舍卫城乞食，以次渐渐至阿那邠祁长者家，即便就座。时舍利弗即于座上，语阿那邠祁长者曰：「汝今所疾有增有损乎？觉知苦痛渐渐除，不至增剧耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder replied, &quot;My illness is now greatly improved, I feel it increasing, not decreasing.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者报曰：「我今所患极为少赖，觉增不觉减。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied, &quot;Now, elder, you should remember the Buddha, who is called the Tathāgata, Arhat, Perfectly Enlightened One, Perfect in Knowledge and Conduct, Well-Gone, Knower of the World, Unsurpassed Trainer, Teacher of Gods and Men, Buddha, Blessed One; you should also remember the Dharma, the Tathāgata&#x27;s Dharma, which is extremely profound, venerable, precious, and unequaled, practiced by the wise and holy; you should also remember the Saṃgha, the Tathāgata&#x27;s Saṃgha, which is harmonious above and below, without dispute, accomplished in the Dharma. The Saṃgha is accomplished in precepts, accomplished in concentration, accomplished in wisdom, accomplished in liberation, accomplished in the vision of wisdom. The Saṃgha is called the four pairs, the eight individuals. This is called the Tathāgata&#x27;s holy Saṃgha, venerable and precious, the unsurpassed field of merit in the world. Elder, if one cultivates mindfulness of the Buddha, mindfulness of the Dharma, and mindfulness of the bhikṣus, the merit is immeasurable, attaining the place of immortality and extinction.</p></td><td lang="lzh" class="agama-chi"><p>舍利弗报曰：「如今，长者当忆佛，是谓如来、至真、等正觉、明行成为、善逝、世间解、无上士、道法御、天人师，号佛、众祐；亦当追忆念法，如来法者，极为甚深，可尊可贵，无与等者，贤圣之所修行；亦当念僧，如来众者，上下和顺无有诤讼，法法成就。圣众者，戒成就、三昧成就、智慧成就、解脱成就、见慧成就。所谓僧者，四双八辈，此名如来圣众，可尊可贵，是世间无上福田。长者！若修行念佛、念法、念比丘僧者，其德不可称计，获甘露、灭尽之处。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;If good men and good women have mindfulness of the Three Honored Ones - the Buddha, Dharma, and Saṃgha - it is impossible for them to fall into the three evil destinies! If those good men and good women cultivate mindfulness of the Three Honored Ones, they will surely attain good destinies in the heavens and among humans. Then, elder, do not arise from form, and do not rely on form to give rise to cognition; do not arise from sound, and do not rely on sound to give rise to cognition; do not arise from smell, and do not rely on smell to give rise to cognition; do not arise from taste, and do not rely on taste to give rise to cognition; do not arise from touch, and do not rely on touch to give rise to cognition; do not arise from mind, and do not rely on mind to give rise to cognition; do not arise from this world and the next, and do not rely on this world and the next to give rise to cognition; do not arise from craving, and do not rely on craving to give rise to cognition. Because craving gives rise to feeling, feeling gives rise to existence, existence gives rise to birth, death, sorrow, lamentation, suffering, and distress, which are immeasurable. This is called the five aggregates of suffering, without self, person, life, being, sprout, or embodied beings. When the eye arises, it does not know where it comes from; when the eye ceases, it ceases, and it does not know where it goes. There is no eye when it arises, and there is no eye when it ceases. It is all due to the causes and conditions of the coming together of dharmas. The so-called dharmas of causes and conditions are that when this exists, that exists; when this does not exist, that does not exist. The so-called ignorance conditions formations, formations condition consciousness, consciousness conditions name and form, name and form condition the six sense bases, the six sense bases condition contact, contact conditions feeling, feeling conditions craving, craving conditions grasping, grasping conditions becoming, becoming conditions birth, birth conditions old age and death, old age and death condition sorrow, lamentation, suffering, and distress, which are immeasurable. The same is true for the ear, nose, tongue, body, and mind. There is no arising, and there is no ceasing. It does not know where it comes from, and it does not know where it goes. It is all due to the causes and conditions of the coming together of dharmas. This, elder, is called the foremost dharma of emptiness.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「若善男子、善女人念三尊已：佛、法、圣众，堕三恶趣者，终无此事！若彼善男子、善女人修念三尊，必至善处天上、人中。然后，长者！不起于色，亦不依色而起于识；不起于声，不依声而起于识；不起香，不依香而起于识；不起于味，不依味而起于识；不起细滑，不依细滑而起于识；不起意，不依意而起于识；不起今世、后世，不依今世、后世而起于识；不起于爱，莫依爱而起于识。所以然者，缘爱有受，缘受有有，缘有有生、死、愁、忧、苦、恼，不可称计。是谓有此五苦盛阴，无有我、人、寿、命、士夫、萠兆、有形之类。若眼起时，亦不知来处；若眼灭时则灭，亦不知去处。无有而眼生，已有而眼灭，皆由合会诸法因缘。所谓因缘法者，缘是有是，无是则无。所谓无明缘行，行缘识，识缘名色，名色缘六入，六入缘更乐，更乐缘痛，痛缘爱，爱缘受，受缘有，有缘生，生缘死，死缘愁、忧、苦、恼、不可称计。耳、鼻、舌、身、意，亦复如是，无有而生，已有而灭，亦复不知来处，亦不知去处，皆由合会诸法因缘。是谓，长者！名为空行第一之法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the elder Anāthapiṇḍada wept and shed tears, unable to stop himself.</p></td><td lang="lzh" class="agama-chi"><p>是时，阿那邠祁长者悲泣涕零不能自止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then Śāriputra said to Anāthapiṇḍada, &quot;What is the reason for your grief?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，舍利弗语阿那邠祁曰：「以何因缘悲感乃尔乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The elder replied, &quot;I am not grieving. The reason is that I have come here many times to serve the Buddha and also respected the elder bhikṣus, but I have never heard such a Dharma of respect as what Śāriputra has expounded.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长者报曰：「我不悲感。所以然者，我昔日来数承事佛，亦复尊敬诸长老比丘，亦不闻如斯尊重之法，如舍利弗之所演说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Then Ānanda said to Anāthapiṇḍada, &quot;Elder, you should know that the Tathāgata has spoken of two kinds of people in the world. What are the two? One who knows happiness and one who knows suffering. The one who practices happiness is the elder Yaśodhara, and the one who practices suffering is the bhikṣu Bhaggava. Moreover, elder, Yaśodhara bhikṣu is foremost in understanding emptiness, and Bhaggava is one who has attained liberation through faith. Moreover, elder, the one who knows suffering and the one who knows happiness, these two people have both attained liberation of mind, and both are disciples of the Tathāgata without equal. Because they are not submerged and not reborn, both diligently accept the Buddha&#x27;s teachings without slacking off, but their minds have degrees of increase and decrease. Some people know, and some do not know. As the elder has said, &#x27;I have served the Buddhas in the past and respected the elder bhikṣus, but I have never heard such a Dharma of respect as what Śāriputra has expounded.&#x27; Yaśodhara bhikṣu attained liberation of mind by looking at the ground, and Bhaggava bhikṣu attained liberation of mind by looking at the sword. Therefore, elder, you should be like the bhikṣu Bhaggava.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，阿难语阿那邠祁曰：「长者当知，世间有二种之人，如来之所说。云何为二？一者知乐，二者知苦。彼习乐之人，所谓尊者耶输提族姓子是。彼习苦之人，婆伽梨比丘是。又复，长者！耶输提比丘解空第一；信解脱者，婆伽梨比丘。又复，长者！知苦之人、知乐之人，二人心俱解脱，二俱如来弟子无与等者，由其不没不生，二人勤受佛教，亦无懈废，但心有增减故。人有知者，有不知者，如长者之所说：『我昔已来承事诸佛，恭敬长老比丘，初不闻如斯尊重之法，如舍利弗之所说。』耶输提比丘视于地，而心得解脱；婆伽梨比丘观视于刀，即时心得解脱。是故，长者！当作如婆伽梨比丘之比。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra extensively taught the Dharma to him, encouraging and delighting him, causing him to give rise to the unsurpassed mind. He then rose from his seat and departed.</p></td><td lang="lzh" class="agama-chi"><p>是时，舍利弗广与说法，劝令欢喜，使发无上之心，即从坐起而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Not long after Śāriputra and Ānanda left, the elder Anāthapiṇḍada passed away and was reborn in the Heaven of the Thirty-three. At that time, the merits and virtues of the Anāthapiṇḍada god-son surpassed those of the other gods in five ways. What were the five? Namely, heavenly lifespan, heavenly form, heavenly happiness, heavenly spiritual power, and heavenly radiance. At that time, the Anāthapiṇḍada god-son thought, &quot;I have attained this heavenly body all because of the Tathāgata&#x27;s kindness. Now I should not indulge in the five desires for my own enjoyment, but should first go to the World-Honored One to pay homage and inquire about his well-being.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗、阿难去未久，须臾之顷阿那邠祁长者命终，便生三十三天。尔时，阿那邠祁天子有五事功德，胜彼诸天。云何为五？所谓天寿、天色、天乐、天威神、天光明。尔时，阿那邠祁天子便作是念：「我今获此天身，皆由如来之恩。今我不宜于五欲自娱乐，先应至世尊所，拜跪问讯。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Anāthapiṇḍada god-son, together with the heavenly beings, surrounded him in front and behind, holding heavenly flowers to scatter on the Tathāgata&#x27;s body. At that time, the Tathāgata was in the Jeta Grove of Anāthapiṇḍada near Śrāvastī. At that time, the god-son Anāthapiṇḍada, in the sky, joined his palms towards the World-Honored One and spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>时，阿那邠祁天子将诸天人，前后围绕，持诸天花散如来身上。时如来在舍卫祇树给孤独园。时，彼天子在虚空中，叉手向世尊，便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>This is the Jetavana Grove, where the sages play and enjoy themselves. It is<br/>the place ruled by the Dharma King. You should give rise to a joyful mind.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「此是祇洹界，　　仙人众娱戏，法王所治处，　　当发欢悦心。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, after the Anāthapiṇḍada god-son spoke this verse, the Tathāgata silently accepted it. At that time, the god-son Anāthapiṇḍada immediately gave rise to this thought: &quot;The Tathāgata has already accepted me.&quot; He then abandoned his supernatural power and stood to one side.</p></td><td lang="lzh" class="agama-chi"><p>尔时，阿那邠祁天子说斯偈已，如来默然可之。时，彼天子即生此念：「如来已然可我。」即舍神足，在一面立。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the god-son Anāthapiṇḍada addressed the World-Honored One, saying: &quot;I am Sudatta, also known as Anāthapiṇḍada, well-known to people, and also a disciple of the Tathāgata who has received the holy teachings. Now, having passed away, I have been reborn in the Heaven of the Thirty-three Gods.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，阿那邠祁天子白世尊言：「我是须达，又名阿那邠祁，人所明了，亦是如来弟子受圣尊教。今取命终，生三十三天。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said: &quot;By what merit have you now attained this heavenly body?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「汝由何恩今获此天身？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The god-son said to the Buddha: &quot;It is by the power of the World-Honored One that I have attained this heavenly body.&quot; At that time, the god-son Anāthapiṇḍada again scattered heavenly flowers over the body of the Tathāgata, as well as over the bodies of Ānanda and Śāriputra, circumambulated the Jetavana Grove seven times, and then disappeared.</p></td><td lang="lzh" class="agama-chi"><p>天子白佛：「蒙世尊之力，得受天身。」时，阿那邠祁天子复以天华散如来身上，亦散阿难及舍利弗身上，遍遶祇洹七匝还没不现。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One said to Ānanda: &quot;Last night, a god-son came to me and spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>是时，世尊告阿难曰：「昨夜有天子来至我所，便说斯偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>This is the Jetavana Grove, where the sages play and enjoy themselves. It is<br/>the place ruled by the Dharma King. You should give rise to a joyful mind.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『此是祇洹界，　　仙人众娱戏，法王所治处，　　当发欢悦心。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the god-son circumambulated the Jetavana Grove seven times and then departed. Ānanda, do you recognize that god-son?</p></td><td lang="lzh" class="agama-chi"><p>「是时，彼天子绕祇洹七匝便退而去。汝今阿难！汝颇识彼天子乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda said to the Buddha, &quot;It must be the elder Anāthapiṇḍada.&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难白佛言：「必当是阿那邠祁长者也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Ānanda, &quot;As you have said, it is excellent that you can recognize that god-son with your knowledge of the unknown. Because he is the god-son of Anāthapiṇḍada.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告阿难：「如汝所言。善哉！乃能以未知智而识彼天子。所以然者，彼是阿那邠祁天子。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda asked the Buddha, &quot;What is the name of Anāthapiṇḍada in his heavenly rebirth?&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难白佛言：「阿那邠祁！今生天上为名何等？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;He is still named Anāthapiṇḍada. Because when he was born in heaven, all the gods said, &#x27;This god-son was a disciple of the Tathāgata in the human realm. He always gave equally to all, providing for the needy. After making these merits, he was reborn in the Heaven of the Thirty-three. Therefore, he is still named Anāthapiṇḍada.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「即名阿那邠祁。所以然者，彼天即生之日，诸天各各有此言：『此天子在人中时，是如来弟子，恒等心普施一切，周穷济乏，作此功德已，此是三十三天，今故续名阿那邠祁。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;Ānanda, the bhikṣu, has great merits and wisdom. He is now in the stage of learning, and his wisdom is unmatched. Because what an arhat should know, Ānanda knows. What the past buddhas should have learned, Ānanda clearly knows. In the past, there were also such people who understood upon hearing. Just as I now know what Ānanda, the bhikṣu, looks at and understands: &#x27;The Tathāgata needs this; the Tathāgata does not need this.&#x27; The disciples of the past buddhas entered samādhi to know future events. Just as I now know what Ānanda, the bhikṣu, sees and understands.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「有大功德智慧成就，阿难比丘今在学地，智慧无与等者。所以然者，阿罗汉所应知者，阿难便知之。过去诸佛世尊所应学者，阿难皆明了知。过去时亦有斯人，闻便了知，如我今日阿难比丘瞻望方知之：『如来须是；如来不须是。』过去诸佛弟子入三昧方知未然之事，如我今日阿难比丘覩便晓了。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the bhikṣus, &quot;Among my śrāvakas, Ānanda, the bhikṣu, is the most knowledgeable, courageous, diligent, mindful, and undistracted. He is the foremost in learning and is capable of handling affairs.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘：「我声闻中博有所知，有勇猛精进，念不错乱，多闻第一，堪任执事，所谓阿难比丘是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, rejoiced and received it respectfully.</p></td><td lang="lzh" class="agama-chi"><p>时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

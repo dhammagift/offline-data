@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.53 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.53</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 53</span><span class="mirror-right">（五三）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn3.1.html">SN 3.1</a> / <a href="../parallels/sa1226.html">SĀ 1226</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was traveling through the country of Kusumapura and arrived at the Jetavana Anāthapiṇḍada-ārāma in Śrāvastī. King Prasenajit heard that the Buddha had come to Śrāvastī and went to the Buddha, bowed, and sat to one side. He said to the Buddha, &quot;World-Honored One! I heard that when you left home to seek the Way, you vowed to attain unsurpassed true and complete enlightenment. Is this really what you said? Is it not someone else falsely spreading it? Is it a slanderous criticism, leading to this accusation?&quot; The Buddha told King Prasenajit, &quot;Such words are true words, not slanderous, not increasing or decreasing. They are indeed my words, indeed spoken according to the Dharma, not contrary to the Dharma. No outsider can slander me.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在俱萨罗国渐次游行，至舍卫城祇树给孤独园。时，波斯匿王闻佛来至舍卫国祇树给孤独园，往诣佛所，稽首问讯，在一面坐，而白佛言：「世尊！我昔闻尔出家求道，要成无上至真、等正觉。汝为实有如是语耶？将非他人谬传者乎？为是讥嫌，致于毁呰，作此语也？」佛告波斯匿言：「如此语者，是真实语，非为毁呰，亦非增减，实是我语，实如法说，非非法说，一切外人亦无有能讥嫌我者。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>King Prasenajit said again, &quot;Although I have heard you say this, I still cannot believe it. Why do I not believe it? In the past, there were people who had been monastics for a long time, elderly and senior, such as the brahmins Pūraṇa Kāśyapa, Maskarin Gośālīputra, Sañjayī Vairaṭīputra, Ajita Keśakambalin, Kakuda Kātyāyana, Nirgrantha Jñātiputra, and others. Those elders did not believe they could attain anuttarā-samyak-saṃbodhi, let alone you, who left home not long ago, and could attain it?&quot; The Buddha said, &quot;Great King! There are four things in the world that should not be underestimated, even if they are small. What are the four? First, a prince, even if young, should not be underestimated. Second, a dragon, even if young, should not be underestimated. Third, fire, even if small, should not be underestimated. Fourth, a monk, even if young, should not be underestimated.&quot;</p></td><td lang="lzh" class="agama-chi"><p>波斯匿王复作是言：「我虽闻尔有如此语，犹未能信。何故不信？自昔诸人，有久出家，耆老宿旧，诸婆罗门：富兰那迦叶、末伽梨俱赊梨子、删阇耶毘罗邸子、阿阇多翅舍钦婆罗、迦据多迦栴延、尼乾陀阇提弗多罗，彼诸宿旧，尚自不信得阿耨多罗三藐三菩提，况汝年少而出家未久，而当得乎？」佛言：「大王！世有四事，小不可轻。何者为四？一者、王子虽小，最不可轻。二、龙子虽小，亦不可轻。三、火虽小，亦不可轻。四、比丘虽小，亦不可轻。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Although a king may be young, he is well-versed in all<br/>skills and arts. Born into a true and genuine lineage, he<br/>is not mixed with vulgarity. He has great beauty and fame<br/>known by all. Although he is called young, he is actually<br/>not to be underestimated. Those who wish to protect their own<br/>lives should not underestimate the young. Although a kṣatriya may be<br/>called young, he should inherit the throne according to the Dharma<br/>Having inherited the throne, he should administer punishments according to the<br/>Dharma. Therefore, he should be respected and not treated with contempt<br/>In all villages and secluded places, if one sees a young<br/>dragon, although its form is small, it can be large, small<br/>and also create clouds. It can pour down heavy rain. If<br/>one treats it lightly because it is small, it can certainly<br/>unleash its venom. Those who wish to protect their own lives<br/>should not treat it lightly. For the sake of one&#x27;s own<br/>benefit, one should protect oneself. It is like a small fire<br/>If it has all the conditions, its fierce flames will be<br/>very intense. Encountering a great violent wind, it can burn mountains<br/>and fields. Having burned the forests and fields, it will grow<br/>again when the time comes. Those who wish to protect their<br/>own lives should not treat a small fire lightly. If one<br/>curses and reviles those who uphold pure precepts, one&#x27;s body and<br/>descendants will all be slandered. In future lives, one will together<br/>receive evil retribution. Therefore, one should protect oneself and not do<br/>evil to them. A kṣatriya who is skilled in the arts<br/>a young dragon, a fire, and a monk who upholds pure<br/>precepts - these four should not be treated lightly. In order<br/>to protect one&#x27;s own life, one should be careful and avoid them.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「王者虽为小，　　具习诸技艺，生处既真正，　　亦不杂鄙秽。有大美名称，　　一切悉闻知，如此虽言小，　　其实不可轻。欲护己命者，　　不应轻于小。刹利虽云小，　　法应绍王位，既绍王位已，　　法当行谪罚，是以应敬顺，　　不宜生轻慢。于诸聚落中，　　及以闲静处，若见小龙子，　　形状虽微细，能大亦能小，　　亦复能兴云，降注于大雨。　　若以小故轻，必能纵毒螫，　　欲护身命者，不宜轻于彼。　　为于己利故，宜应自拥护。　　亦如有小火，若具于众缘，　　猛炎甚炽盛，遇于大暴风，　　能焚烧山野，既焚林野已，　　遇时还复生，欲护己命者，　　不应轻小火。若于净戒所，　　恶口加骂辱，其身及子孙，　　一切皆毁谤，于未来世中，　　当同受恶报，是故应自护，　　莫以恶加彼。刹利具技艺，　　龙子及与火，比丘持净戒，　　此四不可轻。为护己命故，　　谨慎应远离。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, King Prasenajit, having heard these words, his heart trembled and his body hair stood on end. He immediately rose from his seat, bared his right shoulder, joined his palms towards the Buddha, and said to the Buddha, &quot;World-Honored One! I truly have faults and transgressions now. I know that I have violated them, just like a foolish child, insane and ignorant, doing what is unwholesome. I only pray that the World-Honored One will have compassion and allow me to repent.&quot; The Buddha told King Prasenajit, &quot;I now have compassion for you and allow you to repent.&quot; At that time, King Prasenajit, having been granted repentance, was greatly delighted and took his leave.</p></td><td lang="lzh" class="agama-chi"><p>尔时，波斯匿王闻此语已，其心战栗，身毛为竖，即从坐起，偏袒右肩，合掌向佛，白佛言：「世尊！我于今者，实有过罪，自知毁犯，譬如𪧀愚，狂痴无知，所作不善。唯愿世尊怜愍我故，听我忏悔。」佛告波斯匿王言：「我今愍汝，听汝忏悔。」时，波斯匿王既蒙忏悔，心大欢喜，作礼而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

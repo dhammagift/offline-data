@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.130 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.130</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 130</span><span class="mirror-right">（一三〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn42.7.html">SN 42.7</a> / <a href="../parallels/sa915.html">SĀ 915</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying in the Selling Cloth Forest near the city of Narakata. At that time, the village headman of the Closed Mouth clan had this thought: &quot;I want to see the śramaṇa Gautama, but I cannot go there without seeing my teacher Nirgrantha.&quot; He then went to see Nirgrantha, bowed at his feet, and sat to one side. Nirgrantha then told him, &quot;Now I teach you two kinds of difficulties, so that Gautama will neither be able to swallow nor spit out.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在那罗干陀城卖叠林中。尔时，闭口姓聚落主而作是念：「我今欲见沙门瞿昙，不见我师尼乾陀者，不得往彼。」即时往诣尼乾陀所，顶礼其足，在一面坐。时，尼乾陀即告之曰：「今我教汝，作二种难，令彼瞿昙既不得吐，又不得咽。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Closed Mouth clan asked, &quot;Teacher! What are the two difficulties that can make Gautama neither swallow nor spit out?&quot;</p></td><td lang="lzh" class="agama-chi"><p>闭口姓即问之曰：「阿阇梨！以何二难能令瞿昙不得吐咽？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He further told him, &quot;You should go to Gautama and say, &#x27;Do you not act for the benefit and happiness of all beings? Do you also praise the Dharma for the benefit and happiness of all beings? If you say you do not act for the benefit and happiness of all beings, what is the difference between you and ordinary fools? If you say you want to benefit and bring happiness to beings, why do you not teach the Dharma equally to all? Why is there anyone you do not teach?&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>复告之曰：「汝当往诣彼瞿昙所，作如是言：『汝可不为利益安乐一切众生？汝亦赞叹利益安乐一切众生之法，若言不为利益安乐一切众生，与世凡愚有何差别？若言我欲利益安乐众生，何不一切等同说法？云何而有不为说者？』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman, having received the instruction, went to where the Buddha was, exchanged greetings, and sat to one side. He then said to the Buddha, &quot;Do you really not want to benefit and bring happiness to all beings? Don&#x27;t you always praise such a Dharma?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，聚落主受其教已，往诣佛所，粗相问讯，在一面坐。即白佛言：「汝实不欲利益安乐诸众生耶？岂不常赞如是法乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;I have always wanted to benefit all beings for a long time, and I have always praised such a Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「我于长夜，常欲利益一切众生，亦恒赞叹如是之法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said, &quot;If that is so, why don&#x27;t you teach the Dharma equally to all beings? Why not teach it to everyone?&quot;</p></td><td lang="lzh" class="agama-chi"><p>闭口姓言：「若如是者，何不为诸众生等同说法，有不说者？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha asked him, &quot;I will ask you a question, please answer as you wish. For example, in the world, there are three kinds of fields: one is a superior field, fertile and excellent; the second is a field of moderate quality; the third is a field in a remote wilderness, with saline and barren soil. Which field would a farmer sow seeds in first?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「我今问汝，随所乐答。譬如世人，有三种田：有一上田良美沃壤，极为上好。第二田者，适处其中好。第三田者，旷野边远，沙卤咸恶。有诸田夫，先于何田而下种子？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said, &quot;For the sake of benefit, one would first sow seeds in good fields, hoping for great profit.&quot;</p></td><td lang="lzh" class="agama-chi"><p>闭口姓言：「为利益者，先种良田，望获大利。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to him, &quot;If the good fields are exhausted, which field would you sow seeds in next?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之言：「若良田尽，次种何田？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said, &quot;Next, I would sow seeds in the medium field. After sowing in the medium field, I would sow in the inferior field. I would also throw seeds, hoping for a little harvest later.&quot;</p></td><td lang="lzh" class="agama-chi"><p>闭口姓言：「次种中者。种中田已，次种下田。亦复掷子，亦望后时少有所获。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to him, &quot;If you want to know the superior field, it is like my disciples, the monks and nuns. I teach them the Dharma that is good in the beginning, middle, and end, accomplishing their own benefit, with subtle meaning and phrases, fully satisfying the benefits, complete purity, and revealing the holy life. After the monks and nuns listen to my Dharma, they rely on me, take refuge in me, depend on me, and I am their captain, ferryman, and guide. I open their eyes, allowing them to see, and they abide in peace and happiness. After hearing it, they each say, &#x27;The Buddha teaches us, and we will all practice with utmost sincerity, which will benefit us for a long time, bringing meaning and happiness.&#x27; The medium field is like my disciples, the male and female lay followers. I teach them the Dharma that is good in the beginning, middle, and end, accomplishing their own benefit, with subtle meaning and phrases, fully satisfying the benefits, complete purity, and revealing the holy life. After the male and female lay followers listen to my Dharma, they rely on me, take refuge in me, depend on me, and I am their captain, ferryman, and guide. I open their eyes, allowing them to see, and they abide in peace and happiness. After hearing it, they each say, &#x27;The Buddha teaches us, and we will all practice with utmost sincerity, which will benefit us for a long time, bringing meaning and happiness.&#x27; If you want to know the inferior field, which is like salt-alkali wasteland, it is like the non-Buddhist practitioners. I also teach them the Dharma that is good in the beginning, middle, and end, up to revealing the holy life. Those non-Buddhist practitioners are able to listen and accept, according to their preferences, even just a single phrase, understanding its meaning. It also saves and benefits them for a long time, bringing meaning and happiness.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「欲知上田，如我弟子，诸比丘、比丘尼，我为说法初中后善，成于己利，句义微妙，满足利益，具足清白，显发梵行。彼比丘、比丘尼听我法已，依止我住，归依于我，依凭于我，我为舟主，而济渡之。我为开眼，令得视瞻，住于安乐。彼等闻已，各作是言：『佛为我说，我等咸当尽心修行，便于我等长夜利益，得义得乐。』彼中田者，如我弟子优婆塞、优婆夷，我为说法初中后善，成就己利，句义微妙，满足利益，具足清白，显发梵行。彼优婆塞、优婆夷听我法已，依止于我，归依于我，依凭于我，我为舟主，而济渡之。我为开眼，令得视瞻，住于安乐。彼等闻已，各作是言：『佛为我说，我等咸当至心修行，便于我等，长夜利益，得义得乐。』欲知下田沙卤恶者，如诸外道，我亦为说初中后善，乃至显发梵行。彼诸外道各能听受，随其所乐，乃至一句，解其义趣，亦为彼等，于长夜中，救济利益，得义得乐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman Bheka heard the Buddha&#x27;s teaching and said, &quot;It is rare, Gautama, to speak such a good and beautiful parable.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，闭口姓闻佛所说，而作是言：「希有！瞿昙，善说美喻。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to him, &quot;To illustrate this meaning, I will give another parable. It is like the world having three kinds of vessels: one water vessel is solid, complete, undamaged, without holes or cracks, and also without leaking. The second vessel is also complete and unbroken, without holes or cracks, but slightly leaking. The third vessel is broken and leaking. If a person were to pour water into them, which vessel should they pour into first?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「为成斯义，更说譬喻。如世人有三种瓫：有一水瓫，坚完不损，无有孔裂，亦无渗漏。其第二瓫，亦完不破，无有孔裂，少有渗漏。第三瓫者，亦破亦漏。彼人注水，应先何器？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>He replied, &quot;First into the unbroken and leak-free one. After filling the complete vessel, pour into the second vessel. Although the second vessel is complete and unbroken, it slightly leaks.&quot;</p></td><td lang="lzh" class="agama-chi"><p>对曰：「先于不破漏者。完器满已，注第二器。其第二器虽完不破，然小渗漏。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said again, &quot;After filling these vessels, where should you pour more? Although the third vessel is leaking and broken, you should still pour water into it, because for a short while before it leaks, it can be used. The first vessel is an analogy for my disciples, the bhikṣus and bhikṣuṇīs. I teach the Dharma for them, so that they may attain the meaning and happiness. The second vessel is an analogy for my disciples, the upāsakas and upāsikās. I teach the Dharma for them, so that they may attain the meaning and happiness. The third vessel is an analogy for the non-Buddhist practitioners. I teach the Dharma for them, so that if they listen and accept a little, they may attain the meaning and happiness.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛复告言：「满是瓫已，更注何处？其第三瓫，虽复漏破，亦应注水，为未漏间，暂得用故。其第一瓫喻我弟子诸比丘、比丘尼，我为说法，乃至令其得义得乐。其第二瓫喻我弟子诸优婆塞、优婆夷，我为说法，乃至得义得乐。其第三瓫喻诸外道，我为说法，若少听受，乃至令其得义得乐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman of the Bhelu family, having heard the Buddha&#x27;s teaching, was filled with fear and anxiety, and felt revulsion and disgust. His body hair stood on end. He rose, bowed at the Buddha&#x27;s feet, and said, &quot;I now sincerely repent before the Buddha! I am very foolish, like a child. The unwholesome deeds I have done, speaking falsely and unrealistically before the Buddha, are baseless and false. I only pray that you will have compassion and allow me to repent!&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，闭口姓聚落主闻佛所说，心生惊怖，忧愁厌恶，身毛为竖，起礼佛足，而作是言：「我今诚心向佛忏悔！我甚愚痴，犹如𪧀儿，所作不善，面于佛前，虚妄不实，下贱妄语。唯愿哀愍，听我忏悔！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to him, &quot;I know your sincerity. You truly know your faults and foolishness, like a child. The unwholesome deeds you have done, speaking falsely and unrealistically before the Tathāgata, the Arhat, are baseless and false. Now that you know your faults and sincerely repent, good qualities will increase daily and evil deeds will diminish. Now I have compassion for you and accept your repentance, causing your good qualities to increase and never be lost.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「知汝至心，汝实知罪，实知愚痴，犹如𪧀儿，所作不善。汝于如来阿罗呵所，虚妄下贱，作斯妄语。汝今知罪，诚心忏悔，善法日增，恶事退减。今我愍汝，受汝忏悔，令汝善法增长，常不退失。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman of the Bhelu family, having heard the Buddha&#x27;s teaching, was delighted and accepted it. He bowed his head at the Buddha&#x27;s feet and departed.</p></td><td lang="lzh" class="agama-chi"><p>时，闭口姓聚落主闻佛所说，欢喜奉行，顶礼而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

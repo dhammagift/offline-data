@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.158 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.158</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 158</span><span class="mirror-right">（一五八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an3.73.html">AN 3.73</a> / <a href="../parallels/sa934.html">SĀ 934</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was in the Niṣadha Grove in the country of Kapilavastu. At that time, Mahānāman the Śākya went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! According to my understanding of the meaning spoken by the Buddha, one attains liberation through attaining concentration. If that is so, is it that one first attains concentration and then liberation, or does one first attain liberation and then concentration? Are concentration and liberation simultaneous? What has never been attained before, what has never been practiced before, what has never arisen before in the past or future, and what does not exist in the present?&quot; At that time, the World-Honored One remained silent and did not answer. The second and third times he asked the same question, the Tathāgata remained silent and did not answer.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在迦毘罗卫国尼拘陀园林中。尔时，摩诃男释往诣佛所，顶礼佛足，在一面坐，白佛言：「世尊！如我解佛所说之义，获定心故，而得解脱。若如是者，为先得定后解脱耶？为先解脱后得定耶？定与解脱为俱时耶？所未曾得，所未曾行，过去未来所未曾生，现在亦无。」尔时，世尊嘿然不答，第二第三亦如是问，如来嘿然，悉皆不答。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Ānanda was attending to the Tathāgata, fanning him. Ānanda thought, &quot;Now Śākya Mahānāman is asking the World-Honored One about this profound meaning. The World-Honored One has just recovered from illness and his strength is still weak. He is not yet able to teach the Dharma. I should briefly explain a little Dharma for him to make him go away.&quot; Having thought this, Ānanda said to Śākya Mahānāman, &quot;The Tathāgata speaks of the precepts of learning, and also of the precepts of the non-learner. He speaks of the concentration of learning, and also of the concentration of the non-learner. He speaks of the wisdom of learning, and also of the wisdom of the non-learner. He speaks of the liberation of learning, and also of the liberation of the non-learner.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时尊者阿难侍如来侧，以扇扇佛。于时阿难作是念：「今释摩诃男以此甚深之义咨问世尊，世尊今者，所患始除，气力尚微，未堪说法，我当为彼略说少法，令其还去。」时尊者阿难作是念已，即语释摩男：「如来所说，说于学戒，亦说于彼无学之戒。说于学定，亦说于彼无学之定。说于学慧，亦说于彼无学之慧。说学解脱，亦说于彼无学解脱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahānāman said to Ānanda, &quot;How does the Tathāgata speak of the precepts of learning and the precepts of the non-learner, the concentration of learning and the concentration of the non-learner, the wisdom of learning and the wisdom of the non-learner, the liberation of learning and the liberation of the non-learner?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，摩诃男白阿难言：「云何如来说于学戒及无学戒，学定、无学定，学慧、无学慧，学解脱、无学解脱？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda said, &quot;The Tathāgata&#x27;s noble assembly abides in the precepts, upholds the Prātimokṣa, is fully endowed with dignified conduct, practices what is to be practiced, and in minor faults, gives rise to great fear. They fully uphold the precepts. This is called the perfection of upholding the precepts. They are disgusted with desire, evil, and unwholesome states, and enter the joy and bliss of separation, entering the first dhyāna, up to the fourth dhyāna. This is called dhyāna. They truly know suffering, truly know the origin of suffering, truly know the cessation of suffering, and truly know the path to the cessation of suffering. Knowing and seeing in this way, they sever the five lower fetters: the view of a self, adherence to precepts and practices, doubt, desire for the realm of form, and desire for the formless realm. Having severed the five lower fetters, they are born through transformation, and attain nirvāṇa right there. They are called non-returners, who no longer return to this desire realm. This is called the precepts of learning, the concentration of learning, the wisdom of learning, and the liberation of learning. Furthermore, at another time, they exhaust all taints, attain the outflow-free, attain liberation of mind, attain liberation of wisdom, realize it in the present life, attain the unborn, and know for themselves that birth and death are exhausted, the holy life has been established, what was to be done is done, and they will not again experience existence. At that time, they attain the precepts of the non-learner, the concentration of the non-learner, the wisdom of the non-learner, and the liberation of the non-learner. Mahānāman! For this reason, the Buddha speaks of learning and the non-learner.&quot; When Mahānāman heard what was said, he rejoiced, bowed his head in respect, and departed.</p></td><td lang="lzh" class="agama-chi"><p>阿难言：「如来圣众住戒持波罗提木叉，具足威仪，行所行处，于小罪中，心生大怖，具持禁戒，是则名为持戒具足。厌于欲恶及诸不善，离生喜乐，入于初禅，乃至入第四禅，是名为禅。如实知苦，如实知苦集，如实知苦灭，如实知苦灭道，如是知见，断五下分结，身见、戒取、疑、欲爱、瞋恚。彼断五下分结，便得化生，即于彼处，而得涅槃，名阿那含，更不还来至此欲界，是则名为学戒、学定、学慧、解脱。复次，更于异时，尽诸有漏，得于无漏，心得解脱，慧得解脱，现法取证，逮得无生，自知生死已尽，梵行已立，所作已办，不复受有。当于尔时，得无学戒、无学定、无学慧、无学解脱。摩诃男！以是缘故，佛说于学及以无学。」时摩诃男闻其所说，欢喜顶礼而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When Mahānāman had gone not far, the Buddha said to Ānanda, &quot;Do the bhikṣus of this Kapilavastu discuss such profound and far-reaching meanings with the Śākyas?&quot; Ānanda said to the Buddha, &quot;The bhikṣus of this Kapilavastu often discuss such profound meanings with the Śākyas.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时摩诃男既去不远，佛告阿难：「此迦毘罗卫国诸比丘等，颇共诸释讲论如是深远义不？」阿难白佛：「此迦毘罗卫诸比丘等，每与诸释共论如是甚深之义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Ānanda, &quot;The bhikṣus of Kapilavastu have gained great benefits, being able to understand such a holy and wise eye.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告阿难：「迦毘罗卫比丘与诸释等，获大善利，能解如是圣贤慧眼。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus, having heard the Buddha&#x27;s teaching, rejoiced and practiced accordingly.</p></td><td lang="lzh" class="agama-chi"><p>诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

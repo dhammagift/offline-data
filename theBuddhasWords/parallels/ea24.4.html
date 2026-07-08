@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 24.4 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 24.4</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">24.4</span> <span class="mirror-right">（四）瞿然</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn22.97.html">SN 22.97</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, a bhikṣu went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. The bhikṣu then said to the World-Honored One, &quot;Is there any form that is always unchanging, that has been in the world for a long time without moving? Is there any feeling, perception, formation, or consciousness that is always unchanging, that has been in the world for a long time without moving?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，有一比丘至世尊所，头面礼足，在一面坐。尔时，彼比丘白世尊曰：「颇有此色，恒在不变易耶？久在于世，亦不移动？颇有痛、想、行、识，恒在不变易耶？久存于世，亦不移动耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Bhikṣu! There is no form that is always unchanging and has been in the world for a long time. There is also no feeling, perception, formation, or consciousness that is always unchanging and has been in the world for a long time. If there were such form that was always unchanging and had been in the world for a long time, then the practice of the holy life would not be able to distinguish it. If feeling, perception, formation, or consciousness had been in the world for a long time and were unchanging, then the practice of the holy life would not be able to distinguish it. Therefore, bhikṣu! Because form cannot be distinguished, because it does not remain in the world for a long time, therefore the practice of the holy life can distinguish and exhaust the root of suffering. Also, because feeling, perception, formation, and consciousness do not remain in the world for a long time, therefore the practice of the holy life can distinguish and exhaust the root of suffering.&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「比丘！无有此色，恒在不变易、久存于世者，亦复无痛、想、行、识，恒在不变易、久存于世者。若复，比丘！当有此色，恒在不变易、久存于世者，则梵行之人，不可分别。若痛、想、行、识，久存于世、不变易者，梵行之人，不可分别。是故，比丘！以色不可分别，不久存于世故、是故梵行之人乃能分别尽于苦本，亦无痛、想、行、识，不久存于世，是故梵行乃可分别尽于苦本。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One took a small amount of soil and placed it on his fingernail, and said to the bhikṣu, &quot;Bhikṣu! Do you see this soil on my fingernail?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊取少许土，著爪上，语彼比丘曰：「云何，比丘！见此爪上土不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu replied, &quot;Yes, I see it, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「唯然，见已，世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the bhikṣu, &quot;If there were that much form that always existed in the world, then the practice of the holy life would not be able to distinguish and end suffering. Therefore, bhikṣu! Because there is not that much form, one can practice the holy life and end the root of suffering. The reason is this: bhikṣu, you should know that I once was a great king! Ruling the four continents, governing with the Dharma, leading the people, and possessing the seven treasures. The so-called seven treasures are the wheel treasure, elephant treasure, horse treasure, jewel treasure, jade woman treasure, householder treasure, and military commander treasure.</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「设当有尔许色恒在于世者，则梵行之人不可分别得尽苦际。以是，比丘！以无尔许色在，便得行梵行，得尽苦本。所以然者，比丘当知，我昔曾为大王！领四天下，以法治化，统领人民，七宝具足。所谓七宝者，轮宝、象宝、马宝、珠宝、玉女宝、居士宝、典兵宝。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣu, you should know that at that time, I, as this wheel-turning sage king, ruled the four continents. I had eighty-four thousand divine elephants, named Bodhi. I also had eighty-four thousand jeweled chariots, some covered with lion skins, some covered with wolf dog skins, all with tall banners and canopies. I also had eighty-four thousand high and wide terraces, like the dwelling place of the Heavenly Emperor. I also had eighty-four thousand lecture halls, like the Dharma lecture halls. I also had eighty-four thousand jade women, like heavenly maidens. I also had eighty-four thousand high and wide seats, all inlaid with gold, silver, and the seven treasures. I also had eighty-four thousand garments and adornments, all embroidered and soft. I also had eighty-four thousand provisions for food and drink, with various flavors.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，我于尔时，作此转轮圣王，领四天下，有八万四千神象，象名菩呼。复有八万四千羽宝之车，或用师子皮覆，或用狼狗皮覆者，尽悬幢高盖。复有八万四千高广之台，犹如天帝所居之处。复有八万四千讲堂，如法讲堂之比。复有八万四千玉女之众，像如天女。复有八万四千高广之座，皆用金银七宝厕间。复有八万四千衣被服饰，皆是文绣柔软。复有八万四千饮食之具，味若干种。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Bhikṣu, you should know that at that time, I rode a great elephant, extremely white and beautiful, with six tusks, adorned with gold and silver, able to fly and disappear, either large or small, named Bodhi. At that time, I rode a divine horse, with red hair and tail, walking without moving, adorned with gold and silver, able to fly and disappear, either large or small, named Hair King. At that time, I stayed in one of the eighty-four thousand high and wide terraces, named Sunima, made entirely of gold. At that time, I stayed overnight in one of the lecture halls, named Dharma Lecture, made entirely of gold. At that time, I rode a jeweled chariot, named Supreme, made entirely of gold. At that time, I had a jade woman, with attendants like sisters. At that time, I sat on one of the eighty-four thousand high and wide seats, with countless gold, silver, and necklaces. At that time, I wore a wonderful garment, like heavenly clothing. The food I ate tasted like nectar.</p></td><td lang="lzh" class="agama-chi"><p>「比丘当知，我尔时乘一大象，色极白好，口有六牙，金银交具，身能飞行，亦能隐形，或大、或小，象名菩呼。我尔时，乘一神马，毛尾朱色，行不身动，金银交饰，身能飞行，亦能隐形，或大、或小，马名毛王。我于尔时，八万四千高广之台，住一台中，台名须尼摩，纯金所作。尔时，我在一讲堂中止宿，讲堂名法说，纯金所造。我于尔时，乘一宝羽之车，车名最胜，纯金所造。我于尔时，将一玉女，左右使令亦如姊妹。我于尔时，于八万四千高广之座，在一座上，金银、璎珞不可称计。我于尔时，著一妙服，像如天衣。所食之食，味如甘露。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;At that time, I was a wheel-turning sage king. Every day, eighty-four thousand divine elephants came to the gate, causing countless injuries. At that time, I thought: &#x27;These eighty-four thousand divine elephants come to the gate every day, causing countless injuries. I now wish to divide them into two parts, with forty-two thousand coming to pay homage every day.&#x27; At that time, bhikṣu! I thought: &#x27;What merit and virtue did I create in the past to attain this power?&#x27; I further thought: &#x27;It is because of three causes and conditions that I have attained this blessing. What are the three? Namely, generosity, kindness, and self-restraint.&#x27; Bhikṣu, observe that at that time, all practices were completely extinguished without remainder. At that time, one roamed in desire without ever being satisfied. So-called satisfaction is satisfaction with the precepts of the sages. What do you think, bhikṣu! Is this form permanent or impermanent? &quot;</p></td><td lang="lzh" class="agama-chi"><p>「当于尔时，我作转轮圣王，时八万四千神象朝朝来至，门外多有伤害，不可称计。我于尔时，便作是念：『此八万四千神象朝朝来至，门外多有伤害，不可称计。我今意中欲使分为二分，四万二千朝朝来贺。』尔时，比丘！我作是念：『昔作何福？复作何德？今得此威力，乃至于是。』复作是念：『由三事因缘故，使我获此福祐。云何为三？所谓惠施、慈仁、自守。』比丘当观，尔时诸行永灭无余，尔时游于欲意无有厌足。所谓厌足，于贤圣戒律乃为厌足。云何，比丘！此色有常耶？无常耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu replied, &quot;Impermanent, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「无常也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;If it is also impermanent and subject to change, can you give rise to the thought, &#x27;This is mine, I am theirs&#x27;?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「若复无常，为变易法，汝可得生此心，此是我许，我是彼所乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu replied, &quot;No, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>对曰：「不也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Are feeling, perception, formation, and consciousness permanent or impermanent?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「痛、想、行、识是常也？是无常耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu replied, &quot;Impermanent, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>比丘对曰：「无常也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;If they are impermanent and subject to change, can you give rise to the thought, &#x27;This is mine, I am that&#x27;?&quot;</p></td><td lang="lzh" class="agama-chi"><p>「设使无常，为变易法，汝可得生此心，此是我许，我是彼所。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣu replied, &quot;No, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>对曰：「不也。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Therefore, bhikṣus, all forms, whether past, future, or present, whether gross or subtle, beautiful or ugly, far or near, are not mine, I am not theirs. This is what the wise should learn. All feelings, whether past, future, or present, whether far or near, are not mine, I am not theirs. This is what the wise should know. Bhikṣus should contemplate in this way. If the śrāvakas are disgusted with the eyes, disgusted with forms, disgusted with eye consciousness, and also disgusted with the suffering and happiness arising from the eyes, they will also be disgusted with the ears, disgusted with sounds, disgusted with ear consciousness, and also disgusted with the suffering and happiness arising from ear consciousness. They will also be disgusted with the nose, tongue, body, mind, and dharmas, and also disgusted with the suffering and happiness arising from the mind. Having been disgusted, they will be liberated. Having been liberated, they will attain the wisdom of liberation: &#x27;Birth and death are exhausted, the brahmacarya is established, what was to be done is done, and I will not again experience existence.&#x27; They will know this as it is.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「是故，比丘！诸所有色，过去、当来、今现在者。若大、若小。若好、若丑，若远、若近，此色亦非我所，我亦非彼所，此是智者之所学也。诸所有痛，过去、当来、今现在，若远、若近，此痛亦非我所，我亦非彼所。如是智者之所觉知。比丘当作是观，若声闻之人，厌患于眼，厌患于色，厌患眼识，若缘眼生苦乐，亦复厌患。亦厌患于耳，厌于声，厌于耳识，若依耳识生苦乐者，亦复厌患。鼻、舌、身、意、法亦复厌患，若依意生苦乐者，亦复厌患。已厌患，便解脱；已解脱，便得解脱之智：生死已尽，梵行已立，所作已办，更不复受有，如实知之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣu received the World-Honored One&#x27;s teaching like this. In a secluded place, he contemplated and practiced by himself. The reason for the sons of noble families to shave their beards and hair, wear the three Dharma robes, leave home, and cultivate the unsurpassed brahmacarya is: birth and death are exhausted, the brahmacarya is established, what was to be done is done, and one will not again experience existence. One should know this as it is. Then the bhikṣu attained arahantship.</p></td><td lang="lzh" class="agama-chi"><p>尔时，彼比丘得世尊如是之教，在闲静之处，思惟自修，所以族姓子，剃除须发，著三法衣，离家修无上梵行：生死已尽，梵行已立，所作已办，更不复受有，如实知之。是彼比丘便成阿罗汉。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣu heard the Buddha&#x27;s teaching and joyfully upheld it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，彼比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

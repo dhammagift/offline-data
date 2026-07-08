@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 109 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 109: Mahāpuṇṇama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn108comp.html#content"></a><a id="next-sutta" href="./mn110comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn109.html">MN 109</a> / <a href="../../parallels/sa58.html">SĀ 58</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahāpuṇṇama-sutta, the “greater discourse on a full moon [night]”, offers a detailed examination of the five aggregates. This discourse recurs in the Saṃyutta-nikāya and has a parallel in the Saṃyukta-āgama,<span class="note" id="mn109n214"><span class="details"><span class="p">[n.214] <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 100-104 and <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14b-15b, which agrees with the Pāli versions on locating the discourse in the Hall of Migāra’s Mother. <a href="../../sn/sn22.82.html">SN 22:82</a> has the title Puṇṇama, thereby agreeing with <a href="../../mn/mn109.html">MN 109</a> on the title except for the specification “greater”. <a href="../../parallels/sa58.html">SĀ 58</a> (or at least the first part of <a href="../../parallels/sa58.html">SĀ 58</a>) has the title 陰即受, given in the uddāna at T II 15b2. 陰即受 renders “aggregate(s) [affected by] clinging”, cf., e.g., <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14b23. For <a href="../../parallels/sa58.html">SĀ 58</a> to differ from the Pāli versions in regard to the title is not surprising, since while the Pāli versions take place on a full-moon night, <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14b13 specifies that the discourse took place in the afternoon, 晡時, so that it is only natural that <a href="../../parallels/sa58.html">SĀ 58</a> does not refer to a full-moon night in its title.</span></span></span> in addition to which a quotation of the present discourse has been preserved in Śamathadeva’s commentary on the Abhidharmakośabhāṣya.<span class="note" id="mn109n215"><span class="details"><span class="p">[n.215] Abhidh-k-ṭ at D (4094) mngon pa, nyu 54a1-57a2 or Q (5595) thu 95a3-99a1; cf. also Abhidh-k 7:13 in Pradhan 1967: 400,16, paralleling <a href="../../mn/mn109.html">MN 109</a> at MN III 16,12, with its Chinese counterparts in T 1558 at T XXIX 137a26 and T 1559 at T XXIX 288b20 (cf. the full quote below in note 217). Abhidh-k-ṭ agrees with the other versions on the location.</span></span></span></p>
+<p>The Mahāpuṇṇama-sutta and its parallels record in closely similar terms a question and answer exchange between a monk and the Buddha,<span class="note" id="mn109n216"><span class="details"><span class="p">[n.216] Ps IV 77,1 explains that this monk was an arahant who did not ask these questions out of personal ignorance. While in <a href="../../mn/mn109.html">MN 109</a> at MN III 15,29 and <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 100,16 the first question he asks is whether the five aggregates are material form, feeling, perception, volitional formations, and consciousness, which the Buddha confirms, <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14b14 and D (4094) mngon pa, nyu 54a3 or Q (5595) thu 95a5 follow the opposite sequence, with the Buddha at first making this statement on his own, after which the monk stands up and formulates the same as a question.</span></span></span> which clarifies that the five aggregates [affected by] clinging are rooted in desire,<span class="note" id="mn109n217"><span class="details"><span class="p">[n.217] While <a href="../../mn/mn109.html">MN 109</a> at MN III 16,12 and <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 100,26 simply indicate that the five aggregates are “rooted in desire”, chandamūlaka, <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14b22 draws out the same in more detail by explaining that they are “rooted in desire, arisen from desire, born from desire, contacted by desire”, 欲為 根, 欲集, 欲生, 欲觸; cf. also its counterpart in D (4094) mngon pa, nyu 54b1 or Q (5595) thu 95b6: “rooted in desire, completely arisen from desire, akin to desire, and produced by desire”,’dun pa’i rtsa ba can, ’dun pa las kun ’byung ba, ’dun pa dang ’dra ba, dun pa las rab tu skye ba dag yin no. Abhidh-k 7:13 in Pradhan 1967: 400,16 qualifies the five aggregates to be chandamūlakāś chandasamudayāś chandajātīyāś chandaprabhavā; cf. also T 1558 at T XXIX 137a26: 以欲為根, 以欲為集, 以欲 為類, 以欲為生, and T 1559 at T XXIX 288b20: 依欲為根, 依欲為集, 依欲為生, 依欲為有.</span></span></span> followed by pointing out that clinging is neither identical with the five aggregates nor something apart from them, but consists in desire in regard to them.</p>
+<p>The Mahāpuṇṇama-sutta and its parallels indicate that such desire could be directed towards future manifestations of any of the five aggregates. They continue by defining the term aggregate in the same way, followed by offering the same type of definition for each of the five aggregates.</p>
+<p>The Pāli versions next take up the arising of a sense of identity (sakkāyadiṭṭhi) in regard to the aggregates [affected by] clinging, after which they examine the gratification, danger, and release in regard to them. The Chinese and Tibetan versions take up the same two topics, although they tackle them in the opposite sequence.</p>
+<p>The Pāli and Tibetan versions explain that in regard to each aggregate a sense of identity can arise, which can take place by:</p>
+<ul>
+<li>taking the aggregate to be the self,</li>
+<li>postulating the self as the owner of the aggregate,</li>
+<li>assuming the aggregate to exist within the self,</li>
+<li>locating the self within the aggregate. what abbreviated manner of presentation.<span class="note" id="mn109n218"><span class="details"><span class="p">[n.218] The Tibetan version has a reading that closely correspond to the Pāli versions, D (4094) mngon pa, nyu 55b5 or Q (5595) thu 97a7: gzugs la bdag go ... bdag gzugs dang ldan pa dang, bdag la gzugs yod, gzugs la bdag yod. <a href="../../parallels/sa58.html">SĀ 58</a> at T II 14c29 differs, in as much as it speaks just of 見我, 異我, 相在, “seeing [as] self, [as] other [than] self, [as] existing [in relation] to each other”. Choong 2000: 59 draws attention to two Saṃyukta-āgama discourses that help to clarify this expression. <a href="../../parallels/sa45.html">SĀ 45</a> at T II 11b5 describes the viewing of self in regard to the aggregate of form as 見色是我, 色異我, 我在色, 色在我. <a href="../../parallels/sa109.html">SĀ 109</a> at T II 34b13 refers to the same in a slightly more abbreviated manner as 見色是我, 異我, 我在色, 色在我. Thus 見我 and 異我 refer to identifying the aggregate as self and to taking the aggregate to be owned by the self, corresponding to rūpam attato samanupassati and rūpavantaṃ vā attānaṃ (in the case of the aggregate of form) in <a href="../../mn/mn109.html">MN 109</a> at MN III 17,27. The expression 相在, “existing [in relation] to each other”, appears to be an abbreviated representation of 我在色, 色在我 (in the case of the aggregate of form) and corresponds to attani vā rūpaṃ, rūpasmiṃ vā attānaṃ in <a href="../../mn/mn109.html">MN 109</a> at MN III 17,28. This understanding is also found in a gloss in the 佛光 Saṃyukta-āgama edition p. 33 note 2, which explains that 見我, 異我, 相在 stands for 我, 我所, 五蘊在我中, 我在五蘊中. The Madhyama-āgama presentation of the same type of contemplation, found, e.g., in <a href="../../parallels/ma210.html">MĀ 210</a> at T I 788a28 (parallel to <a href="../../mn/mn44.html">MN 44</a> at MN I 300,7), employs the more easily intelligible formulation 見色是神, 見神有色, 見神中有色, 見色中 有神也. As Choong 2000: 58 points out, the Saṃyukta-āgama uses the same cryptic expression 見我, 異我, 相在 not only to represent the four modes of viewing a self in regard to any of the five aggregates, but also to represent the threefold mode “mine, I, my self”.</span></span></span></li>
+</ul>
+<p>The Chinese version makes the same point, although its presentation adopts a some-</p>
+<p>While the Pāli versions next inquire how to go beyond identification and conceit in regard to the body and external signs,<span class="note" id="mn109n219"><span class="details"><span class="p">[n.219] <a href="../../mn/mn109.html">MN 109</a> at MN III 18,31 inquires how to practise so that “in this body with its consciousness and externally in all signs there is no ‘I’-making, no ‘my’-making and no underlying tendency to conceit”, imasmiñ ca saviññāṇake kāye bahiddhā ca sabbanimittesu ahaṃkāramamaṃkāramānānusayā na hontī ti (Ce-MN III 120,29: ahiṅkāramamiṅkāramānānusayā, Se-MN III 105,18: ahaṅkāramamaṅkāramānānusayā), a formulation found similarly in <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 103,10.</span></span></span> the Saṃyukta-āgama discourse and the discourse quotation in Śamathadeva’s commentary examine how to reach the destruction of the influxes.<span class="note" id="mn109n220"><span class="details"><span class="p">[n.220] <a href="../../parallels/sa58.html">SĀ 58</a> at T II 15a6 inquires after attaining the “destruction of the influxes”, 漏盡, with its equivalent in zag pa zad pa in D (4094) mngon pa, nyu 56a2 or Q (5595) thu 97b5.</span></span></span> In spite of differing formulations, the parallel versions have obviously the same goal of full awakening in view.</p>
+<p>The Pāli, Chinese, and Tibetan versions agree that to reach this goal requires the removal of any identification with the five aggregates and to leave behind any appropriation of them.</p>
+<p>The four versions report that, while hearing these instructions, a monk had the deluded thought that, given the absence of a self, there was nobody to whom karmic retribution would apply.<span class="note" id="mn109n221"><span class="details"><span class="p">[n.221] <a href="../../mn/mn109.html">MN 109</a> at MN III 19,12: “deeds done by not-self, what self could they affect”, anattakatāni kammāni, kam attānaṃ phusissantī ti? <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 103,27 reads instead katam attānaṃ phusissantī ti (Be- SN II 85,10 and Ce-SN III 176,13: katham attānaṃ, Se-SN III 126,11: kammattānaṃ). <a href="../../parallels/sa58.html">SĀ 58</a> at T II 15a12: “[if] deeds are done by no self, then who will receive the retribution in the future”, 作無我業, 於未來世, 誰當受報? D (4094) mngon pa, nyu 56a6 or Q (5595) thu 98a4: “there being no self, in what way will deeds done by oneself be experienced”, bdag med pas byas pa bdag gis ji ltar myong bar ’gyur? <a href="../../parallels/sa58.html">SĀ 58</a> at T II 15a11 differs from <a href="../../mn/mn109.html">MN 109</a> and <a href="../../sn/sn22.82.html">SN 22:82</a> in as much as it qualifies the monk as “unwise”, 無知, and to be one who had “given rise to an evil and wrong view”, 起惡邪見, qualifications similarly made in D (4094) mngon pa, nyu 56a5 or Q (5595) thu 98a2: mi mkhas pa and sdig pa can gyi lta bar gyur pa.</span></span></span> On becoming aware of this thought, the Buddha delivered a standard catechism on the impermanent, unsatisfactory, and self-less nature of the five aggregates.<span class="note" id="mn109n222"><span class="details"><span class="p">[n.222] According to <a href="../../mn/mn109.html">MN 109</a> at MN III 19,20, the Buddha introduced this catechism by proclaiming that he had “trained” the monks “in conditions ... here and there in these and those things”, paṭicca vinītā ... tatra tatra tesu tesu dhammesu (Be-MN III 69,25: paṭivinītā ... tatra tatra dhammesu, Ce-MN III 122,11: paṭicca vinītā ... tatra tatra dhammesu, and Se-MN III 106,19: paṭipucchāmi vinītā ... tatra tatra dhammesu; cf. also Pérez-remón 1980: 255), which in <a href="../../sn/sn22.82.html">SN 22:82</a> at SN III 104,1 reads “through counter questioning ... here and there in these things”, paṭipucchā vinītā ... tatra tatra tesu dhammesu (Be-SN II 85,17, Ce-SN III 176,20, and Se-SN III 126,17 read tatra tatra tesu tesu dhammesu). <a href="../../parallels/sa58.html">SĀ 58</a> does not have this initial proclamation at all. In the Tibetan version, the Buddha just indicates that the monks have been trained by him, without specifying in what they have been trained, D (4094) mngon pa, nyu 56b2 or Q (5595) thu 98a7. The expression paṭipucchā vinītā recurs in <a href="../../an/an2.6.html">AN 2:6</a> at AN I 73,16, where it stands for discussing with others and explaining to each other the deep discourses related to emptiness. The occurrence of paṭicca in some Pāli editions brings to mind another occasion described in several sources, where a group of Brahmins and householders are also confused as to how rebirth can take place without a self, in reply to which the Buddha delivers a teaching on dependent arising, cf. <a href="../../parallels/ma62.html">MĀ 62</a> at T I 498b27, T 41 at T I 826b8, the Saṅghabhedavastu in Gnoli 1977: 159,1, the Mahāvastu in Basak 1968/2004: 268,31 or in Senart 1897: 448,12, and fragment 581 folio 117V3-R1 in Waldschmidt 1932: 19-20, with a Tibetan counterpart in Waldschmidt 1962: 361,17 and in Skilling 1994a: 94,10.</span></span></span></p>
+<p>The Majjhima-nikāya version and its Chinese and Tibetan counterparts conclude by reporting that a substantial number of monks reached liberation while listening to the present exposition.<span class="note" id="mn109n223"><span class="details"><span class="p">[n.223] <a href="../../mn/mn109.html">MN 109</a> at MN III 20,24 specifies that as many as sixty monks reached awakening, while <a href="../../parallels/sa58.html">SĀ 58</a> at T II 15a28 speaks simply of “numerous”, 眾多, as does D (4094) mngon pa, nyu 57a2 or Q (5595) thu 98b8: rab tu mang po. <a href="../../sn/sn22.82.html">SN 22:82</a> does not report the effect this discourse had on its audience. Its commentary, Spk II 308,6, indicates that five hundred monks reached liberation (which according to the commentary happened with each discourse in this chapter of the Saṃyutta-nikāya).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

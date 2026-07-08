@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 38 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 38: Mahātaṇhāsaṅkhaya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn37comp.html#content"></a><a id="next-sutta" href="./mn39comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn38.html">MN 38</a> / <a href="../../parallels/ma201.html">MĀ 201</a> / <a href="../../parallels/sa304.html">SĀ 304 (~)</a> / <a href="../../parallels/ea21.3.html">EĀ 21.3 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahātaṇhāsaṅkhaya-sutta, the “greater discourse on the destruction of craving”, gives a detailed exposition of dependent arising (paṭicca samuppāda). This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn38n227"><span class="details"><span class="p">[n.227] The parallel is <a href="../../parallels/ma201.html">MĀ 201</a> at T I 766b-770a, which agrees with <a href="../../mn/mn38.html">MN 38</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma201.html">MĀ 201</a> is entitled after the monk Sāti, who in both versions is the cause for the delivery of the discourse (嗏帝經 according to a 宋, 元, and 明 variant). A discourse quotation in the Dharmaskandha also entitles the discourse after this monk, T 1537 at T XXVI 507c8: 教誨莎底經, the corresponding Sanskrit fragment 4737 folio 5v10 in Dietz 1984: 34,1 reads uktaṃ bhagavatā svātiṃ [bh]ikṣuṃ kaivarttapūrvviṇam ārabhya. On <a href="../../parallels/ma201.html">MĀ 201</a> cf. also Minh Chau 1964/1991: 57-58, 127, and 165. Lévi 1915: 421 notes that the Sarvāstivāda Vinaya includes the present discourse in a list of sūtras known among well instructed lay disciples, T 1435 at T XXIII 174b21: 室唳咆那都叉耶時月提, glossed as 索滅解脫經. The Chinese Udāna collection, T 212 at T IV 734c16, has a discourse quotation from the 大愛之本末所說, a formulation that reminds of the title of <a href="../../mn/mn38.html">MN 38</a>, which it allocates to a Madhyama-āgama, although the quote itself takes up different types of rebirth.</span></span></span> A few lines of this discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn38n228"><span class="details"><span class="p">[n.228] SHT V 1114 (pp. 108-109) and SHT V 1166 (pp. 162-163; cf. also SHT VII p. 284 and SHT VIII p. 197). SHT V 1114 and SHT V 1166 parallel the discussion at MN I 256,31; SHT V 1114 also has parts of the exchange at MN I 258,14. For a discourse quote in Abhidh-k-ṭ cf. below note 242.</span></span></span></p>
+<p>The Mahātaṇhāsaṅkhaya-sutta and its parallel in the Madhyama-āgama report in similar ways that the monk Sāti,<span class="note" id="mn38n229"><span class="details"><span class="p">[n.229] <a href="../../mn/mn38.html">MN 38</a> at MN I 256,12 qualifies Sāti as a “fisherman’s son”, kevaṭṭaputta, which <a href="../../parallels/ma201.html">MĀ 201</a> at T I 766c2 renders as 雞和哆子. Rhys Davids 1901: 866 explains that in ancient India “trades and crafts were very largely hereditary ... families are frequently referred to in terms of their traditional calling, just as a man is often described ... in terms of his father’s trade: ‘Sāti the fisherman’s son’ for ‘Sāti the fisherman’”.</span></span></span> who thought that according to the Buddha the same consciousness transmigrates through the round of rebirths,<span class="note" id="mn38n230"><span class="details"><span class="p">[n.230] <a href="../../mn/mn38.html">MN 38</a> at MN I 256,14: tad ev’ idaṃ viññāṇaṃ sandhāvati saṃsarati, anaññan ti and <a href="../../parallels/ma201.html">MĀ 201</a> at T I 766c3: 今此識往生, 不更異. Norman 1991/1993a: 256 draws attention to passages that reflect ideas similar to Sāti’s view, found in the Bṛhadāraṇyaka Upaniṣad 4.4.2 and 4.4.22, according to which when life ends and the senses cease, the ‘being’ departs as consciousness, sa vijñāno bhavati, sa vijñānam evānvavakrāmati, followed by identifying consciousness as the great unborn self, sa vā eṣa mahān aja ātmā yo ’yaṃ vijñānamayaḥ prāṇeṣu, cf. Radhakrishnan 1953/1992: 270 and 278.</span></span></span> upheld his view even when told by other monks that this was in contradiction to the Buddha’s teaching. According to both versions, the monks presented the matter to the Buddha, who called Sāti to his presence and rebuked him for his obstinate adhering to such a misrepresentation of the teachings.<span class="note" id="mn38n231"><span class="details"><span class="p">[n.231] The formulation used in <a href="../../mn/mn38.html">MN 38</a> at MN I 258,16 by Sāti to explain his view of consciousness, vado vedeyyo tatra tatra kalyāṇapāpakānaṃ kammānaṃ vipākaṃ paṭisaṃvedetī ti, recurs in <a href="../../mn/mn2.html">MN 2</a> at MN I 8,23 as a view that obstructs progress to liberation from dukkha, further specified to imply the assumption that this self is eternal.</span></span></span></p>
+<p>The two discourses continue with the Buddha explaining that consciousness is a dependently arisen phenomenon, reckoned according to the sense in dependence on which it arises, just as fire is reckoned according to its fuel.<span class="note" id="mn38n232"><span class="details"><span class="p">[n.232] A minor difference in sequence is that <a href="../../parallels/ma201.html">MĀ 201</a> at T I 767b7 describes Sāti’s dismay only after this exposition, whereas <a href="../../mn/mn38.html">MN 38</a> at MN I 258,28 has the same before it. That the Buddha in reply to Sāti’s misunderstanding turns right away to the topic of dependent arising shows, as pointed out by Buddhadāsa 1979/1992: 25, that Sāti’s view was due to his lack of understanding paṭicca samuppāda.</span></span></span></p>
+<p>According to the Mahātaṇhāsaṅkhaya-sutta and its parallel, the Buddha next engaged the other monks, present on this occasion, in a catechism on the dependent nature of what has “come to be”.<span class="note" id="mn38n233"><span class="details"><span class="p">[n.233] <a href="../../mn/mn38.html">MN 38</a> at MN I 260,7: bhūtam idan ti (Se-MN I 478,1: bhūtam idaṃ without iti), whose equivalent in <a href="../../parallels/ma201.html">MĀ 201</a> at T I 767b12 reads “truly said”, 真說, apparently following a secondary meaning of bhūta as “truth” in opposition to abhūta as “falsehood”. Another occurrence of the expression bhūtam idaṃ, found in <a href="../../sn/sn12.31.html">SN 12:31</a> at SN II 48,4, has its counterpart in “truth”, 真實, in <a href="../../parallels/sa345.html">SĀ 345</a> at T II 95b17, which thus seems to follow the same shade of meaning as <a href="../../parallels/ma201.html">MĀ 201</a>. Regarding the expression “this originates with nutriment”, tad āhārasambhavan ti, found in <a href="../../mn/mn38.html">MN 38</a> at MN I 260,8, the corresponding passage in <a href="../../parallels/ma201.html">MĀ 201</a> at T I 767b17 has the somewhat puzzling reading “the Tathāgata’s true words”, 如來真說. Watanabe 1972: 981 and the 佛光 Madhyama-āgama edition p. 1845 note 3 suggest that this may be a mistaking of “nutriment”, āhāra, for “worthy”, araha, which the translator then took to refer to the Tathāgata.</span></span></span> The commentary explains that the Buddha used this expression in order to broaden the scope of his exposition from consciousness to all five aggregates.<span class="note" id="mn38n234"><span class="details"><span class="p">[n.234] Ps II 307,10.</span></span></span> In both versions this catechism culminates in warning the monks that they should not grasp or cling to their own view, reminding them of the simile of the raft.<span class="note" id="mn38n235"><span class="details"><span class="p">[n.235] <a href="../../mn/mn38.html">MN 38</a> at MN I 260,35 and <a href="../../parallels/ma201.html">MĀ 201</a> at T I 767c7, spoken in reference to a simile delivered in <a href="../../mn/mn22.html">MN 22</a> at MN I 134,30, <a href="../../parallels/ma200.html">MĀ 200</a> at T I 764b19, and <a href="../../parallels/ea43.5.html">EĀ 43.5</a> at T II 760a13.</span></span></span> In the Madhyama-āgama version, the Buddha at this point also asks the monks how they would answer if they were to be questioned by an outsider on the purpose and benefit of their view. The monks reply that the purpose of their view is disenchantment and dispassion.<span class="note" id="mn38n236"><span class="details"><span class="p">[n.236] <a href="../../parallels/ma201.html">MĀ 201</a> at T I 767c17: 為厭義, 為無欲義.</span></span></span></p>
+<p>Both versions next turn to the four types of nutriment and trace their conditioned arising from craving all the way back to ignorance, followed by tracking the same dependent sequence forwards from ignorance up to old age and death. The Pāli version concludes this examination with a summary statement on specific conditionality (“when this exists, that exists; with the arising of this, that arises”),<span class="note" id="mn38n237"><span class="details"><span class="p">[n.237] <a href="../../mn/mn38.html">MN 38</a> at MN I 262,37: imasmiṃ sati idaṃ hoti, imass’ uppādā idaṃ uppajjati.</span></span></span> a statement not found in the Madhyama-āgama version. Both versions follow with the same catechism on the cessation aspect of dependent arising, again with the difference that the Madhyamaāgama version does not have a summary statement on specific conditionality in the cessation mode.</p>
+<p>The Mahātaṇhāsaṅkhaya-sutta and its parallel continue by reporting the monks’ affirmation that they were aloof from speculations about the self in relation to past, future, and present times.<span class="note" id="mn38n238"><span class="details"><span class="p">[n.238] <a href="../../mn/mn38.html">MN 38</a> at MN I 264,37 and <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769a10. In a similar vein, <a href="../../sn/sn12.20.html">SN 12:20</a> at SN II 26,24 and its parallels <a href="../../parallels/sa296.html">SĀ 296</a> at T II 84b27 and fragment S 474 folio 11V6-R2 in Tripāṭhī 1962: 40 relate insight into dependent arising to going beyond such speculations.</span></span></span> According to both versions, the monks also declared that they did not speak like this out of respect for their teacher, but out of personal knowledge,<span class="note" id="mn38n239"><span class="details"><span class="p">[n.239] Lamotte 1983: 92 comments on the present passage that the Buddha “réclame de ses disciples une conviction spontanée sur quelques points précis de doctrine”.</span></span></span> proclaiming that it was out of the question for them to change teacher, or to be concerned with auspicious signs and similar externals held in esteem among other recluses and Brahmins.</p>
+<p>The Madhyama-āgama account reports that the monks made several additional assertions, such as that they would be incapable of committing any of the five heinous crimes, or would never go so far as to forsake their precepts and give up their practice of the path.<span class="note" id="mn38n240"><span class="details"><span class="p">[n.240] <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769a21+24. The five heinous crimes are killing one’s mother, killing one’s father, killing an arahant, creating a schism in the monastic community, and causing injury to a Buddha (with malicious intent). The same five feature as impossibilities for a noble disciple in <a href="../../mn/mn115.html">MN 115</a> at MN III 64,30 and <a href="../../an/an1.15.html">AN 1:15</a> at AN I 27,13.</span></span></span> Although the details differ, the basic point made in both versions is the same, in that the monks were endowed with the personal knowledge of a disciple in higher training (sekha).</p>
+<p>The two versions next turn to the three conditions for the conception of a foetus. The same topic recurs as a discourse on its own in the Ekottarika-āgama.<span class="note" id="mn38n241"><span class="details"><span class="p">[n.241] <a href="../../parallels/ea21.3.html">EĀ 21.3</a> at T II 602c-603a.</span></span></span> While the Madhyama-āgama version simply enumerates the three conditions,<span class="note" id="mn38n242"><span class="details"><span class="p">[n.242] <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769b23. <a href="../../mn/mn93.html">MN 93</a> at MN II 157,1 also merely enumerates the three conditions. A discourse quotation (not specific to the present discourse) in Abhidh-k 3:12 in Pradhan 1967: 121,22 parallels the reference to the three conditions for conceptions in <a href="../../mn/mn38.html">MN 38</a> at MN I 265,35; cf. also T 1558 at T XXIX 44c26, T 1559 at T XXIX 201c22, and D (4094) mngon pa, ju 110a3 or Q (5595) tu 126a1. Versions of this discourse quotation can also be found in Dharmaskandha fragment 4737 folio 6r1 in Dietz 1984: 34,3 and in its Chinese counterpart T 1537 at T XXVI 507c8, as well as in the *Mahāvibhāṣā, T 1545 at T XXVII 309a12 or 356c27. The same three conditions recur also in the Divyāvadāna in Cowell 1886: 1,14 and 440,12 or Vaidya 1999: 1,9 and 286,11, in the Pravrajyāvastu of the (Mūla-)Sarvāstivāda Vinaya in Dutt 1984d: 25,11 and fragment folio 6v10 in Vogel 1992: 81, and in the Yogācārabhūmi, Bhattacharya 1957: 21,17 and T 1579 at T XXX 282b25; cf. also Hara 2009: 220-221. A complementary perspective on the ghabbassāvakkanti can be found in <a href="../../an/an3.9.html">AN 3:61:9</a> at AN I 176,30.</span></span></span> the Majjhima-nikāya discourse also mentions the possibility that the mother is not in season or that the being to be reborn is not present, both of which would prevent conception from taking place.<span class="note" id="mn38n243"><span class="details"><span class="p">[n.243] <a href="../../mn/mn38.html">MN 38</a> at MN I 265,37 refers to this being to be reborn as a gandhabba. <a href="../../dn/dn15.html">DN 15</a> at DN II 63,2 refers to the same in terms of the “consciousness”, viññāṇa, that descends into the mother’s womb. According to Böhtlingk 1883/1998b: 150, one of the meanings of the term gandharva is the soul after death, before it enters a new body (“die Seele nach dem Tode, bevor sie in einen neuen Körper einzieht”). MW: 346 s.v. gandharva similarly speaks of “the soul after death and previous to its being born again”. The implications of this term are reflected in the Chinese translations: <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769b24 reads 香陰, corresponding to gandhabba, and has “birth aggregate”, 生陰, as a 宋, 元, and 明 variant reading. <a href="../../parallels/ea21.3.html">EĀ 21.3</a> at T II 602c19+20 speaks of the “external consciousness”, 外識, and then of the “consciousness that wishes [to be reborn]”, 欲識. On the gandhabba or gandharva cf. also Anālayo 2008c, Blum 2004: 204, Harvey 1995a: 105-108, Hoffman 1987/1992: 67-69, Karunaratne 2003b: 132-133, Langer 2000: 9-17, MacDonell 1897/2000: 136-137, Malalasekera 1937/1995: 746, Masson 1942: 121-123, McDermott 1980: 170-171, Oldenberg 1894/1983: 249-254, Pischel 1889: 77-81 (who suggests the meaning “foetus”), Premasiri 2005a: 525, Przyluski 1938: 45, Somaratne 2005: 176-177, Upadhyaya 1971: 374- 375, Wayman 1974: 231-234, Wijesekera 1994: 175-212, and Windisch 1908: 14-27. Another shade of meaning of the term can be seen in Ud 5:5 at Ud 54,16, which includes gandhabbas in a list of beings that inhabit the ocean. Hecker 1972: 198 notes that the gandhabbas as celestial musicians are the type of celestial beings most closely similar in nature to humans and may for this reason have been chosen as pars pro toto to represent a being to be reborn. Oberlies 2005: 98 explains that in Vedic literature “the function of the Gandharv<i>á</i> is ... to escort things from ‘outside’ into this world”, adding that “seemingly the Gandharv<i>á</i> was identified now and then with the item he is guarding”. Ibid (p. 108) then suggests that its function in the context of the early Buddhist listing of three conditions required for conception could similarly be that of escorting the viññāṇa from one existence to the next, a role which would, in analogy to its Vedic predecessor, also allow for an identification of the gandhabba with the viññāṇa.</span></span></span> The Ekottarika-āgama version takes up the different possibilities that could prevent conception in more detail, listing various possible afflictions of the mother or the father.<span class="note" id="mn38n244"><span class="details"><span class="p">[n.244] <a href="../../parallels/ea21.3.html">EĀ 21.3</a> at T II 603a13 then concludes by instructing the monks to train themselves in order to eliminate these three conditions, 斷三因緣如是, 諸比丘, 當作是學, which perhaps intends that they should practise until they transcend future rebirth.</span></span></span></p>
+<p>The Mahātaṇhāsaṅkhaya-sutta and its Madhyama-āgama parallel report how, after successful conception,<span class="note" id="mn38n245"><span class="details"><span class="p">[n.245] For a treatment of the development of a foetus, once conception has occurred, in the Garbhāvākrānti<i>-</i> sūtra cf. Kritzer 2008, for the same in Kṣemendra’s Garbhāvakrāntyavadāna cf. Hahn 1997.</span></span></span> following the period of the mother’s pregnancy a child is born, grows up, and develops a liking for pleasant experiences and a dislike for unpleasant ones.<span class="note" id="mn38n246"><span class="details"><span class="p">[n.246] Both versions describe that the child is without mindfulness in regard to the body and with a narrow state of mind, cf. <a href="../../mn/mn38.html">MN 38</a> at MN I 266,24: anupaṭṭhitakāyasati ca viharati parittacetaso and <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769b29: 不立身念少心. Regarding the children games described in <a href="../../mn/mn38.html">MN 38</a> at MN I 266,14 cf. the study of various such games in Ramers 1996: 183-200.</span></span></span> The grown-up thereby delights in feeling, which in turn leads to the remaining links of dependent arising.<span class="note" id="mn38n247"><span class="details"><span class="p">[n.247] According to <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769c10, at this point the Buddha also explained that Sāti was under the influence of craving, a point made in <a href="../../mn/mn38.html">MN 38</a> at MN I 271,1 towards the end of the discourse.</span></span></span> In both versions, the present passage thus forms a practical application of the previous treatment of dependent arising by way of its twelve links in forward and backward order, illustrating how delight in feeling leads to clinging and therewith to the conditioned arising of dukkha.</p>
+<p>The two versions next take up the arising of a Tathāgata, which the Majjhima-nikāya discourse treats in detail by giving a full account of the gradual path of training.<span class="note" id="mn38n248"><span class="details"><span class="p">[n.248] <a href="../../mn/mn38.html">MN 38</a> at MN I 267,13.</span></span></span> Its Madhyama-āgama parallel does not have such a full account of the gradual path of training. Instead, it only briefly notes that a Tathāgata arises in the world, after which it straightaway turns to detachment in relation to feelings, thereby providing a contrast to the child described earlier.<span class="note" id="mn38n249"><span class="details"><span class="p">[n.249] The subject of the description of detachment in regard to feelings in <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769c14 is “he”, 彼. Judging from the corresponding passage in <a href="../../mn/mn38.html">MN 38</a> at MN I 270,9, the subject should be a disciple in general, not the Tathāgata. In fact, the point made in both versions is to depict the path to freedom from likes and dislikes and therewith to freedom from the dependent arising of dukkha. To exemplify this, the example of a disciple who undertakes the gradual path would be a more straightforward illustration.</span></span></span> The Majjhima-nikāya version has a similar statement at the end of its detailed exposition of the gradual path of training.</p>
+<p>A problem with this part of the Majjhima-nikāya version is that it refers to the need to stay aloof from likes and dislikes in regard to sensory experience twice. The first instance occurs as part of the gradual path under the heading of sense-restraint, the second is part of the final passage found in both versions on being unattached in regard to whatever feelings arise at any sense-door.<span class="note" id="mn38n250"><span class="details"><span class="p">[n.250] <a href="../../mn/mn38.html">MN 38</a> at MN I 269,2 and at MN I 270,9. The two instances are, however, not identical, as in the first case the description is part of a process of training, whereas in the second case the context suggests some degree of accomplishment.</span></span></span></p>
+<p>As a result of this repeated treatment, the Mahātaṇhāsaṅkhaya-sutta turns to mindfulness of the body and aloofness from likes and dislikes only after the attainment of the four jhānas. This way of presentation goes against the usual sequence of practice depicted in the Nikāyas and Āgamas, where mindfulness of the body and aloofness from sensory attraction are preconditions for developing the jhānas.</p>
+<p>It could also be questioned how far a full account of the gradual path of training fits the present context, since in other discourses such an account is usually given to newcomers or outsiders, or else when the context requires such a detailed treatment. The present discourse’s main concern, however, is dependent arising, which would not require a full account of the gradual path of training. The audience of the Buddha in this particular instance are monks who are already disciples in higher training. Thus the members of his audience would have been well acquainted with the gradual path of training from their own experience and would therefore not need to be given a detailed account of it.<span class="note" id="mn38n251"><span class="details"><span class="p">[n.251] Manné 1995: 16 notes that especially in the Sīlakkhandha-vagga of the Dīgha-nikāya a full treatment of the gradual path often functions as a “coup de grâce ... in the Buddha’s answer to the challenges made by his opponents”, a role that supports the impression that a full account of the gradual path is usually part of a discourse given to outsiders or new converts, not to disciples in higher training.</span></span></span> These points would support the presentation in the Madhyama-āgama version, which does not have a full account of the gradual path.</p>
+<p>The Majjhima-nikāya discourse concludes with the monks rejoicing, to which the Madhyama-āgama version adds a triple shaking of numerous world systems.<span class="note" id="mn38n252"><span class="details"><span class="p">[n.252] <a href="../../parallels/ma201.html">MĀ 201</a> at T I 769c28 speaks of a “a triple shaking of the three-thousand great thousand[-fold] world elements”, 三千大千世界三反震動.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

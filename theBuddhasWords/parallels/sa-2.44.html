@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.44 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.44</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 44</span><span class="mirror-right">（四四）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn11.9.html">SN 11.9–10</a> / <a href="../parallels/sa1115.html">SĀ 1115</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the World-Honored One addressed the bhikṣus, saying, &quot;Long ago, in a place far from a village, in a forest hermitage, there were many sages dwelling there. Not far from the sages&#x27; dwelling place, the devas and asuras were engaged in battle. At that time, the asura king Vemacitrin put on five kinds of adornments, wore a heavenly crown, held a jeweled whisk, wore a flower canopy on his head, wore a jeweled sword, and wore multi-colored leather shoes. He went to the sages&#x27; dwelling place. He did not enter through the door, but entered through the wall. He also did not speak or greet the sages. He then left through the wall. At that time, a certain sage said, &#x27;Vemacitrin and the others have no respectful mind. They do not speak or greet the sages, but leave through the wall.&#x27; Another sage said, &#x27;If the asuras were to respectfully greet the sages, they would surely defeat the devas. Now they will certainly lose.&#x27; A certain sage asked, &#x27;Who is this?&#x27; Another sage said, &#x27;This is the asura king Vemacitrin.&#x27; The sage said again, &#x27;The asuras&#x27; knowledge and views are shallow. They have no Dharma teachings and no respectful mind. They are like farmers. The devas will surely win, and the asuras will lose.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，世尊告诸比丘：「往昔之时，远于聚落阿练若处，多有诸仙在中而住。离仙处不远，有天阿修罗，而共战鬪。尔时，毘摩质多罗阿修罗王著五种容饰，首戴天冠，捉摩尼拂，上戴华盖，带于宝剑，众宝革屣，到仙人住处。行不由门，从壁而入，亦复不与诸仙言语，共相问讯，还从壁出。尔时，有一仙人而作是语：『毘摩质多罗等无恭敬心，不与诸仙问讯共语，从壁而出。』复有一仙而作是言：『阿修罗等若当恭敬问讯诸仙，应胜诸天，今必不如。』有一仙问言：『此为是谁？』有一仙言：『此是毘摩质多阿修罗王。』仙人复言：『阿修罗法知见微浅，无有法教，无尊敬心，犹如农夫，诸天必胜，阿修罗负。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, King of the Devas, arrived at the sages&#x27; place later. He immediately discarded the five kinds of adornments of the heavenly king, entered through the gate, consoled the sages, went around to observe, and said to the sages, &#x27;Are you all at ease and free from any troubles?&#x27; After inquiring, he left through the gate. Again, a certain sage asked, &#x27;Who is this? He consoles and inquires, goes around to observe, and then leaves. He has the Dharma teachings and dignified appearance.&#x27; A certain sage replied, &#x27;This is Śakra, King of the Devas.&#x27; A certain sage said, &#x27;The devas are extremely respectful and compliant. They will surely win, and the asuras will lose.&#x27;</p></td><td lang="lzh" class="agama-chi"><p>「尔时帝释后到仙边，即舍天王五种容饰，从门而入，慰劳诸仙，遍往观察，语诸仙言：『尽各安隐，无诸恼耶？』问讯已讫，从门而出。复有一仙问言：『此为是谁？安慰问讯，周遍察行，然后乃出，甚有法教，容仪端正。』一仙答言：『此是帝释。』有一仙言：『诸天极能敬顺，为行调适，诸天必胜，阿修罗负。』</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Vemacitrin heard the sages praising the devas and disparaging the asuras, and became very angry. The sages heard this and went to the asuras, saying, &#x27;We heard you and are very angry.&#x27; They then spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>「毘摩质多罗闻诸仙赞叹诸天，毁呰阿修罗，甚大瞋恚。诸仙闻已，往诣阿修罗所，语言：『我等闻尔，甚大瞋忿。』即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>We have come here ourselves to beg for our wishes<br/>Grant us fearlessness and do not give rise to anger<br/>again. If we have any faults, please instruct and reprimand us.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『我等故自来，　　欲乞索所愿，施我等无畏，　　莫复生瞋忿，我等若有过，　　愿教责数我。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Vemacitrin replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>「毘摩质多以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I will not grant you fearlessness. You have encroached<br/>upon me. You humbly seek Indra, but you slander<br/>me. You seek fearlessness, but I will give you fear.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『不施汝无畏，　　汝等侵毁我，卑逊求帝释，　　于我生毁呰，汝等求无畏，　　我当与汝畏。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The sages replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>「尔时，诸仙以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>As a person creates for himself, he reaps the fruit. Doing<br/>good, he reaps good; doing evil, evil befalls him. It is<br/>like sowing seeds, according to the seed, one reaps the fruit<br/>Now you sow the seed of suffering, later you will surely<br/>receive it yourself. I now beg for fearlessness, but you give<br/>me fear in return. From today onward, may you have endless fear.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『如人自造作，　　自获于果报，行善自获善，　　行恶恶自报。譬如下种子，　　随种得果报，汝今种苦子，　　后必还自受。我今乞无畏，　　逆与我怖畏，从今日已往，　　使汝畏无尽。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>After the sages spoke to the asuras face to face, they flew away. Vimalasāra had a dream that night of fighting with Indra, and was greatly frightened. The second night was also like this. On the third night, Indra&#x27;s army really came to seek battle. Vimalasāra then fought with them, but the asuras were defeated. Indra pursued them and advanced to the asura palace. At that time, Indra, having won various battles, went to where the sages were. The sages were in the east, and Indra was in the west, sitting opposite each other. Then an eastern wind sage spoke a verse to Indra:</p></td><td lang="lzh" class="agama-chi"><p>「诸仙面与阿修罗语已，即乘虚去。毘摩质多罗即于其夜，梦与帝释交兵共战，生大惊怕，第二亦尔。第三梦时，帝释军众，果来求战。时，毘摩质多即共交兵，阿修罗败，帝释逐进，至阿修罗宫。尔时，帝释种种战诤既得胜已，诣诸仙所。诸仙在东，帝释在西，相对而坐。时，有东风仙人向帝释即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have been a monk for a long time, and my armpits<br/>have a foul smell. The wind blows it towards you. Move and<br/>sit in the south. Such foul smells are not liked by the gods.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『我身久出家，　　腋下有臭气，风吹向汝去，　　移避就南坐，如此诸臭气，　　诸天所不喜。』</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Indra replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>「尔时，帝释以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Gathering various flowers to make a crown for the head<br/>with various fragrant scents, one may not be disgusted. The<br/>ascetics who have renounced the world have a fragrance like<br/>the flower garlands. I now accept them on my head<br/>not being disgusted.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「『集聚种种华，　　以为首上鬘，香气若干种，　　能不生厌离。诸仙人出家，　　气如诸华鬘，我今顶戴受，　　不以为厌患。』」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the monks, &quot;Indra, dwelling in the position of the king of the devas, has long respected those who have renounced the householder life. You monks, having renounced the householder life with faith, should also respect them in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告诸比丘：「帝释居天王位，长夜恭敬诸出家者，汝诸比丘，以信出家，亦应当作如是钦敬。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken thus, the Buddha finished. The monks, having heard the Buddha&#x27;s words, rejoiced and received them respectfully.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

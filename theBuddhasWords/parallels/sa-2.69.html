@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.69 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.69</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 69</span><span class="mirror-right">（六九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn3.21.html">SN 3.21</a> / <a href="../parallels/sa1146.html">SĀ 1146</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, King Prasenajit went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and said to the Buddha, &quot;World-Honored One! Do the brāhmaṇa class always take birth in brāhmaṇa families, and the kṣatriya class always take birth in kṣatriya families?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，波斯匿王往诣佛所，顶礼佛足，在一面坐。白佛言：「世尊！婆罗门种常生婆罗门家，刹利种常生刹利家不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the king, &quot;You should not say that. Because there are four kinds of people: 1. Those who enter brightness from brightness, 2. Those who enter darkness from brightness, 3. Those who enter brightness from darkness, and 4. Those who enter darkness from darkness. What are those who enter darkness from darkness? If sentient beings are born in lowly and poor families, or in families of butchers and craftsmen, or if they are physically weak, extremely dark, deaf, blind, mute, or with incomplete faculties, and are servants to others without freedom, such people may commit evil physical, verbal, or mental actions. When their bodies perish and their lives end, they fall into hell. This is called entering darkness from darkness. It is like going from one toilet to another. I say that such a person enters darkness from darkness.</p></td><td lang="lzh" class="agama-chi"><p>佛告王曰：「汝今不应作如是语。何以故？有四种人：一者从明入明，二者从明入冥，三者从冥入明，四者从冥入冥。何谓从冥入冥？若有众生生于下贱、贫穷之者，或生魁脍技巧之家，或身羸瘦，其形极黑，聋盲瘖痖，诸根不具，为他作使，不得自在。如此之人，或身行恶业，或口作恶业，或心念不善，身坏命终，堕于地狱，是名从冥入冥。如从厕出，复入一厕，我说此人从冥入冥。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>If such people are born in lowly and poor families, or in families of butchers and craftsmen, or if they are physically weak, extremely dark, deaf, blind, mute, or with incomplete faculties, and are servants to others without freedom, this is called darkness. If such people can perform good physical, verbal, and mental actions, when their bodies perish and their lives end, they will be reborn in heaven. Such people rise from the ground and ascend to a bed. From the bed, they can ride in a carriage. From the carriage, they can ride a horse. From the horse, they can ride an elephant. From the elephant, they can ascend to a palace. For this reason, I say that they enter brightness from darkness.</p></td><td lang="lzh" class="agama-chi"><p>「若如此人，生于下贱及魁脍技巧，或身羸瘦，其形极黑，聋盲瘖痖，诸根不具，为他走使，不得自在，是名为冥。若如此人，能身行善，能口行善，能意行善，身坏命终，得生天上。如此人从地而起，得升于床。从床而起，得乘于车。从车而起，得乘于马。从马而起，得乘于象。从象而起，得升宫殿。以是缘故，我说从冥入明。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What are those who enter darkness from brightness? If someone is born in a kṣatriya family, or a brāhmaṇa family, or a great merchant&#x27;s family, with abundant wealth, immeasurable riches, and overflowing treasuries, with many servants and ministers, and with many close friends and relatives, with a well-proportioned body and great power, such a person is called bright. If such a person performs evil physical, verbal, and mental actions, when their body perishes and their life ends, they will fall into hell. It is like a person descending from a palace to an elephant, from an elephant to a horse, from a horse to a carriage, from a carriage to a bed, from a bed to the ground, and from the ground falling into a cesspit. I say that such a person enters darkness from brightness.</p></td><td lang="lzh" class="agama-chi"><p>「何谓从明入冥？若有人生于刹利家，或复生于婆罗门家，或生大长者家，多饶财宝，巨富无量，库藏盈溢，多诸仆从，辅相大臣，亲友眷属，亦甚众多，身形端正，有大威力，如是之人，是名为明。若此之人，身行恶业，口行恶业，意行恶业，身坏命终，堕于地狱。如人从宫殿下堕于象上，从象上下而乘于马，从马上下而乘于车，从车上下而坐于床，从床而下堕落于地，从地而堕坠于粪坑，我说此人从明入冥。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>What are those who enter brightness from brightness? If someone is born in a kṣatriya or great brāhmaṇa family, or in a merchant&#x27;s family with abundant wealth, immeasurable riches, and overflowing treasuries, with many servants and ministers, and with many close friends and relatives, with a well-proportioned body and great power, this is called brightness. If such a person performs good physical, verbal, and mental actions, when their body perishes and their life ends, they will be reborn in heaven. It is like going from one palace to another palace, from one elephant to another elephant, from one horse to another horse, from one carriage to another carriage, from one bed to another bed. I say that such a person enters brightness from brightness.</p></td><td lang="lzh" class="agama-chi"><p>「何谓从明入明？若有人生于刹利大婆罗门家，或生长者，多饶财宝，巨富无量，库藏盈溢，多诸仆从，辅相大臣，亲友眷属，亦甚众多，身形端正，有大威力，此名为明。如此之人，身行善业，口行善业，意行善业，身坏命终，得生天上。如似从一宫殿至于宫殿，从象至象，从马至马，从车至车，从床至床。如此之人，我说从明入明。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Great King, you should know that the poor and unbelieving, those who are<br/>angry and jealous, always give rise to evil thoughts and views, have wrong<br/>views and are disrespectful, to śramaṇas, brāhmaṇas, those who uphold precepts, and those<br/>who have much learning, they scold and insult them when they see them<br/>Even if they have a little wealth, they have no mind to make<br/>offerings. They scold and insult those who give. Due to such karmic causes<br/>they will definitely fall into hell. Falling into hell due to such karma<br/>is called entering darkness from darkness. &quot;Great King, you should now know that<br/>the poor who like to give, who have faith, are free from anger<br/>have a sense of shame and respect, and like to give, to śramaṇas<br/>brāhmaṇas, those who uphold precepts, and those who have much learning, they give<br/>rise to respect, pay homage and ask about the Dharma, always practice correct<br/>good conduct, give themselves and praise giving, and praise those who receive. Thus<br/>in their next life, they will be reborn in the Heaven of the<br/>Thirty-three. This is called leaving this darkness and entering a bright place. &quot;Great<br/>King, you should also know that the rich who are without faith, whose<br/>minds are always full of anger, who are always greedy and jealous, have<br/>wrong views and are disrespectful, to śramaṇas, brāhmaṇas, those who uphold precepts, and<br/>those who have much learning, they scold and insult them when they see<br/>them, and have no mind to make offerings. When they die, they will<br/>fall into the evil hells. This is called entering darkness from brightness. &quot;Great<br/>King, you should also know that the rich who have faith, are free<br/>from anger, have a sense of shame and respect, are able to abandon<br/>the mind of great stinginess, to śramaṇas, brāhmaṇas, those who uphold precepts, and<br/>those who have much learning, they give rise to respect and ask about<br/>the Dharma, always practice correct good conduct, give themselves and praise giving, and<br/>are praised by those who receive. Having abandoned this body and life, due<br/>to this result and retribution, they will be reborn in the Heaven of<br/>the Thirty-three. This is called leaving brightness and entering a bright place.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「大王汝当知，　　贫穷不信者，瞋恚怀嫉妬，　　恒起恶觉观。邪见无恭敬，　　沙门婆罗门，持戒及多闻，　　见则加骂辱。设有少财物，　　无有奉施心，毁骂施与者。　　如此之业缘，必堕于地狱，　　是业堕地狱，名从暗入暗。　　大王今当知，贫穷好施者，　　有信无瞋恚，惭愧而好施，　　沙门婆罗门，持戒及多闻，　　起敬礼问讯，常行正善行，　　自施赞施者，受者亦赞叹。　　如是至后世，生三十三天，　　此名从此暗，将入于明处。　　大王又当知，大富而不信，　　心常怀瞋恚，常起贪嫉妬，　　邪见不恭敬，沙门婆罗门，　　持戒及多闻，见则加骂辱，　　无有奉施心。从此而命终，　　堕于恶地狱，名从明入暗。　　大王又当知，大富信无瞋，　　惭愧得具足，能舍大悭心，　　沙门婆罗门，持戒及多闻，　　起敬而问讯，常行于正善，　　自施赞施者，受者所叹誉。　　舍此身命已，以是果报故，　　生三十三天，此名从于明，　　而入于明处。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha spoke thus. The bhikṣus, having heard the Buddha&#x27;s words, rejoiced and practiced accordingly.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

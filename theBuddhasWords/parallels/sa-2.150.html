@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.150 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.150</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 150</span><span class="mirror-right">（一五〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an8.13.html">AN 8.13</a> / <a href="../an/an8.14.html">AN 8.14 (~)</a> / <a href="../parallels/sa924.html">SĀ 924 (~)</a> / <a href="../parallels/sa925.html">SĀ 925</a> / <a href="../parallels/sa-2.149.html">SĀ² 2.149 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the World-Honored One addressed the bhikṣus, saying, &quot;There are eight kinds of horses that are suitable for the wise to ride. The wise ones here refer to the Wheel-Turning Sage Kings. What are the eight? The first characteristic of a wise horse is that it is born from a wise horse. The second characteristic is that it is extremely well-trained and never harms other ordinary horses. This is the second characteristic of a wise horse. The third characteristic is that when eating grass, it does not discriminate between good and bad, but eats it all without leaving any. This is also a characteristic of a wise horse. The fourth characteristic is that it does not stay or sleep in places where there are filthy and impure things, such as where excrement and urine are. This is the fourth characteristic of a wise horse. The fifth characteristic is that it can show the faults of bad horses to the charioteer and teach the charioteer how to correct the bad habits of bad horses. This is also a characteristic of a wise horse. The sixth characteristic is that it can endure heavy burdens without seeking to lighten them, always thinking, &#x27;When I see other horses carrying burdens, I will do it for them.&#x27; This is the sixth characteristic of a wise horse. The seventh characteristic is that it always stays on the path and never strays from it. Even if the path is narrow, it clearly knows it. This is the seventh characteristic of a wise horse. The eighth characteristic is that even when gravely ill and on the verge of death, its strength and function do not change. This is the eighth characteristic of a wise horse.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，世尊告诸比丘：「有八种马为贤所乘。所言贤者，转轮圣王。何等为八？贤乘所生，是名第一贤马之相。其第二者，极为调善，终不恼触其余凡马，是名第二贤马之相。其第三马，所食之草，不择好恶，悉尽无遗，是亦名为贤马乘相。其第四者，有秽恶物，生不净相，大小便处，终不于中止住眠卧，是名第四具贤马相。其第五者，能示御者恶马之过，能教御者治于恶马所有疹态，是亦名为贤马之相。其第六者，能忍重担，而不求轻，恒作是念：『我常见于余马担时，当为伐之。』是名第六贤乘马相。其第七者，常在道中，初不越逸，道虽微浅，明了知之，是名第七贤马之相。其第八者，病虽困笃，乃至临终，力用不异，是名第八贤乘马相。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The wise and virtuous also have eight qualities. What are the eight? The first is that if a bhikṣu upholds the precepts well, is fully endowed with dignified conduct, goes among people without violating them, and if he accidentally commits a minor offense, he feels great fear. He upholds the precepts he has taken, just as a blind person would protect his one remaining eye. Know that such a person is like the first horse born in a place suitable for the wise. The second is that if a bhikṣu is fully endowed with good dharmas, he will never disturb those who practice the same path as him. Living together is peaceful, like water and milk mixed. Know that such a person is like the second horse, born in a place suitable for the wise. The third is that if a bhikṣu accepts food and drink, he does not discriminate between good and bad, but eats it all without leaving any. Know that such a person is like the third horse, born in a place suitable for the wise. The fourth is that if a bhikṣu sees impure and unwholesome dharmas, he feels disgust and avoids them all. He does not engage in unwholesome actions of the three karmas. He criticizes unwholesome dharmas as base and inferior. Know that such a person is like the fourth horse, born in a place suitable for the wise. The fifth is that if a bhikṣu has committed an offense, he confesses it in front of the Buddha and also reveals his faults to those who practice the same path as him. Know that such a person is like the fifth horse, born in a place suitable for the wise. The sixth is that if a bhikṣu is fully endowed with the precepts of learning, and sees fellow practitioners who have violated the precepts, he always thinks, &#x27;I should practice and not violate them.&#x27; Know that such a person is like the sixth horse, born in a place suitable for the wise. The seventh is that if a bhikṣu practices the eightfold right path and does not follow the wrong path. Know that such a person is like the seventh horse who does not follow the wrong path, born in a place suitable for the wise. The eighth is that if a bhikṣu is gravely ill and even on the verge of death, he diligently practices without slacking, with a firm and unyielding nature. He always aspires to seek the supreme and wonderful dharmas, without feeling weary. Know that such a person is like the eighth horse, who exerts himself to the end, born in a place suitable for the wise, and can attain the truth in the teachings of the Buddha.</p></td><td lang="lzh" class="agama-chi"><p>「丈夫贤乘亦有八事。何等为八？其第一者，若有比丘善持禁戒，具足威仪，往返人间，无所毁犯，设误犯于微小罪者，心生大畏。持所受戒，犹如瞎者护余一目。当知是人同彼初马生贤乘处。其第二者，若有比丘具足善法，终不恼触同梵行者，共住安乐，如水乳合。当知是人同第二马，生于贤处。其第三者，复有比丘受饮食时，不择好恶，悉食无余。当知斯人同第三马，生于贤处。其第四者，若有比丘见诸恶法不清净者，心生厌患，悉皆远离三业不善，呵责恶法鄙陋下贱。当知是人同第四马，生于贤处。其第五者，若有比丘既犯罪已，亲于佛前陈己过罪，亦复于梵行所说，自发瑕疵。当知是人同第五马，生于贤处。其第六者，若有比丘具足学戒，见同梵行诸比丘等，于戒有犯，心每念言：『我当修学，令无所毁。』当知斯人同第六马，生于贤处。其第七者，若有比丘行八正道，不行邪径。当知此人同第七马不行非道，生于贤处。其第八者，若有比丘病虽困笃，乃至欲死，精勤无懈，志性坚固，不可轻动，恒欲进求诸胜妙法，心无疲倦。当知是人同第八马，至死尽力，生于贤处，佛教法中，能得真实。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Having spoken thus, the World-Honored One, the Tathāgata, the Arhat, the Perfectly Enlightened One, the one with perfect wisdom and conduct, the Sugata, the knower of the world, the unsurpassed guide who tames beings, the teacher of gods and humans, the Buddha, the Bhagavān, having finished speaking, the bhikṣus, having</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

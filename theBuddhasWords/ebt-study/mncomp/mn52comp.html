@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 52 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 52: Aṭṭhakanāgara-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn51comp.html#content"></a><a id="next-sutta" href="./mn53comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn52.html">MN 52</a> / <a href="../../parallels/ma217.html">MĀ 217</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Aṭṭhakanāgara-sutta, the “discourse to [a man from] Aṭṭhakanāgara”, presents a survey of several approaches to awakening. This discourse has a Pāli parallel in the section on the elevens in the Aṅguttara-nikāya and two Chinese parallels, one of which occurs in the Madhyama-āgama, while the other is an individual translation.<span class="note" id="mn52n3"><span class="details"><span class="p">[n.3] The parallels are <a href="../../an/an11.17.html">AN 11:17</a> at AN V 342-347, <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802a-c, and T 92 at T I 916a-917a. The four versions agree on locating the discourse at Pāṭaliputta. According to the information given in the Taishō edition, T 92 was translated by Ān Shìgāo (安世高). Zürcher 1991: 297, however, does not include this translation among the works that can with certainty be attributed to Ān Shìgāo. <a href="../../mn/mn52.html">MN 52</a> and <a href="../../parallels/ma217.html">MĀ 217</a> agree on the title Aṭṭhakanāgara/八城, while T 92 at T I 916a17 has the title “discourse spoken by the Buddha to the householder Ten Limbs, a man from Aṭṭhakanāgara”, 佛說十支居士八城人經. While the protagonist in <a href="../../parallels/ma217.html">MĀ 217</a> has the name 第十, which would correspond to the Dasama mentioned in <a href="../../mn/mn52.html">MN 52</a>, the protagonist of T 92 is instead 十支, which rendered into Pāli would be Dasaṅga. Ee and Se do not give a title for <a href="../../an/an11.17.html">AN 11:17</a>, but refer to it at Ee-AN V 358,31 and Se-AN V 390,19 in their respective chapter uddānas as Dasama. In Be-AN III 542,25, the title of the discourse is Aṭṭhakanāgara-sutta and the uddāna at Be-AN III 556,3 refers to it as Aṭṭhako. The Ceylonese edition wavers between these two options, as Ce-AN VI 646,1 introduces the discourse as Aṭṭhakanāgara-sutta, but the uddāna at Ce-AN VI 674,31 refers to it as Dasamo. For a remark on <a href="../../parallels/ma217.html">MĀ 217</a> cf. Minh Chau 1964/1991: 101. Barua 1971/ 2003: 351 suggests that Aṭṭhakanāgara probably corresponds to “a village called Hathagaon on the Bāgmatī river”.</span></span></span></p>
+<p>The Pāli versions begin by briefly reporting that the householder Dasama, who had been in Pāṭaliputta on some business, approached a monk in order to find out where Ānanda was staying.</p>
+<p>The introductory narration in the two Chinese versions offers additional details, explaining that the householder Dasama, who had earlier successfully conducted some business and derived great profit from it, approached a group of monks. These taught him the Dharma in various ways and were able to please him with their exposition.<span class="note" id="mn52n4"><span class="details"><span class="p">[n.4] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802a20 and T 92 at T I 916a29 report that the householder was so delighted at the teachings received that for a little while he remained speechless, after which he inquired about Ānanda.</span></span></span> After having received their teachings and being pleased by them, Dasama inquired regarding the whereabouts of Ānanda.</p>
+<p>Another difference is that the two Chinese discourses begin by noting that the Buddha had recently attained parinibbāna. The same is also implicit in the introductory part of the Pāli versions, which do not mention the whereabouts of the Buddha. Usually discourses, even when spoken by disciples, begin by mentioning the location where the Buddha was staying at that time.</p>
+<p>The four versions agree that the householder Dasama asked Ānanda if there was one way, taught by the Buddha, that leads to the destruction of the influxes. In reply, Ānanda described how liberation can be achieved through developing insight based on the attainment of any out of the four jhānas, of the four brahmavihāras, or of the three immaterial spheres of boundless space, boundless consciousness, and nothingness.</p>
+<p>The Chinese versions also include in this presentation the fourth immaterial attainment, the sphere of neither-perception-nor-non-perception.<span class="note" id="mn52n5"><span class="details"><span class="p">[n.5] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802b27 and T 92 at T I 916c8. Maithrimurthi 1999: 97 note 136 comments that this reference to the fourth immaterial attainment was probably added mechanically.</span></span></span> The Pāli subcommentary explains that Ānanda did not mention the attainment of neither-perception-nor-non-perception because it is too subtle an attainment for the development of insight.<span class="note" id="mn52n6"><span class="details"><span class="p">[n.6] Be-Ps-pṭ II 9 explains that the attainment of neither-perception-nor-non-perception was not included in the present exposition because of the subtlety of the formations that still remain during its attainment, which would make it too difficult for a disciple to contemplate it, nevasaññānāsaññāyatanadhammānaṃ saṅkhārāvasesasukhumabhāvappattatāya tattha sāvakānaṃ dukkaran ti. This principle appears to be reflected in the fact that <a href="../../mn/mn64.html">MN 64</a> at MN I 436,28 and its parallel <a href="../../parallels/ma205.html">MĀ 205</a> at T I 780a16 stop short at the attainment of nothingness and do not mention the attainment of neither-perception-nor-non-perception in a presentation that relates deep concentration experience to the development of insight; cf. also note 7 below. The same pattern would also apply to the corresponding realms of rebirth, since <a href="../../an/an3.114.html">AN 3:114</a> at AN I 267-268 describes how a noble disciple, on being reborn in one or the other immaterial realm, will attain final Nirvāṇa there, a presentation which also does not include the realm of neither-perception-nornon-perception.</span></span></span></p>
+<p>A discourse in the Aṅguttara-nikāya similarly confines the objects for the development of insight to the realm of perception, in line with the above commentarial explanation that the attainment of neither-perception-nor-non-perception is not a suitable object for the development of insight.<span class="note" id="mn52n7"><span class="details"><span class="p">[n.7] <a href="../../an/an9.36.html">AN 9:36</a> at AN IV 426,9: “as far as there is attainment of perception, to that extent there is penetrative knowledge”, yāvatā saññāsamāpatti, tāvatā aññāpaṭivedho (cf. also <a href="../../sn/sn14.11.html">SN 14:11</a> at SN II 151,1, which similarly uses the term saññāsamāpatti only in regard to attainments up to the sphere of nothingness). Schmithausen 1981: 224 notes 86 and 87 and ibid. p. 229 note 106 draws attention to similar statements found in the Abhidharmasamuccaya in Pradhan 1950: 69,15: yāvad eva saṃjñāsamāpattiḥ tāvad ājñāprativedha iti and T 1602 at T XXXI 576c11: 唯依有想三摩鉢底領解通達; cf. also Ruegg 1989: 200. The Yogācārabhūmi, T 1579 at T XXX 859a13, explains that, unlike the attainment of nothingness, the attainment of neither-perception-nor-non-perception cannot be used as a path for the eradication of the influxes, 非想非非想處, 無無漏道 (for a similar statement cf. also T 1550 at T XXVIII 823b18), but from the perspective of the development of insight can only be put to use for the purpose of developing disenchantment with the sphere of nothingness. Cf. also, e.g., the discussion in the Dharmaskandha, which describes the development of insight based on the jhānas and on the first three immaterial attainments, up to the sphere of nothingness, T 1537 at T XXVI 494a22. Gunaratana 2007: 65 sums up that, in the case of the attainment of neither-perception-nor-non-perception, “the mental contents ... are so extremely refined and subtle that even the purest mindfulness and concentration cannot explore them”, hence it “cannot be used as a basis for insight”. Schmithausen 1981: 224 note 87 points out that a discourse quotation in the Abhidharmakośavyākhyā (cf. Wogihara 1971b: 275,25), however, does include the attainment of neither-perception-nor-non-perception among states that can be used for the development of insight; cf. also, e.g., <a href="../../parallels/sa870.html">SĀ 870</a> at T II 220b7, which applies an insight contemplation that is based on the aggregate analysis to all four immaterial attainments.</span></span></span></p>
+<p>The Pāli and Chinese versions differ also in their description on how to develop insight in regard to this range of concentration experiences. According to the Majjhimanikāya and Aṅguttara-nikāya versions, each attainment should be contemplated as conditioned and impermanent.<span class="note" id="mn52n8"><span class="details"><span class="p">[n.8] <a href="../../mn/mn52.html">MN 52</a> at MN I 350,13: “this is conditioned and produced by volition, whatever is conditioned and produced by volition is impermanent and subject to cessation”, idaṃ ... abhisaṅkhataṃ abhisañcetayitaṃ, yaṃ kho pana kiñci abhisaṅkhataṃ abhisañcetayitaṃ tad aniccaṃ nirodhadhamman ti; cf. also <a href="../../an/an11.17.html">AN 11:17</a> at AN V 343,22 and Hamilton 2000: 195.</span></span></span> The Madhyama-āgama version instead speaks of contemplating dharmas as dharmas.<span class="note" id="mn52n9"><span class="details"><span class="p">[n.9] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802b9: 觀法如法; cf. also T 92 at T I 916b18, which appears to imply the same. The injunction to contemplate dharmas as dharmas occurs in the Satipaṭṭhāna-sutta, where one of its implications is to contemplate arising and passing away, cf. <a href="../../mn/mn10.html">MN 10</a> at MN I 60,30. To develop insight into the impermanent nature of deep concentration experiences would indeed be a powerful method to develop disenchantment towards such experiences. A problem with applying this to <a href="../../parallels/ma217.html">MĀ 217</a>, however, is that the Madhyama-āgama parallel to the Satipaṭṭhāna-sutta, <a href="../../parallels/ma98.html">MĀ 98</a> at T I 584a14, does not mention contemplation of arising and passing away in its description of contemplating dharmas as dharmas.</span></span></span></p>
+<p>The Pāli and Chinese versions indicate that their respective approaches to insight have the potential of leading to full awakening or to non-return. When describing the lesser of these two alternatives, the Aṭṭhakanāgara-sutta and its Aṅguttara-nikāya counterpart indicate that the attainment of non-return will be achieved due to the practitioner’s “lust for the Dharma”, dhammarāga.<span class="note" id="mn52n10"><span class="details"><span class="p">[n.10] <a href="../../mn/mn52.html">MN 52</a> at MN I 350,17 and <a href="../../an/an11.17.html">AN 11:17</a> at AN V 343,25: “by way of that lust for the Dharma and that desire for the Dharma ... he will be reborn spontaneously and attain final Nirvāṇa there”, ten’ eva dhammarāgena tāya dhammanandiyā ... opapātiko hoti tattha parinibbāyī. Although the formulation reads as if dhammarāga is instrumental in assuring at least non-return, the commentary, Ps III 146,28, understands dhammarāga to represent attachment to one’s meditative experiences that has prevented the attainment of full awakening; cf. also Harvey 2003: 319, who in relation to the present occurrence of dhammarāga comments that “spiritual desire may be what holds a person back from the highest attainment”, whereas Webster 2005a: 102 takes dhammarāga to be part of what “ultimately leads to nibbāna”.</span></span></span> The expression “lust for the Dharma” occurs also in the Madhyama-āgama version.<span class="note" id="mn52n11"><span class="details"><span class="p">[n.11] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802b11: 欲法.</span></span></span> The Madhyama-āgama version and the individual translation speak, moreover, of “craving for the Dharma”.<span class="note" id="mn52n12"><span class="details"><span class="p">[n.12] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802b11 and T 92 at T I 916b21: 愛法; cf. also the Abhidharmakośavyākhyā in Wogihara 1971b: 273,25, which in a similar context reads tenaiva dharma-cchandena tenaiva dharma-snehena tenaiva dharma-premnā tayaiva dharmābhiratāya.</span></span></span> The individual translation relates such craving for the Dharma to developing the Dharma and to having reverence or regard for it.<span class="note" id="mn52n13"><span class="details"><span class="p">[n.13] T 92 at T I 916b21: 彼自愛法, 彼自習法, 彼自敬法; cf. also the otherwise unrelated discourse <a href="../../parallels/sa866.html">SĀ 866</a> at T II 219c21, where lust for the Dharma occurs together with recollecting the Dharma and delighting in it as the qualities by virtue of which rebirth in the Brahmā realm takes place, 即以此欲法, 念法, 樂法 功德, 生大梵天中.</span></span></span> Thus the expressions “lust for the Dharma”, or even “craving for the Dharma”, have quite positive connotations in the present context.<span class="note" id="mn52n14"><span class="details"><span class="p">[n.14] Although the term “lust”, rāga, may prima facie call up negative associations, even the term “craving”, taṇhā, occurs in <a href="../../an/an4.159.html">AN 4:159</a> at AN II 145,34 and its parallel <a href="../../parallels/sa564.html">SĀ 564</a> at T II 148b20 with positive connotations. Both propose that based on craving, craving can be overcome, taṇhaṃ nissāya taṇhā pahātabbā ti, 依愛斷愛, followed by explaining the first instance of craving to represent the wish to attain liberation. In a similar vein, <a href="../../sn/sn51.15.html">SN 51:15</a> at SN V 272,16 indicates that “desire”, chanda (another term which often carries negative connotations) is to be overcome with the help of chanda. Its parallel <a href="../../parallels/sa561.html">SĀ 561</a> at T II 147a19 makes the same point in slightly different terms, indicating that craving is to be overcome based on desire, 依於欲而斷愛. Such instances highlight that in the early discourses terminology is not as uniform as in later texts. By the time of the Abhidharma and the commentaries, the implications of key terminology are clearly delineated and terms such as “lust” and “craving” tend to be used only with a negative meaning. In the early discourses, however, such terms cannot be restricted to the meaning given to them in later works and are at times employed in ways which may even seem to conflict with the definitions given in the Abhidharma and the commentaries.</span></span></span></p>
+<p>The Aṭṭhakanāgara-sutta and its parallels record that the householder Dasama was delighted that Ānanda had shown eleven (or according to the Chinese versions twelve) ways to liberation on being asked to point out just a single one.<span class="note" id="mn52n15"><span class="details"><span class="p">[n.15] While according to <a href="../../mn/mn52.html">MN 52</a> at MN I 353,3, Ce-MN II 26,4, and Se-MN II 22,19 the householder Dasama was able to “hear” about eleven doors to the deathless, savanāya, according to Be-MN II 15,25 he was able to “develop” them, bhāvanāya. Again, while in <a href="../../an/an11.17.html">AN 11:17</a> at AN V 346,32 and Be-AN III 546,7 he was able to “pursue” these eleven doors, sevanāya, in Ce-AN VI 654,5 and Se-AN V 376,20 he was able to “hear” of them, savanāya. <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802c9 describes that the householder was able to “attain a safe emerging”, 得安隱出 (my translation is based on another occurrence of the expression 安隱出 in <a href="../../parallels/ma206.html">MĀ 206</a> at T I 781b14, where it forms the counterpart to sotthinā abhinibbhijjituṃ in its parallel <a href="../../mn/mn16.html">MN 16</a> at MN I 104,10), in dependence on these doors to the deathless, while T 92 at T I 916c20 proclaims that “relying on each of these doors to the deathless, each will lead out”, 依各各甘露門, 各各當出之.</span></span></span> By way of illustration, he compared this to a man who is able to escape from a house on fire through any of the eleven (or twelve) doors of the house. The four versions agree that the householder expressed his appreciation by inviting the community of monks for a sumptuous meal the next day and by making the gift of a building to Ānanda. The Chinese discourses note that Ānanda handed the building over to the Saṅgha of the four directions.<span class="note" id="mn52n16"><span class="details"><span class="p">[n.16] <a href="../../parallels/ma217.html">MĀ 217</a> at T I 802c24 and T 92 at T I 916c29.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

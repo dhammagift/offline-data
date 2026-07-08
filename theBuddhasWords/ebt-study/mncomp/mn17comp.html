@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 17 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 17: Vanapattha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn16comp.html#content"></a><a id="next-sutta" href="./mn18comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn17.html">MN 17</a> / <a href="../../parallels/ea45.3.html">EĀ 45.3 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Vanapattha-sutta, the “discourse on [living in a] forest thicket”, sets out the conditions under which a monk should leave or else remain in the place where he is staying. This discourse has two parallels in consecutive discourses in the Madhyama-āgama.<span class="note" id="mn17n165"><span class="details"><span class="p">[n.165] The parallels are <a href="../../parallels/ma107.html">MĀ 107</a> and <a href="../../parallels/ma108.html">MĀ 108</a> at T I 596c-598b, both entitled “discourse on the forest”, 林經. Both agree with <a href="../../mn/mn17.html">MN 17</a> on locating the discourse in Jeta’s Grove by Sāvatthī.</span></span></span> A few lines of this discourse have also been preserved in a Sanskrit fragment.<span class="note" id="mn17n166"><span class="details"><span class="p">[n.166] SHT VI 1304 (p. 74), paralleling among others the expressions “forest thicket” at MN I 105,1, “requisites of life” at MN I 105,6, and “resting place” at MN I 105,7.</span></span></span> Parts of the treatment given in the Vanapattha-sutta and its Madhyama-āgama parallels recur, moreover, in a discourse in the Aṅguttara-nikāya and in its parallel in the Ekottarikaāgama.<span class="note" id="mn17n167"><span class="details"><span class="p">[n.167] <a href="../../an/an9.6.html">AN 9:6</a> at AN IV 366,6 examines the case of living in dependence on a person from a fourfold perspective, similar to <a href="../../mn/mn17.html">MN 17</a>. <a href="../../parallels/ea45.3.html">EĀ 45.3</a> at T II 771c18 takes up the case of living in dependence on a village, which it considers from two perspectives: unwholesome states increase and requisites are easy to obtain (<a href="../../parallels/ea45.3.html">EĀ 45.3</a> at T II 771c22 actually speaks of 勞苦乃獲, which judging from the context should probably rather be 不勞苦乃獲), or else wholesome states increase and requisites are difficult to obtain. In relation to these two possibilities, its injunctions are similar to <a href="../../mn/mn17.html">MN 17</a>.</span></span></span></p>
+<p>The Vanapattha-sutta and its two Madhyama-āgama parallels examine four situations a monk might face when living in a forest thicket: his meditation may either improve or not improve, and in each of these two cases requisites (such as food, robes, dwelling place, and medicine) may be easy or difficult to obtain.<span class="note" id="mn17n168"><span class="details"><span class="p">[n.168] While <a href="../../mn/mn17.html">MN 17</a> at MN I 104,26 and <a href="../../parallels/ma107.html">MĀ 107</a> at T II 596c28 discuss progress in meditation in terms of developing mindfulness and concentration, eradicating the influxes, and gaining liberation, <a href="../../parallels/ma108.html">MĀ 108</a> at T I 597c14 refers to the same only in a summary form, as “gaining a recluse’s objectives”, 得沙門義.</span></span></span> The three versions present these four cases in different sequences (see table 2.12).</p>
+<table class="comparative-table">
+<caption>Table 2.12: Four Situations of a Meditating Monk in <a href="../../mn/mn17.html">MN 17</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn17.html">MN 17</a></th><th><a href="../../parallels/ma107.html">MĀ 107</a> & <a href="../../parallels/ma108.html">MĀ 108</a></th></tr>
+<tr><td>no improvement and scarce requisites (1)</td><td>no improvement and ample requisites (→ 2)</td></tr>
+<tr><td>no improvement and ample requisites (2)</td><td>improvement and scarce requisites (→ 3)</td></tr>
+<tr><td>improvement and scarce requisites (3)</td><td>no improvement and scarce requisites (→ 1)</td></tr>
+<tr><td>improvement and ample requisites (4)</td><td>improvement and ample requisites (→ 4)</td></tr>
+</table>
+<p>The parallel versions agree, however, about what should be done in each of these four cases. Thus they advise that when the meditation practice does not improve and requisites are difficult to obtain, the monk should leave immediately.</p>
+<p>Even when requisites are easy to obtain, but the meditation practice does not improve, the monk should leave, reflecting that he did not go forth for the sake of requisites.<span class="note" id="mn17n169"><span class="details"><span class="p">[n.169] <a href="../../mn/mn17.html">MN 17</a> at MN I 105,23, <a href="../../parallels/ma107.html">MĀ 107</a> at T I 597a9, and <a href="../../parallels/ma108.html">MĀ 108</a> at T I 597c20.</span></span></span> If the meditation practice improves, however, the monk should stay.</p>
+<p>If, in addition to this, requisites are easy to obtain, according to all versions he may stay even for his whole life. The Vanapattha-sutta and its two Madhyama-āgama parallels apply the same pattern to living:</p>
+<ul>
+<li>in a village,</li>
+<li>in a township,</li>
+<li>in dependence on a person.<span class="note" id="mn17n170"><span class="details"><span class="p">[n.170] <a href="../../mn/mn17.html">MN 17</a> at MN I 106,22 speaks not only of living in a village, gāma, or a township, nigama, but also of living in a fortified city, nagara, or a country, janapada. Instead of a fortified city or a country, <a href="../../parallels/ma107.html">MĀ 107</a> at T I 597c8 and <a href="../../parallels/ma108.html">MĀ 108</a> at T I 598b3 mention dwelling in a cemetery. Pande 1957: 120 considers this part of <a href="../../mn/mn17.html">MN 17</a> to be a later addition, since the title and the introductory statement only announces an exposition on the forest thicket, <a href="../../mn/mn17.html">MN 17</a> at MN I 104,21: vanapatthapariyāya. Pande suggests that the part that applies the same pattern to villages, townships, and cities would have been added after the monks’ life style had changed from forest life to town dwelling.</span></span></span></li>
+</ul>
+<p>While the Chinese versions do not work out these applications in detail, the Pāli discourse gives the case of living in dependence on another person in full, indicating that when requisites are scarce and meditation does not improve, the monk may leave even without informing his supporter.<span class="note" id="mn17n171"><span class="details"><span class="p">[n.171] <a href="../../mn/mn17.html">MN 17</a> at MN I 106,34: anāpucchā pakkamitabbo (Be-MN I 152,19 and Ce-MN I 268,26: pakkamitabbaṃ).</span></span></span> In case requisites are plenty and meditation improves, he should try to stay even if told to leave.<span class="note" id="mn17n172"><span class="details"><span class="p">[n.172] <a href="../../mn/mn17.html">MN 17</a> at MN I 108,8: na pakkamitabbaṃ, api panujjamānena (Se-MN I 219,13 : api samujjamānena). Neumann 1896/1995: 126, perhaps more guided by context than by the actual wording of the passage, translates: “nicht fortgehen, wenn er nicht fortgejagt wird”, conveying the sense that the monk should not leave unless he is sent away. Ps II 72,26, however, understands the instruction to mean that the monk should stay even if told to leave, in fact it holds that the monk should even stay if his host were to use a stick to drive him out.</span></span></span></p>
+<p>The last suggestion is somewhat surprising, since for a monk who lives in dependence on a lay supporter there seems to be little scope to stay if he is told to leave.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

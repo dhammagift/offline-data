@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 50.8 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 50.8</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">50.8</span> <span class="mirror-right">（八）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn21.html">MN 21 (~)</a> / <a href="../mn/mn22.html">MN 22 (~)</a> / <a href="../parallels/ma193.html">MĀ 193 (~)</a> / <a href="../parallels/ma200.html">MĀ 200 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the monk Mahāmaudgalyāyana associated with the nuns, and the nuns also enjoyed associating with him. When people criticized Mahāmaudgalyāyana, the nuns became very angry and unhappy. If someone criticized the nuns, Mahāmaudgalyāyana also became unhappy. Then the many monks said to Mahāmaudgalyāyana, &quot;Why do you now associate with the nuns? Do the nuns also associate with you?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，茂罗破群比丘与诸比丘尼共相游处，然诸比丘尼亦复好乐共相游处。其有人民称讥茂罗破群比丘者，是时诸比丘尼极怀瞋恚，愁忧不悦。若复有人毁呰诸比丘尼者，是时破群比丘亦复愁忧不悦。是时，多众比丘告破群比丘曰：「汝今云何亲近诸比丘尼？诸比丘尼亦复与汝交接？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahāmaudgalyāyana replied, &quot;I now understand the teachings spoken by the Tathāgata. The sin of committing sexual misconduct is not enough to be mentioned.&quot;</p></td><td lang="lzh" class="agama-chi"><p>破群报曰：「我今解如来所说教诫，其有犯婬者，罪不足言。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The many monks said again, &quot;Stop! Stop! Monk! Do not speak like this. Do not slander the Tathāgata&#x27;s teachings. The sin of slandering the Tathāgata&#x27;s teachings is not small. Moreover, the World-Honored One has used countless skillful means to speak of the impurity of sexual misconduct. There is no way that engaging in sexual misconduct can be without sin. You should now abandon this evil view, and for a long night you will suffer immeasurable pain.&quot; However, the monk Mahāmaudgalyāyana still associated with them and did not change his ways.</p></td><td lang="lzh" class="agama-chi"><p>众多比丘复告曰：「止！止！比丘！勿作斯言。莫诽谤如来言教，其诽谤如来言教者，罪咎不少。又复世尊无数方便说婬之秽，其有习婬，使无罪者，终无此理。汝今可舍此恶见，备于长夜受苦无量。」然此破群比丘故与交通，而不改其行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, many monks went to where the World-Honored One was, bowed their heads at his feet, and said to the World-Honored One, &quot;In Śrāvastī, there is a monk named Mahāmaudgalyāyana who associates with the bhikṣuṇīs, and the bhikṣuṇīs also associate with Mahāmaudgalyāyana. We went to them to persuade them to change their ways, but those two only increased their attachment and did not abandon this upside-down view, nor did they follow the right Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，众多比丘往至世尊所，头面礼足，而白世尊言：「舍卫城中有一比丘，名曰破群，与诸比丘尼共相交接，然诸比丘尼亦与破群比丘交接往来。我等往彼劝喻使改其行，然彼二人遂更增益，不舍此颠倒之见，亦不顺正法之业。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told a monk, &quot;Go to that monk Mahāmaudgalyāyana and say, &#x27;The Tathāgata summons you.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告一比丘：「汝往至彼破群比丘所，云：『如来唤。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the monk received the Tathāgata&#x27;s instruction and went to where the monk Mahāmaudgalyāyana was, saying, &quot;You should know that the Tathāgata summons you.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，比丘受如来教，即往到破群比丘所：「汝当知之，如来唤卿。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When the monk Mahāmaudgalyāyana heard the monk&#x27;s words, he went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side. At that time, the World-Honored One asked the monk, &quot;Do you really associate with the bhikṣuṇīs?&quot;</p></td><td lang="lzh" class="agama-chi"><p>破群比丘闻彼比丘语，即往到世尊所，头面礼足，在一面坐。尔时，世尊问彼比丘曰：「汝审亲近诸比丘尼耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The monk replied, &quot;Yes, World-Honored One!&quot;</p></td><td lang="lzh" class="agama-chi"><p>彼比丘对曰：「如是。世尊！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the monk, &quot;You are a monk. How can you associate with bhikṣuṇīs? You are now a member of the noble family. You have shaved your beard and hair, put on the three Dharma robes, and left home to study the path with firm faith.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「汝为比丘，云何与比丘尼共相交接？汝今是族姓子，剃除须发，著三法衣，以信坚固，出家学道？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The monk Pūrvakāśyapa said to the Buddha, &quot;Yes, World-Honored One! I am a member of the noble family. I have left home to study the path with firm faith.&quot;</p></td><td lang="lzh" class="agama-chi"><p>破群比丘白佛言：「唯然，世尊！我是族姓子，以信坚固，出家学道。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the monk, &quot;This is not your Dharma. How can you associate with bhikṣuṇīs?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「非汝之法。云何与比丘尼共相交接？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The monk Pūrvakāśyapa said to the Buddha, &quot;I have heard the Tathāgata say that the sin of engaging in sexual activity is not worth mentioning.&quot;</p></td><td lang="lzh" class="agama-chi"><p>破群比丘白佛言：「我闻如来所说，其习婬者，其罪盖不足言。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to the monk, &quot;You foolish man! How can you say that the Tathāgata engages in sexual activity without sin? I have used countless skillful means to speak of the defilement of sexual activity. How can you now say, &#x27;The Tathāgata says that sexual activity is without sin&#x27;? You should carefully guard against the faults of speech, so as not to constantly suffer the consequences for a long time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告比丘：「汝愚人！云何说如来习婬无罪？我无数方便说婬之秽污，汝今云何作是语：『如来说婬无罪』？汝好守护口过，无令长夜恒受其罪。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;Stop for now! I will ask the other monks.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「汝今且止！须吾更问诸比丘。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told the monks, &quot;Have you ever heard me tell the monks that sexual activity is without sin?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告诸比丘曰：「汝等颇闻吾与诸比丘说婬无罪乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The monks replied, &quot;Yes, World-Honored One! We have never heard the Tathāgata say that sexual activity is without sin. The reason is that the Tathāgata has used countless skillful means to speak of the impurity of sexual activity. If you say it is without sin, this meaning is not correct.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「唯然，世尊！不闻如来说婬无罪。所以然者，如来无数方便说婬之秽污。设言无罪，此义不然。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the monks, &quot;Excellent! Excellent! Monks! As you have said, I have used countless skillful means to speak of the impurity of sexual activity.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告诸比丘：「善哉！善哉！诸比丘！如汝所言，我无数方便说婬之秽污。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One further addressed the monks, saying, &quot;You should know that if there are foolish people who practice the Dharma, namely the sūtras, geya, gāthās, vyākaraṇa, nidāna, avadāna, upamā, jātaka, vaipulya, adbhuta, itivṛttaka, and vaipulya; although they recite these teachings, they do not understand their meaning; because they do not contemplate their meaning, they also do not follow their teachings. They do not follow the teachings that should be followed. The reason they recite these teachings is to compete with others, to think about winning and losing, and also not to benefit themselves. After reciting these teachings, they violate the restrictions. It is like a person leaving that village to seek a poisonous snake. If they see an extremely large snake, they approach it and rub its tail with their left hand. Then the snake turns its head and bites their hand. Because of this, they die. It is the same here. If there are foolish people who play with the Dharma, they contemplate the twelve divisions of the teachings without exception, but they do not contemplate their meaning. The reason is that they do not thoroughly understand the meaning of the true Dharma.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊重告诸比丘曰：「汝等当知，若有愚人习于法行，所谓契经、祇夜、偈、授决、因缘、本末、譬喻、生、方等、未曾有、说、广普；虽诵斯法，不解其义；以不观察其义，亦不顺从其法，所应顺法终不从其行。所以诵斯法者，从欲与人共竞诤，意计胜负，亦不自为己有所济及，彼诵法已，则犯制限。犹如有人出彼村落欲求恶蛇，彼若见极大之蛇，到已，以左手摩抆其尾，然彼蛇回头螫蜇其手，由此缘报，便致命终，此亦如是，若有愚人玩习其法，十二部经靡不斟酌，亦不观察其义。所以然者，由不究竟正法义故。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Now, if there are good sons who protect and practice the Dharma, the sūtras, geya, gāthās, vyākaraṇa, nidāna, avadāna, upamā, jātaka, vaipulya, adbhuta, itivṛttaka, and vaipulya; after reciting these teachings, they deeply understand their meaning; because they understand the profound meaning of the teachings, they follow the teachings without any violation. The reason they recite the teachings is not with a mind of winning and losing, to compete with others; the reason they recite and practice the teachings is to cultivate themselves and have insight; the reason they recite the teachings is to have a wish. Because of these causes and conditions, they gradually attain nirvāṇa. It is like a person leaving that village to seek a poisonous snake. After seeing the snake, they use iron tongs to first clamp its head and then hold its neck, not allowing it to move. Even if the poisonous snake turns its tail to harm that person, it will not reach them. The reason is that, bhikṣus! because they hold its neck! This good son is also like this. He recites and reads extensively, contemplates their meaning, follows the teachings, and never violates them. Gradually, because of these causes and conditions, he attains nirvāṇa. The reason is that he upholds the true Dharma. Therefore, bhikṣus! those who understand my meaning should remember to practice it. Those who do not understand should come back and ask me. The Tathāgata is still present now. It is useless to regret later.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「于是，若有善男子将护玩习其法，契经、祇夜、偈、授决、因缘、本末、譬喻、生、方等、未曾有、说、广普；彼人诵此法已，深解其义；以解彼深义之法，顺从其教，无所违失，所以诵法者，不以胜负之心，与彼竞诤；所以诵习法者，欲自纂修有察及；所以诵法者，果有所愿，由此因缘，渐至涅槃。犹如有人出彼村落，求觅恶蛇。彼见蛇已，手执铁钳，先镊其头，后便捉项，不令动摇；设彼恶蛇回尾欲害彼人，终无所至。所以然者，比丘！由其捉项故！此善男子亦复如是，诵习、诵读，靡不周遍，观察其义，顺从其法，终无违失，渐渐由此因缘，得至涅槃。所以然者，由其执正法故。是故，诸比丘！其有解吾义者，当念奉行；其不解者，重来问我。如来方今现在，后悔无益。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Buddha addressed the bhikṣus, saying, &quot;If there is a bhikṣu who says in the great assembly, &#x27;The precepts spoken by the Tathāgata, I have all understood. The sin of engaging in sexual misconduct is not worth mentioning,&#x27; that bhikṣu should say to that bhikṣu, &#x27;Stop! Stop! Do not say that! Do not slander the Tathāgata&#x27;s words. The Tathāgata would never say that.&#x27; If that bhikṣu changes his transgression, it is good. If he does not change his practice, he should be admonished again and again. If he changes, it is good. If he does not change, he falls. If a bhikṣu conceals the matter and does not reveal it, all the people fall. This is called, bhikṣus! my precepts.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，佛告诸比丘：「设有比丘在大众中而作是说：『如来所说禁戒，我悉解了，其习婬者，罪盖不足言。』彼比丘当语斯比丘：『止！止！莫作斯言！莫诽谤如来言说斯语，如来终不说此言。』若此比丘改其所犯者善；若不改其行者，复当再三谏之。设当改者善，设不改者堕。若复比丘隐匿其事，不使露现者，诸人皆堕。是谓，比丘！我之禁戒。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus heard what the Buddha said and joyfully practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

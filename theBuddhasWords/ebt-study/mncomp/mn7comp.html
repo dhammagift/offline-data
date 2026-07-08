@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 7 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 7: Vatthūpama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn6comp.html#content"></a><a id="next-sutta" href="./mn8comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn7.html">MN 7</a> / <a href="../../parallels/ma93.html">MĀ 93</a> / <a href="../../parallels/sa1185.html">SĀ 1185 (~)</a> / <a href="../../parallels/sa-2.98.html">SĀ² 2.98 (~)</a> / <a href="../../parallels/ea13.5.html">EĀ 13.5</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Vatthūpama-sutta, the “discourse on the simile of the cloth”, features an exposition on the nature of mental defilements. This discourse has four Chinese parallels, one of which is found in the Madhyama-āgama, another parallel is found in the Ekottarikaāgama, while the remaining two are individual translations.<span class="note" id="mn7n113"><span class="details"><span class="p">[n.113] The parallels are <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a-576a, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c-575a, T 51 at T I 843c-844b, and T 582 at T XIV 966b-967a (I am indebted to Jan Nattier for having drawn my attention to the parallelism between T 582 and <a href="../../mn/mn7.html">MN 7</a> and for sharing a draft translation of T 582 with me). According to the information given in the Taishō edition, T 51 was translated by an unknown translator, while T 582 was translated by Zhī Qīan (支謙). <a href="../../parallels/ma93.html">MĀ 93</a> has the title “discourse on a Brahmin [practising] purification [through ablutions in] water”, 水淨梵志經; T 51 has the title “discourse spoken by the Buddha to a Brahmin speculating about purification [through ablutions in] water”, 佛說梵志計水淨經; T 582 has the title “discourse spoken by the Buddha to Sundarika”, 佛說孫多耶致經. The summary verse at T II 576a6 refers to <a href="../../parallels/ea13.5.html">EĀ 13.5</a> with 孫陀利, which might intend the river Sundarikā, even though <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574c10 instead refers to this river with 孫陀羅. As the expression 孫陀利 does not occur at all in <a href="../../parallels/ea13.5.html">EĀ 13.5</a>, it seems as if the translator(s) employed a different rendering for the name of the river Sundarikā in the discourse and in the summary verses, a not uncommon type of irregularity in the Ekottarika-āgama. For remarks and a translation of <a href="../../parallels/ma93.html">MĀ 93</a> cf. Minh Chau 1964/1991: 56, 60-61, 101-102, 186-187, and 228-232. <a href="../../parallels/ea13.5.html">EĀ 13.5</a> has been translated by Huyen-Vi 1991: 131-139; a brief survey of <a href="../../mn/mn7.html">MN 7</a> can be found in Anālayo 2009k.</span></span></span> Besides these four parallels, the final part of the Vatthūpama-sutta, which is concerned with ritual bathing in a river, has counterparts in two discourses found in the two Chinese Saṃyukta-āgama translations.<span class="note" id="mn7n114"><span class="details"><span class="p">[n.114] The partial parallels are <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321a-b and <a href="../../parallels/sa-2.98.html">SĀ2 98</a> at T II 408b-c. Anesaki 1908: 123 gives the title “Sundarika”, 孫陀利, for <a href="../../parallels/sa1185.html">SĀ 1185</a>. A reference to <a href="../../parallels/sa-2.98.html">SĀ2 98</a> in an uddāna at T II 410a1 similarly employs the abbreviated 孫陀. A meeting of the Buddha with the Brahmin Sundarika on the bank of a river occurs also in <a href="../../sn/sn7.9.html">SN 7:9</a> at SN I 167 (or SN2 195 at SN2 I 358) and in Sn 3:4 at Sn 455-486, although the ensuing discourse is not related to purification through ablutions in water.</span></span></span></p>
+<p>According to the Madhyama-āgama version and one of the individual translations, the event described in the present discourse took place just after the Buddha had reached awakening.<span class="note" id="mn7n115"><span class="details"><span class="p">[n.115] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a22 and T 51 at T I 843c17 note that the Buddha had just reached awakening, 初得道時 or 初成等覺, corresponding to the Pāli expression paṭhamābhisambuddho, to which T 51 at T I 843c17 adds that the Buddha was alone, 獨. This does not fit too well with the circumstance that both versions report the presence of monks listening to the discourse, cf. <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a24 and T 51 at T I 843c20, where both versions indicate that the Buddha addressed the monks when beginning his discourse, 告諸 比丘; both versions also conclude by reporting the delight of these monks, cf. <a href="../../parallels/ma93.html">MĀ 93</a> at T I 576a13 and T 51 at T I 844b5. According to <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c2, the Buddha was in fact surrounded by a large number of listeners. Cf. also Minh Chau 1964/1991: 56.</span></span></span></p>
+<p>While the Pāli version starts with the Buddha addressing the monks on his own, the three Chinese versions report that the arrival of a Brahmin was the occasion for the delivery of the discourse.<span class="note" id="mn7n116"><span class="details"><span class="p">[n.116] As in the case of <a href="../../mn/mn6.html">MN 6</a>, the Chinese discourses thus stand in contrast to the Pāli commentary, which includes the Vatthūpama-sutta among the discourses delivered by the Buddha on his own initiative, Ps I 15,26: attano ajjhāsayen’ eva.</span></span></span> The same Brahmin appears again at the end of all versions, asking the Buddha about ritual bathing in holy rivers.</p>
+<p>The Ekottarika-āgama version and one of the individual translations depict the arrival of this Brahmin with additional detail.<span class="note" id="mn7n117"><span class="details"><span class="p">[n.117] <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c5 and T 582 at T XIV 966b8.</span></span></span> According to their description, this Brahmin felt quite confident when comparing himself with the Buddha, as he supported himself with simple food, whereas the Buddha sometimes took rich food. According to both versions, the Buddha had become aware of this thought of the Brahmin, which apparently motivated him to deliver the discourse.</p>
+<p>The Vatthūpama-sutta starts its exposition with the simile of the cloth, followed by listing sixteen mental defilements.<span class="note" id="mn7n118"><span class="details"><span class="p">[n.118] <a href="../../mn/mn7.html">MN 7</a> at MN I 36,15; on this simile cf., e.g., Barua 1956: 104.</span></span></span> The Chinese versions follow the reverse sequence by first listing the mental defilements, which in the Chinese versions count up to twentyone types (see table 1.7), followed by then illustrating their effect with the simile of the cloth.<span class="note" id="mn7n119"><span class="details"><span class="p">[n.119] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575b3, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c18, T 51 at T I 843c25, and T 582 at T XIV 966b23.</span></span></span></p>
+<p>The defilements found in the Pāli version are almost exclusively what could be reckoned as ‘societal’ defilements, in the sense of being states that negatively affect communal behaviour.<span class="note" id="mn7n120"><span class="details"><span class="p">[n.120] Ñāṇaponika 1964/1988: 1.</span></span></span></p>
+<p>Although such qualities are likewise found in the Chinese versions, their respective lists additionally cover mental defilements more closely related to the practice of the path, such as the five hindrances.<span class="note" id="mn7n121"><span class="details"><span class="p">[n.121] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a27, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c12, T 51 at T I 843c22, and T 582 at T XIV 966b12 (which lacks restlessness-and-worry).</span></span></span></p>
+<p>The Chinese versions also mention shamelessness and recklessness, two qualities often found in similar lists in other Pāli discourses, but absent from the list of defilements in the Vatthūpama-sutta.<span class="note" id="mn7n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575b1, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c14, T 51 at T I 843c24, and T 582 at T XIV 966b16.</span></span></span> The Madhyama-āgama version and one of the individual translations, moreover, include wrong views in their lists, as well as unlawful desires.<span class="note" id="mn7n123"><span class="details"><span class="p">[n.123] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a26 and T 51 at T I 843c21.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 1.7: List of Defilements in <a href="../../mn/mn7.html">MN 7</a> and its Parallels<span class="note" id="mn7n124"><span class="details"><span class="p">[n.124] In relation to this survey I need to mention that the implications of certain Chinese characters can vary from translator to translator, thus for closely related terms – like, e.g., vyāpāda, kodha and upanāha in the Pāli listing – it is not easy to determine the precise correspondent among the various translations used in the Chinese versions. Hence with the above survey I merely intend to convey a general impression of the range of mental defilements listed.</span></span></span></caption>
+<tr><th><a href="../../mn/mn7.html">MN 7</a></th><th><a href="../../parallels/ma93.html">MĀ 93</a></th><th>T 51</th></tr>
+<tr><td>greed (1)</td><td>wrong views</td><td>wrong views</td></tr>
+<tr><td>ill will (2)</td><td>unlawful desires</td><td>unlawful desires</td></tr>
+<tr><td>anger (3)</td><td>evil greed</td><td>deceit (→ 9)</td></tr>
+<tr><td>malice (4)</td><td>wrong mental states</td><td>evil states</td></tr>
+<tr><td>contempt (5)</td><td>greed (→ 1)</td><td>greed (→ 1)</td></tr>
+<tr><td>domineering (6)</td><td>ill will (→ 2)</td><td>ill will (→ 2)</td></tr>
+<tr><td>envy (7)</td><td>sloth-and-torpor</td><td>laziness</td></tr>
+<tr><td>avarice (8)</td><td>restlessness-and-worry</td><td>sloth-and-torpor</td></tr>
+<tr><td>deceit (9)</td><td>doubt</td><td>restlessness-and-worry</td></tr>
+<tr><td>fraud (10)</td><td>anger (→ 3)</td><td>shamelessness</td></tr>
+<tr><td>obstinacy (11)</td><td>silent sulking125</td><td>doubt</td></tr>
+<tr><td>presumption (12)</td><td>avarice (→ 8)</td><td>anger (→ 3)</td></tr>
+<tr><td>pride (13)</td><td>envy (→ 7)</td><td>malice (→ 4)</td></tr>
+<tr><td>excessive pride (14)</td><td>deceit (→ 9)</td><td>avarice (→ 8)</td></tr>
+<tr><td>vanity (15)</td><td>flattery</td><td>jealousy</td></tr>
+<tr><td>negligence (16)</td><td>shamelessness</td><td>partiality</td></tr>
+<tr><td></td><td>recklessness</td><td>flattery</td></tr>
+<tr><td></td><td>pride (→ 13)</td><td>recklessness</td></tr>
+<tr><td></td><td>excessive pride (→ 14)</td><td>envy (→ 7)</td></tr>
+<tr><td></td><td>arrogance (→ 15)</td><td>excessive envy126</td></tr>
+<tr><td></td><td>negligence (→ 16)</td><td>negligence (→ 16)</td></tr>
+<tr><td></td><td>(≠ 4-6, 10-12)</td><td>(≠ 5-6, 10-15)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th><a href="../../parallels/ea13.5.html">EĀ 13.5</a></th><th>T 582</th></tr>
+<tr><td>anger (→ 3)</td><td>sensual desire (→ 1)</td></tr>
+<tr><td>ill will (→ 2)</td><td>ill will (→ 2)</td></tr>
+<tr><td>sloth-and-torpor</td><td>delusion</td></tr>
+<tr><td>restlessness-and-worry</td><td>sloth-and-torpor</td></tr>
+<tr><td>doubt</td><td>bondage of doubt127</td></tr>
+<tr><td>hatred (→ 4)</td><td>pride (→ 13)</td></tr>
+<tr><td>jealousy</td><td>arrogance (→ 14)</td></tr>
+<tr><td>vexation</td><td>envy (→ 7)</td></tr>
+<tr><td>disease</td><td>avarice (→ 8)</td></tr>
+<tr><td>dislike</td><td>cruelty (→ 4)</td></tr>
+<tr><td>shamelessness</td><td>deceit (→ 9)</td></tr>
+<tr><td>recklessness</td><td>shamelessness</td></tr>
+<tr><td>deceit (→ 9)</td><td>recklessness</td></tr>
+<tr><td>debauchery</td><td>faultfinding</td></tr>
+<tr><td>fraud (→ 10)</td><td>lustful</td></tr>
+<tr><td>faultfinding</td><td>gossiping</td></tr>
+<tr><td>arrogance (→ 15)</td><td>quarrelsome</td></tr>
+<tr><td>pride (→ 13)</td><td>impolite</td></tr>
+<tr><td>envy (→ 7)</td><td>difficult to admonish (→ 11?)</td></tr>
+<tr><td>excessive pride (→ 14)</td><td>disobedient, no mettā</td></tr>
+<tr><td>greed (→ 1)</td><td>delight in wrong ways</td></tr>
+<tr><td>(≠ 5-6, 8, 11-12, 16)</td><td>(≠ 3, 5-6, 10, 12, 15-16)</td></tr>
+</table>
+<p>The point made with the help of the simile of the cloth, according to the Majjhima-nikāya and Ekottarika-āgama versions, is that a dirty and stained cloth will not take dye properly.<span class="note" id="mn7n128"><span class="details"><span class="p">[n.128] <a href="../../mn/mn7.html">MN 7</a> at MN I 36,15 and <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c18; the simile in T 582 at T XIV 966b23 is rather cryptic, although it could be having a similar sense.</span></span></span> The Madhyama-āgama discourse and one individual translation instead describe a dirty cloth that is still stained even after much washing.<span class="note" id="mn7n129"><span class="details"><span class="p">[n.129] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575b3 and T 51 at T I 843c25.</span></span></span></p>
+<p>The Madhyama-āgama and Ekottarika-āgama versions, as well as one of the individual translations, proceed from the removal of the twenty-one defilements they mention to the development of the four brahmavihāras in the form of a boundless radiation.<span class="note" id="mn7n130"><span class="details"><span class="p">[n.130] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575c11, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574a7, and T 51 at T I 844a15.</span></span></span> The Majjhima-nikāya discourse instead proceeds from overcoming the sixteen defilements mentioned in its listing to perfect confidence in the three jewels (Buddha, Dharma, and Saṅgha), an implicit reference to stream-entry,<span class="note" id="mn7n131"><span class="details"><span class="p">[n.131] <a href="../../mn/mn7.html">MN 7</a> at MN I 37,15.</span></span></span> and only turns to the brahmavihāras later on (see table 1.8).</p>
+<p>The Madhyama-āgama version and one of the individual translations conclude their description of the radiation of the four brahmavihāras with the Buddha pointing out that in this way an internal ‘bathing’ of the mind can be undertaken, different from an outer bathing of the body.<span class="note" id="mn7n132"><span class="details"><span class="p">[n.132] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575c16 and T 51 at T I 844a19.</span></span></span> The same two versions continue by reporting that the Brahmin who had been present during the delivery of the discourse asked the Buddha about purification by bathing in sacred rivers.</p>
+<table class="comparative-table">
+<caption>Table 1.8: Progression of Topics in <a href="../../mn/mn7.html">MN 7</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn7.html">MN 7</a></th><th><a href="../../parallels/ma93.html">MĀ 93</a> & T 51</th></tr>
+<tr><td>simile of cloth (1)</td><td>list of defilements (→ 2)</td></tr>
+<tr><td>list of defilements (2)</td><td>simile of cloth (→ 1)</td></tr>
+<tr><td>confidence in 3 jewels (3)</td><td>brahmavihāras (→ 5)</td></tr>
+<tr><td>detachment with food (4)</td><td>on water purification (→ 7)</td></tr>
+<tr><td>brahmavihāras (5)</td><td></td></tr>
+<tr><td>liberation (6)</td><td></td></tr>
+<tr><td>on water purification (7)</td><td>(≠ 3-4)</td></tr>
+<tr><td><a href="../../parallels/ea13.5.html">EĀ 13.5</a></td><td>T 582</td></tr>
+<tr><td>list of defilements (→ 2)</td><td>list of defilements (→ 2)</td></tr>
+<tr><td>simile of cloth (→ 1)</td><td>simile of cloth (→ 1)</td></tr>
+<tr><td>brahmavihāras (→ 5)</td><td>liberation (→ 6)</td></tr>
+<tr><td>confidence in 3 jewels (→ 3)</td><td>detachment with food (→ 4)</td></tr>
+<tr><td>liberation (→ 6)</td><td>on water purification (→ 7)</td></tr>
+<tr><td>detachment with food (→ 4)</td><td></td></tr>
+<tr><td>on water purification (→ 7)</td><td></td></tr>
+</table>
+<p>The same query occurs also in the Majjhima-nikāya and the Ekottarika-āgama versions, although in their accounts the Buddha’s exposition continues further before this intervention happens. In the Ekottarika-āgama version, after having described the radiation of the four brahmavihāras, the Buddha speaks of perfect confidence in the three jewels,<span class="note" id="mn7n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574ac24.</span></span></span> a topic that already occurred earlier in the Majjhima-nikāya discourse (see above table 1.8).</p>
+<p>In regard to the qualities of the three jewels, while the Majjhima-nikāya and the Ekottarika-āgama presentations of the qualities of the Buddha are similar,<span class="note" id="mn7n134"><span class="details"><span class="p">[n.134] The counterpart in <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574a28 to the epithet in <a href="../../mn/mn7.html">MN 7</a> at MN I 37,18, according to which the Buddha is the “unsurpassable leader of men to be tamed”, anuttaro purisadammasārathi (Ce-M I 86,26: purisadammasārathī), treats this as two qualities: the “unsurpassable man”, 無上士, and the “charioteer of the path of Dharma”, 道法御. Nattier 2003b: 227 notes that 無上士 “has been the standard Chinese rendition of the seventh of the Buddha’s epithets for many centuries” and explains that due to “having taken anuttarapuruṣa as a separate title, [the] ... translators were left to explain the epithet damyasārathi on its own. In ... Prakrit languages ... damya would have been written damma ... Ignoring the unaspirated character of the initial d-, this word was apparently read as dhamma, and the resulting *dhammasārathi interpreted as ‘charioteer of the Dharma’”. A separation of the two parts of this compound can also be found in the Bhaiṣajyavastu of the Tibetan (Mūla-)Sarvāstivāda Vinaya in D (1) ’dul ba, kha 56a5: skyes bu ’dul ba’i kha lo sgyur ba, bla na med pa, where the use of the shad (here represented by a comma) separates “unsurpassed” from the “charioteer of men to be tamed” and thus treats them as two separate epithets (though the same expression in Q (1030) ge 52a1 does not employ a shad at this point); cf. also Skilling 1997a: 413 note 35. The same can also be found regularly in Madhyama-āgama discourses, e.g., in <a href="../../parallels/ma8.html">MĀ 8</a> at T I 429c20 or <a href="../../parallels/ma16.html">MĀ 16</a> at T I 438b21, just two mention two examples, cf. also Minh Chau 1964/ 1991: 326</span></span></span> they differ in relation to the Dharma. The Majjhima-nikāya version highlights that the Dharma is well proclaimed, visible here and now, immediately effective, inviting inspection, leading onward, and to be experienced for oneself by the wise.<span class="note" id="mn7n135"><span class="details"><span class="p">[n.135] <a href="../../mn/mn7.html">MN 7</a> at MN I 37,20: svākkhāto ... sandiṭṭhiko akāliko ehipassiko opanayiko paccattaṃ veditabbo viññūhī ti (Be-M I 45,28: opaneyyiko).</span></span></span> The Ekottarika-āgama version instead describes the Dharma as very pure, unshakeable, respected and loved by the people.<span class="note" id="mn7n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574b1: 甚為清淨, 不可移動, 人所愛敬.</span></span></span></p>
+<p>In relation to the Saṅgha, the two versions agree on speaking of the four pairs and the eight persons. While the Majjhima-nikāya discourse proclaims that the Saṅgha’s members practise the good, straight, methodical, and proper way,<span class="note" id="mn7n137"><span class="details"><span class="p">[n.137] <a href="../../mn/mn7.html">MN 7</a> at MN I 37,22: supaṭipanno ... ujupaṭipanno ... ñāyapaṭipanno ... sāmīcipaṭipanno (Be-M I 45,30: suppaṭipanno ... ujuppaṭipanno ... ñāyappaṭipanno ... sāmīcippaṭipanno).</span></span></span> the Ekottarika-āgama version among others highlights that the members of the Saṅgha are accomplished in moral conduct, concentration, wisdom, liberation, and knowledge-and-vision-of-liberation.<span class="note" id="mn7n138"><span class="details"><span class="p">[n.138] <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574b4: 戒成就, 三昧成就, 智慧成就, 解脫成就, 解脫見慧成就.</span></span></span></p>
+<p>The Ekottarika-āgama discourse continues its account with the acquisition of the three higher knowledges, explaining that even taking delicious food will not constitute an obstacle for someone accomplished in this way, since all desires have been eradicated.<span class="note" id="mn7n139"><span class="details"><span class="p">[n.139] <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574c5.</span></span></span> A comparable remark can be found in one of the individual translations, where a detailed description of various aspects of proper conduct that make one a worthy recipient of offerings leads up to the indication that in such a case taking good food and fine robes is not blameworthy.<span class="note" id="mn7n140"><span class="details"><span class="p">[n.140] T 582 at T XIV 966c6.</span></span></span></p>
+<p>The Vatthūpama-sutta has a similar reference to taking delicious food before its treatment of the brahmavihāras (see above table 1.8).<span class="note" id="mn7n141"><span class="details"><span class="p">[n.141] <a href="../../mn/mn7.html">MN 7</a> at MN I 38,10. An extract from the present discussion already appeared in Anālayo 2005b: 3-5.</span></span></span> In the Pāli account, this passage is a little surprising, placed as it is in between perfect confidence in the three jewels and the development of the brahmavihāras,<span class="note" id="mn7n142"><span class="details"><span class="p">[n.142] Aronson 1984: 17 comments that “the continuity of this discourse is quite choppy”.</span></span></span> and its implications remain somewhat unclear.</p>
+<p>The Pāli commentary explains this statement to imply that non-return has been attained, since taking delicious food will not obstruct a non-returner from progress to full awakening.<span class="note" id="mn7n143"><span class="details"><span class="p">[n.143] Ps I 174,22, an explanation perhaps based on <a href="../../sn/sn12.63.html">SN 12:63</a> at SN II 99,8, according to which penetrative insight into the nutriment of edible food can lead via penetrative insight into the nature of the five types of sensual pleasure to going beyond rebirth in this world.</span></span></span> This explanation appears contrived. Although delicious food will indeed not affect a non-returner or an arahant, being beyond the attraction of delicious food does not imply that one is at least a non-returner, since to remain unaffected by delicious food is possible even if one has not yet reached such a lofty level of realization.</p>
+<p>The Vatthūpama-sutta at this point speaks of aloofness from the attraction of food for one who is of “such virtue, such nature, and such wisdom”.<span class="note" id="mn7n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn7.html">MN 7</a> at MN I 38,10: evaṃ sīlo evaṃ dhammo evaṃ pañño.</span></span></span> Since the preceding passage spoke of perfect confidence in the three jewels, representative of stream-entry, the introductory reference to “such virtue, such nature, and such wisdom” should refer to the same level of awakening. Hence the formulation in the Vatthūpama-sutta does not support identifying this passage as representative of non-return. Perhaps the puzzling placement of the reference to taking delicious food at a point between a reference to streamentry and a reference to full awakening has led the commentary to give this explanation, in an attempt to make sense out of this placement.</p>
+<p>In contrast, in the Ekottarika-āgama version the placement of this passage seems more natural, since by taking up this topic after full awakening it becomes clear that such aloofness is just one of the qualities that result from having eradicated all defilements. The same holds for the individual translation that has a comparable reference. Both versions also clarify the relation of this passage to the Vatthūpama-sutta as a whole, since it was just such taking of delicious food by the Buddha that had caused the Brahmin to underestimate the degree of purity the Buddha had reached. Thus, in these two discourses, the reference to the topic of delicious food forms a direct reply to this misconception of the Brahmin, a misconception that apparently motivated the Buddha to deliver the entire discourse.<span class="note" id="mn7n145"><span class="details"><span class="p">[n.145] The point conveyed in this way would be that the attitude to food is more important than the type of food taken. As Stevens 1985: 441 explains, in contrast to some of the ascetic practices in vogue in ancient India, for the Buddha “it was the intention, not the food, that was paramount for enlightened eating”.</span></span></span></p>
+<p>Another difference between the Majjhima-nikāya and the Ekottarika-āgama presentations is that the Vatthūpama-sutta does not refer to all of the three higher knowledges, mentioned in its Ekottarika-āgama parallel, but only to the destruction of the influxes.<span class="note" id="mn7n146"><span class="details"><span class="p">[n.146] <a href="../../mn/mn7.html">MN 7</a> at MN I 38,32.</span></span></span> The Majjhima-nikāya version precedes the destruction of the influxes with a brief description of the development of insight required for this lofty achievement, which speaks of understanding that there is what is inferior, what is superior, and what goes beyond all perceptions.<span class="note" id="mn7n147"><span class="details"><span class="p">[n.147] <a href="../../mn/mn7.html">MN 7</a> at MN I 38,31: “there is this, there is [what is] low, there is [what is] excellent, there is a higher escape from what pertains to perception”, atthi idaṃ, atthi hīnaṃ, atthi paṇītaṃ, atthi imassa saññāgatassa uttariṃ nissaraṇan ti. A similar statement recurs in <a href="../../an/an3.66.html">AN 3:66</a> at AN I 196,32. A counterpart to this statement can be found in another discourse in the Madhyama-āgama, <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726b27, in which case the corresponding Pāli parallel, <a href="../../mn/mn40.html">MN 40</a> at MN I 283, does not have such a statement (cf. below p. 261 note 282). It is noteworthy that <a href="../../mn/mn7.html">MN 7</a>, <a href="../../an/an3.66.html">AN 3:66</a>, and <a href="../../parallels/ma183.html">MĀ 183</a> agree on placing this statement after the practice of the brahmavihāras, which suggests that the reference to what is “excellent”, paṇīta, intends the brahmavihāras. According to the commentary Ps I 176,26, however, paṇīta stands for the fourth noble truth.</span></span></span> A counterpart to this passage is not found in the Ekottarika-āgama parallel.</p>
+<p>The Vatthūpama-sutta and its parallel in the Ekottarika-āgama continue by proclaiming that a monk who has destroyed the influxes is “bathed with an inner bathing”.<span class="note" id="mn7n148"><span class="details"><span class="p">[n.148] <a href="../../mn/mn7.html">MN 7</a> at MN I 39,1: sināto antarena sinānena, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574c9: 內極沐浴已.</span></span></span> A similar proclamation can also be found in the other versions. This inner bathing represents full awakening only in the Majjhima-nikāya and the Ekottarika-āgama discourses, while in the Madhyama-āgama version and the individual translation the inner bathing stands for the degree of mental purity achieved through the development of the brahmavihāras.</p>
+<p>On hearing this proclamation, according to the Majjhima-nikāya discourse a Brahmin visitor asked the Buddha about purification by bathing in sacred rivers. The Majjhima-nikāya version up to this point has not mentioned the presence of this Brahmin and in its version the rationale for the Buddha’s remark on an inner bathing is not self-evident. The commentary explains that the Buddha had been aware of this Brahmin’s potential to reach awakening and had made this proclamation in order to arouse the Brahmin’s interest, as this Brahmin was engaging in the practice of purification through (ritual) bathing.<span class="note" id="mn7n149"><span class="details"><span class="p">[n.149] Ps I 177,5 introduces him as a nahānasuddhiko brāhmaṇo, a “Brahmin [intent on] purification through bathing”.</span></span></span></p>
+<p>This part of the Vatthūpama-sutta occurs also in two Saṃyukta-āgama discourses, so that this last section of the Pāli discourse has six Chinese parallels. Four of these six Chinese parallels have the bank of a river as their venue, thereby providing the fitting location for the present exchange about bathing in rivers.<span class="note" id="mn7n150"><span class="details"><span class="p">[n.150] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a21, T 51 at T I 843c16, <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321a24, and <a href="../../parallels/sa-2.98.html">SĀ2 98</a> at T II 408b25. Only <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c1 agrees with <a href="../../mn/mn7.html">MN 7</a> on the location being Jeta’s Grove at Sāvatthī.</span></span></span> The Madhyama-āgama discourse and one of the individual translations, moreover, speak of the Buddha’s visitor as a Brahmin who practises water purification, while the two Saṃyukta-āgama versions and the Ekottarika-āgama account refer to him as a Brahmin from the bank of a river, a place where such purification through ablutions in water would take place.<span class="note" id="mn7n151"><span class="details"><span class="p">[n.151] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575a23 speaks of the Buddha’s visitor as a Brahmin who practised “purification [through ablutions in] water”, 水淨; T 51 at T I 843c17 refers to him as a Brahmin who “speculates about purification [through ablutions in] water”, 計水淨; <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321a25 speaks of a Brahmin “from the bank of the river Sundarikā”, 孫陀利河側; <a href="../../parallels/sa-2.98.html">SĀ2 98</a> at T II 408b26 of a “Brahmin who at that time was standing on the bank of the river Sundarikā”, 孫陀利河岸, 時彼岸側有住婆羅門; and <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 573c3 refers to him simply as a “river side” Brahmin, 江側. While <a href="../../mn/mn7.html">MN 7</a> speaks of this Brahmin throughout as Sundarika Bhāradvāja, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 575a2 uses a proper name only once he has become a monk and an arahant, referring to him as the “venerable Sundarika”, 尊者孫陀羅. Spk I 233,7 explains that he was called Sundarika after the river where he used to offer oblations (Bhāradvāja is the name of a Brahmin clan, cf. Vin IV 6,23; on the Bhāradvājas cf. also Sarmah 1991). Enomoto 2002/2003: 241 points out that ablution in water was one of the main Brahmanical practices of expiation or atonement, prāyaścitta. According to Gampert 1939: 255, sin was perceived as a form of dirt, hence ablution in water, often combined with prayers to Varuṇa, the god of water, was held to be a particularly efficacious means for removing the stain of sin. The Jain tradition also took a critical stance towards purification through water, thus, e.g., the Sūyagaḍa 1.7.14-16 in Vaidya 1928: 39 argues that if water can purify, animals living in it should also be purified, and if water can wash away evil, it should wash away merits as well.</span></span></span></p>
+<p>According to all versions, the Buddha explained to this Brahmin that bathing in rivers will not lead to purification. Instead of such ritual bathing, the Buddha recommended observance of moral conduct as the proper way to purification.<span class="note" id="mn7n152"><span class="details"><span class="p">[n.152] <a href="../../mn/mn7.html">MN 7</a> at MN I 39,13, <a href="../../parallels/ma93.html">MĀ 93</a> at T I 575c23, <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321b4, <a href="../../parallels/sa-2.98.html">SĀ2 98</a> T II 408c3, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 574c15, T 51 at T I 844a21, and T 582 at T XIV 966c15, where in the last two versions this reply comes in prose. McTighe 1988: 210 sees the present use of verse, together with similar instances of teachings given to Brahmins in verse in <a href="../../mn/mn92.html">MN 92</a> and <a href="../../mn/mn98.html">MN 98</a>, as exemplifying that the Buddha was “sensitive to an auditor’s preference in rhetorical expression”, as he replied to those who had mastery of the Vedas “in their own poetic argot”. The fourth stanza found in <a href="../../mn/mn7.html">MN 7</a> at MN I 39,19 recurs in the Gāndhārī Dharmapada stanza 327 in Brough 1962/2001: 170, in the Patna Dharmapada stanza 99 in Cone 1989: 129 or in Roth 1980b: 106, in the Sanskrit Udāna-(varga) stanza 16:15 in Bernhard 1965: 229, cf. also stanza 196 in Nakatani 1987: 47, and the Tibetan Udāna-(varga) stanza 16:14 in Beckh 1911: 55 or in Zongtse 1990: 168. Rockhill 1883/1975: 72 note 1 indicates that the Tibetan Udāna-(varga) stanza is indeed related to the events depicted in the Vatthūpama-sutta. A reference to the belief that bathing in rivers like Sundarikā leads to purification can be found in the Yogācārabhūmi, cf. Bhattacharya 1957: 157,7 and T 1579 at T XXX 312b7.</span></span></span></p>
+<p>The parallel versions conclude with considerable variations:</p>
+<ul>
+<li>one of the two Saṃyukta-āgama versions concludes by reporting that the Brahmin approved of the Buddha’s explanation,</li>
+<li>according to the other Saṃyukta-āgama version he was delighted by what he had heard,<span class="note" id="mn7n153"><span class="details"><span class="p">[n.153] <a href="../../parallels/sa1185.html">SĀ 1185</a> at T II 321b19 (delight) and <a href="../../parallels/sa-2.98.html">SĀ2 98</a> T II 408c24 (approval).</span></span></span></li>
+<li>the Madhyama-āgama discourse and one of the individual translations report that he took refuge as a lay follower,<span class="note" id="mn7n154"><span class="details"><span class="p">[n.154] <a href="../../parallels/ma93.html">MĀ 93</a> at T I 576a10 and T 51 at T I 844b2.</span></span></span></li>
+<li>according to the Majjhima-nikāya version, the Ekottarika-āgama account, and the other individual translation, he went forth and became an arahant.<span class="note" id="mn7n155"><span class="details"><span class="p">[n.155] <a href="../../mn/mn7.html">MN 7</a> at MN I 40,8, <a href="../../parallels/ea13.5.html">EĀ 13.5</a> at T II 575a3, and T 582 at T XIV 966c25.</span></span></span></li>
+</ul>
+<p>The ending reported in the last mentioned three versions has a counterpart in a discourse found in the Saṃyutta-nikāya and in the Sutta-nipāta, according to which the same Brahmin on another occasion approached the Buddha in order to offer him the remains of an oblation.<span class="note" id="mn7n156"><span class="details"><span class="p">[n.156] <a href="../../sn/sn7.9.html">SN 7:9</a> at SN I 167,28 (or SN2 195 at SN2 I 359,8) and Sn 3:4 at Sn p. 80,2.</span></span></span> During the ensuing discussion, the Buddha explained that to be a Brahmin does not make one necessarily worthy of offerings and presented his perspective of what leads to purity. The Saṃyutta-nikāya and Sutta-nipāta versions conclude by recording that the Brahmin took refuge, went forth and in due time became an arahant.<span class="note" id="mn7n157"><span class="details"><span class="p">[n.157] <a href="../../sn/sn7.9.html">SN 7:9</a> at SN I 170,6 (or SN2 195 at SN2 I 364,14) and Sn 3:4 at Sn p. 86,15 report that Sundarika Bhāradvāja became an arahant in the same terms as used in <a href="../../mn/mn7.html">MN 7</a> at MN I 40,7; cf. also Franke 1908: 5.</span></span></span></p>
+<p>The meeting between this Brahmin and the Buddha narrated in the Saṃyutta-nikāya and Sutta-nipāta discourses would have to be considered as their first meeting, since the Brahmin did not recognize the Buddha.<span class="note" id="mn7n158"><span class="details"><span class="p">[n.158] <a href="../../sn/sn7.9.html">SN 7:9</a> at SN I 168,3 (or SN2 195 at SN2 I 360,2) and Sn 3:4 at Sn p. 80,9 describe how once the Buddha had uncovered his head, Sundarika Bhāradvāja wondered whether the person he saw was a Brahmin or a recluse. Thus from the perspective of the narration in these two discourses, if Sundarika had met the Buddha on an earlier occasion, he would have recognized the Buddha and would not have wondered whether the Buddha was a Brahmin.</span></span></span> As on this occasion the Buddha’s explanations had put into question the Brahmin’s belief in external forms of purification through offering oblations and his assumption of the superiority of being a Brahmin, it would make sense for him to ask the Buddha on the related topic of purification through ritual bathing in sacred waters on a later occasion, as reported in the Vatthūpama-sutta.</p>
+<p>The introductory narration in the Ekottarika-āgama parallel to the Vatthūpama-sutta and in one of the individual translations, according to which this Brahmin had been trying to find fault with the Buddha for partaking of exquisite food, would also fit with such an earlier meeting. It would be natural to imagine how this Brahmin might try to find some faults after having been humbled by the Buddha’s reply on an earlier occasion.</p>
+<p>Thus the only conflict between the accounts of these two meetings is their concluding part, according to which the same Brahmin requested the going forth and eventually became an arahant on two different occasions. The Saṃyukta-āgama parallel to the earlier meeting of this Brahmin with the Buddha does not have this contradiction, as this version neither reports that the Brahmin became an arahant, nor indicates that he requested the going forth. According to its account, on this earlier occasion he did not even take refuge, but merely delighted in the Buddha’s exposition and left.<span class="note" id="mn7n159"><span class="details"><span class="p">[n.159] <a href="../../parallels/sa1184.html">SĀ 1184</a> at T II 321a22. Another parallel, <a href="../../parallels/sa-2.99.html">SĀ2 99</a> at T II 409c12, agrees with <a href="../../sn/sn7.9.html">SN 7:9</a> (or SN2 195) and Sn 3:4, as it concludes with the Brahmin going forth and becoming an arahant.</span></span></span> This ending would not stand in any contrast to his going forth and becoming an arahant at the end of his later meeting with the Buddha, described in the Vatthūpama-sutta and its parallels.</p>
+<p>Perhaps his eventual going forth and becoming an arahant, reported in the Vatthūpamasutta, came to be part of the Saṃyutta-nikāya and Sutta-nipāta reports of the first meeting between Sundarika and the Buddha as the result of an error during the transmission of the discourses.</p>
+<p>Looking back on the Vatthūpama-sutta and its parallels, the seven versions of this discourse can be assembled into three groups, each of which gives a somewhat different presentation of the Buddha’s exposition and of its effect on the Brahmin.</p>
+<p>The two Saṃyukta-āgama versions offer the shortest and most simple account. Here the Buddha meets a Brahmin on the bank of a river and the latter, apparently thinking that the Buddha has come to take a ritual bath, brings up the subject of water purification. In reply, the Buddha points out that real purification needs to be undertaken in the realm of moral conduct, a reply that satisfies the Brahmin.</p>
+<p>The Madhyama-āgama discourse and one of the individual translations additionally offer an account of mental purification. This account contrasts a host of mental defilements with the development of the brahmavihāras. After presenting such development as an inner bathing, superior to a ritual bathing of the outer body, the topic of purification through bathing in water comes in its place. As a result of the exposition given in these two discourses, the Brahmin interlocutor becomes a lay disciple.</p>
+<p>The Majjhima-nikāya and Ekottarika-āgama discourses place a stronger emphasis on the threefold perfect confidence of a stream-enterer and the destruction of the influxes. According to their report, after the selfsame exchange with the Brahmin on water purification the Brahmin was so inspired that he went forth and became an arahant. The same outcome is also reported in the other individual translation, which in other respects, however, differs from these two discourses.</p>
+<p>Thus, while in the two Saṃyukta-āgama versions the discourse is concerned merely with the inefficacy of water purification, in the Madhyama-āgama version and one of the individual translation the emphasis is on the contrast between mental defilements and the mental purity of the brahmavihāras, whereas in the Majjhima-nikāya discourse, the Ekottarika-āgama version, and the other individual translation full awakening as the proper type of purification comes to the fore.</p>
+<p>Regarding each of these three main modes of presentation, the Brahmin’s reaction fits the depth of the discourse he has received.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

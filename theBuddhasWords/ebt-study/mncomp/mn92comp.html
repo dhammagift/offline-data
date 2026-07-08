@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 92 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 92: Sela-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn91comp.html#content"></a><a id="next-sutta" href="./mn93comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn92.html">MN 92</a> / <a href="../../parallels/ea49.6.html">EĀ 49.6</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sela-sutta, the “discourse to Sela”, describes the conversion of the Brahmin Sela and his students.<span class="note" id="mn92n84"><span class="details"><span class="p">[n.84] For a study of conversion stories in the Sutta-nipāta in general cf. Bailey 1991.</span></span></span> This discourse recurs under the same title in the Sutta-nipāta and has a parallel in the Ekottarika-āgama.<span class="note" id="mn92n85"><span class="details"><span class="p">[n.85] Sn 3:7 at Sn p. 102-112 and <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798a-800b. For a study of Sn 3:7 cf. Perera 1950; for a study and partial translation of <a href="../../parallels/ea49.6.html">EĀ 49.6</a> cf. Anālayo 2010c. While the Pāli versions take place in Āpaṇa, a town in the Aṅguttarāpa country, <a href="../../parallels/ea49.6.html">EĀ 49.6</a> is located at the Squirrels’ Feeding Ground by Rājagaha.</span></span></span> In addition, the events covered in the Sela-sutta are also recorded in the Dharmaguptaka Vinaya and in the Bhaiṣajyavastu of the (Mūla-)Sarvāstivāda Vinaya.<span class="note" id="mn92n86"><span class="details"><span class="p">[n.86] T 1428 at T XXII 873a25-c12, translated in Jaworski 1930: 112-115, and Dutt 1984a: 262-266. The Dharmaguptaka Vinaya account, T 1428 at T XXII 873a25, agrees with <a href="../../mn/mn92.html">MN 92</a> on the location, whereas the (Mūla-)Sarvāstivāda Vinaya version, Dutt 1984a: 255,14, takes place at Udumā.</span></span></span></p>
+<p>The Sela-suttas, their Ekottarika-āgama parallel, and the accounts found in the Dharmaguptaka and (Mūla-)Sarvāstivāda Vinayas report that after hearing a discourse from the Buddha, Keṇiya invited the Buddha and the monks for a meal.<span class="note" id="mn92n87"><span class="details"><span class="p">[n.87] Sn 3:7 at Sn p. 103,2 introduces Keṇiya as a matted-hair ascetic (cf. also Therāpadāna 389:26 at Ap 318,14, which qualifies him as a tāpasa), whereas <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798b5 presents him as a Brahmin. According to Ps III 399,5, the matted-hair ascetic Keṇiya came indeed from an eminent Brahmin family. The Dharmaguptaka Vinaya, T 1428 at T XXII 873a26, also refers to him as a Brahmin, whereas the (Mūla-)Sarvāstivāda Vinaya in Dutt 1984a: 262,10 speaks of him as a seer.</span></span></span> Keṇiya’s offering of beverages to the Buddha and the monks is also recorded in the Mahīśāsaka and Theravāda Vinayas, both of which continue by describing how Keṇiya treated the Buddha to a meal, an account similar to the introductory narration in the Sela-suttas.<span class="note" id="mn92n88"><span class="details"><span class="p">[n.88] T 1421 at T XXII 151b28 and Vin I 245,25, an offering of beverages also recorded in the Mahāsāṅghika Vinaya, T 1425 at T XXII 464a29, the (Mūla-)Sarvāstivāda Vinaya, Dutt 1984a: 262,19, and the Sarvāstivāda Vinaya, T 1435 at T XXIII 193a23; cf. also Jaworski 1930: 83-85 and 109-115.</span></span></span></p>
+<p>The Sela-suttas do not give details about the nature of the discourse the Buddha had given to Keṇiya. According to the Ekottarika-āgama account, Keṇiya had asked for the Buddha’s opinion on the Brahminical claim to class superiority. In reply, the Buddha examined this claim in detail, bringing up several arguments employed also in the Assalāyana-sutta and its Chinese parallels.<span class="note" id="mn92n89"><span class="details"><span class="p">[n.89] <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798b19 takes up the class of someone born from a couple of mixed Brahmin and warrior class and compares this situation to a mule, similar to the argument given in <a href="../../mn/mn93.html">MN 93</a> at MN II 153,12, cf. also below p. 554 note 130. <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798c14 continues by comparing a skilled and knowledgeable Brahmin youth to his ignorant brother, similar to <a href="../../mn/mn93.html">MN 93</a> at MN II 154,3, followed in <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798c21 by contrasting the skilled brother’s unwholesome behaviour and lack of restraint with his ignorant brother’s restraint and wholesome conduct, similar to an argument found in <a href="../../mn/mn93.html">MN 93</a> at MN II 154,11. <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 798c27 then compares a learned Brahmin youth of pure descent from the mother’s side to an unlearned Brahmin youth of pure descent from the father’s side, followed in <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 799a9 by contrasting a learned Brahmin youth of wholesome conduct with a wise Brahmin youth (or one who is not wise according to a 明 variant reading) who is of unwholesome conduct. In all these instances Keṇiya had to admit that class was overruled by other qualities. <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 799a21 then brings up the example of a foreign country in which only masters and slaves are found, similar to <a href="../../mn/mn93.html">MN 93</a> at MN II 149,4. The last argument offered in <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 799a27 briefly refers to the mythical account of the origin of class and sex distinctions after one of the cyclic destructions of the earth, in some respects similar to an argument found in <a href="../../dn/dn27.html">DN 27</a> at DN III 84,25.</span></span></span> Satisfied by the Buddha’s exposition, Keṇiya took refuge and invited the Buddha and his monks for the next day’s meal.</p>
+<p>While the Ekottarika-āgama version and the (Mūla-)Sarvāstivāda Vinaya simply report that the Buddha accepted the invitation, according to the Sela-suttas and the Dharmaguptaka Vinaya the Buddha refused twice, warning Keṇiya that the congregation of monks was rather large. In fact, in the Sela-suttas and in the Dharmaguptaka Vinaya the disciples of the Buddha number one-thousand-two-hundred-and-fifty,<span class="note" id="mn92n90"><span class="details"><span class="p">[n.90] By presenting the Buddha in the company of one-thousand-two-hundred-and-fifty disciples, Sn 3:7 at Sn p. 102,20 (= <a href="../../mn/mn92.html">MN 92</a>) and T 1428 at T XXII 873b24 provide a favourable contrast to Sela, who according to both versions had less disciples, as Sn 3:7 at Sn p. 105,3 counts three hundred disciples and T 1428 at T XXII 873b16 five hundred followers (in the (Mūla-)Sarvāstivāda Vinaya version in Dutt 1984a: 265,2 he also has five hundred disciples). In <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T I 798a26+29, however, the disciples of the Buddha and the disciples of Sela both number five hundred. In general, the Pāli tradition tends to use predominantly the number five hundred when describing a congregation of the Buddha’s disciples, while the Ekottarika-āgama makes a frequent use of the number one-thousand-two-hundred-and-fifty, cf. above p. 419 note 141. Malalasekera 1937/1995: 22 takes the Pāli version’s count of disciples to reflect actual conditions and concludes that the Aṅguttarāpa country “was probably rich, because we find as many as 1250 monks accompanying the Buddha”.</span></span></span> making it a considerable task to provide them all with food.<span class="note" id="mn92n91"><span class="details"><span class="p">[n.91] According to the Pāli commentary, Ps III 400,1, the three hundred disciples of Sela should also be added to this count, since the Buddha already at this point knew that they would also go forth and thus come along for the next day’s meal.</span></span></span></p>
+<p>The Pāli and Chinese discourses report in similar terms that the Brahmin Sela chanced upon the preparations for the meal offering at Keṇiya’s place. Told by Keṇiya that the preparations were for a Buddha, Sela decided to visit the Buddha himself.<span class="note" id="mn92n92"><span class="details"><span class="p">[n.92] While Sn 3:7 at Sn p. 106,3 reports that Sela ascertained twice if he had properly understood that a Buddha had been invited, according to <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 799b25 a single question and answer on this topic were sufficient. T 1428 at T XXII 873b28 reports three such inquiries (according to Vin II 155,20, in a similar situation Anāthapiṇḍika also went so far as to ask three times if he had properly understood that a “Buddha” had been invited for a meal). Sn 3:7 at Sn p. 107,3 reports that Sela instructed his disciples not to interrupt his conversation with the Buddha, an instruction not found in <a href="../../parallels/ea49.6.html">EĀ 49.6</a>.</span></span></span> Once he was in the presence of the Buddha, according to the Sela-suttas and the Ekottarikaāgama account Sela was able to verify thirty of the marks of a superior being, while the other two marks were revealed to him by the Buddha.<span class="note" id="mn92n93"><span class="details"><span class="p">[n.93] According to <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 799c10, Sela asked in verse to be shown the remaining two marks. Sn 3:7 at Sn p. 107,17 does not record such a request, but only indicates that the Buddha became aware of Sela’s wish, perhaps through his telepathic powers.</span></span></span></p>
+<p>The Dharmaguptaka Vinaya account continues by narrating that Sela made an offering of beverages to the monks,<span class="note" id="mn92n94"><span class="details"><span class="p">[n.94] T 1428 at T XXII 873c5.</span></span></span> an offering that according to the Mahīśāsaka, (Mūla-) Sarvāstivāda, and Theravāda Vinayas had rather been made by Keṇiya before inviting the Buddha and the monks to the meal.<span class="note" id="mn92n95"><span class="details"><span class="p">[n.95] T 1421 at T XXII 151b28, Dutt 1984a: 262,19, and Vin I 245,25. Another variation on the events narrated in <a href="../../mn/mn92.html">MN 92</a> can be found in the *Karmavibhaṅgopadeśa in Lévi 1932a: 155,16, according to which Sela was an ascetic (tāpasa) and it was he who had invited the Buddha for a meal.</span></span></span></p>
+<p>The Pāli versions report that Sela decided to extol the Buddha,<span class="note" id="mn92n96"><span class="details"><span class="p">[n.96] Sela’s stanzas recur at <a href="../../tha/tha16.html#p818">Th 818</a>-841; for a study of different versions of the stanza found in Sn 3:7 at Sn 558 or at <a href="../../tha/tha16.html#p828">Th 828</a> cf. Skilling 2005; cf. also Baums 2009: 344. The Divyāvadāna in Cowell 1886: 20,23 and 35,1 or in Vaidya 1999: 12,25 and 21,9 refers to “verses [spoken by] Sela”, śailagāthā, in the context of a listing of selected discourses; cf. also Rhys Davids 1896: 94. Such a reference is also found in the Chinese and Tibetan versions of the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 11b6: 世羅尼頌 and D (1) ’dul ba, ka 265b2 or Q (1030) khe 249b1 and again D (1) ’dul ba ga 225b1 or Q (1030) nge 214b5: ri gnas kyi tshigs su bcad pa; cf. also Lamotte 1956: 260 and Lévi 1915: 418. Another similar reference can be found in <a href="../../parallels/sa1321.html">SĀ 1321</a> at T II 362c12: 尸路偈, also occuring in the context of a listing of different texts, preceded by references to versions of the Therīgāthā and the Theragāthā.</span></span></span> as he thought that on being praised the Buddha would reveal his qualities.<span class="note" id="mn92n97"><span class="details"><span class="p">[n.97] The suggestion that the Buddha can be made to praise himself if he is publicly extolled is surprising. Horner 1957/1970: 335 note 4 comments that “in the Buddha’s Teaching this is what a foolish person does, e.g. Devadatta, not arahants and ... not the Tathāgata”. She refers to <a href="../../dn/dn28.html">DN 28</a> at DN III 115,20, according to which the Tathāgata does not reveal his qualities. Another relevant passage would be <a href="../../mn/mn22.html">MN 22</a> at MN I 140,18, according to which the Buddha will not be affected at all by any honour paid to him. Hence, one would not expect that, on being praised, he would react by praising himself. Pérez-remón 1980: 70 comments that “such statements of self-praise” probably “reflect more the high appreciation of the Buddha professed by his followers than the very way he spoke”.</span></span></span> According to the Chinese account, however, Sela inquired about the path to liberation. In reply, the Buddha expounded the noble eightfold path, an exposition that caused Sela to attain stream-entry.<span class="note" id="mn92n98"><span class="details"><span class="p">[n.98] <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 800a18. Compared to Sn 3:7, for the Buddha to give Sela an exposition of the path to liberation seems more in line with what other discourses depict as the usual strategy adopted by him when faced with prospective disciples. It would also be natural for Sela to wish to go forth after he had attained stream-entry and thereby verified for himself that he had an awakened teacher in front of him.</span></span></span></p>
+<p>The Pāli and Chinese versions agree that Sela informed his disciples of his wish to go forth under the Buddha, to which they replied by declaring that they would follow suit.</p>
+<p>Thus, in the Ekottarika-āgama version Sela’s wish to go forth arose after an exposition of the path to liberation that had caused him to become a stream-enterer. In contrast, according to the Sela-suttas he rather wanted to go forth after hearing the Buddha’s claim to be fully awakened, a claim made in reply to an eulogy of the Buddha by Sela.<span class="note" id="mn92n99"><span class="details"><span class="p">[n.99] The (Mūla-)Sarvāstivāda Vinaya, Dutt 1984a: 264,5, simply reports that Sela went with his disciples to the Buddha and asked to be ordained, without recording any conversation between him and the Buddha.</span></span></span></p>
+<p>The Ekottarika-āgama version continues by reporting that the Buddha expounded the four noble truths to his new monk disciples, with the result that all of them became arahants.<span class="note" id="mn92n100"><span class="details"><span class="p">[n.100] <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 800a29.</span></span></span> The Sela-suttas also record that Sela and his disciples became arahants, although, according to their description, this happened after the meal offering by Keṇiya and was the result of diligent practice in seclusion.<span class="note" id="mn92n101"><span class="details"><span class="p">[n.101] Sn 3:7 at Sn p. 112,6. Two of the stanzas with which they declare their attainment, Sn 3:7 at Sn 571- 572, recur in Sn 3:6 at Sn 545-546 as part of Sabhiya’s praise of the Buddha. Compared to <a href="../../parallels/ea49.6.html">EĀ 49.6</a>, Sn 3:7 offers a more plausible account. Although in certain instances a particularly gifted individual apparently was able to become an arahant in a very short time (cf., e.g., the case of Bāhiya in Ud 1:10 at Ud 8,13 or the case of Yasa in Vin I 17,3), it would be rather unusual for the same to take place in the case of five hundred, i.e., a ‘substantially large number’, of newly ordained disciples. Moreover, expositions of the four noble truths in other discourses usually lead only to stream-entry, not to full awakening, which the discourses generally present as the result of a period of intensive practice.</span></span></span></p>
+<p>According to the Ekottarika-āgama version, Keṇiya was very pleased when he saw Sela and his Brahmin disciples turn up at the meal offering as Buddhist monks.<span class="note" id="mn92n102"><span class="details"><span class="p">[n.102] <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 800b4. The (Mūla-)Sarvāstivāda Vinaya version in Dutt 1984a: 265,10 also records that Keṇiya was pleased to see Sela in robes, in fact, according to its account, Keṇiya told Sela that as soon as the meal offering was over, he would also go forth, a plan he then carried out.</span></span></span> The Ekottarika-āgama version records that at the end of the meal Keṇiya and his family took refuge.</p>
+<p>The Buddha then delivered a teaching to the assembled multitude, concluding with a set of stanzas on the heavenly retribution to be expected for doing what is wholesome and meritorious.<span class="note" id="mn92n103"><span class="details"><span class="p">[n.103] <a href="../../parallels/ea49.6.html">EĀ 49.6</a> at T II 800b19.</span></span></span> The Sela-suttas do not record such a sermon. According to them, the Buddha expressed his appreciation of the meal offering with two stanzas on the supreme merit that accrues to those who make offerings to the Saṅgha.<span class="note" id="mn92n104"><span class="details"><span class="p">[n.104] Sn 3:7 at Sn 568-569, a set of stanzas also found in the account of Keṇiya’s meal offering in Vin I 246,33 (cf. also above p. 545 note 81), but absent from the account of his offering in T 1421 and T 1428.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

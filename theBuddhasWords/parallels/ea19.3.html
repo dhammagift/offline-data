@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 19.3 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 19.3</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">19.3</span> <span class="mirror-right">（三）断爱</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn37.html">MN 37</a> / <a href="../an/an7.61.html">AN 7.61</a> / <a href="../parallels/ma83.html">MĀ 83</a> / <a href="../parallels/sa505.html">SĀ 505</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, Lord of the Devas, went to where the World-Honored One was. Having arrived, he bowed his head at the Buddha&#x27;s feet, stood to one side, and said to the World-Honored One, &quot;How does a bhikṣu cut off desire and attachment, attain liberation of the mind, and ultimately reach a place of peace and tranquility, free from all suffering, respected by devas and humans?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因至世尊所。到已，头面礼足，在一面住，白世尊曰：「云何比丘断于爱欲，心得解脱，乃至究竟安隐之处，无有诸患，天、人所敬？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One said to Śakra, Lord of the Devas, &quot;In this way, Kauśika! If a bhikṣu hears this Dharma of emptiness and understands it to be without existence, he will then attain understanding and true knowledge of all dharmas. He will know that the body experiences the dharmas of suffering and happiness, or the dharma of neither suffering nor happiness. He will then contemplate this body as impermanent and returning to emptiness. Having contemplated this change of neither suffering nor happiness, he will not give rise to thoughts. Without thoughts, there will be no fear. Without fear, there will be parinirvāṇa: the end of birth and death, the establishment of the practice of the Brahma-way, the completion of what was to be done, and no further rebirth. This is truly known. This is called, Śakra, Lord of the Devas, a bhikṣu who cuts off desire and attachment, attains liberation of the mind, and ultimately reaches a place of peace and tranquility, free from all suffering, respected by devas and humans.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告释提桓因曰：「于是，拘翼！若是比丘闻此空法解无所有，则得解了一切诸法，如实知之。身所觉知苦乐之法，若不苦不乐之法，即于此身观悉无常，皆归于空。彼已观此不苦不乐之变，亦不起想，以无有想，则无恐怖；以无恐怖，则般涅槃：生死已尽，梵行已立，所作已办，更不复受有，如实知之。是谓，释提桓因！比丘断于爱欲，心得解脱，乃至究竟安隐之处，无有灾患，天、人所敬。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, Lord of the Devas, bowed his head at the Buddha&#x27;s feet, circumambulated him three times, and then departed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因礼世尊足已，绕三匝而退。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Mahāmaudgalyāyana was sitting cross-legged not far from the World-Honored One, with his body upright and his mind focused on the present. Venerable Mahāmaudgalyāyana then thought: &quot;Did Śakra, Lord of the Devas, attain the path and ask about the matter, or did he not attain the path and ask about the meaning? I should now test him.&quot; At that time, Venerable Mahāmaudgalyāyana immediately used his supernormal powers to arrive in the Heaven of the Thirty-three Gods in the time it takes to bend and stretch an arm.</p></td><td lang="lzh" class="agama-chi"><p>当于尔时，尊者大目犍连去世尊不远结跏趺坐，正身正意，系念在前。尔时，尊者大目犍连便作是念：「向者，帝释得道迹而问事耶？为不得道迹而问义耶？我今当试之。」尔时，尊者大目犍连即以神足，如屈伸臂顷，便至三十三天。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, Lord of the Devas, saw from afar that Mahāmaudgalyāyana was coming and immediately rose to welcome him, saying: &quot;Welcome, Venerable Mahāmaudgalyāyana! It has been a long time since you came here. I wish to discuss the meaning of the Dharma with you. Please sit here.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因遥见大目犍连远来，即起奉迎，并作是语：「善来！尊者大目犍连！尊自不至此，亦大久矣！愿欲与尊论说法义，愿在此处坐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Maudgalyāyana asked Śakra, Lord of the Devas: &quot;The World-Honored One has spoken to you about the Dharma of cutting off desire. I wish to hear it. Now is the right time. Please tell me about it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，目犍连问释提桓因曰：「世尊与汝说断爱欲之法，我欲闻之，今正是时，可与我说之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śakra, Lord of the Devas, said: &quot;I have many affairs of the devas now. Sometimes I have my own affairs, and sometimes I have affairs of the devas. What I have heard is immediately forgotten. Once, Maudgalyāyana, you fought with the asuras. On the day of the battle, the devas won and the asuras retreated. At that time, I personally went to fight and then led the devas back to the heavenly palace. I sat in the Supreme Lecture Hall. Because of the victory in battle, it is called the Supreme Lecture Hall. The steps and lanes are arranged in rows, facing each other. On each step, there are seven hundred pavilions. In each pavilion, there are seven jade maidens. Each jade maiden has seven attendants. Venerable Maudgalyāyana, I wish you would go there to see it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>释提桓因白言：「我今诸天事猥多，或自有事，或复有诸天事，我所闻者即时而忘。昔者，目连，与诸阿须伦共鬪，当鬪之日，诸天得胜，阿须伦退。尔时，我身躬往自战，寻复领诸天还上天宫，坐最胜讲堂。因鬪胜故，故名为最胜讲堂，阶巷成行，陌陌相值，一一阶头，七百楼阁，一一楼阁上，各七玉女，一一玉女各有七使人，愿尊目连在彼观看。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śakra, Lord of the Devas, and Vaiśravaṇa, King of the North, followed Venerable Maudgalyāyana to the Supreme Lecture Hall. At that time, Śakra, Lord of the Devas, and Vaiśravaṇa, King of the North, said to Maudgalyāyana: &quot;This is the Supreme Lecture Hall. You can all go and see it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因及毘沙门天王在尊者目连后，往至最胜讲堂所。是时，释提桓因及毘沙门天王，白大目犍连曰：「此是最胜讲堂，悉可游看。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Maudgalyāyana said: &quot;Heavenly Kings! This place is extremely wonderful. It is all due to the merit and blessings created in previous lives that this naturally-formed jeweled hall is like this. It is like the small places of happiness in the human world, where people celebrate on their own, just like the heavenly palace. It is all due to the merit created in previous lives.&quot;</p></td><td lang="lzh" class="agama-chi"><p>目犍连曰：「天王！此处极为微妙，皆由前身所作福祐故，致此自然宝堂，犹如人间小有乐处，各自庆贺，如天宫无异，皆由前身作福所致。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the jade maidens on Śakra, Lord of the Devas&#x27; left and right, all ran about, not knowing where to go. It was like in the human world where there are taboos, and they all felt ashamed. At that time, the jade maidens brought by Śakra, Lord of the Devas, were also like this. They saw Venerable Maudgalyāyana coming from afar and all ran about, not knowing where to gather.</p></td><td lang="lzh" class="agama-chi"><p>尔时，释提桓因左右玉女，各各驰走，莫知所如，犹如人间有所禁忌，皆怀惭愧。是时，释提桓因所将玉女亦复如是。遥见大目犍连来，各各驰走，莫知所凑。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Maudgalyāyana thought: &quot;The mind of Śakra, Lord of the Devas, is very indulgent. I should now make him feel terrified.&quot; At that time, Venerable Maudgalyāyana then touched the ground with his right toe, and the palace shook six times. At that time, Śakra, Lord of the Devas, and Vaiśravaṇa, the Guardian King of the North, were all terrified, their hair standing on end. They thought: &quot;This Venerable Maudgalyāyana has great supernatural powers, able to make this palace shake six times. It is truly amazing! It is truly extraordinary! It has never been like this before!&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，大目犍连便作是念：「此释提桓因意甚放逸，我今宜可使怀恐怖。」是时，尊者大目犍连即以右脚指案地，彼宫殿六变震动。是时，释提桓因及毘沙门天王皆怀恐怖，衣毛皆竖，而作是念：「此大目犍连有大神足，乃能使此宫殿六返震动，甚奇！甚特！未曾有是！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Maudgalyāyana thought: &quot;Now the body of Śakra, Lord of the Devas, is filled with fear. I should now ask him about the profound meaning.&quot; &quot;How is it, Kauśika? The Tathāgata&#x27;s teachings on the sutra on eliminating desire are now the right time. Please explain it to us.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，大目犍连便作是念：「今此释身以怀恐怖，我今宜可问其深义。」「云何，拘翼！如来所说除爱欲经者，今正是时，唯愿与我等说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śakra, Lord of the Devas, replied: &quot;Maudgalyāyana! I previously went to where the World-Honored One was, bowed my head at his feet, and stood to one side. At that time, I addressed the World-Honored One, saying: &#x27;How do bhikṣus eliminate desire, attain liberation of the mind, and ultimately reach the state of non-conditioning, without suffering or affliction, respected by gods and humans?&#x27; At that time, the World-Honored One then told me: &#x27;In this way, Kauśika! When bhikṣus hear the Dharma, they are completely unattached, not attached to form, and fully understand all dharmas, knowing that they are ultimately nonexistent. Having understood all dharmas, whether suffering, happiness, or neither suffering nor happiness, they observe them as impermanent, ceasing without remainder, and without annihilation. By observing this, they are completely unattached, no longer have worldly thoughts, and are without fear. Being without fear, they attain parinirvāṇa: the end of birth and death, the establishment of the holy life, the completion of what was to be done, and the knowledge that they will not be reborn again. This is called, Śakra, Lord of the Devas! When bhikṣus eliminate desire, they attain liberation of the mind, and ultimately reach the state of non-conditioning, without suffering or affliction, respected by gods and humans.&#x27; At that time, having heard these words, I bowed my head at the feet of the World-Honored One, circumambulated him three times, and then withdrew, returning to the heavenly realm.&quot;</p></td><td lang="lzh" class="agama-chi"><p>释提桓因报言：「目连！我前至世尊所，头面礼足，在一面住。是时，我即白世尊曰：『云何比丘断于爱欲，心得解脱，乃至究竟至无为处，无有患苦，天、人所敬？』尔时，世尊便告我言：『于是，拘翼！诸比丘闻法已，都无所著，亦不著色，尽解一切诸法，了无所有。以知一切诸法已，若苦、若乐、若不苦不乐，观了无常，灭尽无余，亦无断坏。彼以观此，已都无所著，已不起世间想，复无恐怖；以无恐怖，便般涅槃：生死已尽，梵行已立，所作已办，更不复受有，如实知之。是谓，释提桓因！比丘断欲，心得解脱，乃至究竟无为之处，无有患苦，天、人所敬。』尔时，我闻此语已，便礼世尊足，遶三匝，即退而去，还归天上。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Mahāmaudgalyāyana used profound Dharma words to explain to Śakra, Lord of the Devas, and to Vaiśravaṇa. At that time, after Maudgalyāyana had fully explained the Dharma, in the time it takes for a strong man to bend and stretch his arm, he disappeared from the Heaven of the Thirty-three and came to the Jeta Grove Anāthapiṇḍada-ārāma in Śrāvastī. He went to where the World-Honored One was, bowed his head at the Buddha&#x27;s feet, and sat to one side.</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者大目犍连以深法之语，向释提桓因及向毘沙门具分别之。尔时，目犍连具说法已，犹如士夫屈伸臂顷，从三十三天没不现，便来至舍卫城祇树给孤独园，至世尊所，头面礼足，在一面坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Maudgalyāyana immediately said to the World-Honored One while seated: &quot;The Tathāgata previously spoke to Śakra, Lord of the Devas, about the method of eliminating desire. I only wish that the World-Honored One would also explain it to me.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，目犍连即于座上白世尊曰：「如来前与释提桓因说除欲之法，唯愿世尊当与我说之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One told Maudgalyāyana: &quot;You should know that Śakra, Lord of the Devas, came to me, bowed his head at my feet, and stood to one side. At that time, Śakra, Lord of the Devas, asked me this meaning: &#x27;How, World-Honored One, does a bhikṣu cut off desire and attain liberation of the mind?&#x27; At that time, I told Śakra, Lord of the Devas: &#x27;Kauśika! If a bhikṣu understands and knows that all dharmas are empty and have nothing, and also has nothing to which he is attached, and fully understands that all dharmas are ultimately nonexistent, and knows that all dharmas are impermanent, extinguished without remainder, and also not cut off or destroyed. Having observed this, he has nothing to which he is attached, and he does not give rise to worldly thoughts, and is also without fear; being without fear, he then attains parinirvāṇa: birth and death are exhausted, the practice of the Brahma way is established, what was to be done is done, and he will not again experience existence, knowing it as it really is. This is called, Śakra, Lord of the Devas, a bhikṣu cutting off desire and attaining liberation of the mind.&#x27; At that time, Śakra, Lord of the Devas, immediately rose from his seat, bowed his head at my feet, and then withdrew and departed, returning to the heavenly realm.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告目犍连曰：「汝当知之，释提桓因来至我所，头面礼足，在一面立。尔时，释提桓因问我此义：『云何，世尊！比丘断爱欲，心得解脱？』尔时，我告释提桓因曰：『拘翼！若有比丘解知一切诸法空无所有，亦无所著，尽解一切诸法了无所有，以知一切诸法无常，灭尽无余，亦无断坏。彼已观此，已都无所著，已不起世间想，复无恐怖；已无恐怖，便般涅槃：生死已尽，梵行已立，所作已办，更不复受有，如实知之。是谓，释提桓因，比丘断欲，心得解脱。』尔时，释提桓因即从坐起，头面礼我足，便退而去。还归天上。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Mahāmaudgalyāyana, having heard the Buddha&#x27;s teaching, joyfully received and upheld it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，大目犍连闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

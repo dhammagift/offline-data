@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 40 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 40: Cūḷa-assapura-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn39comp.html#content"></a><a id="next-sutta" href="./mn41comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn40.html">MN 40</a> / <a href="../../parallels/ma183.html">MĀ 183</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷa-assapura-sutta, the “lesser discourse at Assapura”, explains that to be a true recluse does not depend on outer observances, but requires purification of the mind. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn40n275"><span class="details"><span class="p">[n.275] The parallel is <a href="../../parallels/ma183.html">MĀ 183</a> at T I 725c-726c, which agrees with the Pāli version on the location where the discourse was given and on its title (“discourse at Horse City”, 馬邑經), although without qualifying this discourse as a “lesser” one. Just as in the case of <a href="../../mn/mn39.html">MN 39</a>, a reference to a version of <a href="../../mn/mn40.html">MN 40</a> by the title dge sbyong, “recluse”, can be found in an uddāna in Śamathadeva’s commentary on the Abhidharmakośabhāṣya at D (4094) mngon pa, ju 235b4 or Q (5595) tu 269a4 (noted by Skilling 1997a: 339).</span></span></span></p>
+<p>The Cūḷa-assapura-sutta and its Madhyama-āgama parallel open with the Buddha exhorting the monks that they should train themselves in such a way that their claim to being a recluse will not be in vain and offerings given to them will be fruitful. Both versions compare the presence of defiled states of mind in a recluse to a sharp weapon wrapped in a robe.<span class="note" id="mn40n276"><span class="details"><span class="p">[n.276] <a href="../../mn/mn40.html">MN 40</a> at MN I 281,27 and <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726a6. A similar usage of the image of a sword in its sheath can be found in the Jain Isibhāsiyāiṃ 45.45 in Schubring 1969: 551.</span></span></span> The two discourses explain that someone who has not overcome mental defilements falls short of being a recluse, even if he should be wearing robes, or observe nudity, have matted hair, not sit down, or undertake (presumably ritual) bathing.<span class="note" id="mn40n277"><span class="details"><span class="p">[n.277] Bronkhorst 1998b: 84 notes that some of these are practices of Brahmin ascetics, even though the topic of the passage is the samaṇa. Shiraishi 1996: 198 explains that, judging from “the records of ascetics found in the Buddhist canon”, “the difference between the vānaprastha and the parivrājaka might not have been so distinct”.</span></span></span></p>
+<p>According to the Cūḷa-assapura-sutta, the Buddha wittily pointed out that if such observances were in themselves productive of mental purity, one’s friends and relatives would make one undertake them right after birth.<span class="note" id="mn40n278"><span class="details"><span class="p">[n.278] <a href="../../mn/mn40.html">MN 40</a> at MN I 282,14: jātam eva.</span></span></span> The Madhyama-āgama version similarly describes how one’s friends and relatives would try to make one undertake such observances, without, however, specifying that they would do so right after one’s birth.<span class="note" id="mn40n279"><span class="details"><span class="p">[n.279] <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726a18.</span></span></span> Without this specification, however, the illustration loses some of its force.</p>
+<p>The Cūḷa-assapura-sutta and its parallel agree that the proper way to true recluseship is to overcome defiled states of mind. The Majjhima-nikāya version stands alone in describing how joy arises in a monk once his mind is free from defilements, a joy which in turn leads to tranquillity and concentration.<span class="note" id="mn40n280"><span class="details"><span class="p">[n.280] <a href="../../mn/mn40.html">MN 40</a> at MN I 283,23: pāmujjaṃ jāyati, pamuditassa pīti jāyati, pītimanassa kāyo passambhati, passaddhakāyo sukhaṃ vedeti, sukhino cittaṃ samādhiyati (Be-MN I 352,1: pāmojjaṃ).</span></span></span> In its place, the Madhyamaāgama version speaks of overcoming the five hindrances, based on having developed pure bodily, verbal, and mental conduct.<span class="note" id="mn40n281"><span class="details"><span class="p">[n.281] <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726b19.</span></span></span></p>
+<p>Both versions next turn to the development of the four brahmavihāras as a boundless radiation in all directions. The Madhyama-āgama version follows this with a reflection aimed at the development of insight,<span class="note" id="mn40n282"><span class="details"><span class="p">[n.282] <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726b27: “there is what exists, there is what is gross, there is what is subtle, and there is a going beyond and an escape from perception”, 有有, 有麤, 有妙, 有想來上出要 (adopting the 宋, 元, and 明 variant which adds 有有 at the beginning). This appears to correspond to a passage found in <a href="../../mn/mn7.html">MN 7</a> at MN I 38,31: atthi idaṃ, atthi hīnaṃ, atthi paṇītaṃ, atthi imassa saññāgatassa uttariṃ nissaraṇaṃ, cf. also above p. 55 note 147.</span></span></span> whereby the influxes will be destroyed and full liberation will be achieved. This reflection is not found in the Cūḷa-assapura-sutta.</p>
+<p>According to both discourses, the Buddha delivered the simile of a delightful pond in which a thirsty and tired man can quench his thirst and take a bath, no matter from which of the four directions he approaches the pond.<span class="note" id="mn40n283"><span class="details"><span class="p">[n.283] <a href="../../mn/mn40.html">MN 40</a> at MN I 283,36 and <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726c2. <a href="../../mn/mn12.html">MN 12</a> at MN I 76,27 uses this image (although without relating it to the four directions) to illustrate the path to Nirvāṇa.</span></span></span> Similarly, regardless of which of the four social classes a man may belong to, if he goes forth, develops the brahmavihāras, and achieves tranquillity of the mind, he becomes a true recluse.</p>
+<p>The Pāli version introduces a finer distinction at this point, since it reckons one who has gone forth and achieved tranquillity of the mind as one who practises the proper way of a true recluse,<span class="note" id="mn40n284"><span class="details"><span class="p">[n.284] <a href="../../mn/mn40.html">MN 40</a> at MN I 284,13: samaṇasāmīcipaṭipadaṃ paṭipanno (Be-MN I 352,25: samaṇasāmīcippaṭipadaṃ).</span></span></span> but once the influxes are destroyed, such a one is a true recluse.<span class="note" id="mn40n285"><span class="details"><span class="p">[n.285] <a href="../../mn/mn40.html">MN 40</a> at MN I 284,22: āsavānaṃ khayā samaṇo hoti.</span></span></span> This distinction is not found in the Chinese version. The Pāli version thus explicitly reckons the achievement of internal tranquillity through developing the brahmavihāras as the proper way to true recluse-ship. In this way the brahmavihāras, although not yet constituting the consummation of recluse-ship, figure in the Pāli version more explicitly as an important factor leading up to the final goal.</p>
+<p>While the Cūḷa-assapura-sutta concludes at this point, the Madhyama-āgama discourse continues by defining the four terms “recluse”, “Brahmin”, “noble one” and “one purified through bathing”, similar to the final part of the Madhyama-āgama parallel to the Mahā-assapura-sutta.<span class="note" id="mn40n286"><span class="details"><span class="p">[n.286] <a href="../../parallels/ma183.html">MĀ 183</a> at T I 726c13, corresponding to the explanation of the same four terms found in <a href="../../parallels/ma182.html">MĀ 182</a> at T I 725c4 (cf. above p. 259 note 274).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

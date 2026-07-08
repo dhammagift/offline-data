@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 113 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 113: Sappurisa-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn112comp.html#content"></a><a id="next-sutta" href="./mn114comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn113.html">MN 113</a> / <a href="../../parallels/ma85.html">MĀ 85</a> / <a href="../../parallels/ea17.9.html">EĀ 17.9</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Sappurisa-sutta, the “discourse on the worthy man”, contrasts the detached attitude of a worthy man with the conceit and self-praise of an unworthy man. This discourse has three Chinese parallels, one of which is found in the Madhyama-āgama, another in the Ekottarika-āgama, while the third Chinese parallel is an individual translation.<span class="note" id="mn113n19"><span class="details"><span class="p">[n.19] The parallels are <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561a-562a, <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585a-c, and T 48 at T I 837c-838c, all of which agree with <a href="../../mn/mn113.html">MN 113</a> on locating the discourse in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma85.html">MĀ 85</a> also agrees with <a href="../../mn/mn113.html">MN 113</a> on the title (真人經), while T 48 has the title “discourse spoken by the Buddha on what is Dharma and what is not Dharma”, 佛說是法非法經. According to the information given in the Taishō edition, T 48 was translated by Ān Shìgāo (安世高) and stems from an original that belonged to a Madhyama-āgama collection, 出中阿含 (a specification not recorded in the 宋, 元, and 明 editions). <a href="../../parallels/ea17.9.html">EĀ 17.9</a> has been translated by Huyen-Vi 1994: 157-160.</span></span></span></p>
+<p>The Sappurisa-sutta and its parallels begin by describing how an unworthy man feels conceit and looks down on others because he stems from a high family.<span class="note" id="mn113n20"><span class="details"><span class="p">[n.20] <a href="../../mn/mn113.html">MN 113</a> at MN III 37,10 speaks of the sappurisa, which has its counterpart in <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561a23 in the “true man”, 真人, and in T 48 at T I 837c26 in the “worthy one”, 賢者. <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585a19 instead contrasts the “spiritual friend”, 善知識, with the “evil friend”, 惡知識, expressions that would correspond to kalyāṇamitta and pāpamitta in Pāli.</span></span></span> The Majjhima-nikāya version, the Madhyama-āgama version, and the individual translation contrast this with a worthy man, who reflects that greed, anger, and delusion will not be eradicated simply because one comes from a high family.<span class="note" id="mn113n21"><span class="details"><span class="p">[n.21] This reflection is not found in <a href="../../parallels/ea17.9.html">EĀ 17.9</a>. The presentation in <a href="../../parallels/ea17.9.html">EĀ 17.9</a> also differs in that it first examines all the negative types of conduct or attitude, after which it takes up all their positive counterparts. In relation to birth from a high family, <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585b11 indicates that the good friend does not look down on others as he realizes that this does not really entail a difference between others and himself, 無 有異; in relation to the other possible instances for developing conceit, the good friend realizes that these do not entail any “better or worse” between others and himself, <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T I 585b14+18+21+26: 無(有) 增減.</span></span></span> The worthy man further reflects that even someone from a low family, as long as he practises in accordance with the Dharma, is praiseworthy on that account. The Majjhima-nikāya version points out that by reflecting in this way the worthy man gives priority to the practice,<span class="note" id="mn113n22"><span class="details"><span class="p">[n.22] <a href="../../mn/mn113.html">MN 113</a> at MN III 38,1: “being mainly concerned with the path”, paṭipadaṃ yeva antaraṃ karitvā, adopting the translation suggested in CPD I: 241 s.v. antaraṃ.</span></span></span> while the Madhyama-āgama account notes that in this way he will truly attain the Dharma.<span class="note" id="mn113n23"><span class="details"><span class="p">[n.23] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b2: “in this way he advances towards being one who attains the true Dharma”, 如是趣 向得真諦法者. T 48 does not offer any comment in this respect.</span></span></span></p>
+<p>The Sappurisa-sutta repeats the same treatment for the case of being from a great family, a rich family, and a wealthy family. Such variations are not taken up in its Chinese parallels (see table 12.2).<span class="note" id="mn113n24"><span class="details"><span class="p">[n.24] After mentioning the “high family”, uccākula, <a href="../../mn/mn113.html">MN 113</a> at MN III 38,5 takes up the “great family”, mahākula, the “vastly wealthy family”, mahābhogakula, and the “outstandingly wealthy family”, uḷārabhogakula. Once a “high family” has been taken into account, one may wonder what additional perspective an examination of the case of a “great family” can shed on the issue of conceit, and it seems even more difficult to find a difference between a “vastly wealthy family” and an “outstandingly wealthy family”, so that the presentation in <a href="../../mn/mn113.html">MN 113</a> appears to some degree redundant. Ps IV 98,18 suggests that the uccākulā refers only to warriors and nobles, while the mahākulā covers warriors, nobles, and also merchants. Again, while the mahābhogakulā is “endowed with great wealth”, mahantehi bhogehi samannāgata, the uḷārabhogakulā is endowed with “outstanding and excellent wealth”, uḷārehi paṇitehi bhogehi. This attempt to give a different meaning to the members of these two pairs seems a little contrived.</span></span></span> Instead of various types of family, the Madhyama-āgama discourse and the individual translation examine the case of priding oneself on being handsome.<span class="note" id="mn113n25"><span class="details"><span class="p">[n.25] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b4 and T 48 at T I 838a7. Compared to the listing of different families in <a href="../../mn/mn113.html">MN 113</a>, handsomeness would indeed be worth separate mentioning as an occasion for developing pride. A comparable description of various occasions for the arising of conceit in the Śrāvakabhūmi also mentions handsomeness, cf. Shukla 1973: 147,17 or ŚSG 1998: 252,6 and T 1579 at T XXX 420b18.</span></span></span></p>
+<p>The Sappurisa-sutta continues by taking up the arising of conceit because of fame or because of obtaining requisites. The topic of fame recurs only in the Madhyama-āgama version and in the individual translation,<span class="note" id="mn113n26"><span class="details"><span class="p">[n.26] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b17 and T 48 at T I 838a23.</span></span></span> while the gain of requisites is taken up only in the Ekottarika-āgama version.<span class="note" id="mn113n27"><span class="details"><span class="p">[n.27] <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585b6. The corresponding section in <a href="../../parallels/ea17.9.html">EĀ 17.9</a> is quite short in comparison, as it covers only five topics, namely being from a high family, being energetic in relation to moral conduct, being concentrated, being foremost in wisdom, and obtaining requisites.</span></span></span></p>
+<p>The Majjhima-nikāya discourse next turns to knowledge of the Dharma, which it examines from three complementary perspectives in terms of:</p>
+<ul>
+<li>having heard much,</li>
+<li>having expertise in the Vinaya,</li>
+<li>being able to preach the Dharma.<span class="note" id="mn113n28"><span class="details"><span class="p">[n.28] <a href="../../mn/mn113.html">MN 113</a> at MN III 39,18+31 and MN III 40,9 lists bahussuta, vinayadhara, and dhammakathika.</span></span></span></li>
+</ul>
+<table class="comparative-table">
+<caption>Table 12.2: Occasions for Conceit According to <a href="../../mn/mn113.html">MN 113</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn113.html">MN 113</a></th><th><a href="../../parallels/ma85.html">MĀ 85</a></th></tr>
+<tr><td>comes from high family (1)</td><td>comes from high family (→ 1)</td></tr>
+<tr><td>comes from great family (2)</td><td>is handsome</td></tr>
+<tr><td>comes from vastly wealthy family (3)</td><td>is an eloquent speaker (→ 9?)</td></tr>
+<tr><td>comes from highly wealthy family (4)</td><td>is famous elder (→ 5)</td></tr>
+<tr><td>is famous (5)</td><td>recites discourses, knows Vinaya, Abhidharma,</td></tr>
+<tr><td>gains requisites (6)</td><td>Āgamas (→ 7, 8)</td></tr>
+<tr><td>is learned (7)</td><td>wears rag robes, only three robes (→ 11)</td></tr>
+<tr><td>knows Vinaya (8)</td><td>begs for food from only 7 houses, takes single</td></tr>
+<tr><td>preaches Dharma (9)</td><td>meal (→ 12, 18)</td></tr>
+<tr><td>dwells in forest (10)</td><td>dwells in forest, at tree root, on a rock, out in the</td></tr>
+<tr><td>wears rag robes (11)</td><td>open, in a cemetery (→ 10, 13, 15, 14)</td></tr>
+<tr><td>begs for food (12)</td><td>attains 1st jhāna (→ 19)</td></tr>
+<tr><td>dwells at tree root (13)</td><td>attains 2nd, 3rd, 4th jhāna, 1st, 2nd, 3rd, 4th immaterial</td></tr>
+<tr><td>dwells in cemetery (14)</td><td>attainment (→ 20, 21, 22, 23, 24, 25, 26)</td></tr>
+<tr><td>dwells out in the open (15)</td><td></td></tr>
+<tr><td>never lies down (16)</td><td></td></tr>
+<tr><td>uses any bed (17)</td><td></td></tr>
+<tr><td>takes single meal (18)</td><td></td></tr>
+<tr><td>attains 1st, 2nd, 3rd, 4th jhāna (19, 20,</td><td></td></tr>
+<tr><td>21, 22)</td><td></td></tr>
+<tr><td>attains 1st, 2nd, 3rd, 4th immaterial at-</td><td></td></tr>
+<tr><td>tainment (23, 24, 25, 26)</td><td></td></tr>
+<tr><td>attains cessation (27)</td><td>(≠ 2-4, 6, 16-17, 27)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea17.9.html">EĀ 17.9</a></td><td>T 48</td></tr>
+<tr><td>comes from high family (→ 1)</td><td>comes from high family (→ 1)</td></tr>
+<tr><td>keeps precepts energetically</td><td>is handsome</td></tr>
+<tr><td>is concentrated</td><td>is an eloquent speaker (→ 9?)</td></tr>
+<tr><td>is foremost in wisdom</td><td>is famous elder (→ 5)</td></tr>
+<tr><td>gains requisites (→ 6)</td><td>recites discourses, knows Vinaya (→ 7, 8)</td></tr>
+<tr><td></td><td>begs for food from only 7 houses, takes single</td></tr>
+<tr><td></td><td>meal (→ 12, 18)</td></tr>
+<tr><td></td><td>wears rag robes (→ 11)</td></tr>
+<tr><td></td><td>dwells out in the open, at tree root, in cemetery</td></tr>
+<tr><td></td><td>(→ 15, 13, 14)</td></tr>
+<tr><td></td><td>attains 1st jhāna (→ 19)</td></tr>
+<tr><td></td><td>attains 2nd, 3rd, 4th jhāna (→ 20, 21, 22)</td></tr>
+<tr><td></td><td>attains 1st, 2nd, 3rd, 4th immaterial attainment (→ 23,</td></tr>
+<tr><td></td><td>24, 25, 26)</td></tr>
+<tr><td>(≠ 2-5, 7-27)</td><td>(≠ 2-4, 6, 10, 16-17, 27)</td></tr>
+</table>
+<p>The Madhyama-āgama version and the individual translation present the topic of having knowledge of the Dharma in terms of knowledge of the discourses and of the Vinaya,<span class="note" id="mn113n29"><span class="details"><span class="p">[n.29] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b27 speaks of “reciting the discourses and remembering the Vinaya”, 誦經, 持律, and T 48 at T I 838b4 speaks of one who “has heard and knows the discourses, is able to proclaim the discourses, knows the Vinaya, and knows [how to] enter into and penetrate the [meaning of the] discourses”, 知聞經能說經, 知律, 知入通經. <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b27 additionally also mentions his being “trained in the Abhidharma”, 學阿毘曇, and being “knowledgeable in the Āgamas and well learned in the collection of discourses”, 諳阿含慕, 多學經書.</span></span></span> in addition to which at an earlier point they refer to eloquence in speech.<span class="note" id="mn113n30"><span class="details"><span class="p">[n.30] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561b10 and T 48 at T I 838a14.</span></span></span> Although their description of such eloquence does not explicitly refer to preaching the Dharma, this might be implicit, since the occasion for a monk to pride himself on his eloquence could easily arise when he engages in preaching the Dharma.</p>
+<p>The same three versions agree in taking up various ascetic practices, such as:</p>
+<ul>
+<li>wearing rag robes,</li>
+<li>begging food,</li>
+<li>taking a single meal,</li>
+<li>dwelling at the root of a tree,</li>
+<li>dwelling in a cemetery,</li>
+<li>dwelling out in the open.<span class="note" id="mn113n31"><span class="details"><span class="p">[n.31] Two practices mentioned only in <a href="../../mn/mn113.html">MN 113</a> at MN III 42,5 are the practice of continuous sitting (i.e. never lying down to rest), nesajjika, and the practice of accepting any type of seat or lodging, yathāsanthatika. In relation to begging, <a href="../../parallels/ma85.html">MĀ 85</a> at T I 561c14 and T 48 at T I 838b14 specify that this implies to go at most to seven houses. On variations in listings of the ascetic practices cf., e.g., Bapat 1937a, Dantinne 1991: 24-30, Ganguly 1989: 21-23, and Ray 1994: 293-323; cf. also Boucher 2008: 191 note 8, who notes a reference to a twelve-fold listing in <a href="../../parallels/ea4.2.html">EĀ 4.2</a> at T II 557b8: 十二頭陀. A listing of eleven ascetics practices can be found in the same collection in <a href="../../parallels/ea49.2.html">EĀ 49.2</a> at T II 795a26; cf. also <a href="../../parallels/ea49.3.html">EĀ 49.3</a> at T II 795c10.</span></span></span></li>
+</ul>
+<p>The Ekottarika-āgama version does not mention any of these practices, but only speaks of energetically keeping the precepts.<span class="note" id="mn113n32"><span class="details"><span class="p">[n.32] <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585a27 speaks of “energetically keeping the precepts”, 精進持戒 (the descriptions of this quality show some variations, of which the present instance seems to be the one that fits the context best).</span></span></span> The Sappurisa-sutta next considers the four jhānas and the four immaterial attainments as possible instances for the arising of conceit. Here, too, the worthy man does not praise himself or look down on others due to such attainments, although the reasoning behind his attitude differs from the previously mentioned fame, gains, knowledge, or ascetic practices. Whereas earlier the point was to reflect that these qualities or practices do not in themselves ensure the removal of greed, anger, or delusion, in relation to the four jhānas and the four immaterial attainments the worthy man reminds himself that the Buddha recommended non-identification with such attainments, since things inevitably will turn out to be different from the way one imagines them to be.<span class="note" id="mn113n33"><span class="details"><span class="p">[n.33] According to <a href="../../mn/mn113.html">MN 113</a> at MN III 42,28, even in relation to such attainment “the Blessed One has spoken of non-identification, as ‘in whatever way one may conceive, it turns out to be otherwise’”, atammayatā vuttā bhagavatā, yena yena hi maññanti tato taṃ hoti aññathā ti (Se-MN III 141,8: agammayatā). Regarding atammayatā, Ñāṇananda 2005: 317 explains that “tammaya ... is derived from tad maya, literally ‘made of that’”, hence atammayatā highlights how due to grasping one “practically becomes one” with the respective concentrative attainment, due to the thought “I am [the] one who has attained” it. In contrast “the arahant is called atammayo in the sense that he does not identify himself with anything”, he is no longer ‘made of that’; on atammayatā cf. also Sferra 2011. The statement on conceiving (yena yena hi maññanti, etc.) recurs in Ud 3:10 at Ud 32,30, Sn 3:8 at Sn 588, and Sn 3:12 at Sn 757. In these three instances, this phrase seems to stand for the worldling’s mistaken ideas about the nature of reality, in particular in Ud 3:10 and Sn 757 for the delusion of a self, while in Sn 588 the topic is the closely related illusion of permanency.</span></span></span></p>
+<p>While the Ekottarika-āgama presentation has none of these meditative attainments and instead just speaks of being accomplished in concentration,<span class="note" id="mn113n34"><span class="details"><span class="p">[n.34] <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585b17 only mentions being “accomplished in concentration”, 三昧成就.</span></span></span> the Madhyama-āgama discourse and the individual translation similarly take up the four jhānas and the four immaterial spheres.<span class="note" id="mn113n35"><span class="details"><span class="p">[n.35] Instead of speaking of the attainment of “nothingness”, T 48 at T I 838c19 refers to the attainment of “impermanence”, 非常, which based on the context I take to be an error for the third immaterial attainment.</span></span></span> The Madhyama-āgama account also agrees with the Majjhima-nikāya version that the worthy man avoids praising himself and disparaging others because he is inspired by a saying by the Buddha according to which conceivings are a manifestation of craving.<span class="note" id="mn113n36"><span class="details"><span class="p">[n.36] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 562a2: “the Blessed One has explained in many ways that, if there are conceivings, this is reckoned to be [a form] of craving”, 世尊說無量種, 若有計者是謂愛也.</span></span></span></p>
+<p>The Sappurisa-sutta concludes its exposition by taking up the attainment of cessation, indicating through its mode of presentation that this attainment is outside of the range of the unworthy man.<span class="note" id="mn113n37"><span class="details"><span class="p">[n.37] <a href="../../mn/mn113.html">MN 113</a> at MN III 45,2. Cf. also above p. 367.</span></span></span> The three parallel versions do not mention the attainment of cessation at all. Instead, they conclude with the Buddha telling the monks that they should train in accordance with what he had just taught them, so that they will become worthy men.<span class="note" id="mn113n38"><span class="details"><span class="p">[n.38] <a href="../../parallels/ma85.html">MĀ 85</a> at T I 562a14, <a href="../../parallels/ea17.9.html">EĀ 17.9</a> at T II 585c2, and T 48 at T I 838c28.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

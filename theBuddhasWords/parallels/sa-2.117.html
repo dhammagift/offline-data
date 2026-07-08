@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.117 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.117</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 117</span><span class="mirror-right">（一一七）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn16.9.html">SN 16.9</a> / <a href="../parallels/sa1142.html">SĀ 1142</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, Venerable Mahākāśyapa was staying in a remote place, with grass for his bedding. His robes were worn and faded, and his beard and hair were long. He came to where the Buddha was. At that time, the World-Honored One was surrounded by a great assembly, expounding the Dharma. When the bhikṣus saw Kāśyapa, they all thought, &quot;That Venerable One does not know the proper deportment of a renunciant. His robes are dirty and faded, and his beard and hair are long. His deportment is not complete.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，尊者摩诃迦叶在于边远，草敷而住，衣被弊坏，染色变脱，须发亦长，来诣佛所。尔时，世尊大众围遶，而为说法。时，诸比丘见迦叶已，皆生是念：「彼尊者不知出家所有威仪，衣色变秽，须发亦长，威仪不具。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One knew the thoughts in the minds of the bhikṣus. In order to make them give rise to admiration, he saw Kāśyapa from afar and said, &quot;Welcome, Kāśyapa!&quot; He then divided his seat in half and ordered him to sit together. He thought, &quot;You renounced the householder life before me. Therefore, I invite you to share my seat with me.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊知诸比丘心之所念，为欲令彼生钦尚故，遥见迦叶，即语之言：「善来迦叶！」寻分半座，命令共坐，我当思惟：「汝先出家，我后出家，是故命汝，与尔分座。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>When Mahākāśyapa heard this instruction, he was filled with fear and trepidation. He immediately stood up, joined his palms, bowed his head to the Buddha&#x27;s feet, and said to the Buddha, &quot;The World-Honored One is my teacher, and I am his disciple. How can I sit together with the teacher?&quot; He said this a second and a third time.</p></td><td lang="lzh" class="agama-chi"><p>摩诃迦叶闻斯教已，即怀惶悚，便起合掌，顶礼佛足，白佛言：「世尊是我大师，我是弟子，云何与师同共同坐？」第二第三，亦作是言。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Kāśyapa, &quot;It is indeed as you say. I am your teacher, and you are my disciple.&quot; He then ordered Kāśyapa, &quot;You may sit in the place where you should sit.&quot; At that time, Venerable Kāśyapa then followed the Buddha&#x27;s instruction and spread out his seat to sit.</p></td><td lang="lzh" class="agama-chi"><p>佛告迦叶：「实如汝言，我是汝师，汝是弟子。」即命迦叶：「汝可于彼所应坐处，于中而坐。」时，尊者迦叶即奉佛教，敷座而坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, wishing to increase the disgust and self-reproach of those bhikṣus, and wishing to praise the virtues and respect of Mahākāśyapa, equal to the Buddha, said to the bhikṣus, &quot;I cultivate the concentration of detachment and enter the first dhyāna. I contemplate with thought. Bhikṣu Kāśyapa also wishes to be free from evil and unwholesome thoughts, with perception and contemplation, to enter the first dhyāna. He also wishes to enter the first dhyāna day and night. The second, third, and fourth dhyānas are also like this. If I wish to enter the mind of loving-kindness, the mind without resentment, the mind without affliction, the mind of universal compassion, and the well-cultivated immeasurable mind, in the eastern direction, I have such a mind. In the southern, western, northern directions, the four intermediate directions, and above and below, I also have such a mind. I wish to cultivate this mind day and night. Mahākāśyapa is also like this. He wishes to enter the mind of loving-kindness, the mind without resentment, the mind without affliction, the mind of universal compassion, and the well-cultivated immeasurable mind, in the eastern direction, he has such a mind. In the southern, western, northern directions, the four intermediate directions, and above and below, he also has such a mind. If I cultivate the minds of compassion, joy, and equanimity, I always enter these minds day and night. Mahākāśyapa is also like this. He always enters these minds day and night. If I wish to eliminate affliction and destroy form, remove various perceptions, and enter the infinite space, I also wish to always enter this samādhi day and night. The sphere of consciousness, the sphere of nothingness, and the sphere of neither perception nor non-perception are also like this. I also wish to enter the samādhi of supernatural powers, which can transform one body into countless bodies, and countless bodies back into one body. I wish to observe the directions above and below, enter into stone walls without obstruction, like space, sit and lie in the air like a goose king, walk on land like water, walk on water like land, reach the Brahma heaven with the body, and touch the sun and moon with the hand. If I wish to cultivate this samādhi day and night, Bhikṣu Kāśyapa is also like this. He wishes to enter that samādhi of supernatural powers, which can transform one body into countless bodies, and countless bodies back into one body. He observes the directions above and below, and can enter stone walls with this body without obstruction, like space. He sits and lies in the air like a goose king, walks on land like water, walks on water</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊为欲令彼诸比丘等，益增厌恶，自呵责故，为欲赞叹摩诃迦叶功德尊重与佛齐故，告诸比丘：「我修离欲之定，入于初禅，作意思惟，迦叶比丘亦欲离恶不善，有觉有观，入于初禅，亦复昼夜，欲入初禅；二禅、三禅，及第四禅，亦复如是。我若发心欲入慈心、无嫌怨心、无恼心、遍广心、善修无量，于其东方，作如是心，南西北方，四维上下，亦作是心，我于昼夜，欲修是心。摩诃迦叶，亦复如是，欲入慈心、无嫌怨心、无恼心、遍广心、善修无量，于其东方，作如是心，南西北方，四维上下，亦作是心。我若修于悲喜舍心，我于昼夜，常入此心。摩诃迦叶亦复如是，于昼夜中，常入此心。我欲灭除恼坏，却于色想，除若干想，入无边虚空，亦欲昼夜常入此定，识处不用处，非想非非想处，亦复如是。我亦欲入神通等定，能以一身作无量身，以无量身还作一身。我欲观察诸方上下，入于石壁，无有障碍，犹如虚空，坐卧空中，如彼鴈王，履地如水，履水如地，身至梵天，手扪日月。若我昼夜欲修是定，迦叶比丘，亦复如是，欲入于彼神通等定，能以一身作无量身，以无量身还为一身，观察四方，四维上下，能以此身入于石壁，无有障阂，犹如虚空，坐卧空中，如彼鴈王，履地如水，履水如地，身至梵天，手扪日月，亦欲昼夜常入此定。天眼、天耳，及他心智、宿命、漏尽，亦复如是。」尔时，世尊于] cf.【丽】彼无量大众之中，称赞迦叶功德，尊重如是，种种与己齐等。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

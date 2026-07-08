@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 50.9 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 50.9</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">50.9</span> <span class="mirror-right">（九）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../an/an4.156.html">AN 4.156 (~)</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brāhman Janavasabha went to where the World Honored One was, exchanged greetings, and sat to one side. Then the Brāhman Janavasabha said to the World Honored One, &quot;How many eons have passed?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，生漏梵志往至世尊所，共相问讯，在一面坐。尔时，生漏梵志白世尊曰：「为有几劫过去？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the Brāhman, &quot;The past eons are innumerable.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告梵志：「过去诸劫不可称计。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Brāhman said to the Buddha, &quot;Can they be counted? The Śramaṇa Gautama always speaks of the three times. What are the three? Namely, the past, future, and present. The Śramaṇa Gautama also knows the past, future, and present. I only wish the Śramaṇa would explain the meaning of the eons.&quot;</p></td><td lang="lzh" class="agama-chi"><p>梵志白佛：「为可计数不乎？沙门瞿昙恒说三世。云何为三？所谓过去、将来、现在。沙门瞿昙亦知过去、当来、现在之世，唯愿沙门演说劫数之义。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the Brāhman, &quot;If I were to speak of this eon and the next eon, after my parinirvāṇa, you would die and not know the meaning of the eons. The reason is that now people have short lives, not exceeding a hundred years. If one counts the eons in a hundred years, when I attain parinirvāṇa, you will have already died and will not know the meaning of the eons. Brāhman, you should know that the Tathāgata also has this knowledge, fully discerning the eons, the long and short lifespans of sentient beings, and their experiences of suffering and happiness, all clearly. Now I will give you an analogy. The wise understand through analogies. Just as the number of sand grains in the Ganges River is limitless, immeasurable, and incalculable, so are the past eons. They are beyond measure and calculation.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告梵志：「若当我说因此劫，复次此劫，我既灭度，汝取命终，不知劫数之义。所以然者，如今人寿短促，极寿不过百年。计百年中数劫者，我取灭度，汝既命终，终不知劫数之义。梵志当知，如来亦有此知，具足分别劫数，众生寿命长短，受其苦乐，皆悉分明。今当与汝引譬，智者以譬喻得解。犹如恒沙之数，亦无有限，无有量，不可计算，过去劫者其数如是。不可称计，不可筹量。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Brāhman said to the Buddha, &quot;Are there any eons in the future?&quot;</p></td><td lang="lzh" class="agama-chi"><p>梵志白佛：「当来劫颇有几数？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the Brāhman, &quot;There are also eons in the future, as numerous as the sand grains in the Ganges River, limitless, immeasurable, and incalculable.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告梵志：「亦恒沙之数，无有齐畔，不可称计，非算所及。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Brāhman again asked the Buddha, &quot;Are there any present eons and eons of formation and destruction?&quot;</p></td><td lang="lzh" class="agama-chi"><p>梵志复问佛：「颇有现在劫、成败劫乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the Brāhman, &quot;There are these eons of formation and destruction, not just one eon or a hundred eons. It is like a vessel on a precarious ground, which will not remain stable. If it does remain, it will eventually topple over. The world systems are also like this. Some eons are formed, some eons are destroyed. The number of eons formed and destroyed is also incalculable. Why is this so? The cycle of birth and death is long and without bounds. Sentient beings are covered by the bonds of ignorance, drifting and lingering, from this world to the next, from the next world to this world. For a long time, they experience suffering and distress. One should be disgusted with and leave behind this distress. Therefore, Brāhman! One should study in this way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告梵志：「有此成劫、败劫，非一劫、百劫，犹如器皿在危地，终不安住；设当住者要当颠倒，诸世界方域亦复如是。或有劫成，或有劫败，此数亦复叵计为几劫成，为几劫败。所以然者，生死长远无有边际。众生以无明结覆盖，漂浪流滞，从今世至后世，从后世至今世，长夜受苦恼，当可厌患去离此恼。是故，梵志！当作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brāhman Jātiruha addressed the World-Honored One, saying, &quot;Śramaṇa Gautama! It is truly amazing! You know the meaning of the past and future eons. I now take refuge in the Śramaṇa Gautama again! I only wish that the Śramaṇa Gautama would allow me to be an upāsaka for the rest of my life. I dare not kill again, up to drinking alcohol.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，生漏梵志白世尊言：「沙门瞿昙！甚奇！甚特！知过去当来劫数之义，我今重复自归沙门瞿昙！唯愿沙门瞿昙听为优婆塞，尽其形寿不敢复杀，乃至饮酒。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brāhman Jātiruha, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，生漏梵志闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

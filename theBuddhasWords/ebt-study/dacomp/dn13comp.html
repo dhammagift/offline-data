@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 13 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 13: Tevijja-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn1comp_4.html#content"></a><a id="next-sutta" href="./dn16comp_1.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2015 under the title "Brahmavihāra and Awakening, A Study of the Dīrgha-āgama Parallel to the Tevijja-sutta" in <i>Asian Literature </i> <i>and Translation: A Journal of Religion and Culture</i>, 3.4: 1–27.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn13.html">DN 13</a> / <a href="../../parallels/da26.html">DĀ 26</a></p>
+<div class="comp-body">
+<p>In this chapter I translate the twenty-sixth discourse in the Chinese <i>Dīrgha-āgama</i>,<span class="note" id="dn13compn1"><span class="details"><span class="p">[n.1] [2] The translated text is DĀ 26 at T I 104c16 to 107a14. My comparative notes only take up selected differences and do not intend to provide a comprehensive coverage of all variations found between the three parallel versions. I am indebted to Jens-Uwe Hartmann for providing me with a preliminary draft transliteration of the Sanskrit fragments parallel, the <i>Vāsiṣṭha-sūtra</i>.</span></span></span> which is a parallel to the thirteenth discourse in the Pāli <i>Dīgha-nikāya </i>of the Theravāda tradition, the <i>Tevijja-sutta</i>, and to the forty-fifth discourse in the <i>Dīrgha-āgama</i> extant in Sanskrit fragments, entitled <i>Vāsiṣṭha-sūtra</i>.</p>
+<h3>Translation</h3>
+<p class="quote-block">The Discourse on the Three Knowledges<span class="note" id="dn13compn2"><span class="details"><span class="p">[n.2] [3] DN 13 at DN I 252,29 similarly refers to the three knowledges when providing the discourse's title as the <i>Tevijja-sutta</i>, whereas according to the Sanskrit fragment <i>uddāna </i>this version took the name of one of its brahmin protagonists, <i>Vāsiṣṭha</i>, as its title (information on title and position of the Sanskrit fragment version are based on the study of the collection in Hartmann 2004, with an updated version in Hartmann and Wille 2014). Regarding the two titles, it is noteworthy that neither DN 13 nor DĀ 26 covers what are the three higher knowledges in the Buddhist sense (recollection of past lives, divine eye, and destruction of the influxes), so that the title seems to reflect the circumstance that the Brahmins criticized for their limited understanding in the body of the discourses are introduced as endowed with the three knowledges in the Vedic sense, namely knowledge of the three Vedas.</span></span></span></p>
+<p class="quote-block">Thus have I heard. At one time the Buddha was dwelling among the people of the Kosala country together with a large</p>
+<p class="quote-block">congregation of monks, altogether one thousand two hundred and fifty men.<span class="note" id="dn13compn3"><span class="details"><span class="p">[n.3] [4] DN 13 at DN I 235,3 mentions a great company of five hundred monks instead. The Sanskrit fragment version does not provide information on who accompanied the Buddha.</span></span></span> He arrived at the village Icchānaṅgala of the Kosalan brahmins and stayed overnight in the forest of Icchā- [naṅgala].<span class="note" id="dn13compn4"><span class="details"><span class="p">[n.4] [5] According to DN 13 at DN I 235,6, the Buddha stayed in a mango grove on the bank of the river Aciravatī, north of the village of Manasākaṭa. The Sanskrit fragment version mentions an Indian rosewood grove, also north of the village; such a reference to a grove with Indian rosewood (<i>siṃsapā</i>) forms a standard pericope in Buddhist discourse literature; cf. von Simson 1965: 72, Legittimo 2004: 46, and Anālayo 2011b: 559 note 152.</span></span></span></p>
+<p class="quote-block">Then a brahmin called Pokkharasāti and a brahmin called Tārukkha had arrived at the village of Icchānaṅgala on some minor matter.<span class="note" id="dn13compn5"><span class="details"><span class="p">[n.5] [6] DN 13 at DN I 235,9 lists several renowned brahmins who at that time were staying in Manasākaṭa, including, in addition to Pokkharasāti and Tārukkha, also Caṅkī, Jāṇussoni, and Todeyya, as well as others not mentioned by name. The Sanskrit fragment version does not refer to any of these and instead directly introduces the two brahmin youths Vāsiṣṭha and Bhāradvāja.</span></span></span> The brahmin Pokkharasāti was of genuine descent on his father's and mother's side for seven generations, beyond being spurned by others.<span class="note" id="dn13compn6"><span class="details"><span class="p">[n.6] [7] In accordance with a standard pattern in Chinese texts, DĀ 26 at T I 104c22 mentions first the father and then the mother, 父母 (cf. also below p. 439 note 17). The Sanskrit fragment, 477v3, in its description of the pure descent of Vāsiṣṭha and Bhāradvāja instead adopts the opposite sequence, reading <i>mātṛ</i><i>taḥ pitṛtaḥ</i>. Although DN 13 has no comparable description, elsewhere in Pāli discourses the mother usually comes in first place; cf. a description of a brahmin's pure descent for seven generations in MN 95 at MN II 165,20: <i>mātito ca </i> <i>pitito</i>, as well as discussions of this sequential positioning by Horner 1930/1990: 6, Günther 1944: 78 note 1, Karunaratna 2003b: 44, Young 2004: 44, and Anālayo 2011b: 173f note 153. In Śamathadeva's<i> Abhidharmakośopāyika-ṭīkā</i>, preserved in Tibetan translation, the father stands in the first place; cf., e.g., the parallel to a reference to "mother and father", <i>mātāpitaro</i>, in MN 93 at MN II 157,1, which in D 4094 <i>ju </i>111a6 or Q 5595 <i>tu </i>127b1 becomes a reference to "father and mother", <i>pha dang ma</i>. Precedence given to the father can also be seen in a colophon in Mongolian, Nattier 1990: 398: <i>ečige eke</i>, whereas precedence given to the mother is attested in a Tocharian fragment, Peyrot 2008: 121: <i>mātär pā(tär)</i>. Guang Xing 2005: 98 note 12 attributes the precedence given to the father in Chinese texts to the influence of Confucian norms; cf. also Paul 1980: 216f and Guang Xing 2013: 34–37.</span></span></span> He was well-versed in</p>
+<p class="quote-block">reciting the three Vedas, competent in analysing the various scriptures, and competent in the teachings on the characteristics of a great man, in examining [portents] of fortune and misfortune, and in the performance of sacrifices. He had five hundred students whom he continuously instructed.<span class="note" id="dn13compn7"><span class="details"><span class="p">[n.7] [8] Neither of the parallel versions provides a description of Pokkharasāti or later of Tārukkha.</span></span></span></p>
+<p class="quote-block">One of his disciples, called Vāseṭṭha, was [also] of genuine descent on his father's and mother's side for seven generations, beyond being spurned by others. He was [also] well-versed in reciting the three Vedas, completely competent in analysing the various scriptures, and also competent in the teachings on the characteristics of a great man, in examining [portents] of fortune and misfortune, and in the performance of sacrifices.<span class="note" id="dn13compn8"><span class="details"><span class="p">[n.8] [9] Whereas DN 13 does not describe Vāseṭṭha (or Bhāradvāja), the Sanskrit fragment version describes both together, although without referring to knowledge of the characteristics of a <i>mahāpuruṣa</i>, but additionally mentioning that they were good-looking. A noteworthy minor difference is that, when describing their learning, the <i>Vāsiṣṭha-sūtra</i> refers to four Vedas instead of three, folio 447v4, <i>caturṇāṃ vedānāṃ pāragau</i>; on this type of difference cf., e.g., Rhys Davids 1899: 109 note 2, Winternitz 1908: 110, and Anālayo 2011b: 527 note 3.</span></span></span> He also had five hundred students whom he continuously instructed.<span class="note" id="dn13compn9"><span class="details"><span class="p">[n.9] [10] The indication that Vāseṭṭha or Bhāradvāja had a following of disciples is not given in the parallel versions.</span></span></span></p>
+<p class="quote-block">The brahmin Tārukkha was also of genuine descent on his father's and mother's side for seven generations, beyond being</p>
+<p class="quote-block">spurned by others.<span class="note" id="dn13compn10"><span class="details"><span class="p">[n.10] [11] Here and below adopting the variant 以 instead of 已.</span></span></span> He was [also] well-versed in reciting the three Vedas, competent in analysing the various scriptures,<span class="note" id="dn13compn11"><span class="details"><span class="p">[n.11] [12] Adopting the variant 善 instead of 盡, in keeping with the description used for Pokkharasāti.</span></span></span> and also competent in the teachings on the characteristics of a great man, in examining [portents] of fortune and misfortune, and in the performance of sacrifices. He also had five hundred students whom he continuously instructed.</p>
+<p class="quote-block">One of his disciples, called Bhāradvāja, was [also] of genuine descent on his father's and mother's side for seven generations, beyond being spurned by others. He was [also] well-versed in reciting the three Vedas, completely competent in analysing the various scriptures, and competent in the teachings on the characteristics of a great man, in examining [portents] of fortune and misfortune, and in the performance of sacrifices. He also had five hundred students whom he continuously instructed.</p>
+<p class="quote-block">Then in the early morning Vāseṭṭha and Bhāradvāja both went to a park and had a meaningful discussion together, in the course of which they came to dispute with each other. Then Vāseṭṭha said to Bhāradvāja: "My path is genuinely capable of leading to release, to reaching Brahmā. This is what is taught by the great teacher, the brahmin Pokkharasāti."<span class="note" id="dn13compn12"><span class="details"><span class="p">[n.12] [13] The parallels agree that the brahmin Pokkharasāti taught a path to the Brahmā world. This is of further interest since, according to MN 99 at MN II 201,2 and its parallel MĀ 152 at T I 668b5, Pokkharasāti held it to be impossible for a human being to reach a superhuman state, to the extent that he would deride any claim to having reached such a condition. According to the definition of <i>uttarimanussa</i><i>dhamma </i>given at Vin III 91,30, attainment of an absorption (<i>jhāna</i>) or a deliverance (<i>vimokkha</i>) qualifies as a superhuman state (on <i>uttarimanussadhamma </i>cf. also Anālayo 2008f). Since from the viewpoint of early Buddhist doctrine the path to the Brahmā world requires attainment of an absorption or cultivation of a <i>brahmavihāra </i>as a <i>cetovimutti</i>, this confirms what emerges later in the present discourse, namely that Pokkharasāti (and others like him) was ignorant of what, according to Buddhist soteriology, is required to reach the Brahmā world.</span></span></span></p>
+<p class="quote-block">Bhāradvāja also said: "My path is genuinely capable of leading to release, to reaching Brahmā. This is what is taught by the great teacher, the brahmin Tārukkha." In this way, Vāseṭṭha proclaimed three times that his path was genuine, and Bhāradvāja also proclaimed three times that his path was genuine. The two discussed it, but neither of them was able to resolve it.</p>
+<p class="quote-block">Then Vāseṭṭha said to Bhāradvāja: "I heard that the recluse Gotama, the son of the Sakyans, has gone forth and reached awakening. He is now dwelling among the people of the Kosala country, staying in the forest of Icchānaṅgala. He has a great reputation which has spread in the world, for being a Tathāgata, an arahant, fully awakened,<span class="note" id="dn13compn13"><span class="details"><span class="p">[n.13] [14] Adopting an emendation suggested in the CBETA edition of 第 to read 等.</span></span></span> and complete with regard to the ten epithets.<span class="note" id="dn13compn14"><span class="details"><span class="p">[n.14] [15] DN 13 at DN I 236,13 spells out the epithets in full, but does not continue after that with a description of the Dharma taught by the Buddha, nor with the indication that he knows the way to Brahmā.</span></span></span></p>
+<p class="quote-block">"Among <i>deva</i>s and people in the world, Māra and <i>deva</i>s [subject to] Māra, <span class="note" id="dn13compn15"><span class="details"><span class="p">[n.15] [16] DĀ 26 at T I 105a19: 魔天; on this couplet cf. Karashima 2010: 328.</span></span></span> recluses and brahmins, he teaches to others the Dharma he has himself directly realized,<span class="note" id="dn13compn16"><span class="details"><span class="p">[n.16] [17] My translation of 身 in DĀ 26 at T I 105a20 as "directly" is based on the assumption that this renders an instrumental <i>kāyena</i> in the Indic original, which in such contexts functions as an idiomatic expression to convey personal and direct experience; cf. Schmithausen 1981: 214 and 249 ad. note 50, Radich 2007: 263, Harvey 2009: 180 note 10, and Anālayo 2011b: 379 note 203.</span></span></span> which is totally genuine in the beginning, middle, and end, complete with meaning and expression,<span class="note" id="dn13compn17"><span class="details"><span class="p">[n.17] [18] DĀ 26 at T I 105a21: 味, literally "taste", which according to Hirakawa 1997: 250 can render <i>vyañjana</i>.</span></span></span> a holy life that is pure. It is good to approach and visit such an arahant.</p>
+<p class="quote-block">"I heard that Gotama knows the path to Brahmā and is able to teach it to people. He often goes back and forth to converse with Brahmā. We should together approach Gotama and resolve this issue together with him. Whatever the recluse Gotama says, we shall both receive it respectfully."</p>
+<p class="quote-block">At that time Vāseṭṭha and Bhāradvāja, following each other, both reached the forest of Icchā[naṅgala]. They approached the Blessed One and, having exchanged polite greetings, sat to one side.</p>
+<p class="quote-block">At that time the Blessed One, knowing the thoughts in both of their minds, said to Vāseṭṭha: "The two of you went to a park in the early morning and had a discussion such that you disputed with each other, one of you saying: 'My method is genuinely capable of leading to release, to reaching Brahmā. This is what is taught by the great teacher, the brahmin Pokkharasāti.'<span class="note" id="dn13compn18"><span class="details"><span class="p">[n.18] [19] Adopting a variant that adds 婆羅門.</span></span></span> The [other] one said: 'My path is genuinely capable of leading to release, to reaching Brahmā. This is what is taught by the great teacher, [the brahmin] Tārukkha.' In this way you kept disputing with each other three times, is it so?"<span class="note" id="dn13compn19"><span class="details"><span class="p">[n.19] [20] Neither of the parallel versions reports the Buddha divining what the two had been discussing. Instead, in DN 13 at DN I 236,27 and in the <i>Vāsiṣṭha-</i><i>sūtra</i>, folio 448v2ff, Vāseṭṭha/Vāsiṣṭha himself informs the Buddha of their disagreement.</span></span></span></p>
+<p class="quote-block">When they heard the Buddha say these words, Vāseṭṭha and Bhāradvāja were totally surprised and the hair on their bodies stood on end. They thought to themselves: "The recluse Gotama has great virtue, he has foreknowledge of people's minds. All that we wanted to discuss, the recluse Gotama has said already in advance."</p>
+<p class="quote-block">Then Vāseṭṭha said to the Buddha: "This path and that path are all claimed to lead genuinely to release and to reaching</p>
+<p class="quote-block">Brahmā. Is it the one taught by the brahmin Pokkharasāti? [Or] is it the one taught by the brahmin Tārukkha?"</p>
+<p class="quote-block">The Buddha said: "Vāseṭṭha, even suppose this path and that path genuinely were to lead to release, to reaching Brahmā, why did you dispute with each other up to three times in the early morning in the park?"</p>
+<p class="quote-block">Then Vāseṭṭha said to the Buddha: "The three-knowledge brahmins all teach various paths: the path of controlling one's desires, the path of one's action, and the path of [devotion] to Brahmā; and that [each of] these three paths completely leads to Brahmā. Gotama, the brahmins teach that, just as all village paths lead to the city, so all of these different paths lead to Brahmā."</p>
+<p class="quote-block">The Buddha said to Vāseṭṭha: "Do [they claim that] all of those paths fully lead to Brahmā?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They [claim that all] fully lead to it." The Buddha kept sternly questioning him three times: "Do [they claim that] all of those paths fully lead to Brahmā?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They [claim that all] fully lead to it."</p>
+<p class="quote-block">At that time, having ascertained this statement, the Blessed One said to Vāseṭṭha: "How is it, has even one among the threeknowledge brahmins gained a vision of Brahmā?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "None has seen him."<span class="note" id="dn13compn20"><span class="details"><span class="p">[n.20] [21] In DN 13 at DN I 238,1 the Buddha asks more questions, querying whether any of the three-knowledge brahmins has seen Brahmā, whether any of their teachers has seen Brahmā, whether any out of up to seven generations of the teachers have seen Brahmā, before taking up the ancient seers like Aṭṭhaka, etc.</span></span></span></p>
+<p class="quote-block">[The Buddha said]: "How is it, Vāseṭṭha, has any of the former teachers of the three-knowledge brahmins gained a vision of Brahmā?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "None has seen him." [The Buddha said]: "How is it, Vāseṭṭha, the ancient threeknowledge brahmin seers of the distant past, well-versed in</p>
+<p class="quote-block">recitation, competent in teaching people all the ancient recitals, the poetic chants, and the verses, namely the brahmin Aṭṭhaka, the brahmin Vāmadeva, the brahmin Vessāmitta, the brahmin Aṅgiras, the brahmin Yamataggi, the brahmins [Bhāradvāja] and Vāseṭṭha,<span class="note" id="dn13compn21"><span class="details"><span class="p">[n.21] [22] DĀ 26 at T I 105b26: 婆婆悉婆羅門. According to Meisig 1990: 82, the corresponding expression in DĀ 20 at T I 87a18: 婆婆婆悉吒 should be seen as a combined reference to Bhāradvāja and Vasiṣṭha. It is not clear to me how far his suggestion would work for the present instance, hence I only supply Bhāradvāja in brackets.</span></span></span> the brahmin Kassapa, the brahmin Araṇemi, the brahmin Gotama, the brahmin Setakettu, the brahmin Sunetta, have they gained a vision of Brahmā?"<span class="note" id="dn13compn22"><span class="details"><span class="p">[n.22] [23] DN 13 at DN I 238,21 and the <i>Vāsiṣṭha-sūtra</i>, folio 449r5f, additionally mention Vāmaka and Bhagu/Bhṛgu, but do not refer to Araṇemi, Gotama, Setakettu, or Sunetta.</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "None has seen him."</p>
+<p class="quote-block">The Buddha said: "Since none of those three-knowledge brahmins has seen Brahmā, since none of the former teachers of the three-knowledge brahmins has seen Brahmā, and furthermore the ancient three-knowledge brahmins, the great seers, such as Aṭṭhaka, have also not seen Brahmā, it should be understood that the claims made by the three-knowledge brahmins are untrue."</p>
+<p class="quote-block">He further said to Vāseṭṭha: "It is as if a debauched person were to say: 'I had a liaison with that beautiful girl', proclaiming to have had intercourse with her.<span class="note" id="dn13compn23"><span class="details"><span class="p">[n.23] [24] In the parallel versions the claim is not to have had intercourse with the girl, but only to be in love with her; cf. DN 13 at DN I 241,27 and <i>Vāsiṣṭha-</i><i>sūtra</i> folio 449v4. The position of this simile in the overall discussion is also different, as in DN 13 this is the third simile (after the simile of the file of blind men and the simile of the sun and the moon) and in the Sanskrit fragment version the second simile (after the simile of the sun and the moon).</span></span></span> Another person says: 'Do you know that girl and where she lives, in the east, west,</p>
+<p class="quote-block">south or north?'<span class="note" id="dn13compn24"><span class="details"><span class="p">[n.24] [25] In the parallel versions the first question is concerned with the social class to which she belongs. A query regarding the direction in which she stays is the second question in the <i>Vāsiṣṭha-sūtra</i>, folio 449v5.</span></span></span> He says: 'I do not know.' [The other] asks further: 'Do you know in which country, town, and village that girl lives?' <span class="note" id="dn13compn25"><span class="details"><span class="p">[n.25] [26] In DN 13 at DN I 242,2 an enquiry regarding the village or town where she lives comes together with a question about her name and family as well as about the size of her body and the colour of her skin.</span></span></span> He replies: 'I do not know.' [The other] asks further: 'Do you know that girl's father and mother and her family name?' He replies: 'I do not know.' [The other] asks further: 'Do you know if that girl is a warrior [class] girl, a brahmin [class], a merchant [class], or a worker [class] girl?' He replies: 'I do not know.' [The other] asks further: 'Do you know if that girl is tall or short, plump or slim, dark or fair, beautiful or ugly?'<span class="note" id="dn13compn26"><span class="details"><span class="p">[n.26] [27] The parallels do not report an enquiry regarding whether she is beautiful or ugly. Such a query does in fact not fit the context too well, since if she were ugly one would not expect that the person would lay a claim to have had an affair with her (or be in love with her, following the presentation in the parallel versions). For the simile to work, the beauty of the girl is to some extent an implicit condition. In the parallels she is in fact introduced as the <i>janapada</i><i>kalyāṇī</i>, the foremost beauty of the country.</span></span></span> He replies: 'I do not know.' How is it, Vāseṭṭha, is that man's claim true?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "It is not true."</p>
+<p class="quote-block">[The Buddha said]: "In the same way, Vāseṭṭha, what the three-knowledge brahmins proclaim is also not true. Why is that? Vāseṭṭha, your three-knowledge brahmins see the places where the sun and the moon rise, move ahead, and set. They worship them with folded hands, [but] are they able to say: 'This path genuinely leads to release, to reaching the sun and the moon?'"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "Indeed, the three-knowledge brahmins see the places where the sun and the moon rise, move ahead,</p>
+<p class="quote-block">and set. They worship them with folded hands, but they are unable to say: 'This path genuinely leads to release, to reaching the sun and the moon.'"</p>
+<p class="quote-block">[The Buddha said]: "Indeed, Vāseṭṭha, the three-knowledge brahmins see the places where the sun and the moon rise, move ahead, and set, and they worship them with folded hands, but they are unable to say: 'This path genuinely leads to release, to reaching the sun and the moon.' Yet they constantly worship and respect them with folded hands. Are they not deluded?"<span class="note" id="dn13compn27"><span class="details"><span class="p">[n.27] [28] In the parallel versions, DN 13 at DN I 240,23 and <i>Vāsiṣṭha-sūtra</i> folio 449v7, the purpose of this simile is to point out that, even though the brahmins are able to see the sun and the moon, they are unable to teach the path that leads to them. What to say of them teaching the path to Brahmā, whom they have not even seen?</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "Indeed, Gotama, they are truly deluded."</p>
+<p class="quote-block">The Buddha said: "It is as if a person were to erect a ladder on vacant ground. Another person asks him: 'For what purpose have you erected the ladder?'<span class="note" id="dn13compn28"><span class="details"><span class="p">[n.28] [29] In DN 13 at DN I 243,4 the introductory narration already indicates that the staircase is for the purpose of ascending to a hall, thus the other person directly queries about the direction in which the hall is to be found, additionally also asking whether the hall is high, of medium height, or low.</span></span></span> He replies: 'I wish to go up into the hall.' [The other] asks again: 'Where is the hall, is it in the east, the west, the south or the north?' He replies: 'I do not know.' How is it, Vāseṭṭha, this person who erects a ladder wishing to go up into the hall, is he not deluded?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "Indeed, he is truly deluded."</p>
+<p class="quote-block">The Buddha said: "The three-knowledge brahmins are also like that, [what they say] is deluded and untruthful. Vāseṭṭha, the five [kinds of] sensual pleasures clearly are very much liked and desired. What are the five? Forms seen by the eye are very much liked and desired, sounds [heard by] the ears …</p>
+<p class="quote-block">odours [smelled] by the nose … flavours [tasted] by the tongue … tangibles [felt by] the body are very much liked and desired.</p>
+<p class="quote-block">"In my noble teaching these are [considered] attachments, bondages, and shackles. The three-knowledge brahmins are defiled by these five [kinds of] sensual pleasures, craving for them and being firmly attached to them, without seeing their disadvantage, without understanding the release from them. Being fettered by the five [kinds of] sensual pleasures, even if they worship the sun and the moon, water and fire, reciting: 'Take me away to be reborn as a Brahmā', [for this to be fulfilled] is impossible.<span class="note" id="dn13compn29"><span class="details"><span class="p">[n.29] [30] In DN 13 at DN I 246,2 the description of the impossibility of the threeknowledge brahmins to be reborn in the Brahmā world does not mention any worship of the sun and the moon or of water and fire.</span></span></span></p>
+<p class="quote-block">"It is just as if the river Aciravatī were brimful with water up to the banks so that crows could drink from it, and a person whose body is firmly bound to this bank were to call out vainly to the other bank: 'Come and take me across.' Would that bank come and take that man across?"<span class="note" id="dn13compn30"><span class="details"><span class="p">[n.30] [31] This corresponds to two similes in DN 13; the first simile at DN I 244,13 describes a man who wishes to cross over and calls out to the other bank to come to him, whereas in the second simile at DN I 245,7 the man wishing to cross over is firmly bound to this bank. The first simile serves to illustrate the inability of the three-knowledge brahmins to reach the Brahmā world by merely calling the name of various <i>deva</i>s, the second simile illustrates the bondage to sensuality of the three-knowledge brahmins. Since this is the more meaningful presentation, perhaps the two similes were conflated in DĀ 26, as a result of which the man wanting to cross over is firmly bound to this bank and calls for the other bank to come, which is less apt than the presentation in DN 13.</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "No, it would not." "Vāseṭṭha, in my noble teaching the five [kinds of] sensual pleasures, which are clearly very much liked and desired, are</p>
+<p class="quote-block">compared to shackles. The three-knowledge brahmins are defiled by these five [kinds of] sensual pleasures, craving for them and being firmly attached to them without seeing their disadvantage, without understanding the release from them. Being fettered by the five [kinds of] sensual pleasures, even if in this way they again worship the sun and the moon, water and fire, reciting: 'Take me away to be reborn as a Brahmā',<span class="note" id="dn13compn31"><span class="details"><span class="p">[n.31] [32] Adopting the variant 者 instead of 上.</span></span></span> [for this to be fulfilled] is also quite impossible.</p>
+<p class="quote-block">"Vāseṭṭha, it is as if the river Aciravatī were brimful with water up to the bank so that crows could drink from it, and a person who wishes to cross over were neither to use his hands and feet with his bodily strength nor to rely on a raft. Would he be able to cross?"<span class="note" id="dn13compn32"><span class="details"><span class="p">[n.32] [33] In DN 13 at DN I 246,7 the person wishing to cross over covers his head and lies down on this bank of the river Aciravatī, which serves to illustrate that the three-knowledge brahmins are similarly covered by the five hindrances. DN 13 does not have a counterpart to the next passage on cultivating the path of renunciation.</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "He would not be able to do it."</p>
+<p class="quote-block">"Vāseṭṭha, the three-knowledge brahmins are also like this. They do not cultivate the pure holy life of a recluse, but cultivate other paths that are not pure practices. If they desire and seek rebirth as a Brahmā, [for that to be fulfilled] is impossible.</p>
+<p class="quote-block">"Vāseṭṭha, it is as if there were a mountain torrent that has suddenly risen and carried away many people, and there was no boat or raft and also no bridge. A traveller comes by who wishes to cross over to the other bank. He sees that the mountain torrent has suddenly risen and carried away many people, and that there is no boat or raft and also no bridge. That person thinks to himself:</p>
+<p class="quote-block">"'What if I now gather plenty of grass and sticks, bind them together firmly to make a raft, and with my own physical strength cross over to the other bank?'</p>
+<p class="quote-block">"Then he binds them together to make a raft and with his own bodily strength safely crosses over.<span class="note" id="dn13compn33"><span class="details"><span class="p">[n.33] [34] This simile is not found in the parallels. The <i>locus classicus</i> for the simile of the raft is MN 22 at MN I 134,33 and its parallels MĀ 200 at T I 764b21, EĀ 43.5 at T II 760a13 (on which cf. Anālayo 2016b: 75–79), and D 4094 <i>nya </i> 74b6 or Q 5595 <i>thu</i> 119b7. A reference to this simile in MN 38 at MN I 260,35 has a counterpart in the parallel MĀ 201 at T I 767c7. Another occurrence of the simile of the raft in MĀ 205 at T I 779c1 has no counterpart in the parallel MN 64.</span></span></span></p>
+<p class="quote-block">"Vāseṭṭha, it is also like this when a monk leaves behind the impure practices of a non-recluse and practises the pure holy life of a recluse. For his wish for rebirth as a Brahmā [to be fulfilled] is certainly possible. How is it, Vāseṭṭha, does Brahmā have a mind with hatred or a mind without hatred?"<span class="note" id="dn13compn34"><span class="details"><span class="p">[n.34] [35] DN 13 at DN I 247,5 has a series of questions about Brahmā, beginning with the query whether he is with <i>pariggaha </i>or without (counterpart to the reference to family and possessions in DĀ 26), and only at the end of this series applies the same questions to the three-knowledge brahmins.</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "His mind is without hatred." [The Buddha] asked again: "Do the three-knowledge brahmins have minds with hatred or minds without hatred?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They have minds with hatred."</p>
+<p class="quote-block">[The Buddha said]: "Vāseṭṭha, [thus] Brahmā has a mind without hatred and the three-knowledge brahmins have minds with hatred. A mind with hatred and a mind without hatred are dissimilar, they are not similarly inclined,<span class="note" id="dn13compn35"><span class="details"><span class="p">[n.35] [36] DĀ 26 at T I 106b1: 不俱解脫, where in my translation I assume that 解脫 renders <i>adhi +√muc</i>; for another instance where 解 on its own carries this meaning cf. Anālayo 2010a: 340 note 30.</span></span></span> they do not</p>
+<p class="quote-block">proceed towards each other. Therefore Brahmā and the brahmins are dissimilar. How is it, Vāseṭṭha, does Brahmā have a mind with anger or a mind without anger?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "His mind is without anger." [The Buddha] asked again: "Do the three-knowledge brahmins have minds with anger or minds without anger?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "Their minds are with anger."</p>
+<p class="quote-block">The Buddha said: "Vāseṭṭha, [thus] Brahmā has a mind without anger and the three-knowledge brahmins have minds with anger. A mind with anger and a mind without anger do not proceed similarly, they are not similarly inclined. Therefore Brahmā and the brahmins are dissimilar. How is it, Vāseṭṭha, does Brahmā have a mind with resentment or a mind without resentment?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "His mind is without resentment."</p>
+<p class="quote-block">[The Buddha] asked again: "Do the three-knowledge brahmins have minds with resentment or minds without resentment?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They have minds with resentment."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has a mind without resentment and the three-knowledge brahmins have minds with resentment. A mind with resentment and a mind without resentment do not proceed similarly, they are not similarly inclined. Therefore Brahmā and the brahmins are dissimilar. How is it, Vāseṭṭha, does Brahmā have family and property?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He does not have them." [The Buddha] asked again: "Do the three-knowledge brahmins have family and property?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They have them."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has no family and property and the three-knowledge brahmins have family and property. Having family and property and not having family and property do not proceed similarly, they are not similarly inclined.</p>
+<p class="quote-block">Therefore Brahmā and the brahmins are dissimilar. How is it, Vāseṭṭha, is Brahmā unimpeded or is he impeded?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He is unimpeded." [The Buddha] asked again: "Are the three-knowledge brahmins unimpeded or are they impeded?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "They are impeded."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā is unimpeded and the three-knowledge brahmins are impeded. To be unimpeded and to be impeded do not proceed similarly, they are not similarly inclined. Therefore Brahmā and the brahmins are dissimilar."</p>
+<p class="quote-block">The Buddha said: "Suppose a person comes and asks the three-knowledge brahmins about difficult and profound matters, they would be unable to reply fully, is it truly so?"<span class="note" id="dn13compn36"><span class="details"><span class="p">[n.36] [37] In DN 13 at DN I 248,14 the Buddha instead describes the discomfiture of the brahmins and puns on their three knowledges.</span></span></span></p>
+<p class="quote-block">[Vāseṭṭha] replied: "It is so."</p>
+<p class="quote-block">Then Vāseṭṭha and Bhāradvāja both together said to the Buddha: "For the time being let us leave that discussion.<span class="note" id="dn13compn37"><span class="details"><span class="p">[n.37] [38] Here and below, DN 13 at DN I 248,20 and 249,17 does not report a request to change the topic of the discussion. Instead Vāseṭṭha in the first instance mentions that he had heard that Gotama <i>knows</i> the path to Brahmā and in the second instance that Gotama <i>teaches</i> the path to Brahmā, followed by requesting such a teaching.</span></span></span> We heard that the recluse Gotama has vision and discernment of the path to Brahmā and is able to teach it to other people, and also that he and Brahmā have gone back and forth to visit each other and converse. May the recluse Gotama teach us the path to Brahmā and explain it widely, out of compassion."</p>
+<p class="quote-block">The Buddha said: "Vāseṭṭha, I will now ask you a question, answer me according to your understanding. How is it, Vāseṭṭha, is the region of Manasākaṭa far from here or near?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "It is near."</p>
+<p class="quote-block">[The Buddha said]: "Suppose a person grew up in that region and another person asks him the way to that region. What do you think, Vāseṭṭha, would that person who grew up in that region be in doubt when replying about that way?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He will not be in doubt. Why is that? It is because he grew up in that region."</p>
+<p class="quote-block">The Buddha said: "Even if that person grew up in that region, he might still be in doubt. If someone comes and asks me about the path to Brahmā, [however], I am in no doubt. Why is that? Because I often explain to others the path to Brahmā."<span class="note" id="dn13compn38"><span class="details"><span class="p">[n.38] [39] In DN 13 at DN I 249,12 the Buddha does not indicate that he often teaches this path, but only that he knows it.</span></span></span></p>
+<p class="quote-block">Then Vāseṭṭha and Bhāradvāja together said to the Buddha: "For the time being let us leave that discussion. We heard that the recluse Gotama has vision and discernment of the path to Brahmā and is able to explain it to other people, and also that he and Brahmā have gone back and forth to visit each other and converse. May the recluse Gotama explain to us the path to Brahmā, explaining it widely, out of compassion."</p>
+<p class="quote-block">The Buddha said: "Listen and attend well to what I shall tell you."</p>
+<p class="quote-block">They replied: "Certainly, we are delighted and wish to hear it."</p>
+<p class="quote-block">The Buddha said: "A Tathāgata, an arahant, a fully awakened one, manifests in the world, endowed with the ten epithets … <i>up to</i> [someone goes forth under the Tathāgata and eventually reaches] … the fourth absorption, with which one delights oneself here and now.<span class="note" id="dn13compn39"><span class="details"><span class="p">[n.39] [40] At this juncture the gradual path of training needs to be supplemented from going forth up to the attainment of the fourth absorption, a full exposition of which can be found in DĀ 20 at T I 83c3 to 85c7; cf. Anālayo 2016d.</span></span></span> Why is that? It is because of being energetic, with collected and undistracted mindfulness, de-</p>
+<p class="quote-block">lighting in secluded and quiet places, and being diligent [that this is attained].</p>
+<p class="quote-block">"One dwells with a mind imbued with <i>mettā</i> pervading one direction and also the other directions, widely and without limits, without duality, boundless, without [the bondage of] resentment, without [the affliction of] harmful [intentions]; and by dwelling in this mental state one delights oneself.<span class="note" id="dn13compn40"><span class="details"><span class="p">[n.40] [41] DN 13 at DN I 251,5 illustrates the radiation of <i>mettā </i>with the example of a conch blower who is able to make himself heard in all directions, explaining that in a similar way <i>mettā </i>developed as a boundless radiation in all directions cannot be overruled by other more limited karma.</span></span></span></p>
+<p class="quote-block">"One dwells with a mind imbued with compassion … sympathetic joy … equanimity pervading one direction and also the other directions, widely and without limits, without duality, boundless, without the bondage of resentment, without the affliction of harmful intentions; and by dwelling in this mental state one delights oneself.</p>
+<p class="quote-block">"How is it, Vāseṭṭha, does Brahmā have a mind with hatred or a mind without hatred?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "His mind is without hatred." [The Buddha] asked again: "Does a monk cultivating <i>mettā</i> have a mind with hatred or a mind without hatred?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "His mind is without hatred."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has a mind without hatred and a monk cultivating <i>mettā</i> has a mind without hatred. A mind without hatred and a mind without hatred proceed similarly, they are similarly inclined. Therefore Brahmā and the monk are similar to each other. How is it, Vāseṭṭha, does Brahmā have a mind with anger or a mind without anger?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "[His mind] is without it." [The Buddha] asked again: "Does a monk cultivating <i>mettā</i> have a mind with anger or a mind without anger?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "[His mind] is without it."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has a mind without anger and a monk cultivating <i>mettā</i> has a mind without anger. A mind without anger and a mind without anger proceed similarly, they are similarly inclined. Therefore Brahmā and the monk are similar to each other. How is it, Vāseṭṭha, does Brahmā have a mind with resentment or a mind without resentment?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "[His mind] is without it." [The Buddha] asked again:<span class="note" id="dn13compn41"><span class="details"><span class="p">[n.41] [42] Adopting a correction suggested in the CBETA edition of 間 to read 問.</span></span></span> "Does a monk cultivating <i>mettā</i> have a mind with resentment or a mind without resentment?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "[His mind] is without it."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has a mind without resentment and a monk cultivating <i>mettā</i> has a mind without resentment. A mind without resentment and a mind without resentment proceed similarly, they are similarly inclined. Therefore Brahmā and the monk are similar to each other. How is it, Vāseṭṭha, does Brahmā have family and property?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He does not have them." [The Buddha] asked again: "Does a monk cultivating <i>mettā</i> have family and property?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He does not have them."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā has no family and property and a monk cultivating <i>mettā</i> also has no family and property. Having no family and property and having no family and property proceed similarly, they are similarly inclined. Therefore Brahmā and the monk are similar to each other. How is it, Vāseṭṭha, is Brahmā unimpeded?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He is unimpeded." [The Buddha] asked again: "Is a monk cultivating <i>mettā</i> unimpeded?"</p>
+<p class="quote-block">[Vāseṭṭha] replied: "He is unimpeded."</p>
+<p class="quote-block">The Buddha said: "[Thus] Brahmā is unimpeded and a monk cultivating <i>mettā</i> is unimpeded. To be unimpeded and to be unimpeded proceed similarly, they are similarly inclined. Therefore Brahmā and the monk are similar to each other."</p>
+<p class="quote-block">The Buddha said to Vāseṭṭha: "You should know that at the breaking up of the body after death a monk cultivating <i>mettā</i> will be reborn in the heavenly realm of Brahmā in an instant, as swiftly as an arrow."</p>
+<p class="quote-block">When the Buddha gave this teaching, the dustless and spotless Dharma eye in regard to all phenomena arose in Vāseṭṭha and Bhāradvāja while they were seated there.<span class="note" id="dn13compn42"><span class="details"><span class="p">[n.42] [43] Adopting the variant 於諸法中得 instead of 諸法. The <i>Vāsiṣṭha-sūtra</i>, folio 450v7, also reports that the two attained the Dharma eye, following which they requested and received the going forth. DN 13 at DN I 252,25 does not report any attainment and just concludes with their taking refuge as lay followers.</span></span></span></p>
+<p class="quote-block">At that time Vāseṭṭha and Bhāradvāja, having heard what the Buddha had said, were delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>When compared to its two parallels, the above translated discourse from the Dharmaguptaka <i>Dīrgha-āgama </i> shows several variations of the type regularly encountered in early Buddhist discourse literature.<span class="note" id="dn13compn43"><span class="details"><span class="p">[n.43] [44] Differences between DĀ 26 and DN 13 have already been studied by McGovern 2013: 388–399; for a critical reply to his assumption that such differences are best appreciated in the light of oral improvisation of the type studied by Parry and Lord cf. above p. 68ff.</span></span></span> Particularly noteworthy is the tendency for an event to become more miraculous, evident in the Chinese <i>Dīr</i><i>gha-āgama </i>version's report that the Buddha divined what the two young brahmins had been discussing, whereas in the parallel versions the two themselves inform the Buddha of their disagreement.<span class="note" id="dn13compn44"><span class="details"><span class="p">[n.44] [45] Cf. above p. 184 note 19. Notably, DN 13 at DN I 237,1 reports the Buddha repeating what the two had said. A conflation of such a repetition by the Buddha with the otherwise similar report given by the young brahmins (comparable to the conflation in DĀ 26 of what in DN 13 are two separate items; cf. above p. 189 note 30) could easily have become the starting point for the textual development evident in DĀ 26. Once through such a conflation the Buddha gives a report of their discussion without having been informed by the two, the conclusion that he must have divined it all would be only natural, a conclusion that would then have influenced the wording of the respective passage during subsequent stages in its transmission.</span></span></span></p>
+<p>Manifestations of this tendency are not confined to texts of the Dharmaguptaka tradition, but can also be found in Theravāda texts.</p>
+<p>An example is the record of the Buddha's first meeting with his chief lay supporter Anāthapiṇḍika. According to a discourse in the <i>Saṃyutta-nikāya </i>and the Theravāda <i>Vinaya</i>, the Buddha divined the name of his visitor.<span class="note" id="dn13compn45"><span class="details"><span class="p">[n.45] [50] According to SN 10.8 at SN I 212,10 and Vin II 156,19, the Buddha said: "come Sudatta", <i>ehi sudattā ti</i>, when he saw Anāthapiṇḍika approaching, thereby addressing him by his personal name which, according to Spk I 315,9, was not known to anyone except Anāthapiṇḍika himself.</span></span></span> In the <i>Madhyama-āgama </i>parallel, however, the Buddha had to ask for the name.<span class="note" id="dn13compn46"><span class="details"><span class="p">[n.46] [51] According to MĀ 28 at T I 460c10, on a later occasion Anāthapiṇḍika reported that "the Buddha asked me: 'What is your name?'", 佛問我: 汝名何等?</span></span></span> A discourse in the <i>Saṃ</i><i>yukta-āgama</i> and the Mūlasarvāstivāda <i>Vinaya</i> also report that Anāthapiṇḍika had to inform the Buddha of his name.<span class="note" id="dn13compn47"><span class="details"><span class="p">[n.47] [52] SĀ 592 at T II 158b12 and SĀ² 186 at T II 441a18 as well as the <i>Śayanāsana</i>-<i>vastu</i> of the Mūlasarvāstivāda <i>Vinaya</i>, Dutt 1984c: 143,8 and Wille 1990: 117,18 (319v2), with the Tibetan version found in D 1 <i>ga</i> 198a3 or Q 1030 <i>nge </i>189a6.</span></span></span></p>
+<p>This example shows that the tendency for the Buddha to become endowed with divining abilities similarly manifests in texts of the Theravāda tradition. The Dharmaguptaka <i>Dīrgha-āgama </i> depiction of the Buddha divining what the two brahmins Vāseṭṭha and Bhāradvāja had been discussing is therefore just another example of a general tendency for the Buddha's activities and abilities to become gradually more miraculous.</p>
+<p>Another remarkable difference between the <i>Dīrgha-āgama </i> discourse translated above and its parallels is the effect the teaching had on the two brahmins. Whereas according to the Theravāda <i>Tevijja-sutta</i> the two merely took refuge, according to the Dharmaguptaka <i>Dīrgha-āgama </i> discourse they attained streamentry. The Sarvāstivāda and/or Mūlasarvāstivāda Sanskrit fragment version reports not only that they attained stream-entry, but also that they went forth as Buddhist monks.<span class="note" id="dn13compn48"><span class="details"><span class="p">[n.48] [54] Cf. above p. 197 note 42. The present case contrasts with the assessment by Hartmann 2014: 150 that in the long-discourse collections "brahmins are hardly ever converted to the Buddhist teaching; normally they do not even become lay followers, let alone monks. Contrary to what one may expect, successful conversion is not at all the topic of the texts … and, again interesting, there is no difference between the Pali ending of such a discourse and its Sanskrit counterpart. If there was a considerable distance in time between the final redactions of the two, one might be inclined to expect a development in the Buddhology in the sense that a possibly later version would tend to underline the irrefutability of the Buddha's arguments by letting the story end with a complete conversion, but this is not at all the case. On the contrary, the texts prove extremely stable in that regard."</span></span></span></p>
+<p>The present instance is not the only one where a discourse to Vāseṭṭha and Bhāradvāja has a stronger effect in the Chinese <i>Dīrgha-āgama </i>than in its <i>Dīgha-nikāya </i>counterpart. The same also happens in the case of the <i>Aggañña-sutta </i>and its parallels. The <i>Dīgha-nikāya </i>version and a <i>Madhyama-āgama </i>parallel just conclude with the delight of Vāseṭṭha and Bhāradvāja.<span class="note" id="dn13compn49"><span class="details"><span class="p">[n.49] [55] DN 27 at DN III 98,3 and MĀ 154 at T I 677a5.</span></span></span> The Chinese <i>Dīrgha-āgama </i>account, however, reports that Vāseṭṭha and Bhāradvāja became arahants.<span class="note" id="dn13compn50"><span class="details"><span class="p">[n.50] [56] DĀ 5 at T I 39a19.</span></span></span> The same is also recorded in the Pāli commentary on the <i>Aggañña-sutta</i>,<span class="note" id="dn13compn51"><span class="details"><span class="p">[n.51] [57] Sv III 872,21.</span></span></span> in a discourse quotation preserved in Tibetan translation,<span class="note" id="dn13compn52"><span class="details"><span class="p">[n.52] [58] D 4094 <i>ju </i>197b5 or Q 5595 <i>tu</i> 225b4.</span></span></span> and in an individual Chinese translation (although in this last case their attainment of liberation takes place after they have gone forth and practised for some time).<span class="note" id="dn13compn53"><span class="details"><span class="p">[n.53] [59] T 10 at T I 222a12.</span></span></span></p>
+<p>Elsewhere I have argued that in early Buddhist thought neither the <i>jhāna</i>s nor the <i>brahmavihāra</i>s constitute an independent path to liberation.<span class="note" id="dn13compn54"><span class="details"><span class="p">[n.54] Several of these arguments, which were originally part of the article republished in the present chapter, are instead republished in Anālayo 2017b.</span></span></span> At the same time, however, the texts equally highlight the substantial contribution that the <i>jhāna</i>s and/or the <i>brahmavihāra</i>s can make to progress to the final goal.</p>
+<p>In fact neither the <i>Tevijja-sutta </i>nor its parallels posit the <i>brah</i><i>mavihāra</i>s as a self-sufficient path to liberation. Instead, the Buddha's teaching of the path to Brahmā is a natural response to the request by two brahmin students to be given such a teaching and need not be seen as carrying any deeper or hidden meanings.<span class="note" id="dn13compn55"><span class="details"><span class="p">[n.55] [113] The situation in DN 13 and its parallels seems to be similar in this respect to the detailed teaching on morality and family relationships given according to DN 31 and its parallels (on which cf. Pannasiri 1950) by the Buddha to another layperson. Here, too, the attainment of what according to early Buddhist thought is the final goal does not come under purview. In the case of DN 13, Shults 2013: 123 sums up that the results of his study indicate that "the <i>Tevijja Sutta </i>is a response to Vedic ritual culture." In reply to the suggestion by Gombrich 2009: 83 that in DN 13 "joining <i>brahma </i>at death is a metaphor for the nirvana which follows the death of an <i>arahant</i>", Gethin 2012: 2 notes that "if, as Gombrich claims, the teaching that 'love and compassion can be salvific for the person who cultivates those feelings to the highest pitch' was such a crucial part of what the Buddha taught (p. 195), it remains something of a puzzle that he should have chosen to reveal this principally to brahmin outsiders, and in terms that were obscure to his own followers."</span></span></span></p>
+<p>Although in the Chinese and Sanskrit parallels they attain stream-entry at the end of the exposition, neither of the two versions gives any indication that they actually engaged in <i>brahma</i><i>vihāra </i>practice. Instead, what led to their attainment, in line with numerous other such attainments reported in other discourses, appears to have been the detailed explanations given by the Buddha on what constitutes the path to Brahmā, of which the description of <i>brahmavihāra </i>practice forms only the culminating point. Crucial here would have been the insightful explanation by the Buddha that the path to Brahmā requires that one becomes like Brahmā.</p>
+<p>This is what most of the discussion is about, namely contrasting Brahmā to brahmins in various respects and then showing that a monk who practises the <i>brahmavihāra</i>s is similar to Brahmā in all these respects. This straightforward indication of the need to cultivate oneself in a way that accords with the goal of one's aspiration is what would have changed the understanding of the two young brahmins on how to reach Brahmā and thus triggered their insight.</p>
+<p>Moreover, the final part of this exposition affirms that a monk who practises <i>brahmavihāra</i> "will be reborn in the heavenly realm of Brahmā in an instant, as swiftly as an arrow".<span class="note" id="dn13compn56"><span class="details"><span class="p">[n.56] DĀ 26 at T I 107a10.</span></span></span> The <i>Tevijja-sutta </i>also affirms that such a monk will be reborn in the Brahmā world.<span class="note" id="dn13compn57"><span class="details"><span class="p">[n.57] DN 13 at DN I 252,15; the relevant part of the <i>Vāsiṣṭha-sūtra</i>, folio 450v6, speaks of the rebirth in the Brahmā world of a clansman or a clanswoman in general.</span></span></span> Rebirth in the Brahmā world is clearly not the final goal of early Buddhist soteriology. Thus this affirmation of the potential of the <i>brahmavihāra</i>s to lead to such elevated rebirth at the same time implies that they fall short of fulfilling the final goal of freedom from rebirth.</p>
+<p>Even without the two young brahmins attaining stream-entry, as in the case of the Pāli <i>Tevijja-sutta</i>, the basic message remains the same. Cultivation of the <i>brahmavihāra</i>s is what leads to the fulfilment of the highest aspiration of contemporary brahmins and at the same time can function as a component of the path to the final goal according to early Buddhist thought.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn13.html">DN13</a>: Tevijja Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.258 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.258</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 258</span><span class="mirror-right">（二五八）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn7.15.html">SN 7.15</a> / <a href="../parallels/sa92.html">SĀ 92</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once the Buddha was traveling in the country of Kusumapura and returned to the Jetavana Anāthapiṇḍada-ārāma in Śrāvastī. At that time, there was a young brahmin named Uttama, who was born into a family of seven generations of pure ancestry. His parents were well-versed and widely learned. They not only read and recited themselves, but also taught others. Whatever they heard, they could remember. They were well-versed in the four Vedas and had mastered their meanings. They were also well-versed in the Sāṅkhya, Nyāya, Vaiśeṣika, Jātakas, and Vedāṅga treatises, and were skilled in understanding the meanings of the Dharma phrases. They were well-versed in various treatises. Uttama was handsome, talented, and extraordinary, difficult to match. He was born into a noble family and enjoyed wealth and status. He was arrogant due to his talents and abilities. He did not respect his parents, preceptors, teachers, elders, or relatives, and did not pay homage to them.</p></td><td lang="lzh" class="agama-chi"><p>一时佛游俱萨罗，还至舍卫国祇树给孤独园。时有摩纳名曰极慢，其所承藉，七世以来，父母真正博通多闻，既自读诵，亦教他人，其所闻者，闻则能持，四围陀典，已达其趣：娑罗干陀论，及与声论、毘伽罗论、戏笑之论、毘陀罗论，善解法句义趣，通达如是种种诸论。容貌端正，才艺过人，难可俦匹，兼生豪族，又处富贵，自恃才力，生大憍慢，于父母所不生敬顺，及和上阿阇梨、师长、亲属，斯不敬礼。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Uttama heard that the Buddha had come from Kusumapura to Śrāvastī and was staying at the Jetavana Anāthapiṇḍada-ārāma. He thought, &quot;When I go to see him, if Śramaṇa Gautama greets me, I will greet him back; if he does not greet me, I will return in silence.&quot; Having thought this, he went to see the Buddha.</p></td><td lang="lzh" class="agama-chi"><p>时极慢摩纳闻佛从俱萨罗至舍卫国祇树给孤独园，将往佛所，而作是念：「我至彼时，若沙门瞿昙接待我者，我当问讯；若不问我，当默然还。」尔时，摩纳作是念已，即诣佛所。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One was surrounded by a great assembly and was teaching the Dharma. Although Uttama went there, the Tathāgata did not pay him any attention at all. The young brahmin then thought to himself, &quot;Śramaṇa Gautama does not have me in his heart at all.&quot; He then wished to take refuge. At that time, the World-Honored One knew his thoughts and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>于时世尊大众围遶而为说法，极慢摩纳虽往于彼，如来当时聊不顾视。时彼摩纳默作是念：「沙门瞿昙都不以我而迳于怀。」寻欲归依。尔时，世尊知其心念，即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>You have come here for a purpose, but not having attained it, you wish<br/>to return. Why not make you attain it, fulfilling the purpose of your coming?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「为义来至此，　　未得便欲还，何不使获得，　　称汝所来心？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Uttama the young brahmin thought, &quot;Śramaṇa Gautama knows my thoughts.&quot; He then gave rise to faith and wished to pay homage at the Buddha&#x27;s feet. The Buddha told the young brahmin, &quot;I have accepted your mind. There is no need to pay homage. What you have done is sufficient.</p></td><td lang="lzh" class="agama-chi"><p>极慢摩纳作是思惟：「沙门瞿昙知我所念。」即生信心，欲礼佛足。佛告摩纳：「我录汝心，不必礼敬，所为已足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the great assembly, having seen this, marveled at the unprecedented event and all said, &quot;Śramaṇa Gautama has great supernatural powers. This Uttama the young brahmin, who was not respectful even towards his own parents, preceptor, and teacher, now sees Gautama and is able to humble himself, being respectful and obedient.</p></td><td lang="lzh" class="agama-chi"><p>尔时，大众覩斯事已，怪未曾有，咸作是言：「沙门瞿昙有大神足，此极慢摩纳于己父母、和上阿阇梨所，尚无恭敬，今见瞿昙能自谦下，恂恂恭顺。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Uttama the young brahmin saw that the voices of the great assembly had temporarily ceased. He sat to one side, straightened his body and mind, and spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>尔时，极慢摩纳见诸大众言音暂止，在一面坐，端身正意，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Where should one not give rise to arrogance? And where<br/>should one give rise to humility? Who can avert suffering?<br/>Who brings benefit and joy? To whom is it most<br/>excellent to make offerings, praised by the wise and intelligent?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「当于何等所，　　不应起憍慢？复更于何所，　　而当生谦让？孰能却众苦？　　何者与利乐？供养何者胜，　　为贤智所赞？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Make offerings to parents, with an empty and pure full<br/>moon, respectfully follow elder siblings, preceptors, teachers, and other venerable<br/>elders, and should not be arrogant towards them, but should<br/>be humble and respectful towards all. If one sees those<br/>who are distressed, one should remove their suffering and also<br/>give them happiness, and should make offerings to all. If<br/>one has cut off greed, anger, and also eliminated ignorance<br/>an arhat who has exhausted the taints, with right knowledge<br/>and attained liberation, towards such a superior person, remove arrogance<br/>and do not be self-important, one should go to take<br/>refuge and pay homage with palms joined.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「供养于父母，　　以空净满月，敬顺兄诸亲，　　和上阿阇梨，及余尊长等，　　于彼不应慢，宜当自谦下，　　都应悉恭敬。若见忧恼者，　　应为除诸苦，亦与其快乐，　　普皆应供养。若断贪欲瞋，　　并离愚痴者，漏尽阿罗汉，　　正智得解脱。于斯上人所，　　除慢不自高，应当向归依，　　合掌而敬礼。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke the essentials of the Dharma for Ekavīci, and so on, up to not accepting future existence. The rest is as explained in the Pāramitā-jñāna Sūtra.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊为极慢说诸法要，乃至不受后有。余如波罗蜜阇经中说。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha having spoken this, the bhikṣus, having heard the Buddha&#x27;s words, rejoiced and upheld them.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

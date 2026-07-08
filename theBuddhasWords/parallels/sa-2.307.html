@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.307 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.307</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 307</span><span class="mirror-right">（三〇七）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn2.30.html">SN 2.30</a> / <a href="../parallels/sa1308.html">SĀ 1308</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Kalandaka Bamboo Grove in Rājagṛha. At that time, there were six celestial beings who were originally followers of the six non-Buddhist teachers. Their names were: Duryodhana, Vaśavartin, Vibhūṣaṇa, Jayanta, Kāla, and Māyā. These six celestial beings all came to where the Buddha was in the night, sat to one side, and their celestial light was twice as bright as usual, illuminating the Jetavana Grove with a great radiance. At that time, Duryodhana spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林。当于尔时，有六天子，本是外道六师徒党，一名难胜，二名自在，三名显现，四名决胜，五名时起，六名轻弄。此六天子咸于其夜，来诣佛所，在一面坐。斯诸天光倍胜于常，遍照祇洹，赫然大明。尔时，难胜即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The bhikṣus who are criticized and reviled should restrain themselves in the four seasons<br/>Having seen and heard of their dwelling, this person is free from all evil.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「可讥毁比丘，　　四时自禁制，见闻其住已，　　是人离诸恶。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The celestial being Vaśavartin also spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>自在天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The ascetic who is criticized and reviled should restrain his own body. Cutting off<br/>evil speech and anger, suffering and happiness are the same as the World-Honored One<br/>In the presence of the Lord of the Dharma, do not create various evils.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「苦行可讥毁，　　捡摄于己身，断恶口忿诤，　　苦乐同世尊，于其法主所，　　不造作众恶。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The celestial being Abhibhū also spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>显现天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Cutting, injuring, sacrificing, burning in fire, etc., all have<br/>no retribution of good or evil, as taught by Kāśyapa.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「斩截及伤害，　　祠祀火烧等，皆无善恶报，　　迦叶之所说。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The celestial being Vijitāvin also spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>决胜天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Nirgrantha Jñātiputra always speaks such words: &#x27;Practicing asceticism<br/>for a long time, cutting off false speech, not<br/>far from arahantship, falling into the number of the World-Honored One.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「尼干若提子，　　常说如是言，长夜修苦行，　　断除于妄语，离罗汉不远，　　堕于世尊数。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>From now on, I will let you, whether alone or in<br/>a group, I see you all as contemptible and filthy, all<br/>the same as a corpse. How can a jackal be the<br/>same as the lion king? Your honored naked ascetics, extremely evil<br/>and fond of false speech, such non-Buddhists are far from arahantship.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「从今令汝等，　　独己若多众，我观皆鄙秽，　　悉同于死尸，云何以野干，　　同彼师子王？汝尊裸形众，　　极恶喜妄语，如斯外道等，　　彼去罗汉远。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god-son also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时有天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Those who practice austerities are deeply worthy of criticism and ridicule. Although<br/>dwelling in solitude, they only engage in toilsome activities. I wish to<br/>protect them and be their guide. They will definitely proceed to the<br/>realm of form and be born in the Brahma world with joy.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「作彼苦行者，　　深为可讥毁，虽处于闲静，　　徒为劳苦事。愿当拥护彼，　　为其作教导，必趣于色有，　　生梵世欢喜。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One again replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复以偈答：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>All forms in this world, here and<br/>elsewhere, and in the sky, with great<br/>light, all of these are caught in<br/>Māra&#x27;s snare, like a fisherman covering fish<br/>with a net.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「世界所有色，　　此处及他处，并在虚空中，　　有大光明者，如是等一切，　　悉入魔羂弶，譬如捕鱼师，　　以网掩众鱼。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>又有一天复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of existence and desire, and all the<br/>evils of delusion and illusion, completely cutting them off, praising the<br/>cutting off of the bonds of desire. One should pay homage<br/>to them, make offerings and praise them, because they are the World-Honored One.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有及欲过，　　并诸痴幻恶，一切悉断除，　　赞叹断欲结。应向彼礼拜，　　供养以称赞，所以如是者，　　彼即世尊故。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>有一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of existence and anger, and all the<br/>evils of delusion and illusion, completely cutting them off, praising the<br/>cutting off of the bonds of anger. One should pay homage<br/>to them, make offerings and praise them, because they are the World-Honored One.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有及瞋过，　　并诸痴幻恶，一切悉断除，　　赞叹断瞋结。应向彼礼拜，　　供养以赞叹，所以如是者，　　彼即世尊故。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of existence and delusion, and all the evils of<br/>delusion and illusion, completely cutting them off, praising the one who cuts off delusion.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有及痴过，　　并诸痴幻恶，一切悉断除，　　赞叹断痴者。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of pride and arrogance, and all the evils of arrogance<br/>and illusion, completely cutting them off, praising the one who cuts off pride and arrogance.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有憍慢过，　　并诸慢幻恶，一切悉断除，　　赞叹断憍慢。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of various views, and all the evils of views<br/>and illusions, completely cutting them off, praising the one who cuts off views.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有诸见过，　　并诸见幻恶，一切悉断除，　　赞叹断见者。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>时一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Speaking of the faults of attachment and love, and all the evils of<br/>love and illusions, completely cutting them off, praising the one who cuts off love.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「说有爱著过，　　并诸爱幻恶，一切悉断除，　　赞叹断爱者。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, another god also spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>有一天子复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Among the mountains of Rajagriha, Vepulla is the best; among the mountains<br/>of the great earth, the Snow Mountain King is the best. Among<br/>the worlds in the four directions, above, below, and in the four<br/>intermediate directions, among all gods and humans, the Tathāgata is the most honored.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「王舍城诸山，　　毘富罗最上，大地诸山中，　　雪山王最上。四方诸世界，　　上下及四维，一切天人中，　　如来最为尊。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the gods heard the Buddha&#x27;s teachings, each spoke a verse, and then joyfully bowed their heads and returned to their heavenly palaces.</p></td><td lang="lzh" class="agama-chi"><p>时诸天子闻佛所说，各说偈已，欢喜顶礼，还于天宫。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Indra asks about lifespan, cutting off all bonds, speaking<br/>well, the elder Shanghui asks about co-abiding, asking about<br/>the limits of speed, Bahu asks about great joy,</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>因陀罗问寿　　断于一切结说善称长者　　尸毘问共住速疾问边际　　婆睺咨大喜</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Bahu asks about great joy, Vijñā asks about holding<br/>Sudharma asks about the foremost, non-Buddhists ask about various views,</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>大喜毘忸问　　般阇罗揵持须深摩问第一　　有外道问诸见</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

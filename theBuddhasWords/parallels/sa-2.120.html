@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.120 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.120</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 120</span><span class="mirror-right">（一二〇）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn16.12.html">SN 16.12</a> / <a href="../parallels/sa905.html">SĀ 905</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Vulture Peak in Rajagriha, in the bamboo grove of Kalanda. At that time, Venerable Sariputra and Mahakasyapa were both on that mountain. Then, in that country, there were followers of the six teachers with different views who came to Venerable Sariputra, asked after his well-being, and sat to one side. They said, &quot;Does the Tathāgata, the World-Honored One, ever say that one is born here after dying there? Does he say this or not?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城耆阇崛山迦兰陀竹林。尔时，尊者舍利弗及大迦叶俱在彼山。时，彼国中有诸异见六师徒党，来诣尊者舍利弗所，问讯已讫，在一面坐，而作是言：「如来世尊颇说于我死此生彼，如是说不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sariputra replied, &quot;This kind of matter is not spoken by the Buddha.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗答言：「如斯之事，佛所不说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The six non-Buddhist teachers again said, &quot;If that is so, does he say that my body exists here or not?&quot;</p></td><td lang="lzh" class="agama-chi"><p>外道六师复作是言：「若如是者，说于我身在此间耶？更不生耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sariputra said, &quot;This kind of matter is also not spoken by the Buddha.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「如斯之事，佛亦不说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhists again said, &quot;Do I say that I am born there after dying here, or that I am not born there?&quot;</p></td><td lang="lzh" class="agama-chi"><p>外道复言：「我于此死，亦生于彼，亦不生彼，如是说耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sariputra said, &quot;The Buddha also does not speak of this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「佛亦不说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhists again said, &quot;Do I say that after my death, I am neither born nor not born?&quot;</p></td><td lang="lzh" class="agama-chi"><p>外道复言：「我死之后，非生非不生耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sariputra said, &quot;The Buddha also does not speak of this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「佛亦不说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhists again said, &quot;I asked you before about being born here after death, and so on up to neither born nor not born, but you did not answer. If you are called an elder monk, you should explain the meaning extensively and distinguish it for me. Now, seeing that you cannot answer me, you are a child, ignorant and foolish.&quot; Having said this, the non-Buddhist then rose from his seat and returned to his abode.</p></td><td lang="lzh" class="agama-chi"><p>外道复言：「我先问汝，死此生彼，乃至非生非不生，悉不见答。汝若名为宿旧出家，应广解义，为我分别。今者观汝不能答我，便是童蒙，无智愚人。」时，彼外道作是语已，即从坐起，还其所止。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Mahākāśyapa was not far from Śāriputra. After the non-Buddhists left, Śāriputra went to Mahākāśyapa and told him about the questions asked by the non-Buddhists: &quot;Why did the Tathāgata remain silent and not answer these four questions? Why did he not give a similar example to answer them? I have heard that someone once asked the Buddha, &#x27;After death here, will there be a later existence?&#x27; The Buddha remained silent and did not answer. He was also asked, &#x27;After death, will there not be a later existence?&#x27; The Buddha also did not answer. He was also asked, &#x27;After my death here, will there be a later existence, or will there not be?&#x27; The Buddha also did not answer. He was also asked, &#x27;After my death, will there be a later existence, or will there not be a later existence?&#x27; The Buddha also did not answer.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者摩诃迦叶去舍利弗不远，外道去后，舍利弗即诣于彼大迦叶所，以外道问，向迦叶说：「如来何故，如是四问，默然不答？何以故，不引相似比类而答于彼？我昔曾闻，有人问佛：『于此死已，受后有不？』佛默然不答。又问：『死后不受有耶？』佛亦不答。又问：『我此死已，亦受后有，亦不受耶？』佛亦不答。又问：『我死之后，非受于有，非不受有耶？』佛亦不答。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Kāśyapa said to Śāriputra, &quot;Can the Tathāgata say that after the cessation of form, there is birth in a later existence, up to neither birth nor non-birth? The World-Honored One is liberated by right knowledge in the place where form is exhausted, but there is no death here and birth there, no death here and non-birth there, nor both birth and non-birth there, nor neither birth nor non-birth there. Therefore, he does not answer. This meaning is very profound, vast, immeasurable, boundless, incalculable, and ultimately extinguished. Feeling, perception, up to consciousness, death here and birth there, up to neither birth nor non-birth, is also like this. This is movement, this is pride, this is negligence, this is conditioned and fabricated karma, this is the bond of craving, this craving gives rise to that craving, that craving does not arise, that craving also arises, that craving does not arise, that craving is neither born nor not born. The Tathāgata, with craving exhausted, attains good liberation. With craving exhausted, there is no birth there. With non-birth there, there is also no existence. With both birth and non-birth there, there is also no existence. With neither birth nor non-birth there, there is also no existence. This meaning is very profound, vast, boundless, incalculable, and ultimately extinguished. Venerable Śāriputra should know that for this reason, the Tathāgata does not directly answer the question of death here and birth there, death here and non-birth there, both birth and non-birth there, and neither birth nor non-birth there.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者迦叶语舍利弗言：「如来宁可说色灭已，生于后有，乃至非生非不生。世尊于彼色所尽处，正智解脱，然都无有死此生彼，死此不生彼，亦生亦不生，非生非不生，是故不答。如斯之义，甚深广大，无量无边，无有算数，乃至尽灭。受想乃至识，死此生彼，乃至非生非不生，亦复如是。此是动转，此是憍慢，此是放逸，此是有为造作之业，此是爱结，此爱生彼爱不生，彼爱亦生彼，亦不生彼爱，非生彼非不生彼，如来爱尽得善解脱，爱尽生彼，有亦无也。不生彼，有亦无也。生彼不生彼，亦无也。非不有生彼，非不无生彼，亦无也。此义甚深，广大无边，无有算数，至于尽灭。大德舍利弗当知，以是因缘故，如来于问中，而不正答，死此生彼，此死不生彼，亦生彼亦不生彼，非生非不生。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>These two great ones praised each other and returned to their respective places.</p></td><td lang="lzh" class="agama-chi"><p>此二大人互相赞美，各还所止。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.99 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.99</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 99</span><span class="mirror-right">（九九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn7.9.html">SN 7.9</a> / <a href="../parallels/sa1184.html">SĀ 1184</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was wandering in the country of Kosala on the banks of the Sundarika River. At that time, the World-Honored One had just shaved his beard and hair and spent the night on the banks of the river. In the early morning, he got up, covered his head with his robe, sat upright with his body straight, and focused his mind in front of him. At that time, on the banks of the river, there was a fire-worshipping Brahmin who, according to the fire-worshipping method, had leftover offerings to give to other Brahmins. At dawn, he took the leftover offerings and sought Brahmins to give them to. He happened to pass by the Buddha. At that time, the World-Honored One heard the sound of his footsteps, immediately uncovered his head, and coughed. When the Brahmin saw the Buddha, he said, &quot;This is not a Brahmin, but a shaven-headed monk.&quot; He was about to turn back, but then thought, &quot;Just because someone is shaven-headed does not necessarily mean they are a monk. There are also shaven-headed people among Brahmins. I should go to him and ask about his reasons and family background.&quot; The Brahmin then went to the Buddha and asked, &quot;Where were you born? What is your family name?&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛游拘萨罗孙陀利河岸。尔时，世尊新剃须发，宿彼河岸。后夜早起，以衣覆头，正身端坐，系念在前。时，彼河岸有祀火婆罗门祀火之法，余应施与诸婆罗门，于天欲晓，即持祀余，求婆罗门，欲以施之。过值于佛，尔时，世尊闻其行声，即发却覆，［口＊磬］咳出声。此婆罗门既见佛已，而作是言：「此非婆罗门，乃是剃发道人。」寻欲回还，复作是念：「夫剃发者，不必沙门，婆罗门中亦有剃发。我当至彼问其因缘，所生种姓。」时，婆罗门即至佛所，问讯言：「汝生何处？为姓何等？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>You should not ask about one&#x27;s birthplace, but rather about their<br/>practice. A small twig can produce fire, and the lowly can<br/>give rise to the wise. It can also give rise to<br/>a well-trained mount. Shame and conscience are good practices. Diligent self-discipline<br/>can cross the other shore of the Vedas. Concentration gathers the<br/>mind and fully cultivates the brahmanic way of life. In the<br/>morning, one should give the leftovers from the sacrificial offerings. If<br/>you, O Brahmin, wish to cultivate merit, you should quickly give<br/>to such a good person.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「不应问生处，　　宜问其所行，微木能生火，　　卑贱生贤达。亦生善调乘，　　惭愧为善行，精勤自调顺，　　度韦陀彼岸。定意收其心，　　具足修梵行，晨朝应施与，　　祠祀之遗余。汝今婆罗门，　　若欲修福者，宜当速施与，　　如是善丈夫。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brahmin replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门说偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have now encountered a good sacrifice. This is truly a place to sacrifice<br/>to the fire. I now observe you. You have truly crossed the other shore<br/>of the Vedas. The leftovers from sacrifices in the past were always given to<br/>others. I have never before encountered a superior and wonderful place to give to you.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我今遇善祀，　　此处真祀火，我今观察汝，　　实度韦陀岸。昔来祠祀残，　　每施与余人，未曾得如汝，　　胜妙可施处。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Brahmin then offered this food to the World-Honored One, but the Buddha did not accept it. He then spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>婆罗门即以此食奉上世尊，佛不为受，即说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>If one has no intention of giving first, one should give<br/>after speaking the Dharma. Such food and drink should not be<br/>accepted. The constant Dharma is sealed like this, so I should<br/>not eat it; The reason I do not accept it is<br/>for the sake of speaking the Dharma verses. The great beings<br/>all extinguish afflictions, and should be offered various foods and drinks<br/>Those who seek a field of merit should also give here<br/>If one wishes to create merit, I am the field of merit.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「先无惠施情，　　说法而后与，如斯之饮食，　　不应为受取。常法封如是，　　故我不应食；所以不受者，　　为说法偈故。现诸大人等，　　尽灭于烦恼，应以众饮食，　　种种供养之。欲求福田者，　　斯处亦应施，若欲为福者，　　我即是福田。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brahmin again said to the Buddha, &quot;Now, to whom should I give this food?&quot; The Buddha said, &quot;I do not see any Shakyamuni, Brahmin, gods, demons, or Brahmas in the world who can accept this food, digest it properly, and have no problem.&quot; The Buddha said, &quot;Put it in that insect-free water.&quot; At that time, the Brahmin accepted the Buddha&#x27;s instruction and put it in that insect-free water. Smoke and flames arose together, making a sizzling sound. At that time, the Brahmin, seeing this, was greatly startled and his body hair stood on end. Out of fear, he gathered more firewood to offer to the fire.</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门重白佛言：「今我此食当施与谁？」佛言：「我不见世间沙门、婆罗门、若天、若魔、若梵能受是食，正理消化，无有是处。」佛言：「宜置于彼无虫水中。」时，婆罗门受佛教已，即持置彼无虫水中，烟炎俱起，［淴－勿＋（句－口＋夕）］［淴－勿＋（句－口＋夕）］作声。时，婆罗门见是事已，生大惊怖，身毛为竖。以惊惧故，更采取薪，以用祀火。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One went to his place and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊即到其所，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>You arrange the firewood and burn it, considering it to be<br/>pure. The person of little merit and wisdom burns the external<br/>fire. The Brahmin should abandon the fire you burn. You should<br/>cultivate the internal fire, burning it continuously and uninterruptedly. Increasing and<br/>expanding this fire is called true sacrifice; making offerings again and<br/>again is how you should sacrifice. Your arrogance is heavy now<br/>not something a cart can carry. Your anger and poison are<br/>like smoke, like oil poured on fire. The tongue can burn<br/>evil words, and the mind is the hidden storehouse of fire<br/>Unable to tame oneself, how can one be called a man?<br/>If faith is the river, precepts are the ferry to cross<br/>over. Such pure water is praised by the good. If one<br/>enters the washing of faith and precepts, it is your Veda<br/>mantra. It can extinguish all evil appearances and attain liberation to<br/>the other shore. Using the Dharma as a pond, the Gautama<br/>is the true ferry. The clean and pure water is valued<br/>by the good man. Those who can bathe in it are<br/>the virtuous ones with the merit of the Veda. The body<br/>is not stained or wet, attaining liberation to the other shore<br/>Speaking the truth, taming the faculties, concealing the three karmas, fully<br/>cultivating the Brahma practices, patience and shame are supreme. Believing in<br/>and facing the honest person is the bathing of the Dharma<br/>Therefore, you should know this now.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「汝齐整薪燃，　　谓为得清净，薄福无智人，　　乃然于外火。婆罗门应当，　　弃汝所燃火，宜修内心火，　　炽然不断绝。增广如是火，　　斯名为真祀；数数生信施，　　汝应如是祀。汝今憍慢重，　　非车所能载，瞋毒犹如烟，　　亦如油投火，舌能炽恶言，　　心为火伏藏，不能自调顺，　　云何名丈夫？若以信为河，　　戒为津济渡，如是清净水，　　善人之所赞。若入信戒洗，　　即汝毘陀呪，能灭众恶相，　　得度于彼岸。以法用为池，　　瞿昙真济渡，清洁之净水，　　善丈夫所贵。诸能洗浴者，　　毘陀功德人，身体不污湿，　　得度于彼岸。实语调诸根，　　隐藏于三业，具修于梵行，　　忍惭愧最上。信向质直人，　　斯是法洗浴，是故汝今者，　　应当如是知。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brahmin heard the Buddha&#x27;s words, abandoned the fire-related implements, immediately rose, paid homage to the Buddha, joined his palms, and said, &quot;I only wish to be allowed to leave home and receive the full precepts in the Buddha&#x27;s Dharma, to become a bhiksu, enter the Buddha&#x27;s Dharma, and cultivate the Brahma practices.&quot; The Buddha immediately allowed him to leave home and receive the full precepts. At that time, the Venerable One diligently practiced self-restraint, concentrated and was alone, enjoying solitude and seclusion, free from carelessness, and did not enjoy being close to those who had left home or were householders. Why was this? This noble son shaved his beard and hair, put on the Dharma robes, left home with right faith, to cultivate the unsurpassed Brahma practices, to know and see for himself in the present, and to realize it for himself. At that time, this bhiksu cultivated concentration and wisdom, attained arahantship, exhausted all afflictions, established the Brahma practices, accomplished what was to be done, and would not be reborn again.</p></td><td lang="lzh" class="agama-chi"><p>时，婆罗门闻佛所说，弃事火具，即起礼佛，合掌白言：「唯愿听我于佛法中出家受具，得为比丘，入于佛法，修于梵行。」佛即听许，令得出家受具足戒。时，彼尊者勤修克己，专精独一，乐于闲静，离于放逸，不乐亲近出家在家。所以者何？此族姓子剃除须发，服于法衣，正信出家，为修无上梵行，现在知见，自身证故。时此比丘修集定慧，得罗汉果，尽诸有漏，梵行已立，所作已办，不受后有。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 35 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 35: Cūḷasaccaka-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn34comp.html#content"></a><a id="next-sutta" href="./mn36comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn35.html">MN 35</a> / <a href="../../parallels/sa9.html">SĀ 9 (~)</a> / <a href="../../parallels/sa10.html">SĀ 10 (~)</a> / <a href="../../parallels/sa110.html">SĀ 110</a> / <a href="../../parallels/ea37.10.html">EĀ 37.10</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷasaccaka-sutta, the “lesser discourse to Saccaka”, reports how the Buddha expounded the absence of a self in reply to a challenge by the debater Saccaka. This discourse has two Chinese parallels, found in the Saṃyukta-āgama and in the Ekottarika-āgama.<span class="note" id="mn35n95"><span class="details"><span class="p">[n.95] The parallels are <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35a-37b and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715a-717b. <a href="../../parallels/sa110.html">SĀ 110</a> has the title “Saccaka”, 薩遮, a title found in the uddāna at T II 37b27. <a href="../../mn/mn35.html">MN 35</a>, <a href="../../parallels/sa110.html">SĀ 110</a>, and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> agree on locating the discourse at Vesālī. <a href="../../parallels/sa110.html">SĀ 110</a> has been translated in Anālayo 2010k, excerpts from <a href="../../parallels/sa110.html">SĀ 110</a> and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> have been translated in Kuan 2009: 157-161. While <a href="../../mn/mn35.html">MN 35</a> further specifies that the Buddha was in the Kūṭāgārasālā in the Great Wood (mahāvana), <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35a17 reports that he was on the bank of the Monkey Pond, 獼猴池側. A Monkey Pond occurs also in a Sanskrit fragment parallel to <a href="../../mn/mn12.html">MN 12</a> and in Sanskrit fragments of the Mahāparinirvāṇa-sūtra, according to which the Kūṭāgāraśālā was situated on the bank of this pond, cf. SHT IV 32 folio 41R5 (p. 137): (ma)r[ka]ṭahradatīre kūṭā-[g](āraśālā)[y] (ā)ṃ and S 360 folio 173V5-6 in Waldschmidt 1950: 19: markkaṭa[hrad](atīre kū)ṭagāraśālāyām. <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715a28 speaks of the Buddha’s location simply as a wood outside of Vesālī. References to the Monkey Pond recur frequently in the Dīrgha-āgama, in the Saṃyukta-āgama and in the Ekottarikaāgama. <a href="../../parallels/da15.html">DĀ 15</a> at T I 66a23 and <a href="../../parallels/ea40.5.html">EĀ 40.5</a> at T II 739b10 similarly locate this pond near Vesālī, to which <a href="../../parallels/da15.html">DĀ 15</a> adds that this pond had a Dharma hall, 法堂, at its side. Numerous occurrences in the Saṃyuktaāgama identify this hall on the bank of the Monkey Pond as the Kūṭāgārasālā, 重閣講堂, cf. <a href="../../parallels/sa81.html">SĀ 81</a> at T II 20b28, <a href="../../parallels/sa83.html">SĀ 83</a> at T II 21b14, <a href="../../parallels/sa237.html">SĀ 237</a> at T II 57b28, <a href="../../parallels/sa238.html">SĀ 238</a> at T II 57c14, <a href="../../parallels/sa239.html">SĀ 239</a> at T II 57c24, <a href="../../parallels/sa240.html">SĀ 240</a> at T II 58a1, <a href="../../parallels/sa241.html">SĀ 241</a> at T II 58a7, <a href="../../parallels/sa242.html">SĀ 242</a> at T II 58b21, <a href="../../parallels/sa243.html">SĀ 243</a> at T II 58b27, <a href="../../parallels/sa244.html">SĀ 244</a> at T II 58c9, <a href="../../parallels/sa405.html">SĀ 405</a> at T II 108b13, <a href="../../parallels/sa406.html">SĀ 406</a> at T II 108c6, <a href="../../parallels/sa563.html">SĀ 563</a> at T II 147c2, <a href="../../parallels/sa833.html">SĀ 833</a> at T II 213c24, <a href="../../parallels/sa834.html">SĀ 834</a> at T II 214a14, <a href="../../parallels/sa937.html">SĀ 937</a> at T II 240b12, <a href="../../parallels/sa980.html">SĀ 980</a> at T II 254c3, <a href="../../parallels/sa1083.html">SĀ 1083</a> at T II 284a5, <a href="../../parallels/sa1105.html">SĀ 1105</a> at T II 290c4, <a href="../../parallels/sa1106.html">SĀ 1106</a> at T II 290c20, <a href="../../parallels/sa1107.html">SĀ 1107</a> at T II 291a27, <a href="../../parallels/sa1252.html">SĀ 1252</a> at T II 344b6, <a href="../../parallels/sa1257.html">SĀ 1257</a> at T II 345a12, and <a href="../../parallels/sa1274.html">SĀ 1274</a> at T II 350a26. The same Monkey Pond recurs also in the Avadānaśataka, Speyer 1906/1970: 8,5 or Vaidya 1958a: 4,19, in the Bhaiṣajyavastu of the (Mūla-)Sarvāstivāda Vinaya, Dutt 1984a: 224,14, in the Divyāvadāna, Cowell 1886: 136,7 and 200,21 or Vaidya 1999: 85,6 and 125,2, and in the Mahāvastu, Basak 1963a: 384,9 or Senart 1882a: 300,11. Xuánzàng’s (玄奘) travel records also mention the location, cf. T 2087 at T LI 908b17, translated in Beal 1884/2001b: 68. Skilling 1997a: 295 remarks that “the Markaṭahrada is well known in (Mūla)Sarvāstivādin texts, but unknown in Pāli”, cf. also ibid. pp. 406-407, Bingenheimer 2008: 159 note 31, and Lamotte 1958/1988: 155; on the kūṭāgāra cf. also Bollée 1986.</span></span></span> In addition to these two parallels, a few words of the present discourse have been preserved in Sanskrit fragments.<span class="note" id="mn35n96"><span class="details"><span class="p">[n.96] SHT III 997A (p. 258), fragment IA in Bongard-Levin 1989: 509, and the so far unpublished fragment no. 2372/1/1 of the Schøyen collection, identified by Siglinde Dietz (I am indebted to Jens-Uwe Hartmann for kindly providing me with a preliminary draft transliteration of this fragment).</span></span></span></p>
+<p>The Cūḷasaccaka-sutta and its parallel in the Saṃyukta-āgama begin by narrating that Saccaka, who was known as a skilled debater, thought that nobody could engage him in debate without trembling and sweating.<span class="note" id="mn35n97"><span class="details"><span class="p">[n.97] While according to <a href="../../mn/mn35.html">MN 35</a> at MN I 227,19 Saccaka made this claim publicly, <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35a20 records the same claim as a mental presumption held by him.</span></span></span> Such an indication is not made in the Ekottarika-āgama discourse. The three versions agree that Saccaka met the monk Assaji and inquired how the Buddha instructed his disciples.</p>
+<p>According to all versions, the answer given by Assaji did not please Saccaka. The parallel versions differ, however, on the content of the answer given by Assaji:</p>
+<ul>
+<li>In the Majjhima-nikāya version, Assaji’s answer is that the Buddha instructed his disciples to contemplate the five aggregates as impermanent and not-self.<span class="note" id="mn35n98"><span class="details"><span class="p">[n.98] <a href="../../mn/mn35.html">MN 35</a> at MN I 228,10: rūpaṃ ... viññāṇaṃ aniccaṃ, rūpaṃ ... viññāṇaṃ anattā; sabbe saṅkhārā aniccā, sabbe dhammā anattā (Se-MN I 423,5 reads sabbe saṅkhārā anattā, sabbe dhammā anattā).</span></span></span></li>
+<li>In the Saṃyukta-āgama version, he answers that the Buddha taught his disciples that the five aggregates are devoid of self and should be contemplated as a disease, a boil, a thorn, murderous, impermanent, dukkha, empty, and not-self.<span class="note" id="mn35n99"><span class="details"><span class="p">[n.99] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35b4: 方便觀, 如病, 如癰, 如刺, 如殺, 無常, 苦, 空, 非我.</span></span></span></li>
+<li>In the Ekottarika-āgama version, Assaji replies that the Buddha taught that the five aggregates are impermanent, what is impermanent is dukkha, what is dukkha is not-self, what is not-self is empty and thus is neither mine nor ‘I’.<span class="note" id="mn35n100"><span class="details"><span class="p">[n.100] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715b4: 無常, 無常者即是苦, 苦者即是無我, 無我者即是空也, 空者彼不我有, 我非 彼有.</span></span></span></li>
+</ul>
+<p>When evaluating these different presentations, it is conspicuous that, unlike the two Chinese versions, the Pāli version lacks the characteristic of dukkha. This is unusual, since the early discourses found in the Nikāyas and Āgamas regularly include dukkha in such contexts. The commentary to the Cūḷasaccaka-sutta explains that Assaji did not mention the characteristic of dukkha in order to avoid being contradicted by Saccaka, since Saccaka might have assumed this to imply that path and fruit are also dukkha and therefore be led to despise the Buddha’s teaching.<span class="note" id="mn35n101"><span class="details"><span class="p">[n.101] Ps II 271,7.</span></span></span></p>
+<p>An instance where the characteristic of dukkha is likewise absent occurs in a discourse in the Saṃyutta-nikāya and in its parallel in the Saṃyukta-āgama. The two versions agree in presenting a contemplation of the five aggregates only in terms of impermanence and not-self.<span class="note" id="mn35n102"><span class="details"><span class="p">[n.102] <a href="../../sn/sn22.90.html">SN 22:90</a> at SN III 132,23 and its parallel <a href="../../parallels/sa262.html">SĀ 262</a> at T II 66b14. Another such instance can be found in <a href="../../parallels/ea24.4.html">EĀ 24.4</a> at T II 618a3.</span></span></span> The Pāli commentary to this Saṃyutta-nikāya discourse gives an explanation similar to the one offered in the commentary to the Cūḷasaccaka-sutta.<span class="note" id="mn35n103"><span class="details"><span class="p">[n.103] Spk II 318,12.</span></span></span> The decisive difference in this instance, however, is that this instruction was given to the monk Channa, who had difficulties finding inspiration in the goal of Nirvāṇa. Thus in this case the commentarial explanation makes sense, since Channa’s lack of inspiration would indeed have been aggravated if he had come to consider path and fruit in a negative light.</p>
+<p>In relation to Saccaka, however, the commentarial explanation seems less convincing, since one would not expect Assaji to be worried about the possibility that Saccaka might consider path and fruit in a negative light. In fact, the reply given by Assaji does not seem to be formulated in such a way as to avoid contradiction, as all versions report that Saccaka expressed his displeasure and disagreement immediately. According to the Ekottarika-āgama account, Saccaka even went so far as to cover his ears and tell Assaji to stop speaking.<span class="note" id="mn35n104"><span class="details"><span class="p">[n.104] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715b11.</span></span></span> Thus the commentarial explanation could be just a mechanical repetition of the commentarial gloss given in regard to the Saṃyutta-nikāya discourse.</p>
+<p>If Assaji had wanted to avoid contradiction, one would also expect him to omit rather the characteristic of not-self, since a teaching on the absence of a self would have been a more provocative proposition. In contrast, a teaching on dukkha would be a less extraordinary proposal, as other contemporary recluses were also delivering teachings on how to make an end of dukkha.<span class="note" id="mn35n105"><span class="details"><span class="p">[n.105] Cf. above p. 107 note 47.</span></span></span> Thus, if Assaji had indeed wanted to avoid contradiction, it would have been more sensible for him to avoid referring to not-self instead of omitting dukkha. According to the ensuing discussion between Saccaka and the Buddha, the characteristic of not-self was in fact what really provoked Saccaka, while the other two characteristics appear to play only a subsidiary role in their discussion.</p>
+<p>Another point that does not fit too well with the commentarial explanation is that Assaji explicitly presents his succinct statement as the way the Buddha usually instructs his disciples.<span class="note" id="mn35n106"><span class="details"><span class="p">[n.106] <a href="../../mn/mn35.html">MN 35</a> at MN I 228,15: evaṃbhāgā ca pana bhagavato sāvakesu anusāsanī bahulā pavattatī ti (Ce-MN I 542,14: evambhāgā).</span></span></span> It would to some extent become a case of attributing conscious misrepresentation to Assaji, if he were to be shown as giving only a partial account of the Buddha’s instruction and then pretend this to correspond to the way the Buddha usually instructs his disciples.</p>
+<p>Moreover, in the Cūḷasaccaka-sutta the Buddha repeats the statement made by Assaji, so that in the Pāli account the Buddha himself explicitly endorses that his standard teaching is concerned only with impermanence and not-self, not with dukkha.<span class="note" id="mn35n107"><span class="details"><span class="p">[n.107] <a href="../../mn/mn35.html">MN 35</a> at MN I 230,4+10: evaṃbhāgā ca pana me <i>...</i> anusāsanī bahulā pavattati (Ce-MN I 546,3: evamº).</span></span></span></p>
+<p>In sum, it seems as if the omission of the dukkha characteristic in the Pāli version of Assaji’s statement, although certainly constituting the more unusual reading, does not fit the context too well. The absence of dukkha in the present passage is all the more remarkable as the Pāli discourses generally place a consistent emphasis on this characteristic, whereas the same does not appear to be always the case for works that belong to the (Mūla-)Sarvāstivāda tradition. The (Mūla-)Sarvāstivāda Vinaya, for example, speaks repeatedly of three Dharma ‘seals’, which are: “all formations are impermanent, all dharmas are not-self, Nirvāṇa is quiescence”, thereby not mentioning the characteristic of dukkha.<span class="note" id="mn35n108"><span class="details"><span class="p">[n.108] The 三法印 are 一切行無常, 一切法無我, and 涅槃寂滅, references to which, in varying formulations, can be found in the (Mūla-)Sarvāstivāda Vinaya in T 1442 at T XXIII 670c1, T 1442 at T XXIII 836b12, T 1442 at T XXIII 863c29, T 1448 at T XXIV 50b18, and T 1450 at T XXIV 198a24. Another instance can be found in the Saṅghabhedavastu in Gnoli 1978a: 254,24, which reports that the nun Utpalavarṇā, after she had been hit by Devadatta (cf. also below p. 286 note 112) and was about to pass away, reflected: sarvasaṃskārā anityāḥ, sarvadharmā anātmānaḥ, śāntaṃ nirvāṇam; cf. also the survey in Lamotte 1970a: 1369.</span></span></span> The absence of dukkha in a similar context recurs also in another discourse in the Saṃyukta-āgama.<span class="note" id="mn35n109"><span class="details"><span class="p">[n.109] <a href="../../parallels/sa262.html">SĀ 262</a> at T II 66b14+16 and T II 66c7+9+22. Other discourses in the Saṃyukta-āgama, however, do include dukkha in such contexts. The same holds true for Ekottarika-āgama discourses, which regularly speak of four Dharma seals, thereby including dukkha in their presentations, cf., e.g., <a href="../../parallels/ea26.8.html">EĀ 26.8</a> at T II 639a5, <a href="../../parallels/ea31.4.html">EĀ 31.4</a> at T II 668c3, and <a href="../../parallels/ea42.3.html">EĀ 42.3</a> at T II 749a9; a presentation that recurs also in the Dharmaguptaka Vinaya, T 1428 at T XXII 949b8.</span></span></span> Hence it would have been less surprising if the Cūḷasaccaka-sutta had included dukkha in its presentation and the Saṃyukta-āgama had not mentioned it.</p>
+<p>Thus, even though it seems improbable that a reference to dukkha could have been lost during the transmission of the Pāli version, it seems also improbable that a reference to dukkha was added in the Saṃyukta-āgama version, as within the (Mūla-)Sarvāstivāda tradition in general a tendency to omit dukkha can be discerned.</p>
+<p>Whatever may be the final word on this particular passage, the Cūḷasaccaka-sutta and its parallels continue with Saccaka publicly boasting how he was going to defeat the Buddha in debate. The three versions differ in regard to the similes used by Saccaka to illustrate his impending victory (see table 4.7).</p>
+<p>Out of a set of four similes found in the Majjhima-nikāya version,<span class="note" id="mn35n110"><span class="details"><span class="p">[n.110] <a href="../../mn/mn35.html">MN 35</a> at MN I 228,29. This set of images recurs in a similar context in <a href="../../mn/mn56.html">MN 56</a> at MN I 374,26, where a lay follower of the Jains uses them to describe how he is going to defeat the Buddha.</span></span></span> a simile that describes catching a long haired sheep recurs in the Ekottarika-āgama version,<span class="note" id="mn35n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715b21. At this point, according to <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715b29 Saccaka also claimed to be able to make even an insentient post shake, similar to the claim he made in the introductory narration of the Pāli version, <a href="../../mn/mn35.html">MN 35</a> at MN I 227,24, an introductory account otherwise not found in <a href="../../parallels/ea37.10.html">EĀ 37.10</a>.</span></span></span> while a simile of a brewer who holds a sieve can be found in the Saṃyukta-āgama version (although in its presentation the point made with this simile is to use it to press wine, not to drag it here and there).<span class="note" id="mn35n112"><span class="details"><span class="p">[n.112] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35b16.</span></span></span></p>
+<p>The Pāli version’s imagery of an elephant that plunges into deep water recurs in both Chinese versions.<span class="note" id="mn35n113"><span class="details"><span class="p">[n.113] <a href="../../mn/mn35.html">MN 35</a> at MN I 229,3, <a href="../../parallels/sa110.html">SĀ 110</a> at T II 35b22, and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715b23.</span></span></span> While in the Majjhima-nikāya version this elephant plays a game of hemp washing, the Saṃyukta-āgama version describes how the elephant trainer washes this elephant. After delivering these similes, Saccaka went to the presence of the Buddha, followed by a group of householders wondering who of the two will refute the other.</p>
+<table class="comparative-table">
+<caption>Table 4.7: Similes Illustrating Saccaka’s Victory in <a href="../../mn/mn35.html">MN 35</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn35.html">MN 35</a></th><th><a href="../../parallels/sa110.html">SĀ 110</a></th></tr>
+<tr><td>drag sheep by its hair (1)</td><td>shake grass in air to remove dirt</td></tr>
+<tr><td>drag brewer’s sieve around (2)</td><td>use sieve to press out wine (→ 2)</td></tr>
+<tr><td>shake brewer’s strainer (3)</td><td>wash a dirty mat</td></tr>
+<tr><td>elephant plays in water (4)</td><td>wash elephant in water (→ 4?)</td></tr>
+<tr><td></td><td>(≠ 1, 3)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea37.10.html">EĀ 37.10</a></td></tr>
+<tr><td>drag sheep by its hair (→ 1)</td></tr>
+<tr><td>elephant plays in water (→ 4)</td></tr>
+<tr><td>two men roast a man on a fire</td></tr>
+<tr><td>(≠ 2, 3)</td></tr>
+</table>
+<p>The Majjhima-nikāya and the Saṃyukta-āgama versions report in similar ways that Saccaka proclaimed the five aggregates to be a person’s self, comparing this selfhood to the way the earth supports the growth of plants. In the Ekottarika-āgama presentation, however, the point at stake was rather impermanence, since here Saccaka proposed that form is permanent.<span class="note" id="mn35n114"><span class="details"><span class="p">[n.114] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 715c18: 色者是常.</span></span></span></p>
+<p>According to all versions, in reply the Buddha brought up the example of a king who exercises power in his domain. The Majjhima-nikāya and the Saṃyukta-āgama versions use this example to explain that, whereas such a king can exercise power in his domain, human beings cannot exercise such power over the five aggregates, ordering them to be according to their likes and wishes.<span class="note" id="mn35n115"><span class="details"><span class="p">[n.115] <a href="../../mn/mn35.html">MN 35</a> at MN I 231,17 and <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36a11. Wynne 2009: 106 comments that the “example of a king’s ability to exert control in his own kingdom ... no doubt ... was designed to appeal to the Licchavis witnessing the debate”.</span></span></span> The Ekottarika-āgama version instead points out that even though a king is able to exercise power in his domain, he will eventually become old, with white hair and a wrinkled face.<span class="note" id="mn35n116"><span class="details"><span class="p">[n.116] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 716a4 also differs from the other versions by presenting this king as a wheel-turning king, 轉輪聖王. After the intervention of a thunderbolt-wielding yakkha (mentioned in all versions), <a href="../../parallels/ea37.10.html">EĀ 37.10</a> continues by reporting that Saccaka again affirmed the body to be permanent, in spite of the Buddha’s example of how even a wheel-turning king grows old. The Buddha then questioned Saccaka why the wheel-turning king could not order old age, disease, and death to disappear, whereon Saccaka was unable to reply. This whole presentation does not seem to fit the context particularly well, since one would not expect a clever debater like Saccaka to be so easily refuted by a simple illustration of impermanence.</span></span></span></p>
+<p>The three versions record that when Saccaka remained silent instead of replying to the question posed by the Buddha, a thunderbolt wielding yakkha intervened, threatening to split Saccaka’s head into seven pieces should he not reply.<span class="note" id="mn35n117"><span class="details"><span class="p">[n.117] While in <a href="../../mn/mn35.html">MN 35</a> at MN I 231,30 the yakkha Vajirapāṇi appears before a third repetition of the question, in <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36a15 and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 716a7 he appears only once the third repetition of the question meets with no reply. The same Vajirapāṇi intervenes in a similar situation in <a href="../../dn/dn3.html">DN 3</a> at DN I 95,8. The commentaries to <a href="../../dn/dn3.html">DN 3</a> and <a href="../../mn/mn35.html">MN 35</a>, Sv I 264,13 and Ps II 277,35, identify him with Sakka; cf. also Godage 1945: 51-52. In Gandhāran art, however, Vajirapāṇi and Indra are distinct from each other, cf. Coomaraswamy 1971: 31, Foucher 1905: 564, Konow 1930: 317, Santoro 1979: 301, id. 1991: 295, Senart 1906: 122, and Vogel 1909: 525, as is the case for Amarāvatī iconography, cf. Sivaramamurti 1942/1956: 89 (on the significance of the vajra in relation to Indra in general cf., e.g., Chakravarti 1997/ 2006: 96-99). As noted by Lamotte 1966: 115, cf. also Flood 1989: 23, a characteristic feature of such interventions by Vajirapāṇi is that he will only be visible to the Buddha and his adversaries, but not to other spectators witnessing the scene. On the threat that an opponent’s head will split to pieces in ancient Indian literature cf., e.g., de La Vallée Poussin 1932, Hopkins 1932: 316, Insler 1989/1990, and Witzel 1987; on debating practices in the Pāli discourses cf. also Manné 1992; on ancient Indian debate cf., e.g., Matilal 1987 and Solomon 1978: 833-875.</span></span></span> The Majjhima-nikāya and the Saṃyukta-āgama versions report in similar terms that, once Saccaka finally replied, the Buddha engaged him in a question and answer catechism on the impermanent, unsatisfactory, and not-self nature of the five aggregates. The Majjhima-nikāya version concludes this catechism by pointing out that someone, who regards as self what in reality is dukkha, will not be able to transcend dukkha.<span class="note" id="mn35n118"><span class="details"><span class="p">[n.118] <a href="../../mn/mn35.html">MN 35</a> at MN I 233,9.</span></span></span> The Saṃyuktaāgama version explains that attachment to the five aggregates will cause dejection and sorrow when these aggregates undergo change, whereas through detachment from the five aggregates one will be unaffected by their change.<span class="note" id="mn35n119"><span class="details"><span class="p">[n.119] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36b1.</span></span></span></p>
+<p>The Majjhima-nikāya and Saṃyukta-āgama versions employ the simile of a man in search of heartwood, who cuts down a large plantain tree and discovers no essence in it, to illustrate the vanity of Saccaka’s earlier claim that nobody could engage him in debate without trembling and sweating. Both versions report that the Buddha uncovered his body to show that he had remained unaffected by their discussion.<span class="note" id="mn35n120"><span class="details"><span class="p">[n.120] This episode is also recorded in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 251c10, translated in Lamotte 1970a: 1666.</span></span></span></p>
+<p>Although the Ekottarika-āgama does not have the simile of a man in search of heartwood, it does, however, report that the Buddha uncovered his body, reminding Saccaka of his earlier boast.</p>
+<p>A difference between the three versions is that according to the Majjhima-nikāya and Ekottarika-āgama account, the Buddha uncovered his body in order to demonstrate that he was not sweating,<span class="note" id="mn35n121"><span class="details"><span class="p">[n.121] <a href="../../mn/mn35.html">MN 35</a> at MN I 233,35 and <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 716b5.</span></span></span> while according to the Saṃyukta-āgama version he uncovered his body in order to demonstrate that not even a single hair on his body had been stirred.<span class="note" id="mn35n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36b23.</span></span></span> The Pāli version’s description of this act by the Buddha speaks of him uncovering his “golden coloured” body, a qualification not used in the two Chinese versions.<span class="note" id="mn35n123"><span class="details"><span class="p">[n.123] <a href="../../mn/mn35.html">MN 35</a> at MN I 233,36: suvaṇṇavaṇṇaṃ kāyaṃ. Ps II 280,5 takes this qualification in a literal sense and describes how on opening his robes for just four fingers’ width, rays of golden light emanated from the Buddha’s body. The golden hue of the Buddha’s skin constitutes one of the thirty-two marks of a superior being, cf. also <a href="../../dn/dn14.html">DN 14</a> at DN II 17,30, <a href="../../dn/dn30.html">DN 30</a> at DN III 143,24, <a href="../../mn/mn91.html">MN 91</a> at MN II 136,18, and below p. 532.</span></span></span></p>
+<p>The three versions agree that a spectator intervened at this point and compared Saccaka to a crab with all its legs cut off, unable to return to its pond.<span class="note" id="mn35n124"><span class="details"><span class="p">[n.124] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36c1 reports that this spectator came out with additional similes to illustrate Saccaka’s utter defeat. <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 716b10 has only the simile of the crab found in <a href="../../mn/mn35.html">MN 35</a> at MN I 234,7, after which <a href="../../parallels/ea37.10.html">EĀ 37.10</a> continues with the question and answer catechism on the impermanent and notself nature of the five aggregates found already at an earlier point in the other two versions. The simile of the crab recurs in <a href="../../sn/sn4.24.html">SN 4:24</a> at SN I 123,19 (or SN2 160 at SN2 I 271,8) to illustrate Māra’s defeat.</span></span></span> The Majjhima-nikāya and the Saṃyukta-āgama versions continue by reporting that Saccaka questioned the Buddha how a disciple progresses beyond doubt,<span class="note" id="mn35n125"><span class="details"><span class="p">[n.125] <a href="../../mn/mn35.html">MN 35</a> at MN I 234,31: tiṇṇavicikiccho vigatakathaṃkatho vesārajjappatto aparappaccayo satthusāsane, a standard reference to stream-entry in the discourses. It is noteworthy that <a href="../../mn/mn35.html">MN 35</a> depicts Saccaka using such typically Buddhist expressions even though he is supposedly an outsider unfamiliar with the Buddhist teachings and according to <a href="../../mn/mn35.html">MN 35</a> at MN I 228,6 does not even know that the Buddha taught impermanence and not-self. In <a href="../../mn/mn35.html">MN 35</a> at MN I 235,10 Saccaka then again uses such standard phrases when he describes an arahant to be khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṃyojano sammadaññā vimutto (Ce-MN I 556,14 and Se-MN I 434,7: parikkhīṇabhavasaññojano), in which case <a href="../../parallels/sa110.html">SĀ 110</a> at T II 36c23 reports a similarly detailed inquiry, reading: 得盡諸漏, 無漏, 心解脫, 慧解脫, 現法自知作證, 我生已盡, 梵行已立, 所作已作, 自知不受後有. Evidently standard pericopes were applied to the present discourse in the course of oral tradition, even though these would not fit a speaker like Saccaka.</span></span></span> an inquiry not found in the Ekottarika-āgama discourse. In reply, the Buddha described how to contemplate the five aggregates as devoid of a self.</p>
+<p>When Saccaka asked what makes a disciple an arahant, the Buddha replied that an arahant has reached unsurpassable liberation and knows the five aggregates to be devoid of a self. Such a monk is endowed with unsurpassable vision (or unsurpassable knowledge according to the Saṃyukta-āgama version), unsurpassable path and unsurpassable deliverance.<span class="note" id="mn35n126"><span class="details"><span class="p">[n.126] <a href="../../mn/mn35.html">MN 35</a> at MN I 235,28 lists dassanānuttariya, paṭipadānuttariya, vimuttānuttariya. <a href="../../parallels/sa110.html">SĀ 110</a> at T II 37a1 actually reads “unsurpassable knowledge, unsurpassable liberation, and unsurpassable knowledge and vision of liberation”, 智無上, 解脫無上, 解脫知見無上, but has “unsurpassable path”, 道無上, as a 宋, 元, and 明 variant reading for the second quality, and “unsurpassable liberation” (i.e. without “knowledge and vision”) as a 宋, 元, and 明 variant reading for the third quality, so that on adopting the variant readings the two versions would be fairly close to each other in regard to the second and third qualities. The three unsurpassable qualities found in <a href="../../mn/mn35.html">MN 35</a> recur in the Saṅgīti-sutta in <a href="../../dn/dn33.html">DN 33</a> at DN III 219,16, where a Sanskrit fragment parallel from the Saṅgīti-sūtra has preserved (jñānā)[nutta]ryaṃ prati(padānuttaryaṃ), cf. K 484 (37)V8 in Stache-Rosen 1968: 23. The Saṅgītiparyāya reads “unsurpassable practice, unsurpassable knowledge, and unsurpassable liberation”, T 1536 at T XXVI 390c29: 行無上, 智無上, 解脫無上, thereby being similar to the presentation in <a href="../../parallels/sa110.html">SĀ 110</a> (if the variant readings are adopted).</span></span></span> Having reched the final goal, such a monk is one who respects and venerates the Buddha as one who has reached awakening and who teaches it to others.<span class="note" id="mn35n127"><span class="details"><span class="p">[n.127] On the significance of this passage in relation to the development of the bodhisattva ideal cf. Nattier 2003a: 147-151.</span></span></span></p>
+<p>All versions report that Saccaka admitted his foolishness in attempting to challenge the Buddha. According to the Majjhima-nikāya version, he illustrated the futility of his attempt by proclaiming that it would be easier to get away with attacking a mad elephant, a fire, or a poisonous snake than getting away with challenging the Buddha (see table 4.8).<span class="note" id="mn35n128"><span class="details"><span class="p">[n.128] <a href="../../mn/mn35.html">MN 35</a> at MN II 236,3 and <a href="../../parallels/sa110.html">SĀ 110</a> at T II 37a9.</span></span></span></p>
+<p>In addition to these three similes, the Saṃyukta-āgama discourse employs the images of safely getting away from the edge of the sword of a strong man and from a hungry lion. The Ekottarika-āgama version only describes the fearlessness of a lion, followed by reporting that Saccaka took refuge as a lay disciple.<span class="note" id="mn35n129"><span class="details"><span class="p">[n.129] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 716c10. <a href="../../parallels/sa110.html">SĀ 110</a> at T II 37a18 also shows some signs of Saccaka’s conversion, since he changes his mode of address from the earlier used Gotama, 瞿曇, to 世尊, corresponding to bhagavā.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 4.8: Similes Illustrating Saccaka’s Defeat in <a href="../../mn/mn35.html">MN 35</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn35.html">MN 35</a></th><th><a href="../../parallels/sa110.html">SĀ 110</a></th><th><a href="../../parallels/ea37.10.html">EĀ 37.10</a></th></tr>
+<tr><td>safe after attacking elephant (1)</td><td>escape strong man’s sword</td><td>fearless lion</td></tr>
+<tr><td>safe after attacking fire (2)</td><td>escape poisonous snake (→ 3)</td><td></td></tr>
+<tr><td>safe after attacking snake (3)</td><td>escape swamp or fire (→ 2)</td><td></td></tr>
+<tr><td></td><td>escape drunken130 elephant (→ 1)</td><td></td></tr>
+<tr><td></td><td>escape hungry lion</td><td>(≠ 1-3)</td></tr>
+</table>
+<p>The Pāli and Chinese accounts agree that Saccaka invited the Buddha and the monks for a meal. According to the Pāli version, once the meal was finished Saccaka made an aspiration, dedicating the merit of this food offering to the Licchavis who had supplied him with the food to be given to the Buddha and the community of monks. In reply to this dedication of merit, the Buddha clarified that the Licchavis will receive the merit to be gained by giving to one like Saccaka, who is not free from lust, anger, and delusion. In contrast, Saccaka himself will reap the merit gained by giving food to the Buddha, who is free from lust, anger, and delusion.<span class="note" id="mn35n131"><span class="details"><span class="p">[n.131] <a href="../../mn/mn35.html">MN 35</a> at MN I 236,35. Egge 2002: 58 comments that “the Buddha rejects Saccaka’s attempt to dedicate the merit resulting from his gift, and asserts that merit accrues automatically to the donor and cannot be transferred to another”, cf. also Witanachchi 1987: 155. On the transfer of merit in early Buddhism cf. also, e.g., Agasse 1978: 313-314 and 329, Amore 1971: 148-150, Anālayo 2010k: 58-62, Bechert 1992a: 105-106, Gombrich 1971, Herrman-Pfandt 1996: 82-92, Holt 1981: 10-19, Keyes 1983: 281, Malalasekera 1967: 87, Marasinghe 2005: 469, McDermott 1974, id. 1984/2003: 35-47, Oguibénine 1982: 404, Schalk 1976: 88, Schmithausen 1986: 210-216, Schopen 1985/1997: 34-43, Weeraratne 1965: 748, and Woodward 1914: 46-47 and 50. On the ancient Indian conception of merit cf., e.g., Filliozat 1980, Hara 1994, and Wezler 1997.</span></span></span></p>
+<p>The Saṃyukta-āgama records a similar statement, although in a different context. According to its presentation, at the completion of the meal the Buddha spoke a set of stanzas and also delivered a discourse to Saccaka. Once the Buddha and the monks had left Saccaka and were on their way back to the monastery, the monks deliberated among themselves about the merit obtained by Saccaka and the Licchavis respectively. Back at the monastery, the monks posed this question to the Buddha, who replied by explaining that the Licchavis will earn the merit to be obtained by giving to one who is not free from lust, anger, and delusion, whereas Saccaka will receive the merit of giving to one who is free from these three root defilements.<span class="note" id="mn35n132"><span class="details"><span class="p">[n.132] <a href="../../parallels/sa110.html">SĀ 110</a> at T II 37b22. An extract from the present discussion already appeared in Anālayo 2005b: 10.</span></span></span></p>
+<p>Since according to the Majjhima-nikāya account Saccaka was considered by many of his contemporaries to be a saint,<span class="note" id="mn35n133"><span class="details"><span class="p">[n.133] <a href="../../mn/mn35.html">MN 35</a> at MN I 227,18: sādhusammato bahujanassa.</span></span></span> the Buddha’s declaration made in the Pāli version would have appeared to Saccaka as insulting and offensive. Therefore it is rather unexpected when the Buddha makes such a statement after Saccaka had publicly admitted the foolishness of his earlier attempt to challenge the Buddha, had just provided the Buddha and the monks with a meal, and was formulating an aspiration to share the merit acquired by this food offering. The Saṃyukta-āgama, in contrast, does not present the Buddha in the almost resentful attitude attributed to him in the Majjhima-nikāya version, as according to its presentation the Buddha made this statement to the monks when Saccaka was no longer present.</p>
+<p>The Ekottarika-āgama discourse differs considerably from the other two versions, as it reports that the Buddha delivered a gradual discourse at the completion of the meal, which caused Saccaka’s attainment of stream-entry.<span class="note" id="mn35n134"><span class="details"><span class="p">[n.134] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 717a5.</span></span></span> The Ekottarika-āgama version continues by relating that on a later occasion Saccaka’s disciples, who had found out that their teacher had been converted by the Buddha, intercepted him when he was coming back from another visit to the Buddha and killed him.<span class="note" id="mn35n135"><span class="details"><span class="p">[n.135] <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 717a25 continues by reporting that the Buddha, on being informed of the murder and asked about the victim’s level of rebirth, declared that Saccaka had been reborn as a stream-enterer in the heaven of the Thirty-three and will make an end of dukkha in the presence of Buddha Maitreya.</span></span></span></p>
+<p>This tale is surprising, since none of the discourses mention that Saccaka had disciples,<span class="note" id="mn35n136"><span class="details"><span class="p">[n.136] An otherwise different story involving Saccaka in a Dharmapada Avadāna collection preserved in Chinese, however, does mention that he had a following of five hundred disciples, cf. T 211 at T IV 597a5, translated in Willemen 1999: 151.</span></span></span> which would have been present during such an important encounter of their teacher with the Buddha, all the more since according to all versions Saccaka had made a public announcement of his intention to challenge the Buddha and had invited a substantial number of people to join him and witness the discussion.</p>
+<p>Even if Saccaka did have disciples, which due to some circumstances could not be present during his meeting with the Buddha, it would be rather extreme for them to kill their teacher, just because he had become a follower of the Buddha. In ancient India, a group of disciples would probably rather follow their teacher’s example, as the disciples of Uruvela Kassapa did according to the Pāli Vinaya and the Catuṣpariṣat-sūtra when their teacher decided to become a disciple of the Buddha.<span class="note" id="mn35n137"><span class="details"><span class="p">[n.137] Vin I 33,2 and S 362 (59)R8 in Waldschmidt 1952: 35 (cf. also Gnoli 1977: 228,26). Solomon 1978: 848 explains that according to debating customs in ancient India “from the times of the Buddha and Mahāvīra this practice was in vogue of a teacher entering into an intellectual contest with another and he who was defeated became along with his disciples a follower of the one who was victorious or could convince the other”.</span></span></span> Alternatively, Saccaka’s disciples might have left him and continued on their own, as did the five monks when the Buddha had given up his ascetic practices. To go so far as to kill their teacher seems an improbable act in view of the ancient Indian respect for a teacher.</p>
+<p>The Ekottarika-āgama report of Saccaka’s death also stands in opposition to the Mahāsaccaka-sutta, according to which Saccaka visited the Buddha on what appears to be a subsequent occasion.<span class="note" id="mn35n138"><span class="details"><span class="p">[n.138] <a href="../../mn/mn36.html">MN 36</a> at MN I 237,18.</span></span></span> Although this other visit could be taken to be a visit that took place between the present discourse and his murder, according to the Mahāsaccakasutta his attitude during this visit was somewhat provocative and his intention was to challenge the Buddha again.<span class="note" id="mn35n139"><span class="details"><span class="p">[n.139] This can be seen from the circumstance that <a href="../../mn/mn36.html">MN 36</a> at MN I 240,7 qualifies a statement made by Saccaka during this encounter as offensive, and from its report at MN I 249,37 that Saccaka insinuated that the afternoon nap taken by the Buddha during the hot season was a manifestation of delusion. In fact, as noted by Jaini 1979/1998: 192, in the Jain tradition an accomplished saint was held to be beyond sleeping; cf., e.g., the Āyāraṅga 1.3.1.1 in Schubring 1910/1966: 13,8: suttā amuṇī, muṇiṇo sayayaṃ jāgaranti (Jacobi 1882: 14,1 reads jāgaraṃti), translated in Jacobi 1884/1996: 28: “the unwise sleep, the sages always wake”, cf. also Bollée 2004: 94 note 103.</span></span></span> Such an attitude would not be compatible with his attainment of stream-entry, which according to the Ekottarika-āgama version he achieved right after the meal following what according to all versions of the present discourse was his first encounter with the Buddha.</p>
+<p>The Ekottarika-āgama account of the present events thus seems to offer the least probable account of what took place after the meal offered by Saccaka. In contrast, the most natural version seems to be found in the Saṃyukta-āgama presentation, according to which the Buddha gave a discourse, as he usually would do after a meal offering, and only when being back at the monastery made a statement on the merit incurred by Saccaka.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 66 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 66: Laṭukikopama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn65comp.html#content"></a><a id="next-sutta" href="./mn67comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn66.html">MN 66</a> / <a href="../../parallels/ma192.html">MĀ 192</a> / <a href="../../parallels/ea49.7.html">EĀ 49.7 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Laṭukikopama-sutta, the “discourse on the simile of the quail”, highlights the importance of overcoming all fetters. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn66n124"><span class="details"><span class="p">[n.124] The parallel is <a href="../../parallels/ma192.html">MĀ 192</a> at T I 740c-744a, which has the title “discourse to Kāḷudāyī”, 加樓烏陀夷經, and which agrees with <a href="../../mn/mn66.html">MN 66</a> on locating the discourse in Āpaṇa. On <a href="../../parallels/ma192.html">MĀ 192</a> cf. also Minh Chau 1964/1991: 65. For a discourse quotation in Abhidh-k-ṭ cf. below note 144.</span></span></span></p>
+<p>The protagonist of the Laṭukikopama-sutta and its Madhyama-āgama parallel is a monk by the name of Udāyī,<span class="note" id="mn66n125"><span class="details"><span class="p">[n.125] The protagonist of <a href="../../parallels/ma192.html">MĀ 192</a> at T I 740c26 is 尊者烏陀夷, “venerable Udāyī”, further qualified in the title of the discourse to be “Kāḷudāyī”, 加樓烏陀夷. According to Th-a II 221,7, Kāḷudāyī was one of the ministers of the Buddha’s father, sent by the latter to invite the recently awakened Buddha to Kapilavatthu, a mission during which Kāḷudāyī went forth and became an arahant, cf. also the account given in the Mahāvastu in Basak 1965: 325,7 or in Senart 1890: 233,11, and again in Basak 1968/2004: 55,10 or in Senart 1897: 91,10. The Mahāsāṅghika Vinaya, T 1425 at T XXII 359b26, refers to the present discourse as the “discourse on Kāḷudāyī”, 優陀夷線經. Similarly, the Dharmaguptaka Vinaya, T 1428 at T XXII 662b17, and the Mahīśāsaka Vinaya, T 1421 at T XXII 54a10, identify the protagonist of an event recorded in the present discourse as Udāyī “the dark”, thereby agreeing on his identity with <a href="../../parallels/ma192.html">MĀ 192</a>.</span></span></span> who according to both versions approached the Buddha and expressed his appreciation of the Buddha’s injunction to abstain from taking a meal during the afternoon or at night.<span class="note" id="mn66n126"><span class="details"><span class="p">[n.126] A minor difference between the two versions is that, according to <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741a4, the Buddha asked Udāyī if he felt satisfied and was not lacking anything, in reply to which Udāyī reported his present satisfaction, while according to <a href="../../mn/mn66.html">MN 66</a> at MN I 448,3 Udāyī came out with his reflection without being prompted to do so by an inquiry by the Buddha. A passage similar to Udāyī’s reflection in <a href="../../mn/mn66.html">MN 66</a> at MN I 447,23 on how the Buddha had helped him to overcome unwholesome states occurs in fragment SHT I 186b (p. 105). A discourse quotation with Udāyī expressing his appreciation of the Buddha’s instructions can be found in the *Mahāvibhāṣā, T 1545 at T XXVII 151b6.</span></span></span> Udāyī contrasted his present appreciation with the discontent he experienced at the time when the Buddha had promulgated the regulation to abstain from eating in the afternoon, and when the Buddha later on also told the monks to refrain from partaking of food at night as well.<span class="note" id="mn66n127"><span class="details"><span class="p">[n.127] Bodhi in Ñāṇamoli 1995/2005: 1270 note 671 points out that Vin IV 85,9, concerning pācittiya rule 37 on abstaining from taking food during the period from noon until next day’s dawn, does not mention such a successive prohibition. Nor is such a successive prohibition mentioned in the account of the corresponding pātayantika rule 37 in the Dharmaguptaka Vinaya, T 1428 at T XXII 662c8, rule 37 in the Kāśyapīya Vinaya, T 1460 at T XXIV 662c16, rule 36 in the Mahāsāṅghika Vinaya, T 1425 at T XXII 359c2 (T 1425 at T XXII 359b21 does report a successive prohibition, which, however, proceeds from the prohibition of begging at the wrong time to prohibiting the partaking of food at the wrong time), rule 38 in the Mahīśāsaka Vinaya, T 1421 at T XXII 54a19, rule 37 in the (Mūla-)Sarvāstivāda Vinaya, T 1442 at T XXIII 824c13, and rule 37 in the Sarvāstivāda Vinaya, T 1435 at T XXIII 95b14. The fact that such a successive prohibition is not mentioned in the various Vinayas need not contradict the Laṭukikopama-sutta’s presentation, since the promulgation of the Vinaya rule could have taken place after two successive instructions had been given earlier on abstaining from afternoon and evening meals. This much could be inferred from the fact that according to the Theravāda, (Mūla-)Sarvāstivāda, and Sarvāstivāda Vinaya accounts the group of seventeen, who according to these three Vinayas occasioned this rule, were rebuked by other monks for taking food at the “wrong time”, vikāla/非時. The way this rebuke is formulated suggests that at the time of this event it was already customary for monks not to take food during time periods reckoned to be the “wrong time”. According to the (Mūla-)Sarvāstivāda Vinaya account, T 1442 at T XXIII 824c7, the group of seventeen (which Vin IV 128,27 and Vin IV 148,30 indicate to have been a group of young boys), admitted that they had partaken of food at the wrong time, explaining that they had done so because they had not received food before noon and therefore had been very hungry, so that when someone offered them food after noon they ate it. This suggests that the group of seventeen and the other monks were well aware of the fact that it was not appropriate to partake of food at such a time, but the group of seventeen had evidently not taken this regulation seriously enough. Thus, perhaps at first there was simply an informal injunction to stop eating at certain times, as reported in the Laṭukikopama-sutta, and when some monks nevertheless ate at what by then had become ‘the wrong time’, a formal Vinaya regulation addressing the issue was promulgated; cf. also Voyce 1983: 311-312. By presenting eating at the wrong time as a pācittiya or pātayantika offence, the Vinaya regulation also indicates that eating at the wrong time should be considered a more serious offence than other aspects of conduct, such as those covered in the sekhiya or śaikṣa rules. Prasad 1972a: 122 notes that partaking of food at night was also not allowable for Jain monastics.</span></span></span></p>
+<p>In both versions, Udāyī described various misfortunes met with by monks who went seeking for food at night. One of these misfortunes happened on a stormy night, when during a flash of lightning a woman suddenly saw a monk searching for alms and was thoroughly terrified, believing him to be an evil spirit.<span class="note" id="mn66n128"><span class="details"><span class="p">[n.128] While <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741b9 does not identify this monk and refers to him simply as “a monk”, 一 比丘, according to <a href="../../mn/mn66.html">MN 66</a> at MN I 448,33 this monk was Udāyī himself.</span></span></span> The same event is recorded in an Ekottarika-āgama discourse and in the Dharmaguptaka and Mahīśāsaka Vinayas, which indicate that the woman had been pregnant and lost her child due to the fright she experienced.<span class="note" id="mn66n129"><span class="details"><span class="p">[n.129] <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c14, T 1428 at T XXII 662b20, and T 1421 at T XXII 54a11. <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 800c11 identifies this monk as Kāḷudāyī, 迦留陀夷, and explains that it was his dark skin colour that had made the woman mistake him for an evil spirit. Another occurrence of the motif of a monk frightening a pregnant woman and thereby causing an abortion, can be found in the 佛說三摩竭經, T 129 at T II 845a8 (cf. also Lévi 1916: 264 or Strong 1979: 74).</span></span></span></p>
+<p>According to the Ekottarika-āgama version’s presentation, it was this woman’s mishap that motivated the Buddha to promulgate the regulation about taking only a single meal per day.<span class="note" id="mn66n130"><span class="details"><span class="p">[n.130] <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 801a12: 一坐而食, preceded by explaining that the practice of taking only a single meal had been undertaken by Buddhas and their disciples of the past and will be undertaken by Buddhas and their disciples of the future, being a form of practice conducive to concentration and insight into the four noble truths. According to <a href="../../parallels/ea49.7.html">EĀ 49.7</a> at T II 801a23, the Buddha had not yet pronounced this regulation, as he was awaiting a suitable occasion to do so, such as the present accident.</span></span></span> In the Dharmaguptaka and the Mahīśāsaka Vinayas, however, the present event caused the Buddha to promulgate a rule on abstaining from eating at the wrong time, a regulation that could be observed without needing to take only a single meal.<span class="note" id="mn66n131"><span class="details"><span class="p">[n.131] T 1428 at T XXII 662c8 and T 1421 at T XXII 54a19.</span></span></span></p>
+<p>The Mahāsāṅghika Vinaya does not associate the story of the frightened woman to a ruling on partaking of food only once or only at the right time, but rather presents the same event as the reason for the Buddha to lay down a regulation about not going begging at the wrong time.<span class="note" id="mn66n132"><span class="details"><span class="p">[n.132] T 1425 at T XXII 359b25.</span></span></span> Although the present accident also has a bearing on regulations about the time of partaking food, the Mahāsāṅghika Vinaya seems to offer the most straightforward reaction to this particular event, since it was the nocturnal alms round that had caused the woman’s fright.</p>
+<p>According to the Laṭukikopama-sutta, the frightened woman made a rather cryptic remark, exclaiming that the mother and father of this monk have died.<span class="note" id="mn66n133"><span class="details"><span class="p">[n.133] <a href="../../mn/mn66.html">MN 66</a> at MN I 449,1: bhikkhussa ātu māri, bhikkhussa mātu māri (Be-MN II 112,20: mārī). Trenckner 1888/1993: 567 comments that “the text no doubt purports to make the woman speak a sort of patois”. Ñāṇamoli 1995/2005: 552 renders this passage as “a bhikkhu whose ma’s died and whose pa’s died”, with Bodhi in ibid. p. 1270 note 672 explaining that “the utterance is in what appears to be a very colloquial Pali”.</span></span></span> As it stands in the Majjhima-nikāya version, this remark is not easily intelligible. According to the commentary, the intended meaning is that, had the monk’s parents been still alive, he would not need to go in search for food during the night.<span class="note" id="mn66n134"><span class="details"><span class="p">[n.134] Ps III 165,6.</span></span></span></p>
+<p>In the Madhyama-āgama version, the reference to the monk’s parents comes as part of a set of curses spoken by the frightened woman, in which she expresses her anger by wishing that the life of this monk may come to an end, that his mother and father may pass away, and that his whole clan may meet with destruction.<span class="note" id="mn66n135"><span class="details"><span class="p">[n.135] <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741b16. According to <a href="../../mn/mn66.html">MN 66</a> at MN I 449,2 and <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741b18, the woman also suggested that it would be better for the begging monk to cut up his own belly instead of searching for alms in this way.</span></span></span> Thus, from the perspective of the Madhyama-āgama account, the reference to the death of the monk’s parents was part of a curse spoken by the frightened woman, a presentation that seems to fit the context well.</p>
+<p>The Laṭukikopama-sutta and its Madhyama-āgama parallel continue by examining the case of those who are not willing to follow the Buddha’s instructions. While the Majjhima-nikāya version turns to this theme in a somewhat abrupt manner, the Madhyama-āgama discourse offers a transition to the same topic. According to its account, the Buddha at first praised Udāyī and then contrasted him with foolish monks who are unwilling to follow the regulations promulgated by the Buddha.<span class="note" id="mn66n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741b24. On monks unwilling to follow the regulations promulgated by the Buddha cf. also Dhirasekera 1970.</span></span></span></p>
+<p>The absence of such a transition in the Majjhima-nikāya version could be a case of textual loss, as the passage on those who are not willing to follow the Buddha’s injunctions begins with the phrase “in the same way”.<span class="note" id="mn66n137"><span class="details"><span class="p">[n.137] <a href="../../mn/mn66.html">MN 66</a> at MN I 449,10: evam eva. This forms the beginning of a passage of the discourse spoken by the Buddha and is preceded by a section spoken by Udāyī.</span></span></span> In other discourses, this phrase has the function of connecting a passage to something said earlier, but in the present case the same phrase hangs somewhat in the air, as it does not really refer to anything said earlier. Thus, an earlier version of the Laṭukikopama-sutta might have had a transition similar to what is still found in the Madhyama-āgama version, a transition that might then have been lost at some point during the transmission of the discourse.</p>
+<p>In both versions, those who do not follow the Buddha’s injunction assume his instruction to be concerned with a mere trifle. Yet, such a mere trifle can in turn become a strong form of bondage, which the Laṭukikopama-sutta compares to a quail tethered by a rotting creeper, while the Madhyama-āgama version compares it to a fly caught in a drop of saliva and unable to extricate itself.<span class="note" id="mn66n138"><span class="details"><span class="p">[n.138] <a href="../../mn/mn66.html">MN 66</a> at MN I 449,16 and <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741c2.</span></span></span></p>
+<p>The two versions contrast these disobedient disciples with those who follow the Buddha’s instruction and abandon what he asks them to abandon, comparable to a strong royal elephant that is able to break even strong thongs. A minor difference between the two versions is that whereas in the Majjhima-nikāya version those willing to implement the Buddha’s instruction still consider the matter in question to be a mere trifle,<span class="note" id="mn66n139"><span class="details"><span class="p">[n.139] <a href="../../mn/mn66.html">MN 66</a> at MN I 450,1: te evam āhaṃsu, kiṃ pan’ imassa appamattakassa oramattakassa pahātabbassa?</span></span></span> according to the Madhyama-āgama version even such a consideration does not occur to them.<span class="note" id="mn66n140"><span class="details"><span class="p">[n.140] <a href="../../parallels/ma192.html">MĀ 192</a> at T I 741c16: “they do not speak like this: ‘this is a trifling matter’”, 彼不作是說, 此是小事.</span></span></span></p>
+<p>The Laṭukikopama-sutta and its Madhyama-āgama parallel continue with another simile that illustrates the bondage of someone unwilling to follow the Buddha’s instructions with the example of a poor man in wretched living conditions. Although inspired to go forth on seeing a monk seated in meditation, this poor man is nevertheless so attached to his meagre belongings that he is unable to abandon them. The two versions illustrate the complementary case of those who obey the Buddha’s instruction by depicting a rich person who, similarly inspired to go forth on seeing a monk seated in meditation, indeed abandons all his wealth and goes forth.</p>
+<p>The Laṭukikopama-sutta and its Madhyama-āgama parallel continue by taking up four cases for closer examination:</p>
+<ul>
+<li>one who tolerates thoughts related to belongings or sensuality,</li>
+<li>one who dispels them,</li>
+<li>one in whom they arise due to temporary absent-mindedness, but who then quickly abandons them,</li>
+<li>one who is liberated.<span class="note" id="mn66n141"><span class="details"><span class="p">[n.141] <a href="../../mn/mn66.html">MN 66</a> at MN I 453,5 and <a href="../../parallels/ma192.html">MĀ 192</a> at T I 742c22. Both compare the third case to the evaporation of a few drops of water that fall on red-hot metal.</span></span></span></li>
+</ul>
+<p>The two versions agree that the first three are still in bondage, whereas the fourth is free from bondage.</p>
+<p>The Majjhima-nikāya version reports that the Buddha reckoned them in this way because he knew the “diversity of faculties” in each case.<span class="note" id="mn66n142"><span class="details"><span class="p">[n.142] <a href="../../mn/mn66.html">MN 66</a> at MN I 453,12: indriyavemattatā. A reference to such “diversity of faculties” recurs in <a href="../../mn/mn64.html">MN 64</a> at MN I 437,10 as the reason for distinguishing between liberation of the mind and liberation by wisdom. Two other occurrences are <a href="../../sn/sn48.13.html">SN 48:13</a> at SN V 200,29 and <a href="../../sn/sn48.16.html">SN 48:16</a> at SN V 201,29, according to which due to “diversity of faculties”, indriyavemattatā, there will be “diversity of fruits”, phalavemattatā. Their parallel <a href="../../parallels/sa653.html">SĀ 653</a> at T II 183b12, however, speaks in the same context of “perfection of faculties”, 根波羅蜜, leading to “perfection of fruits”, 果波羅蜜, which suggests that its original may have read pāramitā, instead of vemattatā or vaimātratā. The “diversity of faculties”, indriyavemattatā, recurs again in Peṭ 30,24 to distinguish different types of stream-entrant, and in Vism 710,4 to distinguish different types of non-returner.</span></span></span> According to the Madhyamaāgama discourse, however, the Buddha reckoned the first three types to be still in bondage because any fetter is unwholesome,<span class="note" id="mn66n143"><span class="details"><span class="p">[n.143] <a href="../../parallels/ma192.html">MĀ 192</a> at T I 742c25: “all fetters are unwholesome”, 諸結不善.</span></span></span> whereas the fourth type can be reckoned as free from bondage, since all fetters have been eradicated.</p>
+<p>The Madhyama-āgama presentation thereby indicates that the purpose of bringing in the four types of person is to highlight again the unwholesome nature of any fetter, whether weak or strong. That is, although there is a difference between the three persons in how they deal with the arising of unwholesomeness in their minds, yet, all three are still in bondage to the fetters. This indication ties in with the theme of weak and strong fetters, a theme of central relevance throughout the two versions.</p>
+<p>The Laṭukikopama-sutta and its parallel continue by contrasting ignoble types of pleasure with recommendable types of pleasure. The ignoble pleasures that should better be avoided are sensual pleasures, while the type of pleasures that should be developed are the pleasures of jhāna. Both versions take up the mental factor(s) of a particular jhāna that need(s) to be overcome in order to proceed to the next jhāna, until with the fourth jhāna imperturbability has been reached.<span class="note" id="mn66n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn66.html">MN 66</a> at MN I 455,3 and <a href="../../parallels/ma192.html">MĀ 192</a> at T I 743b13. A discourse quotation in Abhidh-k-ṭ at D (4094) mngon pa, ju 199b2 or Q (5595) tu 227b4 parallels the present examination of the four jhānas; cf. also Abhidh-k 3:101 in Pradhan 1967: 190,23, paralleling <a href="../../mn/mn66.html">MN 66</a> at MN I 455,3, with its Chinese counterparts in T 1558 at T XXIX 67a7 and T 1559 at T XXIX 224c20. Another quote relevant to the present context occurs in Abhidh-k 4:46 in Pradhan 1967: 227,15, paralleling <a href="../../mn/mn66.html">MN 66</a> at MN I 454,28, with its Chinese counterparts in T 1558 at T XXIX 81a8 and T 1559 at T XXIX 237a26; cf. also the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 234a27, translated in Lamotte 1970a: 1488.</span></span></span></p>
+<p>Highlighting the need to go beyond even the subtlest fetter, the two versions clarify that each of the four jhānas needs to be abandoned and transcended. This process of transcendence takes place by attaining the next jhāna in the series, followed by each of the four immaterial attainments. The Laṭukikopama-sutta stands alone in culminating this description of successive stages of transcendence with the attainment of the cessation of perceptions and feelings.<span class="note" id="mn66n145"><span class="details"><span class="p">[n.145] <a href="../../mn/mn66.html">MN 66</a> at MN I 456,5.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 124 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 124: Bakkula-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn123comp.html#content"></a><a id="next-sutta" href="./mn125comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn124.html">MN 124</a> / <a href="../../parallels/ma34.html">MĀ 34</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bakkula-sutta, the “discourse [spoken by] Bakkula”, sets forth the exemplary conduct of the monk Bakkula. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn124n126"><span class="details"><span class="p">[n.126] The parallel is <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475a-c and agrees with <a href="../../mn/mn124.html">MN 124</a> on location and title (薄拘羅經, which uses the same way or rendering Bakkula’s name as Mahāvyutpatti no. 1065 in Sakaki 1926: 81). On <a href="../../parallels/ma34.html">MĀ 34</a> cf. Minh Chau 1964/1991: 75 and 207, for a translation of <a href="../../parallels/ma34.html">MĀ 34</a>, together with extracts from the present discussion, cf. Anālayo 2007a.</span></span></span></p>
+<p>The Bakkula-sutta and its Madhyama-āgama parallel begin by relating that the monk Bakkula was visited by a former friend from the time before he had gone forth. This former friend wanted to know how often Bakkula had engaged in sex during the eighty years he had been a monk.</p>
+<p>In reply, in both versions Bakkula made it clear that he had not even had a perception related to sensuality during this entire period.<span class="note" id="mn124n127"><span class="details"><span class="p">[n.127] <a href="../../mn/mn124.html">MN 124</a> at MN III 125,17 and <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b5.</span></span></span> The Majjhima-nikāya version adds that, during the entire period of his monkhood, Bakkula also never had a perception related to aversion and cruelty, nor any thought related to sensuality, aversion, or cruelty.<span class="note" id="mn124n128"><span class="details"><span class="p">[n.128] <a href="../../mn/mn124.html">MN 124</a> at MN III 125,22.</span></span></span></p>
+<p>In both versions, Bakkula continues by listing various other qualities he possesses, which show some divergences between the two versions (see table 13.3). The Bakkulasutta and its Madhyama-āgama parallel agree that for the entire period of his monkhood Bakkula could claim that he:</p>
+<ul>
+<li>never wore or accepted robes from householders,</li>
+<li>never cut robes,</li>
+<li>never made robes for another monk,</li>
+<li>never sewed robes with a needle.<span class="note" id="mn124n129"><span class="details"><span class="p">[n.129] <a href="../../mn/mn124.html">MN 124</a> at MN III 126,6: nābhijānāmi sūciyā cīvaraṃ sibbitā and <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b12: 未曾用針 縫衣. For Bakkula to claim never having used a needle is surprising, since whether he wore rag robes or robes made by householders, both types of robe would need to be mended from time to time (in fact <a href="../../parallels/ea23.2.html">EĀ 23.2</a> at T II 611c4 describes him mending his own set of robes, on this discourse cf. also Legittimo 2009 and Anālayo 2010j). According to <a href="../../mn/mn124.html">MN 124</a> at MN III 126,8, Bakkula also never dyed a robe, which similarly would be difficult to avoid in a hot and humid climate like India, where the natural dye used for robes requires renewal from time to time. The commentary, Ps IV 193,24, explains that his relatives made rag robes for him and dyed them, leaving them out for him when he went to bathe. Bakkula then dressed in those new robes and gave his old robes to other monks, so that a need to mend his robes never arose. It is not easy to see how such conduct could be considered a particularly praiseworthy way of obtaining robes.</span></span></span></li>
+</ul>
+<p>The two versions continue with Bakkula’s proclamation that he never accepted an invitation to a meal. According to the Majjhima-nikāya version, he also:</p>
+<ul>
+<li>never hoped for such an invitation,</li>
+<li>never partook of a meal inside a house,</li>
+<li>never sat down inside a house,</li>
+<li>never interrupted the practice of begging for alms,</li>
+<li>never went to beg in superior households in order to get better food.<span class="note" id="mn124n130"><span class="details"><span class="p">[n.130] <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b19.</span></span></span></li>
+</ul>
+<p>According to the Majjhima-nikāya account, Bakkula never mentally grasped at the signs and secondary details of women.<span class="note" id="mn124n131"><span class="details"><span class="p">[n.131] <a href="../../mn/mn124.html">MN 124</a> at MN III 126,17: nābhijānāmi mātugāmassa anubyañjanaso nimittaṃ gahetā.</span></span></span> The Madhyama-āgama version explains that he never looked women in the face.<span class="note" id="mn124n132"><span class="details"><span class="p">[n.132] <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b21: 未曾視女人面. The commentary Ps IV 195,7, similarly explains that he never looked at women.</span></span></span> The two versions agree that he never visited the nuns’ quarters. According to the Majjhima-nikāya report, Bakkula never taught nuns or female novices, while according to the Madhyama-āgama description he never spoke to nuns, not even when meeting them on the road.<span class="note" id="mn124n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b22. <a href="../../mn/mn124.html">MN 124</a> at MN III 126,19 also mentions that he never taught even four phrases to a woman, while according to <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b26 he never spoke even four phrases towards laity in general. This brings to mind a pācittiya or pātayantika rule according to which a monk should not speak more than five or six phrases to a woman when alone with her, cf. the Dharmaguptaka Vinaya, T 1428 at T XXII 640b14, the Mahāsāṅghika Vinaya, T 1425 at T XXII 336a17, the Mahīśāsaka Vinaya, T 1421 at T XXII 38c24, the (Mūla-)Sarvāstivāda Vinaya, T 1442 at T XXIII 771b18, the Sarvāstivāda Vinaya, T 1435 at T XXIII 70c8, and the Theravāda Vinaya at Vin IV 21,37, all of which agree on formulating the rule in terms of speaking not more than “five or six phrases”, 五六語, chappañcavācāhi (the sequence “six or five” in the Pāli version would be due to the law of waxing syllables). Horner 1930/1990: 368 is of the opinion that “it is likely that this pācittiya offence ... is a later interpolation of the editors”, as it stands in contrast to the importance given elsewhere in the discourses to teaching laity, both men and women. Yet, to appreciate the significance of this rule, it needs to be kept in mind that according to the explanation given at Vin IV 23,6 there is no problem if a monk teaches in reply to a question, that is, the regulation only refers to a monk who on his own approaches a woman and wants to give her teachings in private. Besides, the same rule applies vice versa to a nun, who similarly should not give private teachings to a male on her own initiative.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 13.3: Bakkula’s Qualities in <a href="../../mn/mn124.html">MN 124</a> and <a href="../../parallels/ma34.html">MĀ 34</a></caption>
+<tr><th><a href="../../mn/mn124.html">MN 124</a></th><th><a href="../../parallels/ma34.html">MĀ 34</a>.</th></tr>
+<tr><td>never sensual perception (1)</td><td>no conceit on account of 80 years monkhood</td></tr>
+<tr><td>never perception of ill will, cruelty (2)</td><td>never sensual perception (→ 1)</td></tr>
+<tr><td>never sensual thought (3)</td><td>no conceit on account of wearing rag robes</td></tr>
+<tr><td>never thought of ill will, cruelty (4)</td><td>never robes from householders, never cut robe</td></tr>
+<tr><td>never robes from householders (5)</td><td>material, never got robe made by others, never</td></tr>
+<tr><td>never cut robe material (6)</td><td>sewed a robe, never sewed a bag (→ 5, 6, 7)</td></tr>
+<tr><td>never sewed a robe (7)</td><td>no conceit on account of begging</td></tr>
+<tr><td>never dyed a robe (8)</td><td>never accepted invitation, never skipped alms</td></tr>
+<tr><td>never sewed a kaṭhina robe (9)</td><td>round, never begged at superior house (→ 11)</td></tr>
+<tr><td>never made robes for others (10)</td><td>never looked at woman’s face, never entered</td></tr>
+<tr><td>never accepted invitation (11)</td><td>nunnery, never greeted nun, never spoke to nun</td></tr>
+<tr><td>never wished for invitation (12)</td><td>(→ 15?, 17, 18?)</td></tr>
+<tr><td>never sat down in a house (13)</td><td>never had novice attendant, never taught laity (→</td></tr>
+<tr><td>never ate in a house (14)</td><td>24, 16?)</td></tr>
+<tr><td>never grasped sign of woman (15)</td><td>never got sick, never took medicine (→ 28, 29?)</td></tr>
+<tr><td>never taught woman (16)</td><td>never used a support (→ 30)</td></tr>
+<tr><td>never entered nunnery (17)</td><td>full awakening after 3 days (→ 33)</td></tr>
+<tr><td>never taught nun (18)</td><td></td></tr>
+<tr><td>never taught female probationer (19)</td><td></td></tr>
+<tr><td>never taught female novice (20)</td><td></td></tr>
+<tr><td>never gave going forth (21)</td><td></td></tr>
+<tr><td>never gave full ordination (22)</td><td></td></tr>
+<tr><td>never gave dependence (23)</td><td></td></tr>
+<tr><td>never had novice attendant (24)</td><td></td></tr>
+<tr><td>never bathed in a bathroom (25)</td><td></td></tr>
+<tr><td>never used bath powder (26)</td><td></td></tr>
+<tr><td>never received a massage (27)</td><td></td></tr>
+<tr><td>never got sick (28)</td><td></td></tr>
+<tr><td>never carried medicine along (29)</td><td></td></tr>
+<tr><td>never used a support (30)</td><td></td></tr>
+<tr><td>never lay down (31)</td><td></td></tr>
+<tr><td>never spent rainy season in village (32)</td><td></td></tr>
+<tr><td>full awakening after 7 days (33)</td><td>(≠ 2-4, 8-10, 12-14, 19-23, 25-27, 31-32)</td></tr>
+</table>
+<p>The Majjhima-nikāya version, moreover, highlights that Bakkula never ordained or gave dependence, nor did he ever have a novice as his attendant, while the Madhyamaāgama version only records that he never trained a novice.<span class="note" id="mn124n134"><span class="details"><span class="p">[n.134] <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475b26: 未曾憶畜沙彌.</span></span></span></p>
+<p>The two versions continue by recording that Bakkula never became sick and therefore never made use of any medicine.<span class="note" id="mn124n135"><span class="details"><span class="p">[n.135] <a href="../../mn/mn124.html">MN 124</a> at MN III 127,1 and <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475c1, a statement also quoted in the Karmavibhaṅga in Kudo 2004: 166,4 and 167,4 or in Lévi 1932a: 76,11; cf. also the (Mūla-)Sarvāstivāda Vinaya, T 1448 at T XXIV 82c25, the *Mahāvibhāṣā, T 1545 at T XXVII 121c4 and again T XXVII 908b26, and the 佛 五百弟子自說本起經, T 199 at T IV 194c5.</span></span></span> According to the list of eminent disciples in the Aṅguttara-nikāya, Bakkula was indeed foremost among the monks in matters of health.<span class="note" id="mn124n136"><span class="details"><span class="p">[n.136] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 25,6: etad aggaṃ ... mama sāvakānaṃ bhikkhūnaṃ appābādhānaṃ yadidaṃ bakkulo (Be-AN I 25,20: bākulo), cf. also the Aśokarājāvadāna in Cowell 1886: 396,5 or in Vaidya 1999: 253,21, <a href="../../parallels/sa604.html">SĀ 604</a> at T II 168a22, and T 2043 at T L 138c5. The list of eminent disciples in <a href="../../parallels/ea4.5.html">EĀ 4.5</a> at T II 557c16 presents Bakkula as foremost in longevity, 我聲聞中第一比丘, 壽命極長, 終不中夭, 所謂婆拘羅 比丘是. Mil 215,12 also refers to Bakkula’s health in one of its dilemmas.</span></span></span> The Majjhima-nikāya account also notes that Bakkula:</p>
+<ul>
+<li>never engaged in bathing in a bath house,</li>
+<li>never used bathing powder,</li>
+<li>never gave a massage,</li>
+<li>never used a reclining board or a bed,</li>
+<li>never observed the rains retreat period within a village.<span class="note" id="mn124n137"><span class="details"><span class="p">[n.137] <a href="../../mn/mn124.html">MN 124</a> at MN III 126,29. Only the fourth of these qualities has a counterpart in <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475c4, which describes that, in order to sit in meditation, Bakkula never leaned against a wall or a tree, 未曾倚 壁倚樹 (adopting the 宋, 元, and 明 variant reading 倚 instead of 猗).</span></span></span></li>
+</ul>
+<p>The Majjhima-nikāya version concludes its list of Bakkula’s qualities with his attainment of final knowledge a week after going forth,<span class="note" id="mn124n138"><span class="details"><span class="p">[n.138] <a href="../../mn/mn124.html">MN 124</a> at MN III 127,7: “for seven days I ate the country’s alms as a debtor, but on the eighth day final knowledge arose”, sattāhaṃ ... sāṇo raṭṭhapiṇḍaṃ bhuñjiṃ, atha aṭṭhamiyaṃ aññā udapādi (Be- MN III 168,3 and Ce-MN III 300,20 read saraṇo, Se-MN III 258,1 reads sāraṇo), which the commentary Ps IV 196,14, explains to refer to his attainment of full awakening. <a href="../../sn/sn16.11.html">SN 16:11</a> at SN II 221,1 records Mahākassapa making the same proclamation.</span></span></span> while the Madhyama-āgama version reports that Bakkula attained the three realizations within three days and nights.<span class="note" id="mn124n139"><span class="details"><span class="p">[n.139] According to <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475c7, Bakkula proclaimed that “within three days and nights, I attained the three realizations”, 我於三日夜中得三達證. His attainment of the three higher knowledges recurs in the Chinese, Sanskrit, and Tibetan versions of his stanzas, cf. T 199 at T IV 194c1, Bechert 1961: 145,10, Dutt 1984a: 193,12, Hofinger 1954: 81,11, and Wille 1990: 94, while the same is not mentioned in his stanzas at <a href="../../tha/tha3.html#p225">Th 225</a>-227.</span></span></span></p>
+<p>After hearing this account of Bakkula’s marvellous qualities, according to the Majjhima-nikāya version his former friend Acela Kassapa decided to go forth and, having received the higher ordination, in due time became an arahant. This series of events is not recorded in the Madhyama-āgama version, which also does not give the name of Bakkula’s friend and only indicates that he was a heterodox practitioner.<span class="note" id="mn124n140"><span class="details"><span class="p">[n.140] <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475a15: 異學.</span></span></span></p>
+<p>The going forth of Acela Kassapa recurs also in the Kassapasīhanāda-sutta. This discourse records that Acela Kassapa felt so inspired on hearing an exposition on the topic of asceticism by the Buddha that he requested ordination and eventually became an arahant.<span class="note" id="mn124n141"><span class="details"><span class="p">[n.141] <a href="../../dn/dn8.html">DN 8</a> at DN I 177,1.</span></span></span> The Dīrgha-āgama parallel to the Kassapasīhanāda-sutta reports the same outcome of this meeting, differing in so far as it gives the name of its protagonist just as Kassapa.<span class="note" id="mn124n142"><span class="details"><span class="p">[n.142] <a href="../../parallels/da25.html">DĀ 25</a> at T I 104c12: 迦葉.</span></span></span></p>
+<p>The going forth of Acela Kassapa recurs again in a discourse in the Saṃyutta-nikāya. Similar to the Bakkula-sutta, this discourse begins with Acela Kassapa meeting a former friend, which in this case was the householder Citta. When during the ensuing discussion Acela Kassapa found out that, as a householder, Citta had progressed further than he had been able to do as a wanderer, he decided to go forth as a Buddhist monk and eventually became an arahant.<span class="note" id="mn124n143"><span class="details"><span class="p">[n.143] <a href="../../sn/sn41.9.html">SN 41:9</a> at SN IV 302,9; cf. also von Hinüber 1997: 68.</span></span></span></p>
+<p>The Saṃyukta-āgama parallel agrees with the Saṃyutta-nikāya version that after a similar exchange Citta’s former friend decided to go forth and became an arahant.<span class="note" id="mn124n144"><span class="details"><span class="p">[n.144] <a href="../../parallels/sa573.html">SĀ 573</a> at T II 152b24.</span></span></span> The Saṃyukta-āgama version differs in so far as it does not give the name of the former friend of Citta, but only indicates that he was an acela, a naked ascetic.<span class="note" id="mn124n145"><span class="details"><span class="p">[n.145] <a href="../../parallels/sa573.html">SĀ 573</a> at T II 152a24: 阿耆毘外道.</span></span></span></p>
+<p>The going forth of Acela Kassapa recurs once more in yet another discourse in the Saṃyutta-nikāya, where he inquired from the Buddha whether pleasure and pain were caused by oneself, others, both, or neither. In this case, too, Acela Kassapa was so satisfied with the Buddha’s reply that he requested ordination and eventually became an arahant.<span class="note" id="mn124n146"><span class="details"><span class="p">[n.146] <a href="../../sn/sn12.17.html">SN 12:17</a> at SN II 22,6.</span></span></span></p>
+<p>This discourse has three parallels, one of which is found in the Saṃyukta-āgama, one parallel is an individual translation, and another parallel has been preserved in Sanskrit fragments. These three parallels agree with the Pāli version that the protagonist of this discourse was indeed Acela Kassapa, although according to their report he only became a stream-enterer during the discourse and was soon after killed by a cow.<span class="note" id="mn124n147"><span class="details"><span class="p">[n.147] <a href="../../parallels/sa302.html">SĀ 302</a> at T II 86b3+10, T 499 at T XIV 768c20+27, and fragment S 474 folio 14R2+5 in Tripāṭhī 1962: 47; cf. also SHT V 1133aA3 (p. 128).</span></span></span></p>
+<p>Thus, in the Chinese Āgamas these four instances seem to be concerned with different persons, the Dīrgha-āgama discourse with a certain Kassapa, the Madhyama-āgama discourse with an unnamed wanderer, the Saṃyukta-āgama with an unnamed naked ascetic, while only the last of these four instances, preserved in Chinese and Sanskrit, has Acela Kassapa as its protagonist. In the corresponding Pāli discourses, in contrast, four times Acela Kassapa went forth and became an arahant, each time after receiving a different discourse. Unless one were to assume that the name Acela Kassapa refers to four different persons, the presentation in the Pāli tradition would be self-contradictory.</p>
+<p>Returning to the Bakkula-sutta, which in agreement with its Madhyama-āgama parallel reports that Bakkula announced his impending final Nirvāṇa to the other monks,<span class="note" id="mn124n148"><span class="details"><span class="p">[n.148] <a href="../../mn/mn124.html">MN 124</a> at MN III 127,24 adds that he had made a tour of the dwelling places of the other monks to make this announcement. Regarding the reference to his taking a “door-opener”, apāpuraṇaṃ ādāya (Be-MN III 168,16: avāpuraṇaṃ), in order to announce his impending final Nirvāṇa to the other monks, helpful information can be found in von Hinüber 1992: 14-18, who explains that this expression probably refers to a simple type of lock, found at the inside of a door, whose bolt can be closed from the outside with the help of a rope that is connected to this bolt and then put through a small hole in the door so as to be accessible from the outside. The same rope does, however, not allow opening the door from the outside, for which an apāpuraṇa is required, a simple type of “key” that allows opening any lock of such a type. Hence, with the help of an apāpuraṇa any door with this kind of lock in a monastery could be opened in order to enter and convey some message to the monk(s) staying inside.</span></span></span> followed by then passing away seated amidst the congregation of monks. According to the account of this event given in the Pāli commentary, Bakkula had attained the fire element and cremated himself.<span class="note" id="mn124n149"><span class="details"><span class="p">[n.149] Ps IV 196,21.</span></span></span></p>
+<p>Looking back on the two versions of the present discourse, it is noteworthy that according to both versions at the time of this discourse Bakkula had been ordained for eighty years.<span class="note" id="mn124n150"><span class="details"><span class="p">[n.150] <a href="../../mn/mn124.html">MN 124</a> at MN III 125,6: asīti me ... vassāni pabbājitassa and <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475a21: 我於此正法, 律中 學道已來八十年.</span></span></span> For Bakkula to be a monk for eighty years implies that the meeting recorded in the present discourse must have taken place after the Buddha’s passing away. Even if Bakkula should have been one of the first monks ordained by the Buddha, for him to reach eighty years of monkhood implies that the forty-five years period of the Buddha’s teaching activities was long over.<span class="note" id="mn124n151"><span class="details"><span class="p">[n.151] According to <a href="../../parallels/ma34.html">MĀ 34</a> at T I 475a13, however, this discourse took place soon after the Buddha’s final Nirvāṇa, 佛般涅槃後不久. Since a period of over thirty-five years would not be “soon”, 不久, this seems to be a case of applying a standard pericope without consideration of the context.</span></span></span></p>
+<p>That is, the events described in the Bakkula-sutta and its parallel would have to be placed considerably later than the so-called first council, which according to the traditional account was convened soon after the Buddha’s demise.<span class="note" id="mn124n152"><span class="details"><span class="p">[n.152] Vin II 285,4.</span></span></span></p>
+<p>It is also noteworthy that the listings of his qualities in the two versions shows numerous divergences and that both versions follow each of the declarations made by Bakkula with a narrator’s acclamation, which praises each quality of Bakkula for its wonderful and marvellous nature.<span class="note" id="mn124n153"><span class="details"><span class="p">[n.153] Ps IV 193,10 explains that these remarks were added by the reciting elders, dhammasaṅgāhakattherā. Fukita 1986: 488 (in relation to another text) explains that “the addition of [such a] refrain is a spontaneous interpolation occurring when a sūtra is passed down by oral ... transmission”.</span></span></span> This type of repeated acclamation is an unusual feature for a discourse and further supports the impression of the comparative lateness of the Bakkula-sutta.<span class="note" id="mn124n154"><span class="details"><span class="p">[n.154] The image of the ideal monk depicted in the two versions shows also distinct signs of lateness, for a more detailed examination of which cf. Anālayo 2007a: 11-16.</span></span></span></p>
+<p>The Pāli commentary in fact explains that the Bakkula-sutta was included in the canonical collection only at the so-called second council.<span class="note" id="mn124n155"><span class="details"><span class="p">[n.155] Ps IV 197,2: “this discourse was recited at the second council”, idaṃ pana suttaṃ dutiyasaṅgahe saṅgahītaṃ.</span></span></span> This explanation is remarkable in so far as it shows that the commentators were conscious of the fact that the Nikāyas on which they were commenting could not have been recited in this form at the first council or rehearsal, saṅgīti.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.31 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.31</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 31</span><span class="mirror-right">（三一）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn4.25.html">SN 4.25</a> / <a href="../parallels/sa1092.html">SĀ 1092</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was staying at the Uļūka River near the Bodhi tree in the village of Uruvilvā, not long after his enlightenment. At that time, Māra the Evil One thought, &quot;The Buddha is staying at the Uļūka River near the Bodhi tree in the village of Uruvilvā, not long after his enlightenment. I shall go there to seek an opportunity.&quot; Having thought this, he went to where the Buddha was and spoke a verse, saying:</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在优楼比螺聚落尼连禅河菩提树下，成佛未久。尔时，魔王而作是念：「佛在优楼比螺聚落尼连禅河菩提树下，成佛未久。我当诣彼，伺求其便。」作是念已，往诣佛所，而说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>You dwell alone in solitude, always silent and still, your radiant countenance<br/>reveals your divine body, and all your faculties are joyful. It is<br/>like a person who has lost wealth but later regains it. Now<br/>you enjoy the tranquility of meditation, your joy is also like this<br/>Having been able to abandon the glory of the country, you also<br/>do not seek fame and profit. Why not be friends with others?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「汝独处闲静，　　闭默常寂然，光颜显神体，　　诸根悉悦豫。譬如失财者，　　后还获于财，汝今玩禅寂，　　欢喜亦如是。既能遗国荣，　　亦不悕名利，何不与诸人，　　而共为亲友？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One replied in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊以偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have long attained the tranquility of meditation, my mind is<br/>always still and silent, destroying your army of desires, attaining the<br/>unsurpassed wealth. My faculties are always tranquil, my mind has attained<br/>tranquility, destroying your army of desires, cultivating the path, my mind<br/>is joyful. Alone, apart from the hustle and bustle, what use<br/>is friendship for?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我久获禅定，　　其心常寂然，破坏汝欲军，　　得于无上财。我根恒恬豫，　　心中得寂灭，以坏汝欲军，　　修道情欢喜。独一离愦閙，　　安用亲友为？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Evil One again spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，魔王复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>You have already attained the right path, peacefully heading towards nirvana. Having<br/>attained the wonderful Dharma, you should always keep it in mind. It<br/>is truly appropriate to know it alone, why teach it to the masses?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「汝已获正道，　　安隐向涅槃，既以得妙法，　　宜常戢在怀，诚应独了知，　　何以教众人？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One again spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Those who do not belong to Mara, ask me about the Dharma of<br/>the other shore. I will explain it correctly, truly attaining the cessation of<br/>extinction. Stopping the mind and not being negligent, Mara will not find an opportunity.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「人不属魔者，　　咨吾彼岸法，我为正分别，　　谛实得尽灭，止心不放逸，　　魔不得其便。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Demon King again spoke in verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，魔王复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>It is like a white stone mountain, its color resembling fat. The birds do not distinguish<br/>it, flying to it to peck and eat. Not getting its taste, their beaks are injured<br/>and they return empty-handed. I am now also like this, coming in vain without accomplishing anything.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「譬如白石山，　　其色类脂膏，群鸟不别知，　　飞来而噏食。既不得其味，［口＊（隹／乃）］伤而虚还，我今亦如是，　　徒来无所为。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, after the Demon King had spoken this verse, he was sorrowful, suffering, and deeply remorseful. He went to an empty place, sat alone cross-legged, and drew on the ground with an arrow, thinking of devising a plan. At that time, the three daughters of the demon king, named Extreme Love, Pleasing, and Agreeable, went to the side of the demon king and spoke a verse to their father:</p></td><td lang="lzh" class="agama-chi"><p>尔时，魔王说是偈已，忧愁苦恼，极生悔恨，向一空处，蹲踞独坐，以箭画地，思作方计。时，魔三女：一名极爱，二名悦彼，三名适意。时，魔三女往至魔边，向父说偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Father, you are now called a man. Why do you have sorrow and worry?<br/>I shall use the noose of desire to snare him, like catching a bird<br/>and bring him to the father&#x27;s place, so that the father may be in control.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「父今名丈夫，　　何以怀忧愁？我当以欲羂，　　羂彼如捕鸟，将来至父所，　　使父得自在。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Demon King spoke a verse in reply:</p></td><td lang="lzh" class="agama-chi"><p>尔时，魔王说偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>That person has already severed desire, and cannot be pulled by desire. He has<br/>already transcended the realm of the demons, and that is why I am worried.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「彼人善断欲，　　不可以欲牵，已过魔境界，　　是故我怀忧。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The three demon daughters transformed their appearance to be extremely beautiful, and went to where the Buddha was. They bowed at the Buddha&#x27;s feet and stood to one side. The three daughters spoke in unison to the Buddha, saying, &quot;We have come to make offerings and serve the Buddha.&quot; At that time, the World Honored One, who had completely severed attachment, did not look at them. The second and third times they spoke the same words, but the Buddha did not look at them.</p></td><td lang="lzh" class="agama-chi"><p>彼魔三女化其形容，极为端严，往至佛所，即礼佛足，在一面立。三女同声，俱白佛言：「我故来供养，与佛策使。」尔时，世尊无上断爱，了不顾视，第二第三，亦作是语，佛不观察。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the three demon daughters withdrew to one place and discussed among themselves, &quot;The ways men like things are different. Some like small ones, some like medium ones, and some like large ones.&quot; Then one of the daughters transformed into six hundred women, some as young girls, some as maidens, some as unmarried women, some as married women, some as women who had given birth, and some as women who had not given birth. Having transformed into these many women, they all went to where the Buddha was and said to the Buddha, &quot;World Honored One! We have come now to make offerings to the World Honored One, to serve and attend to your hands and feet.&quot; The Buddha did not look at them. The second and third times they spoke the same words, but the Buddha did not look at them.</p></td><td lang="lzh" class="agama-chi"><p>时，魔三女退在一处，自共议论：「男子之法，所好各异，或爱小者，或爱中者，或爱大者。」即时一女，化作六百女人，或作小女，或作童女，或作未嫁女，或作已嫁女，或作已产女，或作未产女，化作如是众多女已，俱往佛所，白佛言：「世尊！我等今来供养世尊，为其策使，给侍手足。」佛不观察，第二第三，亦如是说，都不顾视。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the demonesses again withdrew to one place and discussed among themselves, &quot;This must be because he has attained the unsurpassed liberation from desire and attachment. Otherwise, he should see us go mad, vomit blood, or have a heart attack. We should go to him and ask questions in verse.&quot; The demoness who was extremely attached asked in verse:</p></td><td lang="lzh" class="agama-chi"><p>时，魔女等复退一处，更共语言：「此必得无上断爱欲解脱故，若不尔者，应见我等狂乱吐血，或能心裂。我等当往其所，以偈问难。」魔女极爱以偈问曰：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Sitting under a tree with folded arms, peacefully and quietly contemplating<br/>alone, have you lost your wealth and treasures, or are you<br/>seeking great wealth? In the towns and villages, you have no<br/>attachment at all. Why don&#x27;t you make friends with the people?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「端拱树下坐，　　闲静独思惟，为失于财宝，　　为欲求大财？城邑聚落中，　　都无爱著心，何不与众人，　　而共作亲友？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke a verse in reply:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊说偈答言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>I have attained great wealth, and my mind has attained tranquility<br/>I have destroyed the army of desire, and am not attached<br/>to wonderful forms at all. Sitting alone in meditation, I experience<br/>the supreme bliss. For this reason, I do not seek friends at all.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「我以得大财，　　心中得寂灭，我坏爱欲军，　　妙色都不著。独处而坐禅，　　最受第一乐，以是因缘故，　　都不求亲友。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The demoness, pleased, spoke another verse:</p></td><td lang="lzh" class="agama-chi"><p>魔女适意复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Where does the bhikṣu dwell, able to cross the five swift currents and also<br/>pass beyond the six swift currents? In which samādhi does he attain to cross<br/>the shore of great desire and forever be free from the bondage of existence?</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「比丘住何处，　　能度五驶流，六驶流亦过？　　入何禅定中，得度大欲岸，　　永离有摄缚？」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke another verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The body attains soft and blissful ease, the mind attains good liberation, the mind<br/>is free from all karmic activities, and the mind does not retreat. Attaining to<br/>cut off the dharmas of contemplation and discernment, attaining to be free from anger<br/>attachment, and agitation, attaining to abide in this abode, one can cross the five<br/>swift currents. And also cross the sixth, practicing such sitting meditation, one can cross<br/>the great fetter of desire and also be free from the bondage of existence.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「身获柔软乐，　　心得善解脱，心离于诸业，　　意不复退转。得断觉观法，　　得离瞋爱掉，得住此处住，　　能度五驶流。并度第六者，　　作如是坐禅，能度大欲结，　　并离有摄流。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The demoness was delighted and spoke another verse:</p></td><td lang="lzh" class="agama-chi"><p>魔女悦彼复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>Having already cut off the fetter of desire, being free from the places of<br/>attachment, having many desires to cross the swift currents, having many desires to cross<br/>the shore of death, only the wise and intelligent ones can cross such difficulties.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「已断于爱结，　　离众所著处，多欲度驶流，　　多欲度死岸，唯有黠慧者，　　能度如斯难。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke another verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊复说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The great effort to rescue and liberate, the Tathāgata&#x27;s true Dharma to liberate<br/>those who are liberated according to the Dharma, the wise ones all rejoice.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「大精进济拔，　　如来正法度，如法得度脱，　　智者莫不欣。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The three daughters, not having accomplished their wishes, returned to their father. At that time, the Demon King scolded the three daughters and spoke a verse:</p></td><td lang="lzh" class="agama-chi"><p>三女不果所愿，还至父所。尔时，魔王呵责三女，因说偈言：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The three daughters tried to destroy him, but his appearance was like lightning<br/>Facing that great effort, it was like wind blowing on a cotton cloth<br/>Claws tried to destroy the mountain, teeth bit on iron balls, a foolish<br/>one tried to suspend Mount Tai with lotus fibers. The Buddha has already<br/>liberated those who are attached, wanting to debate with him. A snare tried<br/>to catch the wind, wanting to bring down the moon in the sky<br/>With hands cupping the great ocean, hoping to dry it up. The Buddha<br/>has already left all attachments, wanting to go and debate with him. Lifting<br/>a foot to cross Mount Sumeru, searching for ground in the great ocean<br/>The Buddha has already emerged from all attachments, wanting to go and debate with him.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「三女占坏彼，　　形容犹如电，向彼大精进，　　如风吹兜罗。爪以欲坏山，　　齿齚于铁丸，婴愚以藕丝，　　欲悬于太山。佛已度众著，　　欲共彼讲论，羂摾欲捕风，　　欲下虚空月。以手掬大海，　　望欲得干竭，佛已离诸著，　　欲往共讲论。举脚度须弥，　　大海中觅地，佛已出诸著，　　而往共讲论。」</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Demon King was worried, regretful, and remorseful. He then disappeared and returned to his heavenly palace.</p></td><td lang="lzh" class="agama-chi"><p>魔王忧愁悔恨，于即灭没，还于天宫。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

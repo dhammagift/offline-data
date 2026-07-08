@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>DN 23 (Part 2) — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Dirgha-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+/* NOTE: was "#content .comp-body p.origin-note" -- but this <p> is emitted
+   as a sibling BEFORE <div class="comp-body">, not inside it, so that
+   selector never matched anything and centre/italic/opacity were all
+   silently no-ops. Scoped to #content directly, and given its own
+   bottom margin so there's breathing room before the "Read:" line. */
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+/* Indented block quotations (translated sutta passages, quotations of
+   other scholars' arguments) -- the source PDF sets these apart with
+   nothing but a clear extra indent on the whole passage (no rule, no
+   border, no quote marks), so match that plainly but make the indent
+   itself generous enough to read as obviously different at a glance. */
+#content .comp-body p.quote-block { margin: 0 0 0.8em 3em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="pressed w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">DN 23: Pāyāsi-sutta (Part 2 of 2)</h2>
+<div id="nextprev"><a id="previous-sutta" href="./dn23comp_1.html#content"></a><a id="next-sutta" href="./dn26comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Dīrgha-āgama Studies</em> (Dharma Drum Institute of Liberal Arts Research Series 6). Dharma Drum Publishing Corporation, Taipei, 2017.</p></div>
+		<p class="origin-note"><em>Originally published in 2013 under the title "Debate with a Sceptic – The Dīrgha-āgama Parallel to the Pāyāsi-sutta (2)" in the <i>Indian International </i> <i>Journal of Buddhist Studies</i>, 14: 1–27.</em></p>
+<p class="read-links">Read: <a href="../../dn/dn23.html">DN 23</a> / <a href="../../parallels/da7.html">DĀ 7</a> / <a href="../../parallels/ma71.html">MĀ 71</a></p>
+<p class="read-links">Read: <a href="./dn23comp_1.html">Part 1</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>This chapter continues the theme broached in the previous chapter, in which I translated and studied the first part of the <i>Dīrgha-</i><i>āgama </i>parallel to the <i>Pāyāsi-sutta</i> and its report of a debate between the sceptic Pāyāsi and the Buddhist monk Kumārakassapa. In what follows I summarize the salient points of the first part, before moving on to a translation of the second part.</p>
+<p>The doctrine which Pāyāsi is trying to argue in front of Kumārakassapa is formulated in the <i>Dīrgha-āgama </i>version in this manner: "there is no other world, there is no rebirth, there is no result of good and evil." Pāyāsi's proclamation of this view meets with Kumārakassapa's quick reply that the sun and the moon are a visible proof that there are things beyond this world.</p>
+<p>This argument in a way sets the pattern for the ensuing debate, making it clear that the arguments raised in such a setting are not so much about providing logical proofs – after all the existence of the sun and the moon are certainly no proof for rebirth and karmic retribution – but about exhibiting one's rhetorical skills through using good arguments when in the midst of a public debate.</p>
+<p>Pāyāsi continues with descriptions of people he knew who, on the assumption that there is karmic retribution, should have been reborn in hell or in heaven, yet none of them ever came back to confirm having indeed been reborn in this way. Kumārakassapa is able to dismiss these stories with the help of a series of similes.</p>
+<p>Next Pāyāsi describes various ways of executing a thief, which never yielded any evidence that some sort of consciousness does emerge from the body at death. But Kumārakassapa is not short of replies either, and by this juncture of events he seems to be slowly gaining the upper hand over Pāyāsi. In fact, during the remainder of the discussion, Pāyāsi no longer replies with arguments on his own, but simply refuses to relinquish his position.</p>
+<p>In what follows I translate the remainder of the <i>Dīrgha-āgama </i> version, beginning with Pāyāsi's refusal to give up his view.<span class="note" id="dn23comp_2n1"><span class="details"><span class="p">[n.1] [6] The translated part of DĀ 7 is found at T I 45a28 to 47a12, which has been translated into English by Ichimura 2015: 259–268.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p class="quote-block">Discourse to Pāyāsi [second part]</p>
+<p class="quote-block">The brahmin [Pāyāsi] said: "I am not able to give up [my view]. The reason is that from my own birth onwards for a long time I have been repeating it, making it a firm habit.<span class="note" id="dn23comp_2n2"><span class="details"><span class="p">[n.2] [7] The other versions stress his loss of reputation if he were to give up the view he had been holding for such a long time. According to DN 23 at DN II 342,9, King Pasenadi and other kings would think him a fool if he were to give up his view. MĀ 71 at T I 529b14 indicates that people in other countries would know that he had been refuted by Kumārakassapa; cf. also T 45 at T I 834a28. Johansson 1983: 21 comments that "Pāyāsi could not give up his view, since his self-image would then be destroyed."</span></span></span> How could I give it up?"</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. In the distant past, a long time ago, there was a country whose border area had been deserted by the population. In that country there were two men, one wise and one foolish. They said to each other: 'I am your friend, let us together go out of town, selecting [each other] as companions, in search of wealth.'</p>
+<p class="quote-block">"They in turn followed each other and came to a pile in an empty [place]. On seeing that there was hemp on the ground, [the wise one] told the foolish one: 'Let us together take it and bring it back.' Then the two men each took one load on a shoulder pole.</p>
+<p class="quote-block">"When they had gone past the next village, they saw there was hemp thread [abandoned on the ground]. The wise one said: 'What a success! There is hemp thread, which is finer, we can take it.' The other one said: 'I have already taken the hemp and bound it up firmly, I am not willing to drop it.' Then the wise one took the hemp thread, made it into a load, and left.</p>
+<p class="quote-block">"A little further on, they saw hemp cloth. The wise one said: 'What a success! There is hemp cloth, which is finer, we can take it.' The other man said: 'I have taken the hemp and bound it up firmly, I am not willing to drop it.' Then the wise one dropped the hemp thread and took the cloth to make himself a load.</p>
+<p class="quote-block">"Walking together a little further they saw some raw cotton.</p>
+<p class="quote-block">The wise one said: 'Raw cotton is very valuable. This is finer, we can take it.' The other man said: 'I have taken the hemp, bound it up firmly, and carried it a long way, I am not willing to drop it.' Then, the wise one dropped the hemp cloth and took the raw cotton.</p>
+<p class="quote-block">"Walking like this a little further they saw cotton thread, and further on they saw stacks of white [cotton], further on they saw white copper, further on they saw white silver, further on they saw gold. The wise one said: 'If there were no gold, one should take white silver, if there were no white silver, one should take white copper … <i>up to</i> … hemp thread, if there were no hemp thread, one should take hemp. Now in this village there is a large [amount] of gold, a supreme and massive treasure. You should drop that hemp, I shall drop the silver, and we together take the gold, load ourselves and go back.' The</p>
+<p class="quote-block">other man said: 'I have taken this hemp, bound it up firmly, and carried it a long way, I am not willing to drop it. You take what you like, load yourself with it according to your wish.'</p>
+<p class="quote-block">"The wise one dropped the silver and took the gold, loaded it on a shoulder pole and returned home. His family members, who saw from afar that he had gained a big treasure of gold, were delighted to receive him. When the one who had gained the gold saw how his family members received him, he was greatly delighted. The ignorant man carried the hemp and returned home. His family members on seeing him were not pleased and did not rise to receive him. That carrier of hemp was very sad and ashamed.</p>
+<p class="quote-block">"Brahmin, you should now give up this evil and wrong view, let it not for a long time increase suffering and vexation for yourself. Like the man who carried the hemp and who was firmly determined not to take the gold treasure, he returned carrying hemp and vainly tired himself, did not please his family members, remained poor for a long time, and increased his own sadness and suffering."</p>
+<p class="quote-block">The brahmin said: "I am after all not willing to give up this view. Why is that? It is because I have often taught this view [to others], with much benefit. The kings in the four directions have all heard my name and they know me thoroughly for being a follower of annihilationism."</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. In the distant past, a long time ago, there was a country whose border area had been deserted by the population. Then there were merchants with a thousand carts who had to cross this territory where supplies of water, cereals, wood, and grass were insufficient for them. Then the leader of the merchants thought: 'Our company is too large, the supplies of water, cereals, wood, and</p>
+<p class="quote-block">grass are insufficient for us. We should now rather divide into two groups.'</p>
+<p class="quote-block">"The first group went ahead. The leader who was in front of the group that had been dispatched [first] saw a man with a large and crude body, red eyes and dark face, his body splashed with mud.<span class="note" id="dn23comp_2n3"><span class="details"><span class="p">[n.3] [10] Verpoorten 2010: 175 relates the version of this description found in DN 23 to Varuṇa: "on ne peut s'empêcher de reconnaître en lui le dieu védique Varuṇa transformé par le bouddhisme populaire."</span></span></span> Seeing him coming from afar, he asked: 'Where do you come from?'</p>
+<p class="quote-block">"He replied: 'I come from the village that lies ahead.' "[The leader] asked him again: 'Where you are coming from, is there much water, cereal, wood, and grass?'</p>
+<p class="quote-block">"That man replied: 'Where I am coming from, there is an abundance of water, cereal, wood, and grass without end. In the midst of the road I encountered torrential rain. At that place there is much water and also plenty of wood and grass.' He further told the leader of merchants: 'The cereal and grass you have on your column of carts you could completely discard. There will be plenty of it for yourselves, no need to burden the carts.'</p>
+<p class="quote-block">"Then that leader of merchants said to the group of merchants: 'I was walking in front and saw a man, with red eyes and dark face, his body splashed with mud. From afar I asked him: "Where do you come from?"</p>
+<p class="quote-block">"'He replied to me: "I come from the village that lies ahead." "'I asked him again: "Where you are coming from, is there much water, cereal, wood, and grass?"</p>
+<p class="quote-block">"'He replied to me: "There is a great abundance of it." He told me further: "Ahead, in the midst of the road I encountered torrential rain. At that place there is much water and also plenty</p>
+<p class="quote-block">of wood and grass." He further told me: "Sir, the cereal and grass you have on your carts you could completely discard. There will be plenty of it for yourselves, no need to burden the carts." So you should each discard the cereal and grass, the lightened carts will proceed swiftly.'</p>
+<p class="quote-block">"As he had told them, together they each discarded the cereal and grass, so that the lightened carts proceeded swiftly. Like this they went for one day and did not see water or grass, for two days, three days … <i>up to</i> … seven days and still they did not see any. Then the merchants were exhausted and in a wilderness marshland they were eaten up by ghosts.</p>
+<p class="quote-block">"The latter group followed the road in turn. The leader who was in front also saw a man with red eyes and dark face, his body splashed with mud. Seeing him coming from afar, he asked: 'Where do you come from?' That man replied: 'I come from the village that lies ahead.'</p>
+<p class="quote-block">"[The leader] asked him again: 'Where you are coming from, is there much water, cereal, wood, and grass?'</p>
+<p class="quote-block">"That man replied: 'There is a great abundance of it.' He further told the leader of merchants: 'In the midst of the road I encountered torrential rain. At that place there is much water and also plenty of wood and grass.' He further told the leader of merchants: 'Sir, the cereal and grass you have on your column of carts you could in turn discard. There will be plenty of it for yourselves, no need to burden the carts.'</p>
+<p class="quote-block">"Then that leader of merchants turned back and said to the group of merchants: 'I was walking in front and saw a man, who instructed me like this:<span class="note" id="dn23comp_2n4"><span class="details"><span class="p">[n.4] [11] Adopting the variant 導 instead of 道.</span></span></span> "Sir, the cereal and grass you are having on your carts you could completely discard. There will be plenty of it for yourselves, no need to burden the carts."'</p>
+<p class="quote-block">"Then, the leader of merchants said: 'You should be careful and not discard the cereal and grass. We must first get new [supplies], after that we can discard it. Why is that? Continuously replacing old [supplies] with new ones, we will subsequently get to cross this wilderness.'</p>
+<p class="quote-block">"Then the merchants continued with their heavy carts. Like this they went for one day and did not see water or grass, for two days, three days … <i>up to</i> … seven days and still they did not see any. But they saw that the men who had gone in front had been eaten up by ghosts and their bones were left scattered around.<span class="note" id="dn23comp_2n5"><span class="details"><span class="p">[n.5] [12] According to DN 23 at DN II 346,11 and MĀ 71 at T I 530b17, the leader of the second group of merchants tells his followers to take from the merchandise that had been carried by the first group. The tale in T 45 differs from the others, as at T I 834c4 the second group arrives in time to rescue the first group.</span></span></span></p>
+<p class="quote-block">"Brahmin, that red-eyed and dark-faced one was a <i>yakkha</i>. All who follow your teaching will experience suffering for a long time and shall be like that group of merchants that went in front who, because they lacked wisdom and followed what their leader said, lost their own bodies.</p>
+<p class="quote-block">"Brahmin, there are recluses and brahmins who have progressed in wisdom. What they say, if such teachings are upheld and made use of, one will for a long time gain peace.<span class="note" id="dn23comp_2n6"><span class="details"><span class="p">[n.6] [13] Such a remark is not found in the parallel versions.</span></span></span> It is like that later group of merchants who, because of being wise, escaped from the danger. Brahmin, you should now give up this evil view, let it not for a long time increase suffering and vexation for yourself."</p>
+<p class="quote-block">The brahmin said: "I am after all not willing to give up this view. Suppose people then [think they can] come and strongly admonish me, that will arouse my anger, hence I am not giving up this view."</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. In the distant past there was a country whose border area had been deserted by the population.</p>
+<p class="quote-block">"Then one man was fond of rearing pigs. On going to an empty village, he saw that there was dry dung. He in turn thought to himself: 'At this place there is plenty of dung, my pigs and piglets are hungry. Now I shall take straw to bind up this dry dung, put it on my head, and return.' He then took straw, bound up the dung, and put it on [his head]. On the way he came across torrential rain. The dung became wet and started to flow down until it reached his heels.</p>
+<p class="quote-block">"People who saw him all said: 'Madman, that dung is to be discarded in a stinky place, even when the sky is clear one should not carry it [on one's head], let alone carry it [on one's head] when going amidst the rain.'</p>
+<p class="quote-block">"That man thereupon got angry and with abusive words retorted: 'You are foolish yourselves, you do not know that in my house the pigs and piglets are hungry, if you knew you would not call me a fool.'</p>
+<p class="quote-block">"Brahmin, you should now give up this evil view, let it not keep you confused, experiencing suffering for a long time, like that foolish and childish person who went carrying dung [on his head], and who on being scolded by people became angry and retorted with abusive words, saying that they did not know."</p>
+<p class="quote-block">The brahmin said to Kassapa: "If on practising what is reckoned to be wholesome you are reborn in heaven, then death is better for you than being alive. You should take a knife and cut your own throat, drink poison to die, or with a fivefold noose [hang] yourself, or throw yourself from a high cliff. Now you are greedy for life and thus unwilling to kill yourself, therefore I know that death is not better [for you] than being alive."</p>
+<p class="quote-block">Kassapa said again: "Wise ones understand with the help of a simile, so I will now deliver another simile to you. In the past in this village of Setavyā a brahmin, who was very old, one hundred and twenty years, had two wives. The first had a son, the other was pregnant. Then, not long after that, the brahmin passed away.</p>
+<p class="quote-block">"The child of the elder mother said to the younger [step-] mother: 'Whatever there is of wealth and treasures, that is completely mine, you will not get any part of it.' Then the younger [step-]mother said: 'You wait a little, you must give me a part for [the child with which] I am pregnant. If I give birth to a boy, you should give him part of the wealth. If I give birth to a girl, you can marry her yourself and get the property.'</p>
+<p class="quote-block">"That child kept eagerly requesting the wealth three times. The younger [step-]mother replied as before, but that child kept pressing his [demand] unceasingly. Then the younger [step-]mother took a sharp knife with the determination to know for herself whether in her abdomen there was a male or a female."</p>
+<p class="quote-block">[Kassapa] said to the brahmin: "The mother killed herself and also injured the foetus. Brahmin, you are also like that, already killing yourself, you also wish to kill other people. If a recluse or a brahmin diligently cultivates what is wholesome and is in possession of moral virtue, as long as he is in the world, he is of much benefit for <i>deva</i>s and men to obtain peace. I shall now deliver a last simile for you, so that you shall know that this evil view is a calamity.<span class="note" id="dn23comp_2n7"><span class="details"><span class="p">[n.7] [15] The simile of the woman who cut open her own belly comes earlier in the other versions; cf. DN 23 at DN II 330,26, MĀ 71 at T I 527b20, and T 45 at T I 832c11. At the present juncture in DĀ 7 Kumārakassapa continues after this simile right away with another simile, without any reply by Pāyāsi to the earlier simile. This gives the impression that some accidental shift during transmission would have been responsible for the present location of this simile in DĀ 7.</span></span></span></p>
+<p class="quote-block">"In the past in this village of Setavyā there were two players who were good at dice. When the two men were competing by playing, one of them won. Then the loser told the winner: 'Let us stop for today, we shall try again tomorrow.' The loser returned to his home, took the dice for playing, applied poison to it, and exposed it to the sun so that it dried.<span class="note" id="dn23comp_2n8"><span class="details"><span class="p">[n.8] [16] Adopting the variant 曝 instead of 暴.</span></span></span></p>
+<p class="quote-block">"The next day he took the dice and approached the winner, saying: 'We can compete in playing.' Before they played together, he first gave the poisoned dice to the winner. The winner swallowed it.<span class="note" id="dn23comp_2n9"><span class="details"><span class="p">[n.9] [17] It seems that the translators did not fully understand the point of this simile; in fact MĀ 71 at T I 530b29 speaks of gambling with "cakes", 餅 (T 45 does not have this simile at all). What according to DN 23 at DN II 348,20 the other player swallowed is a <i>kali</i>, i.e., a "bad throw"; cf. the discussion below. The translation of DN 23 in Walshe 1987: 364 that the two were "using nuts as dice" seems to be without support in the original. The same is the case for the translation of DĀ 7 by Ichimura 2015: 265 that the loser "gave the dice to the winner who, on receiving them, licked them to moisten them before casting. Then the man who had poisoned the dice picked them up and moistened them by licking them." Besides not reflecting the original, this does not seem to work, as the one who poisoned the dice would hardly lick them himself.</span></span></span> When the loser had given him the poisoned dice and got him to swallow it, that poison worked its effect and his body was in cramps. Then the loser spoke these abusive words:</p>
+<p class="quote-block">"'I have applied a concoction to the dice And you swallowed it without realizing it, Inferior player, you have swallowed it, In future you will know this for yourself.'" Kassapa said to the brahmin: "You should now give up this evil view, let it not engross you in confusion, poisoning your-</p>
+<p class="quote-block">self with increasing suffering, like that player who swallowed the poison without realizing it."</p>
+<p class="quote-block">Then the brahmin said to Kassapa: "When the venerable one at first set forth the simile of the moon, I already understood at that time. <span class="note" id="dn23comp_2n10"><span class="details"><span class="p">[n.10] [18] Pāyāsi's indication that he had already been pleased with the first simile (found in the first part of the discourse translated in the previous chapter) and just wanted to continue discussing comes in DN 23 at DN II 352,10 after the simile of the two men carrying hemp. MĀ 71 at T I 531b8 has a similar remark by Pāyāsi, preceded at T I 531a7 by the report that Kumārakassapa explicitly announced that he would deliver a last simile. This simile, not found in DN 23 or DĀ 7, describes a pig challenging a tiger for a fight; cf. also the discussion below.</span></span></span> I consequently kept on advancing and retreating and did not at the time accept [defeat], since I wished to see Kassapa's skill and wisdom, and to arouse and strengthen my faith. Now I have faith and accept it, taking refuge in Kassapa."<span class="note" id="dn23comp_2n11"><span class="details"><span class="p">[n.11] [19] Whereas MĀ 71 at T I 531b11 and T 45 at T I 835b29 also report that Pāyāsi wanted to take refuge in Kumārakassapa, according to DN 23 at DN II 352,19 he straight away took refuge in the Buddha, the Dharma, and the community of monks.</span></span></span></p>
+<p class="quote-block">Kassapa explained: "Do not take refuge in me. You should take refuge in the superior venerable one in whom I have taken refuge."</p>
+<p class="quote-block">The brahmin said: "I did not investigate in whom to take refuge. That superior venerable one, where is he now?"</p>
+<p class="quote-block">Kassapa explained: "My teacher, the Blessed One, has attained final extinction recently."<span class="note" id="dn23comp_2n12"><span class="details"><span class="p">[n.12] [20] The information that the Buddha had recently passed away is not given explicitly in the parallel versions, although the circumstance that DN 23 at DN II 316,2 begins without a reference to the Buddha's whereabouts would imply the same; in fact the commentary on the stanzas attributed in the <i>Vimānavatthu</i> to Pāyāsi, reborn as a <i>deva</i>, Vv-a 297,15 (commenting on stanzas 1104f, Vv 109,21), explicitly indicates that the discussion between Pāyāsi and Kumārakassapa took place after the Buddha's funeral. The Jain version in Bollée 2002: 15 has a different setting, as here Mahāvīra tells his chief disciple Goyama how a certain <i>deva </i>has attained its present glory. This <i>deva </i>lived in the past in Setavyā as a materialistic king by the name of Paesi (the counterpart to Pāyāsi in the Buddhist versions). Thus here the debate takes place in the past, before the time of Mahāvīra and the Buddha.</span></span></span></p>
+<p class="quote-block">The brahmin said: "If the Blessed One were still alive, I would personally have gone to see him, taken refuge and worshipped him, without bothering whether he [stayed] far or near.<span class="note" id="dn23comp_2n13"><span class="details"><span class="p">[n.13] [21] An indication that Pāyāsi would have approached the Buddha himself, if he had still been alive, is not recorded in the parallel version.</span></span></span> Now that I hear from Kassapa that the Tathāgata has attained final extinction, I take refuge in dependence on the completely extinguished Tathāgata, the Dharma, and the Community.</p>
+<p class="quote-block">"Kassapa, accept me in the right Dharma as a lay follower, from now for my whole life I shall not kill, not steal, not commit sexual misconduct, not deceive, and not drink alcohol; and I also shall undertake a great offering for everyone."<span class="note" id="dn23comp_2n14"><span class="details"><span class="p">[n.14] [22] T 45 concludes with Pāyāsi's conversion and does not refer to a sacrifice or other subsequent events.</span></span></span></p>
+<p class="quote-block">Kassapa said: "If you slaughter living beings and with beatings make servants work for the sake of a sacrificial gathering, your merit will not be pure. It is just like barren, stony, and infertile ground, with much thorny undergrowth, if one cultivates it, one will certainly get nothing. If you slaughter living beings and with beatings make servants work for the sake of a great sacrificial gathering, making offerings with wrong view to the community, the merit will not be pure.</p>
+<p class="quote-block">"If you undertake a great offering where living beings are not harmed, where servants are not made to work by being beaten with sticks, but joyfully arrange a sacrificial gathering, a pure giving to the community, you will get great merit. It is</p>
+<p class="quote-block">just as by cultivating a good field according to the proper time one will certainly get fruits."<span class="note" id="dn23comp_2n15"><span class="details"><span class="p">[n.15] [23] In DN 23 at DN II 352,26 the issue at stake is also the type of sacrifice that involves killing living beings, comparable to broken seeds sown in a barren field without a proper water supply. MĀ 71 at T I 531b17 proceeds differently, as here Kumārakassapa asks how long Pāyāsi's intended charity will last and how many people will benefit from it. On being told that up to a thousand people may come and the charity will last for one to seven days, Kumārakassapa objects that some may not come in time for this and thus the king will miss out on the merit to be gained by giving to them, a situation he then illustrates with the example of good seeds sown in a fertile field that does not receive water in due time. Kumārakassapa then suggests that Pāyāsi should rather institute a constant alms giving, which would be comparable to good seeds sown in a fertile field that receives water in due time.</span></span></span></p>
+<p class="quote-block">[The brahmin said]: "Kassapa, from now on I shall constantly make pure offerings to the community without interruption."</p>
+<p class="quote-block">At that time, there was a young brahmin, by the name of Madhu[ka],<span class="note" id="dn23comp_2n16"><span class="details"><span class="p">[n.16] [24] DĀ 7 at T I 46c22: 摩頭; Akanuma 1930/1994: 351 lists 摩頭 as the first two out of four characters corresponding to Madhukula, and Hirakawa 1997: 562 s.v. 摩頭 gives as equivalent Madhuka. DN 23 at DN II 354,18 speaks of the young brahmin Uttara, as does MĀ 71 at T I 532a6: 優多羅.</span></span></span> who was standing behind Pāyāsi. Pāyāsi turned around and said: "I wish to arrange a great offering for everyone. You should carry it out for me and organize it."</p>
+<p class="quote-block">Then, having heard what Pāyāsi had said, the young brahmin carried it out. After the great offering, he said: "May Pāyāsi not get its meritorious rewards in this world or in the next."<span class="note" id="dn23comp_2n17"><span class="details"><span class="p">[n.17] [25] The formulation in MĀ 71 at T I 532a7 is similar, but in DN 23 at DN II 355,2 Uttara states that through this charity he will be associated with Pāyāsi in the present life, not in the next life.</span></span></span> Then Pāyāsi heard that that [young] brahmin, after carrying out the offering, spoke like this: "May Pāyāsi not get its meritorious rewards in this world or in the next."</p>
+<p class="quote-block">He commanded the [young] brahmin [to come] and said: "Are you speaking like this?"</p>
+<p class="quote-block">He replied: "Like this is truly what I said. The reason is that the food that is being arranged to be given to the community is gross, harmful, and bad. If it were to be shown to the king,<span class="note" id="dn23comp_2n18"><span class="details"><span class="p">[n.18] [26] Here DĀ 7 switches to speaking of him as a "king"; in MĀ 71 and T 45 Pāyāsi is throughout referred to as a king; cf. also Lévi 1932a: 80,4.</span></span></span> the king would not even be able to take it with his hands for a moment, let alone eat it. It is not possible to delight in what is at present being arranged, how could it give pure results in the next world?</p>
+<p class="quote-block">"The king [Pāyāsi] gives to the community clothes made just of hemp cloth. If these were to be shown to the king, the king would not even for a moment be able to move his feet towards it, let alone being able to wear it himself. It is not possible to delight in what is at present being arranged, how could it give pure results in the next world?"</p>
+<p class="quote-block">Then the brahmin [Pāyāsi] said to the [young] brahmin: "From now on, you make offerings to the community with food as I eat and with clothes as I wear."</p>
+<p class="quote-block">Then the [young] brahmin carried out the instruction and supplied the community with food as the king ate and clothes as the king wore. Then, for having arranged this pure giving, at the breaking up of the body at death the brahmin [Pāyāsi] was reborn in an inferior heaven.<span class="note" id="dn23comp_2n19"><span class="details"><span class="p">[n.19] [27] DN 23 at DN II 356,4 and MĀ 71 at T I 532a23 report that he was reborn in the realm of the Four Great Kings.</span></span></span> For actually carrying out [the offering] to the assembly, at the breaking up of the body at death the [young] brahmin was reborn in the Heaven of the Thirty-three.</p>
+<p class="quote-block">At that time, the brahmin Pāyāsi, the young brahmin and the brahmins and householders of Setavyā, having heard what</p>
+<p class="quote-block">Kumārakassapa had said, delighted in it and received it respectfully.<span class="note" id="dn23comp_2n20"><span class="details"><span class="p">[n.20] [28] DN 23 at DN II 356,11 and MĀ 71 at T I 532a25 continue at this point with another episode involving the monk Gavampati; cf. also the discussion below.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>The above translated part of the <i>Dīrgha-āgama </i>account of the debate between Pāyāsi and Kumārakassapa shows several variations in sequence when compared to the parallel versions, as can be seen below in table 4, which takes the sequence of the arguments in the <i>Dīrgha-āgama </i>version as its point of reference. The table shows that the <i>Dīrgha-āgama </i>discourse and the <i>Dīgha-</i><i>nikāya </i>parallel have the same kind of arguments, although differing in the sequence, a fairly natural occurrence in orally transmitted literature.<span class="note" id="dn23comp_2n21"><span class="details"><span class="p">[n.21] [29] On this topic cf. in more detail Anālayo 2011b: 874–876.</span></span></span></p>
+<p>The individual translation differs from the other versions inasmuch as it does not have the simile of the two dice players. In the parallel versions the point of this simile is also not entirely clear, as one might wonder why one of the players should swallow the dice in the first place.<span class="note" id="dn23comp_2n22"><span class="details"><span class="p">[n.22] [30] Cf. above p. 330 note 9.</span></span></span></p>
+<p>The <i>kali </i>that according to the Pāli account is swallowed by one of the players appears to refer to an unlucky throw in an ancient Indian dice game. The same expression recurs in a stanza in the different <i>Dharmapada</i>s, which refers to a dice player who cheats by trying to hide such a <i>kali </i>throw.<span class="note" id="dn23comp_2n23"><span class="details"><span class="p">[n.23] [31] The stanza begins by indicating that someone hides his own faults and then illustrates this with the hiding of a <i>kali</i> throw by a cheat, Dhp 252: <i>kaliṃ va </i> <i>kitavā saṭho</i>, with Indic-language parallels in Patna <i>Dharmapada</i> 166, Cone 1989: 146: <i>kaliṃ va kṛtavāṃ śaṭho</i>, Gāndhārī <i>Dharmapada</i> 272, Brough 1962/2001: 161: <i>kali va kidava śaḍha</i>, and <i>Udānavarga</i> 27.1, Bernhard 1965: 333: <i>kṛtvā yadvat kaliṃ śaṭhaḥ</i>.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 4: Sequence of Kumārakassapa's Arguments</caption>
+<tr><th>DĀ 7</th><th>DN 23</th><th>MĀ 71</th><th>T 45</th></tr>
+<tr><td>sun and moon (1)</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>criminal on way to execution (2)</td><td>2</td><td>2</td><td>2</td></tr>
+<tr><td>man fallen into cesspit (3)</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td>lifespan in heaven (4)</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>blind man and colours (5)</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>experiences in dream (6)</td><td>13</td><td>13</td><td>13</td></tr>
+<tr><td>child chops up fire-sticks (7)</td><td>6</td><td>9</td><td>9</td></tr>
+<tr><td>weighing hot and cold iron (8)</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>searching for sound of conch (9)</td><td>9</td><td>6</td><td>6</td></tr>
+<tr><td>carry hemp instead of gold (10)</td><td>7</td><td>7</td><td>7</td></tr>
+<tr><td>two merchant caravans (11)</td><td>11</td><td>10</td><td>11</td></tr>
+<tr><td>carrying dung on head (12)</td><td>12</td><td>11</td><td>10</td></tr>
+<tr><td>pregnant woman cuts open belly (13)</td><td>14</td><td>14</td><td>12</td></tr>
+<tr><td>dice player cheats (14)</td><td>10</td><td>12</td><td>pig</td></tr>
+<tr><td></td><td></td><td>pig</td><td></td></tr>
+</table>
+<p>Lüders (1940: 161) explains that this type of ancient Indian dice game might have involved a considerable number of unmarked dice. At first a random number of these dice are thrown. The task of the gamblers now is to recognize as quickly as possible the number of dice that have been thrown in order to be able to throw another number of dice in addition to those already out with the aim of arriving at one or the other of several total numbers considered fortunate. Falling short of such a total number, or exceeding it, is considered a failure.</p>
+<p>Thus hiding or swallowing a dice would be a way of cheating, as in this way the total number of dice can be changed and a <i>kali</i>, an unfortunate throw, can be altered and the game be won. In the present simile, the other player anticipates that the cheat will again swallow a dice to turn a <i>kali </i>into a lucky throw, hence he devises the stratagem of poisoning the dice.</p>
+<p>Another difference is that the <i>Madhyama-āgama </i>discourse and the individual translation have an additional argument about a pig that challenges a tiger or a lion for a fight.<span class="note" id="dn23comp_2n24"><span class="details"><span class="p">[n.24] [32] Cf. above p. 331 note 10.</span></span></span> According to the <i>Madh</i><i>yama-āgama </i>version of this simile,<span class="note" id="dn23comp_2n25"><span class="details"><span class="p">[n.25] [33] MĀ 71 at T I 531a7.</span></span></span> a large pig, with a following of five hundred pigs, encounters on its path a tiger (or a lion, according to the individual translation).<span class="note" id="dn23comp_2n26"><span class="details"><span class="p">[n.26] [34] T 45 at T I 835b12.</span></span></span> The pig reflects that if it were to fight with the tiger it would certainly get killed, but if it were to run away, its followers would look down on it. Thinking of some stratagem to solve this dilemma, the pig challenges the tiger to let it pass or to engage in a fight. The tiger accepts the challenge for a fight.</p>
+<p>The pig asks to be excused for a moment, as it has to put on its armour, which the tiger allows. Thereon the pig goes to a cesspit and rolls around in the faeces until its entire body is smeared with excrement. Armed in this way, the pig returns to challenge the tiger. The tiger is utterly disgusted, will not even go near the pig, and lets the pig pass. Once having passed by the tiger, the pig again challenges the tiger for a fight, insinuating that the tiger is afraid. The tiger, unable to bear the stench of the pig, concedes victory to the pig.</p>
+<p>With this last in his series of similes in the <i>Madhyama-āgama </i> discourse and in the individual translation, Kumārakassapa makes it clear to Pāyāsi that he is not going to continue discussing endlessly, if his opponent keeps on refusing to give in to reason.</p>
+<p>Another difference between the parallel versions concerns the final part of the discourse. Whereas the individual translation concludes with Pāyāsi's conversion by taking refuge and the five precepts, the other versions continue with a description of his attempt to make merit through an offering or a 'sacrifice'.</p>
+<p>In this way, after Pāyāsi has been depicted as unable to stand his ground in debate, now he is also shown to be a fool when it comes to making merit. The <i>Dīgha-nikāya</i> version and the <i>Madh</i><i>yama-āgama </i>discourse further expand on this topic with the episode of the monk Gavampati, who meets the recently reborn Pāyāsi.<span class="note" id="dn23comp_2n27"><span class="details"><span class="p">[n.27] [35] Cf. above p. 335 note 20.</span></span></span> The <i>deva </i>who formerly was Pāyāsi asks Gavampati to inform people on earth that they should not give grudgingly, as he had done.</p>
+<p>Rhys Davids (1910: 347) notes that this final part of the <i>Pā</i><i>yāsi-sutta</i> "shows us a messenger from the gods coming down from heaven to teach the doctrine of generosity (dâna)"; a teaching with an obvious intent to instruct the audience of the discourse. Norman (1983: 40f) reasons that perhaps "the death of the Buddha had led to a falling-off in the gifts made to the <i>Saṅgha</i>", hence the tale of Pāyāsi reborn as a god was "employed as a fit means of reminding … Buddhists … of the need to be generous". In short, this last part of the discourse has the fairly evident purpose of propagating the importance of open-handed generosity.</p>
+<p>Evans (2012b: 533), however, suggests that the present passage in the <i>Dīgha-nikāya</i> version "illustrates how desire for a happy rebirth diminishes the goodness of deeds", since because Pāyāsi's "motivation was a happy rebirth rather than true generosity, he was reborn in the lowest region of heaven in a lonely, empty mansion". It seems to me that this is not what the text indicates; in fact the <i>Pāyāsi-sutta</i> of the <i>Dīgha-nikāya</i> explicitly reports that Pāyāsi's low rebirth was due to his giving charity in a careless manner,<span class="note" id="dn23comp_2n28"><span class="details"><span class="p">[n.28] [36] DN 23 at DN II 356,1: <i>asakaccaṃ dānaṃ datvā asahatthā dānaṃ datvā </i> <i>acittikataṃ </i>(Be and Ce: <i>acittīkataṃ</i>) <i>dānaṃ datvā apaviddhaṃ </i>(Se: <i>apaviṭ</i>- <i>ṭhaṃ</i>)<i> dānaṃ datvā</i>.</span></span></span> not because of any aspiration he may have had. That is, as far as I can see the present passage does not imply that desire for a happy rebirth adversely affects the acquisition of merits. The point rather seems to be to inculcate in the audience the need to give in a considerate and generous manner.</p>
+<p>The absence from the individual translation of this whole episode about Pāyāsi's miserly offerings and their meagre results gives the impression that this part could be a later addition,<span class="note" id="dn23comp_2n29"><span class="details"><span class="p">[n.29] [37] The Jain version in Bollée 2002: 166 proceeds differently. After his conversion to Jainism, Paesi no longer pays attention to his royal duties as before and also neglects his harem. The queen decides to poison him. Paesi meets the pain of the poisoning with the composure befitting a Jain follower and is reborn as a <i>deva</i> in heaven. Mahāvīra concludes his account of events with a prediction that this god, the former Paesi, will in future be reborn as a human and become a <i>kevalin</i>.</span></span></span> although it needs to be kept in mind that the individual translation on other occasions shows signs of textual loss.<span class="note" id="dn23comp_2n30"><span class="details"><span class="p">[n.30] [38] Cf. above p. 304f note 22 and p. 330 note 9.</span></span></span></p>
+<hr class="chapter-divider">
+<h3>The Debate Character of the Discourse</h3>
+<p>The central topic of the present discourse is the debate between Pāyāsi and Kumārakassapa.<span class="note" id="dn23comp_2n31"><span class="details"><span class="p">[n.31] [39] DN 23 is thus well in line with a general tendency of <i>Dīgha-nikāya </i>discourses described by Manné 1990: 79 as being "for the purposes of propaganda, to attract converts and lay-supporters to the new religion"; cf. also above p. 3.</span></span></span> This debate has been interpreted in different ways by modern scholars. Jayatilleke (1963/ 1980: 104f) focuses on the arguments used by Pāyāsi, which he sees as evidence for ancient Indian materialism. According to his assessment, the present discourse shows that</p>
+<p class="quote-block">by this time, if not earlier, some people had thought of consciously devising experiments to test the validity of a theory … and either accepted or rejected the theory on the basis of the results obtained.</p>
+<p>I am under the impression that this interpretation does not fully take into account the debate character of the present discourse. I doubt we can conclude that Pāyāsi must have actually undertaken those gruesome experiments by killing various arrested criminals. What the present discourse presents is a public verbal combat, where it is less relevant whether Pāyāsi ever inflicted all the tortures he describes or not. He may equally well just have imagined them as good arguments.</p>
+<p>The same holds for his earlier arguments, which work independently of whether he indeed asked his friends on the verge of death to come back and tell him about their rebirth or whether his description should be understood as having been made up for the sake of debating. With all of the arguments put forward by Pāyāsi, the dynamics of the debate would work just as well if those stories had only been invented by him.</p>
+<p>Regarding the arguments employed by Kumārakassapa in reply, Evans (2008: 61) notes that the</p>
+<p class="quote-block">opening argument is to ask whether the sun and the moon are of this world or another … [which involves] right away the use of false dilemma … and consequent equivocation of the</p>
+<p class="quote-block">'other world' of the sun and the moon and the 'other worlds' of rebirth, with results of deeds thrown in gratuitously.</p>
+<p>According to Evans (2008: 66), the type of arguments used by Kumārakassapa make it clear</p>
+<p class="quote-block">that he would never have agreed that any specific observation would falsify the kamma-rebirth mythology … with his use of false dilemma, equivocation, begging the question, and fear, he may as well be arguing for the existence of flying saucers or for divine creation as against evolution. The Pāyāsisutta, in short, offers a strong rejection of the thesis that Buddhism is scientific, and, indeed, Kassapa wants Pāyāsi to believe <i>in spite </i>of what he knows empirically. The sutta thus seems to contradict the usual interpretation of, for example, the Kālāmasutta, that we should not merely believe but rather that we should come to know for ourselves through, perhaps empirical, inquiry.<span class="note" id="dn23comp_2n32"><span class="details"><span class="p">[n.32] [40] On the <i>Kālāma-sutta</i> cf. Evans 2007; with a reply by Pāsādika 2012.</span></span></span></p>
+<p>In sum, Evans (2008: 67) concludes that the <i>Pāyāsi-sutta </i>"offers a clear rejection of the thesis that Buddhism is scientific" in the sense of allowing for the falsifiability of claims.</p>
+<p>This seems to me to be another instance of losing sight of the debate character of the <i>Pāyāsi-sutta</i>, which I see as a natural result of an approach that relies on modern Western definitions of science and Western conceptions of logic to evaluate the scientific character of early Buddhist thought. Such an evaluation, I would contend, rather needs to be undertaken by taking into account the ancient Indian setting.<span class="note" id="dn23comp_2n33"><span class="details"><span class="p">[n.33] [41] Evans 2008: 54f explains that "the presumption that Buddhism is scientific in some modern sense retains much popular currency" and thus he wishes to engage "the question whether or not Buddhism is scientific, as part of an attempt to clear the air of unexamined projections onto Buddhist epistemology with the hope eventually to gain a better, positive understanding of that epistemology". For the sake of a better understanding of early Buddhist thought, I think it would be important first of all to acknowledge that an ancient Indian system of thought cannot be adequately understood if it is taken out of its context and then evaluated through the lenses of modern Western philosophical concepts. In fact Evans 2012a: 121 is aware of this problem in general, as he states that "one danger in interpreting texts from times and cultures far removed from our own is the tendency – perhaps inevitability – of projecting our own presuppositions into the material." Applied to the present case, then, the question to be asked could be: "can early Buddhism be considered scientific from the viewpoint of ancient Indian scientific thought?"</span></span></span></p>
+<p>Relevant to an appreciation of the scientific character of early Buddhism within its historical context would then be, for example, the four noble truths as perhaps the most central teaching of early Buddhism. The formulation of these four truths appears to have been deliberately modelled on an ancient Indian medical diagnostic scheme in contrast to the apparently prevalent philosophical speculations in ancient India.<span class="note" id="dn23comp_2n34"><span class="details"><span class="p">[n.34] [42] Cf. in more detail Anālayo 2011e.</span></span></span></p>
+<p>Regarding the topic of belief as against free enquiry, a relevant discourse would be, for example, the <i>Vīmaṃsaka-sutta</i> and its Chinese parallel. According to this discourse, the Buddha openly invited prospective disciples to undertake a rather searching investigation of his claim to being an awakened teacher through various forms of direct and indirect observation.<span class="note" id="dn23comp_2n35"><span class="details"><span class="p">[n.35] [43] For a study of this discourse, MN 47 at MN I 317,20 to 320,25 and its parallel MĀ 186 at T I 731a29 to 732a8, cf. Anālayo 2010f.</span></span></span> When considered within its historical context, in particular keeping in mind ancient Indian conceptions of the role of a teacher, this is a rather impressive instance of advocacy of a principle of free enquiry.</p>
+<p>The <i>Vīmaṃsaka-sutta </i> and its parallel, just as the so-called <i>Kālāma-sutta</i>,<span class="note" id="dn23comp_2n36"><span class="details"><span class="p">[n.36] [44] Cf. below p. 509. The title <i>Kālāma-sutta </i>could be reconstructed from the Chinese, MĀ 16 at T I 438b13: 伽藍經 (which in keeping with a standard pattern gives only the first two syllables of the name), whereas the title of AN 3.65 at A I 188 in Be is rather <i>Kesamutti-sutta </i>(the other editions do not give a title).</span></span></span> reflect a basic pattern that is also evident in early Buddhist meditation theory, according to which doubt is not to be overcome through a mere act of faith,<span class="note" id="dn23comp_2n37"><span class="details"><span class="p">[n.37] [45] Cf. in more detail Anālayo 2009h.</span></span></span> but much rather requires a process of investigation and scrutiny. Such investigation then provides the basis for placing one's faith or confidence in a teacher or a teaching in a way that the <i>Vīmaṃsaka-sutta </i>and its Chinese counterpart consider to be commendable.<span class="note" id="dn23comp_2n38"><span class="details"><span class="p">[n.38] [47] MN 47 at MN I 320,18 speaks of "reasonable faith rooted in vision", <i>ākā</i><i>ravatī saddhā dassanamūlikā</i>, MĀ 186 at T I 732a5 of "faith rooted in vision that is indestructible, being conjoined with knowledge", 信見本, 不壞, 智相應.</span></span></span> This reflects a remarkable attitude towards the appropriate means for arousing faith, when considered within the ancient Indian context.</p>
+<p>Keeping in mind the ancient Indian setting would also make it clear that the <i>Pāyāsi-sutta</i> and its parallels are not about scientific methods or about epistemology, but much rather about a debate. Thus it seems to me beside the point to take the replies given by Kumārakassapa as evidence for evaluating the scientific character of early Buddhist thought.</p>
+<p>Given that a similar discourse exists in the Jain tradition,<span class="note" id="dn23comp_2n39"><span class="details"><span class="p">[n.39] [48] Evans 2008 appears to have been aware only of the Pāli version, as he does not refer to any of the parallels or to the Jain version in his paper.</span></span></span> the arguments employed to refute the sceptical visitor do not only represent Buddhist thought. Instead, the whole discussion shows a monk – be he Buddhist or Jain – standing his ground in a debate with a materialist.</p>
+<p>A proper appreciation of the <i>Pāyāsi-sutta</i> also needs to take into account that the point at stake is not to refute an argument with proofs, but to do so with success in order to win the debate.</p>
+<p>This much can also be seen in the parallel Jain version, where the Jain monk, as pointed out by Balcerowicz (2005: 573),</p>
+<p class="quote-block">gains victory in the debate not through his rigid logic and well-founded argument, but by virtue of verbal aggression and by taking recourse to social etiquette which he claims Paesi has apparently abused by not accepting the teaching of a learned monk.</p>
+<p>In the case of the <i>Pāyāsi-sutta</i> and its parallels, obviously the existence of the sun and the moon – whether conceived of as planets or as denizens of the ancient Indian pantheon – does not imply that there is rebirth or a result of good and evil deeds. The point is simply that Kumārakassapa has given a quick reply with an illustrative example.</p>
+<p>According to the rules of debate, a defeated opponent has to accept the winner as his teacher and follow the victor's doctrine.<span class="note" id="dn23comp_2n40"><span class="details"><span class="p">[n.40] [49] On debate in ancient India cf., e.g., Solomon 1978: 833–875, Matilal 1987, and Bronkhorst 2007b; on principles of debate in the Buddhist tradition Todeschini 2011 and on debate in the <i>Dīgha-nikāya </i>Manné 1992.</span></span></span> This makes it clear why Kumārakassapa immediately extends his argument to the full doctrine he is defending, thereby insinuating that Pāyāsi will have to accept the whole lot unless he is able to come up with a good rejoinder. Thus his reference to rebirth and karmic retribution is a challenge to his opponent to reply, not an ill-conceived logical consequence of the existence of the sun and the moon.</p>
+<p>As Ganeri (2001: 490) explains, in relation to Buddhist debate as described in the <i>Kathāvatthu</i>,</p>
+<p class="quote-block">the primary aim is not to <i>disprove </i>the thesis, but to force a <i>retraction</i> of commitment. So when we evaluate the argumentation used … it is to be evaluated as good or bad with reference to how well it succeeds in forcing such a retraction, and not simply or only or even in terms of its deductive or inductive soundness.</p>
+<p>Regarding Kumārakassapa as a debater, Rhys Davids (1910: 348) comments that,</p>
+<p class="quote-block">as becomes a flowery speaker (citra-kathî) he is lavish in illustration, and tells a number of stories, some of them quite good, and all of them bearing more or less relation (usually less) to the particular point in dispute. They are sufficient, however, to throw dust into the eyes of Pâyâsi.<span class="note" id="dn23comp_2n41"><span class="details"><span class="p">[n.41] [50] The reference to being a <i>citta-kathika</i> relates to the listing of outstanding disciples in the <i>Aṅguttara-nikāya</i>, AN 1.14.3 at AN I 24,28, according to which Kumārakassapa was foremost among the Buddha's disciples in this respect; his abilities as a speaker are also mentioned in the listing of outstanding disciples in EĀ 4.6 at T II 558a12. Presumably he would have earned himself the title accorded to him in AN 1.14.3 on previous occasions, given that the present discourse takes place after the Buddha had passed away and thus could not, <i>pace </i> Mp I 285,14, have been considered the reason for the Buddha to assign him the rank of eminent disciple. In fact the instructions Kumārakassapa receives in the <i>Vammika-sutta</i>, MN 23 at MN I 142,12 (which has parallels in T 95 at T I 918b21, SĀ 1079 at T II 282a22, SĀ2 18 at T II 379c3, and EĀ 39.9 at T II 733b12; for a comparative study cf. Anālayo 2011b: 158ff), show the Buddha explaining to him a teaching that takes into account Kumārakassapa's propensity to imagery and similes.</span></span></span></p>
+<p>The whole point in the end is that "Kassapa refutes his arguments with apt illustrations", as noted by Dasgupta (1922: 106). That his illustrations were indeed apt can be seen from the fact that some of his tales made their way into the Pāli <i>Jātaka </i>collection.<span class="note" id="dn23comp_2n42"><span class="details"><span class="p">[n.42] [51] As already noted by Oldenberg 1912a: 192, the tale of the two dice players recurs in the <i>Litta-jātaka</i>, Jā 91 at Jā I 380,25, whereas the story of the two merchant caravans has a parallel in the <i>Apannaka-jātaka</i>, Jā 1 at Jā I 106,9, in addition to which parallels can be found in T 203.38 at T IV 465c22, translated in Chavannes 1911: 32 and Willemen 1994: 91, and in the Mūlasarvāstivāda <i>Vinaya</i>, D 1 <i>kha</i> 243b6 or Q 1030 <i>ge</i> 228a3; cf. also Panglung 1981: 44. For a study of these two tales as exemplifying a tendency for parables to become <i>jā</i><i>taka</i>s cf. Anālayo 2010b: 60f.</span></span></span> Clearly, the narrations employed by Kumārakassapa had a considerable entertaining appeal in ancient Indian oral society.</p>
+<p>The need to come up with a good argument at the right moment, independent of whether the point made is strictly speaking correct, can be seen by turning to a modern instance of debate in the Tibetan tradition. Dreyfus (2003: 258) reports from his own training in debating that when one is in an actual debate situation,</p>
+<p class="quote-block">it is crucial to remain calm and good-humored, while keeping an eye out for sharp rejoinders that can turn the presence of a large crowd to one's advantage. I remember an incident that took place while I was answering [challenges in a debate session] in Se-ra Jay. The abbot, Geshe Lob-zang Thub-ten, who was my teacher, made a joke at my expense, implying that my answers were weak. The whole assembly burst into laughter. I was not fazed and without blinking I replied, "Some may laugh, but I challenge them to back up their laughter!" The audience exploded. I had won the exchange.</p>
+<p>The actual argument made has of course no logical weight, it does not prove anything. But the quick and clever way he replied won him the approval of the audience and thereby the upper hand in the debate situation. The same basic principle holds for the present discourse. The need to appreciate the debate character of the <i>Pāyāsi-sutta </i>and its parallels is also evident in their report that, in spite of being already convinced, Pāyāsi continued to oppose Kumārakassapa in order to witness the latter's debating skills.</p>
+<p>In sum, this discourse is an instance of ancient Indian recluse traditions poking fun at materialism by depicting how a materialist is thoroughly defeated in debate by a monk. This explains the type of arguments employed by both sides, which need not reflect actual events, nor be taken as an expression of early Buddhist or Jain epistemology. It also explains the popularity of this discourse in the Jain and Buddhist traditions, where the entertaining aspects of this debate were evidently not lost on the respective audiences.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../dn/dn.html">Dīgha Nikāya</a><a href="../../dn/dn23.html">DN23</a>: Pāyāsi Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

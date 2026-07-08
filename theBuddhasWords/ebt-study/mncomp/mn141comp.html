@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 141 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 141: Saccavibhaṅga-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn140comp.html#content"></a><a id="next-sutta" href="./mn142comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn141.html">MN 141</a> / <a href="../../parallels/ma31.html">MĀ 31</a> / <a href="../../parallels/ma98.html">MĀ 98 (~)</a> / <a href="../../parallels/ea12.1.html">EĀ 12.1 (~)</a> / <a href="../../parallels/ea27.1.html">EĀ 27.1</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Saccavibhaṅga-sutta, the “discourse on an analysis of the truths”, records an exposition of the four noble truths delivered by Sāriputta. This discourse has a parallel in the Madhyama-āgama, a parallel in the Ekottarika-āgama, and a parallel in an individual translation.<span class="note" id="mn141n219"><span class="details"><span class="p">[n.219] The parallels are <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467a-469c, <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643a-c, and T 32 at T I 814b-816c. According to the information given in the Taishō edition, T 32 was translated by Ān Shìgāo (安世高), an attribution that according to Zacchetti 2010a: 253 is probably correct. <a href="../../parallels/ma31.html">MĀ 31</a> has the title “discourse on an analysis of the noble truths”, 分別聖諦經. T 32 has the title “discourse spoken by the Buddha on the four truths”, 佛說四諦經. The qualification “spoken by the Buddha”, 佛說, occurs frequently in the title of individual translations (cf. above p. 23 note 4). In the present case, 佛說 appears to have been applied to T 32 somewhat automatically, without proper consideration of its contents, as the main part of the discourse is not “spoken by the Buddha”, but rather by Sāriputta. While <a href="../../mn/mn141.html">MN 141</a> is located in the Deer Park by Vārāṇasī, the three parallel versions take place in Jeta’s Grove by Sāvatthī. <a href="../../parallels/ma31.html">MĀ 31</a> has been studied by Minh Chau 1964/1991: 23-24, 56, 59, 96-98, and 122-126. A translation of <a href="../../parallels/ea27.1.html">EĀ 27.1</a> can be found in Anālayo 2006e. Harrison 1997: 277 lists T 32 among translations by Ān Shìgāo that may stem from an Ekottarika-āgama collection.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta begins with the Buddha’s declaration that at the Deer Park near Vārāṇasī he had set in motion the wheel of Dharma by teaching the four noble truths.<span class="note" id="mn141n220"><span class="details"><span class="p">[n.220] According to <a href="../../parallels/sa389.html">SĀ 389</a> at T II 105a25 (translated in Anālayo 2012f) and SĀ2 254 at T II 462c10, the four aspects of this basic scheme of the four noble truths correspond to four qualities of a doctor, who needs to be able to identify a disease, to diagnose its cause, to know the appropriate remedy, and to administer the actual cure until the disease is over; cf. also the Saundaranandakāvya 16:41 in Johnston 1928: 116,17, and the discussion in Halbfass 1991/1992: 246, Kern 1896: 46-47, Wezler 1984: 319- 320, and Zysk 1991: 38.</span></span></span> The Madhyama-āgama version and the individual translation instead proclaim that past, present, and future Tathāgatas teach these four noble truths,<span class="note" id="mn141n221"><span class="details"><span class="p">[n.221] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467b4 and T 32 at T I 814b14.</span></span></span> while the Ekottarika-āgama account simply declares that the Buddha always taught and explained the four truths.<span class="note" id="mn141n222"><span class="details"><span class="p">[n.222] <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643a27.</span></span></span></p>
+<p>Notably, the Ekottarika-āgama version speaks only of “four truths”, without employing the qualification “noble”.<span class="note" id="mn141n223"><span class="details"><span class="p">[n.223] For a more detailed examination cf. Anālayo 2006e.</span></span></span> The same is the case in other discourses in this collection,<span class="note" id="mn141n224"><span class="details"><span class="p">[n.224] <a href="../../parallels/ea4.1.html">EĀ 4.1</a> at T II 557a20, <a href="../../parallels/ea24.5.html">EĀ 24.5</a> at T II 619a9, <a href="../../parallels/ea25.1.html">EĀ 25.1</a> at T II 631a8, <a href="../../parallels/ea26.9.html">EĀ 26.9</a> at T II 639b8, <a href="../../parallels/ea28.1.html">EĀ 28.1</a> at T II 649b20, <a href="../../parallels/ea28.3.html">EĀ 28.3</a> at T II 650b17, <a href="../../parallels/ea29.6.html">EĀ 29.6</a> at T II 657c29, <a href="../../parallels/ea29.9.html">EĀ 29.9</a> at T II 658c9, <a href="../../parallels/ea30.2.html">EĀ 30.2</a> at T II 659c25, <a href="../../parallels/ea30.3.html">EĀ 30.3</a> at T II 665b8, <a href="../../parallels/ea31.9.html">EĀ 31.9</a> at T II 672c20, <a href="../../parallels/ea37.8.html">EĀ 37.8</a> at T II 714c5, <a href="../../parallels/ea37.10.html">EĀ 37.10</a> at T II 717a25, <a href="../../parallels/ea39.8.html">EĀ 39.8</a> at T II 733a25, <a href="../../parallels/ea41.2.html">EĀ 41.2</a> at T II 745a17, <a href="../../parallels/ea42.4.html">EĀ 42.4</a> at T II 753c6, and <a href="../../parallels/ea45.5.html">EĀ 45.5</a> at T II 773b11 (not taking into account verses, where the absence of the qualification ‘noble’ could be due to the need to fit the syllable count). The same is also absent from T 32.</span></span></span> in discourses from the partially preserved Saṃyukta-āgama,<span class="note" id="mn141n225"><span class="details"><span class="p">[n.225] <a href="../../parallels/sa-2.81.html">SĀ2 81</a> at T II 402a23, SĀ2 92 at T II 405b15, <a href="../../parallels/sa-2.152.html">SĀ2 152</a> at T II 431b21, and SĀ2 184 at T II 439c13 refer to the “four truths” (not taking into account verses). SĀ2 322 at T II 481c8 uses the expression “four truths”, but then at T II 481c10 refers to the “four noble truths”. <a href="../../parallels/sa-2.198.html">SĀ2 198</a> at T II 445b9 qualifies only the first truth as a “noble truth”, while the other three are simply “truths”. A similar pattern occurs in <a href="../../parallels/sa-2.340.html">SĀ2 340</a>, which at T II 487b20 qualifies the first truth as a “noble truth”, and then turns to the remaining three without bringing in any truth qualification at all.</span></span></span> as well as in several Vinayas.<span class="note" id="mn141n226"><span class="details"><span class="p">[n.226] The Dharmaguptaka Vinaya speaks only of the “four truths” in T 1428 at T XXII 606a19 and at T XXII 910a4, but then uses the qualification “noble” in its version of the Buddha’s first discourse at T XXII 788a14. The Mahīśāsaka Vinaya speaks of the “four truths” in T 1421 at T XXII 105b12, but then uses the qualification “noble”’ in its version of the first discourse at T XXII 104b28. The Sarvāstivāda Vinaya refers to the “four truths” in T 1435 at T XXIII 122b23, at T XXIII 122c1+9, at T XXIII 131c25, at T XXIII 193a11, at T XXIII 244b12, and at T XXIII 368b16, but then uses the qualification “noble” in its version of the first discourse at T XXIII 448b19.</span></span></span> This suggests the possibility that this qualification may be a later addition to formulations of the four noble truths.<span class="note" id="mn141n227"><span class="details"><span class="p">[n.227] For arguments in support of this suggestion cf. Norman 1982/1984; cf. also id. 1990/1993b and Weller 1940.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta and its Chinese parallels agree in reporting that the Buddha told the assembled monks that Sāriputta was able to give a full exposition of the four noble truths.<span class="note" id="mn141n228"><span class="details"><span class="p">[n.228] While in <a href="../../mn/mn141.html">MN 141</a> at MN III 248,23 the Buddha highlighted the wisdom of Sāriputta and Mahāmoggallāna and encouraged the monks to frequent these two, according to <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467b10 and T 32 at T I 814b21 he only praised Sāriputta, making use of a string of epithets similar to those used in <a href="../../mn/mn111.html">MN 111</a> at MN III 25,5 to describe Sāriputta’s wisdom. In regard to the difference between praises given to Sāriputta and Mahāmoggallāna or only to Sāriputta, it is perhaps noteworthy that <a href="../../mn/mn141.html">MN 141</a> at MN III 248,22 qualifies Sāriputta and Mahāmoggallāna as “helpful” to their fellow monks, anuggāhaka, a qualification that recurs in relation to Sāriputta only in <a href="../../sn/sn22.2.html">SN 22:2</a> at SN III 5,32 and in <a href="../../sn/sn47.13.html">SN 47:13</a> at SN V 162,28. According to <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b8, the Buddha simply told the monks to associate with Sāriputta and Mahāmoggallāna and hold them in high regard.</span></span></span> The Buddha further explained that, while Sāriputta led disciples to the attainment of stream-entry, Mahāmoggallāna led them further on to full awakening,<span class="note" id="mn141n229"><span class="details"><span class="p">[n.229] According to <a href="../../mn/mn141.html">MN 141</a> at MN III 248,25, Sāriputta leads others to the fruit of stream-entry, while Mahāmoggallāna leads them to the highest. <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467b17 reports that Sāriputta guides others to the attainment of right view, while Mahāmoggallāna leads them higher, to the destruction of the influxes. <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b11 describes Sāriputta teaching so that others reach insight into the four truths, while Mahāmoggallāna leads them to the destruction of the influxes. T 32 at T I 814b26 indicates that Sāriputta “can teach [how to] follow the path”, 能令隨道, while Mahāmoggallāna “can teach the completion of the path”, 能令竟道.</span></span></span> which the Buddha compared to the roles performed by a mother (who nourishes the foetus in her womb and gives birth) and the role of a foster mother (who then raises the child).<span class="note" id="mn141n230"><span class="details"><span class="p">[n.230] <a href="../../mn/mn141.html">MN 141</a> at MN III 248,23, <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467b19, and T 32 at T I 814b28. According to <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b10, the Buddha spoke of Sāriputta as a mother and father to living beings, 眾生之父母, which may be a transmission or translation error of a comparison similar to the one found in the other versions.</span></span></span></p>
+<p>According to all versions, the Buddha retired to his dwelling, whereon Sāriputta gave a more detailed exposition of the topic broached by the Buddha.</p>
+<p>When defining dukkha, according to the Majjhima-nikāya and Ekottarika-āgama accounts Sāriputta mentioned sorrow and dejection, aspects of dukkha not covered in the Madhyama-āgama discourse or in the individual translation.<span class="note" id="mn141n231"><span class="details"><span class="p">[n.231] <a href="../../mn/mn141.html">MN 141</a> at MN III 249,10 lists: “sorrow, lamentation, pain, dejection, and despair”, sokaparidevadukkhadomanassupāyāsā, while <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b18 lists: “dejection, sorrow, and vexation”, 憂, 悲, 惱.</span></span></span> The three Chinese versions agree in mentioning disease, association with what is disliked, and dissociation from what is liked,<span class="note" id="mn141n232"><span class="details"><span class="p">[n.232] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467b29, <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b18, and T 32 at T I 814c7. Disease, association with what is not liked, and dissociation from what is liked are also mentioned in the definition of dukkha in the parallels to <a href="../../mn/mn9.html">MN 9</a>, cf. <a href="../../parallels/ma29.html">MĀ 29</a> at T I 462a27, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a2, and folio 17 V12 in Tripāṭhī 1962: 52. In this case, Ee-MN I 48,32 and Ce-MN I 114,20 mention disease, while Be-MN I 59,27 and Se-MN I 88,22 mention association with what is not liked and dissociation from what is liked, cf. also above p. 69. Disease, sorrow and pain, etc., and association with what is not liked, together with dissociation from what is liked, occur in the definitions of dukkha given in the Mahīśāsaka Vinaya, T 1421 at T XXII 104c1. Disease and association with what is not liked, together with dissociation from what is liked, are also found in the corresponding definition in the Dharmaguptaka Vinaya, T 1428 at T XXII 788a16, and in the (Mūla-)Sarvāstivāda Vinaya, T 1450 at T XXIV 128b4.</span></span></span> aspects of dukkha not explicitly taken into account in the Saccavibhaṅga-sutta, although the same can be found in the Pāli version of what according to tradition was the first discourse delivered by the Buddha, the Dhammacakkapavattana-sutta.<span class="note" id="mn141n233"><span class="details"><span class="p">[n.233] <a href="../../sn/sn56.11.html">SN 56:11</a> at SN V 421,19 and Vin I 10,26. The Ee edition of <a href="../../dn/dn22.html">DN 22</a> at DN II 305,2 also mentions disease, while Be-DN II 243,17, Ce-DN II 478, and Se-DN II 341,1 mention association with what is not liked and dissociation from what is liked; for a survey of the parallel versions cf. Chung 2006.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta, the Madhyama-āgama version, and the individual translation continue by explaining each of the terms mentioned in their definition of dukkha.<span class="note" id="mn141n234"><span class="details"><span class="p">[n.234] <a href="../../mn/mn141.html">MN 141</a> at MN III 249,14, <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467c2, and T 32 at T I 814c8, explanations not given in <a href="../../parallels/ea27.1.html">EĀ 27.1</a>. The explanations found in <a href="../../mn/mn141.html">MN 141</a> recur in <a href="../../dn/dn22.html">DN 22</a> at DN II 305,6.</span></span></span> While the Majjhima-nikāya version only defines the term birth, the Madhyama-āgama version and the individual translation also explain why birth is dukkha, highlighting that on being born one experiences bodily and mental pain, bodily heat and mental fever, whereby one is afflicted and troubled.<span class="note" id="mn141n235"><span class="details"><span class="p">[n.235] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467c5 and T 32 at T I 814c11, explanations both versions repeat for old age and death.</span></span></span></p>
+<p>In relation to disease, a manifestation of dukkha not covered in the Saccavibhaṅgasutta, the Madhyama-āgama version and the individual translation list various afflictions and diseases.<span class="note" id="mn141n236"><span class="details"><span class="p">[n.236] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 467c22 and T 32 at T I 815a2, a listing that brings to mind <a href="../../an/an10.60.html">AN 10:60</a> at AN V 110,1.</span></span></span> According to the same two versions, association with what is disliked and dissociation from what is liked refers to disagreeable or agreeable experiences that take place by way of the six senses or by way of the six elements (i.e., the four material elements, space, and consciousness).<span class="note" id="mn141n237"><span class="details"><span class="p">[n.237] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468a14 and T 32 at T I 815a27.</span></span></span></p>
+<p>The Madhyama-āgama version and the individual translation agree with the Saccavibhaṅga-sutta that not obtaining what is wished for stands for the impossibility to be free from birth, old age, and death, etc., by mere wishing. These two Chinese versions additionally mention the wish to change pain into pleasure, as well as the wish for pleasure to last forever, these being another two instances where it is not possible to achieve what one would wish.<span class="note" id="mn141n238"><span class="details"><span class="p">[n.238] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468b9 and T 32 at T I 815b27 (both deal in the same way with disagreeable and agreeable thoughts).</span></span></span></p>
+<p>While the Majjhima-nikāya and the Madhyama-āgama discourses round up their examination of dukkha by simply listing the five aggregates [affected by] clinging,<span class="note" id="mn141n239"><span class="details"><span class="p">[n.239] In relation to the standard reference to the five aggregates [affected by] clinging in formulations of the first noble truth, Vetter 1998: 384 notes that in some instances a reading can be found that adds pi to this formulation, so that the statement reads saṅkhittena pañc’ upādānakkhandhā pi dukkhā (e.g., Vin I 10,29). He then suggests (p. 386) that saṅkhittena may only mean that “this is a short remark that has to be explained to the neophyte who does not know what the five upādānakkhandhas are and/or why they are called dukkha”, proposing that the pi indicates the reference to the five aggregates [affected by] clinging to be another alternative instance of what is dukkha, instead of being a summary of what has been listed before. Yet, <a href="../../sn/sn56.13.html">SN 56:13</a> at SN V 425,17 defines the first noble truth by only listing the five aggregates [affected by] clinging alone, katamañ ca, bhikkhave, dukkham ariyasaccaṃ? pañc’ upādānakkhandhā ti ’ssa vacanīyaṃ. This confirms that saṅkhittena in the standard expositions does introduce a summary statement. Moreover, formulations of the first noble truth in the Chinese Āgamas do not seem to have an equivalent to pi in their listings, in fact in most cases their way of presentation indicates that the translators understood whatever equivalent they found to saṅkhittena in their original to introduce a summary statement, cf., e.g., <a href="../../parallels/ma13.html">MĀ 13</a> at T I 435c28: 略五盛陰苦, <a href="../../parallels/sa344.html">SĀ 344</a> at T II 95a3: 如是 略說, 五受陰苦, and <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b19: 取要言之, 五盛陰苦, a formulation that recurs also in the Dharmaguptaka Vinaya, T 1428 at T XXII 788a17: 取要言之, 五盛陰苦, and with only a slight difference in the Mahīśāsaka Vinaya, T 1421 at T XXII 104c2: 以要言之, 五盛陰苦.</span></span></span> the individual translation additionally points out that the five aggregates [affected by] clinging are dukkha because they are impermanent and subject to disease, old age, etc.<span class="note" id="mn141n240"><span class="details"><span class="p">[n.240] T 32 at T I 815c11: “their nature is to be impermanent, distressful, afflicted, they are affected by destruction, disease, loss, and old age, they are not stable, they cannot be changed or left behind by mere faithful wishing, for this reason the five aggregates [affected by clinging] are dukkha”, 是法非常, 厄, 病, 為壞, 疾, 敗, 老, 不堅, 不信欲轉離為, 是故本五陰苦.</span></span></span> The Madhyama-āgama version and the individual translation conclude their exposition by proclaiming that the noble truth of dukkha has been true in past, is true at present, and will be true in future times.<span class="note" id="mn141n241"><span class="details"><span class="p">[n.241] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468b23: “in past times this is the noble truth of dukkha, in future times, and in present times this is the noble truth of dukkha, it is a real truth, not false”, 過去時是苦聖諦, 未來, 現在時是苦 聖諦, 真諦, 不虛, a statement applied also to the other three noble truths in <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468c15, T I 469a9, and T I 469b29. T 32 at T I 815c12: “venerables, this is the same truth of dukkha in the past, venerables, it is also the truth of dukkha in the future, and, venerables, it is the truth of dukkha in the present, it is not otherwise”, 過世賢者同是苦諦, 未來世賢者亦是苦諦, 現在世賢者亦是苦諦, 是無 有異, a statement applied also to the other three truths in T 32 at T I 815c24, T I 816a9, and T I 816c20. Minh Chau 1964/1991: 124 suggests this statement to be an expression of the Sarvāstivāda doctrine of the existence of phenomena in past and future times. Ibid. p. 24 takes the absence of such a statement in <a href="../../mn/mn141.html">MN 141</a> to be a case of omission and concludes that the occurrence of this passage in <a href="../../parallels/ma31.html">MĀ 31</a> proves that the Madhyama-āgama stems from the Sarvāstivāda tradition. Against Minh Chau’s suggestion, however, it could be objected that <a href="../../sn/sn12.66.html">SN 12:66</a> at SN II 110,23 also highlights the applicability of the four noble truths to past and future times, explaining that to know pleasant sense objects to be dukkha (as well as impermanent, not-self, etc.) led to freedom from craving in the past, leads to such freedom in the present, and will lead to such freedom in the future. Thus, for the four noble truths to be considered as true in past and future times is a position held not only in Sarvāstivāda texts. In fact, that certain principles and natural laws exist in the past, present, and future seems to have been a position shared by different Buddhist schools, so that the reciters of <a href="../../mn/mn141.html">MN 141</a> would have had little reason to omit a passage that makes such a statement.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta and its Chinese parallels agree in relating the origin of dukkha to craving, although they differ in the extent to which they explain such craving. The shortest treatment occurs in the Ekottarika-āgama version, which simply declares that the arising of dukkha is due to the fetter of craving.<span class="note" id="mn141n242"><span class="details"><span class="p">[n.242] <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b20: 愛結.</span></span></span> The Majjhima-nikāya version offers more details, as it explains that such craving leads to renewed existence and is accompanied by delight and lust, followed by distinguishing craving into three types:</p>
+<ul>
+<li>craving for sensual pleasures,</li>
+<li>craving for existence,</li>
+<li>craving for non-existence.<span class="note" id="mn141n243"><span class="details"><span class="p">[n.243] <a href="../../mn/mn141.html">MN 141</a> at MN III 250,34: kāmataṇhā bhavataṇhā vibhavataṇhā. On the three types of craving cf. also above p. 70.</span></span></span></li>
+</ul>
+<p>The Madhyama-āgama version and the individual translation do not mention these three types of craving, nor do they speak of renewed existence. Instead, they explain that the arising of dukkha is due to craving for the six senses or the six elements, a craving that then leads to the arising of attachment.<span class="note" id="mn141n244"><span class="details"><span class="p">[n.244] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468b28 and T 32 at T I 815c17.</span></span></span> These two Chinese versions illustrate this predicament by describing various manifestations of craving, such as craving for relatives or possessions, etc.</p>
+<p>The Saccavibhaṅga-sutta and its parallels agree that the cessation of dukkha comes about through the cessation of craving, which the Madhyama-āgama discourse and the individual translation explain to imply the cessation of craving in relation to the six senses or the six elements.<span class="note" id="mn141n245"><span class="details"><span class="p">[n.245] <a href="../../mn/mn141.html">MN 141</a> at MN III 251,4, <a href="../../parallels/ma31.html">MĀ 31</a> at T I 468c20, <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b21, and T 32 at T I 815c29.</span></span></span></p>
+<p>The Ekottarika-āgama version presents the path to the cessation of dukkha by simply listing the eight factors of the noble eightfold path, to which the other three versions add a more detailed examination of each of these eight factors.<span class="note" id="mn141n246"><span class="details"><span class="p">[n.246] The exposition of the eight path factors found in <a href="../../mn/mn141.html">MN 141</a> at MN III 251,12 recurs in <a href="../../dn/dn22.html">DN 22</a> at DN II 312,1 and in <a href="../../sn/sn45.8.html">SN 45:8</a> at SN V 8,30.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta, its Madhyama-āgama parallel, and the individual translation define right view to be knowledge of dukkha, its arising, its cessation, and the path leading to its cessation.</p>
+<p>The Madhyama-āgama version and the individual translation indicate that right view requires analysing, investigating, contemplating, and observing. It is noteworthy how the examination of the path in these two Chinese versions acquires a somewhat more abhidharmic flavour in this way, where interest proceeds from what tasks the pathfactors perform to an analysis of what is performing them, i.e., to the mental factors that are present in each case.<span class="note" id="mn141n247"><span class="details"><span class="p">[n.247] For an examination of another such instance cf. Anālayo 2010i.</span></span></span></p>
+<p>According to the Madhyama-āgama presentation, such analysing and observing can be directed in various ways, such as contemplating one’s former deeds, or being mindful of mental formations, or seeing the disadvantage inherent in formations, or seeing the peacefulness of Nirvāṇa, or remaining with detachment and mindfulness when attaining a temporary liberation of the mind (i.e. a deeper state of concentration).<span class="note" id="mn141n248"><span class="details"><span class="p">[n.248] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469a16 speaks of analysing, etc., “when he contemplates former deeds, or trains to be mindful of formations, or sees the disadvantage in formations, or sees Nirvāṇa as the supreme peace, or with detachment and mindfulness contemplates a wholesome liberation of the mind”, 或觀本所作, 或 學念諸行, 或見諸行災患, 或見涅槃止息, 或無著念觀善心解脫時. <a href="../../parallels/ma31.html">MĀ 31</a> applies this description, together with the four noble truths’ perspective, to each path factor. The present description in <a href="../../parallels/ma31.html">MĀ 31</a> has its counterpart in T 32 at T I 816a20, which also applies it to each path factor.</span></span></span></p>
+<p>When defining right intention, the Majjhima-nikāya version lists three types of right intention, namely intention of renunciation, of non ill will, and of non cruelty.<span class="note" id="mn141n249"><span class="details"><span class="p">[n.249] <a href="../../mn/mn141.html">MN 141</a> at MN III 251,16.</span></span></span> The Madhyama-āgama version and the individual translation approach this topic differently, as instead of listing instances of this path factor, they define right intention in terms of thoughts and aspirations that are based on the four noble truths’ perspective.<span class="note" id="mn141n250"><span class="details"><span class="p">[n.250] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469a20 and T 32 at T I 816a24.</span></span></span> The two Chinese versions adopt this procedure in relation to each of the path factors, in the sense that each time they reiterate that the main requirement for any path factor is to maintain the proper perspective of the four noble truths. This way of presentation highlights the importance of the four noble truths as a basis for developing each factor of the noble eightfold path.<span class="note" id="mn141n251"><span class="details"><span class="p">[n.251] This foundational importance of right view for each path factor is explicitly highlighted in <a href="../../mn/mn117.html">MN 117</a> and its parallels, according to which right view is a precursor to the other path factors, cf. <a href="../../mn/mn117.html">MN 117</a> at MN III 72,29: sammādiṭṭhi pubbaṅgamā hoti, <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c13: 正見最在其前, and D (4094) mngon pa, nyu 44b6 or Q (5595) thu 84a8: yang dag pa’i lta ba sngon du ’gro ba. The same notion also underlies the qualification sammā or samyak, which conveys a sense of several parts that are combined together and lead in one direction, cf. MW: 1181 s.v. samyañj and Böhtlingk 1883/1998g: 75 s.v. saṃyañj. That is, the factors of the path become sammā in as much as they are practised in conjunction and in such a way as to lead to the cessation of dukkha.</span></span></span></p>
+<p>The Majjhima-nikāya version, its Madhyama-āgama parallel, and the individual translation agree that right speech and right action require abstention from the four unwholesome types of speech and from the three unwholesome types of action.<span class="note" id="mn141n252"><span class="details"><span class="p">[n.252] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469a28 instructs (after stipulating the need for the four noble truths’ perspective): “herein, except for the four types of pure verbal conduct, in regard to any other type of evil verbal conduct, he keeps far away [from them], discards [them], eradicates [them], does not undertake [them], does not perform [them], does not apply [himself to them], has no connection [with them], this is called right speech”, 於中, 除口四妙行, 諸餘口惡行, 遠離, 除, 斷, 不行, 不作, 不合, 不會, 是名正語, a way of presentation <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469b4 then uses in a similar way when defining right action. Instead of contrasting pure speech and action with their evil counterparts, T 32 at T I 816b3+12 speaks of stopping the four types of verbal transgressions and any other type of evil verbal conduct, 止四口犯, 有餘口惡行, and enjoins discarding the three types of evil bodily conduct and any other type of evil bodily conduct, 除身三惡行, 亦餘身惡行. The reference in <a href="../../parallels/ma31.html">MĀ 31</a> to pure or even “sublime” conduct, 妙行, equivalent to sucarita, stands for the wholesome courses of action (kammapatha), cf. <a href="../../parallels/ma171.html">MĀ 171</a> at T I 707c14 (the 佛光 Madhyama-āgama edition p. 261 note 5 seems to be mistaken in identifying the three types of pure conduct with the absence of lust, anger, and delusion, 十善中之身妙行有三, 即不貪, 不瞋, 不癡). These wholesome courses of action cover precisely the types of speech and action mentioned in the definition of right speech and right action in <a href="../../mn/mn141.html">MN 141</a> at MN III 251,19, namely abstention from false speech, malicious speech, harsh speech, idle chatter, as well as abstention from killing, taking what is not given, and sexual misconduct. The same would also correspond to the types of speech and action envisaged in T 32. Thus, in spite of different formulations, the Pāli and Chinese versions agree on the implications of these two path factors. Notably, <a href="../../mn/mn141.html">MN 141</a> at MN III 251,24 speaks of sexual misconduct, thereby describing lay ethics, but then has a bhikkhu as the subject for the last three path factors. A similar definition in <a href="../../sn/sn45.8.html">SN 45:8</a> at SN V 9,11, which also has a bhikkhu as its subject, instead speaks of abrahmacariya.</span></span></span></p>
+<p>In regard to right livelihood, the Majjhima-nikāya version and the individual translation speak simply of abstaining from wrong means of livelihood.<span class="note" id="mn141n253"><span class="details"><span class="p">[n.253] <a href="../../mn/mn141.html">MN 141</a> at MN III 251,27: “having left behind wrong livelihood he makes his living by way of right livelihood”, micchā ājīvaṃ pahāya sammā ājīvena jīvikaṃ kappeti. T 32 at T I 816b21 instructs to not get one’s livelihood “by practising various lowly [literally: animal] type of deeds, or through wicked practices”, 行若干畜生業, 從邪行.</span></span></span> The Madhyamaāgama discourse offers further explanations, as it specifies that to undertake right livelihood requires developing contentment together with fewness of wishes, as well as abstaining from various improper means of livelihood, so that one seeks for requisites only by means that are righteous.<span class="note" id="mn141n254"><span class="details"><span class="p">[n.254] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469b10 explains that one should “not search for what is unreasonable, not [search] by having many wishes and being without contentment, not undertake wrong livelihood by doing various types of crafts, or reciting spells, but only seek for robes ... food ... beds and seats through what is righteous, not through what is unrighteous, this is called right livelihood”, 非無理求, 不以多欲無厭足, 不為種種技術, 呪說, 邪命活, 但以法求衣 ... 食 ... 床座, 不以非法, 是名正命 (adopting the 宋, 元, and 明 variant reading 技 instead of 伎).</span></span></span></p>
+<p>The Saccavibhaṅga-sutta defines right effort by listing the effort to prevent evil states, overcome evil states, arouse wholesome states, and maintain wholesome states. The Madhyama-āgama version and the individual translation do not take up these four instances of right effort, but instead explain right effort to stand for maintaining unwavering energy that is based on the four noble truths’ perspective.<span class="note" id="mn141n255"><span class="details"><span class="p">[n.255] Although a full listing of the four types of right effort is not found in <a href="../../parallels/ma31.html">MĀ 31</a>, such a full treatment can be found in <a href="../../parallels/ma86.html">MĀ 86</a> at T I 563a11 and <a href="../../parallels/ma222.html">MĀ 222</a> at T I 806a1. These discourses differ from <a href="../../mn/mn141.html">MN 141</a> in regard to the sequence in which they lists the first two types of right effort, as they begin with the need to overcome what is evil, after which only they turn to the need to prevent evil. This sequence thus progresses from the gross to the respectively subtler, a progression adopted in all versions for the remaining two right efforts, the arousing of wholesome states and the maintenance of wholesome states. The Madhyama-āgama sequence recurs in the Saṃyukta-āgama, cf. <a href="../../parallels/sa178.html">SĀ 178</a> at T II 46c25, <a href="../../parallels/sa622.html">SĀ 622</a> at T II 174a10, <a href="../../parallels/sa647.html">SĀ 647</a> at T II 182b29, <a href="../../parallels/sa877.html">SĀ 877</a> at T II 221a24, <a href="../../parallels/sa878.html">SĀ 878</a> at T II 221b6, <a href="../../parallels/sa879.html">SĀ 879</a> at T II 221b19, and <a href="../../parallels/sa920.html">SĀ 920</a> at T II 233c28. The same sequence can also be found in a treatment of right effort in <a href="../../parallels/sa3.html">SĀ3</a> 17 at T II 497b3, a partial Saṃyukta-āgama collection that according to Harrison 2002: 3 could be a translation by Ān Shìgāo (安世高), in SHT I 614R1-3 (p. 273), and in the Arthaviniścaya-sūtra in Samtani 1971: 29,3. Discourses in the Dīrgha-āgama and in the Ekottarika-āgama agree with the Pāli sequence, as they also begin with the effort to prevent evil and only then take up the effort to overcome evil, cf. <a href="../../parallels/da9.html">DĀ 9</a> at T I 50c14, <a href="../../parallels/ea26.1.html">EĀ 26.1</a> at T II 635b16, <a href="../../parallels/ea26.2.html">EĀ 26.2</a> at T II 635b29, <a href="../../parallels/ea26.3.html">EĀ 26.3</a> at T I 635c11, and <a href="../../parallels/ea26.4.html">EĀ 26.4</a> at T I 635c23. From a practical perspective, the sequence found in the Madhyama-āgama and Saṃyukta-āgama is appealing, since often the most urgent task is to deal with evil that has already arisen, before being able to turn to the prevention of evil still to arise.</span></span></span> According to the individual translation, to arouse joy and to maintain mindfulness are also aspects of right effort.<span class="note" id="mn141n256"><span class="details"><span class="p">[n.256] T 32 at T I 816c1: 喜不毀不滅, 念正止. This stipulation brings to mind an exposition of the seven bojjhaṅgas in <a href="../../mn/mn118.html">MN 118</a> at MN III 85,33 and its parallel <a href="../../parallels/sa810.html">SĀ 810</a> at T II 208b21, according to which the development of the awakening factor of energy leads to the arising of the awakening factor of joy. Another related presentation can be found in <a href="../../mn/mn117.html">MN 117</a> at MN III 72,22 and its parallels <a href="../../parallels/ma189.html">MĀ 189</a> at T I 735c24 and D (4094) mngon pa, nyu 44b5 or Q (5595) thu 84a7, according to which right effort requires the cooperation of mindfulness.</span></span></span></p>
+<p>The Saccavibhaṅga-sutta continues by defining right mindfulness with the help of the four satipaṭṭhānas, while the Madhyama-āgama discourse and the individual translation only mention unwavering mindfulness that is developed based on the four noble truths’ perspective. The individual translation additionally recommends speaking little as a way of avoiding loss of mindfulness.<span class="note" id="mn141n257"><span class="details"><span class="p">[n.257] T 32 at T I 816c9: “speaking little and without being separated from mindfulness”, 少言念不離.</span></span></span></p>
+<p>The Majjhima-nikāya version and the Madhyama-āgama account agree in taking right concentration to stand for jhāna attainment. While the Majjhima-nikāya version lists the four jhānas, the Madhyama-āgama version only describes that the mind is established in a jhāna without being scattered, without specifying a particular level of jhāna attainment.<span class="note" id="mn141n258"><span class="details"><span class="p">[n.258] <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469b28: “the mind is established, absorption is established, well established, without wavering and without being scattered”, 心住, 禪住, 順住, 不亂, 不散. T 32 at T I 816c15 similarly describes how “because of mental tranquillity [the mind] is unmoving and steadfast, because of having taken hold of tranquillity, the mind and mindfulness are established in oneness”, 意止故, 不動不走, 已攝止故, 意念在一, a description which in its recapitulation at T I 816c19, however, reads rather differently. According to <a href="../../mn/mn52.html">MN 52</a> at MN I 350,10 (= <a href="../../an/an11.17.html">AN 11:17</a> at AN V 343,18), the destruction of the influxes is possible with each of the four jhānas, i.e., even with the first jhāna, so that the standard definition of right concentration in the Pāli discourses by listing all four jhānas may not intend to stipulate the attainment of all four jhānas in order for the noble eightfold path to lead to full awakening. The additional stipulation made in <a href="../../parallels/ma31.html">MĀ 31</a> that right concentration needs to be based on the perspective of the four noble truths squares well with an exposition on the topic of proper effacement given in <a href="../../mn/mn8.html">MN 8</a> at MN I 42,27 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573c20. These two discourses agree in reckoning right concentration as an instance of proper effacement, yet <a href="../../mn/mn8.html">MN 8</a> at MN I 40,30 and <a href="../../parallels/ma91.html">MĀ 91</a> at T I 573b28 also agree that mere attainment of the jhānas falls short of being proper effacement. In the light of <a href="../../parallels/ma31.html">MĀ 31</a>, this could be understood to imply that attainment of a jhāna only becomes an instance of right concentration − and therewith an instance of proper effacement − when it takes place based on the four noble truths’ perspective, thereby with the insight that such attainment is also of an ultimately unsatisfactory nature.</span></span></span></p>
+<p>While the Saccavibhaṅga-sutta, its Madhyama-āgama parallel, and the individual translation conclude with the delight of the monks,<span class="note" id="mn141n259"><span class="details"><span class="p">[n.259] According to <a href="../../parallels/ma31.html">MĀ 31</a> at T I 469c5, Sāriputta concluded his exposition with a verse in praise of the Buddha’s teaching of the four noble truths, a verse which has a prose counterpart in T 32 at T I 816c26.</span></span></span> the Ekottarika-āgama version concludes by reporting that the delivery of this discourse by Sāriputta led innumerable beings to stream-entry.<span class="note" id="mn141n260"><span class="details"><span class="p">[n.260] <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b26. <a href="../../parallels/ea27.1.html">EĀ 27.1</a> at T II 643b29 then concludes with the monks delighting in what the Buddha had said, 諸比丘聞佛所說, 歡喜, which in view of the fact that the discourse had been given by Sāriputta does not fit the context too well.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

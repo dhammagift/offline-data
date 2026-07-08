@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 147 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 147: Cūḷarāhulovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn146comp.html#content"></a><a id="next-sutta" href="./mn148comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn147.html">MN 147</a> / <a href="../../parallels/sa200.html">SĀ 200 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷarāhulovāda-sutta, the “lesser discourse on an instruction to Rāhula”, records the meditation instruction that led to the full awakening of Rāhula. This discourse recurs in the Saṃyutta-nikāya and has a Chinese parallel in the Saṃyukta-āgama.<span class="note" id="mn147n85"><span class="details"><span class="p">[n.85] The parallels are <a href="../../sn/sn35.121.html">SN 35:121</a> at SN IV 105-107, entitled Rāhula-sutta, and <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51a-c, for which Akanuma 1929/1990: 39 notes “Rāhula”, 羅睺羅, as a tentative title. A translation of <a href="../../parallels/sa200.html">SĀ 200</a> and <a href="../../sn/sn35.121.html">SN 35:121</a>, together with extracts from the present study, can be found in Anālayo 2011h. The three versions agree in locating the discourse in Jeta’s Grove by Sāvatthī.</span></span></span></p>
+<p>The two Pāli versions begin by reporting that Rāhula’s mental development had ripened sufficiently for him to be led to awakening.<span class="note" id="mn147n86"><span class="details"><span class="p">[n.86] <a href="../../mn/mn147.html">MN 147</a> at MN III 277,25: paripakkā kho rāhulassa vimuttiparipācaniyā dhammā (Be-MN III 325,1, Ce- MN III 574,5, and Se-MN III 504,5: vimuttiparipācanīyā); cf. also <a href="../../sn/sn35.121.html">SN 35:121</a> at SN IV 105,15.</span></span></span> Unlike the Pāli versions, the Saṃyukta-āgama version also describes what led to this mental ripening of Rāhula. According to its report, Rāhula had approached the Buddha and requested to be given a teaching so that he could retreat into seclusion and practise intensively in order to reach awakening. The Buddha knew that Rāhula’s mind at this point was not yet ripe and told Rāhula that he should teach others the subject of the five aggregates.<span class="note" id="mn147n87"><span class="details"><span class="p">[n.87] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51a23 indicates that Rāhula’s “liberation of the mind and wisdom are not yet mature, [he is] not yet ready to receive the higher Dharma”, 心解脫慧未熟, 未堪任受增上法.</span></span></span></p>
+<p>When Rāhula had delivered teachings on the five aggregates, he again approached the Buddha and requested teachings for retiring into seclusion and undertaking intensive practice. The Buddha saw that Rāhula’s mind was still not ripe enough and told him that he should also teach on the six sense-spheres.<span class="note" id="mn147n88"><span class="details"><span class="p">[n.88] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51b4.</span></span></span> The same happened again for a third time, when the Buddha indicated that Rāhula should also give teachings on conditionality.<span class="note" id="mn147n89"><span class="details"><span class="p">[n.89] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51b13: 尼陀那法.</span></span></span></p>
+<p>When Rāhula had given teachings on conditionality and again requested instruction for retiring into seclusion, the Buddha told Rāhula that he should retire into seclusion and take as his meditation subject the three topics on which he earlier had given teachings, i.e., the five aggregates, the six sense-spheres, and conditionality.</p>
+<p>While being in seclusion, Rāhula reviewed and examined these three topics, until he came to understand that they all lead to the realization of Nirvāṇa.<span class="note" id="mn147n90"><span class="details"><span class="p">[n.90] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51b23: “all these teachings proceed towards Nirvāṇa, flow towards Nirvāṇa, behind them stands Nirvāṇa”, 此諸法一切皆順趣涅槃, 流注涅槃, 後住涅槃.</span></span></span> When the Buddha heard Rāhula reporting this insight, he knew that Rāhula’s mind had sufficiently ripened for him to be led to awakening.<span class="note" id="mn147n91"><span class="details"><span class="p">[n.91] Although <a href="../../mn/mn147.html">MN 147</a> and <a href="../../sn/sn35.121.html">SN 35:121</a> do not record any preliminary stages of training Rāhula, or that he wished to undertake intensive practice in seclusion, another set of discourses in the Saṃyutta-nikāya, <a href="../../sn/sn18.1.html">SN 18:1</a>-5 at SN II 244-247, reports how Rāhula approached the Buddha and requested to be given a teaching so that he could retire into seclusion and undertake intensive practice. In reply to this request, according to <a href="../../sn/sn18.1.html">SN 18:1</a>-5 the Buddha delivered a set of instructions that are closely similar to the instructions in <a href="../../mn/mn147.html">MN 147</a> and <a href="../../sn/sn35.121.html">SN 35:121</a>, with the main difference that each aspect of experience (such as the senses, their objects, etc.) forms the topic of a separate discourse. Another difference is that <a href="../../sn/sn18.5.html">SN 18:5</a> at SN II 247,4 only mentions that feelings are conditioned by contact, whereas <a href="../../mn/mn147.html">MN 147</a> at MN III 279,5 highlights that all four mental aggregates are conditioned by contact. The counterpart to <a href="../../sn/sn18.1.html">SN 18:1</a>-5, <a href="../../parallels/sa897.html">SĀ 897</a> at T II 225b11, reports a considerably shorter instruction, which just enjoins to contemplate the six sense-spheres, without taking up their impermanent nature or mentioning any other insight perspective to be used for such contemplation. <a href="../../parallels/sa897.html">SĀ 897</a> at T II 225b17 continues by indicating that this mode of contemplation is to be applied in the same way (up to) the five aggregates, 如是外六入處, 乃至五陰亦 如是說 (a standard mode of abbreviation, used frequently in the Saṃyukta-āgama), so that perhaps the same range of topics should be supplemented as mentioned in <a href="../../sn/sn18.1.html">SN 18:1</a>-10, which covers the senses, their objects, consciousness, contact, feeling, perception, volition, craving, the six elements, and the five aggregates. <a href="../../parallels/sa897.html">SĀ 897</a> also differs from <a href="../../sn/sn18.1.html">SN 18:1</a> in as much as, according to its account, Rāhula had not asked for a teaching so that he could withdraw into seclusion. Instead, he rather had inquired how to avoid giving attention to any sign in regard to this body with its consciousness and in regard to external elements, T II 225b9: 我此識身及外境界, 一切相不憶念. The first part of this instruction is similar to the recurrent expression imasmiñ ca saviññāṇake kāye bahiddhā ca sabbanimittesu, found, e.g., in <a href="../../mn/mn109.html">MN 109</a> at MN III 18,30; on this expression cf. also Bucknell 1999b: 325. An account similar in several respects to <a href="../../parallels/sa200.html">SĀ 200</a> can be found in T 212 at T IV 626b27, where the Buddha tells Rāhula that he should recite teachings on dependent arising, then on the five aggregates, and finally on the six types of contact. Rāhula then attains liberation after he has subsequently reflected on the significance of these teachings, cf. T 212 at 626c12.</span></span></span></p>
+<p>The actual instructions given to Rāhula in the Cūḷarāhulovāda-sutta and its parallels are to contemplate the six senses – together with their respective objects, types of consciousness, and contact – as impermanent, unsatisfactory, and not-self.<span class="note" id="mn147n92"><span class="details"><span class="p">[n.92] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51c3 refers to this teaching only in an abbreviated manner, indicating that the instruction given in the present instance on the impermanent nature of the senses, their objects, the corresponding types of consciousness and contact are the same “as spoken above in detail on impermanence”, 如上 無常廣說. This could refer to the instructions found in <a href="../../parallels/sa196.html">SĀ 196</a> at T II 50a26, which proceed from impermanence to a whole range of insight perspectives, including among others also dukkha and not-self.</span></span></span> The Pāli versions of the Cūḷarāhulovāda-sutta combine this instruction with the aggregates and with the principle of conditionality, as they proceed from contact to the four mental aggregates that arise in dependence on contact.<span class="note" id="mn147n93"><span class="details"><span class="p">[n.93] <a href="../../mn/mn147.html">MN 147</a> at MN III 279,4 and <a href="../../sn/sn35.121.html">SN 35:121</a> at SN IV 106,15.</span></span></span></p>
+<p>This part of the Pāli versions thus takes up the topics mentioned in the Saṃyuktaāgama version’s introductory account of Rāhula’s development, namely the six sensespheres, the five aggregates, and conditionality. Hence, in spite of substantially different modes of presentation, the Pāli and Chinese versions agree that Rāhula’s development of insight revolved around these three topics.</p>
+<p>The Cūḷarāhulovāda-sutta and its parallels report that Rāhula reached full awakening. Whereas according to the Pāli versions this took place while the Buddha was delivering the discourse,<span class="note" id="mn147n94"><span class="details"><span class="p">[n.94] <a href="../../mn/mn147.html">MN 147</a> at MN III 280,7 and <a href="../../sn/sn35.121.html">SN 35:121</a> at SN IV 107,28.</span></span></span> according to the Saṃyukta-āgama discourse the same happened after Rāhula had retired into seclusion and undertaken further practice.<span class="note" id="mn147n95"><span class="details"><span class="p">[n.95] <a href="../../parallels/sa200.html">SĀ 200</a> at T II 51c5: 獨一靜處, 專精思惟, 不放逸住 ... 成阿羅漢.</span></span></span> The Pāli versions also report that a congregation of devas, which had been following the Buddha in order to witness the instruction to Rāhula, reached stream-entry through this discourse. The Saṃyukta-āgama version does not mention their presence at all.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

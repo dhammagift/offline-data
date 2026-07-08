@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 59 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 59: Bahuvedanīya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn58comp.html#content"></a><a id="next-sutta" href="./mn60comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn59.html">MN 59</a> / <a href="../../parallels/sa485.html">SĀ 485 (~)</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Bahuvedanīya-sutta, the “discourse on much to be felt”, presents a detailed analysis of the nature of feelings. This discourse recurs in the Saṃyutta-nikāya and has a Chinese parallel in the Saṃyukta-āgama.<span class="note" id="mn59n128"><span class="details"><span class="p">[n.128] The Pāli parallel is <a href="../../sn/sn36.19.html">SN 36:19</a> at SN IV 223-228 and has the title Pañcakaṅga-sutta. The part of <a href="../../sn/sn36.19.html">SN 36:19</a> that is concerned with the Buddha’s exposition on feeling recurs again in <a href="../../sn/sn36.20.html">SN 36:20</a> at SN IV 228-229. The Chinese parallel is <a href="../../parallels/sa485.html">SĀ 485</a> at T II 123c-124b, for which Akanuma 1929/1990: 55 gives the tentative title “Udayi”, 優陀夷. While <a href="../../mn/mn59.html">MN 59</a> has Sāvatthī as its location, <a href="../../parallels/sa485.html">SĀ 485</a> locates the discourse at Rājagaha (<a href="../../sn/sn36.19.html">SN 36:19</a> does not specify the setting). A translation and discussion of the Pāli and Chinese versions can be found in Faust-Koschinger 1999, parts of the two discourses have also been translated and compared by Choong 2000: 111-114.</span></span></span></p>
+<p>Parts of this discourse have also been preserved in Sanskrit fragments,<span class="note" id="mn59n129"><span class="details"><span class="p">[n.129] SHT II 51a (pp. 9-10, cf. also SHT IX p. 370), SHT VIII 1863 (p. 54), and SHT VIII 1884 (p. 73). SHT II 51a has preserved part of the Buddha’s criticism of those who quarrel about his teachings and the subsequent exposition of increasingly superior types of happiness, found at MN I 398-400. SHT VIII 1863Va and SHT VIII 1884Va-b have preserved part of the conclusion of the discourse.</span></span></span> and in a discourse quotation in Śamathadeva’s commentary on the Abhidharmakośabhāṣya, extant in Tibetan.<span class="note" id="mn59n130"><span class="details"><span class="p">[n.130] Cf. below note 134.</span></span></span></p>
+<p>The Majjhima-nikāya and Saṃyutta-nikāya versions report that a discussion on the nature of the Buddha’s analysis of feelings had arisen between the monk Udāyī and the carpenter Pañcakaṅga. While the Saṃyukta-āgama discourse agrees on the nature of the issue at stake, it differs in so far as according to its report this had caused the arising of a dispute between the monk Udāyī and King Bimbisāra.<span class="note" id="mn59n131"><span class="details"><span class="p">[n.131] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 123c22. For a more detailed discussion of this difference cf. Anālayo 2007i: 34-36.</span></span></span></p>
+<p>The disagreement between Udāyī and his visitor was whether the Buddha had taught two or three types of feeling. According to the Pāli versions, Ānanda reported the disagreement between Udāyī and his visitor on the proper way of analysing feelings to the Buddha.<span class="note" id="mn59n132"><span class="details"><span class="p">[n.132] <a href="../../mn/mn59.html">MN 59</a> at MN I 397,27 and <a href="../../sn/sn36.19.html">SN 36:19</a> at SN IV 224,20 .</span></span></span> The Saṃyukta-āgama version indicates that Udāyī and his visitor went themselves to present their disagreement to the Buddha.<span class="note" id="mn59n133"><span class="details"><span class="p">[n.133] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a1. SHT 51aV3 and R6 agrees in this respect with <a href="../../parallels/sa485.html">SĀ 485</a>, as it reports that the Buddha addressed his exposition to Udāyī.</span></span></span></p>
+<p>The three versions agree that the Buddha clarified in reply that he had not only taught two or three types of feeling, but also six types, eighteen types, thirty-six types, and even one-hundred-and-eight types. While the Pāli versions only enumerate these types of feeling, the Chinese version and the discourse quotation in Śamathadeva’s commentary, which has preserved this part of the discourse,<span class="note" id="mn59n134"><span class="details"><span class="p">[n.134] Abhidh-k-ṭ at D (4094) mngon pa, nyu 4b7 or Q (5595) thu 36a7 parallels the enumeration of different types of feeling in <a href="../../mn/mn59.html">MN 59</a> at MN I 397,36; cf. also Abhidh-k 6:3 in Pradhan 1967: 330,10, with its Chinese counterparts in T 1558 at T XXIX 114c25 and T 1559 at T XXIX 267a29.</span></span></span> follow this listing with a detailed explanation of each type. A similar explanation can be found in an otherwise unrelated discourse in the Saṃyutta-nikāya.<span class="note" id="mn59n135"><span class="details"><span class="p">[n.135] <a href="../../sn/sn36.22.html">SN 36:22</a> at SN IV 231,30.</span></span></span></p>
+<p>The Chinese and Tibetan versions also differ from the Pāli versions in as much as they additionally mention one type of feeling, four types of feeling, and innumerable types of feeling (see table 6.5).<span class="note" id="mn59n136"><span class="details"><span class="p">[n.136] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a5+6+7. The innumerable feelings can also be found in a similar type of listing of feelings in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 325b9.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 6.5: Analysis of Feelings in <a href="../../mn/mn59.html">MN 59</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn59.html">MN 59</a></th><th><a href="../../parallels/sa485.html">SĀ 485</a> & Abhidh-k-ṭ</th></tr>
+<tr><td>2 feelings (1)</td><td>1 feeling</td></tr>
+<tr><td>3 feelings (2)</td><td>2 feelings (→ 1)</td></tr>
+<tr><td>5 feelings (3)</td><td>3 feelings (→ 2)</td></tr>
+<tr><td>6 feelings (4)</td><td>4 feelings</td></tr>
+<tr><td>18 feelings 5)</td><td>5 feelings (→ 3)</td></tr>
+<tr><td>36 feelings (6)</td><td>6 feelings (→ 4)</td></tr>
+<tr><td>108 feelings (7)</td><td>18 feelings (→ 5)</td></tr>
+<tr><td></td><td>36 feelings (→ 6)</td></tr>
+<tr><td></td><td>108 feelings (→ 7)</td></tr>
+<tr><td></td><td>innumerable feelings</td></tr>
+</table>
+<p>According to the exposition of these types of feeling given in the Saṃyukta-āgama discourse and the quotation in Śamathadeva’s commentary, the one type of feeling refers to all feelings being dukkha.<span class="note" id="mn59n137"><span class="details"><span class="p">[n.137] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a7: 所有受, 皆悉是苦 and D (4094) mngon pa, nyu 5a4 or Q (5595) thu 36b4: gang cung zad tshor ba de thams cad ni sdug bsngal ba ste.</span></span></span> This seems to refer to a statement found in a discourse in the Saṃyutta-nikāya and its Saṃyukta-āgama parallel, according to which whatever is felt is to be included within dukkha. In this statement, however, dukkha does not refer to a type of feeling, but rather stands for the unsatisfactory nature of conditioned phenomena, due to their impermanent nature.<span class="note" id="mn59n138"><span class="details"><span class="p">[n.138] <a href="../../sn/sn36.11.html">SN 36:11</a> at SN IV 216,22 and its parallel <a href="../../parallels/sa473.html">SĀ 473</a> at T II 121a9 explain that the statement yaṃ kiñci vedayitaṃ taṃ dukkhasmin ti (Se-SN IV 268,8: yaṅ), 所有受, 悉皆是苦, refers to the impermanent nature of feelings. Other occurrences of this proclamation can be found in <a href="../../sn/sn12.32.html">SN 12:32</a> at SN II 53,20 and <a href="../../parallels/sa474.html">SĀ 474</a> at T II 121a22.</span></span></span> Thus, it would not seem adequate to treat this qualification as if it were to refer to a type of feeling, which is the case once it is included in the present listing of ‘types’ of feelings.</p>
+<p>The Saṃyukta-āgama discourse then explains that the reference to four types of feeling intends feelings which are:</p>
+<ul>
+<li>conjoined with the element of sensuality,</li>
+<li>conjoined with the element of materiality,</li>
+<li>conjoined with the element of immateriality,</li>
+<li>not conjoined (with any of these three).<span class="note" id="mn59n139"><span class="details"><span class="p">[n.139] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a10: 欲界繫受, 色界繫受, 無色界繫受, 及不繫受. D (4094) mngon pa, nyu 5a6 or Q (5595) thu 36b8 speaks in the last case instead of “undefiled” feelings, zag pa med pa.</span></span></span></li>
+</ul>
+<p>A similar analysis can be found in the Abhidharmic exposition of feelings given in the Vibhaṅga.<span class="note" id="mn59n140"><span class="details"><span class="p">[n.140] Vibh 15,7 distinguishes the aggregate of feelings in a fourfold manner: kāmāvacaro, rūpāvacaro, arūpāvacaro, and apariyāpanno. The Vibhaṅga has this fourfold analysis as part of its exposition according to the Abhidharmic method (abhidhammabhājaniya), thereby setting it apart from its exposition according to the discourses (suttantabhājaniya).</span></span></span></p>
+<p>According to the Saṃyukta-āgama version, innumerable feelings are “this and that” feelings.<span class="note" id="mn59n141"><span class="details"><span class="p">[n.141] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a21: 此受彼受 and D (4094) mngon pa, nyu 5b6 or Q (5595) thu 37b2: ji ltar tshor yang tshor ba.</span></span></span> This is slightly puzzling, since to speak of “this and that” feelings does not constitute a category that can be used for analytical purposes.</p>
+<p>Here it needs to be borne in mind that the analysis of feelings into various types does not appear to be motivated by a merely descriptive concern. Distinguishing feelings into mutually exclusive types would rather have the purpose of eroding the notion of a substantial self that feels.<span class="note" id="mn59n142"><span class="details"><span class="p">[n.142] Cf., e.g., <a href="../../dn/dn15.html">DN 15</a> at DN II 66,19 and its parallel <a href="../../parallels/da13.html">DĀ 13</a> at T I 61c8, which draw attention to the mutually exclusive nature of the three types of feeling in order to refute self notions in relation to feelings; for a discussion of this passage cf. Bodhi 1984/1995: 34-37.</span></span></span> In such a context to speak of ‘innumerable’ feelings, or ‘this and that’ feelings, would not yield an analytical tool for differentiating types of feeling and would thus be of limited use for the purpose for which the whole analytical scheme would be meant.</p>
+<p>The Bahuvedanīya-sutta and its parallels next turn to the dire consequence of getting into narrow-minded arguments on a particular form of presentation. Although the statements of the monk Udāyī and the carpenter Pañcakaṅga as such were right, both were wrong in as much as they took a dogmatic stance. Such a dogmatic stance does not do justice to the teaching, which can be applied in different ways.</p>
+<p>The Pāli and Chinese versions next turn to the five types of sensual pleasure. While in the two Pāli versions this topic comes somewhat abruptly, the Chinese version and the Sanskrit fragment offer a transition to this exposition. According to these versions, the Buddha explained that he had indeed taught two types of feeling, an explanation addressed to Udāyī who earlier had maintained that the Buddha had not taught two types of feeling.<span class="note" id="mn59n143"><span class="details"><span class="p">[n.143] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124a27 and SHT II 51aV3.</span></span></span> These two types of feeling are those associated with sensuality and those aloof from sensuality.</p>
+<p>As an exposition of this statement, the Buddha then contrasted the feelings that arise in relation to the five types of sensual pleasure with the feelings that arise in relation to the four jhānas and the four immaterial attainments, a presentation found similarly in the Pāli versions.</p>
+<p>The Pāli, Chinese, and Sanskrit versions agree in correcting those who believe any of the jhānas or immaterial attainments to be the supreme experience of pleasant feeling and happiness, since in each case the next jhāna or immaterial attainment in the series is superior in happiness.</p>
+<p>In all versions, the series culminates with the attainment of the cessation of perceptions and feelings, which the Buddha declared to be the supreme type of happiness, even though it takes place in the absence of feelings.</p>
+<p>This seems to be an implicit corrective of the position held by Udāyī’s visitor, who had earlier maintained that the Buddha simply reckoned neutral feeling as such to be peaceful.<span class="note" id="mn59n144"><span class="details"><span class="p">[n.144] <a href="../../mn/mn59.html">MN 59</a> at MN I 397,4, <a href="../../sn/sn36.19.html">SN 36:19</a> at SN IV 224,4, and <a href="../../parallels/sa485.html">SĀ 485</a> at T II 123c28.</span></span></span> In this way, by at first distinguishing between sensual and non-sensual types of feeling and then leading the exposition up to the attainment of cessation, the Buddha’s exposition seems to deal with both of the stances taken by Udāyī and his visitor.</p>
+<p>In order to explain why even the cessation of feeling could be reckoned a form of happiness, the Pāli versions point out that the Buddha’s conception of happiness is not limited to pleasant feeling.<span class="note" id="mn59n145"><span class="details"><span class="p">[n.145] <a href="../../mn/mn59.html">MN 59</a> at MN I 400,19 and <a href="../../sn/sn36.19.html">SN 36:19</a> at SN IV 228,17; cf. also, e.g., Collins 1998: 210 and Kalupahana 1992/1994: 100. That the Buddha identified cessation as a form of happiness is also recorded in the Yogācārabhūmi, Bhattacharya 1957: 99,16 and T 1579 at T XXX 300a10.</span></span></span> The Chinese version instead distinguishes between four types of (non-sensual) happiness.<span class="note" id="mn59n146"><span class="details"><span class="p">[n.146] <a href="../../parallels/sa485.html">SĀ 485</a> at T II 124b15 distinguishes between the happiness derived from the absence of sensuality, the happiness of seclusion, the happiness of appeasement, and the happiness of awakening, 謂離欲樂, 遠 離樂, 寂滅樂, 菩提樂. SHT II 51 folio (1)[41]R6-7 instead reads (a reading based in part on a preliminary transliteration, as parts of the originals have been lost): n[ai]ṣkrāmyas(ukha)ṃ [vi]vekasukhaṃ sambodhisu(khaṃ nirvāṇasukhaṃ). The set nekkhammasukha, pavivekasukha, upasamasukha, and sambodhasukha (or sambodhisukha), occurs in <a href="../../mn/mn66.html">MN 66</a> at MN I 454,23, <a href="../../mn/mn122.html">MN 122</a> at MN III 110,21, and <a href="../../mn/mn139.html">MN 139</a> at MN III 233,32. A difference seems to be that <a href="../../mn/mn66.html">MN 66</a> and <a href="../../mn/mn139.html">MN 139</a> use these four terms as near equivalents to qualify the happiness of jhāna (the same appears to be also implicit in <a href="../../mn/mn122.html">MN 122</a>). <a href="../../parallels/sa485.html">SĀ 485</a>, however, introduces this set as four “types” of happiness, 四種樂, not as four near equivalents for the same type of happiness, cf. also SHT II 51aR6: catvāry-udāyī sukhā(ni).</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

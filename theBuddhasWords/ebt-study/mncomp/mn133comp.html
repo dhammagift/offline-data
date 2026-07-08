@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 133 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 133: Mahākaccānabhaddekaratta-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn132comp.html#content"></a><a id="next-sutta" href="./mn134comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn133.html">MN 133</a> / <a href="../../parallels/ma165.html">MĀ 165</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Mahākaccānabhaddekaratta-sutta, “the discourse by Mahākaccāna on an auspicious night”, records an explanation of the stanzas on an auspicious night by Mahākaccāna. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn133n22"><span class="details"><span class="p">[n.22] The parallel is <a href="../../parallels/ma165.html">MĀ 165</a> at T I 696b-698c, which has the title, “discourse on a deva at the Hot-spring Grove”, 溫泉林天經, and agrees with <a href="../../mn/mn133.html">MN 133</a> on locating the meeting between Samiddhi and the deva at the hot springs by Rājagaha. A translation of <a href="../../parallels/ma165.html">MĀ 165</a> can be found in Anālayo 2008o; on <a href="../../parallels/ma165.html">MĀ 165</a> cf. also Minh Chau 1964/1991: 59.</span></span></span> The first part of the Mahākaccānabhaddekaratta-sutta also has partial parallels in an individual Chinese translation and in a Tibetan discourse found several times in the Tibetan canon.<span class="note" id="mn133n23"><span class="details"><span class="p">[n.23] The partial Chinese parallel is T 1362 at T XXI 881c-882c, which has the title “discourse spoken by the Buddha on [the topic of] a good night”, 佛說善夜經, a discourse that according to the information given in the Taishō edition was translated by Yìjìng (義淨). The Tibetan parallel is found thrice in the Derge edition and twice in the Peking edition: D (313) mdo sde, sa 161b-163b or Q (979) shu 171a-173b, D (617) rgyud ’bum, ba 56a-58b or Q (599) ya 96b-98b, and D (974) gzungs ’dus, waṃ 90a-92a. The occurrence of three versions of this translation in the Derge edition and two versions in the Peking edition appears to be due to some degree of uncertainty about the category to which this text should be assigned, with the result that it was finally placed into two or even into three categories, namely sūtra, tantra, and dhāraṇī, cf. also Skilling 1997a: 81-83. The Tibetan versions are entitled “auspicious night”, ’phags pa mtshan mo bzang po zhes bya ba’i mdo, corresponding to Bhadrakarātrī-nāma-ārya-sūtra (the prefix ’phags pa qualifies the discourse itself, cf. Skilling 1997a: 585-586). T 1362 and the Tibetan versions agree with <a href="../../mn/mn133.html">MN 133</a> on locating the discourse at the hot springs by Rājagaha.</span></span></span></p>
+<p>The Mahākaccānabhaddekaratta-sutta and its Chinese and Tibetan parallels narrate in similar terms that the monk Samiddhi,<span class="note" id="mn133n24"><span class="details"><span class="p">[n.24] While <a href="../../parallels/ma165.html">MĀ 165</a> at T I 696b29 agrees with <a href="../../mn/mn131.html">MN 131</a> on the monk’s name, which it renders as 三彌提, T 1362 and the Tibetan versions do not record his name.</span></span></span> who had gone to the hot springs to take a bath, was asked by a deva if he knew the bhaddekaratta stanzas.<span class="note" id="mn133n25"><span class="details"><span class="p">[n.25] While in <a href="../../mn/mn133.html">MN 133</a> at MN III 192,17 and in <a href="../../parallels/ma165.html">MĀ 165</a> at T I 696c7 the deva inquired after the verses, gāthā/偈, in T 1362 at T XXI 881c11 and in the Tibetan versions at D (313) mdo sde, sa 161b4 or Q (979) shu 171b2, D (617) rgyud ’bum, ba 56b2 or Q (599) ya 96b6, and D (974) gzungs ’dus, waṃ 90a5 the deva inquired after the whole discourse, 經/mdo sde. A meeting between Samiddhi and a deva recurs in the introductory narration to another discourse of different content, <a href="../../sn/sn1.20.html">SN 1:20</a> at SN I 8,16 (or SN2 20 at SN2 I 18,10), which similarly records a visit by a deva to Samiddhi who had just taken a bath at the hot springs (cf. also Jā 167 at Jā II 56,24). This meeting led to a different discussion, as the visiting deva tried to tempt Samiddhi with sensual pleasures. The parallels to <a href="../../sn/sn1.20.html">SN 1:20</a>, <a href="../../parallels/sa1078.html">SĀ 1078</a> at T II 281c4 and <a href="../../parallels/sa-2.17.html">SĀ2 17</a> at T II 379a24, do not report the name of the monk.</span></span></span> Samiddhi had to admit that he did not know the stanzas. On asking the deva the same question, Samiddhi found out that the deva also did not know the stanzas.</p>
+<p>A minor difference in relation to this exchange is that, according to the Pāli account, the deva first asked Samiddhi if he knew the “summary and the analysis” on an auspicious night, after which the deva asked if Samiddhi knew the “stanzas” on an auspicious night.<span class="note" id="mn133n26"><span class="details"><span class="p">[n.26] <a href="../../mn/mn133.html">MN 133</a> at MN III 192,10: “do you remember the summary and analysis on an auspicious night”, dhāresi ... bhaddekarattassa uddesañ ca vibhaṅgañ cā ti?, followed in <a href="../../mn/mn133.html">MN 133</a> at MN III 192,16 by: “do you remember the verses on an auspicious night”, dhāresi ... bhaddekarattiyo gāthā ti?</span></span></span> Since the stanzas correspond to the summary,<span class="note" id="mn133n27"><span class="details"><span class="p">[n.27] <a href="../../mn/mn133.html">MN 133</a> at MN III 193,24 reports that, after the Buddha had spoken the verses without drawing out their meaning, the monks were wondering who would be able to explain the meaning of this “summary”, uddesa, thereby identifying the verses as the summary. In fact, apart from the verses it would be difficult to find anything else that could be reckoned as a summary.</span></span></span> this double inquiry seems to some degree to be redundant. Such a redundancy is not found in the Chinese and Tibetan versions, which report only a single inquiry.<span class="note" id="mn133n28"><span class="details"><span class="p">[n.28] <a href="../../parallels/ma165.html">MĀ 165</a> at T I 696c7: “do you remember the verses on an auspicious night”, 受持跋地羅帝偈耶? T 1362 at T XXI 881c10: “have you heard the discourse on the wholesome night”, 聞善夜經不? D (313) mdo sde, sa 161b4 or Q (979) shu 171b1, D (617) rgyud ’bum, ba 56b2 or Q (599) ya 96b5, and D (974) gzungs ’dus, waṃ 90a5: “monk, do you know the discourse on an auspicious night”, dge slong khyod kyis mtshan mo bzang po’i mdo sde shes sam?</span></span></span></p>
+<p>According to the Pāli, Chinese, and Tibetan versions, the deva told Samiddhi that he should learn those stanzas. The Majjhima-nikāya discourse reports the deva’s explanation that these stanzas are beneficial and of fundamental relevance for the holy life, to which the Madhyama-āgama version adds that they lead to knowledge, realization, and Nirvāṇa.<span class="note" id="mn133n29"><span class="details"><span class="p">[n.29] <a href="../../mn/mn133.html">MN 133</a> at MN III 192,26: atthasaṃhito ... ādibrahmacariyako (Se-MN III 357,20: atthasañhito) and <a href="../../parallels/ma165.html">MĀ 165</a> at T I 696c16: 趣智, 趣覺, 趣於涅槃.</span></span></span></p>
+<p>The Chinese and Tibetan accounts report that Samiddhi asked the deva from whom he could learn these stanzas. In reply, he was told that he should approach the Buddha. This exchange is not found in the Pāli version.</p>
+<p>Samiddhi then approached the Buddha and related what had taken place.<span class="note" id="mn133n30"><span class="details"><span class="p">[n.30] According to <a href="../../parallels/ma165.html">MĀ 165</a> at T I 697a11, T 1362 at T XXI 881c23, and the Tibetan versions at D (313) mdo sde, sa 162a5 or Q (979) shu 172a3, D (617) rgyud ’bum, ba 57a3 or Q (599) ya 97a7, and D (974) gzungs ’dus, waṃ 90b6, the Buddha told Samiddhi the name of this deva and explained that it belonged to the heaven of the Thirty-three. A similar exchange on the identity of a visiting deva can be found in <a href="../../mn/mn134.html">MN 134</a> at MN III 201,19 and its parallels <a href="../../parallels/ma166.html">MĀ 166</a> at T I 699b21 and T 77 at T I 886c29.</span></span></span> In reply, the Buddha taught Samiddhi the stanzas on an auspicious night.<span class="note" id="mn133n31"><span class="details"><span class="p">[n.31] T 1362 at T XXI 882a3 has only preserved half of the first and fourth verse, after which it adds a verse expressing an aspiration for the welfare of all beings. A similar verse can be found in the Tibetan versions at D (313) mdo sde, sa 162b2 or Q (979) shu 172b1, D (617) rgyud ’bum, ba 57a7 or Q (599) ya 97b4, and D (974) gzungs ’dus, waṃ 91a3. Parts of such a verse have also been preserved in the Sanskrit fragment 3b1-2 in Minayeff 1983: 243.</span></span></span> According to the Majjhima-nikāya and Madhyama-āgama versions, having taught the stanzas the Buddha retired to his dwelling.<span class="note" id="mn133n32"><span class="details"><span class="p">[n.32] <a href="../../mn/mn133.html">MN 133</a> at MN III 193,20 and <a href="../../parallels/ma165.html">MĀ 165</a> at T I 697a26.</span></span></span> The individual Chinese translation and the Tibetan versions continue differently, as in their account the Buddha continues by delivering a series of dhāraṇīs.<span class="note" id="mn133n33"><span class="details"><span class="p">[n.33] T 1362 at T XXI 882a14, D (313) mdo sde, sa 162b4 or Q (979) shu 172b3, D (617) rgyud ’bum, ba 57b2 or Q (599) ya 97b7, and D (974) gzungs ’dus, waṃ 91a5. Skilling 1992a: 155 notes invocations of the names of female deities found among these dhāraṇīs.</span></span></span> Thus, the remainder of these versions is no longer a parallel to the Mahākaccānabhaddekaratta-sutta.</p>
+<p>From the perspective of the Majjhima-nikāya version, for the Buddha to retire to his dwelling at this point is rather puzzling, since he did not deliver any explanation of these stanzas, even though he had earlier agreed to give such an explanation. In the Madhyama-āgama version, however, the deva and Samiddhi had only been discussing the stanzas, so that when Samiddhi came to see the Buddha he only asked to be taught the stanzas.<span class="note" id="mn133n34"><span class="details"><span class="p">[n.34] According to <a href="../../parallels/ma165.html">MĀ 165</a> at T I 697a13, Samiddhi requested that the Buddha teaches the verses on an auspicious night, 若世尊為諸比丘說跋地羅帝偈者, while according to <a href="../../mn/mn133.html">MN 133</a> at MN III 193,5 he requested a teaching on the summary and analysis on an auspicious night, bhaddekarattassa uddesañ ca vibhaṅgañ ca desetū ti, a request which in both versions is followed by the Buddha telling Samiddhi that he should pay proper attention to what was about to be said, a standard pericope in the discourses to announce the impending delivery of a teaching and thus an expression of the Buddha’s willingness to comply with Samiddhi’s request. A minor difference is that the request in <a href="../../parallels/ma165.html">MĀ 165</a> is made in the name of the monks (that were present on this occasion), 諸比丘, while in <a href="../../mn/mn133.html">MN 133</a> Samiddhi only requested to be instructed himself. This difference is merely formal, as both versions continue by depicting how the monks wondered who could give them a detailed explanation, so that from the perspective of both versions other monks were present during this meeting between Samiddhi and the Buddha.</span></span></span> In view of this, in the Madhyama-āgama it is quite natural that the Buddha taught only the stanzas.<span class="note" id="mn133n35"><span class="details"><span class="p">[n.35] For a further discussion of this point cf. below p. 788.</span></span></span></p>
+<p>The Mahākaccānabhaddekaratta-sutta and its Madhyama-āgama parallel describe in similar terms that the monks approached Mahākaccāna and requested him to explain the stanzas. In reply to their request, Mahākaccāna explained that to let go of past and future stands for avoiding delight and attachment in regard to the six senses and in regard to what has been experienced or will be experienced through them.</p>
+<p>A minor but telling difference between the two versions is that the Madhyama-āgama version’s examination of experiences of the past qualifies the sense-organs as “truly existent”.<span class="note" id="mn133n36"><span class="details"><span class="p">[n.36] <a href="../../parallels/ma165.html">MĀ 165</a> at T I 697c20 begins its treatment by indicating that “the truly existing eye knows forms”, 實有眼知色, an expression used also for the other sense-organs in relation to past experiences.</span></span></span> This appears to be an instance where the school affiliation of the Madhyama-āgama reciters has led to an intrusion of a school-specific tenet, in this case the Sarvāstivāda theory that past and future phenomena truly exist.</p>
+<p>What is particularly noteworthy about this case is that the same expression is not used to qualify sense-organs in future times.<span class="note" id="mn133n37"><span class="details"><span class="p">[n.37] In its expositions of the future and the present, <a href="../../parallels/ma165.html">MĀ 165</a> at T I 698a15+21 does not employ the expression “truly existent”, but simply speaks of future or present eye, forms and eye-consciousness (etc.), 若有眼, 色, 眼識未來者, or 若有眼, 色, 眼識現在者.</span></span></span> Hence, although the use of the qualification “truly existent” seems to be due to the influence of Sarvāstivāda thought, this influence appears to have been of a somewhat accidental type, since it is not applied consistently. If the present passage were the outcome of a conscious editing, the same qualification would certainly have been applied to the case of future sense-organs.</p>
+<p>This finding is significant, as it indicates that, even in the case of evident influence of the school affiliation of the reciters on the text, such influence need not be the outcome of deliberate editing, since in such a case all occurrences would have been taken care of. Instead it seems that part of a Sarvāstivāda commentary on this passage, which presumably would have made some statement to the effect that the sense-organs “truly exist”, became part of the discourse during the process of transmission. Due to the accidental nature of this intrusion of commentarial material into the discourse, only the treatment of the past was affected, and the treatment of present and future experiences remained in a more original form.</p>
+<p>The Mahākaccānabhaddekaratta-sutta and its Madhyama-āgama parallel continue by reporting that, in relation to the present moment, Mahākaccāna again spoke of avoiding delight and attachment towards the six senses and their objects. The two versions conclude with the Buddha’s approval of Mahākaccāna’s exposition.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.119 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.119</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 119</span><span class="mirror-right">（一一九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn16.11.html">SN 16.11</a> / <a href="../parallels/sa1144.html">SĀ 1144</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Tathāgata was about to enter parinirvāṇa. Venerable Ānanda and Mahākāśyapa were on Vulture Peak Mountain. At that time, the world was experiencing a famine, and it was difficult to obtain alms. Venerable Ānanda then led the newly ordained bhikṣus to a village in the southern mountains. Among the newly ordained bhikṣus, there were some young ones who enjoyed playing and indulging in food and drink, without restraining their faculties and lacking proper deportment. They did not diligently practice the path, recite the sūtras, or lie down on their left sides at night, but instead indulged in sleep. After arriving there, more than thirty bhikṣus among them gave up the monastic life and returned to lay life. For this reason, the number of disciples decreased. After wandering around, they returned to the great city of Rājagṛha and Vulture Peak Mountain. They put away their robes and alms bowls, washed their hands and feet, and went to where Venerable Mahākāśyapa was. They bowed at Venerable Mahākāśyapa&#x27;s feet and sat to one side. At that time, Mahākāśyapa said to Ānanda, &quot;Where have you come from? The number of disciples has decreased.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，如来将欲涅槃。尊者阿难、摩诃迦叶在耆阇崛山。时世饥俭，乞食难得。于是尊者阿难将诸新学比丘，向于南山聚落。新学比丘之中，有诸年少，乐著嬉戏，躭嗜饮食，不摄诸根，无有威仪，初夜后夜，不勤行道，读诵经典，左脇著地，自恣睡眠。既达彼已，诸比丘中，三十余人罢道还俗。以是之故，徒众减少，游行己竟，还至于彼王舍大城耆阇崛山，收摄衣钵，洗手足已，往诣尊者大迦叶所，礼尊者足，在一面坐。时，大迦叶告阿难曰：「汝从何来？徒众减少。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda replied, &quot;I went to that village in the southern mountains. Among the disciples, more than thirty of them had originally renounced the householder life as youths, but they gave up the monastic life and returned to lay life. For this reason, the number of disciples has decreased.&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难答言：「我往至彼南山聚落，弟子之中三十余人，昔日尽是童真出家，罢道还俗，以是事故，徒众减少。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahākāśyapa said to Ānanda, &quot;Why did the Tathāgata prohibit eating separately and allow three people to eat together? The intention is to protect people and prevent them from being harmed. It is also to subdue greedy bhikṣus and cut off people&#x27;s many followers. By using the name of the Saṃgha, they seek much, reducing the resources of families and destroying the Saṃgha, causing it to be divided into two parts. It prevents the bhikṣus who follow the Dharma from receiving offerings of clothing and food, while the bhikṣus who do not follow the Dharma obtain much gain. When the greedy bhikṣus obtain offerings, they quarrel with those who practice purity. Why did you, in a time of famine, take those newly ordained young bhikṣus as your disciples? These bhikṣus enjoy playing, are greedy for food and drink, their faculties are scattered, they lack proper deportment, are greedy for sleep, and are insatiable. They do not diligently practice the path, recite the sūtras, or lie down on their left sides at night. How did you lead such a group of disciples to that village in the southern mountains? After arriving there, more than thirty of them had originally renounced the householder life as youths, but they gave up the monastic life and returned to lay life. Your disciples are now destroyed. You are now as ignorant as a child.&quot;</p></td><td lang="lzh" class="agama-chi"><p>摩诃迦叶语阿难言：「如来何故制别众食，而听三人共一处食？如是之意为欲拥护于诸人故，使不损减。复为制伏恶欲比丘，断除于人多眷属故，称僧名字，多有所求，减损诸家，破坏众僧，使作二部故，令如法比丘不得供养衣服饮食，非法比丘多获利养。恶欲比丘既得供养，与净行者而共诤讼。汝以何故，于饥馑世，将彼新学年少比丘以为徒众？而此比丘，乐著嬉戏，贪嗜饮食，诸根驰散，无有威仪，贪嗜睡眠，无有厌足。初夜后夜不勤行道，读诵经典，云何而此如是徒众游行至彼南山聚落？既达彼已，三十余人昔日尽是童子出家，罢道还俗。汝于今者，徒众破坏。汝今无智，犹如小儿。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda replied, &quot;I am already old. How can you say I am like a child?&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难答言：「我已年迈，云何而言『犹如小儿』？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Kāśyapa said again, &quot;I am not calling you a child without reason. Now in this famine, begging is difficult. How can you lead many disciples to that village in the southern mountains? Among your disciples, there are young ones who enjoy playing, are greedy for food and drink, their faculties are scattered, they lack proper deportment, are greedy for sleep, and are insatiable. They do not diligently practice the path, recite the sūtras, or lie down on their left sides at night. They have caused more than thirty people to give up the monastic life and return to lay life. Is this not the same as those children?&quot;</p></td><td lang="lzh" class="agama-chi"><p>迦叶复言：「我非无故称汝名字以为小儿。今世饥馑，乞匃难得，而汝云何多将人众，游行至彼南山聚落？汝弟子中，有诸年少，乐著嬉戏，贪嗜饮食，诸根驰散，无有威仪，贪好睡眠，无有厌足。初夜后夜不勤行道，读诵经典，使三十余人休道还俗。如是所作，岂非同彼小儿者乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣuṇī Tisya Nanda heard Mahākāśyapa rebuke Venerable Ānanda Bhikṣu for acting like a child. She was displeased and greatly distressed. She then spoke harshly, saying, &quot;This Mahākāśyapa was originally a non-Buddhist. How can he now slander Ānanda Bhikṣu for acting like a child?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，帝舍难陀比丘尼闻大迦叶呵责尊者阿难比丘作小儿行，心中不悦，生大忧恼，即出麁言：「此大迦叶本是外道，而今云何毁呰阿难比提醯牟尼作小儿行？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Kāśyapa heard the bhikṣuṇī Tisya Nanda speak these harsh words slandering him with his pure divine ear. He then told Ānanda, &quot;The bhikṣuṇī Tisya Nanda is displeased in body and mind, greatly distressed, and speaks these evil words: &#x27;This Mahākāśyapa was originally a non-Buddhist teacher. How can he slander Venerable Ānanda Bhikṣu for acting like a child?&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，迦叶以净天耳闻比丘尼出斯麁言毁骂己已，于是迦叶告阿难曰：「帝舍难陀比丘尼身心中不悦，生大苦恼，发是恶言：『斯大迦叶本外道师，云何毁呰尊者阿难比提醯牟尼作小儿行？』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda immediately said to Kāśyapa, &quot;This bhikṣuṇī is childish and ignorant, like a baby. I only hope the great virtuous one will allow her to repent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>即时阿难语迦叶曰：「此比丘尼稚小儿智，犹如𪧀孩，唯愿大德，听其忏悔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Mahākāśyapa said to Ānanda, &quot;When I left home, I made this vow: &#x27;If there is an arhat in the world, I will take refuge in him.&#x27; Since leaving home, I have not had any other thoughts, but only take refuge in the Tathāgata, the Unsurpassed, the Perfectly Enlightened One. Before I left home, I saw the world with its birth, old age, sickness, death, sorrow, lamentation, suffering, and distress. These things came pressing in upon me. At that time, I was weary of the confinement of home and found no place to dwell. I delighted in the Dharma of leaving home, which can remove worldly dust. I saw that household life is full of affairs, like entering a thicket of thorns, where one is pricked and torn, and it is difficult to escape. Household life is also like this, bound by worldly affairs, sinking in the mud of desire, unable to cultivate pure and clean practices. Day and night I pondered, not seeing a single thing that could surpass it. I shaved my beard and hair, put on the Dharma robes, abandoned my family business, and left home with faith. When leaving home, I chose the lowest garment in the house, a tattered garment worth a hundred thousand taels of gold, and took it as my saṃghāṭī robe. I abandoned all my former occupations and also left behind my relatives and friends. I further thought: &#x27;If there is an arhat in the world, I will take refuge in him and leave home following him.&#x27; At that time, there was a Rālarakṣita in the middle of the great city of Rājagṛha. In the middle of Rālarakṣita, there was a caitya with many sons. I was dignified and extraordinary, with calm faculties and a peaceful mind, having attained the unsurpassed mind of discipline. My appearance was adorned with the marks, like a golden tower. When I saw him, I was overjoyed and thought: &#x27;I have been seeking a teacher of the world. The one I see now is truly my Bhagavān, Arhat, Perfectly Enlightened One.&#x27; Having this thought, my mind was not distracted, but I single-mindedly contemplated the Buddha. I straightened my robes, circumambulated him three times to the right, knelt with palms joined, and said to the Buddha: &#x27;The Buddha is my World-Honored One, and I am a disciple of the Buddha.&#x27; I said this three times. The Buddha also said: &#x27;So it is, Kāśyapa. I am your World-Honored One, and you are my disciple.&#x27; He also said this three times. The Buddha told Kāśyapa: &#x27;If there are any disciples of the Buddha who are not sincere, they are not the World-Honored One but say they are the World-Honored</p></td><td lang="lzh" class="agama-chi"><p>摩诃迦叶语阿难言：「我出家时，作是要誓：『世间若有阿罗汉者，我当归依。』自出家来，未有异趣，唯依如来、无上至真、等正觉。我先在俗，未出家时，观诸世间生老病死、忧悲愁恼众苦聚集，如是之事，竞来逼切。我于尔时，厌家迫迮，无有可处。乐出家法，能离尘垢。观于在家，众事愦閙，犹如入于钩棘之林，钩剀刺牵，伤毁形服，难可得出。在家亦尔，缘务缠缚，没于欲泥，不得修于清净梵行。昼夜思惟，不见一法能胜于彼，剃除须发，被服法衣，弃舍家业，信心出家。欲出家时，选择家中，最下衣裳，得一弊衣，其价犹直十万两金，即便取之为僧伽梨。先所居业，一切悉舍，眷属亲戚，亦悉舍离。复作是念：『世间若有阿罗汉者，我当归依，随其出家。』时，彼王舍大城中间，有罗罗健陀。罗罗健陀中间，有多子塔。我端严殊妙，诸根寂定，心意惔怕，得于无上调伏之心，相好光饰，如真金楼。我既见已，心中踊跃，即作是念：『我昔推求出世之师，今所见者，真是我之婆伽婆、阿罗呵、三藐三佛陀也。』作是念已，心不散乱，专念观佛。更正衣服，右遶三匝，［跍＊月］跪合掌，白佛言：『佛是我世尊，我是佛弟子。』如是三说。佛亦复言：『如是！迦叶。我是汝世尊，汝是我弟子。』亦复三说。佛告迦叶：『世间若有声闻弟子，都无至心，实非世尊而言世尊，实非罗汉而言罗汉，非一切智言一切智。如是之人，头当破坏作于七分。我于今日，实是知者，实是见者；实是罗汉，而言罗汉；实等正觉，言等正觉。我所敷演，实有因缘，非无因缘，而说法要。实有乘出，非无乘出。实有对治，非无对治。实有精进，非不精进。能断结漏，非不能断。迦叶！汝今应作是学，诸有所听，是善法仪，应当至心受持莫忘，尊重忆念，舍于乱心，宜应专意观五受阴增长损减，常应观彼六入生灭，安心住于四念处中，修七觉意，转令增广，证八解脱，系念随身，未曾放舍，增长惭愧。』尔时，如来为我种种分别法要，示教利喜。我于尔时，寻随佛后，未曾舍离。每作是念：『佛若坐者，我当以此僧伽梨，价直十万两金者，与如来敷之。』佛知我心之所念故，出道而住，我疾牒衣，以敷坐处。白佛言：『世尊！愿就此坐。』佛即坐上，既坐上已，语迦叶言：『此衣轻软。』迦叶白佛：『实尔，世尊。唯愿世尊怜愍我故，当受此衣。』佛告迦叶：『汝能受我［仁－二＋商］那纳衣不？』迦叶答言：『我能受之。』尔时，如来即受迦叶所著大衣。我于是时，自从佛手受是［仁－二＋商］那粪扫之衣。佛授我已，即便起去，我随佛后，遶佛三匝，为佛作礼，即还所止。我于八日，学得三果。至第九日，尽诸有漏，得阿罗汉。阿难当知，若有人能正实说者，应当言：『我是佛长子，从佛口生，从法化生，持佛法家，禅定解脱诸三昧门中，出入无碍。』譬如转轮圣王，所有长子，未受王位，五欲自恣。我于今者，亦复如是，是佛长子，从佛口生，从法化生，持佛法家，禅定解脱诸三昧门，出入无碍。如转轮王所有象宝甚为高大，持一多罗树叶覆其身体，欲令不现，可得尔耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda said, &quot;Such a tree leaf will not be able to cover the body of that great elephant.</p></td><td lang="lzh" class="agama-chi"><p>阿难即言：「如是树叶，终不能覆彼大象身。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Venerable Kāśyapa said to Ānanda, &quot;That is easy to cover, but no one can cover my six supernatural powers. If there is anyone who has doubts about the supernatural power of mind, I can explain it for them, making it clear. The supernatural powers of divine ear, knowing others&#x27; minds, past lives, birth and death, and the exhaustion of taints, if there are people who have doubts about these supernatural powers, I can also explain them for them, making them clear.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尊者迦叶语阿难言：「彼犹易覆，无有人能障覆于我六通之者。若有人于如意通中生疑惑者，我悉能为演说其义，令得明了。天耳通、知他心通、宿命通、生死智通、漏尽通，若复有人，于此通中生疑惑者，我亦能为演说其义，使得明了。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda replied, &quot;For a long time, I have always respected the Venerable One, giving rise to pure faith.&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难答曰：「我于长夜，每敬尊者，心生净信。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the two Venerables, having spoken thus, departed joyfully.</p></td><td lang="lzh" class="agama-chi"><p>时，二尊者作是说已，欢喜而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

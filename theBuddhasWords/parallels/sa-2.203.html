@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.203 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.203</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 203</span><span class="mirror-right">（二〇三）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn74.html">MN 74</a> / <a href="../parallels/sa969.html">SĀ 969</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at the Karanda Bamboo Grove in Rājagṛha. At that time, the long-nailed Brāhman went to where the Buddha was, sat to one side, and said, &quot;As I am now, I do not accept or endure any dharmas at all.&quot;</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在王舍城迦兰陀竹林。尔时，长爪梵志往诣佛所，在一面坐，而作是言：「如我今者，于一切法悉不忍受。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the long-nailed Brāhman, &quot;Do you see the endurance of not enduring any dharmas?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长爪梵志：「汝于诸法悉不忍者，见是忍不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The long-nailed one again said, &quot;I also do not endure such views.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长爪复言：「如此之见，我亦不忍。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the long-nailed Brāhman, &quot;If you do not endure such views, why do you say, &#x27;I do not endure any dharmas&#x27;? Who spoke the words of your non-endurance?&quot; The Buddha further said to the great clan, &quot;If you know and see that you do not endure this view, then you have cut off this view and abandoned this view. It is like a person who has vomited. If it is like this, then among other views, you will not take them in order, and you will not give rise to them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告长爪梵志：「汝若不忍如是见者，何故而言：『我于诸法，悉皆不忍。』谁为汝出不忍之语？」佛复告大姓：「汝若知若见，不忍是见，即断是见，已弃是见。譬如有人，既呕吐已，若如是者，于余见中，即不次第，便为不取，便是不生。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The long-nailed Brāhman again thought, &quot;You say that I have already cut off this view and abandoned this view, like a person who has vomited. Then among all views, there is no order, and I do not take them and do not give rise to them.&quot;</p></td><td lang="lzh" class="agama-chi"><p>长爪梵志复作是念：「汝所言我已断是见，已弃是见，譬如人吐，便于诸见，无有次第，不取不生。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told the long-nailed one, &quot;If it is like this, there are many beings who have the same views as you. Those who abandon these views and do not accept other views are said to be of little wisdom, extremely meager, and also called foolish. Brahmins should know that all beings in the world rely on three views. The first is saying that I endure everything, the second is saying that I do not endure everything, and the third is saying that I endure a little and do not endure a little. The wise disciples observe the first view, which can give rise to greed, anger, and delusion. They are always bound by these three poisons and cannot be separated from them. They can give rise to suffering, give rise to afflictions, and cannot be liberated. They delight in desires, guard, bind, and cling to them. This is called endurance. If one does not endure, it can give rise to greed, anger, and delusion. They are always bound by these three poisons and cannot be separated from them. They cannot attain liberation. They delight in desires and are always bound by craving and grasping. This is called non-endurance. If one sees a little endurance and a little non-endurance, it is also like this. Endurance is as explained above in the section on endurance, and non-endurance is as explained above in the section on non-endurance. If the wise disciples say they endure, do not endure, or endure a little and do not endure a little, there are also these faults. Like this, brahmin, this form manifests as composed of the four great elements. The wise disciples see this body as impermanent. Having seen impermanence, they can then be free from desire. Seeing this body cease, they then let go. If one sees the body as impermanent, one can be free from desire for the body, free from attachment to the body, leave the body&#x27;s dwelling, and eliminate the definite notion of the body. Brahmins should know that there are three kinds of feeling: painful feeling, pleasant feeling, and neither painful nor pleasant feeling. What are the causes of these three feelings? What are their conditions? What do they arise from? What do they come from? They arise from contact. They arise from contact as conditions. They arise from contact. If contact ceases, feeling ceases, like escaping the heat and finding coolness. It is like the sun setting. When one feels the body&#x27;s end and the end of life, one knows it is the end of the body and the end of life. Knowing it as it is, without error. The wise disciples, if they feel pleasant feeling, know that the body will definitely perish. If they feel painful feeling or neither painful nor pleasant feeling, they know that the body will definitely perish. If they feel pleasant feeling, which is not a feeling of union, painful feeling, or neither painful nor pleasant feeling</p></td><td lang="lzh" class="agama-chi"><p>佛告长爪：「若如是者，多有众生，同汝所见，亦复如是论者，诸有异道沙门、婆罗门，若舍是见，更不受异见，是名少智，极为尠薄，亦名愚痴。梵志当知，世间众生，皆依三见，初言我忍一切，第二言一切不忍，第三言我少忍少不忍。贤圣弟子，观察初见，能起贪欲、瞋恚、愚痴，常为如是三毒缠缚，不得远离，能生患害，能生结使，不得解脱，憙乐于欲，守护缚著，是名为忍。若不忍者，能生贪欲、瞋恚、愚痴，常为如斯三毒所缠，不能远离、获得解脱，憙乐于欲，常为爱取，守护缚著，是名不忍。若见少忍少不忍，亦复如是。忍如上忍中说，不忍如上不忍中说。贤圣弟子若说言忍，便为与彼二见共诤。若言不忍，亦复与彼二见共诤。若言少忍少不忍，亦与二见共诤。以己所见，违于他故，便起诤论。若起诤论，必相毁害。以共诤论生毁害故，以见是过，生诸诤论故，便弃是见，不受余见。以是义故，能断是见，弃离是见，犹如人吐，于诸见中，无有次第，不取不生。贤圣弟子若言忍，及以不忍，少忍少不忍，亦有是过。如是梵志，此色显现四大所成，贤圣弟子见是身无常，既见无常，便能离欲。见此身灭，即便舍离。若见身无常，便离身欲，便离身爱，离身窟宅，除身决定想。梵志当知，受有三种，苦受、乐受、不苦不乐受。如此三受，以何为因？云何为习？因何而生？从何处出？以触为因，因触生习，习从触生，因触所生。若触灭则受灭，离热得凉。譬如日没，身边命边，受身边时，知是身边，受命边时，知是命边，如实而知，无有错谬。贤圣弟子若受乐受，知身必坏。若受苦受、不苦不乐受，知身必坏。若受乐受、非和合受、苦受、不苦不乐受，亦复如是。云何名为与受不和合？所谓贪欲、瞋恚、愚痴，不与生老病死而共和合，忧悲苦恼，众苦聚集。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śāriputra, who had been a renunciant for half a month, was fanning the Tathāgata from the side. The Tathāgata was teaching him the Dharma of cutting off desire and detachment. Śāriputra observed in this way that all dharmas are impermanent, and he immediately became free from desire and realized the abandonment of all views, the exhaustion of taints, and the liberation of the mind.</p></td><td lang="lzh" class="agama-chi"><p>尔时，尊者舍利弗出家半月，侍如来侧，以扇扇佛，于时如来为说断于离欲之法。时舍利弗如是观察，诸法无常，即便离欲证成，弃舍诸见，无生漏尽，心得解脱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The long-nailed brāhman attained the pure Dharma eye in all dharmas, as explained above. Having attained faith, he said to the Buddha, &quot;I only wish the World-Honored One would allow me to renounce the householder&#x27;s life.&quot; At that time, the Tathāgata allowed him to renounce the householder&#x27;s life. Having renounced the householder&#x27;s life, he diligently practiced and attained the path of arahantship.</p></td><td lang="lzh" class="agama-chi"><p>长爪梵志于诸法中，得法眼净，如上所说。既得信心，即白佛言：「唯愿世尊听我出家。」尔时，如来即听出家，既出家已，懃修精进，得阿罗汉道。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

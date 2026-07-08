@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 45.2 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 45.2</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">45.2</span> <span class="mirror-right">（二）</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn67.html">MN 67</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was staying in the Śiśiravana Garden, together with a great assembly of five hundred bhikṣus.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在释翅暗婆梨果园，与大比丘众五百人俱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Venerable Śāriputra and Venerable Maudgalyāyana, having completed their summer retreat, were traveling through the human realm with five hundred bhikṣus. They gradually arrived at Śākala Village. At that time, the traveling bhikṣus and the resident bhikṣus each addressed each other, exchanging greetings, and their voices were loud. At that time, the World-Honored One heard the loud voices of the bhikṣus and said to Ānanda, &quot;Whose voices are these in the garden, so loud as if the sound of breaking wood and stones?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，尊者舍利弗、尊者目干连于彼夏坐已，将五百比丘在人间游化，渐渐来至释翅村中。尔时，行来比丘及住比丘各各自相谓言，共相问讯，又且声音高大。尔时，世尊闻诸比丘音响高大，即告阿难曰：「今此园中是谁音响，声大乃尔，如似破木石之声。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Ānanda said to the Buddha, &quot;Now Śāriputra and Maudgalyāyana have come here with five hundred bhikṣus. The newly arrived bhikṣus and the long-term residents are greeting each other, so there is this sound.&quot;</p></td><td lang="lzh" class="agama-chi"><p>阿难白佛言：「今舍利弗及目连将五百比丘来在此，行来比丘、久住比丘共相问讯，故有此声耳。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Ānanda, &quot;Quickly send Śāriputra and Maudgalyāyana to leave this place.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告阿难曰：「汝速遣舍利弗、目干连比丘，不须住此。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Ānanda, having received the instruction, immediately went to the place of the bhikṣus Śāriputra and Maudgalyāyana, and said to them, &quot;The World-Honored One has instructed that you should quickly leave from here and not stay here.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，阿难受教已，即往至舍利弗、目干连比丘所，即语之曰：「世尊有教，速离此去，不须住此。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied, &quot;Yes, I will accept your instruction.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗报曰：「唯然受教。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra and Maudgalyāyana left the garden with five hundred bhikṣus and set out on the road.</p></td><td lang="lzh" class="agama-chi"><p>尔时，舍利弗、目干连即出彼园中，将五百比丘涉道而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Śākya clansmen heard that the bhikṣus Śāriputra and Maudgalyāyana had been sent by the World-Honored One, and they went to where the bhikṣus Śāriputra and Maudgalyāyana were. They bowed their heads at their feet and said to Śāriputra, &quot;Noble ones! Where do you wish to go?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸释闻舍利弗、目干连比丘为世尊所遣，即往至舍利弗、目干连比丘所，头面礼足，白舍利弗曰：「诸贤！欲何所趣向？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied, &quot;We were sent by the Tathāgata to each seek a place of peace.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗报曰：「我等为如来所遣，各求安处。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Śākyas said to Śāriputra, &quot;Virtuous ones, please wait a moment. We will go to the Tathāgata to repent.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，诸释白舍利弗言：「诸贤！小留意，我等当向如来忏悔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Śākyas went to where the World-Honored One was, bowed their heads at his feet, sat to one side, and said to the World-Honored One, &quot;We only wish that the World-Honored One would forgive the faults of the bhikṣus who have come from afar. We only wish that the World-Honored One would instruct them in a timely manner. Among the bhikṣus who have come from afar, there are those who are newly practicing the path and have newly entered the Dharma. They have not yet seen the World-Honored One&#x27;s countenance and have minds of regret, just like luxuriant seedlings that do not receive moisture and cannot grow. Now these bhikṣus are also like this. If they do not see the Tathāgata and leave, they may have minds of regret.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，诸释即往至世尊所，头面礼足，在一面坐。白世尊言：「唯愿世尊原舍远来比丘过咎，唯愿世尊以时教诲。其中远来比丘初学道者，新来入法中，未觐尊颜，备有变悔之心，犹如茂苗不遇润泽，便不成就。今此比丘亦复如是，不觐如来而去者，恐能有变悔之心。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Brahma King knew what was in the Tathāgata&#x27;s mind. In the time it takes for a strong man to bend and stretch his arm, he disappeared from the Brahma Heaven and came to where the Tathāgata was. He bowed his head at the Tathāgata&#x27;s feet and stood to one side. At that time, the Brahma King said to the World-Honored One, &quot;I only wish that the World-Honored One would forgive the faults committed by the newly arrived bhikṣus and instruct them in a timely manner! Among them, there may be bhikṣus who have not yet reached the ultimate, and they will then give rise to thoughts of regret. If they do not see the Tathāgata&#x27;s appearance, they will have thoughts of change and return to their original occupations. It is like a newborn calf that loses its mother and is sorrowful and does not eat. It is the same for newly practicing bhikṣus. If they do not see the Tathāgata, they will then be far removed from this true teaching.&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，梵天王知如来心中所念，犹如力士屈伸臂顷，从梵天没，来至如来所，头面礼足，在一面立。尔时，梵天王白世尊言：「唯愿世尊原舍远来比丘所作愆过，以时教诲！其中或有比丘未究竟者，便怀变悔之心。彼人不覩如来颜像，便有变意，还就本业。亦如新生犊子，生失其母，忧愁不食。此亦如是，若新学比丘不得覩如来者，便当远离此正法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One accepted the advice of the Śākya clan and the analogy of the calf of the Brahma Heaven King. At that time, the World-Honored One looked at Ānanda, who then thought: &quot;The Tathāgata has accepted the advice of the people and the gods.&quot; At that time, Ānanda went to the bhikṣus Śāriputra and Maudgalyāyana and said to them: &quot;The Tathāgata wishes to meet with the saṃgha of bhikṣus. The gods and people have all presented this matter.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便受释种之谏，及梵天王犊子之喻。是时，世尊顾盻，阿难便生斯念：「如来以受诸人民及天人之谏。」是时，阿难即往至舍利弗、目干连比丘所，而语之曰：「如来欲得与众僧相见，天及人民皆陈启此理。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra said to the bhikṣus, &quot;You should each put away your robes and alms bowls and go together to where the World-Honored One is. The Tathāgata has already accepted our repentance.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，舍利弗告诸比丘曰：「汝等各收摄衣钵，共往世尊所，然如来已受我等忏悔。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra and Maudgalyāyana, together with five hundred bhikṣus, went to where the World-Honored One was, bowed their heads at his feet, and sat to one side.</p></td><td lang="lzh" class="agama-chi"><p>是时，舍利弗、目揵连将五百比丘至世尊所，头面礼足，在一面坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the Buddha asked Śāriputra, &quot;What do you think of the monks I sent out earlier?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，佛问舍利弗曰：「吾向者遣诸比丘僧，于汝意云何？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Just now the Tathāgata sent away the assembly of monks. I thought to myself, &#x27;The Tathāgata likes to wander in solitude, to dwell alone in the unconditioned, and does not enjoy being in the midst of noise. That is why he sent away the assembly of sages.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「向者如来遣诸众僧，我便作是念：『如来好游闲静，独处无为，不乐在閙，是故遣诸圣众耳。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Śāriputra, &quot;What thoughts arose in you later? Whose burden was the noble assembly at that time?&quot;&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告舍利弗曰：「汝后复生何念？圣众是时谁之累？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said to the Buddha, &quot;At that time, World-Honored One, I also had this thought: &#x27;I should also wander in solitude and seclusion, not dwelling in the midst of the bustling city.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗白佛言：「时我，世尊！复生此念：『我亦当在闲静独游，不处市閙中。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told Shariputra, &quot;Do not speak like this, do not give rise to this thought, saying, &#x27;I should be in a secluded place.&#x27; Are not the present burdens of the noble assembly not based on Shariputra and Maudgalyayana?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告舍利弗曰：「勿作是语，亦莫生此念，云我当在闲静之处也。如今圣众之累，岂非依舍利弗、目干连比丘乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One said to Mahāmaudgalyāyana, &quot;I have sent all the monks. What do you think?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊告大目干连曰：「我遣诸众僧，汝有何念？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Maudgalyāyana said to the Buddha, &quot;When the Tathāgata sent the saṅgha away, I thought, &#x27;The Tathāgata wants to be alone in the unconditioned, that&#x27;s why he sent the noble saṅgha away.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>目干连白佛言：「如来遣众僧，我便生斯念：『如来欲得独处无为，故遣圣众耳。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Maudgalyāyana, &quot;What thoughts arose in you again later?&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告目干连：「汝后复生何念？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Maudgalyāyana said to the Buddha, &quot;Now the Tathāgata has sent the holy assembly. We should return to collect them and not let them disperse.&quot;</p></td><td lang="lzh" class="agama-chi"><p>目干连白佛言：「然今如来遣诸圣众，我等宜还收集之，令不分散。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha said to Maudgalyāyana, &quot;Excellent! Maudgalyāyana! As you have said, the foremost among the assembly is only the two of us. From now on, Maudgalyāyana should teach and instruct the newly ordained monks, causing them to dwell in peace for a long time, without falling back into birth and death. If a monk accomplishes nine things, he will not grow in the present life. What are the nine? Associating with bad friends, not attending to what should be attended to, always delighting in wandering, always having chronic illnesses, hoarding wealth, greedily clinging to robes and bowls, being empty and deluded with a distracted mind, not being concentrated, lacking wisdom and insight, not understanding the meaning, and not accepting instruction according to the time. These are called, Maudgalyāyana, if a monk accomplishes these nine things, he will not grow and benefit in the present life.</p></td><td lang="lzh" class="agama-chi"><p>佛告目干连：「善哉！目连！如汝所说，众中之标首，唯吾与汝二人耳。自今已往，目干连当教诲诸后学比丘，使长夜之中永处安隐之处，无令中退，堕落生死。若有比丘成就九法者，于现法中不得长大。云何为九？与恶知识从事亲近，非事恒喜游行，恒抱长患，好畜财货，贪著衣钵，多虚干妄乱意非定，无有慧明，不解义趣，不随时受诲。是谓，目连！若比丘成就此九者，于现法中不得长大有所润及。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;If there are bhikṣus who can accomplish nine things, they will accomplish something. What are the nine? Associating with good friends, practicing the true Dharma without being attached to wrong deeds, always wandering alone without enjoying worldly affairs, having few illnesses and afflictions, also not accumulating many possessions, not being attached to robes and alms bowls, diligently practicing without a distracted mind, understanding the meaning upon hearing it without further accepting it, listening to the Dharma at the right time without being satiated. These are called, Maudgalyāyana, if there are bhikṣus who accomplish these nine dharmas, they will greatly benefit in this present life. Therefore, Maudgalyāyana, you should diligently teach and instruct the bhikṣus, so that they may attain the state of non-conditioning for a long time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「设有比丘能成就九者便有所成办。云何为九？与善知识从事，修行正法不著邪业，恒游独处不乐人间，少病无患，亦复不多畜诸财宝，不贪著衣钵，勤行精进无有乱心，闻义便解更不中受，随时听法无有厌足。是谓，目连！若有比丘成就此九法者，于现法中多所饶益。是故，目连，当念勤加往诲诸比丘，使长夜之中致无为之处。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke this verse:</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊便说此偈：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>&quot;Always remember to awaken yourself, Do not be attached to what is not the Dharma. The practice should be the right practice, To be liberated from the difficulties of birth and death. By doing this, one attains this; By doing this, one attains this merit. Sentient beings wander for a long time, Cutting off old age, sickness, and death. By accomplishing and not practicing again, And again creating non-practice, Such a person who indulges in this way, Attains the practice of having outflows. If one diligently applies the mind, And always keeps it in mind, Teaching and admonishing each other in turn, One then becomes a person without outflows.&quot;</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>「常念自觉悟，  勿著于非法，所修应正行，  得度生死难。作是而获是，  作此获此福，众生流浪久，  断于老病死。以办更不习，  复更造非行，如此放逸人，  成于有漏行。设有勤加心，  恒在心首者，展转相教诫，  便成无漏人。</p></blockquote></td></tr>
+<tr><td lang="en" class="agama-eng"><p>&quot;Therefore, Mokōren! You should teach the bhikṣus like this and remember to practice accordingly.&quot;</p></td><td lang="lzh" class="agama-chi"><p>「是故，目干连！当与诸比丘而作是诲，当念作是学。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One spoke the most wonderful Dharma to the bhikṣus, causing them to give rise to joyful minds. At that time, the bhikṣus, having heard the Dharma, more than sixty bhikṣus among the assembly attained the exhaustion of outflows and liberated minds.</p></td><td lang="lzh" class="agama-chi"><p>是时，世尊与诸比丘说极妙之法，令发欢喜之心。是时，诸比丘闻法已，于彼众中六十余比丘漏尽意解。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus, having heard the Buddha&#x27;s teaching, joyfully received and practiced it.</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarika Āgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 63 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 63: Cūḷamāluṅkya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn62comp.html#content"></a><a id="next-sutta" href="./mn64comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn63.html">MN 63</a> / <a href="../../parallels/ma221.html">MĀ 221</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷamāluṅkya-sutta, the “lesser discourse to Māluṅkya[putta]”, records the Buddha’s refusal to answer any of the metaphysical questions in vogue in ancient India, illustrating the pointlessness of these questions with the simile of the poisoned arrow. This discourse has a parallel in the Madhyama-āgama and in an individual translation.<span class="note" id="mn63n70"><span class="details"><span class="p">[n.70] The parallels are <a href="../../parallels/ma221.html">MĀ 221</a> at T I 804a-805c and T 94 at T I 917b-918b. <a href="../../parallels/ma221.html">MĀ 221</a> has the title “discourse on the simile of the arrow”, 箭喻經; T 94 has the similar title “discourse spoken by the Buddha on the simile of the arrow”, 佛說箭喻經. The Taishō edition indicates that T 94 was translated by an unknown translator. <a href="../../parallels/ma221.html">MĀ 221</a> and T 94 agree with the Pāli version on locating the discourse in Jeta’s Grove by Sāvatthī.</span></span></span> Parts of this discourse have also been preserved as a discourse quotation in the *Mahāprajñāpāramitā-(upadeśa-)śāstra.<span class="note" id="mn63n71"><span class="details"><span class="p">[n.71] T 1509 at T XXV 170a8-b1, translated in Lamotte 1949/1981: 913-915.</span></span></span></p>
+<p>The Cūḷamāluṅkya-sutta and its parallels describe in similar terms how the monk Māluṅkyaputta,<span class="note" id="mn63n72"><span class="details"><span class="p">[n.72] Be-MN II 89,16: Mālukyaputta; SHT V 1279V3 and R6 (a parallel to <a href="../../mn/mn64.html">MN 64</a>): Mālakyamātaḥ.</span></span></span> after approaching the Buddha, requested to be given an answer to a set of metaphysical questions frequently debated in ancient India.<span class="note" id="mn63n73"><span class="details"><span class="p">[n.73] <a href="../../mn/mn63.html">MN 63</a> at MN I 427,6, <a href="../../parallels/ma221.html">MĀ 221</a> at T I 804b11, T 94 at T I 917c2, and T 1509 at T XXV 170a9.</span></span></span> According to the report given in all versions, Māluṅkyaputta was apparently so obsessed with these questions that he had planned to disrobe in case the Buddha would not give him an answer. The Majjhima-nikāya version and the *Mahāprajñāpāramitā-(upadeśa-)śāstra indicate that Māluṅkyaputta even went so far as to give vent to this plan in the presence of the Buddha.<span class="note" id="mn63n74"><span class="details"><span class="p">[n.74] <a href="../../mn/mn63.html">MN 63</a> at MN I 427,15: no ce me bhagavā byākarissati ... evāhaṃ sikkhaṃ paccakkhāya hīnāy’ āvattissāmī ti and T 1509 at T XXV 170a11: 若不能解, 我當更求餘道, where he threatens to go over to another school or group.</span></span></span></p>
+<p>All versions report that the Buddha rebuked Māluṅkyaputta, pointing out that he had never promised to provide an answer to such questions. The Buddha explained that, if one were to make one’s going forth dependent on being given an answer to these questions, one will pass away without receiving such an answer.<span class="note" id="mn63n75"><span class="details"><span class="p">[n.75] Edgerton 1959: 82 explains that the “speculative, metaphysical questions put by Māluṅkāputta are simply irrelevant to all the Buddha’s teaching”. Holder 1996: 450 similarly notes that these questions are set aside “because they have no utility”. King 1983: 263 comments that “theorizing about ontological metaphysical ultimates has absolutely no place in the Buddhist Dharma”; cf. also Mizuno 1969: 90 and Organ 1954: 138, who points out that “the Buddha’s reply is a pragmatic reply ... he has come to show men how to overcome ... suffering ... anything which does not contribute to that end is extraneous”. Rigopoulos 1992/1993: 250 sums up: “the rejection of the avyākatāni is ... motivated by their ... uselessness. If I am hit by an arrow ... my only concern will be to remove it”.</span></span></span></p>
+<p>The four versions illustrate this situation with the example of a man struck by a poisonous arrow, who refuses to let the arrow be pulled out unless he is informed about various irrelevant details concerning the archer, the bow used for shooting the arrow, etc.<span class="note" id="mn63n76"><span class="details"><span class="p">[n.76] <a href="../../mn/mn63.html">MN 63</a> at MN I 429,2, <a href="../../parallels/ma221.html">MĀ 221</a> at T I 804c24, T 94 at T I 917c27, and T 1509 at T XXV 170a17.</span></span></span> Querying in this way, the victim will die before his questions have been answered.</p>
+<p>According to the Cūḷamāluṅkya-sutta and its Chinese discourse parallels, the Buddha explained that to live the holy life under him is not compatible with holding these different views.<span class="note" id="mn63n77"><span class="details"><span class="p">[n.77] <a href="../../mn/mn63.html">MN 63</a> at MN I 430,9 states that sassato loko ti ... diṭṭhiyā sati brahmacariyavāso abhavissā ti, evaṃ no, translated by Chalmers 1926: 305 as “the higher life is not contingent on the truth of any thesis that the world either is or is not eternal”, by Gethin 2008: 171 as “it is not the case ... that by holding the view that the world is eternal, one would live the spiritual life”, by Horner 1957/1970: 100 as: “the living of the Brahma-faring ... could not be said to depend on the view that the world is eternal”, and by Ñāṇamoli 1995/2005: 535 as “if there is the view ‘the world is eternal’, the holy life cannot be lived”. <a href="../../parallels/ma221.html">MĀ 221</a> at T I 805a25 explains that “for the sake of this view, to practise the holy life under me, that is not possible”, 因此見故, 從我學梵行者, 此事不然. According to T 94 at T I 918a27, the Buddha declared that “[for one who] has this wrong view, it is not fitting to practise the holy life under me”, 有此邪見, 不應從我行梵行.</span></span></span> Independent of the various positions proposed by these views, there is dukkha, manifesting as birth, old age, and death, etc. The three discourses conclude by highlighting that instead of answering such questions the Buddha had taught the four noble truths, as these are beneficial and lead to Nirvāṇa.<span class="note" id="mn63n78"><span class="details"><span class="p">[n.78] <a href="../../mn/mn63.html">MN 63</a> at MN I 431,28, <a href="../../parallels/ma221.html">MĀ 221</a> at T I 805c3, and T 94 at T I 918b12. T 1509 at T XXV 170a26 differs in that, after the completion of the simile, it points out that: “the arrow of wrong views smeared with the poison of craving has entered your heart; wanting to pull out this arrow, you have become my disciple”, 為邪見箭愛毒塗已入汝心, 欲拔此箭作我弟子.</span></span></span></p>
+<p>The stern reply Māluṅkyaputta received from the Buddha seems to have had its effect, since he apparently not only continued to live the life of a Buddhist monk instead of disrobing, but according to a discourse found in the Saṃyutta-nikāya and its Saṃyukta-āgama parallel, and according to the *Mahāprajñāpāramitā-(upadeśa-)śāstra, he eventually became an arahant.<span class="note" id="mn63n79"><span class="details"><span class="p">[n.79] <a href="../../sn/sn35.95.html">SN 35:95</a> at SN IV 76,19, its parallel <a href="../../parallels/sa312.html">SĀ 312</a> at T II 90b26, and T 1509 at T XXV 170b1.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

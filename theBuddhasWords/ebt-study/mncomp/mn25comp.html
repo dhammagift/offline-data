@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 25 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 25: Nivāpa-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn24comp.html#content"></a><a id="next-sutta" href="./mn26comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn25.html">MN 25</a> / <a href="../../parallels/ma178.html">MĀ 178</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Nivāpa-sutta, the “discourse on the bait”, employs the simile of a deer herd that escapes a hunter to illustrate how a monk can escape from Māra. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn25n120"><span class="details"><span class="p">[n.120] The parallel is <a href="../../parallels/ma178.html">MĀ 178</a> at T I 718b-720a, which is entitled “discourse on the master hunter”, 獵師經. <a href="../../parallels/ma178.html">MĀ 178</a> is located in the Squirrels’ Feeding Ground at Rājagaha, while <a href="../../mn/mn25.html">MN 25</a> takes place in Jeta’s Grove by Sāvatthī.</span></span></span></p>
+<p>The Nivāpa-sutta and its parallel describe in similar terms the behaviour of four deer herds in regard to a bait set out by a hunter.<span class="note" id="mn25n121"><span class="details"><span class="p">[n.121] For a study of this simile cf. Freiberger 2000a: 64-69.</span></span></span> The first three herds fall prey to the hunter, whereas the fourth herd is able to escape by dwelling in an area out of the hunter’s reach. The two versions agree that “bait” stands for the five types of sense pleasure, “hunter” for Māra, and “deer” for recluses and Brahmins.</p>
+<p>In both versions, the first deer herd in the simile represents recluses and Brahmins who are heedless when partaking of food, while the second deer herd stands for recluses and Brahmins who live in forest wilds, subsisting on roots and fruits. According to the Majjhima-nikāya account, the problem with these recluses and Brahmins was that they lost their deliverance of mind, whereas according to the Madhyama-āgama account they lost their deliverance of mind and their deliverance through wisdom.<span class="note" id="mn25n122"><span class="details"><span class="p">[n.122] <a href="../../parallels/ma178.html">MĀ 178</a> at T I 719b2: 便心解脫, 慧解脫衰退.</span></span></span></p>
+<p>In other discourses, deliverance of the mind (cetovimutti) covers deep stages of concentration that can be lost again,<span class="note" id="mn25n123"><span class="details"><span class="p">[n.123] This becomes evident from the expression “temporary mental liberation”, sāmāyika cetovimutti (Ce- MN III 272,32: sāmayika), in <a href="../../mn/mn122.html">MN 122</a> at MN III 110,31, and the corresponding 時 ... 心解脫 in its Chinese parallel <a href="../../parallels/ma191.html">MĀ 191</a> at T I 738b7, and the corresponding re shig dus ... sems rnam par grol ba in its Tibetan parallel in Skilling 1994a: 198,7; cf. also Anālayo 2009r.</span></span></span> but deliverance through wisdom (paññāvimutti) stands for awakening,<span class="note" id="mn25n124"><span class="details"><span class="p">[n.124] <a href="../../mn/mn70.html">MN 70</a> at MN I 477,33, and its parallel <a href="../../parallels/ma195.html">MĀ 195</a> at T I 751b20 indicate that paññāvimutti/慧解脫 stands for full awakening, something which according to <a href="../../mn/mn29.html">MN 29</a> at MN I 197,27 cannot be lost again, aṭṭhānam etaṃ ... anavakāso yaṃ so bhikkhu tāya asamayavimuttiyā parihāyetha. For a detailed study of cetovimutti and paññāvimutti cf. de Silva 1978.</span></span></span> something that according to the Theravāda tradition will not be lost again. The Sarvāstivāda tradition, however, took a different perspective on this issue, envisaging the possibility that arahants may fall away from the level of awakening or liberation they have achieved.<span class="note" id="mn25n125"><span class="details"><span class="p">[n.125] This is the parihāṇadharma arhat, found in the Abhidharmakośabhāṣya at Abhidh-k 6:56 in Pradhan 1967: 372,19, cf. also T 1558 at T XXIX 129a25 and T 1559 at T XXIX 280b15, or in the Abhidharmasamuccaya, Pradhan 1950: 86,14 and T 1606 at T XXXI 753b5, cf. also Rahula 1971: 145. On the same conception among the Pudgalavādins cf. Thiên Châu 1996/1999: 217, on it in general cf., e.g., Bareau 1957: 244-245.</span></span></span> In view of these different positions, it is possible that the reference in the present Madhyama-āgama discourse to deliverance by wisdom being lost again is an expression of this Sarvāstivāda tenet.<span class="note" id="mn25n126"><span class="details"><span class="p">[n.126] The same notion can in fact be found explicitly in another discourse in the same collection, <a href="../../parallels/ma127.html">MĀ 127</a> at T I 616a18, which in a listing of different noble disciples, distinguishes between an arahant liable to fall away and an arahant not liable to fall away, 退法 and 不退法. This discourse does not have a Pāli counterpart. The expression parihānadhamma occurs in Pp 11,29 in relation to jhāna practice, while in Peṭ 32,8 this expression qualifies “a person who is guidable, [but] who does not engage in development”, neyyo puggalo bhāvanānuyogam anuyutto, where, even though the context is an examination of different types of arahant, according to Ñāṇamoli 1994: 39 note 93/5 “it is clear that the term as used here is not applied to an Arahant”.</span></span></span> Alternatively, the present instance could also be the result of a simple transmission error, where a reference to deliverance of the mind has been accidentally ‘completed’ by adding deliverance through wisdom, as these two terms often occur together.</p>
+<p>Even to speak of these recluses and Brahmins to be losing their deliverance of mind, as done in both versions of the present discourse, is to some extent puzzling, because the fourth group of recluses and Brahmins were able to go beyond the range of Māra’s power through attaining the jhānas.</p>
+<p>In the discourse, ‘deliverance of the mind’ is an umbrella term for the jhānas, yet according to the Nivāpa-sutta and its Chinese parallel deliverance of the mind was not sufficient to go beyond the range of Māra’s power, while the jhānas were sufficient to do so.<span class="note" id="mn25n127"><span class="details"><span class="p">[n.127] The theme of going beyond Māra’s power through deeper stages of concentration recurs in <a href="../../an/an9.39.html">AN 9:39</a> at AN IV 434,16, according to which with the immaterial attainments a monk goes beyond the range of Māra, antam akāsi māraṃ, apadaṃ vadhitvā māracakkhuṃ, adassanaṃ gato pāpimato (Se-AN IV 452,17: apadaṃ bhanditvā), a passage that uses the same expressions as found in <a href="../../mn/mn25.html">MN 25</a> at MN I 159,14 (here for the first jhāna). <a href="../../an/an9.39.html">AN 9:39</a> at AN IV 434,1 also takes up the four jhānas, although in this case it uses a somewhat different formulation, according to which with attainment of the jhānas a monk no longer has any dealings with Māra, akaraṇīyo mārassa.</span></span></span> Hence, one may wonder what the difference could be between deliverance of the mind and the attainment of the jhānas.</p>
+<p>According to the commentarial explanation, “deliverance of the mind” in the present context refers to the resolution of these recluses and Brahmins to live in the forest.<span class="note" id="mn25n128"><span class="details"><span class="p">[n.128] Ps II 162,19.</span></span></span> Although this explanation would yield a difference between the second and the fourth group of recluses and Brahmins, it constitutes an interpretation of the expression “deliverance of the mind” (cetovimutti) that differs considerably from the implication of this term in its general canonical usage.</p>
+<p>The Nivāpa-sutta and its Madhyama-āgama parallel continue by identifying the third deer herd with recluses and Brahmins who are under the influence of views. The two versions differ in regard to the views held by this third group of recluses and Brahmins. The Pāli version lists a standard set of ten views that belong to the category of questions not answered by the Buddha (avyākata), while the Chinese version instead lists the two views of existence and non-existence.<span class="note" id="mn25n129"><span class="details"><span class="p">[n.129] <a href="../../parallels/ma178.html">MĀ 178</a> at T I 719b23: 有見及無見.</span></span></span></p>
+<p>In both versions, to dwell beyond the range of Māra – corresponding to the fourth deer herd’s dwelling beyond the hunter’s reach – is reached by developing deeper stages of concentration, such as the four jhānas, the four immaterial attainments, and the attainment of cessation, together with the destruction of the influxes.<span class="note" id="mn25n130"><span class="details"><span class="p">[n.130] <a href="../../mn/mn25.html">MN 25</a> at MN I 160,12 indicates that with the attainment of cessation one has “gone beyond attachment in the world”, tiṇṇo loke visattikaṃ (Se-MN I 311,16: loko), a specification not explicitly made in <a href="../../parallels/ma178.html">MĀ 178</a>.</span></span></span> The Madhyama-āgama version also mentions the four brahmavihāras as concentrative attainments that are beyond the reach of Māra.<span class="note" id="mn25n131"><span class="details"><span class="p">[n.131] <a href="../../parallels/ma178.html">MĀ 178</a> at T I 720a12. Minh Chau 1964/1991: 30 notes this as one of several instances where a Chinese discourse “lays more stress on this practice than its counterpart in Pāli”.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

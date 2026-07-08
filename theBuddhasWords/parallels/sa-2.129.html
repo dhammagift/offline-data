@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.129 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.129</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 129</span><span class="mirror-right">（一二九）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../sn/sn42.9.html">SN 42.9</a> / <a href="../parallels/sa914.html">SĀ 914</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World Honored One, together with a congregation of 1,250 great bhikṣus, 1,000 upāsakas, and 500 beggars, was wandering through the country of Magadha, going from one village to another, from one city to another, until he reached the city of Nālandā, where he stayed in the park of the cloth sellers. At that time, the village headman with the surname of Closed Mouth, who was a disciple of Nirgrantha, heard that the Buddha was wandering in Magadha and had arrived at this park. He thought to himself, &quot;I should go and inform my teacher Nirgrantha, and then go to see Gautama.&quot; Then Closed Mouth went to where Nirgrantha was, bowed at his feet, and sat to one side. Nirgrantha then told him, &quot;Can you use two kinds of arguments to challenge Gautama? It is like two hooks catching a fish, so that it cannot spit it out or swallow it. These two kinds of arguments are also like this, able to make him unable to spit it out or swallow it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊与千二百五十大比丘僧、千优婆塞、五百乞儿，而自围遶，游行摩竭提国，从一聚落至一聚落，从城至城，乃至到彼那罗健陀城卖叠园林，于中止住。时，闭口姓聚落主是尼乾陀弟子，闻佛在摩竭提游，乃至是中到此园林，作是念言：「我当往白师尼乾陀，然后往诣瞿昙边。」时，闭口姓即往尼乾陀所，顶礼其足，在一面坐。时，尼乾陀即告之言：「汝能以二种论难瞿昙不？如两鍓钩，钩取于鱼，既不得吐，又不得咽，斯二种论，亦复如是，能令于彼不得吐咽。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The village headman said, &quot;Please teach me, and I will go and ask. What are the two kinds of arguments that can make Gautama unable to spit it out or swallow it?&quot;</p></td><td lang="lzh" class="agama-chi"><p>聚落主言：「唯愿教我，我当往问。何等二论能令瞿昙不得吐咽？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Nirgrantha said, &quot;When you go to him, speak on my behalf: &#x27;Do you now, Gautama, wish to benefit all families? If you do not benefit, what is the difference between you and ordinary fools? If you say you benefit, how is it that you now, with 1,250 bhikṣus, 1,000 upāsakas, and 500 beggars, go from one village to another, from one city to another, destroying all families? Wherever you pass, you trample, destroy, and harm them, like hail damaging crops. This is called destruction, not benefit.&#x27;&quot;</p></td><td lang="lzh" class="agama-chi"><p>尼乾陀言：「汝诣彼所，如我辞曰：『汝今瞿昙，颇欲利益诸家不？若不利益，与诸凡愚有何差别？若言利益，汝今云何将千二百比丘、千优婆塞、五百乞儿，从一聚落至一聚落，从城至城，破坏诸家。所经之处，为汝践蹈、摧坏、伤毁，如雹害禾，是名破坏，非为利益。』」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Bhikṣu Pippalī accepted his instructions and went to the forest where the cloth was sold. He went to where the Buddha was, exchanged brief greetings, and sat to one side. He then said to the Buddha, &quot;Gautama! Do you now not wish to increase and benefit all families? Do you not always praise those who increase and benefit?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，闭口受其教已，诣卖叠林，往诣佛所，粗相问讯，在一面坐。即白佛言：「瞿昙！汝今宁可不欲增长利益于诸家耶？汝岂不常赞叹增长利益者乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;I have always wished to increase and benefit the Dharma for a long time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「我于长夜，恒欲增长利益之法。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman said, &quot;If you wish to benefit, why do you now, in a time of famine, together with 1,200 bhikṣus, 1,000 upāsakas, and 500 beggars, go from one village to another, from one city to another, destroying families? This is not the Dharma of increasing and benefiting. What you do is harmful, like hail damaging crops. You destroy the people in the same way.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，聚落主而作是言：「汝若利益，何故今者于饥馑世，与千二百比丘、千优婆塞、五百乞儿，俱从一聚落至一聚落，从城至城，破坏诸家？斯非增长利益之法，所为损减，如雹害禾，汝坏人民亦复如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;I remember from 91 eons ago, there was no family that gave cooked food and suffered a decrease. Now, look at all the families, with abundant wealth, relatives, servants, elephants, horses, cattle, and sheep. Is this wealth and foundation not from giving? I did not obtain this reward solely from giving. There are eight causes that can destroy families: being invaded by kings or thieves, being burned by fire, being swept away by flood, losing hidden treasures, giving birth to bad children, not understanding the means of livelihood, using wealth under the threat of power, and bad children using wealth without reason. All worldly people say that these eight things can destroy families. I will now explain the ninth destroyer. The ninth is called impermanence. Apart from these nine, to say that the śramaṇa Gautama can destroy families is impossible. If one abandons these nine causes and says that the śramaṇa Gautama can destroy families without increasing them, it is impossible. Not abandoning these words and desires, such people will definitely fall into hell, like a ball of wool being beaten.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「我忆九十一劫已来，无有一家以熟食施，而致损减。汝今且观一切诸家，多饶财宝，眷属僮仆，象马牛羊，是富基业，有不从施而得者？不尽从施我，获斯果报。有八因缘能坏诸家：若为王贼所侵，为火所烧，大水所漂，失所伏藏，生于恶子，不解生业，威逼用财，恶子无理，用于财货。一切世人皆云：『八事能破居家。』我今更说第九之破。言第九者，所谓无常。离是九种外，言沙门瞿昙能破诸家，无有是处。若弃如是九种因缘，言沙门瞿昙，能破诸家，不增长者，无有是处。不舍是语，不舍是欲，如斯等人，犹如拍毱，必堕地狱。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman of the Closed Mouth clan, having heard these words, was frightened, worried, and disgusted. His body hair stood on end. He rose, bowed at the Buddha&#x27;s feet, took refuge in the Buddha, and said, &quot;I now sincerely repent towards the Buddha! I am very foolish, like a child, and have done unwholesome things. Now, in front of the Buddha, I have falsely and wrongly spoken lowly lies. I only pray that you will have compassion and allow me to repent!&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，闭口姓聚落主闻是语已，心] cf.【丽】生惊怖，忧恼厌恶，身毛为竖，起礼佛足，归命于佛，而作是言：「我今诚心向佛忏悔！我甚愚痴，犹如𪧀儿，所作不善。今于佛前，虚妄不实，下贱妄语，唯愿哀愍，听我忏悔！」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The Buddha told him, &quot;I know your sincerity. You truly know your faults, and you truly know your foolishness, like a child, and the unwholesome things you have done. You have committed great false and lowly deeds towards the Tathāgata, the Arhat. Now, knowing your faults, you sincerely repent. The good Dharma will increase, and evil things will be eliminated. I now have compassion for you, accept your repentance, and cause your good Dharma to increase, never to be lost.&quot;</p></td><td lang="lzh" class="agama-chi"><p>佛告之曰：「知汝至心，汝实知罪，实知愚痴，犹如𪧀儿，所作不善，汝于如来阿罗呵，作大虚妄鄙贱之业。今自知罪，诚心忏悔，善法增长，恶事退灭。我今愍汝，受汝忏悔，令汝善法增长，常不退失。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the village headman of the Closed Mouth clan, having heard the Buddha&#x27;s teaching, was delighted. He bowed his head to the Buddha&#x27;s feet and left.</p></td><td lang="lzh" class="agama-chi"><p>时，闭口姓聚落主闻佛所说，欢喜顶礼而去。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

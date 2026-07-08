@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 77 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+/* === Madhyama-agama Studies pages: sub-heading + origin-note additions === */
+#content .comp-body h3 { margin: 1.1em 0 0.4em 0; font-size: 1.22em; }
+#content p.origin-note { font-style: italic; font-size: 0.92em;
+  opacity: 0.85; text-indent: 0 !important; text-align: center;
+  margin: 0.3em 0 1.1em 0; }
+#content hr.chapter-divider { border: none; border-top: 1px solid rgba(128,128,128,0.35);
+  width: 55%; margin: 1.6em auto 1.8em; }
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 77: Mahāsakuludāyi-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn47comp.html#content"></a><a id="next-sutta" href="./mn78comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>Madhyama-āgama Studies</em> (Dharma Drum Buddhist College Research Series 5). Dharma Drum Publishing Corporation, Taipei, 2012.</p></div>
+		<p class="origin-note"><em>Originally published 2009 under the title "The Buddha's Truly Praiseworthy Qualities, According to the Mahāsakuludāyi-sutta and its Chinese Parallel" in the <i>Journal of the Pali Text Society</i>, 30: 137–160.</em></p>
+<p class="read-links">Read: <a href="../../mn/mn77.html">MN 77</a> / <a href="../../parallels/ma207.html">MĀ 207</a></p>
+<div class="comp-body">
+<h3>Introduction</h3>
+<p>The central theme of the discourse studied in the present chapter, the <i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta</i>, is the praiseworthiness of the Buddha. In agreement with its <i>Madhyama-</i>ā<i>gama </i>parallel, the <i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta </i>approaches this topic from two perspectives by first delineating those qualities that a contemporary <i>paribb</i>ā<i>jaka</i> like Sakuludāyī would consider praiseworthy, followed by contrasting these to those qualities of the Buddha that according to early Buddhist thought truly deserve praise. In what follows, I translate the <i>Madhyama-</i>ā<i>gama </i>discourse, followed by a study of some of the significant differences between the two versions.</p>
+<hr class="chapter-divider">
+<h3>Translation</h3>
+<p>Discourse to Sakuludāyī<span class="note" id="mn77compn1"><span class="details"><span class="p">[n.1] The translated text is MĀ 207 at T I 781b27 to 783c1, which at T I 781b27 gives the discourse's title as 箭毛經, literally "Discourse to Arrow Hair". According to note 18 in the Taishō edition, 箭毛 corresponds to Sakuludāyī; cf. also Minh Chau 1991: 378. In SĀ2 323 at T II 481c15, the expression 箭毛 corresponds as to the name Sūciloma (another version of the same discourse, SĀ 1324 at T II 363c1, uses the more precise rendering 針毛, "Needle Hair"). The name used by the Buddha to address Sakuludāyī in MĀ 207 is 優陀夷, equivalent to the name Udāyī, the form of address used by the Buddha in MN 77. The reasons for the translator's choice of 箭毛 remain unclear to me. A comparative study of MN 77 and MĀ 207 can be found in Anālayo 2011a: 416–424.</span></span></span></p>
+<p>1. Thus have I heard. At one time the Buddha was dwelling at Rājagaha, staying in the Bamboo Grove, the Squirrels' Feeding Place, in the company of a great congregation of one-thousand-two-hundred-and-fifty monks who were observing the rains retreat.<span class="note" id="mn77compn2"><span class="details"><span class="p">[n.2] Instead of describing the company of monks that dwelt with the Buddha, MN 77 at MN II 1,4 (corresponding to §2 in Ñāṇamoli 1995/2005: 629) lists different well-known leaders of <i>paribb</i>ā<i>jaka</i>s that were dwelling at the Peacock's Feeding Place, Sakuludāyī being one of them.</span></span></span></p>
+<p>3. At that time, when the night was over, at dawn, the Blessed One put on his [outer] robe, took his bowl and entered Rājagaha to collect alms-food.<span class="note" id="mn77compn3"><span class="details"><span class="p">[n.3] In MN 77 at MN II 1,8 the Buddha reflects that it is too early to collect alms and thereon decides to approach the Peacock's Feeding Place to visit Sakuludāyī.</span></span></span> Having collected alms [and partaken of them], he put away his [outer] robe and bowl, washed his hands and feet, put the sitting mat over his shoulder and went into the Peacocks' Grove,<span class="note" id="mn77compn4"><span class="details"><span class="p">[n.4] MĀ 207 at T I 781c4: 孔雀林, whereas MN 77 at MN II 1,3 speaks of the <i>moraniv</i>ā<i>pa</i>, the "Peacock's Feeding Place". Ps III 235,12 explains that peacocks in this place were under protection and were provided with food, <i>tas</i><i>mi</i>ṃ ṭ<i>h</i>ā<i>ne mor</i>ā<i>na</i>ṃ<i> abhaya</i>ṃ<i> ghosetv</i>ā<i> bhojana</i>ṃ<i> pa</i>ṭṭ<i>hapesu</i>ṃ.</span></span></span> a park [frequented by] heterodox practitioners.</p>
+<p>4. At that time there was a heterodox practitioner in the Peacocks' Grove called Sakuludāyī, a renowned leader and teacher of a congregation, greatly famous and esteemed by the people, head of a great congregation of disciples, five hundred heterodox practitioners who honoured him.<span class="note" id="mn77compn5"><span class="details"><span class="p">[n.5] MN 77 at MN II 1,12 does not provide a count of Sakuludāyī's company, nor does it report that he was esteemed by the people<i>. </i></span></span></span></p>
+<p>He was staying with a great congregation that was noisy, agitated and disorderly, giving free rein to a great clamour,</p>
+<p>Seeing the Buddha coming from afar, the heterodox practitioner Sakuludāyī admonished the congregation: "Keep silent! The recluse Gotama is coming. His congregation is silent, they always delight in silence and praise silence. If he sees that this congregation is silent, perhaps he will come to join us." Having silenced the congregation, the heterodox practitioner Sakuludāyī remained silent himself.</p>
+<p>5. [When] the Blessed One had approached the heterodox practitioner Sakuludāyī, the heterodox practitioner Sakuludāyī promptly rose up from his seat, arranged his robes on one</p>
+<p>shoulder and, holding his hands together [in homage] towards the Buddha,<span class="note" id="mn77compn8"><span class="details"><span class="p">[n.8] MN 77 at MN II 2,13 only reports that Sakuludāyī invited the Buddha to a seat, without mentioning that he expressed his respect by getting up from his seat, arranging his robe on one side, and greeting the Buddha with folded hands.</span></span></span>said: "Welcome, recluse Gotama,<span class="note" id="mn77compn9"><span class="details"><span class="p">[n.9] MĀ 207 at T I 781c17: 沙門瞿曇, whereas in MN 77 at MN II 2,11 Sakuludāyī employs the address <i>bhante</i>, "venerable sir", and refers to the Buddha as <i>bhagav</i>ā, "Blessed One".</span></span></span>it is a long time that the recluse Gotama has not come here. Please be seated on this seat."</p>
+<p>The Blessed One sat on the seat prepared by the heterodox practitioner Sakuludāyī. Having exchanged greetings with the Blessed One, the heterodox practitioner Sakuludāyī sat down to one side. The Blessed One asked: "Udāyī, what have you been discussing, for what matter have you been seated together here?"</p>
+<p>6. The heterodox practitioner Sakuludāyī replied: "Gotama, [let us] just leave that talk, that talk was not profound. [If] the recluse Gotama wishes to hear this talk, it would not be difficult to hear about it on a later occasion." The Blessed One asked like this three times: "Udāyī, what have you been discussing, for what matter have you been seated together here?"<span class="note" id="mn77compn10"><span class="details"><span class="p">[n.10] </span></span></span>The heterodox practitioner Sakuludāyī replied three times: "Gotama, [let us] just leave that talk, that talk was not profound, [if] the recluse Gotama wishes to hear this talk, it would not be difficult to hear about it on a later occasion." [Then he said]: "But since the recluse Gotama has three times expressed his wish to hear it, I shall now report it.<span class="note" id="mn77compn11"><span class="details"><span class="p">[n.11] In MN 77 at MN II 2,21 the talk about the <i>paribb</i>ā<i>jaka</i>s who were staying at Rājagaha constitutes a change of topic from what the wanderers had been discussing when the Buddha arrived.</span></span></span></p>
+<p>"Gotama, we were seated together with many brahmins from the country of Kosala in a study hall of these Kosalans,<span class="note" id="mn77compn12"><span class="details"><span class="p">[n.12] MN 77 does not indicate that the discussion happened with Kosalan brahmins, who in MĀ 207 appear to be visiting Magadha.</span></span></span> having the following discussion: 'It is of great profit for the people of Aṅga and Magadha, the people of Aṅga and Magadha are getting a great profit, in that a congregation that is such a great field of merit is spending the rains retreat in Rājagaha, namely [the congregation led by] Pūraṇa Kassapa. Why?</p>
+<p>"Gotama, Pūraṇa Kassapa is a renowned leader and teacher of a congregation, greatly famous and esteemed by the people, head of a great congregation of disciples, with five hundred heterodox practitioners who honour him, and he is spending the rains retreat here in Rājagaha.'<span class="note" id="mn77compn13"><span class="details"><span class="p">[n.13] MN 77 does not specify the number of disciples of Pūraṇa Kassapa, etc., or of the Buddha.</span></span></span> (<i>In the same way for</i>:) [the congregation led by] Makkhali Gosāla ... Sañjaya Belaṭṭhiputta... Nigaṇṭha Nāṭaputta ... Pakudha Kaccāyana ... Ajita Kesakambalī ...</p>
+<p>"Gotama, Ajita Kesakambalī is a renowned leader and teacher of a congregation, greatly famous and esteemed by the people, head of a great congregation of disciples, with five hundred heterodox practitioners who honour him, and he is spending the rains retreat in this Rājagaha.'</p>
+<p>"Continuing like this we also talked about the recluse Gotama, [saying]: 'This recluse Gotama is a renowned leader and teacher of a congregation, greatly famous and esteemed by the people, head of a great congregation of monks, with one-thousand-two-hundred-and-fifty men who honour him, and he is spending the rains retreat in this Rājagaha.'</p>
+<p>"Gotama, then we had the following thought: 'Now, out of these honourable recluses and brahmins, which one is respected by his disciples, honoured, worshipped and treated with respect, not being abused by his disciples with abuse in regard to the teaching, having no disciples who challenge their teacher [saying]: 'This is entirely impossible, it is not proper, it does not fit', and, saying so, they abandon him and go away?'</p>
+<p>"Gotama, then we had the following thought: 'Pūraṇa Kassapa is not respected by his disciples, he is not honoured, worshipped and treated with respect by them, he is abused by his disciples with abuse in regard to the teaching, with many disciples who challenge their teacher [saying]: 'This is not possible, it is not proper, it does not fit', and, saying so, they abandon him and go away.'</p>
+<p>"Gotama, on a former occasion Pūraṇa Kassapa, while being with a congregation of disciples, repeatedly raised his hand and called out: 'You should stop! People have not come to ask you about this matter, they have asked me about this matter. You are not able to settle this matter, I am able to settle this matter'. Yet the disciples continued to talk among themselves [even] more on that matter, without waiting for the teacher to complete his exposition on that matter.</p>
+<p>"Gotama, then we had the following thought: 'In this way, Pūraṇa Kassapa is not respected by his disciples, he is not honoured, worshipped and treated with respect by them, he is abused by his disciples with abuse in regard to the teaching, with many disciples who challenge their teacher [saying]: 'This is not possible, it is not proper, it does not fit', and, saying so, they abandon him and go away.' (<i>In the same way for</i>:) Makkhali Gosāla ... Sañjaya Belaṭṭhiputta ... Nigaṇṭha Nāṭaputta... Pakudha Kaccāyana ... Ajita Kesakambalī ...</p>
+<p>"Gotama, we had the following thought: 'Ajita Kesakambalī is not respected by his disciples, he is not honoured, worshipped and treated with respect by them, he is abused by his disciples with abuse in regard to the teaching, with many disciples who challenge their teacher [saying] : 'This is not possible, it is not proper, it does not fit', and, saying so, they abandon him and go away.'</p>
+<p>"Gotama, on a former occasion Ajita Kesakambalī, while being with a congregation of disciples, repeatedly raised his hand and called out: 'You should stop! People have not come to ask you about this matter, they have asked me about this matter. You are not able to settle this matter, I am able to settle this matter'. Yet the disciples continued to talk among themselves [even] more on that matter, without waiting for the teacher to complete his exposition on that matter.</p>
+<p>"Gotama, then we had the following thought: 'In this way, Ajita Kesakambalī is not respected by his disciples, he is not honoured, worshipped and treated with respect by them, he is abused by his disciples with abuse in regard to the teaching, with many disciples who challenge their teacher [saying]: 'This is not possible, it is not proper, it does not fit', and, saying so, they abandon him and go away.'</p>
+<p>"Gotama, then we had the following thought: 'The recluse Gotama is respected by his disciples, he is honoured, worshipped and treated with respect by them, he is not abused by his disciples with abuse in regard to the teaching, having no disciples who challenge their teacher [saying]: 'This is not possible, it is not proper, it does not fit', and who, saying so, would abandon him and go away.</p>
+<p>"Gotama, on a former occasion the recluse Gotama was giving teachings surrounded by an immeasurable congregation of hundreds of thousands.<span class="note" id="mn77compn14"><span class="details"><span class="p">[n.14] MĀ 207 at T I 782b17: 無量百千眾, whereas MN 77 at MN II 4,34 just speaks of a company of several hundred, <i>anekasat</i>ā<i>ya paris</i>ā<i>ya</i>.</span></span></span> Among them there was one man who had nodded off and was making a noise by snoring.<span class="note" id="mn77compn15"><span class="details"><span class="p">[n.15] </span></span></span>Another man then addressed this man, saying: 'Don't make a noise by snoring while nodding off! Don't you want to hear the sublime teachings taught by the Blessed One, which are like the deathless?' That other man immediately became quiet and made no [more] noise.<span class="note" id="mn77compn16"><span class="details"><span class="p">[n.16] MN 77 at MN II 5,2 continues at this point by describing that, whenever the Buddha gave teachings, his disciples would be absolutely quiet and intent on what their teacher was saying, comparable to a crowd that watches a man pressing out honey at a crossroads. MN 77 also indicates that even disciples who disrobe continue speaking in praise of the Buddha, the Dharma and the monastic community, and maintain the five precepts as lay followers.</span></span></span></p>
+<p>"Gotama, then we had the following thought: 'In this way the recluse Gotama is respected by his disciples, he is honoured, worshipped and treated with respect by them, he is not abused by his disciples with abuse in regard to the teaching, having no disciples who challenge their teacher [saying]: 'This is not possible, it is not proper, it does not fit', and who, saying so, would abandon him and go away."</p>
+<p>7. Having heard this, the Blessed One asked the heterodox practitioner Sakuludāyī: "Udāyī, how many qualities do you see in me, owing to which my disciples respect, honour, worship and treat me with respect, always following me without breaking away?"</p>
+<p>8. The heterodox practitioner Sakuludāyī said: "Gotama, I see five qualities in Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking off. What are the five?<span class="note" id="mn77compn17"><span class="details"><span class="p">[n.17] </span></span></span></p>
+<p>"The recluse Gotama is contented with coarse robes and praises contentment with coarse robes. That the recluse Gotama is contented with coarse robes and praises contentment with coarse robes, this is the first quality I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away.</p>
+<p>"Again, the recluse Gotama is contented with coarse food and praises contentment with coarse food. That the recluse Gotama is contented with coarse food and praises contentment with coarse food, this is the second quality I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away.</p>
+<p>"Again, the recluse Gotama takes little food and praises taking little food. That the recluse Gotama takes little food and praises taking little food, this is the third quality I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away.</p>
+<p>"Again, the recluse Gotama is contented with coarse dwellings, beds and seats, and praises contentment with coarse dwellings, beds and seats. That the recluse Gotama is contented with coarse dwellings, beds and seats, and praises contentment with coarse dwellings, beds and seats, this is the fourth quality I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away.</p>
+<p>"Again, the recluse Gotama dwells in seclusion and praises dwelling in seclusion. That the recluse Gotama dwells in seclusion and praises dwelling in seclusion, this is the fifth quality I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away.</p>
+<p>"These are the five qualities I see in the recluse Gotama owing to which his disciples respect, honour, worship and treat him with respect, always following him without breaking away."</p>
+<p>9. The Blessed One replied: "Udāyī, it is not on account of these five qualities in me that my disciples respect, honour, worship and treat me with respect, always following me without breaking away.</p>
+<p>"Udāyī, the robes worn by me have been suitably and perfectly cut with a knife,<span class="note" id="mn77compn18"><span class="details"><span class="p">[n.18] </span></span></span> and [then] dyed with an unattractive colour.<span class="note" id="mn77compn19"><span class="details"><span class="p">[n.19] MN 77 at MN II 7,16 does not refer to the colour of the robes, only indicating that the Buddha would at times wear robes given by householders of finer texture than pumpkin down, <i>gahapat</i>ā<i>ni c</i>ī<i>var</i>ā<i>ni dh</i>ā<i>remi da</i>ḷ<i>h</i>ā<i>ni yattha l</i>ū<i>kh</i>ā<i>ni al</i>ā<i>bulomas</i>ā<i>ni </i>(Be and Ce: <i>gahapatic</i>ī<i>var</i>ā<i>ni</i>; Be: <i>satthal</i>ū<i>kh</i>ā<i>ni</i> and Se: <i>suttal</i>ū<i>kh</i>ā<i>ni</i>; Ce: <i>al</i>ā<i>pulomas</i>ā<i>ni </i>and Se: <i>al</i>ā<i>vulomas</i>ā<i>ni</i>).</span></span></span> Thus [I wear] perfect robes [that are just] dyed with an unattractive colour. Udāyī, some disciples of mine might be wearers of robes made of discarded rags for their whole life. Even [if], saying: 'Our Blessed One is contented with coarse robes and praises contentment with coarse robes',<span class="note" id="mn77compn20"><span class="details"><span class="p">[n.20] Instead of the address "our Blessed One", 我世尊, used by the Buddha's disciples in MĀ 207 at T I 783a1, according to MN 77 at MN II 7,2 they refer to their own teacher as "recluse Gotama", <i>sama</i>ṇ<i>o gotamo</i>. Here the Pāli version appears to have suffered from some transmission error, as in the discourses the expression "recluse Gotama" is used by those who do not consider themselves as disciples of the Buddha; cf. also below page 105 note 3.</span></span></span> my disciples were to praise me because of contentment with coarse robes, Udāyī, [merely] because of that they will not respect, honour, worship and treat me with respect, or follow me.</p>
+<p>"Again, Udāyī, I [at times] eat cooked rice and grains, without husks and with a limitless variety of tastes. Udāyī, some disciples of mine might go begging alms food for their whole life, eating what has been left over.<span class="note" id="mn77compn21"><span class="details"><span class="p">[n.21] MN 77 at MN II 7,30 additionally mentions that they go on uninterrupted alms round and that when being among the houses they will not consent to sitting down even on being invited, <i>sapad</i>ā<i>nac</i>ā<i>rino ... antaraghara</i>ṃ<i> pavi</i>ṭṭ<i>h</i>ā <i>sam</i>ā<i>n</i>ā ā<i>sanena pi nimantiyam</i>ā<i>n</i>ā<i> na s</i>ā<i>diyanti</i>.</span></span></span> Even [if], saying: 'Our Blessed One is contented with coarse food and praises contentment with coarse food', my disciples were to praise me because of contentment with coarse food, Udāyī, [merely] because of that they will not respect, honour, worship and treat me with respect, or follow me.</p>
+<p>"Again, Udāyī, I [at times] take food equal to a single <i>bilva</i> fruit or equal to half a <i>bilva</i> fruit.<span class="note" id="mn77compn22"><span class="details"><span class="p">[n.22] MĀ 207 at T I 783a4: 我食如一鞞羅食, 或如半鞞羅.This seems to be a textual corruption, since in keeping with the general trend of the exposition one would expect some example of partaking of plenty of food to provide a contrast to the cupful of food taken by the disciples. MN 77 at MN II 7,1 provides such a contrast by describing that at times the Buddha would eat the full contents of his bowl, or even more, <i>imin</i>ā<i> pattena samatittikam pi bhuñj</i>ā<i>mi, </i> <i>bhiyyo pi bhuñj</i>ā<i>mi. </i></span></span></span> Udāyī, some disciples of mine might [at times] take food equal to a cupful or equal to half a cupful. Even [if], saying: 'Our Blessed One takes little food and praises taking little food', my disciples were to praise me because of taking little food, Udāyī, [merely] because of that they will not respect, honour, worship and treat me with respect, or follow me.</p>
+<p>"Again, Udāyī, I [at times] might stay in tall buildings, or in pavilions.<span class="note" id="mn77compn23"><span class="details"><span class="p">[n.23] MN 77 at MN II 8,16 describes that the Buddha would at times stay in gabled mansions that are completely plastered and sheltered from the wind by having bolted doors and shuttered windows, <i>k</i>ūṭā<i>g</i>ā<i>resu pi vihar</i>ā<i>mi ullitt</i>ā<i>va</i><i>littesu niv</i>ā<i>tesu phussitagga</i>ḷ<i>esu pihitav</i>ā<i>tap</i>ā<i>nesu </i>(Be and Se: <i>phusitagga</i>ḷ<i>esu</i>).</span></span></span> Udāyī, some disciples of mine might for nine or ten months stay every night out in the open.<span class="note" id="mn77compn24"><span class="details"><span class="p">[n.24] Adopting the variant 露 instead of 覆. In addition to the practice of dwelling in the open, <i>abbhok</i>ā<i>sika, </i>MN 77 at MN II 8,14 also mentions living at the root of a tree, <i>rukkham</i>ū<i>lika</i>. These are two out of the standard set of ascetic practices, on which cf. also, e.g., Bapat 1937, Ganguly 1989, Nanayakkara 1989, Dantinne 1991, Ray 1994: 293–323 and Boucher 2008: 190f note 8.</span></span></span> Even [if], saying: 'Our Blessed One is contented with coarse dwellings, beds and seats, and praises contentment with coarse dwellings, beds and seats', my disciples were to praise me because of contentment with coarse dwellings, beds and seats, Udāyī, [merely] because of that they will not respect, honour, worship and treat me with respect, or follow me.</p>
+<p>"Again, Udāyī, I am constantly crowded in by monks, nuns, male lay followers and female lay followers. Some disciples of mine might join the community only once every fortnight, just for the sake of the Dharma and [to affirm their] purity [at the <i>p</i>ā<i>timokkha</i> recital]. Even [if], saying: 'Our Blessed One dwells in seclusion and praises dwelling in seclusion', my disciples were to praise me because of dwelling in seclusion, Udāyī, [merely] because of that they will not respect, honour, worship and treat me with respect, or follow me.</p>
+<p>"Udāyī, it is not due to these five qualities in me that my disciples respect, honour, worship and treat me with respect, always following me without breaking off.</p>
+<p>10. "Udāyī, there are five other qualities in me, owing to which my disciples respect, honour, worship and treat me with respect, always following me without breaking off. What are the five?<span class="note" id="mn77compn25"><span class="details"><span class="p">[n.25] The two versions list these five qualities in different sequences; cf. table 3 below.</span></span></span></p>
+<p>11. "Udāyī, there are disciples of mine who praise me for supreme virtue, saying: 'The Blessed One practices virtue and is of great virtue, he does what he says and he says what he does'.<span class="note" id="mn77compn26"><span class="details"><span class="p">[n.26] </span></span></span> Udāyī, in this way my disciples praise me for supreme virtue, and it is because of this that they respect, honour, worship and treat me with respect, always following me without breaking off.</p>
+<p>13. "Again, Udāyī, there are disciples of mine who praise me for supreme wisdom, saying: 'The Blessed One dwells in wisdom and is of supremely great wisdom. If a disputant comes with counterarguments, [the Blessed One] will certainly be able to defeat him, that is to say, [the disputant] will be unable to give [satisfactory] explanations in regard to the right teaching and discipline, and will [even] be unable to [satisfactorily] explain his own proclamations.'<span class="note" id="mn77compn27"><span class="details"><span class="p">[n.27] </span></span></span> Udāyī, in this way my disciples praise me for supreme wisdom, and it is because of this that they respect, honour, worship and treat me with respect, always following me without breaking off.<span class="note" id="mn77compn28"><span class="details"><span class="p">[n.28] </span></span></span></p>
+<p>12. "Again, Udāyī, there are disciples of mine who praise me for supreme knowledge and vision, saying: 'The Blessed One dwells knowing, not without knowing, he dwells seeing, not without seeing. The Dharma he teaches to his disciples is with causes, not without causes; it is with conditions, not without conditions; it is able to [offer] replies [to questions], not unable to [offer] replies [to questions]; it is with detachment, not without detachment. <span class="note" id="mn77compn29"><span class="details"><span class="p">[n.29] MN 77 at MN II 9,25 notes that the Buddha teaches the Dharma through direct knowledge, <i>abhiññ</i>ā<i>ya</i>, with a causal basis, <i>sanid</i>ā<i>na</i>, and in a convincing manner, <i>sapp</i>āṭ<i>ih</i>ā<i>riya</i>.</span></span></span>Udāyī, in this way my disciples praise me for supreme knowledge and vision, and it is because of this that they respect, honour, worship and treat me with respect, always following me without breaking off.</p>
+<p>14. "Again, Udāyī, there are disciples of mine who feel repugnance towards the arrow of craving and who come and ask me about <i>dukkha</i>, its arising, its cessation and the path [to its cessation].<span class="note" id="mn77compn30"><span class="details"><span class="p">[n.30] MĀ 207 at T I 783b11: 苦是苦, 習是習, 滅是滅, 道是道, literally: "<i>duk</i><i>kha </i>is <i>dukkha</i>, arising is arising, cessation is cessation, path is path".</span></span></span> I promptly answer them about <i>dukkha</i>, its arising, its cessation and the path [to its cessation]. Udāyī, in this way my disciples come and ask me, and I satisfy their minds with my answers and arouse their delight, and it is because of this that they respect, honour, worship and treat me with respect, always following me without breaking off.</p>
+<p>34-36. "Again, Udāyī, I explain to my disciples how to attain realization of the higher knowledge of recollection of past lives, or how to attain realization of the higher knowledge of the destruction of the influxes.<span class="note" id="mn77compn31"><span class="details"><span class="p">[n.31] At this point a substantial differences manifests, as instead of the two higher knowledges mentioned in MĀ 207, MN 77 from MN II 11,3 to 22,15 lists a range of different aspects of the path to liberation, covering the four <i>satipa</i>ṭṭ<i>h</i>ā<i>na</i>s, the five <i>indriya</i>s, the five <i>bala</i>s, the seven <i>bojjha</i>ṅ<i>ga</i>s, the noble eightfold path, the eight <i>vimokkha</i>s, the eight <i>abhibh</i>ā<i>yatana</i>s, the ten <i>kasi</i>ṇ<i>a</i>s, the four <i>jh</i>ā<i>na</i>s, insight into the nature of body and consciousness, production of a mind-made body, supernormal powers, the divine ear, telepathic knowledge of the mind of others, recollection of past lives, the divine eye and the destruction of the influxes.</span></span></span></p>
+<p>37. "Udāyī, in this way my disciples gain experience and deliverance in this right teaching and discipline and are able to reach the other shore, having becoming free from doubt and confusion, without vacillation in regard to this wholesome teaching, and it is because of this that they respect, honour, worship and treat me with respect, always following me without breaking off.</p>
+<p>38. Udāyī, these are the other five qualities in me, owing to which my disciples respect, honour, worship and treat me with respect, always following me without breaking off."</p>
+<p>Then the heterodox practitioner Sakuludāyī promptly rose up from his seat, arranged his robes on one shoulder and, holding his hands together [in homage] towards the Buddha, said: "Gotama, this is very exceptional, this is very special! You have well explained a profound matter and nourished my innermost being as if with ambrosia. Gotama, just as a great rain</p>
+<p>nourishes the whole earth, above and below, in the same way the recluse Gotama has well explained a profound matter to us and nourished our innermost being as if with ambrosia. Blessed One, I have understood, Well-gone One, I have comprehended. Blessed One, from now on I take refuge in the Buddha, the Dharma and the community of monks. May the Blessed One accept me as a lay follower who has taken refuge for life from now on until life ends."<span class="note" id="mn77compn32"><span class="details"><span class="p">[n.32] MN 77 does not record that Sakuludāyī expressed his respect or that he took refuge.</span></span></span></p>
+<p>The Buddha spoke like this. The heterodox practitioner Sakuludāyī, having listened to what the Buddha said, was delighted and received it respectfully.</p>
+<hr class="chapter-divider">
+<h3>Study</h3>
+<p>Given the fact that the praiseworthy qualities of the Buddha are the main theme of the <i>Mah</i>ā<i>sakulud</i>ā<i>yi-sutta </i>and its parallel, it would not be surprising if the tendency to elevate the Buddha's status should to some degree also have influenced the reciters responsible for transmitting the discourse. A comparison of the two versions in fact reveals several instances where this tendency is at work in one or the other out of the two versions.</p>
+<p>Thus whereas the <i>Majjhima-nik</i>ā<i>ya</i> version does not count the number of disciples of the Buddha or the other teachers, the <i>Madhyama-</i>ā<i>gama </i>account depicts the Buddha as surrounded by "one-thousand-two-hundred-and-fifty" disciples, while the other teachers only command a following of "five hundred" each.<span class="note" id="mn77compn33"><span class="details"><span class="p">[n.33] MĀ 207 at T I 782a13 (the Buddha's disciples), T I 781c6 (Sakuludāyī's disciples) and T I 782a4+9 (the disciples of the other teachers).</span></span></span> Its presentation thus implicitly indicates that Sakuludāyī and the six well-known contemporary teachers were far less influential than the Buddha.<span class="note" id="mn77compn34"><span class="details"><span class="p">[n.34] Manné 1990: 49 explains that in discourses that have a debate character and feature a meeting with an opponent "the description of the size of the following around each of the opponents ... serves to enhance, or otherwise, the importance of each adversary".</span></span></span> In the <i>Madhyama-</i>ā<i>gama </i> account, the Buddha's influential status manifests not only in regard to his monk disciples, but also when it comes to an audience in general. Thus, according to this version, on a former occasion the Buddha was teaching an "immeasurable congregation of hundreds of thousands".<span class="note" id="mn77compn35"><span class="details"><span class="p">[n.35] MĀ 207 at T I 782b17.</span></span></span> The corresponding section in the <i>Majjhima-nik</i>ā<i>ya</i> discourse only speaks of an audience of "several hundreds".<span class="note" id="mn77compn36"><span class="details"><span class="p">[n.36] </span></span></span></p>
+<p>Another facet of the same tendency in the <i>Madhyama-</i>ā<i>gama </i> is its depiction of Sakuludāyī's behaviour when the Buddha arrives. Even though Sakuludāyī is introduced as a famous and well-known teacher, seated amidst his disciples, according to the <i>Madhyama-</i>ā<i>gama </i>report he rises from his seat, arranges his robe over one shoulder and greets the Buddha with hands held together in reverential salutation,<span class="note" id="mn77compn37"><span class="details"><span class="p">[n.37] MĀ 207 at T I 781c16.</span></span></span> a behaviour expressing the kind of respect a Buddhist lay disciple might show when the Buddha arrives. In the <i>Majjhima-nik</i>ā<i>ya</i> version, Sakuludāyī only welcomes the Buddha verbally and offers him a seat, a more realistic depiction of how a famous and well-known <i>paribb</i>ā<i>jaka </i>would have received the leader of another group.</p>
+<p>The tendency to present Sakuludāyī as if he were a Buddhist lay disciple manifests again towards the end of the <i>Madhyama</i>ā<i>gama </i>discourse. Whereas the <i>Majjhima-nik</i>ā<i>ya</i> version merely reports Sakuludāyī's delight in the exposition he had just heard, according to the <i>Madhyama-</i>ā<i>gama </i>version he takes refuge and asks to be accepted as a lay disciple.<span class="note" id="mn77compn38"><span class="details"><span class="p">[n.38] </span></span></span> This is rather surprising, since Sakuludāyī was a <i>paribb</i>ā<i>jaka</i>, so that one would expect him to request ordination, if he wanted to be a follower of the Buddha, instead of becoming a lay disciple.<span class="note" id="mn77compn39"><span class="details"><span class="p">[n.39] Cf. the comments below page 154 note 30.</span></span></span> Thus the depiction of Sakuladāyī's reaction at the conclusion of the discourse may be yet another instance of the tendency to enhance the status of the Buddha, manifesting in the present case by relying on a standard pericope for discourse conclusions applied to the present case without sufficient consideration of its appropriateness to the context.</p>
+<p>The tendency to enhance the status of the Buddha is not confined to the <i>Madhyama-</i>ā<i>gama </i> version. Thus whereas in the <i>Madhyama-</i>ā<i>gama </i> account Sakuludāyī addresses the Buddha with the expression "recluse Gotama",<span class="note" id="mn77compn40"><span class="details"><span class="p">[n.40] </span></span></span> in the <i>Majjhima-nik</i>ā<i>ya</i> version he uses the respectful address <i>bhante</i> and, instead of using the Buddha's name, refers to him as Blessed One.<span class="note" id="mn77compn41"><span class="details"><span class="p">[n.41] Cf., e.g., MN 77 at MN II 2,11: <i>bhante bhagav</i>ā. In relation to another similar instance, Allon 1997: 121 comments that "the use of <i>bhante </i>'venerable sir' is particularly unusual as a form of address used by an ascetic towards the Buddha, as is the ascetic referring to the Buddha as <i>Bhagav</i>ā".</span></span></span> In this way, the <i>Majjhima-nik</i>ā<i>ya</i> version also presents him acting in a way suitable for a disciple of the Buddha, though it employs means that differ from those used in the <i>Madhyama-</i>ā<i>gama </i>discourse.</p>
+<p>Another facet of the same tendency occurs in relation to the Pāli version's portrayal of the disciples of other teachers, which serves as a contrast to the way the Buddha's followers behave. Although the two versions agree that the other teachers were not able to silence their disciples, according to the Pāli discourse these disciples would go so far as to tell visitors openly that their teacher does not know how to reply, proclaiming that they should be asked instead of their teacher.<span class="note" id="mn77compn42"><span class="details"><span class="p">[n.42] MN 77 at MN II 3,17.</span></span></span> Had these disciples indeed been so outrageously disrespectful towards their teacher in public, one would not expect these teachers to command the esteem among the populace that both versions attribute to them.</p>
+<p>The Pāli version also provides a sharper contrast to the poor impression cut by the disciples of other teachers, as it portrays the disciples of the Buddha in a more favourable light than the Chinese discourse. When reporting a former occasion during which a particular disciple made some noise during the delivery of a discourse, the Pāli version merely records that he cleared his throat, whereas according to the Chinese report he had fallen asleep and was snoring, a not too flattering description of what could happen when the Buddha was giving a discourse.<span class="note" id="mn77compn43"><span class="details"><span class="p">[n.43] MN 77 at MN II 4,35 and MĀ 207 at T I 782b18.</span></span></span></p>
+<p>According to the Pāli account, whenever the Buddha gives a teaching, his disciples will be poised in silent expectancy, comparable to a crowd of people at a crossroads that observes a man who is pressing out honey. This description seems to some degree to conflict with other discourses, which indicate that the disciples of the Buddha were not invariably paying attention during a talk given by their teacher. An example would be the <i>Bhadd</i>ā<i>li-sutta </i> and its Chinese parallel, according to which the Buddha had to rebuke one of his monk disciples for recurrently paying no attention when his teacher was delivering a discourse.<span class="note" id="mn77compn44"><span class="details"><span class="p">[n.44] </span></span></span></p>
+<p>The Pāli version also stands alone in indicating that disciples who disrobe will nevertheless continue to speak in praise of the Buddha, the Dharma and the monastic community.<span class="note" id="mn77compn45"><span class="details"><span class="p">[n.45] MN 77 at MN II 5,14.</span></span></span>Other discourses give a less impressive account of former Buddhist monks, giving the impression that they did not always speak in praise of their former teacher and his teaching. For example, a discourse in the <i>A</i>ṅ<i>guttara-nik</i>ā<i>ya </i>reports the disparaging remarks made by the former Buddhist monk Sarabha, and according to the <i>Mah</i>ā<i>s</i>ī<i>han</i>ā<i>da-sutta </i>the former Buddhist monk Sunakkhatta's denigration of his earlier teacher caused the Buddha to deliver a rather long discourse in order to reveal his qualities and abilities.<span class="note" id="mn77compn46"><span class="details"><span class="p">[n.46] </span></span></span></p>
+<p>In sum, it seems as if the theme of the praiseworthiness of the Buddha did exert some influence on the reciters of the discourse, causing an enhancing of the status of the Buddha that manifests in different ways in the Pāli and Chinese versions.</p>
+<table class="comparative-table">
+<tr><th>Table 2: Sakuludāyī on the Five Qualities of the Buddha</th><th></th></tr>
+<tr><td>MN 77:</td><td>MĀ 207:</td></tr>
+<tr><td>takes little food (1)</td><td>content with robes (→ 2)</td></tr>
+<tr><td>content with robes (2)</td><td>content with food (→ 3)</td></tr>
+<tr><td>content with food (3)</td><td>takes little food (→ 1)</td></tr>
+<tr><td>content with dwelling place (4)</td><td>content with dwelling place (→ 4)</td></tr>
+<tr><td>lives in seclusion (5)</td><td>lives in seclusion (→ 5)</td></tr>
+</table>
+<p>The influence of oral transmission can also be seen in regard to the sequence in which listings are preserved. Variations in the sequence of listings are in fact one of the most prominent features noticeable in comparative studies, often involving differences that are of little doctrinal import. In the present case, such variations manifest in regard to both of the sets of five qualities of the Buddha: those described by Sakuludāyī and those described by the Buddha as what make him truly praiseworthy (see tables 2 and 3).<span class="note" id="mn77compn47"><span class="details"><span class="p">[n.47] The use of → in the tables points to the corresponding quality in the parallel.</span></span></span></p>
+<p>MN 77:</p>
+<table class="comparative-table">
+<caption>Table 3: The Buddha's Listing of his Five Qualities</caption>
+<tr><th>higher virtue (1)</th><th>supreme virtue (→ 1)</th></tr>
+<tr><td>knowledge and vision (2)</td><td>supreme wisdom (→ 3)</td></tr>
+<tr><td>higher wisdom (3)</td><td>supreme knowledge & vision (→ 2)</td></tr>
+<tr><td>teaching of four noble truths (4)</td><td>teaching of four noble truths (→ 4)</td></tr>
+<tr><td>teaching ways of development (5)</td><td>teaching higher knowledge (→ 5)</td></tr>
+</table>
+<p>MĀ 207:</p>
+<p>Another and considerably more significant difference occurs in regard to the last quality in the second of these two groups of five, the Buddha's quality as a teacher of meditative development. The <i>Madhyama-</i>ā<i>gama </i>version lists merely recollection of past lives and the eradication of the influxes. Though this is rather brief, as one would have expected at least a reference to the divine eye to complete the standard set of three higher knowledges, the <i>Maj</i><i>jhima-nik</i>ā<i>ya</i> version in contrast is unexpectedly long, as it presents a detailed exposition of various aspects of the path (see table 4).<span class="note" id="mn77compn48"><span class="details"><span class="p">[n.48] </span></span></span></p>
+<p>Notably, the first part of this listing follows a numerical ascending order, while the items listed later instead come in the same sequence as found in the <i>S</i>ā<i>maññaphala-sutta</i>.<span class="note" id="mn77compn49"><span class="details"><span class="p">[n.49] DN 2 from DN I 73,23 to 84,12; this has been noted by Eimer 1976: 53.</span></span></span> This gives the impression that two originally independent listings may have been combined in the present instance.</p>
+<table class="comparative-table">
+<tr><th>Table 4: The Buddha's Fifth Quality</th></tr>
+<tr><td>Teaching the development of:</td></tr>
+<tr><td>- the four establishments of mindfulness,</td></tr>
+<tr><td>- the five faculties,</td></tr>
+<tr><td>- the five powers,</td></tr>
+<tr><td>- the seven factors of awakening,</td></tr>
+<tr><td>- the noble eightfold path,</td></tr>
+<tr><td>- the eight liberations,</td></tr>
+<tr><td>- the eight spheres of transcendence,</td></tr>
+<tr><td>- the ten <i>kasi</i>ṇ<i>a</i>s,</td></tr>
+<tr><td>- the four <i>jh</i>ā<i>na</i>s,</td></tr>
+<tr><td>- insight into the nature of body and consciousness,</td></tr>
+<tr><td>- production of a mind-made body,</td></tr>
+<tr><td>- supernormal powers,</td></tr>
+<tr><td>- the divine ear,</td></tr>
+<tr><td>- telepathic knowledge of the mind of others,</td></tr>
+<tr><td>- recollection of past lives,</td></tr>
+<tr><td>- the divine eye,</td></tr>
+<tr><td>- the destruction of the influxes.</td></tr>
+</table>
+<p>In a passage repeated after each of these items, the Pāli version indicates that with every one of these practices many disciples of the Buddha have been able to attain accomplishment and perfection of direct knowledge.<span class="note" id="mn77compn50"><span class="details"><span class="p">[n.50] MN 77 at ( e.g.) MN II 11,8: <i>tatra ca pana me s</i>ā<i>vak</i>ā<i> bah</i>ū<i> abhiññ</i>ā<i>vos</i>ā<i>nap</i>ā<i>ramippatt</i>ā<i> viharanti</i>.</span></span></span> According to the commentary, this description intends full liberation.<span class="note" id="mn77compn51"><span class="details"><span class="p">[n.51] Ps III 243,5.</span></span></span> Such a potential is somewhat unexpected in regard to the development of such practices as the spheres of transcendence (<i>abhibh</i>ā<i>yatana</i>), the ten <i>kasi</i>ṇ<i>a</i>s, the production of a mind-made body, supernormal powers, or the divine ear, etc. This specification thus does to some extent read as if an earlier listing may have only had qualities the discourses generally reckon as capable of leading to perfection through direct knowledge.</p>
+<p>In fact, the rather long exposition of all these practices is somewhat out of proportion in comparison with the space allotted to the other four truly praiseworthy qualities of the Buddha. Owing to this long treatment of the fifth quality, the <i>Mah</i>ā<i>sakulud</i>ā<i>y</i>ī<i>-</i><i>sutta </i>has become an unusually long discourse in the <i>Majjhima</i><i>nik</i>ā<i>ya </i>collection, one that, had this long treatment already been part of the discourse at the time of the collection of the <i>Nik</i>ā<i>ya</i>s, might have earned it a placing in the <i>D</i>ī<i>gha-nik</i>ā<i>ya </i>instead.</p>
+<p>Though a comparative study of the two versions thus brings to light a number of differences that testify to the vicissitudes of oral transmission and its influence on the actual shape of the discourses in the canonical collections of different Buddhist schools, the main message given by both versions remains the same: What makes the Buddha truly worthy of praise, what causes his disciples to follow him and practice in accordance with his instructions, are not external aspects of behaviour that were held in high esteem in ancient India. Though frugality, a secluded life style and detachment in regard to the requisites of life are key aspects of the path of development in early Buddhism, they are not considered an end in themselves. What according to early Buddhist thought really makes the Buddha worthy of praise is his teaching of how to develop the mind, his disclosure of the path to liberation.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn77.html">MN77</a>: Mahāsakuludāyi Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

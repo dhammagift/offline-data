@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>SĀ² 2.202 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>SĀ² 2.202</h2>
+<div class="mirror hgroup"><p class="division"><span class="mirror-left latin">Saṃyuktāgama (2nd)</span><span class="mirror-right">别译杂阿含经</span></p><h1 class="mirror-row"><span class="mirror-left latin">SA-2 202</span><span class="mirror-right">（二〇二）</span></h1></div>
+<p class="parallel-links">Parallel to: <a href="../an/an10.93.html">AN 10.93</a> / <a href="../parallels/sa968.html">SĀ 968</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>如是我闻：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Once, the Buddha was at Anāthapiṇḍada&#x27;s Park in the Jeta Grove near Śrāvastī. At that time, the elder Sudatta wished to go to the Buddha to pay respects and make offerings. He thought, &quot;If I go now, it is still early. The Tathāgata has not yet arisen from his meditation. I should first go to the place where the non-Buddhist practitioners reside.&quot; He went there and, upon arriving, they exchanged greetings and sat to one side.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在舍卫国祇树给孤独园。尔时，长者须达多好欲诣佛，亲近供养。复作是念：「我若往彼，日时故早，如来犹未从禅定起，我今应先至彼外道所住之处。」即往其所，既至彼已，共相慰问，在一面坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhist practitioners asked Sudatta, &quot;Please tell us, what views does that śramaṇa Gautama hold?&quot;</p></td><td lang="lzh" class="agama-chi"><p>异学外道问须达言：「汝可为我说，彼沙门瞿昙为作何见？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta replied, &quot;The Tathāgata&#x27;s teachings are beyond my knowledge and understanding.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达答言：「如来所说，我不能及其所知见，在吾分外。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhist practitioners said, &quot;If you do not know the Buddha&#x27;s views, can you know the views of the bhikṣus?&quot;</p></td><td lang="lzh" class="agama-chi"><p>外道言：「汝若不知佛之所见，颇复能知比丘见不？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta replied, &quot;I do not know such matters either.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达答言：「如斯之事，我亦不知。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The non-Buddhist practitioners said again, &quot;If you are like this, what do you see? If you have seen a little, please tell us about it.&quot;</p></td><td lang="lzh" class="agama-chi"><p>外道复言：「汝若如是，竟何所见？若少所见，请闻其说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta said again, &quot;You should first tell us what you have seen, and then I will tell you what I have seen.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达复言：「汝当先说汝之所见，然后我当自说所见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the non-Buddhist practitioners said to Sudatta, &quot;What I see is that sentient beings are permanent and real, while the rest are false.&quot; Another non-Buddhist practitioner said to Sudatta, &quot;What I see is that everything is impermanent, and only this is true, while the rest are false.&quot; Some also said, &quot;It is both permanent and impermanent, neither permanent nor impermanent. Only this is true, while the rest are false. The world has boundaries, the world has no boundaries, it both has and does not have boundaries, and it is neither bounded nor unbounded. The body is the same as the life force, the life force is the same as the body, the body is different from the life force. The divine self of sentient beings dies here and is reborn there, dies here and is not reborn there, dies here and is both reborn and not reborn there. Thus, elder, what I see is that dying here is neither being reborn there nor not being reborn there.&quot; At that time, the non-Buddhist practitioners each spoke about what they saw and said to Sudatta, &quot;You should speak now.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，外道语须达言：「我所见者，众生之类，是常是实，余皆妄语。」复有外道语须达言：「我之所见，一切无常，唯此为实，余皆妄语。」又复有言：「亦常无常，非常非无常，唯此为是，余皆妄语。世界有边，世界无边，亦有边亦无边，非有边非无边。身即是命，命即是身，身异命异。众生神我，死此生彼，死此不生彼，死此亦生彼亦不生彼。如是长者，我所见者，死此非生彼非不生彼。」时诸外道各各自说己所见已，语须达言：「仁者当说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta replied, &quot;As I see it, all sentient beings are conditioned, arising from the convergence of various causes and conditions. The causes and conditions are none other than karma. If something exists due to the convergence of causes and conditions, it is impermanent. Impermanence is suffering, and suffering is non-self. For this reason, I have no attachment to any views. You non-Buddhist practitioners say, &#x27;All phenomena are permanent. Only this is true, while the rest are false.&#x27; Such a view is the root of all suffering. Those who cling to these wrong views are bound to suffering. They endure great suffering and experience endless suffering in the cycle of birth and death, all because of the belief that the world is permanent, and that after death, one is neither reborn there nor not reborn there. These views are indeed conditioned, arising from the convergence of causes and conditions. From this, we can know that they are impermanent. Impermanence is suffering, and suffering is non-self.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达答言：「如我所见，一切众生悉是有为，从诸因缘和合而有。言因缘者，即是业也。若假因缘和合有者，即是无常，无常即苦，苦即无我。以是义故，我于诸见，心无存著。汝诸外道作如是言：『一切诸法常，唯此为实，余皆妄语。』如此计者，乃是众苦之根本也，以贪著斯诸邪见者，与苦相应，能忍大苦，于生死中，受无穷苦，皆由计有，世界是常，乃至死后非生于彼非不生彼。如斯诸见，实是有为，业集因缘之所和合。以此推之，当知无常，无常即苦，苦即无我。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Another non-Buddhist practitioner said to Sudatta, &quot;Elder, if sentient beings arise from the convergence of causes and conditions, they are all impermanent. Impermanence is suffering, and suffering is non-self. If that is so, you are now also creating the basis for suffering, being bound to suffering, and experiencing endless suffering in the cycle of birth and death.&quot;</p></td><td lang="lzh" class="agama-chi"><p>复有外道语须达言：「长者！众生若是业集因缘和合而有，悉皆无常，无常即苦，苦即无我。若如是者，汝今亦复作诸苦本，与苦相应，于生死中，受无穷苦。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Sudatta replied, &quot;I have already said that I have no attachment to any views. Therefore, I am also not attached to such views.&quot;</p></td><td lang="lzh" class="agama-chi"><p>须达答言：「我先已说，一切诸见，心无所著，是故我今亦复不著如斯之见。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the non-Buddhist practitioners praised Sudatta, saying, &quot;Elder, you should also speak like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>时彼外道赞须达言：「如是长者，汝亦应当作如是说。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Sudatta roared like a lion among the non-Buddhist practitioners with different views, causing the evil views of the non-Buddhist practitioners to cease. He then went to where the Buddha was, bowed his head at the Buddha&#x27;s feet, sat to one side, and told the Buddha what he had discussed with the non-Buddhist practitioners. The Buddha praised him, saying, &quot;Excellent! One should subdue the non-Buddhist practitioners like this, causing them to fall into defeat, and one should blaze the discussion of the true Dharma.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，须达于彼外道异见众中，作师子吼，令诸外道邪见之心，皆悉息已，往诣佛所，顶礼佛足，在一面坐，以己所见，共外道谈论，向如来说。佛即赞言：「善哉！应当如是摧诸外道，令堕负处，应炽盛正法之论。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>After the Buddha spoke thus, the bhikṣus heard what the Buddha said and joyfully practiced it.</p></td><td lang="lzh" class="agama-chi"><p>佛说是已，诸比丘闻佛所说，欢喜奉行。</p></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Saṃyuktāgama (2nd), a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

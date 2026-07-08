@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 61 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 61: Ambalaṭṭhikārāhulovāda-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn60comp.html#content"></a><a id="next-sutta" href="./mn62comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn61.html">MN 61</a> / <a href="../../parallels/ma14.html">MĀ 14</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Ambalaṭṭhikārāhulovāda-sutta, the “discourse on an instruction [given] to Rāhula at Ambalaṭṭhikā”, records the Buddha’s instruction to his son Rāhula on the evil consequences of speaking falsehood and on the need to reflect repeatedly on the ethical qualities of an action. This discourse has a parallel in the Madhyama-āgama,<span class="note" id="mn61n2"><span class="details"><span class="p">[n.2] The parallel is <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436a-437b, entitled the “discourse to Rāhula”, 羅云經. A quotation from the present discourse in the Vyākhyāyukti in Lee 2001: 95,12 (noted by Skilling 2000b: 343) similarly speaks of the Rāhula-sūtra, sgra gcan zin gyi mdo sde; cf. also the reference in Aśoka’s Bhabra edict to the Lāghulovāda, “spoken by the Blessed One, the Buddha, concerning falsehood”, musāvādaṃ adhigichya bhagavatā budhena bhāsite, cf. Hultzsch 1925: 173, while Bloch 1950: 154 and Woolner 1924/1993: 34 read adhigicya (cf. also Hultzsch 1925: 173 note 4); on identifying this reference with <a href="../../mn/mn61.html">MN 61</a> cf., e.g., Rhys Davids 1896: 95 and Schmithausen 1992: 115. While according to <a href="../../mn/mn61.html">MN 61</a> Rāhula was staying at Ambalaṭṭhikā, a royal park on the road between Rājagaha and Nāḷandā, according to <a href="../../parallels/ma14.html">MĀ 14</a> he was staying at Tapodārāma, a grove near a pond fed by a hot spring, situated at the foot of a mountain outside of Rājagaha (on these locations cf. Malalasekera 1937/1995: 158 and 993). <a href="../../parallels/ma14.html">MĀ 14</a> has been translated in Lévi 1896: 476-483 and has been studied and translated by Minh Chau 1964/1991: 34, 64, 131-132, 183- 184, and 290-293. Skilling 1996c offers a study of different versions of this discourse with particular emphasis on the verses found in the Chinese and Tibetan versions.</span></span></span> as well as a parallel in the (Mūla-)Sarvāstivāda Vinayavibhaṅga, preserved in Chinese and Tibetan.<span class="note" id="mn61n3"><span class="details"><span class="p">[n.3] T 1442 at T XXIII 760b-761b as well as D (3) ’dul ba, cha 215a-220b or Q (1032) je 199b-204a.</span></span></span></p>
+<p>A version of the present meeting between the Buddha and Rāhula can, moreover, be found in the Chinese Dharmapada Avadāna collection and in the Chinese Udāna-(varga).<span class="note" id="mn61n4"><span class="details"><span class="p">[n.4] T 211 at T IV 599c-600b, translated in Willemen 1999: 171-173, and T 212 at T IV 668a. As noted by Skilling 1996c: 206 note 35, the instruction given to Rāhula about falsehood in the first part of <a href="../../mn/mn61.html">MN 61</a> has also a counterpart in the Udānavargavivaraṇa, preserved in Tibetan, cf. Balk 1984: 378,4-23.</span></span></span> A few lines of this discourse have also been preserved in a Sanskrit fragment,<span class="note" id="mn61n5"><span class="details"><span class="p">[n.5] SHT V 1117 (pp. 111-112, cf. also SHT IX p. 411), parallels the instruction to disclose an unwholesome bodily deed to other monks and to rejoice in a wholesome bodily act, found at MN I 416,34 and MN I 417,6. The same fragment also parallels part of the instruction on mental acts at MN I 419.</span></span></span> and extracts from a version of the present discourse occur in the *Mahāprajñāpāramitā-(upadeśa-)śāstra and in the Śrāvakabhūmi.<span class="note" id="mn61n6"><span class="details"><span class="p">[n.6] T 1509 at T XXV 158a12, translated in Lamotte 1949/1981: 813-815, and Shukla 1973: 55-58 or ŚSG 1998: 88-92, with the Chinese version in T 1579 at T XXX 405b-c.</span></span></span> The Ambalaṭṭhikārāhulovāda-sutta and its Madhyama-āgama parallel begin by reporting that the Buddha, who had come to visit Rāhula, illustrated the consequences of speaking falsehood with the help of the water vessel the Buddha had just used to wash his feet.</p>
+<p>The (Mūla-)Sarvāstivāda Vinayavibhaṅga precedes its account of the visit paid by the Buddha to Rāhula with a report of what had motivated the Buddha to give such an instruction to his son, an account found also in the *Mahāprajñāpāramitā-(upadeśa-) śāstra. According to this account, found with a few minor differences in these two works, Rāhula had in a somewhat playful mood given wrong information to visitors who had inquired about the Buddha whereabouts.<span class="note" id="mn61n7"><span class="details"><span class="p">[n.7] T 1442 at T XXIII 760b19 as well as D (3) ’dul ba, cha 215a6 or Q (1032) je 199b3 report that Rāhula used to send visitors, who wished to meet the Buddha, to the wrong location, telling them that the Buddha was at Vulture Peak when in reality he was in the Bamboo Grove, etc. The account in the *Mahāprajñāpāramitā-(upadeśa-)śāstra, T 1509 at T XXV 158a12 (cf. also T 1813 at T XL 623b17), differs in so far as it reports that Rāhula had told the visitors that the Buddha was away, even though the Buddha was there, or else he had told them that the Buddha was in, when in reality the Buddha had left.</span></span></span> Such behaviour would indeed have been a good reason for the Buddha to deliver the present discourse on the need to abstain from falsehood.</p>
+<p>Although no reference to Rāhula’s mischievous activities is found in the Ambalaṭṭhikārāhulovāda-sutta or in its Madhyama-āgama parallel, the Pāli commentary explains that the Buddha delivered the present instruction thinking that young boys like Rāhula are prone to falsehood, saying they saw when they did not see, etc.<span class="note" id="mn61n8"><span class="details"><span class="p">[n.8] Ps III 125,22.</span></span></span> Moreover, the Ambalaṭṭhikārāhulovāda-sutta reports that, after delivering a set of similes, the Buddha told Rāhula that he should not speak a lie even for fun.<span class="note" id="mn61n9"><span class="details"><span class="p">[n.9] <a href="../../mn/mn61.html">MN 61</a> at MN I 415,18: hassā pi na musā bhaṇissāmī ti, evaṃ hi te, rāhula, sikkhitabbaṃ (Se-MN II 125,15: evañ hi).</span></span></span> A similar instruction occurs in the Madhyama-āgama version after each of the similes.<span class="note" id="mn61n10"><span class="details"><span class="p">[n.10] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436a24+29 and T I 436b5+11+26: 當作是學, 不得戲笑妄言.</span></span></span> Thus, the commentarial gloss and the instructions given in the two discourses would fit with the background narration provided in the Vinayavibhaṅga as well as in the *Mahāprajñāpāramitā-(upadeśa-)śāstra.</p>
+<p>To illustrate the consequences of consciously speaking falsehood, according to the Ambalaṭṭhikārāhulovāda-sutta, its Madhyama-āgama parallel, and the account in the (Mūla-)Sarvāstivāda Vinayavibhaṅga the Buddha compared the worth of someone who speaks falsehood to the small amount of water that was still left in the vessel he had just used to wash his feet.<span class="note" id="mn61n11"><span class="details"><span class="p">[n.11] <a href="../../mn/mn61.html">MN 61</a> at MN I 414,11, <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436a20, and T 1442 at T XXIII 760c5 as well as D (3) ’dul ba, cha 215b7 or Q (1032) je 200a4.</span></span></span></p>
+<p>While the Chinese Udāna-(varga) account proceeds similarly,<span class="note" id="mn61n12"><span class="details"><span class="p">[n.12] T 212 at T IV 668a10. For an account of the Buddha’s arrival, Rāhula’s reception, and the simile of the small amount of water left in the vessel cf. also the Udānavargavivaraṇa, Balk 1984: 378,4-23.</span></span></span> according to the Chinese Dharmapada Avadāna tale the Buddha asked Rāhula if the water left in the vessel could still be used for drinking or for rinsing one’s mouth.<span class="note" id="mn61n13"><span class="details"><span class="p">[n.13] T 211 at T IV 600a3.</span></span></span> Rāhula replied that it could not be used for such purposes, since it was dirty. The Buddha then remarked that Rāhula would be as useless as this dirty water if he did not keep his mouth restrained.</p>
+<p>According to the Ambalaṭṭhikārāhulovāda-sutta, its Madhyama-āgama parallel, and the Vinayavibhaṅga account, the Buddha next poured out the remaining water and afterwards turned the vessel upside down, comparing someone who speaks a deliberate lie to the discarded water, to the upside down condition of the water vessel, and to its empty condition.<span class="note" id="mn61n14"><span class="details"><span class="p">[n.14] <a href="../../mn/mn61.html">MN 61</a> at MN I 414,14+19+23, <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436a25 and T I 426b2+7, and T 1442 at T XXIII 760c9+13 +17 as well as D (3) ’dul ba, cha 216a1+3+4 or Q (1032) je 200a5+6+8 (the versions differ in the sequence of the last two similes). T 212 at T IV 668a14+17 has only two similes at this point, which parallel the discarded water and the upside down vessel. The image of a vessel turned upside down recurs in <a href="../../an/an3.30.html">AN 3:30</a> at AN I 130,18, where it illustrates the case of someone who does not listen properly when the Dharma is being taught. <a href="../../sn/sn45.153.html">SN 45:153</a> at SN V 48,14 and <a href="../../an/an11.14.html">AN 11:14</a> at AN V 337,6 use the same image in a positive sense.</span></span></span></p>
+<p>The Chinese Dharmapada Avadāna account reports that, once he had thrown out the remaining water, the Buddha pointed out that the vessel was still dirty and thus could not be filled with water for drinking.<span class="note" id="mn61n15"><span class="details"><span class="p">[n.15] T 211 at T IV 600a10.</span></span></span> The Dharmapada Avadāna account continues with another illustration, with the Buddha spinning the vessel around with his feet and asking Rāhula if he was concerned that the vessel might break. Rāhula replied that the vessel was an item of little worth, therefore he was not concerned about the possibility that it might break. The Buddha then drew the conclusion that someone who does not restrain body and speech is similarly held in little esteem.</p>
+<p>The Ambalaṭṭhikārāhulovāda-sutta, its Madhyama-āgama parallel, and the Vinayavibhaṅga follow the water vessel illustrations with the simile of an elephant used for warfare.<span class="note" id="mn61n16"><span class="details"><span class="p">[n.16] <a href="../../mn/mn61.html">MN 61</a> at MN I 414,29, <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436b12, and T 1442 at T XXIII 760c21 as well as D (3) ’dul ba, cha 216a6 or Q (1032) je 200b1.</span></span></span> They describe how an elephant might fight with his whole body but keep protecting his trunk. On a later occasion, the same elephant might also use its trunk. When that happens, the elephant trainer realizes that this elephant is ready to do anything. According to the Chinese (Mūla-)Sarvāstivāda Vinayavibhaṅga and the Pāli commentary, the elephant trainer knows this to be a sign that the elephant will defeat the enemy.<span class="note" id="mn61n17"><span class="details"><span class="p">[n.17] T 1442 at T XXIII 760c27 and Ps III 128,11.</span></span></span></p>
+<p>This simile recurs in similar terms in the Chinese Dharmapada Avadāna account, with, however, an opposite evaluation of its implication.<span class="note" id="mn61n18"><span class="details"><span class="p">[n.18] T 211 at T IV 600a23.</span></span></span> According to the Chinese Dharmapada Avadāna presentation, the fact that the elephant does not even protect his trunk and has given up concern for his life shows that he is reckless to an extent that renders the elephant unfit for use in battle. The idea behind this could be that a reckless elephant might cause damage to its own troops and endanger the person who rides on it. In fact, a discourse in the Aṅguttara-nikāya and its counterpart in a partial Ekottarikaāgama translation employ the image of an elephant that guards the different parts of its body when engaging in battle in a positive way, comparing it to the way a monk should guard his sense-doors.<span class="note" id="mn61n19"><span class="details"><span class="p">[n.19] <a href="../../an/an5.140.html">AN 5:140</a> at AN III 162,10 and EĀ2 26 at T II 879c5.</span></span></span></p>
+<p>The Dharmapada Avadāna account concludes that, just as the elephant should guard his trunk, so Rāhula should guard his mouth. Thus, while the simile of the elephant in the Chinese Dharmapada Avadāna compares a bad quality of the elephant to a bad quality of Rāhula, from the perspective of the Chinese (Mūla-)Sarvāstivāda Vinayavibhaṅga and the Pāli commentary the simile rather employs a positive quality of a war elephant to illustrate the blameworthy quality of speaking falsehood. Whichever evaluation is given to the elephant’s behaviour, the Pāli, Chinese, and Tibetan versions agree that the image of an elephant that even uses its trunk illustrates the recklessness of someone who is not ashamed to speak a lie.<span class="note" id="mn61n20"><span class="details"><span class="p">[n.20] <a href="../../mn/mn61.html">MN 61</a> at MN I 415,16: sampajānamusāvāde n’ atthi lajjā nāhan tassa kiñci pāpaṃ akaraṇīyan ti vadāmi (Be-MN II 78,17, Ce-MN II 132,6, and Se-MN II 125,13: nāhaṃ, Se also reads pāpaṃ kammaṃ, instead of just pāpaṃ), <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436b25: 妄言 ... 無惡不作 (cf. also the stanza in <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436b28), T 1442 at T XXIII 760c29: 妄語 ... 無惡而不造 (cf. also the stanza in T 1442 at T XXIII 761a2), as well as D (3) ’dul ba, cha 217a2 or Q (1032) je 201a3: brdzun smra ... sdig pa’i las mi bya ba (Q adds: na) cung zad kyang med par smra’o. A similar stanza can also be found in Dhp 176: musāvādissa jantuno ... n’ atthi pāpaṃ akāriyaṃ, in the Patna Dharmapada stanza 297 in Cone 1989: 181 or stanza 298 in Roth 1980b: 124: muṣāvādissa jaṃtuno ... nāsti pāpam akāriyaṃ, and in the Udāna-(varga) stanza 9:1 in Bernhard 1965: 169: mṛṣāvādasya jantunaḥ ... nākāryaṃ pāpam asti yat (the corresponding part of stanza 94 in Nakatani 1987: 30 has preserved (m)ṛ(ṣā-)), with its Tibetan counterpart lus can brdzun du smra ba yi, sdig pa mi bya ci yang med in Beckh 1911: 32 or in Zongtse 1990: 105 (Skilling 1996c: 212 note 61 explains that lus can corresponds to the Sanskrit variant reading dehinaḥ, cf. also Balk 1988: 404); for another occurrence of a version of this verse cf. <a href="../../parallels/sa1075.html">SĀ 1075</a> at T II 280b19. Skilling 1996c: 205 notes that the same statement recurs as a discourse quotation in the Vibhāsāprabhāvṛtti to the Abhidharmadīpa, cf. Jaini 1977: 128,6: yasya, rāhula, mṛṣāvāde nāsti lajjā nāsti kaukṛtyaṃ nāhaṃ tasya kiñcid akaraṇīyaṃ vadāmi.</span></span></span></p>
+<p>According to the Madhyama-āgama account and the Vinayavibhaṅga, at this point the Buddha also delivered a set of stanzas to bring home the same point. The first of these stanzas indicates that one who speaks falsehood is capable of any evil, while according to the second stanza it would be better to swallow a hot iron ball rather than partaking of the offerings of the faithful when one does not maintain pure moral conduct.<span class="note" id="mn61n21"><span class="details"><span class="p">[n.21] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436b28 and T 1442 at T XXIII 761a2 as well as D (3) ’dul ba, cha 217a2 or Q (1032) je 201a4. These stanzas have Pāli counterparts in Dhp 176 and Dhp 308, in It 1:3:5 at It 18,14 and It 2:2:11 at It 43,7 (= It 3:5:2 at It 90,12), instances where these two stanzas do not occur together. In the Chinese, Sanskrit, and Tibetan versions of the Udāna-(varga), however, the two stanzas occur together, serving as the introductory couplet for the chapter on action, the karmavarga, cf. T 212 at T IV 668a4+28, T 213 at T IV 781c10, stanza 9:1-2 in Bernhard 1965: 169 (cf. also stanzas 94-95 in Nakatani 1987: 30) and in Beckh 1911: 32 or in Zongtse 1990: 105. Skilling 1996c: 213 notes that these two stanzas also occur together in <a href="../../parallels/sa1075.html">SĀ 1075</a> at T II 280b19, cf. also Enomoto 1994: 21, while in the Patna Dharmapada they occur in the same chapter, but are separated from each other by another stanza, cf. stanzas 295 and 297 in Cone 1989: 180-181 or stanzas 296 and 298 in Roth 1980b: 124.</span></span></span> The Madhyama-āgama version continues with another two stanzas, which point out that if one wishes to avoid dukkha, one needs to avoid unwholesome deeds, since there is no escape from the retribution for evil deeds.<span class="note" id="mn61n22"><span class="details"><span class="p">[n.22] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436c3; with parallels in T 212 at T IV 668b12+23, T 213 at T IV 781c16, and stanzas 9:3-4 in Bernhard 1965: 169-170 (cf. also stanzas 96-97 in Nakatani 1987: 30) and in Beckh 1911: 32 or in Zongtse 1990: 106.</span></span></span></p>
+<p>The Ambalaṭṭhikārāhulovāda-sutta, its Madhyama-āgama parallel, and the Vinayavibhaṅga continue by using the reflective function of a mirror to illustrate the need to reflect on the ethical quality of any bodily action before, while, and after performing the action.<span class="note" id="mn61n23"><span class="details"><span class="p">[n.23] For a study of the Pāli version of this instruction cf. Vélez de Cea 2004a: 133-135.</span></span></span> These three versions agree that past bodily misconduct should be confessed to one’s elders, while a wholesome past bodily deed will lead to the arising of happiness, followed by training oneself day and night in wholesome states. The Madhyamaāgama version and the Vinayavibhaṅga specify that such training takes place in regard to right mindfulness and clear comprehension, thereby offering a gloss on the implication of “wholesome states” in the present context.<span class="note" id="mn61n24"><span class="details"><span class="p">[n.24] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 437a4: 住正念正智 as well as D (3) ’dul ba, cha 218a3 or Q (1032) je 202a4: dran pa dang shes bzhin gyis mang du gnas par bya’o.</span></span></span></p>
+<p>A significant difference between the Ambalaṭṭhikārāhulovāda-sutta and its Madhyama-āgama parallel is that the Chinese discourse enjoins to refrain from a bodily action that is “pure” and at the same time unwholesome, whereas a bodily action should be undertaken that is “not pure”, but at the same time is wholesome and does not result in suffering.<span class="note" id="mn61n25"><span class="details"><span class="p">[n.25] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436c11: 彼身業淨, 或自為, 或為他, 不善, 與苦果受, 於苦報, thereby describing an action that is “pure”, 淨 (a character that usually translates suddhi (or śuddhi) and is rendered by Lévi 1896: 480 as “pur”), but which at the same time is unwholesome, 不善 (akusala), and results in dukkha, 苦.</span></span></span> This presentation is surprising, since to qualify an action as wholesome and at the same time as impure seems contradictory.<span class="note" id="mn61n26"><span class="details"><span class="p">[n.26] Minh Chau 1964/1991: 34 and 132 suggests that 淨 in this context could refer to actions that are “permissible” according to the monastic code of discipline, but which have unwholesome results, as opposed to actions that are not permissible, but that have wholesome results. He then concludes that this instruction in <a href="../../parallels/ma14.html">MĀ 14</a> allows a more liberal attitude towards the interpretation of monastic regulations. Minh Chau’s reasonable attempt to make sense out of this passage by assuming that 淨 may have a meaning different from its more usual meaning of “purity” receives support from Hirakawa 1997: 727, who lists kalpika and kalpa as possible equivalents for 淨, cf. also Bapat 1970: 223, who notes that the expression akappiya in Sp II 289,24 has as its counterpart 不淨 in the 善見律毘婆沙, T 1462 at T XXIV 727c23 (on the title of this work cf. Pinte 2010, on its school affiliation Heirman 2004). A problem with Minh Chau’s interpretation, however, is that adopting this rendering to the instruction for a past bodily action in <a href="../../parallels/ma14.html">MĀ 14</a> at T I 436c27 would result in proposing that a “permissible” bodily deed should be confessed, while a “not permissible” bodily deed leads to the arising of joy. Such a statement would make little sense, since for a “permissible” bodily deed there would be no need for confession. In fact, the idea to give precedence to others’ welfare over the requirements of moral conduct belongs to a later phase of Buddhist thought and is not yet found in the early discourses. An extract from the present discussion already appeared in Anālayo 2008a: 10-12.</span></span></span></p>
+<p>The Vinayavibhaṅga account differs from the Madhyama-āgama version in this respect, as it does not consider that an unwholesome bodily action could be pure.<span class="note" id="mn61n27"><span class="details"><span class="p">[n.27] T 1442 at T XXIII 761a11 examines bodily actions that are unwholesome, dukkha, and evil, and that result in future dukkha, 是不善事, 是苦惡業, 能於未來感苦異熟. D (3) ’dul ba, cha 217a5 or Q (1032) je 201a6 similarly takes up bodily actions that are harmful to oneself and others, unwholesome, dukkha, and result in dukkha, bdag dang gzhan la gnod par ’gyur ba mi dge ba (D: ba’i) sdug bsngal ’byung ba rnam par smin pa sdug bsngal ba yin.</span></span></span></p>
+<p>A quotation from the present discourse in the Vyākhyāyukti-ṭīkā, preserved in Tibetan, and a paraphrase of the present passage in the Śrāvakabhūmi agree with the Vinayavibhaṅga version and the Ambalaṭṭhikārāhulovāda-sutta that the present instructions are to refrain from a bodily deed that is harmful and unwholesome,<span class="note" id="mn61n28"><span class="details"><span class="p">[n.28] According to the discourse quotation in the Vyākhyāyukti-ṭīkā, D (4069) sems tsam, si 200b3 or Q (5570) i 71a5, the instruction to Rāhula is to refrain from a bodily deed that is harmful, unwholesome, and results in dukkha, gnod pa dang ldan pa mi dge ba sdug bsngal ’byung ba. The Śrāvakabhūmi in Shukla 1973: 55,16 similarly reads vyābhādhikaṃ ... ātmano vā parasya vā akuśalaṃ, cf. also ŚSG 1998: 88,20 and the Chinese counterpart in T 1579 at T XXX 405b5: 自損及以損他是不善.</span></span></span> without envisaging that such a deed could be reckoned as pure.</p>
+<p>Judging from the phrasing in these versions, it seems safe to conclude that with high probability this part of the Madhyama-āgama version has suffered from an error in transmission or translation.<span class="note" id="mn61n29"><span class="details"><span class="p">[n.29] Such a textual error could have occurred due to misinterpreting a sandhi in the Indic original to imply that a particular word has, or else does not have, the negative prefix a-. A similar error can be found in the Madhyama-āgama parallel to <a href="../../mn/mn65.html">MN 65</a> (cf. below p. 361 note 114), indicating that such mistakes did sometimes take place; cf. also Karashima 1992: 263, who notes similar errors in Dharmarakṣa’s translation of the Saddharmapuṇḍarīka-sūtra, or Bapat 1970: lix, who points out occurrences of this type of error in the Chinese counterpart to the Samantapāsādikā).</span></span></span></p>
+<p>When applying the same treatment to verbal and mental deeds, the Majjhima-nikāya account instructs that, if one has committed an unwholesome mental deed, one should feel repelled, humiliated, and disgusted.<span class="note" id="mn61n30"><span class="details"><span class="p">[n.30] <a href="../../mn/mn61.html">MN 61</a> at MN I 419,27: aṭṭiyitabbaṃ harāyitabbaṃ jigucchitabbaṃ.</span></span></span> The Madhyama-āgama version and the Tibetan Vinayavibhaṅga use less strong terminology in this case, as they simply instruct to discard such an unwholesome mental deed (in future).<span class="note" id="mn61n31"><span class="details"><span class="p">[n.31] <a href="../../parallels/ma14.html">MĀ 14</a> at T I 437a11: 捨 as well as D (3) ’dul ba, cha 219a7 or Q (1032) je 203a5: gtang bar bya’o. The presentation of mental action in <a href="../../parallels/ma14.html">MĀ 14</a> and in the Tibetan version also differs from <a href="../../mn/mn61.html">MN 61</a> in regard to the sequence, which elsewhere in these versions proceeds from future via present to past actions. In relation to mental action, however, <a href="../../parallels/ma14.html">MĀ 14</a> and the Tibetan version first list those of the past, then those of the future, and lastly those of the present (the cases of verbal and mental deeds in T 1442 at T XXIII 761b2 are abbreviated and thus do not allow comparison with the other versions).</span></span></span></p>
+<p>The Ambalaṭṭhikārāhulovāda-sutta, its Madhyama-āgama parallel, and the account in the Vinayavibhaṅga round off their exposition by declaring that recluses and Brahmins of past, present, and future times purify their bodily, verbal, and mental action in this way.</p>
+<p>The Madhyama-āgama version and the Vinayavibhaṅga conclude by repeating the instructions to Rāhula in verse, again emphasizing the need to reflect on the ethical quality of any action.<span class="note" id="mn61n32"><span class="details"><span class="p">[n.32] While <a href="../../parallels/ma14.html">MĀ 14</a> at T I 437b11 has five stanzas at this point, T 1442 at T XXIII 761b11 as well as D (3) ’dul ba, cha 220b3 or Q (1032) je 204a6 have only two stanzas. These two stanzas can also be found in the Śrāvakabhūmi, Shukla 1973: 57,12 or ŚSG 1998: 92,4 and T 1579 at T XXX 405c3.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

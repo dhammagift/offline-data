@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 27 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 27: Cūḷahatthipadopama-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn26comp.html#content"></a><a id="next-sutta" href="./mn28comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn27.html">MN 27</a> / <a href="../../parallels/ma146.html">MĀ 146</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Cūḷahatthipadopama-sutta, the “lesser discourse on the simile of the elephant’s footprint”, describes the gradual training of a monk.<span class="note" id="mn27n238"><span class="details"><span class="p">[n.238] According to Mahāvaṃsa, stanza 14.22 at Be-Mhv 76, the Cūḷahatthipadopama-sutta was the first discourse preached by Mahinda to the king of Ceylon, leading to the king’s conversion and to the spread of Buddhism in Ceylon.</span></span></span> This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn27n239"><span class="details"><span class="p">[n.239] The parallel is <a href="../../parallels/ma146.html">MĀ 146</a> at T I 656a-658a, which agrees with <a href="../../mn/mn27.html">MN 27</a> on Jeta’s Grove by Sāvatthī as the location and has the title “discourse on the simile of the elephant’s footprint”, 象跡喻經, thereby differing from <a href="../../mn/mn27.html">MN 27</a> only in that it does not qualify the discourse to be a “lesser” version. On some aspects of <a href="../../parallels/ma146.html">MĀ 146</a> cf. Minh Chau 1964/1991: 99-100 and 206.</span></span></span></p>
+<p>The Madhyama-āgama discourse opens by relating that the wanderer Pilotika visited the Buddha, received a discourse on the Dharma, and departed full of inspiration about what he had just heard. On his way back, he met the Brahmin Jāṇussoṇi.</p>
+<p>Unlike the Madhyama-āgama discourse, the Majjhima-nikāya version does not report the earlier visit paid by the wanderer Pilotika to the Buddha. Thus the Cūḷahatthipadopama-sutta begins only with this wanderer meeting the Brahmin Jāṇussoṇi.</p>
+<p>Asked about his impression of the Buddha’s wisdom,<span class="note" id="mn27n240"><span class="details"><span class="p">[n.240] An introductory narration showing some similarities to the exchange between Pilotika and Jāṇussoṇi can be found in <a href="../../an/an5.194.html">AN 5:194</a> at AN III 237,2, involving the Brahmins Piṅgiyānī and Kāraṇapālī.</span></span></span> according to both versions the wanderer Pilotika told the Brahmin Jāṇussoṇi that he had witnessed how different debaters had been unable to defeat the Buddha in discussion.<span class="note" id="mn27n241"><span class="details"><span class="p">[n.241] While in <a href="../../mn/mn27.html">MN 27</a> at MN I 175,20 Pilotika refers to the Buddha as the “ascetic Gotama”, samaṇa gotama, <a href="../../parallels/ma146.html">MĀ 146</a> at T I 656a27 takes into account that by now he has gained confidence in the Buddha, as here Pilotika refers to the Buddha as 世尊, a standard way of rendering bhagavā, cf., e.g., Hirakawa 1997: 69, Nattier 2003b: 232, and Soothill 1937/2000: 164.</span></span></span> The Majjhima-nikāya version stands alone in reporting that these debaters also became the Buddha’s disciples, and that some of them even went forth, practised diligently, and attained awakening.<span class="note" id="mn27n242"><span class="details"><span class="p">[n.242] <a href="../../mn/mn27.html">MN 27</a> at MN I 177,12.</span></span></span></p>
+<p>In both versions, the wanderer Pilotika compared his confidence in the Buddha to a hunter who, on seeing the big footprint of an elephant, is confident that the elephant in question must be a large one. Once their conversation was over, the Brahmin Jāṇussoṇi went to visit the Buddha and reported how the wanderer Pilotika had illustrated his confidence in the Buddha with the simile of the elephant’s footprint.</p>
+<p>According to both versions, the Buddha took up the simile of the elephant’s footprint and delivered an account of the gradual training in his teaching as an illustration of the full implications of this simile. The descriptions of the main steps of this gradual training resemble each other in the Pāli and Chinese versions.<span class="note" id="mn27n243"><span class="details"><span class="p">[n.243] On the section of the gradual path that deals with mindfulness and clear comprehension cf. above p. 82; for the section on sense-restraint cf. below p. 619.</span></span></span></p>
+<p>A few minor differences are: In its description of abstention from killing, the Madhyama-āgama version explicitly indicates that this also covers killing insects.<span class="note" id="mn27n244"><span class="details"><span class="p">[n.244] <a href="../../parallels/ma146.html">MĀ 146</a> at T I 657a16: “insects and bugs”, 蜫蟲, already noted by Prasad 1985: 136; cf. also Ramers 1996: 45, Schmithausen 2000a: 52, and id. 2002: 13 note 47. A reference to insects in definitions of killing can also be found in Vin I 97,2, in a discourse quotation in the Dharmaskandha, fragment 4737 folio 19v10 in Dietz 1984: 80,24 and T 1537 at T XXVI 455b2, and (noted by Dietz 1984: 80 note 358) in the Bhikṣuṇīkarmavācana fragment 25b1 in Ridding 1919: 138,9 or in Schmidt 1993: 263,17, and in the Karmavācanā fragment 232R3 in Härtel 1956: 27, cf. also the Sarvāstivāda Upasaṃpadāvastu in Chung 2004: 47,3.</span></span></span> Moreover, in its account of other aspects of virtuous conduct, the Madhyama-āgama version mentions abstaining from alcohol, an aspect of conduct not explicitly taken into account in the Majjhima-nikāya version.<span class="note" id="mn27n245"><span class="details"><span class="p">[n.245] <a href="../../parallels/ma146.html">MĀ 146</a> at T I 657b18: 離酒, 斷酒. The need to abstain from alcohol is taken into account in the Pāli discourses in the context of listings of the five precepts, e.g., <a href="../../dn/dn5.html">DN 5</a> at DN I 146,20 (with its monastic counterpart in pācittiya 51 at Vin IV 110,13, on which cf. also Kieffer-Pülz 2005b). The dire consequences of such consumption are depicted in <a href="../../an/an8.40.html">AN 8.40</a> at AN IV 248,9 to be rebirth in hell, as an animal, as a ghost, or as a mentally deranged human. Whereas a description of ethical restraint as part of the gradual path in the Saṅghabhedavastu, Gnoli 1978a: 233, also does not refer to the consumption of alcohol, the same is taken into account in a gradual path account in <a href="../../parallels/da20.html">DĀ 20</a> at T I 83c27. Nattier 2003a: 109 note 11 points out that variations in regard to references to abstaining from alcohol can occur even within a single work, such as the Mahāvastu. In one passage in this work, a listing of the ten courses of action, karmapatha, includes the prohibition against alcohol, at the cost of omitting a reference to harsh speech; in another passage in the same work, the ten courses are listed without a reference to alcohol, cf. Basak 1963a: 126,4 and id. 1965: 139,12 or Senart 1882a: 107,13 and id. 1890: 99,5 (on such combinations of the ten courses of action with the five precepts cf. also Nattier 2002). The importance of abstention from alcohol is highlighted in the Abhidharmakośabhāṣya, according to which lack of restraint in this respect endangers keeping the other precepts as well, cf. Abhidh-k 4.34 in Pradhan 1967: 218,18, T 1558 at T XXIX 77b8, and T 1559 at T XXIX 234a22. Reat 1996: 49 comments that “though it is clear that the Buddha did not approve of alcohol and drugs, abstinence from intoxicants ... in the Pali sūtras ... is ... not nearly as prominent an ethical issue as it came to be in later Buddhism”; cf. also Schmithausen 1991: 8 note 42.</span></span></span> Another difference is that, in its treatment of speech, the Madhyama-āgama version provides a contrast to rough speech by depicting a type of speech that is soft and mild, whereas the Majjhima-nikāya version only portrays the nature of rough speech.<span class="note" id="mn27n246"><span class="details"><span class="p">[n.246] <a href="../../parallels/ma146.html">MĀ 146</a> at T I 657b1 also indicates that rough speech is a hindrance for the development of concentration; cf. also the similar reference in the context of a gradual path treatment in SHT III 808R5 (p. 15) to rough speech as asamā[dh]i[sa]ṃ[va]r[dhan]ī. Although in the Pāli discourses this particular consequence of rough speech is not mentioned in accounts of the gradual path, it is taken into account in expositions of the ten courses of action (kammapatha), cf., e.g., <a href="../../mn/mn41.html">MN 41</a> at MN I 286,37.</span></span></span>
+<p>Forms of conduct to be avoided that are mentioned only in the Majjhima-nikāya version are:</p>
+<ul>
+<li>accepting raw meat,</li>
+<li>going on messages,</li>
+<li>buying and selling,</li>
+<li>cheating with false weights and measures, etc.,</li>
+<li>deception and fraud, etc.,</li>
+<li>murder and robbery, etc.<span class="note" id="mn27n247"><span class="details"><span class="p">[n.247] <a href="../../mn/mn27.html">MN 27</a> at MN I 180,10: āmakamaṃsapaṭiggahaṇā paṭivirato hoti, and MN I 180,15: dūteyyapahiṇagamanānuyogā ... kayavikkayā ... tulākūṭakaṃsakūṭamānakūṭā ... ukkoṭanavañcananikatisāciyogā ... chedanavadhabandhanaviparāmosa-ālopasahasākārā paṭivirato hoti (Se-MN I 343,18: ukkoṭanavañcananikatisāviyogā); cf. also Minh Chau 1964/1991: 31 and 82.</span></span></span></li>
+</ul>
+<p>According to both versions, even the attainment of the four jhānas, although constituting a significant verification of the efficacy of the Buddha’s teaching and thus being a “footprint of the Tathāgata”,<span class="note" id="mn27n248"><span class="details"><span class="p">[n.248] <a href="../../mn/mn27.html">MN 27</a> at MN I 181,29 and <a href="../../parallels/ma146.html">MĀ 146</a> at T I 657c23: tathāgatapadaṃ/如來所行.</span></span></span> is not yet sufficient for acquiring firm confidence in the Buddha as a fully awakened teacher.</p>
+<p>While the Majjhima-nikāya version’s account of the gradual training culminates in the three higher knowledges, the Madhyama-āgama discourse proceeds from the attainment of the fourth jhāna directly to the destruction of the influxes.<span class="note" id="mn27n249"><span class="details"><span class="p">[n.249] <a href="../../mn/mn27.html">MN 27</a> at MN I 182,19 and <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a11.</span></span></span> This presentation is noteworthy, since standard descriptions of the gradual path in the Pāli discourses usually mention the whole set of three higher knowledges, or even the six higher knowledges.</p>
+<p>From a practical perspective, however, to proceed from the attainment of the fourth jhāna directly to the destruction of the influxes would be possible, as the early discourses do not consider recollection of past lives and the ability to directly perceive the passing away and reappearing of beings according to their deeds as necessary requirements for the destruction of the influxes. Yet, in the present instance the Buddha is describing his teaching to a Brahmin visitor. In view of this, it would fit the context well if he were to bring in all of the three higher knowledges (tevijjā), thereby describing what constitutes the Buddhist counterpart to the three knowledges valued by contemporary Brahmins.<span class="note" id="mn27n250"><span class="details"><span class="p">[n.250] In <a href="../../an/an3.58.html">AN 3:58</a> at AN I 163,8 a Brahmin proposes tevijjā to stand for knowledge of the three Vedas, in reply to which the Buddha describes what are the three knowledges in his dispensation, concluding that the attainment of these three higher knowledges makes one a “three-knowledge Brahmin”, <a href="../../an/an3.58.html">AN 3:58</a> at AN I 165,31: etāhi tīhi vijjāhi, tevijjo hoti brāhmaṇo. Cf. also Sv I 267,30, according to which the Brahmin Ambaṭṭha took even the expression “knowledge” on its own to represent knowledge of the three Vedas, vijjā nāma tayo vedā. For a modern interpretation of the three higher knowledges cf. Bucknell 1983.</span></span></span></p>
+<p>Another difference between the two versions is that the Cūḷahatthipadopama-sutta presents insight into the four noble truths as the way to reach complete confidence, while the successful destruction of the influxes is the point at which complete confidence has been reached.<span class="note" id="mn27n251"><span class="details"><span class="p">[n.251] <a href="../../mn/mn27.html">MN 27</a> at MN I 183,34 indicates that with insight into the four noble truths in relation to dukkha and in relation to the influxes, the noble disciple has not yet reached complete confidence, but is in the process of doing so, na tveva tāva ariyasāvako niṭṭhaṃ gato hoti, api ca kho niṭṭhaṃ gacchati, whereas once the three influxes are eradicated, he has reached complete confidence, <a href="../../mn/mn27.html">MN 27</a> at MN I 184,6: niṭṭhaṃ gato hoti (here and above Se-MN I 348,3 reads niṭṭhaṅgato).</span></span></span> The Madhyama-āgama version does not have such a distinction, but simply treats insight into the four noble truths and the destruction of the influxes together.<span class="note" id="mn27n252"><span class="details"><span class="p">[n.252] <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a19.</span></span></span></p>
+<p>According to the commentarial explanation, the finer distinction introduced at this point refers to the difference between path and fruition attainment, since at the path moment the noble disciple is about to reach complete confidence, whereas with the fruition moment of full awakening he has completely done so.<span class="note" id="mn27n253"><span class="details"><span class="p">[n.253] Ps II 217,24.</span></span></span></p>
+<p>Yet, according to the standard commentarial presentation already the path moment eradicates the defilements.<span class="note" id="mn27n254"><span class="details"><span class="p">[n.254] For the case of stream-entry cf. As 234,2 and Vism 675,4.</span></span></span> Thus, the commentarial explanation does not seem to fit the passage it purports to explain so well, as in the Cūḷahatthipadopama-sutta the eradication of the influxes takes place only at the point that according to the commentary would represent the fruition moment of an arahant.</p>
+<p>The Cūḷahatthipadopama-sutta and its parallel conclude by reporting that the Brahmin Jāṇussoṇi felt inspired enough by this discourse to take refuge with the Buddha.<span class="note" id="mn27n255"><span class="details"><span class="p">[n.255] Instead of continuing to address the Buddha by his name Gotama, <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a22: 瞿曇, when Jāṇussoṇi takes refuge as a lay disciple he changes to the honorific “Blessed One”, <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a23: 世尊. In <a href="../../mn/mn27.html">MN 27</a> at MN I 184,11, however, he keeps on using the Buddha’s name even after taking refuge. This is the usual pattern adopted by Brahmins in other discourses in the Majjhima-nikāya, who continue to use bho gotama even when they take refuge as lay disciples, cf. e.g., <a href="../../mn/mn30.html">MN 30</a> at MN I 205,4, <a href="../../mn/mn60.html">MN 60</a> at MN I 413,21, <a href="../../mn/mn93.html">MN 93</a> at MN II 157,18, <a href="../../mn/mn95.html">MN 95</a> at MN II 177,11, <a href="../../mn/mn96.html">MN 96</a> at MN II 184,21, <a href="../../mn/mn99.html">MN 99</a> at MN II 208,10, <a href="../../mn/mn100.html">MN 100</a> at MN II 213,9, <a href="../../mn/mn107.html">MN 107</a> at MN III 7,2, and <a href="../../mn/mn135.html">MN 135</a> at MN III 206,26. Wagle 1966: 46 explains that Brahmins “in addressing the Buddha ... invariably use the term bho Gotama”, adding that “bho, which is a term used among brāhmaṇas when addressing each other, denotes equality”. Another noteworthy example for the use of bho gotama is the case of the Brahmin Brahmāyu, who according to <a href="../../mn/mn91.html">MN 91</a> at MN II 145,19 used the address bho gotama even after he had prostrated in front of the Buddha and kissed the Buddha’s feet, an expression of humility that caused an uproar in the assembly that was witnessing this act. Similar to <a href="../../mn/mn27.html">MN 27</a>, <a href="../../mn/mn4.html">MN 4</a> at MN I 24,2 reports that Jāṇussoṇi took refuge by using the address bho gotama, whereas in the Chinese parallel <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666c27 he used the address “Blessed One”, followed, however, in <a href="../../parallels/ea31.1.html">EĀ 31.1</a> at T II 666c29 by Jāṇussoṇi reverting to the name Gotama. Perhaps the occurrences of the address “Blessed One” in <a href="../../parallels/ea31.1.html">EĀ 31.1</a> and in <a href="../../parallels/ma146.html">MĀ 146</a> could be due to the reciters or translators assuming that someone who takes refuge must be using a honorific form of address like “Blessed One”. Another difference is that <a href="../../parallels/ma146.html">MĀ 146</a> at T I 658a26 concludes with Jāṇussoṇi and Pilotika rejoicing in the Buddha’s exposition, whereas according to <a href="../../mn/mn27.html">MN 27</a> at MN I 184,10 only Jāṇussoṇi rejoiced in the Buddha’s exposition. The course of the narration in both versions gives the impression that Jāṇussoṇi had come alone to visit the Buddha, whereas Pilotika had already received an inspiring discourse from the Buddha and was on his way back to Sāvatthī when he met Jāṇussoṇi. Thus the conclusion in <a href="../../mn/mn27.html">MN 27</a> would fit the situation better. It seems to be a recurrent pattern in Madhyama-āgama discourses that the conclusion reports the delight of those who at this junction of events have already left, cf. also below p. 209 note 31 and p. 545 note 83.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

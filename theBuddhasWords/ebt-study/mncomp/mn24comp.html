@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 24 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 24: Rathavinīta-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn23comp.html#content"></a><a id="next-sutta" href="./mn25comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn24.html">MN 24</a> / <a href="../../parallels/ma9.html">MĀ 9</a> / <a href="../../parallels/ea39.10.html">EĀ 39.10</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Rathavinīta-sutta, the “discourse on the relay of chariots”, reports a conversation between Sāriputta and Puṇṇa Mantāṇiputta about seven stages of purification. This discourse has a parallel in the Madhyama-āgama and a parallel in the Ekottarika-āgama.<span class="note" id="mn24n88"><span class="details"><span class="p">[n.88] The parallels are <a href="../../parallels/ma9.html">MĀ 9</a> at T I 429c-431c, entitled “discourse on seven chariots”, 七車經, and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 733c-735b, to which the summary verse at T II 735b12 similarly refers to with the expression “seven chariots”, 七車. <a href="../../parallels/ma9.html">MĀ 9</a> has been translated by Pāsādika 2000; cf. also Minh Chau 1964/1991: 144-145, 180, 181, and 205. While <a href="../../mn/mn24.html">MN 24</a> and <a href="../../parallels/ma9.html">MĀ 9</a> place the Buddha’s initial exchange with the monks at Rājagaha, after which the Buddha left for Sāvatthī, according to <a href="../../parallels/ea39.10.html">EĀ 39.10</a> he had already come to Sāvatthī when the first meeting with the group of monks took place.</span></span></span> A few lines of this discourse have also been preserved in Sanskrit fragments.<span class="note" id="mn24n89"><span class="details"><span class="p">[n.89] SHT II 163b-d (pp. 16-19) and SHT VI 1329 (p. 84, identified in SHT VIII p. 201). SHT VI 1329 parallels part of the discussion at MN I 147, while SHT II 163 b-d parallels the concluding part of the discourse, cf. MN I 150,11.</span></span></span></p>
+<p>The Rathavinīta-sutta and its Chinese parallels begin with a group of monks who, having come to visit the Buddha, praise Puṇṇa Mantāṇiputta. The three versions differ to some extent in their listing of his qualities (see table 3.4). They agree that Puṇṇa had few wishes, was contented, lived in seclusion, and was endowed with concentration and wisdom. They also make a point of indicating that, with regard to each of his positive qualities, Puṇṇa encouraged others to develop the same qualities.</p>
+<table class="comparative-table">
+<caption>Table 3.4: Puṇṇa’s Qualities in <a href="../../mn/mn24.html">MN 24</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn24.html">MN 24</a></th><th><a href="../../parallels/ma9.html">MĀ 9</a></th></tr>
+<tr><td>few wishes (1)</td><td>few wishes & contented (→ 1, 2)</td></tr>
+<tr><td>contented (2)</td><td>secluded (→ 3)</td></tr>
+<tr><td>secluded (3)</td><td>energetic (→ 5)</td></tr>
+<tr><td>not socializing (4)</td><td>right mindfulness</td></tr>
+<tr><td>energetic (5)</td><td>concentrated (→ 7)</td></tr>
+<tr><td>virtue (6)</td><td>wise (→ 8)</td></tr>
+<tr><td>concentration (7)</td><td>influxes destroyed (→ 9)</td></tr>
+<tr><td>wisdom (8)</td><td>teaches others (→ 11)</td></tr>
+<tr><td>liberation (9)</td><td></td></tr>
+<tr><td>knowledge & vision of liberation (10)</td><td></td></tr>
+<tr><td>teaches others (11)</td><td>(≠ 4, 6, 10)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../parallels/ea39.10.html">EĀ 39.10</a></td></tr>
+<tr><td>dwells in forest</td></tr>
+<tr><td>begs alms</td></tr>
+<tr><td>wears rag robes</td></tr>
+<tr><td>contented (→ 2)</td></tr>
+<tr><td>few wishes (→ 1)</td></tr>
+<tr><td>secluded (→ 3)</td></tr>
+<tr><td>protects his practice</td></tr>
+<tr><td>virtue (→ 6)</td></tr>
+<tr><td>concentration (→ 7)</td></tr>
+<tr><td>wisdom (→ 8)</td></tr>
+<tr><td>liberation (→ 9)</td></tr>
+<tr><td>knowledge & vision of liberation (→ 10)</td></tr>
+<tr><td>teaches others (→ 11)</td></tr>
+<tr><td>(≠ 4-5)</td></tr>
+</table>
+<p>According to the Majjhima-nikāya and the Madhyama-āgama versions, Puṇṇa was energetic,<span class="note" id="mn24n90"><span class="details"><span class="p">[n.90] <a href="../../mn/mn24.html">MN 24</a> at MN I 145,23: āraddhaviriyo (Be-MN I 199,10: āraddhavīriyo) and <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430a17: 精進.</span></span></span> while the Ekottarika-āgama discourse describes that he “protects his practice”.<span class="note" id="mn24n91"><span class="details"><span class="p">[n.91] <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734a14: 守其行.</span></span></span> Another difference is that the Madhyama-āgama discourse lists right mindfulness as a quality of Puṇṇa,<span class="note" id="mn24n92"><span class="details"><span class="p">[n.92] <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430a17: 正念.</span></span></span> whereas the Pāli and the Ekottarika-āgama versions at this point in their sequence of qualities mention his virtue.<span class="note" id="mn24n93"><span class="details"><span class="p">[n.93] <a href="../../mn/mn24.html">MN 24</a> at MN I 145,24: sīlasampanno, and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734a14: 戒具清淨.</span></span></span> Consequently, the Madhyamaāgama version proceeds from being energetic via mindfulness to concentration and wisdom, while the other two versions proceed from virtue via concentration to wisdom. The Madhyama-āgama version thus follows a pattern found also in the thoughts of a great man, recorded in the Aṅguttara-nikāya, which similarly adopts the sequence energy, mindfulness, concentration, and wisdom,<span class="note" id="mn24n94"><span class="details"><span class="p">[n.94] <a href="../../an/an8.30.html">AN 8:30</a> at AN IV 229,21.</span></span></span> a sequence that also corresponds to the standard listing of the five faculties (indriya). The Majjhima-nikāya and Ekottarika-āgama versions instead reflect the triad morality-concentration-wisdom, a set found frequently in the early discourses.</p>
+<p>This particular difference is noteworthy in so far as it appears to constitute a pattern in the respective collections. The Madhyama-āgama parallel to the Mahāgosiṅga-sutta, in the context of a list of qualities of Mahākassapa, again has right mindfulness in the place where the corresponding Majjhima-nikāya and Ekottarika-āgama versions mention virtue.<span class="note" id="mn24n95"><span class="details"><span class="p">[n.95] <a href="../../parallels/ma184.html">MĀ 184</a> at T I 728c23 lists right mindfulness and clear comprehension, 正念正智, where <a href="../../mn/mn32.html">MN 32</a> at MN I 214,10 refers to sīlasampanno, and <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a11 has 戒德.</span></span></span> Similarly, the Madhyama-āgama version of a list of qualities of the layfollower Hatthaka mentions mindfulness, whereas its Aṅguttara-nikāya counterparts mention his virtue.<span class="note" id="mn24n96"><span class="details"><span class="p">[n.96] <a href="../../parallels/ma41.html">MĀ 41</a> at T I 484c2 lists eight qualities of the lay disciple Hatthaka, which include mindfulness, 念, while virtue is not mentioned. Two discourses in the Aṅguttara-nikāya offer similar sets of qualities of Hatthaka, with <a href="../../an/an8.23.html">AN 8:23</a> at AN IV 217,4 listing seven qualities and <a href="../../an/an8.24.html">AN 8:24</a> at AN IV 220,6 eight qualities. Both sets mention his virtue, but do not include mindfulness. In this case the differences are, however, not limited to mindfulness versus virtue. <a href="../../parallels/ma41.html">MĀ 41</a> also attributes the qualities of being energetic and concentrated to Hatthaka, two qualities not found in the Pāli versions, while his learnedness and generosity, mentioned in the two Pāli versions, do not occur in <a href="../../parallels/ma41.html">MĀ 41</a>.</span></span></span></p>
+<p>Another difference in regard to Puṇṇa’s qualities is that the Ekottarika-āgama parallel to the Rathavinīta-sutta begins its listing with the ascetic practices of living in the forest, subsisting on alms food, and using rag robes, none of which is mentioned in the Majjhima-nikāya or Madhyama-āgama versions.<span class="note" id="mn24n97"><span class="details"><span class="p">[n.97] <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734a8.</span></span></span></p>
+<p>These ascetic practices recur again in the list of the qualities of Mahākassapa in the Mahāgosiṅga-sutta. Although the Madhyama-āgama parallel to the Mahāgosiṅga-sutta does not mention the ascetic practices, the Ekottarika-āgama parallel to the Mahāgosiṅga-sutta does list them.<span class="note" id="mn24n98"><span class="details"><span class="p">[n.98] <a href="../../parallels/ea37.3.html">EĀ 37.3</a> at T II 711a9 and <a href="../../mn/mn32.html">MN 32</a> at MN I 214,3.</span></span></span> According to the list of outstanding disciples in the Aṅguttara-nikāya and Ekottarika-āgama, the undertaking of the ascetic practices was indeed a characteristic quality of Mahākassapa,<span class="note" id="mn24n99"><span class="details"><span class="p">[n.99] <a href="../../an/an1.14.html">AN 1:14</a> at AN I 23,19 and <a href="../../parallels/ea4.2.html">EĀ 4.2</a> at T II 557b8.</span></span></span> so that their absence from the Madhyama-āgama description of this great disciple is unexpected.</p>
+<p>The Rathavinīta-sutta and its parallels continue by relating that on a later occasion Puṇṇa came to visit the Buddha.<span class="note" id="mn24n100"><span class="details"><span class="p">[n.100] According to <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430b13, another monk informed Sāriputta of the identity of Puṇṇa, indicating that he was the monk with a bright skin and a prominent nose who was sitting near the Buddha. Such details about Puṇṇa’s appearance are not mentioned in the other versions.</span></span></span> After meeting the Buddha, he went to a nearby grove.<span class="note" id="mn24n101"><span class="details"><span class="p">[n.101] Whereas according to <a href="../../mn/mn24.html">MN 24</a> at MN I 146,32 and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734b8 Puṇṇa went to the nearby grove on the same day, according to <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430b15 a night intervened, after which Puṇṇa and Sāriputta collected and partook of their alms food the next morning, before approaching the grove for meditative seclusion.</span></span></span> Sāriputta, who was keen to meet in person the monk whose praises he had heard earlier, followed him.<span class="note" id="mn24n102"><span class="details"><span class="p">[n.102] When describing these events, the three versions agree on specifying that Sāriputta took his sitting mat along when approaching the grove, <a href="../../mn/mn24.html">MN 24</a> at MN I 147,5: nisīdanaṃ ādāya, <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430b20: 以 尼師檀著於肩上, and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734b13: 以尼師檀著右肩上; cf. also above p. 20.</span></span></span></p>
+<p>Once the two monks had spent time in meditative seclusion, Sāriputta went to Puṇṇa to pose a set of questions, without revealing his identity. According to all versions, at the conclusion of their exchange Puṇṇa explicitly declared that, if he had known from the outset the identity of his interlocutor, he would not have answered in such detail.<span class="note" id="mn24n103"><span class="details"><span class="p">[n.103] <a href="../../mn/mn24.html">MN 24</a> at MN I 150,29 and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 735b3.</span></span></span> According to the Madhyama-āgama version, he would in fact not have been able to come out with even a single sentence.<span class="note" id="mn24n104"><span class="details"><span class="p">[n.104] <a href="../../parallels/ma9.html">MĀ 9</a> at T I 431c1: 不能答一句. SHT II 163bR6 reads (pra)tibhāsyataḥ, which suggests that the Sanskrit version may have had a similar statement.</span></span></span> That is, Sāriputta apparently needed to conceal his identity in order to be able to elicit a detailed explanation by Puṇṇa.</p>
+<p>The Pāli and Chinese versions agree that the set of questions asked by Sāriputta were concerned with seven stages of purification, inquiring from Puṇṇa if any of these was the aim of living the holy life under the Buddha. In each case he received a negative reply, as according to Puṇṇa’s explanation the aim of the holy life is rather Nirvāṇa.<span class="note" id="mn24n105"><span class="details"><span class="p">[n.105] <a href="../../mn/mn24.html">MN 24</a> at MN I 148,1: anupādā parinibbāna, <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430c10 reads 無餘涅槃, and <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734c10 speaks of 入涅槃.</span></span></span> Despite some differences in the sequence of their presentation, the three versions agree that Nirvāṇa cannot be identified with any of these purifications, yet at the same time these purifications are required, since without developing them it will not be possible to reach Nirvāṇa. For the sake of illustration, in all versions Puṇṇa introduced a simile. According to this simile, King Pasenadi had some urgent matter to settle at Sāketa, a town apparently over forty miles distant from Sāvatthī.<span class="note" id="mn24n106"><span class="details"><span class="p">[n.106] According to Vin I 253,10, the distance between Sāvatthī and Sāketa was six yojanas, according to Dhp-a I 387,1 seven yojanas, and according to the travel records by Făxiăn (法顯) in T 2085 at T LI 860b8 eight yojanas (on the precision of Făxiăn's measurements cf. Weller 1920). A yojana seems to correspond to the distance covered with one yoke of oxen in a day, which would indeed be about seven miles. On the measurement of the yojana in a range of different sources cf. Skilling 1998: 154-166.</span></span></span> In order to quickly cover this distance, the king used a relay of seven chariots. Similar to these seven chariots, the seven stages of purification are the means to reach the final goal.<span class="note" id="mn24n107"><span class="details"><span class="p">[n.107] <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 735a13 illustrates the same with an additional simile: “just like a man who wants to ascend to the top of a staircase with seven steps, he has to use them in proper order to arrive”, 猶如有人 欲上七重樓上, 要當以次而至 (adopting a 宋, 元, and 明 variant reading that adds 人 to 猶如有).</span></span></span></p>
+<p>Regarding these seven stages of purification, it is to some extent puzzling that in all versions Sāriputta and Puṇṇa appear to be quite familiar with a set of stages of purification that recurs in only one other Pāli discourse.<span class="note" id="mn24n108"><span class="details"><span class="p">[n.108] <a href="../../dn/dn34.html">DN 34</a> at DN III 288,16 and its parallels <a href="../../parallels/da10.html">DĀ 10</a> at T I 56a23 and T 13 at T I 238c25, where the seven stages of purification form part of a scheme of nine stages; for the relevant Sanskrit fragments of the Daśottara-sūtra cf. Schlingloff 1962a: 18; cf. also de Jong 1979a: 262 and 271. A comparative study of the seven stages of purification, with extracts from the present study, can be found in Anālayo 2005a.</span></span></span> The Madhyama-āgama version might hold a solution to this puzzle, a solution that suggests itself when undertaking a closer examination of the starting point of the discussion between Sāriputta and Puṇṇa Mantāṇiputta.</p>
+<p>According to the Pāli account of their conversation, the first question, asked by Sāriputta, was if Puṇṇa was living the holy life under the Blessed One.<span class="note" id="mn24n109"><span class="details"><span class="p">[n.109] <a href="../../mn/mn24.html">MN 24</a> at MN I 147,16: “friend, is the holy life lived under our Blessed One”, bhagavati no, āvuso, brahmacariyaṃ vussati?</span></span></span> This question seems a little beside the point, since for a Buddhist monk there would be no reason to ask another Buddhist monk if he is living the holy life under the Buddha.<span class="note" id="mn24n110"><span class="details"><span class="p">[n.110] The commentary, Ps II 155,26, explains that Sāriputta asked this question in order for the conversation to get started. This commentarial gloss gives the impression as if the commentators were also puzzled by this question.</span></span></span> The Madhyama-āgama version has the same question, with the difference that according to its presentation Sāriputta spoke consistently of the holy life being lived under the “recluse Gotama”.<span class="note" id="mn24n111"><span class="details"><span class="p">[n.111] <a href="../../parallels/ma9.html">MĀ 9</a> at T I 430b26: 沙門瞿曇. The version of this question in <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734b18 is of little help. An obvious error is that it reports Sāriputta addressing Puṇṇa by name, even though at the conclusion of their discussion he asks him for his name, as reported in all versions, which would become meaningless if he earlier already used the name. Moreover, the version of the question asked by Sāriputta differs considerably from the version he is supposed to have repeated just a little later in <a href="../../parallels/ea39.10.html">EĀ 39.10</a> at T II 734c2, when repeating all his questions and the answers received from Puṇṇa.</span></span></span> Only at the end of the Madhyama-āgama discourse, when asking for Puṇṇa’s name and about to reveal his own identity, does Sāriputta change expression, using the (for a Buddhist disciple more appropriate) term Tathāgata to refer to the Buddha.<span class="note" id="mn24n112"><span class="details"><span class="p">[n.112] <a href="../../parallels/ma9.html">MĀ 9</a> at T I 431b15: 如來.</span></span></span></p>
+<p>In the Pāli Nikāyas and the Chinese Āgamas, only those who do not belong to the Buddhist monastic or lay community employ the expression “recluse Gotama” to refer to the Buddha. In view of this usage it seems at first sight strange that a discourse would depict Sāriputta as using such an expression. The Madhyama-āgama presentation, therefore, presents the more difficult or unusual reading. It would be easier to imagine that the unusual expression “samaṇa Gotama” in Sāriputta’s mouth was changed to a more appropriate mode of address during the process of oral transmission, than to envisage a change taking place in the opposite way.</p>
+<p>The form of address used by Sāriputta in the Madhyama-āgama version receives support from the Sanskrit fragment parallel to the present discourse, which has preserved the same expression “recluse” in the context of a question on the purpose of purification.<span class="note" id="mn24n113"><span class="details"><span class="p">[n.113] SHT VI 1329 B1: [ś]uddhyartham [śra]maṇe.</span></span></span> In order to ascertain if the Madhyama-āgama version’s more unusual reading makes any sense in the present context, a closer look at the situation that would stand at the background of Sāriputta’s question is required.</p>
+<p>According to an account given in the Vinaya, the proper way of sewing up and dying robes was apparently decided only at a later stage of development of the monastic order.<span class="note" id="mn24n114"><span class="details"><span class="p">[n.114] Vin I 286,2 reports the Buddha laying down which colours are to be used to dye robes, and according to Vin I 287,12 he requested Ānanda to have robes sewn together conforming to the pattern of paddy fields (cf. also von Hinüber 2006: 7). As Ānanda became the Buddha’s personal attendant only about twenty years after the Buddha’s awakening (cf. <a href="../../tha/tha17.html#p1041">Th 1041</a>), the regulations concerning colour and cut of robes would presumably pertain to a period that is at least twenty years after the Buddha’s awakening.</span></span></span> This suggests that, during the early stages of the Buddhist monastic community, its members may not have been easily distinguishable by their outer appearance as Buddhist monks, since they would presumably have dressed in the way used in general among recluses and wanderers. This assumption finds support in the Cīvaravastu of the (Mūla-)Sarvāstivāda Vinaya, which reports that King Bimbisāra on one occasion mistook a heterodox wanderer for being a Buddhist monk. In order to avoid recurrence, according to the (Mūla-)Sarvāstivāda Vinaya King Bimbisāra approached the Buddha and requested him to lay down a stipulation concerning robes that would make it easier to distinguish Buddhist monks from other wanderers.<span class="note" id="mn24n115"><span class="details"><span class="p">[n.115] Dutt 1984b: 49,18; for references to the parallel versions cf. Frauwallner 1956: 98.</span></span></span></p>
+<p>Puṇṇa and Sāriputta appear to have both been ordained soon after the Buddha’s awakening, so that their first meeting recorded in the Rathavinīta-sutta could have taken place during the early stages of the Buddhist order.<span class="note" id="mn24n116"><span class="details"><span class="p">[n.116] On Puṇṇa’s early ordination cf. Malalasekera 1938/1998: 222. That Sāriputta’s ordination took place at an early stage of the Buddhist order suggests itself from Vin I 42,37; cf. also T 200 at T IV 255b18, which explicitly places the meeting between Sāriputta and Assaji, which led to Sāriputta’s going forth as a Buddhist monk, soon after the Buddha’s awakening, 世尊初始成佛.</span></span></span> Thus it could be imagined that, when they met, Sāriputta was not immediately recognizable as a Buddhist monk. If Sāriputta was not recognizable as a Buddhist monk, and if he wanted to avoid being asked his name, which Puṇṇa might have done if he had known his visitor to be a Buddhist monk like himself, it would make sense for Sāriputta to act in such a way as to not be recognized. Acting in such a way, he would appear to Puṇṇa just like a heterodox wanderer who had chanced by and was curious to find out more about the Buddha’s teaching.</p>
+<p>In such a situation it would only be natural for Sāriputta to use the expression “recluse Gotama”, since by using the expression “Blessed One” he would prematurely give himself away as a follower of the Buddha. That he had been successful in this respect becomes evident at the conclusion of the Madhyama-āgama version, where Puṇṇa expresses his surprise when finding out that the person he had been conversing with was a disciple of the Buddha.<span class="note" id="mn24n117"><span class="details"><span class="p">[n.117] <a href="../../parallels/ma9.html">MĀ 9</a> at T I 431b27: “Now I have been discussing with a disciple of the Blessed One and did not know it”, 我今與世尊弟子共論而不知.</span></span></span></p>
+<p>This would also explain why Sāriputta, according to the Majjhima-nikāya and Madhyama-āgama versions, continues to ask Puṇṇa if any of the seven purifications is complete Nirvāṇa without clinging. Such a question does not fit a knowledgeable Buddhist monk in conversation with another Buddhist monk. That moral conduct, for example, falls short of being the final goal of the Buddhist path should have been fairly well known even among recently ordained Buddhist monks. Yet, as a question asked by someone outside of the Buddhist order this query would make sense, since for an outsider the implications of the Buddhist conception of Nirvāṇa may not be clear, so that he might well continue asking if this Buddhist goal of complete Nirvāṇa without clinging can be understood in terms of any of the seven stages of purification.</p>
+<p>If this much is granted, an intriguing perspective emerges concerning the seven stages of purification. With Sāriputta acting in such a way that Puṇṇa was not able to recognize him as a Buddhist monk, the type of terminology used by him would also not be specific Buddhist terminology, but rather be such terms and expressions as were in common use among recluses and wanderers in ancient India. To continue acting like an interested outsider, he would have worded his questions in a way that did not compromise the role he had assumed.</p>
+<p>From this it would follow that the seven purifications might have been a list of purifications commonly discussed and aspired to among contemporaries in ancient India. That is, these seven stages of purification could have been (at least at that time) just types or stages of purification recognized in general among recluses and wanderers, instead of being a specific Buddhist doctrine.<span class="note" id="mn24n118"><span class="details"><span class="p">[n.118] Thanissaro 2002: 206 suggests that “perhaps the seven types of purity listed in this discourse were originally non-Buddhist teachings that ... the early Buddhist community ... adapted to their own purpose for showing that these seven forms of purity functioned, not as a goal of practice, but as stages along the path”.</span></span></span></p>
+<p>This would explain the dearth of material concerning these stages of purification in other discourses, which makes it so difficult to determine their precise implications. Such difficulties would only be natural if these stages of purification were not an original Buddhist scheme and therefore had not been given as much attention as other schemes and aspects of the Buddha’s teaching in the discourses.</p>
+<p>Granted this, what is specifically Buddhist about this scheme of purifications would then be the perspective taken in regard to them. Understood in this way, the central message of the Rathavinīta-sutta is not the list of individual purifications as such, but the fact that, while all of them are means to reach the goal, none of them constitutes the type of purification envisaged as the goal of the holy life: complete Nirvāṇa without clinging.<span class="note" id="mn24n119"><span class="details"><span class="p">[n.119] On the way the seven stages of purification were nevertheless adopted in the Visuddhimagga cf. Anālayo 2009i: 9-11.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

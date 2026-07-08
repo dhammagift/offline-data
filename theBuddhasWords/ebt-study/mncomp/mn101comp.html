@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 101 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 101: Devadaha-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn100comp.html#content"></a><a id="next-sutta" href="./mn102comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn101.html">MN 101</a> / <a href="../../parallels/ma19.html">MĀ 19</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Devadaha-sutta, the “discourse at Devadaha”, examines the fruitlessness of the asceticism undertaken by the Jains. This discourse has a parallel in the Madhyama-āgama.<span class="note" id="mn101n1"><span class="details"><span class="p">[n.1] The parallel is <a href="../../parallels/ma19.html">MĀ 19</a> at T I 442b-445a and agrees with <a href="../../mn/mn101.html">MN 101</a> on locating the discourse at Devadaha in the Sakyan country. While <a href="../../mn/mn101.html">MN 101</a> takes this location as its title, <a href="../../parallels/ma19.html">MĀ 19</a> has the title “discourse on the Nigaṇṭhas”, 尼乾經.</span></span></span></p>
+<p>The Devadaha-sutta and its Madhyama-āgama parallel begin by depicting the view of the Jains that one’s present experience is determined by former deeds, whose effect can be annihilated by ascetic practices. According to the Majjhima-nikāya account, the view held by the Jains was that the destruction of deeds, achieved by annihilating former deeds through asceticism and by avoiding new deeds, leads to the destruction of dukkha; the destruction of dukkha then leads to the destruction of feelings, whereby all dukkha will be overcome.<span class="note" id="mn101n2"><span class="details"><span class="p">[n.2] <a href="../../mn/mn101.html">MN 101</a> at MN II 214,10: “from the destruction of action [results] the destruction of dukkha, from the destruction of dukkha [results] the destruction of feelings, from the destruction of feelings [it results that] all dukkha will be exhausted”, kammakkhayā dukkhakkhayo, dukkhakkhayā vedanākkhayo, vedanākkhayā sabbaṃ dukkhaṃ nijjiṇṇaṃ bhavissatī ti.</span></span></span> The Madhyama-āgama account of the same view does not mention the destruction of feeling, so that its description simply indicates that the destruction of former deeds leads to the destruction of dukkha, whereby all dukkha will be transcended.<span class="note" id="mn101n3"><span class="details"><span class="p">[n.3] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 442c4: “having destroyed [former] deeds, the destruction of dukkha is attained; having attained the destruction of dukkha, the transcendence of dukkha is attained”, 諸業盡已, 則得苦盡, 得苦盡 已, 則得苦邊. To propose that with the destruction of former deeds all dukkha will be destroyed seems straightforward enough and there would perhaps be no need for additionally bringing in the destruction of feelings. Nevertheless, the presentation found in <a href="../../mn/mn101.html">MN 101</a> recurs in <a href="../../mn/mn14.html">MN 14</a> at MN I 93,8 and <a href="../../an/an3.74.html">AN 3:74</a> at AN I 221,1. Counterparts to these two Pāli discourses agree with <a href="../../parallels/ma19.html">MĀ 19</a>, in that they do not mention the destruction of feelings; cf. <a href="../../parallels/ma100.html">MĀ 100</a> at T I 587b20, <a href="../../parallels/ea41.4.html">EĀ 41.4</a> at T II 744b5, T 54 at T I 849a18, and T 55 at T I 850c7 (these four being counterparts to <a href="../../mn/mn14.html">MN 14</a>), and <a href="../../parallels/sa563.html">SĀ 563</a> at T II 147c10 (counterpart to <a href="../../an/an3.74.html">AN 3:74</a>). Thus, a reference to the destruction of feelings in the context of a description of the rationale for the ascetic practices of the Jains appears to be a trait of the Theravāda tradition. The basic principle that karmic retribution has to be expiated in order to be able to reach liberation is indeed a central tenet of Jain thought, cf., e.g., Bronkhorst 2000a: 119, Dundas 1992/2002: 97-102, Halbfass 2000: 75-85, Jain 2005: 248-259, Jaini 1979/1998: 111-127, Johnson 1995, Kalghatgi 1965, Mehta 1957: 13-30, Schubring 1962/2000: 172-175, Tatia 1951: 220-260, and von Glasenapp 1915: 19-20.</span></span></span></p>
+<p>The Devadaha-sutta and its Madhyama-āgama parallel describe in similar terms how the Buddha examined the position of the Jains. A minor difference is that, according to the Majjhima-nikāya account, the Buddha also inquired if the Jains knew what kind of evil deed they had done in the past.<span class="note" id="mn101n4"><span class="details"><span class="p">[n.4] <a href="../../mn/mn101.html">MN 101</a> at MN II 214,29: “do you know: ‘we did such and such a type of evil deed in the past’”, jānātha, evarūpaṃ vā evarūpaṃ vā pāpaṃ kammaṃ akaramhā ti (Be-MN III 2,6 and Se-MN III 2,13: pāpakammaṃ, Ce-MN III 4,4 does not have the second instance of evarūpaṃ vā)?</span></span></span></p>
+<p>The two versions illustrate the need to know how to overcome dukkha with the example of a man struck by a poisoned arrow, who on being properly treated by a physician would in due time become healthy and be able to recollect how the pain experienced during the medical treatment led to his present freedom from pain. The point of this simile appears to be that to undergo pain is reasonable as long as it is part of a verifiable cure that eventually leads to freedom from pain.</p>
+<p>According to the Majjhima-nikāya account, the Jains explained that their practice was based on their teacher’s instruction. The Madhyama-āgama discourse reports the same at a later point, after the Buddha had further examined the premises of the asceticism of the Jains.<span class="note" id="mn101n5"><span class="details"><span class="p">[n.5] Unlike <a href="../../mn/mn101.html">MN 101</a> at MN II 218,1, <a href="../../parallels/ma19.html">MĀ 19</a> at T I 443c5 does not record that the Jains claimed their teacher to be omniscient.</span></span></span></p>
+<p>In reply to the reliance of the Jains on the indications given by their teacher, according to both versions the Buddha pointed out that the following should not be taken as sufficient bases for knowledge:</p>
+<ul>
+<li>faith,</li>
+<li>liking,</li>
+<li>oral tradition,</li>
+<li>reasoning,</li>
+<li>acceptance of a view.<span class="note" id="mn101n6"><span class="details"><span class="p">[n.6] <a href="../../mn/mn101.html">MN 101</a> at MN II 218,16: saddhā, ruci, anussavo, ākāraparivitakko, diṭṭhinijjhānakhanti (Be-MN III 5,15, Ce-MN III 8,29, and Se-MN III 7,14: diṭṭhinijjhānakkhanti), <a href="../../parallels/ma19.html">MĀ 19</a> at T I 443c12: 信, 樂, 聞, 念, 見善觀.</span></span></span></li>
+</ul>
+<p>The two parallel versions disclose the conditional relationship between the intensity of the pain experienced by the Jains and the intensity of their striving, concluding that the Jains were themselves responsible for the pain they experienced. According to the report given in both versions, the Jains had to admit that it was not possible to achieve the following:</p>
+<ul>
+<li>change the time when the fruit of one’s former deeds ripen,</li>
+<li>change karmic retribution to be experienced as either pleasant or unpleasant into its opposite,</li>
+<li>change a deed about to ripen, or not about to ripen, into its opposite.</li>
+</ul>
+<p>The Devadaha-sutta stands alone in also examining the following impossibilities:</p>
+<ul>
+<li>change the intensity with which a deed will be experienced,</li>
+<li>avoid the fruition of a deed completely (see table 11.1).<span class="note" id="mn101n7"><span class="details"><span class="p">[n.7] <a href="../../mn/mn101.html">MN 101</a> at MN II 221,1 contrasts bahuvedanīya with appavedanīya and vedanīya (Be-MN III 7,21: savedanīya) with avedanīya.</span></span></span></li>
+</ul>
+<p>The present passage thus depicts Jain ascetics as accepting a wholesale refutation of their doctrine by the Buddha, since it is precisely the idea that karmic retribution can be influenced that underlies the undertaking of asceticism in the Jain tradition.</p>
+<table class="comparative-table">
+<caption>Table 11.1: Modes of Changing Karmic Retribution in <a href="../../mn/mn101.html">MN 101</a> and <a href="../../parallels/ma19.html">MĀ 19</a></caption>
+<tr><th><a href="../../mn/mn101.html">MN 101</a></th><th><a href="../../parallels/ma19.html">MĀ 19</a></th></tr>
+<tr><td>shift present retribution to later life (1)</td><td>convert pleasant fruits to painful (→ 3)</td></tr>
+<tr><td>shift later life retribution to present (2)</td><td>convert painful fruits to pleasant (→ 4)</td></tr>
+<tr><td>convert pleasant fruits to painful (3)</td><td>shift present retribution to later life (→ 1)</td></tr>
+<tr><td>convert painful fruits to pleasant (4)</td><td>shift later life retribution to present (→ 2)</td></tr>
+<tr><td>change mature to immature (5)</td><td>change immature to mature (→ 6)</td></tr>
+<tr><td>change immature to mature (6)</td><td>change mature to immature (→ 5)</td></tr>
+<tr><td>alter much retribution to become little (7)</td><td></td></tr>
+<tr><td>alter little retribution to become much (8)</td><td></td></tr>
+<tr><td>exchange retribution for no retribution (9)</td><td></td></tr>
+<tr><td>exchange no retribution for retribution (10)</td><td>(≠ 7-10)</td></tr>
+</table>
+<p>With some variations in the sequence of their presentation, the Devadaha-sutta and its Madhyama-āgama parallel list five grounds for criticizing the Jains (see table 11.2).<span class="note" id="mn101n8"><span class="details"><span class="p">[n.8] The differences between the two versions in this respect have already been surveyed by Kalupahana 1975: 34-35.</span></span></span> According to these five grounds, the experience of pleasure and pain could be attributed to:</p>
+<ul>
+<li>one’s former deeds,</li>
+<li>a creator god,</li>
+<li>the company one kept,</li>
+<li>the type of one’s life-form,</li>
+<li>one’s present practice.<span class="note" id="mn101n9"><span class="details"><span class="p">[n.9] In relation to the last of these five, while <a href="../../mn/mn101.html">MN 101</a> at MN II 222,16 speaks of the “present exertion” of the Jains, diṭṭhadhammupakkama (Be-MN III 8,24, Ce-MN III 14,30, and Se-MN III 12,16: diṭṭhadhammūpakkama), the corresponding fourth ground for censure in <a href="../../parallels/ma19.html">MĀ 19</a> at T I 443c28 refers to their “view”, 見. Although the formulation differs, the implications appear to be the same, as the pain experienced by the Jains is due to their present “exertion”, which is at the same time the outcome of their “view” that in this way dukkha will be eradicated, hence I consider both versions to intend one’s present “practice”.</span></span></span></li>
+</ul>
+<p>In all these cases the Jains are to be blamed, as their present painful experiences will consequently have to be attributed to their former evil deeds, to an evil creator god, to an evil company they kept, to an evil type of life-form, or to an evil type of practice.<span class="note" id="mn101n10"><span class="details"><span class="p">[n.10] The assumption that the experience of pleasure and pain is due to one’s former deeds, to a creator god, or to chance comes up again for discussion in <a href="../../an/an3.61.html">AN 3:61</a> at AN I 173,16 and its parallel <a href="../../parallels/ma13.html">MĀ 13</a> at T I 435a28. The rejection in <a href="../../mn/mn101.html">MN 101</a> and <a href="../../parallels/ma19.html">MĀ 19</a> of the karmic fatalism of the Jains reflects the character of the early Buddhist conception of causality, which is not fatalist or pre-deterministic, a characteristic highlighted by several scholars, cf., e.g., de Silva 1991: 273, Federman 2010, Fujita 1982: 151, Gómez 1975: 82, Halbfass 2000: 102, Harvey 2007: 59, Hershock 2005: 6-7, Jayatilleke 1968, id. 1973: 10, Jayawardhana 1988: 408, Ñāṇaponika 1975: 91, Nelson 2005: 4, Pāsādika 2007: 319, Premasiri 2009: 69, Siderits 1987: 153, and Story 1975: 74. The reference to an evil creator god in the present passage exemplifies a tendency in the early discourses, noted by Steinkellner 2006: 24, where “the idea of a creator-god was mainly mocked and ridiculed”; cf. also Bohn 1921: 25-32 for the present and other instances of mockery or criticism aimed at the Jains in particular. On the different premises on which the Jain tradition and early Buddhism based their conceptions of karma and rebirth cf. also de Silva 1990b: 185.</span></span></span></p>
+<p>While the Madhyama-āgama version presents this treatment as a five-fold criticism,<span class="note" id="mn101n11"><span class="details"><span class="p">[n.11] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 443c18: “five rebukes”, 五詰責.</span></span></span> the Majjhima-nikāya version reckons the same to be a criticism in ten points.<span class="note" id="mn101n12"><span class="details"><span class="p">[n.12] <a href="../../mn/mn101.html">MN 101</a> at MN II 222,2: “ten legitimate theses”, dasa sahadhammikā vādānuvādā.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 11.2: Grounds for Censure in <a href="../../mn/mn101.html">MN 101</a> and <a href="../../parallels/ma19.html">MĀ 19</a></caption>
+<tr><th><a href="../../mn/mn101.html">MN 101</a></th><th><a href="../../parallels/ma19.html">MĀ 19</a></th></tr>
+<tr><td>former deeds (1)</td><td>former deeds (→ 1)</td></tr>
+<tr><td>creator god (2)</td><td>company (→ 3)</td></tr>
+<tr><td>company (3)</td><td>type of life-form (→ 4)</td></tr>
+<tr><td>type of life-form (4)</td><td>present practice (→ 5)</td></tr>
+<tr><td>present practice (5)</td><td>creator god (→ 2)</td></tr>
+</table>
+<p>Yet, the actual criticism in both versions covers only five points. After explaining these five one by one, the Majjhima-nikāya version recapitulates them and indicates that even in the absence of each of these points the Jains are to be censured.<span class="note" id="mn101n13"><span class="details"><span class="p">[n.13] <a href="../../mn/mn101.html">MN 101</a> at MN II 222,21.</span></span></span> This recapitulation does not yield five additional reasons for criticism, but only a sixth, namely that the Jains are to be censured even in the absence of the five reasons given earlier. Here the Madhyama-āgama version seems to offer a more coherent presentation, as it announces and then gives five reasons for censure, while the Majjhima-nikāya version announces ten but then does not really provide ten reasons.</p>
+<p>According to the Devadaha-sutta, after criticizing the fruitless striving of the Jains, the Buddha explained how striving can be undertaken so as to be fruitful. Fruitful striving, according to the Majjhima-nikāya version, is to exert oneself on occasions that require exertion, but to exercise equanimity on occasions that require equanimity, and not to give up pleasure that is in accordance with the Dharma.</p>
+<p>The Madhyama-āgama discourse instead highlights that the Buddha’s personal knowledge cannot be shaken by anyone in the world.<span class="note" id="mn101n14"><span class="details"><span class="p">[n.14] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444a8. By providing a contrast between the personal knowledge of the Buddha and the lack of personal knowledge of the Jains in regard to the premises on which their asceticism was based, <a href="../../parallels/ma19.html">MĀ 19</a> links the present exposition to the earlier argument raised against the self-mortifications of the Jains.</span></span></span> It then indicates that the way to avoid future dukkha is to give up unwholesome bodily, verbal, and mental deeds, and to undertake their wholesome counterparts. Like the Majjhima-nikāya version, the Madhyama-āgama discourse enjoins not to give up the pleasure that accords with the Dharma. While the Majjhima-nikāya version recommends exertion or equanimity, depending on what the situation requires, the Madhyama-āgama version instead enjoins developing (wholesome) desire or equanimity,<span class="note" id="mn101n15"><span class="details"><span class="p">[n.15] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444a16 contrasts 行欲 with 行捨欲. The character 欲 stands for “desire” and usually has negative connotations. In the present context, however, 欲 would rather seem to stand for a wholesome type of desire. An example for 欲 in a wholesome sense can be found, e.g., in Xuánzàng’s (玄奘) rendering of the “desire for wholesome things”, kuśaladharmacchandaḥ (Abhidh-k 5:16 in Pradhan 1967: 289,1) as 善法欲, cf. T 1558 at T XXIX 102b8, a rendering similarly employed in T 1579 at T XXX 397a7, the Chinese counterpart to an occurrence of kuśalo dharmacchandaḥ in the Śrāvakabhūmi in Shukla 1973: 8,15 or ŚSG 1998: 16,3. On the assumption that in the present context 欲 similarly stands for a wholesome type of desire, the implication of the proposition in <a href="../../parallels/ma19.html">MĀ 19</a> could be to contrast “developing desire [for wholesome things]”, 行欲, with “developing equanimity [in regard] to that desire [for wholesome things]”, 行捨欲.</span></span></span> a choice that similarly depends on whichever of these two modes of practice will lead to the eradication of dukkha.</p>
+<p>To illustrate fruitful exertion followed by equanimity, the Majjhima-nikāya discourse takes up the example of a man who suffers on seeing the woman he loves conversing and laughing with another man. Once this man overcomes his affection for the woman, her behaviour will no longer affect him. The Madhyama-āgama version further develops this image by suggesting that the woman even spent the night with the other man, something that would indeed further aggravate the suffering of the man who is in love with her.<span class="note" id="mn101n16"><span class="details"><span class="p">[n.16] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444b4. <a href="../../parallels/ma19.html">MĀ 19</a> differs from <a href="../../mn/mn101.html">MN 101</a> in as much as it has this simile after the simile of the straightening of the arrow, while <a href="../../mn/mn101.html">MN 101</a> follows the opposite sequence.</span></span></span></p>
+<p>The Madhyama-āgama version agrees with the Majjhima-nikāya discourse on describing how a monk strives in such a way as to diminish what is unwholesome and increase what is wholesome. Once this has been achieved, he will no longer strive, as his goal has been accomplished. The two versions illustrate this with the example of a fletcher who no longer works on an arrow that has already been straightened.</p>
+<p>The Majjhima-nikāya version next comes out with a full account of the gradual path, from the arising of a Tathāgata to the attainment of the three higher knowledges. The Madhyama-āgama version does not have such a full account of the gradual path. Instead, it only depicts how a monk approaches a secluded place, overcomes the five hindrances, develops the four jhānas, and reaches the destruction of the influxes through knowledge of the four noble truths.<span class="note" id="mn101n17"><span class="details"><span class="p">[n.17] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444c8. Regarding the Pāli version’s detailed coverage of the gradual path, Gombrich 1994: 1087 considers this section of <a href="../../mn/mn101.html">MN 101</a> to be “an irrelevant insertion of a stock passage”.</span></span></span></p>
+<p>The two versions agree that, if the experience of pleasure and pain were to be attributed to one’s former deeds, to a creator god, to the company one kept, to the type of one’s life-form, or to one’s present practice, in all cases the Tathāgata should be praised because of his present experience of influx-free happiness.<span class="note" id="mn101n18"><span class="details"><span class="p">[n.18] <a href="../../mn/mn101.html">MN 101</a> at MN II 227,8: anāsavā sukhā vedanā and <a href="../../parallels/ma19.html">MĀ 19</a> at T I 444c17: “noble influx-free happiness ... having reached the happiness of awakening”, 聖無漏樂 ... 得樂覺. As earlier, <a href="../../mn/mn101.html">MN 101</a> counts the bases for praise as ten, while <a href="../../parallels/ma19.html">MĀ 19</a> counts them as five.</span></span></span></p>
+<p>While the Majjhima-nikāya discourse concludes at this point, according to the Madhyama-āgama account the Buddha continued by taking up the five hindrances as the five conditions for the arising of dukkha and their eradication as the condition for freedom from dukkha, followed by recommending the practice of the noble eightfold path as the means to reach supreme freedom from affliction.<span class="note" id="mn101n19"><span class="details"><span class="p">[n.19] <a href="../../parallels/ma19.html">MĀ 19</a> at T I 445a5.</span></span></span></p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>

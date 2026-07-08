@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="lzh">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon"/>
+<title>EĀ 39.10 - The Buddha's Words</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/w3.css" rel="stylesheet"/>
+<link href="../css/css.css" rel="stylesheet"/>
+<link href="../css/menu.css" rel="stylesheet"/>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/agama-controlpanel.js"></script>
+<script src="../js/mousetrap.min.js"></script>
+</head>
+<body class="container">
+<div class="header-background">
+<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<a href="../home/index.html" id="bwlogo"><img alt="The Buddha's Words logo" class="w3-image" src="../images/headerlogo.png"/></a>
+	<div class="w3-bar bwcontainer">
+		<div id="searchlinks">
+		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+		</div><!-- End Searchlinks div -->
+		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+	</div> <!-- End w3-bar bwcontainer -->
+	</div> <!-- End w3-header -->
+</div> <!-- End header-background -->
+<!-- Top menu -->
+<div class="w3-main bwcontainer2">
+	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+	<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+		<ul id="css3menu0">
+			<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+			<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+			<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+				<ul>
+					<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+					<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+					<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+					<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+					<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+				</ul>
+			<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+				<ul>
+					<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+					<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+					<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+					<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+					<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+					<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+					<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+					<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+					<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+					<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+					<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+				</ul>
+			<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+				<ul>
+					<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+					<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+					<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+					<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+					<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+					<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+					<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+				</ul>
+			<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+				<ul>
+					<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+					<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+					<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+					<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="theme-btns">
+		<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+		<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+		<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+	</div>
+	<div class="theme-search-row">
+		<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+		<span id="sutta-search-error"></span>
+	</div>
+</div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a>
+	<div class="w3-bar-block w3-white">
+		<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+		<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+		<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+		<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+		<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+		<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+		<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+	</div>
+</nav>
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div class="parallel-page" id="content">
+<h2>EĀ 39.10</h2>
+<div class="mirror hgroup">
+<p class="division"><span class="mirror-left latin">Ekottarāgama</span> <span class="mirror-right">增壹阿含经</span></p>
+<h1 class="mirror-row">
+<span class="mirror-left latin">39.10</span> <span class="mirror-right">（一〇）七车</span>
+</h1>
+</div>
+<p class="parallel-links">Parallel to: <a href="../mn/mn24.html">MN 24</a> / <a href="../parallels/ma9.html">MĀ 9</a></p>
+<table class="pairs agama-pairs">
+<tbody>
+<tr><td lang="en" class="agama-eng"><p>Thus have I heard:</p></td><td lang="lzh" class="agama-chi"><p>闻如是：</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At one time, the Buddha was at the Karanda Bamboo Grove in the city of Rajagriha, together with a great assembly of five hundred bhikshus.</p></td><td lang="lzh" class="agama-chi"><p>一时，佛在罗阅城迦兰陀竹园所，与大比丘众五百人俱。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One, having spent the ninety-day summer retreat in the city of Rajagriha, gradually traveled through the human realm and arrived at Jetavana Anāthapiṇḍada-ārāma in Śrāvastī. At that time, many bhikṣus were also scattered throughout the human realm and came to where the World-Honored One was. Upon arrival, they bowed their heads at his feet and sat to one side.</p></td><td lang="lzh" class="agama-chi"><p>满愿子亦将五百比丘游本生处。尔时，世尊于罗阅城九十日夏坐已，渐渐在人间游化，来至舍卫城中祇树给孤独园。尔时，众多比丘各散在人间，亦来至世尊所。到已，头面礼足，在一面坐。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One asked the bhikṣus, &quot;Where did you spend the summer retreat?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊问诸比丘：「汝等为在何处夏坐？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The bhikṣus replied, &quot;We spent the summer retreat in our hometowns.&quot;</p></td><td lang="lzh" class="agama-chi"><p>诸比丘对曰：「在本所生处而受夏坐。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>The World-Honored One said, &quot;Among the bhikṣus in your hometowns, who can practice araṇya themselves and also praise araṇya? Who can practice begging for alms themselves and also teach others to beg for alms, not missing the right time? Who can wear patched robes themselves and also teach others to wear patched robes? Who can practice contentment themselves and also praise the practice of contentment? Who can practice few desires themselves and also praise the practice of few desires? Who can enjoy solitary places themselves and also teach others to stay in solitary places? Who can guard their own practice and also teach others to guard their practice? Who can have pure precepts themselves and also teach others to cultivate precepts? Who can accomplish samādhi themselves and also teach others to practice samādhi? Who can accomplish wisdom themselves and also teach others to practice wisdom? Who can accomplish liberation themselves and also teach others to practice liberation? Who can accomplish the wisdom of liberation and insight themselves and also teach others to practice this Dharma? Who can teach and transform without being satisfied, and expound the Dharma without being weary?&quot;</p></td><td lang="lzh" class="agama-chi"><p>世尊告曰：「汝等所生之处比丘之中，能自行阿练若，复能称誉阿练若，自行乞食，复教他人使行乞食，不失时宜，自著补纳衣，复教他人使著补纳衣，自修知足，亦复叹誉知足之行，自行少欲，亦复叹说少欲之行，自乐闲静之处，复教他人在闲静之处，自守其行，复教他人使守其行，己身戒具清净，复教他人使修其戒，己身三昧成就，复教他人使行三昧，己身智慧成就，复教他人使行智慧，己身解脱成就，复教他人使行解脱，己身解脱见慧成就，复教他人使行此法，身能教化不有厌足，说法无懈倦。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the bhikṣus said to the World-Honored One, &quot;Bhikṣu Pūrṇa is able to teach and transform among these bhikṣus. He himself practices araṇya, and also praises the practice of araṇya. He himself wears patched robes, has few desires and knows contentment, is diligent and courageous, begs for alms, enjoys solitary places, and has accomplished precepts, samādhi, wisdom, liberation, and the wisdom of liberation and insight. He also teaches others to practice this Dharma. He himself can teach and transform, and expounds the Dharma without being weary.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，诸比丘白世尊言：「比丘满愿子于此诸比丘中，堪任教化，己身修阿练若行，亦复叹誉阿练若行，己身著补纳衣，少欲知足，精进勇猛，乞食，乐闲静之处，戒、三昧、智慧、解脱、解脱见慧成就，复教他人使行此法，自能教化，说法无厌足。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the World-Honored One expounded the subtle Dharma to the bhikṣus. When the bhikṣus heard the Buddha&#x27;s teachings, they paused for a moment, then rose from their seats, circumambulated the Buddha three times, and then departed.</p></td><td lang="lzh" class="agama-chi"><p>尔时，世尊与诸比丘说微妙法。是时，诸比丘闻佛说法已，小停左右，便从坐起，遶佛三匝，便退而去。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra was not far from the World-Honored One, sitting cross-legged, with body and mind upright, focusing his thoughts in front of him. At that time, Śāriputra thought: &quot;Now Pūrṇa has obtained great benefits. Because the bhikṣus who practice the Dharma praise his virtues, and the World-Honored One also approves of his words and does not go against them. When will I be able to meet and discuss with him?&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，舍利弗去世尊不远，结跏趺坐，正身正意，系念在前。尔时，舍利弗便作是念：「今满愿子快得善利。所以然者，诸梵行比丘叹誉其德，然复世尊称可其语，亦不逆之。我当何日与彼人得共相见，与其谈论？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Pūrṇa, having completed his teaching in his birthplace, gradually traveled through the human realm to where the World-Honored One was. He bowed his head at the Buddha&#x27;s feet and sat to one side. At that time, the World-Honored One gradually taught him the Dharma. Having heard the teaching, Pūrṇa rose from his seat, bowed his head at the Buddha&#x27;s feet, and then departed. Carrying his sitting mat on his right shoulder, he went to the Day and Night Grove.</p></td><td lang="lzh" class="agama-chi"><p>是时，满愿子于本生处，教化周讫，渐渐人间教化，来至世尊所，头面礼足，在一面坐。尔时，世尊渐与说法。是时，满愿子闻说法已，即从坐起，头面礼足，便退而去。以尼师檀著右肩上，往诣昼暗园中。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, a bhikṣu saw from afar that Pūrṇa was carrying his sitting mat on his right shoulder and going to the grove. Having seen this, he went to Śāriputra and said, &quot;The World-Honored One always praises Pūrṇa. He has just come to where the Tathāgata is, heard the Dharma from the Buddha, and is now going to the grove. Venerable One, you should know the time.&quot;</p></td><td lang="lzh" class="agama-chi"><p>尔时，有一比丘，遥见满愿子以尼师檀著右肩上，至彼园中，见已，即往至舍利弗所，白舍利弗言：「世尊常所叹满愿子方至如来所，从佛闻法，今诣园中，尊者宜知是时。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra heard the bhikṣu&#x27;s words, rose from his seat, carried his sitting mat on his right shoulder, and went to the grove.</p></td><td lang="lzh" class="agama-chi"><p>是时，舍利弗闻比丘语，即从坐起，以尼师檀著右肩上，往至彼园中。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Pūrṇa was sitting cross-legged under a tree, and Śāriputra was also sitting upright in concentration under a tree. At that time, Śāriputra rose from his seat and went to where Pūrṇa was. Having arrived, they greeted each other and sat to one side. At that time, Śāriputra asked Pūrṇa, &quot;How is it, Pūrṇa? Is it because of the World-Honored One that one can practice the holy life as a disciple?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，满愿子在一树下结跏趺坐，舍利弗亦复在一树下端坐思惟。是时，舍利弗便从坐起，往至满愿子所。到已，共相问讯，在一面坐。尔时，舍利弗问满愿子曰：「云何，满愿子。为由世尊得修梵行为弟子乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;Yes, yes.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「如是，如是。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra further asked, &quot;Is it also because of the World-Honored One that one can practice pure precepts?&quot;</p></td><td lang="lzh" class="agama-chi"><p>时，舍利弗复问曰：「复因世尊得修清净戒乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa said, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子言：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Is it because the mind is pure towards the Tathāgata that one practices the holy life?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「为由心清净于如来所，而修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Is it because one sees purity towards the Tathāgata that one can practice the holy life?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「为见清净于如来所，得修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;How can one practice the holy life without doubt?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「云何为无犹豫，得修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Is it by means of pure conduct that one can practice the holy life?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗曰：「为由行迹清净，得修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;How can one practice the holy life by cultivating purity of wisdom within the path?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「云何于道之中，智修清净，得修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;How can one practice the holy life by cultivating purity of knowledge and vision?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「云何知见清净，得修梵行乎？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;No.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「非也。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;What I asked is whether one can practice the holy life in the Tathāgata. You replied, &#x27;Yes.&#x27; I then asked whether one can practice the holy life by cultivating purity of wisdom and mind, and purity of knowledge and vision of the path. You replied, &#x27;No.&#x27; How can one now practice the holy life in the Tathāgata?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「我今所问，于如来所，得修梵行乎？汝复报吾言：『如是。』吾复问，智慧、心清净，道知见清净，得修梵行耶？汝复言：『非也。』汝今云何于如来所，得修梵行耶？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;The meaning of purity of precepts is to enable the mind to be pure. The meaning of purity of mind is to enable views to be pure. The meaning of purity of views is to enable the absence of doubt to be pure. The meaning of purity of the absence of doubt is to enable conduct to be pure. The meaning of purity of conduct is to enable the path to be pure. The meaning of purity of the path is to enable knowledge and vision to be pure. The meaning of purity of knowledge and vision is to enable the meaning of entering nirvāṇa. This is called practicing the holy life in the Tathāgata.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「戒清净义者，能使心清净，心清净义者，能使见清净，见清净义者，能使无犹豫清净，无犹豫清净义者，能使行迹清净，行迹清净义者，能使道清净，道清净义者，能使知见清净，知见清净义者，能使入涅槃义，是谓于如来所得修梵行。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;What is the meaning of what you have just said?&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「汝今所说义，何所趣向？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa said, &quot;I will now draw an analogy to explain this meaning. The wise understand this meaning through analogies. It is like King Prasenajit of today, who traveled from Śrāvastī to the country of Vṛji. Between the two countries, he arranged seven carriages. At that time, King Prasenajit left the city and first rode in one carriage. When he reached the second carriage, he rode in the second carriage and abandoned the first carriage. Traveling a little further, he rode in the third carriage and abandoned the second carriage. Traveling a little further, he rode in the fourth carriage and abandoned the third carriage. Traveling a little further, he rode in the fifth carriage and abandoned the fourth carriage. Traveling further, he rode in the sixth carriage and abandoned the fifth carriage. Traveling further, he rode in the seventh carriage and abandoned the sixth carriage, entering the country of Vṛji. At that time, King Prasenajit arrived at the palace. If someone asked, &#x27;Which carriage did the king ride in today to come to this palace?&#x27; what would the king say?&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子言：「我今当引譬喻解此义，智者以譬喻解此义，智者自寤。犹如今日波斯匿王，从舍卫城至婆祇国，两国中间布七乘车。是时，波斯匿王出城先乘一车，至第二车，即乘第二车，复舍第一车，小复前行，乘第三车而舍第二车，小复前行，乘第四车而舍第三车，小复前行，乘第五车而舍第四车，又复前行，乘第六车而舍第五车，又复前行，乘第七车而舍第六车，入婆祇国。是时，波斯匿王以至宫中。设有人问：『大王今日为乘何等车来至此宫？』彼王欲何报。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied, &quot;If someone were to ask, one should answer like this: &#x27;I left Śrāvastī and first rode in the first carriage to the second carriage. I then abandoned the second carriage and rode in the third carriage. I then abandoned the third carriage and rode in the fourth carriage. I then abandoned the fourth carriage and rode in the fifth carriage. I then abandoned the fifth carriage and rode in the sixth carriage. I then abandoned the sixth carriage and rode in the seventh carriage, arriving in the country of Vṛji.&#x27; The reason is that all the previous carriages led to the second carriage, and by relying on each other, one arrived in that country. If someone were to ask, one should answer like this.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗报言：「设当有人问者，当如是报曰：『吾出舍卫城，先乘第一车至第二车，复舍第二车乘第三车，复舍第三车乘第四车，复舍第四车乘第五车，复舍第五车乘第六车，复舍第六车乘第七车，至婆祇国。』所以然者，皆由前车至第二车，展转相因，得至彼国。设有人问者，应当作是报之。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa said, &quot;The meaning of pure precepts is also like this. Because of the purity of the mind, one attains the purity of seeing. Because of the purity of seeing, one attains the purity of reaching the elimination of doubt. Because of the meaning of being without doubt, one attains the purity of the path of practice. Because of the meaning of the purity of the path of practice, one attains the purity of the path. Because of the purity of the path, one attains the purity of knowledge and vision. Because of the purity of knowledge and vision, one attains the meaning of nirvāṇa. One cultivates the holy life under the Tathāgata. The reason is that the meaning of pure precepts is the appearance of accepting and entering. However, the Tathāgata teaches to eliminate accepting and entering. The meaning of the purity of the mind is also the appearance of accepting and entering. However, the Tathāgata teaches to eliminate accepting and entering. Up to the meaning of knowledge and vision is also accepting and entering. The Tathāgata teaches to eliminate accepting and entering. Up to nirvāṇa. One cultivates the holy life under the Tathāgata. If the meaning of pure precepts is to cultivate the holy life under the Tathāgata, then ordinary people should also attain nirvāṇa. The reason is that ordinary people also have this Dharma of precepts. What the World-Honored One says is to gradually attain enlightenment and reach the realm of nirvāṇa, not just the purity of precepts, to attain nirvāṇa. It is like wanting to ascend to the top of a seven-storied tower, one must gradually reach it. The meaning of pure precepts is also like this. Gradually reaching the mind, by reaching the mind, one reaches seeing. By reaching seeing, one reaches the elimination of doubt. By reaching the purity of the elimination of doubt, one reaches the path of practice. By reaching the purity of the path of practice, one reaches the path. By reaching the purity of the path, one reaches knowledge and vision. By reaching the purity of knowledge and vision, one reaches nirvāṇa.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「戒清净义，亦复如是。由心清净，得见清净，由见清净，得至除犹豫清净，由无犹豫义，得至行迹清净，由行迹清净义，得至道清净，由道清净义，得至知见清净，由知见清净义，得至涅槃义，于如来所得修梵行。所以然者，戒清净义者，是受入之貌，然如来说使除受入，心清净义亦是受入之貌，然如来说除受入，乃至知见之义亦是受入，如来说除受入，乃至涅槃。如来所得修梵行。若当戒清净，于如来所得修梵行者，凡夫之人亦当取灭度。所以然者，凡夫之人亦有此戒法，世尊所说者，以次成道，得至涅槃界，非独戒清净，得至灭度。犹如有欲上七重楼上，要当以次而至。戒清净义，亦复如是。渐渐至心，由心至见，由见至无犹豫，由无犹豫净至于行迹，由净行迹得至于道，由于净道得至知见，由净知见得至涅槃。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, Śāriputra praised, &quot;Excellent! Excellent! This meaning is well spoken. What is your name now? How are you addressed by the bhikṣus who practice the holy life?&quot;</p></td><td lang="lzh" class="agama-chi"><p>是时，舍利弗即称：「善哉！善哉！快说此义，汝今为名何等？诸比丘梵行之人，称汝何等号？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa said, &quot;My name is Pūrṇa, and my mother&#x27;s surname is Mitanī.&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子言：「我今名为满愿子，母姓弥多那尼。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra said, &quot;Excellent! Excellent! Pūrṇa! In the holy Dharma, there is truly no equal. Embracing the ambrosia, spreading it endlessly. The profound meaning I asked about now, you have fully explained. Even if the holy ones were to carry it on their heads throughout the world, they still could not repay the kindness. Those who come to pay respects and ask questions have quickly gained good benefits. I too have gained good benefits now, receiving your teachings.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗言：「善哉！善哉！满愿子！贤圣法中实无等伦，怀抱甘露，演布无穷，我今所问甚深之义，汝尽演说。设当诸梵行人以首戴行世间，犹不能得报其恩。其有来亲近问讯者，彼人快得善利，我今亦得其善利，承受其教。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Pūrṇa replied, &quot;Excellent! Excellent! As you say. What is your name now? What are the bhikṣus called?&quot;</p></td><td lang="lzh" class="agama-chi"><p>满愿子报曰：「善哉！善哉！如汝所言。汝今为名何等？诸比丘为何等号？」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>Śāriputra replied, &quot;My name is Upatiṣya, my mother is called Śāri, and the bhikṣus call me Śāriputra.&quot; Pūrṇa said, &quot;I now discuss with the great person. I did not know before that the great Dharma master had come here. If I had known that Venerable Śāriputra had come here, I would not have been able to answer your questions. However, you asked about this profound meaning and I immediately explained it. Excellent! Śāriputra! You are the foremost among the Buddha&#x27;s disciples. You always delight in the Dharma taste of ambrosia. If the holy ones were to carry Venerable Śāriputra on their heads throughout the world for a year, they still could not repay this brief kindness. Those beings who come to pay respects and approach Venerable Śāriputra have quickly gained good benefits. We too have quickly gained good benefits.&quot;</p></td><td lang="lzh" class="agama-chi"><p>舍利弗报曰：「我名忧波提舍，母名舍利，诸比丘号吾为舍利弗。」满愿子言：「我今与大人共论，先亦不知法之大主来至此间，设当知尊者舍利弗来至此者，亦无此辩共相酬答，然尊问此甚深之义，寻时发遣。善哉！舍利弗！佛弟子中最为上首，恒以甘露法味而自娱乐，设当诸梵行人，以首戴尊者舍利弗行世间，从岁至岁，犹不能报斯须之恩。其有众生来问讯尊者、亲近者，彼人快得善利，我等亦快得善利。」</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the two sages discussed in that garden.</p></td><td lang="lzh" class="agama-chi"><p>尔时，二贤在彼园共如是论议。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><p>At that time, the two heard what was said and joyfully accepted it.</p></td><td lang="lzh" class="agama-chi"><p>是时，二人各闻所说，欢喜奉行。</p></td></tr>
+<tr><td lang="en" class="agama-eng"><blockquote class="gatha"><p>The Dharma of equality, the ferry, the water, and the city wall<br/>the analogy of consciousness, the two wheels, the honey, and the seven chariots.</p></blockquote></td><td lang="lzh" class="agama-chi"><blockquote class="gatha"><p>等法及昼度　　水及城郭喻识、均头、二轮　　波蜜及七车</p></blockquote></td></tr>
+</tbody>
+</table>
+<p class="parallel-note">Translated from Chinese using <a href="../home/mitra.html">Gemma-2-Mitra (Buddhist-NLP)</a>.</p>
+<p class="parallel-note">This is the classical Chinese root text of Ekottarāgama, a parallel to the Pali sutta(s) listed above. Source: <a href="http://tripitaka.cbeta.org/" rel="noopener" target="_blank">CBETA</a> (Taishō edition).</p>
+</div>
+</div>
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2">
+<footer>
+<div class="bottomlinks">
+	<a href="../home/mitra.html"><span class="w3-bar-item">Gemma-2-Mitra</span></a>
+	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+</div>
+</footer>
+</div>
+<script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+			// Apply active class on load
+			document.addEventListener("DOMContentLoaded", function() {
+				var activeBtn = document.querySelector(".theme-btn-" + savedTheme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			});
+</script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
+<script src="../js/sutta-search.js"></script>
+<script src="../js/agama-en-index.js"></script>
+<script src="../js/agama-footer.js"></script>
+</body>
+</html>

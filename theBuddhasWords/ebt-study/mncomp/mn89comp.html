@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+ 	<title>MN 89 — Comparative Study</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../../css/w3.css">
+ 	<link rel="stylesheet" href="../../css/css.css">
+ 	<link rel="stylesheet" href="../../css/menu.css">
+ 	<script src="../../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../../js/controlpanel.js"></script>
+ 	<script src="../../js/mousetrap.min.js"></script>
+ 
+<style>
+/* === Anālayo Comparative Study pages === */
+.w3-main.bwcontainer4 { max-width: 1500px !important; }
+@media (max-width: 992px){ .w3-main.bwcontainer4 { max-width: 100% !important; } }
+#content .comp-body { line-height: 1.3; font-size: 110%; position: relative; }
+#content .comp-body p { margin: 0 0 0.8em 0; }
+#content .comp-body p:not(.table-caption) { text-indent: 1.5em; }
+#content .comp-body ul { margin: 0.3em 0 0.9em 1.5em; }
+#content .comp-body li { margin: 0.2em 0; }
+#content p.read-links { margin: 0.4em 0 1.1em 0; }
+#content p.read-links a { margin: 0 0.15em; }
+#content #metaarea { text-align: center; }
+#content .comp-body .note .details { text-indent: 0; }
+#controlpanel { display: none; }
+table.comparative-table { border-collapse: collapse; margin: 1.2em auto; width: 100%; }
+table.comparative-table caption { text-align: center; font-style: italic; font-weight: bold; margin-bottom: 8px; }
+table.comparative-table th, table.comparative-table td {
+  border: 1px solid #9a8c78; padding: 6px 12px; vertical-align: top;
+  font-size: 1em; line-height: 1.6; text-align: center;
+}
+table.comparative-table th { font-weight: bold; }
+#content .comp-body .note .details {
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+</style> <script>
+			var app = document.getElementsByTagName("BODY")[0];
+			var savedTheme = localStorage.lightMode || "light";
+			app.setAttribute("light-mode", savedTheme);
+ </script>  
+</head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<a href="../../home/index.html" id="bwlogo"><img src="../../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../../home/help.html"><img src="../../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../../home/index.html" class="w3-hide-small">Home</a></li>
+			<li class="topmenu" id="dn"><a href="../../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+		<div class="theme-btns">
+			<button class="theme-btn theme-btn-light" onclick="set_theme('light')" title="Light mode">Light</button>
+			<button class="theme-btn theme-btn-sepia" onclick="set_theme('sepia')" title="Sepia mode">Sepia</button>
+			<button class="theme-btn theme-btn-dark" onclick="set_theme('dark')" title="Dark mode">Dark</button>
+		</div>
+		<div class="theme-search-row">
+			<input id="sutta-search" type="text" placeholder="mn153, sn5.08" autocomplete="off" spellcheck="false">
+			<span id="sutta-search-error"></span>
+		</div>
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			
+ 			<a href="../../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE DIV! --> <!-- Div for page content --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+		<h2>Anālayo Comparative Study</h2>
+<div id="content">
+
+		<h2 style="text-align:center">MN 89: Dhammacetiya-sutta</h2>
+<div id="nextprev"><a id="previous-sutta" href="./mn88comp.html#content"></a><a id="next-sutta" href="./mn90comp.html#content"></a></div>
+		<div id="metaarea"><p>Anālayo, <em>A Comparative Study of the Majjhima-nikāya</em>, Vol. 1. Dharma Drum Publishing Corporation, Taipei, 2011.</p></div>
+<p class="read-links">Read: <a href="../../mn/mn89.html">MN 89</a> / <a href="../../parallels/ma213.html">MĀ 213</a> / <a href="../../parallels/ea38.10.html">EĀ 38.10</a></p>
+<p class="read-links">Read: <a href="./intro.html">Introduction: MN Comparative Study</a></p>
+<div class="comp-body">
+<p>The Dhammacetiya-sutta, the “discourse on Dharma monuments”, describes the reasons for King Pasenadi’s faith in the Buddha. This discourse has two Chinese parallels, found in the Madhyama-āgama and in the Ekottarika-āgama.<span class="note" id="mn89n330"><span class="details"><span class="p">[n.330] The parallels are <a href="../../parallels/ma213.html">MĀ 213</a> at T I 795b-797c and <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 724b-725b. <a href="../../parallels/ma213.html">MĀ 213</a> agrees with <a href="../../mn/mn89.html">MN 89</a> on locating the discourse in the Sakyan country and has the title “discourse on Dharma ornaments”, 法莊嚴經, similar to the title of <a href="../../mn/mn89.html">MN 89</a> (Hirakawa 1997: 1015 and Soothill 1937/2000: 363 indicate 莊嚴 to correspond to alaṃkāra). According to <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 724c10, the Buddha was staying in a village in the Sakyan country, 釋種有村, which stands in direct contrast to the same version’s initial declaration at T II 724b28 that the Buddha was staying in Jeta’s Grove, 佛在舍衛國祇樹給孤獨園. This internal inconsistency shows how at times locations like Jeta’s Grove are automatically applied to a discourse without taking into account if this location fits the particular event depicted in the discourse (cf. also below p. 887 note 138). According to Barua 1934a: 46, a relief on the Bhārhut Stūpa, cf. Cunningham 1879 plate 13, portrays the visit by Pasenadi to the Buddha that is described in <a href="../../mn/mn89.html">MN 89</a>.</span></span></span> An account of the events reported in the present discourse can also be found in the Kṣudrakavastu of the (Mūla-)Sarvāstivāda Vinaya, preserved in Chinese and in Tibetan.<span class="note" id="mn89n331"><span class="details"><span class="p">[n.331] T 1451 at T XXIV 237a-238b and D (6) ’dul ba, tha 82a-86a or Q (1035) de 79a-83a, parts of which have been translated in Rockhill 1883/1907: 112-114.</span></span></span> Besdies, a few sections of a version of this discourse have been preserved in Gāndhārī fragments.<span class="note" id="mn89n332"><span class="details"><span class="p">[n.332] Senior Kharoṣṭhī fragments 1+3 A and B, cf. also Allon 2008: 165 (I am indebted to Mark Allon for kindly providing me with a draft version of his entry on this fragment in Allon (forthcoming)).</span></span></span> In addition to these parallel versions, a Pāli discourse similar in several respects to the Dhammacetiya-sutta can be found among the tens of the Aṅguttara-nikāya.<span class="note" id="mn89n333"><span class="details"><span class="p">[n.333] <a href="../../an/an10.30.html">AN 10:30</a> at AN V 65-69. Be-AN III 307,24 and Ce-AN VI 116,1 introduce <a href="../../an/an10.30.html">AN 10:30</a> as the Dutiya- Kosala-sutta, cf. also the uddānas in Ee-AN V 70,2 and in Se-AN V 74,5.</span></span></span></p>
+<p>The Dhammacetiya-sutta, its two Chinese discourse parallels, and the Kṣudrakavastu report that during a pleasure outing King Pasenadi felt inspired to pay a visit to the Buddha. According to the introductory account in the Aṅguttara-nikāya discourse, however, King Pasenadi approached the Buddha after having won a battle.<span class="note" id="mn89n334"><span class="details"><span class="p">[n.334] <a href="../../an/an10.30.html">AN 10:30</a> at AN V 65,7 specifies that this was a “sham fight”, uyyodhika, whereas according to the commentary Mp V 27,26 it was a real fight.</span></span></span></p>
+<p>The Dhammacetiya-sutta and its parallels describe in similar ways how monks engaged in walking meditation directed King Pasenadi to the dwelling where the Buddha was staying. According to the Dhammacetiya-sutta and the Aṅguttara-nikāya discourse, on coming to the presence of the Buddha, King Pasenadi went so far as to caress and kiss the Buddha’s feet.<span class="note" id="mn89n335"><span class="details"><span class="p">[n.335] <a href="../../mn/mn89.html">MN 89</a> at MN II 120,3 and <a href="../../an/an10.30.html">AN 10:30</a> at AN V 65,25; cf. also Horner 1957/1970: xxv. <a href="../../mn/mn89.html">MN 89</a> and <a href="../../an/an10.30.html">AN 10:30</a> agree that King Pasenadi at the same time also pronounced his name and rank twice. For King Pasenadi to go so far as to kiss the Buddha’s feet and caress them comes somewhat unexpected at this point of events. All that has happened so far, according to <a href="../../mn/mn89.html">MN 89</a>, is that during a pleasure outing Pasenadi saw roots of trees, suitable for secluded dwelling, which reminded him of the Buddha. Although the inspiration derived from seeing these tree roots may well have motivated him to travel a reasonable distance in order to visit the Buddha, it would be considerably more difficult to envisage such inspiration to be sufficient grounds for the king of the country to show such an extreme way of expressing his humility and worship. The same hold true all the more if the meeting with the Buddha took place after Pasenadi had won a battle, as is the case in <a href="../../an/an10.30.html">AN 10:30</a>.</span></span></span> The Madhyama-āgama discourse, the Ekottarika-āgama discourse, and the Kṣudrakavastu version do not record that King Pasenadi kissed or caressed the Buddha’s feet.<span class="note" id="mn89n336"><span class="details"><span class="p">[n.336] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 795c18 and <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 724c26 only report that King Pasenadi expressed his respect by bowing at the Buddha’s feet and pronouncing his name and rank three times. Although <a href="../../parallels/ma213.html">MĀ 213</a> introduces Pasenadi’s words by indicating that he proclaimed his name and rank three times, 再三, the actual quote of his words runs only into two proclamations, similar to <a href="../../mn/mn89.html">MN 89</a> at MN II 120,3. The Saṅghabhedavastu in Gnoli 1977: 154,14 reports that on another occasion King Bimbisāra also approached the Buddha, after putting aside his royal insignia, and expressed his respect by proclaiming his name and rank for three times, trir ātmano nāmadheyam anuśrāvayati, a case where, as in <a href="../../parallels/ma213.html">MĀ 213</a>, the actual quote of his words only has two proclamations. T 1451 at T XXIV 237b4 does not even record that King Pasenadi pronounced his name, but only describes that he bowed down and expressed his joy at personally beholding the Buddha after a long time. Its Tibetan counterpart in D (6) ’dul ba, tha 83a3 or Q (1035) de 79b8 notes that, after bowing down at the Buddha’s feet, King Pasenadi “wiped his face and mouth” (wiping of perspiration?) before addressing the Buddha, gdong dang kha phyis nas. Could this be a misunderstanding of an expression similar to the Pāli version’s pādāni mukhena ca paricumbati in <a href="../../mn/mn89.html">MN 89</a> at MN II 120,2? Senior fragments 1+3 A1.1 have preserved what appears to be a description of the king’s prostration at the Buddha’s feet.</span></span></span></p>
+<p>Several Pāli discourses portray other visitors displaying similar behaviour towards the Buddha. Except for one parallel in an individual translation, none of the Chinese Āgama parallels to these instances depict the visitors performing any kissing or caressing of the Buddha’s feet.<span class="note" id="mn89n337"><span class="details"><span class="p">[n.337] In <a href="../../mn/mn91.html">MN 91</a> at MN II 144,26 an old Brahmin of high social standing kisses and caresses the Buddha’s feet; in <a href="../../sn/sn7.15.html">SN 7:15</a> at SN I 178,7 (or SN2 201 at SN2 I 383,3) the same is undertaken by a Brahmin known for his unwillingness to pay homage to anyone, even his parents; and in <a href="../../sn/sn8.9.html">SN 8:9</a> at SN I 193,32 (or SN2 217 at SN2 I 417,13) the monk Koṇḍañña expresses his respect for the Buddha in this way. <a href="../../parallels/ma161.html">MĀ 161</a> at T I 689a13 (parallel to <a href="../../mn/mn91.html">MN 91</a>), <a href="../../parallels/sa92.html">SĀ 92</a> at T II 24a10 and <a href="../../parallels/sa-2.258.html">SĀ2 258</a> at T II 464a18 (parallels to <a href="../../sn/sn7.15.html">SN 7:15</a>), as well as <a href="../../parallels/sa1209.html">SĀ 1209</a> at T II 329b10 and <a href="../../parallels/sa-2.225.html">SĀ2 225</a> at T II 456c12 (parallels to <a href="../../sn/sn8.9.html">SN 8:9</a>) do not mention any kissing or caressing of the Buddha’s feet. The only exception to this is the individual translation T 76 at T I 885c10 (parallel to <a href="../../mn/mn91.html">MN 91</a>, cf. below p. 544 note 78), which agrees with the Pāli version’s description of the Brahmin’s behaviour. Regarding this particular instance in <a href="../../mn/mn91.html">MN 91</a>, Wagle 1967: 282 comments that “such behaviour by a brāhmaṇa is extremely rare and one suspects the missionary bias of the Buddhist writers in describing this scene”.</span></span></span></p>
+<p>The Dhammacetiya-sutta and the Aṅguttara-nikāya discourse report that the Buddha asked King Pasenadi why he gave such supreme honour to the Buddha’s body.<span class="note" id="mn89n338"><span class="details"><span class="p">[n.338] According to <a href="../../mn/mn89.html">MN 89</a> at MN II 120,5 (cf. also <a href="../../an/an10.30.html">AN 10:30</a> at AN V 66,1), the Buddha asked King Pasenadi “what reason, great king, do you see for doing such supreme honour to this body”, kiṃ pana tvaṃ, mahārāja, atthavasaṃ sampassamāno imasmiṃ sarīre evarūpaṃ paramanipaccākāraṃ karosi (Be-MN II 322,16 and Se-MN II 509,2: paramanipaccakāraṃ)? The Senior fragments 1+3 Aa+d.2 recto and 1.2 verso have preserved parts of this question, which appears to be similar to <a href="../../mn/mn89.html">MN 89</a>.</span></span></span> According to the Chinese and Tibetan versions, however, the Buddha simply asked King Pasenadi what motivated his respect for the Buddha, a way of presenting the Buddha’s inquiry in keeping with Pasenadi’s less exceptional way of worshipping the Buddha in these accounts.<span class="note" id="mn89n339"><span class="details"><span class="p">[n.339] According to <a href="../../parallels/ma213.html">MĀ 213</a> at T I 795c23, the Buddha asked: “what reasons do you see in me [that you] lower yourself with the intention to pay respect at [my] feet and perform an act of worship”, 見我有何等義, 而自下意稽首禮足, 供養承事耶? <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 725a10 records the Buddha’s question in this manner: “now, what do you say [why] the Tathāgata should receive people’s worship”, 汝今云何言如來 應受人禮拜? According to T 1451 at T XXIV 237b6, the Buddha asked the king: “for what reason do you prostrate to me, being able to lower yourself and be [so] solicitous”, 何故於我頓能降伏屈己 慇懃?, while in its Tibetan counterpart at D (6) ’dul ba, tha 83a4 or Q (1035) de 80a1, the Buddha asked: “great king, why do you humble yourself towards the Tathāgata so much more than even the lowliest”, rgyal po chen po khyod ci’i phyir de bzhin gshegs pa la shin tu dman pa bas kyang ches dman pa byed? <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 724c28 provides additional background to its version of the Buddha’s question, as it reports that Pasenadi had also expressed the wish that the Buddha may live long for the benefit of gods and men. The Buddha replied by also wishing Pasenadi long life, so that he may govern rightly and receive the fruits of his good conduct on being reborn in heaven. Pasenadi then proclaimed that people pay homage to the Tathāgata because of his virtues, which caused the Buddha to inquire what Pasenadi thought to be the reason why people pay homage to the Tathāgata.</span></span></span></p>
+<p>The Dhammacetiya-sutta and its parallels differ on the reasons given by King Pasenadi in reply. While the Majjhima-nikāya, the Madhyama-āgama, and the Kṣudrakavastu versions describe similar reasons, only one of these reasons recurs in the Ekottarika-āgama list.<span class="note" id="mn89n340"><span class="details"><span class="p">[n.340] <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 725a11 lists six reasons for Pasenadi’s regard for the Buddha, out of which five are not found in the other versions. These five (cf. also table 9.6) are that the teaching of the Buddha is practised by the wise; that his noble disciples are accomplished in morality, wisdom, liberation, and knowledgeand-vision-of-liberation (宋, 元, and 明 variant readings include also their accomplishment in concentration); that he has four assemblies of practising disciples (i.e. male and female, monastics and laity); that he has overcome the sixty-two views (a reference to the sixty-two grounds for views described in <a href="../../dn/dn1.html">DN 1</a> at DN I 12-43 and its parallels); and the potential of recalling the virtues of the Buddha at the time of passing away, by dint of which even someone of evil bodily, verbal, or mental conduct will be reborn in a heavenly realm, <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 725a29: 身口意行惡, 彼若命終, 憶如來功德 ... 得生天上. Harrison 1978a: 36 draws attention to other passages in the Ekottarika-āgama that similarly emphasize the potential of recollecting the Buddha, such as <a href="../../parallels/ea41.5.html">EĀ 41.5</a> at T II 740a1, where a householder destined to be reborn in hell goes forth and practises the ten recollections for a single day, with the result that he is reborn in heaven, or <a href="../../parallels/ea3.1.html">EĀ 3.1</a> at T II 554a12, which gives quite detailed instructions for undertaking recollection of the Buddha; cf. also below p. 822 note 9. <a href="../../an/an1.16.html">AN 1:16</a> at AN I 30,6 reckons recollecting the Buddha a practice that is entirely conducive to realization (sambodha) and [the attainment of] Nirvāṇa, thereby also highlighting its potential, although in less exuberant terms than the Ekottarika-āgama; cf. also Demiéville 1924: 232 note 6. In fact, even what appears to be an incipient stage of a more visual mode of undertaking recollection of the Buddha can be found already among the early discourses, highlighted by Schmithausen 2000b: 10, cf. also Odani 2007: 441. The passage in question occurs in a stanza in the Sutta-nipāta, where the Brahmin Piṅgiya explains that he has no need to be in the presence of the Buddha, since he is able to see the Buddha with his mind as if with the eyes, Sn 5.17 at Sn 1142: passāmi naṃ manasā cakkhunā va (Ce-Sn 350,13: ca).</span></span></span> The Aṅguttara-nikāya discourse does not have any of the reasons mentioned in the Dhammacetiya-sutta (see table 9.6).<span class="note" id="mn89n341"><span class="details"><span class="p">[n.341] <a href="../../an/an10.30.html">AN 10:30</a> at AN V 66,6.</span></span></span></p>
+<p>The Majjhima-nikāya and Madhyama-āgama discourses and the Kṣudrakavastu agree that Pasenadi contrasted other recluses, who after some time disrobe and enjoy sensual pleasures, with the case of the Buddhist monks, who instead keep living the holy life until they pass away.<span class="note" id="mn89n342"><span class="details"><span class="p">[n.342] Senior fragments 1+3 B recto appear to have preserved counterparts to this and the next reason given in <a href="../../mn/mn89.html">MN 89</a>.</span></span></span></p>
+<table class="comparative-table">
+<caption>Table 9.6: Pasenadi’s Praise of the Buddha in <a href="../../mn/mn89.html">MN 89</a> and its Parallels</caption>
+<tr><th><a href="../../mn/mn89.html">MN 89</a></th><th><a href="../../parallels/ma213.html">MĀ 213</a></th></tr>
+<tr><td>monks don’t disrobe (1)</td><td>disciples don’t disparage after disrobing</td></tr>
+<tr><td>monks don’t quarrel (2)</td><td>monks don’t disrobe (→ 1)</td></tr>
+<tr><td>monks are happy (3)</td><td>monks are happy (→ 3)</td></tr>
+<tr><td>monks don’t interrupt the Buddha (4)</td><td>disputants are converted (→ 6, 8)</td></tr>
+<tr><td>disputants are converted (5-8)</td><td>monks don’t interrupt the Buddha (→ 4)</td></tr>
+<tr><td>Pasenadi’s courtiers respect Buddha (9)</td><td>Pasenadi’s courtiers respect Buddha (→ 9)</td></tr>
+<tr><td>similarities Pasenadi & Buddha (10)</td><td>similarities Pasenadi & Buddha (→ 10)</td></tr>
+<tr><td></td><td>(≠ 2, 5, 7)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><td><a href="../../an/an10.30.html">AN 10:30</a></td><td><a href="../../parallels/ea38.10.html">EĀ 38.10</a></td></tr>
+<tr><td>Buddha benefits many</td><td>Buddha’s teaching is practised by the wise</td></tr>
+<tr><td>Buddha is virtuous</td><td>monastic community is accomplished</td></tr>
+<tr><td>Buddha lives in seclusion</td><td>Buddha has four assemblies of disciples</td></tr>
+<tr><td>Buddha is contented</td><td>disputants are converted (→ 5-8)</td></tr>
+<tr><td>Buddha is worthy of honour</td><td>Buddha has transcended 62 views</td></tr>
+<tr><td>Buddha engages in proper conversation</td><td>recollecting Buddha leads to good rebirth</td></tr>
+<tr><td>Buddha is able to attain 4 jhānas</td><td></td></tr>
+<tr><td>Buddha is able to recollect past lives</td><td></td></tr>
+<tr><td>Buddha is able to exercise divine eye</td><td></td></tr>
+<tr><td>Buddha has destroyed influxes</td><td></td></tr>
+<tr><td>(≠ 1-10)</td><td>(≠ 1-4, 9-10)</td></tr>
+</table>
+<table class="comparative-table">
+<tr><th>T 1451</th><th>’dul ba</th></tr>
+<tr><td>disputants are converted (→ 6, 8)</td><td>disputants are converted (→ 6-8)</td></tr>
+<tr><td>monks are happy (→ 3)</td><td>monks are happy (→ 3)</td></tr>
+<tr><td>disciples don’t disparage after disrobing</td><td>disciples don’t disparage after disrobing</td></tr>
+<tr><td>monks don’t disrobe (→ 1)</td><td>monks don’t interrupt the Buddha (→ 4)</td></tr>
+<tr><td>monks don’t interrupt the Buddha (→ 4)</td><td>monks don’t disrobe (→ 1)</td></tr>
+<tr><td>Pasenadi’s courtiers respect Buddha (→ 9)</td><td>Pasenadi’s courtiers respect Buddha (→ 9)</td></tr>
+<tr><td>similarities Pasenadi & Buddha (→ 10)</td><td>similarities Pasenadi & Buddha (→ 10)</td></tr>
+<tr><td>(≠ 2, 5, 7)</td><td>(≠ 2, 5)</td></tr>
+</table>
+<p>The Majjhima-nikāya version continues by contrasting the quarrels that arise even between close family members with the absence of quarrels among the Buddhist monks, who live together harmoniously.<span class="note" id="mn89n343"><span class="details"><span class="p">[n.343] <a href="../../mn/mn89.html">MN 89</a> at MN II 120,22.</span></span></span></p>
+<p>The Madhyama-āgama discourse and the Kṣudrakavastu present the same topic in different terms, as they contrast family quarrels with monks who, even though they disrobe and return to the lay life, nevertheless do not lose their respect for the Buddha and blame themselves for not having been able to continue to stay in robes.<span class="note" id="mn89n344"><span class="details"><span class="p">[n.344] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 796a3, T 1451 at T XXIV 238a8, and D (6) ’dul ba, tha 85a1 or Q (1035) de 81b5. The respectful attitude of monks who have disrobed is also described in <a href="../../mn/mn77.html">MN 77</a> at MN II 5,14.</span></span></span> This description does not fit too well with the other reason for Pasenadi’s faith, which was that the Buddhist monks do not disrobe.<span class="note" id="mn89n345"><span class="details"><span class="p">[n.345] That monks did disrobe is also recorded in other Pāli discourses, cf., e.g., <a href="../../mn/mn12.html">MN 12</a> at MN I 68,8 and <a href="../../an/an3.64.html">AN 3:64</a> at AN I 185,8, according to which Sunakkhatta and Sarabha even spoke disparagingly about the Buddha’s teaching after they had left the order. The monk community also does not always seem to have lived in harmony and concord, as according to <a href="../../mn/mn128.html">MN 128</a> at MN III 153,3 and its parallels (cf. below p. 732), among the monks of Kosambī such a quarrel arose that they were unwilling to allow even the Buddha to intervene and settle it. To this one could add Devadatta’s schism, an event that would be another instance when the Buddhist monks’ community did not live in harmony and concord, cf. Vin III 171,3; for a comparative study of this event cf. Bareau 1991 and Mukherjee 1966: 74-94.</span></span></span></p>
+<p>According to the Dhammacetiya-sutta, its Madhyama-āgama parallel, and the Kṣudrakavastu account, King Pasenadi was also inspired by the happy demeanour of the Buddhist monks,<span class="note" id="mn89n346"><span class="details"><span class="p">[n.346] <a href="../../mn/mn89.html">MN 89</a> at MN II 121,21 describes that the monks were “dependent on others, dwelling with a mind like deer”, paradavutte migabhūtena cetasā viharante (Be-MN II 323,21: paradattavutte, Ce-MN II 554,20: paradavuttā and viharanti). The corresponding passage in <a href="../../parallels/ma213.html">MĀ 213</a> at T I 796a29 reads 護他妻食如鹿. The reference to 他妻 may be due to a mistaking of parada for paradāra, “the wife of another”, while the idea of “protection”, 護, could be due to mistaking vutta for vṛta, “stopped”, “checked”, “held back”, or else 護 could be a scribe’s error for 獲, “to get”. Even though the translator(s) appear to have misunderstood an expression like paradavutta (an expression which does indeed have its difficulties, cf. Horner 1952/1975: 259 note 2), perhaps, through knowledge of some commentarial explanation similar to Ps III 167,3: paradavuttā ti parehi dinnavuttino, they might have known that the idea of “depending on others” was involved, an idea they perhaps then attempted to bring out with the image of 他妻食, “[taking] food from the wives of others”. While T 1451 at T XXIV 237c29 describes that the monks “always feel fear, like deer in the forest”, 常懷兢懼如鹿依林, the passage in D (6) ’dul ba, tha 84b4 or Q (1035) de 81b1 could also be based on an equivalent to paradavutta, as it reads “not depending on other sustenance”, ’tsho ba gzhan la rag ma lus pa. A contrast between the happy demeanour of the Buddhist monks and other ascetics can also be found in SHT III 806 R2-5 (p. 13), attributed in this fragment to the Brahmin Lokecca (a fragment which does not seem to correspond to any of the two occurrences of the Brahmin Lohicca in the Pāli discourses, <a href="../../dn/dn12.html">DN 12</a> at DN I 224-234 or <a href="../../sn/sn35.132.html">SN 35:132</a> at SN IV 116-121).</span></span></span> as well as by their silent attention when the Buddha was delivering teachings.<span class="note" id="mn89n347"><span class="details"><span class="p">[n.347] While according to <a href="../../mn/mn89.html">MN 89</a> at MN II 122,10, on this occasion the Buddha was teaching an audience of “several hundreds”, anekasatāya parisāya, and according to <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797a17 a “great assembly”, 大眾, according to T 1451 at T XXIV 238a22 he was teaching “a great company of uncountable hundred-thousands”, 無量百千大眾. The Tibetan Kṣudrakavastu at D (6) ’dul ba, tha 85a5 or Q (1035) de 82a2, however, agrees with <a href="../../mn/mn89.html">MN 89</a> that the Buddha was teaching ‘only’ an audience of many hundreds, ’khor brgya phrag du ma’i gung la.</span></span></span> As was already the case in the Mahāsakuludāyi-sutta, here too the Majjhima-nikāya version illustrates the silent attention that prevails during a talk given by the Buddha by narrating how on one occasion a disciple was admonished for clearing his throat, while the Madhyama-āgama version instead reports that this disciple was snoring.<span class="note" id="mn89n348"><span class="details"><span class="p">[n.348] <a href="../../mn/mn89.html">MN 89</a> at MN II 122,12: ukkāsi, whereas according to <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797a18 he “made noise [by] snoring [while] sleeping”, 鼾眠作聲, with a 聖 variant reading according to which the monk “made noise [by] drooling [while] sleeping”, 口汙眠作聲. Cf. also above p. 421 note 152.</span></span></span> In agreement with the Majjhima-nikāya account, the Kṣudrakavastu also records that the disciple merely coughed, not envisaging the possibility that he may have fallen asleep while the Buddha was giving a talk.<span class="note" id="mn89n349"><span class="details"><span class="p">[n.349] T 1451 at T XXIV 238a26: 謦欬發聲, to which D (6) ’dul ba, tha 85a5 or Q (1035) de 82a2 adds that he also made the sound of sneezing, lud pa’i sgra and sbrid pa’i sgra.</span></span></span></p>
+<p>The Dhammacetiya-sutta next describes how warriors, Brahmins, householders, and recluses would approach the Buddha with the intention of challenging and vanquishing him in debate. Instead of defeating the Buddha, the Dhammacetiya-sutta reports, they are much rather converted, in fact the recluses even go forth under the Buddha and become arahants. This quality is also included in the Ekottarika-āgama account, which similar to the Dhammacetiya-sutta speaks of warriors, Brahmins, householders, and recluses that are unable to defeat the Buddha in debate, without, however, mentioning that they would become his disciples or even go forth under him and become arahants.<span class="note" id="mn89n350"><span class="details"><span class="p">[n.350] <a href="../../parallels/ea38.10.html">EĀ 38.10</a> at T II 725a25. The same difference recurs between <a href="../../mn/mn27.html">MN 27</a> at MN I 177,13 and its parallel <a href="../../parallels/ma146.html">MĀ 146</a> at T I 656b23, where <a href="../../mn/mn27.html">MN 27</a> also stands alone in reporting that those who challenge the Buddha become his disciples and some even go forth and become arahants. A contrast to the descriptions given in <a href="../../mn/mn27.html">MN 27</a> and <a href="../../mn/mn89.html">MN 89</a> can be found in <a href="../../dn/dn25.html">DN 25</a> at DN III 57,12 and its parallel <a href="../../parallels/ma104.html">MĀ 104</a> at T I 595b29, according to which on one occasion a whole group of recluses were unwilling to go forth under the Buddha even though he had openly invited them.</span></span></span></p>
+<p>The Madhyama-āgama discourse and the Chinese Kṣudrakavastu account differ from the Dhammacetiya-sutta in as much as they speak only of recluses and Brahmins who approach the Buddha for debate, thereby not mentioning warriors or householders.<span class="note" id="mn89n351"><span class="details"><span class="p">[n.351] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 796b15 and T 1451 at T XXIV 237b11. This is not entirely the case for the Tibetan Kṣudrakavastu version, which in its examination of the fourth group of debaters at D (6) ’dul ba, tha 84a1 or Q (1035) de 80b6, switches from the earlier used dge sbyong dang bram ze, “recluses and Brahmins”, to bram ze dang khyim bdag, “Brahmins and householders”.</span></span></span> In regard to these wise recluses and Brahmins, they envisage four possible outcomes:</p>
+<ul>
+<li>the recluses and Brahmins do not even dare to put their question,</li>
+<li>they are delighted with what the Buddha teaches them,</li>
+<li>they take refuge,</li>
+<li>they go forth under the Buddha and by dint of earnest practice in seclusion become arahants.</li>
+</ul>
+<p>Another reason for King Pasenadi’s faith, listed in the Dhammacetiya-sutta, the Madhyama-āgama discourse, and the Kṣudrakavastu version,<span class="note" id="mn89n352"><span class="details"><span class="p">[n.352] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797a25 and T I 797b2 presents this issue as two qualities, first taking up the higher respect they had for the Buddha as a reason for Pasenadi’s faith, and then relating how they once spent the night in the same room together with King Pasenadi, which <a href="../../parallels/ma213.html">MĀ 213</a> presents as yet another reason for Pasenadi’s faith in the Buddha. T 1451 at T XXIV 238b4 and its Tibetan counterpart at D (6) ’dul ba, tha 85b4 or Q (1035) de 82a8, however, agree with <a href="../../mn/mn89.html">MN 89</a> on presenting this as only one quality. In fact, the story of their behaviour at night is but an illustration of their respect for the Buddha and thus does not amount to a separate quality.</span></span></span> is that his two courtiers showed more respect to the Buddha than they would show to him, even though they depended on the king for their livelihood.</p>
+<p>To illustrate this, Pasenadi related an occasion when he had to put up in the same room with his two courtiers. The two courtiers lay down in such a way that their head was pointing towards the direction were the Buddha was dwelling, even though this caused them to point their feet towards the king, a disrespectful way of behaviour according to Indian custom.<span class="note" id="mn89n353"><span class="details"><span class="p">[n.353] <a href="../../sn/sn55.6.html">SN 55:6</a> at SN V 352,3 indicates that Isidatta and Purāṇa had reached stream-entry (cf. also <a href="../../an/an6.120.html">AN 6:120</a> at AN III 451,12) and according to <a href="../../an/an6.44.html">AN 6:44</a> at AN III 348,1 (= <a href="../../an/an10.75.html">AN 10:75</a> at AN V 139,3) they passed away as once-returners. This would explain why they had such high regard for the Buddha.</span></span></span></p>
+<p>According to the Majjhima-nikāya version, the two courtiers spent much of the night in a discussion on the Dharma. The Madhyama-āgama account, however, instead reports that they spent the first part of the night silently sitting in meditation.<span class="note" id="mn89n354"><span class="details"><span class="p">[n.354] <a href="../../mn/mn89.html">MN 89</a> at MN II 124,5: bahudeva rattiṃ dhammiyā kathāya vītināmetvā and <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797b4: 初夜結跏趺坐, 默然燕坐.</span></span></span> The Kṣudrakavastu agrees in this respect with the Majjhima-nikāya presentation, as it reports that the two courtiers were engaged in praising the virtues of the Buddha and speaking about the Dharma and the Saṅgha.<span class="note" id="mn89n355"><span class="details"><span class="p">[n.355] T 1451 at T XXIV 238b10 records that the two “praised the excellent qualities of the Buddha and discussed the right Dharma and the jewel of the order as a field of merit”, 歎佛功德, 并說正法, 僧寶 福田. D (6) ’dul ba, tha 85b6 or Q (1035) de 82b2 similarly reports that they praised the Buddha, his teaching and the community, sangs rgyas kyi bsngags pa brjod, chos dang dge ’dun gyi bsngags pa brjod nas.</span></span></span></p>
+<p>Another minor but noteworthy difference is that, according to the Majjhima-nikāya account, the king referred to his two courtiers as “those venerable ones”, using the word āyasmant,<span class="note" id="mn89n356"><span class="details"><span class="p">[n.356] <a href="../../mn/mn89.html">MN 89</a> at MN II 124,11: ime āyasmanto.</span></span></span> while the Madhyama-āgama discourse does not record that the king used this epithet.<span class="note" id="mn89n357"><span class="details"><span class="p">[n.357] According to <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797b7, Pasenadi referred to his employees as “these two courtiers Isidatta and Purāṇa”, 此仙餘及宿舊二臣 (the Chinese and Tibetan Kṣudrakavastu do not have such a reference).</span></span></span></p>
+<p>At first sight, the use of āyasmant is unexpected, since this term is usually employed in the discourses to refer to monks.<span class="note" id="mn89n358"><span class="details"><span class="p">[n.358] DP I: 321 s.v. āyasma(t) explains that this term is a “honorific and respectful title of a bhikkhu”. Childers 1875/1993: 75 s.v. āyasmā and PED: 105 s.v. āyasmant similarly speak of a “respectful appelation” for a bhikkhu “of some standing”.</span></span></span> The use of āyasmant to address laity recurs in several Pāli discourses, where again the Chinese versions differ by not recording this form of address.<span class="note" id="mn89n359"><span class="details"><span class="p">[n.359] <a href="../../mn/mn68.html">MN 68</a> at MN I 467,10 describes how a lay follower recollects another lay follower as a “venerable one”, āyasmā, while in its counterpart in <a href="../../parallels/ma77.html">MĀ 77</a> at T I 546b8 the lay follower recollects the other as a “lay follower”, 優婆塞. Another instance can be found in <a href="../../sn/sn55.54.html">SN 55:54</a> at SN V 409,4, which describes a layman who addresses another layman about to pass away as āyasma, while in its Chinese counterpart in <a href="../../parallels/sa1122.html">SĀ 1122</a> at T II 298a18 the layman simply addresses the other layman with “you” (respectful form), 仁者, and “you”, 汝. An instance without a Chinese counterpart can be found in <a href="../../an/an4.242.html">AN 4:242</a> at AN II 241,26+28, which depicts how a layperson confesses a misdeed to another layperson by using bhante and āyasmant.</span></span></span> Instances of the use of the address āyasmant for laity can also be found in the case of several pātimokkha rules, which depict even a monk addressing laity with āyasmant.<span class="note" id="mn89n360"><span class="details"><span class="p">[n.360] A monk addresses a lay person with the expression āyasmant in nissaggiya pācittiya rules 8, 9, 10, and 27 at Vin III 216,15, Vin III 218,35, Vin III 220,2 and Vin 259,11.</span></span></span> In this case, too, the Chinese Vinayas do not employ this form of address.<span class="note" id="mn89n361"><span class="details"><span class="p">[n.361] The relevant niḥsargikāḥ pātayantika rules 8, 9, 10, and 24 of the Dharmaguptaka Vinaya, T 1428 at T XXII 611a17, T XXII 612a21, T XXII 613b3, and T XXII 625b13 use “householder”, 居士, and “you”, 汝. The corresponding rules 8, 9, 10, and 27 of the Mahāsāṅghika Vinaya, T 1425 at T XXII 305a2, T XXII 305b4, T XXII 306a11, and T XXII 321c2 use no address or “you”, 汝. The corresponding rules 8, 9, 10, and 12 of the Mahīśāsaka Vinaya, T 1421 at T XXII 28b11, T XXII 28c5, T XXII 29a25, and T XXII 29c12 use “you”, 汝. The corresponding rules 8, 9, 10, and 24 of the (Mūla-)Sarvāstivāda Vinaya, T 1442 at T XXIII 732c7, T XXIII 733a10, T XXIII 734c18, and T XXIII 749b23 use “you” (respectful form), 仁者, and “you”, 汝. The corresponding rules 8, 9, 10, and 24 of the Sarvāstivāda Vinaya, T 1435 at T XXIII 45c29, T XXIII 46b20, T XXIII 47a26, and T XXIII 56a6 (translated in Rosen 1959: 87-89 and 117) use “you”, 汝.</span></span></span></p>
+<p>The Sanskrit versions of the Mahāsāṅghika, (Mūla-)Sarvāstivāda, and Sarvāstivāda prātimokṣa rules, however, do employ the corresponding address āyuṣmant,<span class="note" id="mn89n362"><span class="details"><span class="p">[n.362] These are the niḥsargikāḥ pātayantika rules 8, 9, 10, and 27 of the Mahāsāṅghika Vinaya in Tatia 1975: 14,11+19+27 and 18,3, translated in Prebish 1975/1996: 66 and 72; the corresponding rules 8, 9, 10, and 24 of the (Mūla-)Sarvāstivāda Vinaya in Banerjee 1977: 26,10, 27,2, 28,14, and 30,11, translated in Prebish 1975/1996: 67, 69, and 73; and the corresponding rules 8, 9, 10, and 24 of the Sarvāstivāda Vinaya in von Simson 2000: 186,14, 187,11, 191,7, and 198,4.</span></span></span> just as the Tibetan version of the (Mūla-)Sarvāstivāda prātimokṣa uses the corresponding form tshe dang ldan pa.<span class="note" id="mn89n363"><span class="details"><span class="p">[n.363] Vidyabhusana 1915: 67,2+13, 69,17, and 73,3.</span></span></span></p>
+<p>In fact, the use of āyasmant in its counterparts in these different passages does not necessarily convey nuances of venerability,<span class="note" id="mn89n364"><span class="details"><span class="p">[n.364] Nakamura 2000b: 235 note 67 comments on ways of translating āyasmant that “in many cases ‘venerable’ is not suitable”.</span></span></span> as the address “friend”, āvuso, is merely a vocative form of the same word.<span class="note" id="mn89n365"><span class="details"><span class="p">[n.365] Cf. BHSD: 102 s.v. āyuṣmaṃ, CPD II: 230 s.v. āvuso, PED: 113 s.v. āvuso, Geiger 1916: 60 (§ 46.1), and Pischel 1900/1981: 324; cf. also Horner 1938/1982: xxxviii. In fact, in the description of the actual events leading up to the rules at Vin III 215,23, Vin III 218,7, Vin III 220,2, and Vin III 259,8, the monk uses the address āvuso. According to Wijesekera 1993: 36, however, āvuso “probably has its origin in an older *āyuṣaḥ (the derived adj. from āyus ‘life’) having the sense of ‘O long-lived one!’ and the suggested derivation ... āyuṣmant seems to be phonetically less likely”. For a survey of occurrences of āvuso in the Pāli discourses and in the Vinaya cf. Franke 1908: 20-43.</span></span></span> Hence, the use of āyasmant would be an appropriate way for a king to refer to his employees, or for a monk to refer to laity.</p>
+<p>By the time of the Chinese translations, however, the term āyasmant or āyuṣmant may have become an exclusively monastic form of address, so that, when translating the above surveyed passages, the translators replaced āyasmant (etc.) with other expressions that seemed more appropriate to the context, or simply left the passage without any form of address. Thus, this rather minor difference in formulation, which appears to be a persistent trait in Chinese translations, provides a good example for how the Chinese worldview could influence the way the Indian originals were translated.</p>
+<p>Another quality that according to the Dhammacetiya-sutta inspired King Pasenadi’s respect for the Buddha was that they were both members of the warrior class, they both came from the Kosala country, and were both of the same age.<span class="note" id="mn89n366"><span class="details"><span class="p">[n.366] Regarding their being of the same age, the Saṅghabhedavastu in Gnoli 1977: 46,5 reports that King Prasenajit and the Buddha were even born on the same day.</span></span></span> According to the Madhyama-āgama version and the Kṣudrakavastu account, King Pasenadi also noted the similarity of his status as the king of the country and the Buddha’s status as the king of the Dharma. The Kṣudrakavastu makes it clear that, in this respect, the king felt inferior to the Buddha.<span class="note" id="mn89n367"><span class="details"><span class="p">[n.367] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797b12: “I am the king of the country, the Blessed One is the king of the Dharma”, 我亦 國王, 世尊亦法王, and T 1451 at T XXIV 238b18: “I have been crowned as the warrior king, the Blessed One is the unsurpassable Dharma king, my power cannot measure up in any way compared to the Buddha”, 我是灌頂剎帝利王, 世尊亦是無上法王, 我力比佛非喻能測. T 1451 at T XXIV 238b29 sums up the point made with this statement by proclaiming that “the king is no equal to the Buddha”, 王不如佛. In the Tibetan version at D (6) ’dul ba, tha 86a3 or Q (1035) de 82b7, the king simply points out that “although I am indeed the head-anointed warrior king, yet the Blessed One is indeed the unsurpassable king of the Dharma”, bdag kyang rgyal po rgyal rigs spyi po nas dbang bskur ba lags, bcom ldan ’das kyang bla na med pa’i chos kyi rgyal po lags pas. As noted by Brekke 1999a: 858, whereas “the figure of the king symbolizes external mastery”, the Buddha “symbolizes internal mastery”.</span></span></span></p>
+<p>This helps to clarify what inspired Pasenadi’s respect, since to be of similar origin and age may inspire feelings of friendship and companionship, but would not be selfevident grounds for worshipping the other. In contrast, for the king of the country to meet a king of the Dharma would indeed be a good reason to feel respect and have a desire to worship the latter.</p>
+<p>The Dhammacetiya-sutta and its Chinese parallels agree that, once King Pasenadi had left, the Buddha instructed the monks to memorize this discourse, as to bear it in mind would be beneficial for their progress.<span class="note" id="mn89n368"><span class="details"><span class="p">[n.368] T 1451 at T XXIV 238c1 and D (6) ’dul ba, tha 86a7 or Q (1035) de 83a3 continue by narrating that, while Pasenadi had this conversation with the Buddha, the general who had accompanied him left and, taking advantage of having received the royal insignia in custody, helped the prince to usurp the throne. The ensuing series of events culminate with King Pasenadi passing away while seeking help against this dethronement; cf. also, e.g., Amritananda 1983: 68-69, Feer 1883: 65-67, Panglung 1981: 172-173, and Rockhill 1883/1907: 114-116. The Pāli commentary, Ps III 354,18, reports a similar series of events taking place after the delivery of the present discourse; cf. also Jā 465 at Jā IV 152,2, Bareau 1981a: 53, and T 211 at T IV 583a16, translated in Willemen 1999: 56.</span></span></span> According to the Madhyama-āgama account, the Buddha even went so far as to ask Ānanda to summon whatever other monks were living nearby in order to be able to give them this recommendation.<span class="note" id="mn89n369"><span class="details"><span class="p">[n.369] <a href="../../parallels/ma213.html">MĀ 213</a> at T I 797b20.</span></span></span></p>
+<p>Looking back on the different versions, it is noteworthy that, while the Kṣudrakavastu in several aspects agrees with the Dhammacetiya-sutta against the Madhyama-āgama version, the Aṅguttara-nikāya discourse differs considerably from the Dhammacetiyasutta. While as an account of an actual encounter it seems improbable that the Buddha on more than one occasion got King Pasenadi to explain why he had faith in him, the differences between the two Pāli versions are substantial enough to make it improbable that they should be considered records of the same event.</p>
+</div>
+
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="back-to-top-row"><a href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="cp-btn back-to-top-btn">Back to Top</a></div>
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../../home/index.html">Home</a><a href="../../mn/mn.html">Majjhima Nikāya</a><a href="../../mn/mn1.html">MN1</a>: Mūlapariyāya Sutta</div>
+		<div class="bottomlinks">
+ 	<a href="../../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	<a href="../../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ 
+ 
+ 
+ <script src="../../js/footer.js"></script><script src="../../js/dpd_deconstructor.js"></script><script src="../../js/dpd_ebts.js"></script><script src="../../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+   <script>
+			function set_theme(theme) {
+				var app = document.getElementsByTagName("BODY")[0];
+				localStorage.lightMode = theme;
+				app.setAttribute("light-mode", theme);
+				document.querySelectorAll(".theme-btn").forEach(function(btn) {
+					btn.classList.remove("active-theme");
+				});
+				var activeBtn = document.querySelector(".theme-btn-" + theme);
+				if (activeBtn) activeBtn.classList.add("active-theme");
+			}
+			// Also keep old name alive in case anything calls it
+			function toggle_light_mode() {
+				var cur = localStorage.lightMode || "light";
+				set_theme(cur === "light" ? "dark" : "light");
+			}
+
+			window.addEventListener("storage", function () {
+				var t = localStorage.lightMode || "light";
+				app.setAttribute("light-mode", t);
+			}, false);
+
+ </script> <script src="../js/sutta-search.js"></script>
+
+
+
+</body>
+ </html>
