@@ -36,7 +36,7 @@ function openDictionaryWindow(url) {
  */
 function createClickableSpan(wordToLink) {
     const langPrefix = typeof savedDict !== 'undefined' && savedDict.includes("ru") ? "ru/" : "";
-    const wordSearchUrl = `https://dict.dhamma.gift/${langPrefix}search_html?q=${encodeURIComponent(wordToLink)}`;
+    const wordSearchUrl = `https://dict.dhamma.gift/${langPrefix}?silent&q=${encodeURIComponent(wordToLink)}`;
     
     // Используем span с onclick, чтобы не наследовались стили от тега <a>
     return `<span onclick="event.preventDefault(); event.stopPropagation(); openDictionaryWindow('${wordSearchUrl}');"
