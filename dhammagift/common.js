@@ -672,27 +672,7 @@ function getBjtUrl(slug) {
     return null;
 }
 
-function get4ntUrl(slug) {
-    // Переменная с сайтом закомментирована на будущее
-    // const site4nt = "https://s.4nt.org";
-    const basePath = "/4nt";
 
-    const slugParts = slug.match(/^([a-z]+)(\d*)/);
-    if (!slugParts) return null;
-
-    const book = slugParts[1];
-    const firstNum = slugParts[2];
-
-    if (book === "dn" || book === "mn") {
-        return `${basePath}/${book}/#${slug}`;
-    } else if (book === "sn" || book === "an") {
-        return `${basePath}/${book}/${book}${firstNum}/#${slug}`;
-    } else if (["ud", "iti", "snp", "dhp", "thig", "thag", "kp"].includes(book)) {
-        return `${basePath}/kn/${book}/#${slug}`;
-    }
-    
-    return null;
-}
 
 function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     let scLink = "";
@@ -711,7 +691,7 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     // 4nt
     let url4nt = get4ntUrl(slug);
     if (url4nt) {
-        scLink += ` <a target="_blank" title="s.4nt.org" href="${url4nt}">4nt</a>`;
+        scLink += `&nbsp;<a target="_blank" class="s4ntLink" title="s.4nt.org" href="${url4nt}">4nt</a>`;
     }
 
     // SC
