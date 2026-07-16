@@ -646,7 +646,7 @@ document.addEventListener('click', function(e) {
 
 
 // ==========================================================================
-// ГЕНЕРАЦИЯ ДОПОЛНИТЕЛЬНЫХ ССЫЛОК (DPR, BJT, Voice, SC, BB, TBW, Th.ru, Th.su)
+// ГЕНЕРАЦИЯ ДОПОЛНИТЕЛЬНЫХ ССЫЛОК (DPR, BJT, Voice, 4nt, SC, BB, TBW, Th.ru, Th.su)
 // ==========================================================================
 
 function getDprUrl(slug) {
@@ -669,6 +669,30 @@ function getBjtUrl(slug) {
     return null;
 }
 
+function get4ntUrl(slug) {
+    // Переменная с сайтом закомментирована на будущее
+    // const site4nt = "https://s.4nt.org";
+    const basePath = "/4nt";
+
+    const slugParts = slug.match(/^([a-z]+)(\d*)/);
+    if (!slugParts) return null;
+
+    const book = slugParts[1];
+    const firstNum = slugParts[2];
+
+    if (book === "dn" || book === "mn") {
+        return `${basePath}/${book}/#${slug}`;
+    } else if (book === "sn" || book === "an") {
+        return `${basePath}/${book}/${book}${firstNum}/#${slug}`;
+    } else if (["ud", "iti", "snp", "dhp", "thig", "thag", "kp"].includes(book)) {
+        return `${basePath}/kn/${book}/#${slug}`;
+    }
+    
+    return null;
+}
+
+
+
 function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     let scLink = "";
 
@@ -683,8 +707,14 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     // Voice
     scLink += `<a data-slug="${texttype}/${slugReady}" href="javascript:void(0)" title="Text-to-Speech (Alt+R)" class="voice-link">Voice</a>`;
 
-    // SC
+    // 4nt
+    let url4nt = get4ntUrl(slug);
+    if (url4nt) {
+        scLink += `&nbsp;<a target="_blank" title="s.4nt.org" href="${url4nt}">4nt</a>`;
+    }
 
+
+    // SC
        scLink += `&nbsp;<a target="_blank" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a>`;
         
   /*   if ((translator === 'sujato') || (translator === 'brahmali')) {
