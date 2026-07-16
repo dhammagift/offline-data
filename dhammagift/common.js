@@ -1108,22 +1108,22 @@ window.mergeGathas = function(htmlData, paliData, transData, varData, engTransDa
 // УНИВЕРСАЛЬНАЯ ЗАГЛУШКА-ИНСТРУКЦИЯ (СТАРТОВЫЙ ЭКРАН)
 // ==========================================
 window.getInstructionHTML = function(lang) {
-    const isRu = (lang === 'ru');
+  //  const isRu = (lang === 'ru');
     
     // Определяем базовые пути в зависимости от языка
-    const readPath = isRu ? '/r/' : '/read/';
-    const assetsPath = isRu ? '/ru/assets/texts/' : '/assets/texts/';
-    const mainReadPath = isRu ? '/ru/read.php' : '/read.php';
+    const readPath = window.isRuPath ? '/r/' : '/read/';
+    const assetsPath = window.isRuPath ? '/ru/assets/texts/' : '/assets/texts/';
+    const mainReadPath = window.isRuPath ? '/ru/read.php' : '/read.php';
 
     // Локализация текстов
     const t = {
-        instructions: isRu
+        instructions: window.isRuPath
             ? `Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> или <span class="abbr">bi-pj1</span>.<br>Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.`
             : `Use text indexes for navigation.<br>E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bi-ss1</span>.<br>Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available.`,
-        mainSuttas: isRu ? "Основные Сутты" : "Main Suttas",
-        otherTexts: isRu ? "Часть KN" : "Other Texts",
-        bhikkhuVinaya: isRu ? "Бхиккху Виная" : "Bhikkhu Vinaya",
-        bhikkhuniVinaya: isRu ? "Бхиккхуни Виная" : "Bhikkhunī Vinaya",
+        mainSuttas: window.isRuPath ? "Основные Сутты" : "Main Suttas",
+        otherTexts: window.isRuPath ? "Часть KN" : "Other Texts",
+        bhikkhuVinaya: window.isRuPath ? "Бхиккху Виная" : "Bhikkhu Vinaya",
+        bhikkhuniVinaya: window.isRuPath ? "Бхиккхуни Виная" : "Bhikkhunī Vinaya",
     };
 
     // Возвращаем собранный HTML
@@ -1433,9 +1433,8 @@ window.toggleThePali = window.toggleThePali || function() {
             }
         }
 
-        const isRu = window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/');
         const isTh = window.location.pathname.includes('/th/');
-        const langClass = isRu ? '.rus-lang' : (isTh ? '.tha-lang' : '.eng-lang');
+        const langClass = window.isRuPath ? '.rus-lang' : (isTh ? '.tha-lang' : '.eng-lang');
 
         let labelText = '';
         if (isMemoPath) {
@@ -1713,7 +1712,7 @@ window.handleFetchError = function(slug, isRussian) {
     if (redirectCount >= 3) {
         console.error('Exceeded maximum redirects for slug:', slug);
         
-        const errorMsg = isRussian 
+        const errorMsg = window.isRuPath 
             ? `<p>Поиск "${decodedSlug}" не удался. Пожалуйста, попробуйте другой запрос.</p>
                <div class="spinner-border" role="status"><span class="visually-hidden">Загрузка...</span></div>
                <br><br><p>Подсказка: <br>С главной страницы доступно больше настроек поиска.</p>`
@@ -1728,12 +1727,7 @@ window.handleFetchError = function(slug, isRussian) {
 
     localStorage.setItem(redirectKey, redirectCount + 1);
 
-const isRu = window.location.pathname.includes('/r/') ||
-             window.location.pathname.includes('/mt/') ||
-             window.location.pathname.includes('/ml/') ||
-             window.location.pathname.includes('/ru/');
-
-const prefix = isRu ? "/ru" : "";
+const prefix = window.isRuPath ? "/ru" : "";
 
 
     // Фолбэк-поиск через XHR
@@ -1761,7 +1755,7 @@ const prefix = isRu ? "/ru" : "";
         }
     };
     
-    const loadingMsg = isRussian
+    const loadingMsg = window.isRuPath
         ? `<p>Идёт Поиск "${decodedSlug}". Пожалуйста, Ожидайте.</p>
            <div class="spinner-border" role="status"><span class="visually-hidden">Загрузка...</span></div>
            <p>Подсказка: <br>С главной страницы доступно больше настроек поиска.<br></p>`
@@ -1947,14 +1941,13 @@ window.addEventListener('suttaRenderedCentral', addIconsTo01);
 document.addEventListener('DOMContentLoaded', () => {
   // Определяем язык интерфейса по URL
   const path = window.location.pathname;
-  const isRu = path.includes('/r/') || path.includes('/ru/') || path.includes('/ml/') || path.includes('/mt/');
-
+  
   const labels = {
-    quote: isRu ? 'Цитата' : 'Quote',
-    link: isRu ? 'Ссылка' : 'Link',
-    audio: isRu ? 'Слушать' : 'Voice',
-    bookmark: isRu ? 'Избранное' : 'Bookmark',
-    memo: isRu ? 'Запомнить' : 'Memorize'
+    quote: window.isRuPath ? 'Цитата' : 'Quote',
+    link: window.isRuPath ? 'Ссылка' : 'Link',
+    audio: window.isRuPath ? 'Слушать' : 'Voice',
+    bookmark: window.isRuPath ? 'Избранное' : 'Bookmark',
+    memo: window.isRuPath ? 'Запомнить' : 'Memorize'
   };
 
   // 1. Создаем HTML структуру меню
@@ -1990,7 +1983,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMeditate = Math.random() > 0.5;
         const textRu = isMeditate ? 'Медитировать' : 'Запомнить';
         const textEn = isMeditate ? 'Meditate' : 'Memorize';
-        memoBtn.innerHTML = `<img src="/assets/svg/memo-black.svg" class="menu-icon" alt=""> ${isRu ? textRu : textEn}`;
+        memoBtn.innerHTML = `<img src="/assets/svg/memo-black.svg" class="menu-icon" alt=""> ${window.isRuPath ? textRu : textEn}`;
       }
 
       const parentSpan = copyBtn.closest('span[id]');
@@ -2072,7 +2065,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       navigator.clipboard.writeText(finalUrl).then(() => {
         if (typeof showBubbleNotification === 'function') {
-          showBubbleNotification(isRu ? "Ссылка скопирована" : "Link copied");
+          showBubbleNotification(window.isRuPath ? "Ссылка скопирована" : "Link copied");
         }
       });
     } catch (err) {
@@ -2192,7 +2185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textToPass = textArr.join('\n');
     }
 
-    const baseUrl = isRu ? '/ru/memo/' : '/memo/';
+    const baseUrl = window.isRuPath ? '/ru/memo/' : '/memo/';
 
     if (textToPass) {
         if (textToPass.length <= URL_MAX_LENGTH) {
