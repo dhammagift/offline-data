@@ -672,8 +672,6 @@ function getBjtUrl(slug) {
     return null;
 }
 
-
-
 function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     let scLink = "";
 
@@ -698,7 +696,10 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     scLink += ` <a target="_blank" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a>`;
         
     // BB, TBW, Th.ru, Th.su
-    const isLocal = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
+    // === ИСПРАВЛЕННЫЙ БЛОК ===
+    const isForceLocal = localStorage.getItem('forceLocal') === 'true';
+    const isLocalHost = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
+    const isLocal = isLocalHost || isForceLocal;
 
     if (typeof tbwLinksData !== 'undefined') {
         const hasTbw = tbwLinksData.find(item => Array.isArray(item) ? item[0] === slug : item === slug);
@@ -706,7 +707,7 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
             // Проверяем, не находимся ли мы уже в директории /b/
             const isBbPath = window.location.pathname.startsWith('/b/');
 
-            // BB — показываем только на локалхосте и только если мы не на странице /b/
+            // BB — показываем только на локалхосте (или с флагом) и только если мы не на странице /b/
             if (!isBbPath && isLocal) {
                 scLink += ` <a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
             }
@@ -718,11 +719,11 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
             if (isLocal) {
                 scLink += ` <a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
             } else {
-                scLink += ` <a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="https://theBuddhasWords.net/${book}/${slug}.html">TBW</a>`;
+                scLink += ` <a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="https://thebuddhaswords.net/${book}/${slug}.html">TBW</a>`;
             }
         }
     }
-
+    // =========================
 
     if (window.isRuPath) {
         if (typeof thruLinksData !== 'undefined') {
@@ -747,6 +748,7 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
 
     return scLink;
 }
+
 
 // ==========================================================================
 // ПОИСК И ОТРИСОВКА ПРЕДЫДУЩЕЙ И СЛЕДУЮЩЕЙ СУТТЫ
