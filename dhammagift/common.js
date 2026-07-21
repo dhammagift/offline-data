@@ -8,7 +8,7 @@ window.isRuPath = window.location.pathname.includes('/r/') ||
                      window.location.pathname.includes('/ml/') || 
                      window.location.pathname.includes('/mt/');
                      
-                     
+window.isLocalHost = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');                     
                      
 function parseSlug(slug) {
 if (
@@ -698,8 +698,8 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     // BB, TBW, Th.ru, Th.su
     // === ИСПРАВЛЕННЫЙ БЛОК ===
     const isForceLocal = localStorage.getItem('forceLocal') === 'true';
-    const isLocalHost = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
-    const isLocal = isLocalHost || isForceLocal;
+
+    const isLocal = window.isLocalHost || isForceLocal;
 
     if (typeof tbwLinksData !== 'undefined') {
         const hasTbw = tbwLinksData.find(item => Array.isArray(item) ? item[0] === slug : item === slug);
@@ -1921,6 +1921,8 @@ window.addEventListener('suttaRenderedCentral', addIconsTo01);
 
 //Smart link in each line
 document.addEventListener('DOMContentLoaded', () => {
+  // Определяем глобальную (для этого блока) переменную среды
+
   // Определяем язык интерфейса по URL
   const path = window.location.pathname;
   
@@ -1929,7 +1931,8 @@ document.addEventListener('DOMContentLoaded', () => {
     link: window.isRuPath ? 'Ссылка' : 'Link',
     audio: window.isRuPath ? 'Слушать' : 'Voice',
     bookmark: window.isRuPath ? 'Избранное' : 'Bookmark',
-    memo: window.isRuPath ? 'Запомнить' : 'Memorize'
+    memo: window.isRuPath ? 'Запомнить' : 'Memorize',
+    compare: window.isRuPath ? 'Сравнить' : 'Compare'
   };
 
   // 1. Создаем HTML структуру меню
@@ -1941,6 +1944,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li id="sm-audio"><img src="/assets/svg/play.svg" class="menu-icon" alt=""> ${labels.audio}</li>
         <li id="sm-bookmark"><img src="/assets/svg/star-black.svg" class="menu-icon" alt=""> ${labels.bookmark}</li>
         <li id="sm-memo"><img src="/assets/svg/memo-black.svg" class="menu-icon" alt=""> ${labels.memo}</li>
+        <li id="sm-compare"><img src="/assets/svg/code-compare-solid-full.svg" class="menu-icon" alt=""> ${labels.compare}</li>
       </ul>
     </div>
   `;
@@ -1951,6 +1955,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Открытие меню по клику на .copyLink
   document.addEventListener('click', (e) => {
+    // ... [ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ] ...
     if (e.isSimulated) return;
 
     const copyBtn = e.target.closest('.copyLink');
@@ -1959,7 +1964,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       e.stopImmediatePropagation();
 
-      // Пасхалка: рандомизация названия пункта Memo
       const memoBtn = document.getElementById('sm-memo');
       if (memoBtn) {
         const isMeditate = Math.random() > 0.5;
@@ -1989,8 +1993,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnRect = copyBtn.getBoundingClientRect();
       const menuRect = menu.getBoundingClientRect();
 
-      const offsetTop = 25; // Фиксированное расстояние от иконки вниз
-      const offsetLeft = 0; // Смещение по горизонтали
+      const offsetTop = 25; 
+      const offsetLeft = 0; 
 
       let left = btnRect.left + offsetLeft;
       let top = btnRect.top + window.scrollY + offsetTop;
@@ -2041,7 +2045,7 @@ document.addEventListener('DOMContentLoaded', () => {
       baseUrl.hash = currentContext.hash;
       let finalUrl = baseUrl.href;
 
-      if (finalUrl.includes('localhost') || finalUrl.includes('127.0.0.1')) {
+      if (window.isLocalHost) {
         finalUrl = finalUrl.replace(/https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/gi, 'https://dhamma.gift');
       }
 
@@ -2057,6 +2061,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- АУДИО ---
   document.getElementById('sm-audio').addEventListener('click', (e) => {
+    // ... [ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ] ...
     e.stopPropagation();
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
@@ -2086,6 +2091,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- ЗАКЛАДКА ---
   document.getElementById('sm-bookmark').addEventListener('click', (e) => {
+    // ... [ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ] ...
     e.stopPropagation();
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
@@ -2117,6 +2123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- MEMO (ЗАПОМИНАНИЕ) ---
   document.getElementById('sm-memo').addEventListener('click', (e) => {
+    // ... [ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ] ...
     e.stopPropagation();
     menu.classList.add('segment-menu-hidden');
     if (!currentContext) return;
@@ -2152,7 +2159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentLength = 0;
         let textArr = [];
         for (let i = startIndex; i < allValidElements.length; i++) {
-            // Очищаем текст от визуальных символов ссылки
             let text = (allValidElements[i].innerText || allValidElements[i].textContent).replace(/✦/g, '').trim();
             if (text) {
                 if (currentLength + text.length > MAX_CHARS) {
@@ -2183,6 +2189,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-});
+  // --- СРАВНИТЬ (COMPARE) - ЛОКАЛЬНАЯ И ОНЛАЙН ВЕРСИИ ---
+  document.getElementById('sm-compare').addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('segment-menu-hidden');
+    if (!currentContext) return;
 
+    const urlParams = new URLSearchParams(window.location.search);
+    let slug = urlParams.get('q');
+    if (!slug) return;
+    
+    slug = slug.split('&')[0].toLowerCase();
+
+    if (typeof get4ntUrl === 'function') {
+      let url4nt = get4ntUrl(slug);
+
+      if (url4nt) {
+        try {
+          let finalUrl;
+
+          if (window.isLocalHost) {
+            // ЛОКАЛЬНО: Используем оригинальный путь, который отдает get4ntUrl, просто меняем хэш
+            url4nt = url4nt.split('#')[0]; // отрезаем старый якорь, если был
+            finalUrl = `${url4nt}/?cols=pali%2Cpali_royal_iast%2Cpali_myanmar_iast%2Cpali_bjt_iast#tr-${slug}:${currentContext.hash}`;
+          } else {
+            // ОНЛАЙН: Парсим URL и перенаправляем на s.dhamma.gift с нужной структурой
+            const parsedUrl = new URL(url4nt, window.location.origin);
+            const bookMatch = slug.match(/^[a-z]+/i);
+            const book = bookMatch ? bookMatch[0].toLowerCase() : '';
+
+            parsedUrl.protocol = 'https:';
+            parsedUrl.hostname = 's.dhamma.gift';
+            parsedUrl.pathname = `/${book}/${slug}/`;
+            parsedUrl.hash = `#tr-${slug}:${currentContext.hash}`;
+            
+            finalUrl = parsedUrl.href;
+          }
+
+          window.open(finalUrl, '_blank');
+        } catch (err) {
+          console.error('Ошибка при формировании ссылки для сравнения:', err);
+        }
+      } else {
+        console.warn('Функция get4ntUrl не вернула ссылку для slug:', slug);
+      }
+    } else {
+      console.error('Функция get4ntUrl не определена на странице.');
+    }
+  });
+
+});
 
