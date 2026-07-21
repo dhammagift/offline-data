@@ -675,7 +675,16 @@ function getBjtUrl(slug) {
 function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     let scLink = "";
 
-    // DPR
+     // Voice
+    scLink += `<a data-slug="${texttype}/${slugReady}" href="javascript:void(0)" title="Text-to-Speech (Alt+R)" class="voice-link">Voice</a> `;
+
+    // 4nt
+    let url4nt = get4ntUrl(slug);
+    if (url4nt) {
+        scLink += `<a target="_blank" class="s4ntLink" title="s.4nt.org" href="${url4nt}">4nt</a> `;
+    }
+
+   // DPR
     let dprUrl = getDprUrl(slug);
     if (dprUrl) scLink += `<a target="_blank" title="Myanmar and Thai Editions at DPR" href="${dprUrl}">DPR</a> `;
 
@@ -683,17 +692,8 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     let bjtUrl = getBjtUrl(slug);
     if (bjtUrl) scLink += `<a target="_blank" title="Buddha Jayanthi (Sri Lanka Edition at Tipitaka.lk)" href="${bjtUrl}">BJT</a> `;
 
-    // Voice
-    scLink += `<a data-slug="${texttype}/${slugReady}" href="javascript:void(0)" title="Text-to-Speech (Alt+R)" class="voice-link">Voice</a>`;
-
-    // 4nt
-    let url4nt = get4ntUrl(slug);
-    if (url4nt) {
-        scLink += `&nbsp;<a target="_blank" class="s4ntLink" title="s.4nt.org" href="${url4nt}">4nt</a>`;
-    }
-
     // SC
-    scLink += ` <a target="_blank" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a>`;
+    scLink += `<a target="_blank" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a> `;
         
     // BB, TBW, Th.ru, Th.su
     // === ИСПРАВЛЕННЫЙ БЛОК ===
