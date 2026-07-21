@@ -9,6 +9,19 @@ window.isRuPath = window.location.pathname.includes('/r/') ||
                      window.location.pathname.includes('/mt/');
                      
 window.isLocalHost = window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');                     
+       
+                     
+function throttle(mainFunction, delay) {
+    let timerFlag = null;
+    return function (...args) {
+        if (timerFlag === null) {
+            mainFunction(...args);
+            timerFlag = setTimeout(() => {
+                timerFlag = null;
+            }, delay);
+        }
+    };
+}                     
                      
 function parseSlug(slug) {
 if (
@@ -278,31 +291,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 1. Срабатывание по наведению мыши
-    document.addEventListener('mousemove', (e) => {
-        checkTriggerZone(e.clientX, e.clientY);
-    }, { passive: true });
+// 1. Срабатывание по наведению мыши (оптимизировано)
+    document.addEventListener('mousemove', throttle((e) => {
+        checkTriggerZone(e.clientX, e.clientY, false);
+    }, 100), { passive: true });
 
-    // 2. Срабатывание по клику мыши (дублирует логику тапа)
+    // 2. Срабатывание по клику мыши
     document.addEventListener('mousedown', (e) => {
-        checkTriggerZone(e.clientX, e.clientY);
+        checkTriggerZone(e.clientX, e.clientY, false);
     }, { passive: true });
 
     // 3. Срабатывание по касанию пальцем
     document.addEventListener('touchstart', (e) => {
         if (e.touches.length > 0) {
-            checkTriggerZone(e.touches[0].clientX, e.touches[0].clientY);
+            checkTriggerZone(e.touches[0].clientX, e.touches[0].clientY, true);
         }
     }, { passive: true });
-	
 
-    document.addEventListener('mousemove', (e) => checkTriggerZone(e.clientX, e.clientY, false));
-    document.addEventListener('touchstart', (e) => {
-        if (e.touches.length > 0) checkTriggerZone(e.touches[0].clientX, e.touches[0].clientY, true);
-    }, { passive: true });
-
-    // ЛОГИКА СКРОЛЛА
-    window.addEventListener('scroll', function() {
+// ЛОГИКА СКРОЛЛА (Оптимизировано)
+    window.addEventListener('scroll', throttle(function() {
         if (ignoreScroll) return; 
 
         let st = window.pageYOffset || document.documentElement.scrollTop;
@@ -335,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Скролл ВНИЗ игнорируется: таймер просто дотикает и скроет кнопки сам
         
         lastScrollTop = st <= 0 ? 0 : st;
-    });
+    }, 150), { passive: true });
 
     // ОБРАБОТЧИКИ КЛИКОВ И МОДАЛЬНЫХ ОКОН
     if (gearBtn) {
@@ -1203,9 +1210,8 @@ window.getInstructionHTML = function(lang) {
   </div></div>`;
 };
 
-
-// Логика сдвига кнопки TTS при появлении кнопки ScrollToTop
-window.addEventListener('scroll', function() {
+// Логика сдвига кнопки TTS при появлении кнопки ScrollToTop (Оптимизировано)
+window.addEventListener('scroll', throttle(function() {
     const scrollBtn = document.getElementById('scrollToTopBtn');
     const ttsBtn = document.querySelector('.dynamic-tts-btn');
     
@@ -1220,8 +1226,7 @@ window.addEventListener('scroll', function() {
     } else {
         ttsBtn.classList.remove('shifted');
     }
-});
-
+}, 150), { passive: true });
 
 // ==========================================
 // ГЛОБАЛЬНЫЙ ОТСЛЕЖИВАТЕЛЬ ОТРИСОВКИ СУТТЫ
@@ -1659,7 +1664,8 @@ window.toggleThePali = window.toggleThePali || function() {
 
     window.addEventListener('suttaLoaded', () => { activeSlug = ''; syncTOC(); });
     window.addEventListener('dgSuttaRendered', () => { activeSlug = ''; syncTOC(); });
-    window.addEventListener('scroll', () => syncTOC(), { passive: true });
+window.addEventListener('scroll', throttle(() => syncTOC(), 150), { passive: true });
+  
 })();
 
 function generateLanguageLinks(modes = ['ru', 'en']) {
