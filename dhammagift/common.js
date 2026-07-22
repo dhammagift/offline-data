@@ -2250,10 +2250,13 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           let finalUrl;
 
+          // Извлекаем правильный расширенный якорь из готовой ссылки 4nt
+          const anchorBase = url4nt.split('#')[1] || slug;
+          const urlWithoutHash = url4nt.split('#')[0];
+
           if (window.isLocalHost) {
-            // ЛОКАЛЬНО: Используем оригинальный путь, который отдает get4ntUrl, просто меняем хэш
-            url4nt = url4nt.split('#')[0]; // отрезаем старый якорь, если был
-            finalUrl = `${url4nt}/?cols=pali%2Cpali_royal_iast%2Cpali_myanmar_iast%2Cpali_bjt_iast#tr-${slug}:${currentContext.hash}`;
+            // ЛОКАЛЬНО: Используем правильный путь без лишнего слэша перед ?cols и расширенный якорь
+            finalUrl = `${urlWithoutHash}?cols=pali%2Cpali_royal_iast%2Cpali_myanmar_iast%2Cpali_bjt_iast#tr-${anchorBase}:${currentContext.hash}`;
           } else {
             // ОНЛАЙН: Парсим URL и перенаправляем на s.dhamma.gift с нужной структурой
             const parsedUrl = new URL(url4nt, window.location.origin);
@@ -2263,7 +2266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parsedUrl.protocol = 'https:';
             parsedUrl.hostname = 's.dhamma.gift';
             parsedUrl.pathname = `/${book}/${slug}/`;
-            parsedUrl.hash = `#tr-${slug}:${currentContext.hash}`;
+            parsedUrl.hash = `#tr-${anchorBase}:${currentContext.hash}`;
             
             finalUrl = parsedUrl.href;
           }
