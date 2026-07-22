@@ -761,13 +761,11 @@ function buildThirdPartyLinksHTML(slug, slugReady, texttype, translator) {
     return scLink;
 }
 
-// 3. Функция наполнения (Hydration)
+// 3. Функция наполнения (Hydration) через MutationObserver
 function hydrateThirdPartyLinks() {
-    const containers = document.querySelectorAll('.deferred-links-container');
+    const containers = document.querySelectorAll('.deferred-links-container:not(.hydrated)');
     
-    if (containers.length === 0) return;
-
-    requestAnimationFrame(() => {
+    if (containers.length > 0) {
         containers.forEach(container => {
             const slug = container.getAttribute('data-slug');
             const slugReady = container.getAttribute('data-slugready');
@@ -775,16 +773,28 @@ function hydrateThirdPartyLinks() {
             const translator = container.getAttribute('data-translator');
             
             if (slug) {
-                // Вставляем вычисленный HTML в скрытый контейнер
+                container.classList.add('hydrated');
                 container.innerHTML = buildThirdPartyLinksHTML(slug, slugReady, texttype, translator);
                 
-                // Второй requestAnimationFrame для плавного появления
                 requestAnimationFrame(() => {
                     container.classList.add('links-loaded');
                 });
             }
         });
+        return;
+    }
+
+    // Если контейнеров еще нет в DOM, запускаем наблюдатель
+    const suttaArea = document.getElementById('sutta') || document.body;
+    const observer = new MutationObserver((mutations, obs) => {
+        const targetContainers = document.querySelectorAll('.deferred-links-container:not(.hydrated)');
+        if (targetContainers.length > 0) {
+            obs.disconnect(); // Как только появились — останавливаем наблюдатель
+            hydrateThirdPartyLinks(); // Запускаем наполнение
+        }
     });
+
+    observer.observe(suttaArea, { childList: true, subtree: true });
 }
 
 // 4. Привязка обработчиков к стандартным событиям приложения
@@ -2249,23 +2259,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (url4nt) {
         try {
           let finalUrl;
-
-          // Извлекаем правильный расширенный якорь из готовой ссылки 4nt
           const anchorBase = url4nt.split('#')[1] || slug;
           const urlWithoutHash = url4nt.split('#')[0];
+          const colsParams = "cols=pali%2Cpali_royal_iast%2Cpali_myanmar_iast%2Cpali_bjt_iast";
 
           if (window.isLocalHost) {
-            // ЛОКАЛЬНО: Используем правильный путь без лишнего слэша перед ?cols и расширенный якорь
-            finalUrl = `${urlWithoutHash}?cols=pali%2Cpali_royal_iast%2Cpali_myanmar_iast%2Cpali_bjt_iast#tr-${anchorBase}:${currentContext.hash}`;
+            // ЛОКАЛЬНО: Используем путь от get4ntUrl, добавляем колонки и расширенный якорь
+            finalUrl = `${urlWithoutHash}?${colsParams}#tr-${anchorBase}:${currentContext.hash}`;
           } else {
-            // ОНЛАЙН: Парсим URL и перенаправляем на s.dhamma.gift с нужной структурой
-            const parsedUrl = new URL(url4nt, window.location.origin);
-            const bookMatch = slug.match(/^[a-z]+/i);
-            const book = bookMatch ? bookMatch[0].toLowerCase() : '';
-
+            // ОНЛАЙН: Применяем ту же правильную логику к s.dhamma.gift
+            const parsedUrl = new URL(urlWithoutHash, window.location.origin);
             parsedUrl.protocol = 'https:';
             parsedUrl.hostname = 's.dhamma.gift';
-            parsedUrl.pathname = `/${book}/${slug}/`;
+            
+            // Убираем префикс /4nt, так как s.dhamma.gift — это уже корень
+            parsedUrl.pathname = parsedUrl.pathname.replace(/^\/4nt/, '');
+            
+            // Сохраняем параметры колонок и правильный якорь
+            parsedUrl.search = colsParams;
             parsedUrl.hash = `#tr-${anchorBase}:${currentContext.hash}`;
             
             finalUrl = parsedUrl.href;
@@ -2283,5 +2294,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  
 });
 
