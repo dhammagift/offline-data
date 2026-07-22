@@ -679,42 +679,49 @@ function getBjtUrl(slug) {
     return null;
 }
 
+// 1. Функция, которая отрабатывает при рендере (возвращает пустой контейнер с data-атрибутами)
+// Сохраняем оригинальное имя, чтобы не менять код в читалках
 function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
+    return `<span class="deferred-links-container" 
+                  data-slug="${slug}" 
+                  data-slugready="${slugReady}" 
+                  data-texttype="${texttype}" 
+                  data-translator="${translator}">
+            </span>`;
+}
+
+// 2. Основная функция генерации ссылок (внутренняя сборка HTML)
+function buildThirdPartyLinksHTML(slug, slugReady, texttype, translator) {
     let scLink = "";
 
-     // Voice
+    // Voice
     scLink += `<a data-slug="${texttype}/${slugReady}" href="javascript:void(0)" title="Text-to-Speech (Alt+R)" class="voice-link">Voice</a> `;
 
     // 4nt
-    let url4nt = get4ntUrl(slug);
+    let url4nt = typeof get4ntUrl === 'function' ? get4ntUrl(slug) : null;
     if (url4nt) {
         scLink += `<a target="_blank" class="s4ntLink" title="s.4nt.org" href="${url4nt}">4nt</a> `;
     }
 
-   // DPR
-    let dprUrl = getDprUrl(slug);
+    // DPR
+    let dprUrl = typeof getDprUrl === 'function' ? getDprUrl(slug) : null;
     if (dprUrl) scLink += `<a target="_blank" title="Myanmar and Thai Editions at DPR" href="${dprUrl}">DPR</a> `;
 
     // BJT
-    let bjtUrl = getBjtUrl(slug);
+    let bjtUrl = typeof getBjtUrl === 'function' ? getBjtUrl(slug) : null;
     if (bjtUrl) scLink += `<a target="_blank" title="Buddha Jayanthi (Sri Lanka Edition at Tipitaka.lk)" href="${bjtUrl}">BJT</a> `;
 
     // SC
     scLink += `<a target="_blank" title='SuttaCentral.net' href="https://suttacentral.net/${slug}">SC</a> `;
         
     // BB, TBW, Th.ru, Th.su
-    // === ИСПРАВЛЕННЫЙ БЛОК ===
     const isForceLocal = localStorage.getItem('forceLocal') === 'true';
-
     const isLocal = window.isLocalHost || isForceLocal;
 
     if (typeof tbwLinksData !== 'undefined') {
         const hasTbw = tbwLinksData.find(item => Array.isArray(item) ? item[0] === slug : item === slug);
         if (hasTbw) {
-            // Проверяем, не находимся ли мы уже в директории /b/
             const isBbPath = window.location.pathname.startsWith('/b/');
-
-            // BB — показываем только на локалхосте (или с флагом) и только если мы не на странице /b/
             if (!isBbPath && isLocal) {
                 scLink += ` <a target="" title="BB and Other translations" href="/b/?q=${slug}">BB</a>`;
             }
@@ -722,7 +729,6 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
             const bookMatch = slug.match(/^[a-z]+/);
             const book = bookMatch ? bookMatch[0] : "";
 
-            // TBW — ссылка зависит от окружения
             if (isLocal) {
                 scLink += ` <a target="_blank" title="TheBuddhasWords.net (Offline Copy)" href="/bw/${book}/${slug}.html">TBW</a>`;
             } else {
@@ -730,7 +736,6 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
             }
         }
     }
-    // =========================
 
     if (window.isRuPath) {
         if (typeof thruLinksData !== 'undefined') {
@@ -756,110 +761,141 @@ function generateThirdPartyLinks(slug, slugReady, texttype, translator) {
     return scLink;
 }
 
+// 3. Функция наполнения (Hydration)
+function hydrateThirdPartyLinks() {
+    const containers = document.querySelectorAll('.deferred-links-container');
+    
+    if (containers.length === 0) return;
+
+    requestAnimationFrame(() => {
+        containers.forEach(container => {
+            const slug = container.getAttribute('data-slug');
+            const slugReady = container.getAttribute('data-slugready');
+            const texttype = container.getAttribute('data-texttype');
+            const translator = container.getAttribute('data-translator');
+            
+            if (slug) {
+                // Вставляем вычисленный HTML в скрытый контейнер
+                container.innerHTML = buildThirdPartyLinksHTML(slug, slugReady, texttype, translator);
+                
+                // Второй requestAnimationFrame для плавного появления
+                requestAnimationFrame(() => {
+                    container.classList.add('links-loaded');
+                });
+            }
+        });
+    });
+}
+
+// 4. Привязка обработчиков к стандартным событиям приложения
+window.addEventListener('suttaLoaded', hydrateThirdPartyLinks);
+window.addEventListener('suttaRenderedCentral', hydrateThirdPartyLinks);
+
+
 
 // ==========================================================================
 // ПОИСК И ОТРИСОВКА ПРЕДЫДУЩЕЙ И СЛЕДУЮЩЕЙ СУТТЫ
 // ==========================================================================
 
 function renderNavigation(slug, slugReady) {
-    let params = new URLSearchParams(document.location.search);
-    let finder = (params.get("s") || "").replace(/ṃ/g, "ṁ");
-    let sQuery = params.has("s") ? `&s=${finder}` : "";
+    // Откладываем выполнение, чтобы не блокировать отрисовку основного текста
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            let params = new URLSearchParams(document.location.search);
+            let finder = (params.get("s") || "").replace(/ṃ/g, "ṁ");
+            let sQuery = params.has("s") ? `&s=${finder}` : "";
 
-    fetch("/assets/js/textinfo.json")
-        .then(response => {
-            if (!response.ok) throw new Error("Файл textinfo.js не найден!");
-            return response.text();
-        })
-        .then(text => {
-            let textInfo;
-            try {
-                textInfo = JSON.parse(text);
-            } catch(e) {
-                textInfo = new Function("return " + text.replace(/^(export default |const \\w+ = |let \\w+ = |var \\w+ = )/, '').replace(/;$/, ''))();
-            }
-            
-            // === НОВЫЙ КОД ДЛЯ ОБНОВЛЕНИЯ TITLE ===
-            let currentItem = textInfo[slug] || textInfo[slugReady];
-            let cleanSlug = slug.replace(/pli-tv-|b[ui]-vb-/g, "");
-            let newTitle = cleanSlug; // По умолчанию только номер
-
-            if (currentItem && currentItem.pi && currentItem.pi.trim() !== "~" && currentItem.pi.trim() !== "") {
-                let cleanPaliName = currentItem.pi.replace(/[0-9.-]/g, '').trim();
-                
-                if (cleanPaliName) {
-     
-                    let translatedName = "";
+            fetch("/assets/js/textinfo.json")
+                .then(response => {
+                    if (!response.ok) throw new Error("Файл textinfo.js не найден!");
+                    return response.text();
+                })
+                .then(text => {
+                    let textInfo;
+                    try {
+                        textInfo = JSON.parse(text);
+                    } catch(e) {
+                        textInfo = new Function("return " + text.replace(/^(export default |const \\w+ = |let \\w+ = |var \\w+ = )/, '').replace(/;$/, ''))();
+                    }
                     
-                    if (window.isRuPath && currentItem.ru && currentItem.ru.trim() !== "~") {
-                        translatedName = currentItem.ru.replace(/[0-9.-]/g, '').trim();
-                    } else if (!window.isRuPath && currentItem.en && currentItem.en.trim() !== "~") {
-                        translatedName = currentItem.en.replace(/[0-9.-]/g, '').trim();
-                    }
+                    let currentItem = textInfo[slug] || textInfo[slugReady];
+                    let cleanSlug = slug.replace(/pli-tv-|b[ui]-vb-/g, "");
+                    let newTitle = cleanSlug; 
 
-                    if (translatedName) {
-                        newTitle = `${cleanPaliName} ${translatedName} ${cleanSlug}`;
+                    if (currentItem && currentItem.pi && currentItem.pi.trim() !== "~" && currentItem.pi.trim() !== "") {
+                        let cleanPaliName = currentItem.pi.replace(/[0-9.-]/g, '').trim();
+                        
+                        if (cleanPaliName) {
+                            let translatedName = "";
+                            
+                            if (window.isRuPath && currentItem.ru && currentItem.ru.trim() !== "~") {
+                                translatedName = currentItem.ru.replace(/[0-9.-]/g, '').trim();
+                            } else if (!window.isRuPath && currentItem.en && currentItem.en.trim() !== "~") {
+                                translatedName = currentItem.en.replace(/[0-9.-]/g, '').trim();
+                            }
+
+                            if (translatedName) {
+                                newTitle = `${cleanPaliName} ${translatedName} ${cleanSlug}`;
+                            } else {
+                                newTitle = `${cleanPaliName} ${cleanSlug}`;
+                            }
+                        }
+                    }
+                    
+                    document.title = newTitle;
+                    
+                    let metaDesc = document.querySelector('meta[name="description"]');
+                    if (metaDesc) metaDesc.content = newTitle;
+                    let ogTitle = document.querySelector('meta[property="og:title"]');
+                    if (ogTitle) ogTitle.content = newTitle;
+
+                    const keys = Object.keys(textInfo);
+                    let currentIndex = keys.indexOf(slug);
+                    if (currentIndex === -1) currentIndex = keys.indexOf(slugReady);
+                    if (currentIndex === -1) return;
+
+                    const next = document.getElementById("next");
+                    const next2 = document.getElementById("next2");
+                    const previous = document.getElementById("previous");
+                    const previous2 = document.getElementById("previous2");
+
+                    if (currentIndex < keys.length - 1) {
+                        let nextSlug = keys[currentIndex + 1];
+                        let nextInfo = textInfo[nextSlug] || {};
+                        let nextName = (nextInfo.pi || nextInfo.ru || nextInfo.en || "").replace(/[0-9.-]/g, '').trim();
+                        let nextPrint = nextName === "" ? nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "") : `${nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "")} <span class="sutta-name"> ${nextName}</span>`;
+                        
+                        let htmlNext = `<a href="?q=${nextSlug}${sQuery}">${nextPrint.trim()}
+                            <svg xmlns="http://www.w3.org/2000/svg" id="body_1" width="15" height="11">
+                                <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)"><g><path d="M202.1 450C 196.03278 449.9987 190.56381 446.34256 188.24348 440.73654C 185.92316 435.13055 187.20845 428.67883 191.5 424.39L191.5 424.39L365.79 250.1L191.5 75.81C 185.81535 69.92433 185.89662 60.568687 191.68266 54.782654C 197.46869 48.996624 206.82434 48.91536 212.71 54.6L212.71 54.6L397.61 239.5C 403.4657 245.3575 403.4657 254.8525 397.61 260.71L397.61 260.71L212.70999 445.61C 209.89557 448.4226 206.07895 450.0018 202.1 450z" fill="#8f8f8f"/></g></g>
+                            </svg></a>`;
+                        if (next) next.innerHTML = htmlNext;
+                        if (next2) next2.innerHTML = htmlNext.replace(/class="sutta-name"/g, '');
                     } else {
-                        newTitle = `${cleanPaliName} ${cleanSlug}`;
+                        if (next) next.innerHTML = "";
+                        if (next2) next2.innerHTML = "";
                     }
-                }
-            }
-            
-            document.title = newTitle;
-            
-            let metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.content = newTitle;
-            let ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) ogTitle.content = newTitle;
-            // =======================================
 
-            const keys = Object.keys(textInfo);
-            let currentIndex = keys.indexOf(slug);
-            if (currentIndex === -1) currentIndex = keys.indexOf(slugReady);
-            if (currentIndex === -1) return;
-
-            const next = document.getElementById("next");
-            const next2 = document.getElementById("next2");
-            const previous = document.getElementById("previous");
-            const previous2 = document.getElementById("previous2");
-
-            // --- Отрисовка СЛЕДУЮЩЕЙ ---
-            if (currentIndex < keys.length - 1) {
-                let nextSlug = keys[currentIndex + 1];
-                let nextInfo = textInfo[nextSlug] || {};
-                let nextName = (nextInfo.pi || nextInfo.ru || nextInfo.en || "").replace(/[0-9.-]/g, '').trim();
-                let nextPrint = nextName === "" ? nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "") : `${nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "")} <span class="sutta-name"> ${nextName}</span>`;
-                
-                let htmlNext = `<a href="?q=${nextSlug}${sQuery}">${nextPrint.trim()}
-                    <svg xmlns="http://www.w3.org/2000/svg" id="body_1" width="15" height="11">
-                        <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)"><g><path d="M202.1 450C 196.03278 449.9987 190.56381 446.34256 188.24348 440.73654C 185.92316 435.13055 187.20845 428.67883 191.5 424.39L191.5 424.39L365.79 250.1L191.5 75.81C 185.81535 69.92433 185.89662 60.568687 191.68266 54.782654C 197.46869 48.996624 206.82434 48.91536 212.71 54.6L212.71 54.6L397.61 239.5C 403.4657 245.3575 403.4657 254.8525 397.61 260.71L397.61 260.71L212.70999 445.61C 209.89557 448.4226 206.07895 450.0018 202.1 450z" fill="#8f8f8f"/></g></g>
-                    </svg></a>`;
-                if (next) next.innerHTML = htmlNext;
-                if (next2) next2.innerHTML = htmlNext.replace(/class="sutta-name"/g, '');
-            } else {
-                if (next) next.innerHTML = "";
-                if (next2) next2.innerHTML = "";
-            }
-
-            // --- Отрисовка ПРЕДЫДУЩЕЙ ---
-            if (currentIndex > 0) {
-                let prevSlug = keys[currentIndex - 1];
-                let prevInfo = textInfo[prevSlug] || {};
-                let prevName = (prevInfo.pi || prevInfo.ru || prevInfo.en || "").replace(/[0-9.-]/g, '').trim();
-                let prevPrint = prevName === "" ? prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "") : `${prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "")} <span class="sutta-name"> ${prevName}</span>`;
-                
-                let htmlPrev = `<a href="?q=${prevSlug}${sQuery}">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="body_1" width="15" height="11">
-                        <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)"><g><path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" fill="#8f8f8f"/></g></g>
-                    </svg>${prevPrint.trim()}</a>`;
-                if (previous) previous.innerHTML = htmlPrev;
-                if (previous2) previous2.innerHTML = htmlPrev.replace(/class="sutta-name"/g, '');
-            } else {
-                if (previous) previous.innerHTML = "";
-                if (previous2) previous2.innerHTML = "";
-            }
-        })
-        .catch(err => console.error("Ошибка Пред/След:", err));
+                    if (currentIndex > 0) {
+                        let prevSlug = keys[currentIndex - 1];
+                        let prevInfo = textInfo[prevSlug] || {};
+                        let prevName = (prevInfo.pi || prevInfo.ru || prevInfo.en || "").replace(/[0-9.-]/g, '').trim();
+                        let prevPrint = prevName === "" ? prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "") : `${prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "")} <span class="sutta-name"> ${prevName}</span>`;
+                        
+                        let htmlPrev = `<a href="?q=${prevSlug}${sQuery}">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="body_1" width="15" height="11">
+                                <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)"><g><path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" fill="#8f8f8f"/></g></g>
+                            </svg>${prevPrint.trim()}</a>`;
+                        if (previous) previous.innerHTML = htmlPrev;
+                        if (previous2) previous2.innerHTML = htmlPrev.replace(/class="sutta-name"/g, '');
+                    } else {
+                        if (previous) previous.innerHTML = "";
+                        if (previous2) previous2.innerHTML = "";
+                    }
+                })
+                .catch(err => console.error("Ошибка Пред/След:", err));
+        }, 0);
+    });
 }
 
 // ==========================================================================
