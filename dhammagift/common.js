@@ -914,9 +914,14 @@ function renderNavigation(slug, slugReady) {
 
 window.siteTranslators = null; // Создаем глобальную переменную для имен
 
-async function getTranslator(texttype, slugReady, lang = 'ru') {
-  // 1. Сначала пробуем PHP-поиск (строго до любых других фетчей)
-  let phpUrl = `/read/php/translator-lookup.php?fromjs=${texttype}/${slugReady}&lang=${lang}`;
+async function getTranslator(texttype, slug, lang = 'ru') {
+  // 1. Сначала пробуем PHP-поиск. 
+  // Если бэкенд ожидает только slugReady (как в рабочем примере из терминала: mn44):
+  let phpUrl = `/read/php/translator-lookup.php?fromjs=${slug}&lang=${lang}`;
+  
+  // Если вашему PHP всё-таки нужен полный путь, но в другом формате, 
+  // поменяйте форму строки выше, например: `${texttype}/${slugReady}` замените на то, что нужно.
+
   try {
     const phpResponse = await fetch(phpUrl);
     if (phpResponse.ok) {
@@ -936,7 +941,7 @@ async function getTranslator(texttype, slugReady, lang = 'ru') {
     );
   }
 
-  // 2. Если PHP не дал результатов, определяем дефолтного переводчика для языка
+  // 2. Если PHP ничего не вернул, определяем дефолтного переводчика
   let defaultTr = 'o';
   if (lang === 'th') {
     defaultTr = 'siamrath';
@@ -946,7 +951,7 @@ async function getTranslator(texttype, slugReady, lang = 'ru') {
     defaultTr = 'bodhi';
   }
 
-  // 3. Подгружаем translators.json только если PHP не сработал
+  // 3. Загружаем translators.json только при провале PHP
   let translatorsData = {};
   if (window.siteTranslators) {
     translatorsData = window.siteTranslators;
@@ -989,7 +994,6 @@ async function getTranslator(texttype, slugReady, lang = 'ru') {
     return defaultTr;
   }
 }
-
 
 // ==========================================================================
 // ГЛОБАЛЬНЫЕ ФУНКЦИИ ДЛЯ РАБОТЫ С ВАРИАНТАМИ ЧТЕНИЯ (VARIANTS)
