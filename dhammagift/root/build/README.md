@@ -24,8 +24,9 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 ## Rules
 
 - The edition text is not edited. BJT is transliterated from Sinhala to Roman, `th` from Thai script to Roman
-  (`ṃ`, no capitals, as printed; Thai `ฯ` is `.`, `ฯเปฯ` is `.pe.`, a word broken with `-` at a line end is joined),
-  `my` is used as VRI gives it. Typos of the source stay (`th` an1.1 `paccassosasa`). Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
+  (`ṃ`, no capitals, as printed; Thai `ฯ` is `.`, a word broken with `-` at a line end is joined),
+  `my` is used as VRI gives it. Peyyāla marks are written as in `ms` in all editions: `…pe…`, `…la…`, `…pa…`
+  (BJT `-pe-`, Thai `ฯเปฯ`; `...` is `…`). Typos of the source stay (`th` an1.1 `paccassosasa`). Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
 - Every word of the edition goes to exactly one segment; joining the segments gives the whole edition text in its order
   (the build stops if not). Words `ms` does not have go to the neighbour segment, `ms` words the edition does not have
   leave the segment empty (peyyāla expanded on one side, abbreviated on the other).

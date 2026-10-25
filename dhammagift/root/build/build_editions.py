@@ -185,6 +185,7 @@ def bjt_entries(files):
             first = True
             for e in page['pali']['entries']:
                 raw = si2ro(e['text']).replace('**', '').replace('__', '')
+                raw = re.sub(r'-(pe|la)-', r'…\1…', raw).replace('...', '…')  # peyyāla marks as in ms
                 markers, buf, pos = [], [], 0
                 for m in BJT_MARK.finditer(raw):
                     buf.append(raw[pos:m.start()])
@@ -340,7 +341,9 @@ TH_VIRAMA, TH_NIGGAHITA = 'ฺ', 'ํ'
 
 
 def th2ro(s):
-    s = s.replace('ฯเปฯ', ' .pe. ').replace('ฯลฯ', ' .la. ')
+    # peyyāla marks written as in ms: …pe…, …la…
+    s = re.sub(r'\s*ฯ\s*(เป|ล|ป)\s*ฯ', lambda m: ' …%s… ' % {'เป': 'pe', 'ล': 'la', 'ป': 'pa'}[m.group(1)], s)
+    s = s.replace('...', '…')
     s = re.sub(r'\s*ฯ', '.', s)
     out, pre, i, n = [], None, 0, len(s)
     while i < n:
