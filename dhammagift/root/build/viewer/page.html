@@ -1,0 +1,502 @@
+<title>Сверка изданий канона</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky bar with book links and switches, then the whole book as one concordance grid:
+   one row per SC segment, one column per edition, suttas one after another. */
+:root {
+  --bg: #f4f5f2;
+  --surface: #ffffff;
+  --fg: #1c2320;
+  --muted: #66706b;
+  --line: #dde1dc;
+  --accent: #0e6a5a;
+  --diff: #f6e3b4;
+  --diff-fg: #4a3500;
+  --flag: #c2362b;
+  --flag-bg: #fbe7e4;
+  --sus: #c98a00;
+  --ms: #4b5561;
+  --bjt: #b05a12;
+  --my: #1f63a8;
+  --th: #7d3a96;
+  --head-bg: #eaeee9;
+  --font-text: "Gentium Book Plus", "Noto Serif", "Georgia", serif;
+  --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
+    --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a;
+    --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
+  --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a;
+  --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 14px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1600px; margin: 0 auto; }
+header.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: 12px 10px; border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.titlerow { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
+h1 { font-family: var(--font-text); font-weight: 700; font-size: 1.35rem; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); font-size: .82rem; }
+.row-ctl { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.books { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+#booksel { max-width: min(320px, 100%); font-family: var(--font-mono); font-size: .82rem; }
+.books a { font-family: var(--font-mono); font-size: .8rem; color: var(--fg); text-decoration: none; padding: 3px 8px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.books a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.books a:hover { border-color: var(--accent); }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 8px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--surface); cursor: pointer; user-select: none; font-size: .84rem; }
+.chip input { margin: 0; accent-color: var(--accent); }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+.fill { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+button, select, input[type="text"] { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; min-height: 30px; }
+button { cursor: pointer; }
+button:hover { border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.flagbtn { border-color: var(--flag); color: var(--flag); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .78rem; color: var(--muted); }
+.legend mark { background: var(--diff); color: var(--diff-fg); padding: 0 3px; border-radius: 3px; }
+.legend .s { border-bottom: 2px dotted var(--sus); }
+.legend .f { color: var(--flag); font-weight: 600; }
+
+.panel { margin-top: 10px; border: 1px solid var(--flag); border-radius: 8px; background: var(--surface); padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+.panel[hidden] { display: none; }
+.panel h2 { margin: 0; font-size: .9rem; color: var(--flag); }
+.panel ol { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 3px; max-height: 40vh; overflow: auto; }
+.panel a { color: var(--fg); }
+.panel .k { font-family: var(--font-mono); font-size: .8rem; }
+.panel .n { color: var(--muted); }
+
+.grid { margin-top: 12px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.row { display: grid; grid-template-columns: var(--cols); border-top: 1px solid var(--line); }
+.row.colhead { background: var(--head-bg); border-top: 0; }
+.row.colhead .cell { font-family: var(--font-ui); font-size: .78rem; font-weight: 600; letter-spacing: .04em; padding-block: 6px; }
+.row.sutta { background: var(--accent); color: var(--bg); border-top: 0; }
+.row.sutta .cell { font-family: var(--font-mono); font-size: .82rem; font-weight: 500; padding-block: 5px; border-left-color: transparent; }
+.row.h0 { background: var(--head-bg); }
+.row.h0 .cell { font-weight: 700; }
+.row.flag { background: var(--flag-bg); box-shadow: inset 4px 0 0 var(--flag); }
+.cell { padding: 6px 10px; min-width: 0; font-family: var(--font-text); font-size: 1.02rem; line-height: 1.45; overflow-wrap: anywhere; border-left: 1px solid var(--line); }
+.cell:first-child { border-left: 0; }
+.key { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); padding-top: 9px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.key:hover { color: var(--flag); }
+.row.flag .key { color: var(--flag); font-weight: 600; }
+.cell .edlabel { display: none; }
+.empty { color: var(--muted); opacity: .5; }
+.d { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
+.gap { display: inline-block; width: .35em; height: 1.05em; vertical-align: -0.18em; background: var(--diff); border-radius: 2px; }
+.w.ins { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
+.cell.sus { box-shadow: inset 0 -3px 0 var(--sus); }
+.cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
+.notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+.notes .var::before { content: "вар. "; font-weight: 600; }
+.notes .ref { font-family: var(--font-mono); font-size: .7rem; }
+.flagnote { grid-column: 1 / -1; padding: 2px 10px 6px calc(var(--keyw) + 10px); font-size: .8rem; color: var(--flag); font-family: var(--font-ui); }
+.editor { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; padding: 8px 10px; border-top: 1px dashed var(--flag); background: var(--surface); font-family: var(--font-ui); }
+.editor input[type="text"] { flex: 1 1 260px; min-width: 0; }
+.editor .save { background: var(--flag); border-color: var(--flag); color: var(--surface); font-weight: 600; }
+.status { padding: 24px 12px; color: var(--muted); font-family: var(--font-ui); }
+.colname { display: inline-flex; align-items: center; gap: 6px; }
+
+@media (max-width: 760px) {
+  header.top { position: static; }
+  .row { grid-template-columns: 1fr; }
+  .row.colhead { display: none; }
+  .cell { border-left: 0; padding: 4px 12px; }
+  .key { padding-top: 8px; }
+  .cell .edlabel { display: inline-block; font-family: var(--font-mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .06em; margin-right: 8px; vertical-align: 1px; }
+  .flagnote { padding-left: 12px; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="titlerow">
+      <h1>Сверка изданий канона</h1>
+      <span class="sub">Махасангити (SC ms), Буддха Джаянти (BJT), Чаттха Сангаяна (VRI), Сиам Рат 1927. Вся книга на одной странице, по сегментам SuttaCentral</span>
+    </div>
+    <nav class="books" aria-label="Книги">
+      <span id="colls" class="books"></span>
+      <button type="button" id="prevbook" aria-label="Предыдущая книга">←</button>
+      <select id="booksel" aria-label="Книга"></select>
+      <button type="button" id="nextbook" aria-label="Следующая книга">→</button>
+    </nav>
+    <div class="row-ctl">
+      <span id="edchips" class="row-ctl"></span>
+      <label class="chip" title="BJT, Myanmar и Thai голосуют по каждому слову; ms сверяется с итогом"><input type="checkbox" id="optdiff" checked> разночтения (2 из 3)</label>
+      <label class="chip"><input type="checkbox" id="optnotes"> разночтения и страницы</label>
+      <label class="chip"><input type="checkbox" id="optsus" checked> подозрительные</label>
+      <button type="button" id="flagsbtn" class="flagbtn">Отмечено: 0</button>
+    </div>
+    <div class="legend">
+      <span>жёлтым: буквы, где издание расходится с двумя другими (bah<mark>u</mark>kāro; если у других тут лишние буквы, закрашена буква перед этим местом); слово целиком: в других изданиях его нет</span>
+      <span>ms подсвечен, только где отличается от всех трёх</span>
+      <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
+      <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
+    </div>
+    <section class="panel" id="flagpanel" hidden>
+      <h2 id="flagtitle">Отмеченные сегменты</h2>
+      <div><button type="button" id="copyflags">Скопировать список</button> <span id="copymsg" class="n"></span></div>
+      <ol id="flaglist"></ol>
+    </section>
+  </header>
+  <main>
+    <div class="grid" id="grid"><div class="status">Загрузка…</div></div>
+  </main>
+</div>
+
+<script>
+const EDS = [
+  { id: 'ms', name: 'ms', full: 'Махасангити (SC)', color: 'var(--ms)', col: 1 },
+  { id: 'bjt', name: 'BJT', full: 'Буддха Джаянти, Шри-Ланка', color: 'var(--bjt)', col: 2 },
+  { id: 'my', name: 'Myanmar', full: 'Чаттха Сангаяна, VRI', color: 'var(--my)', col: 3 },
+  { id: 'th', name: 'Thai', full: 'Сиам Рат 1927', color: 'var(--th)', col: 4 },
+];
+const state = { index: [], cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true }, flags: new Map(), db: null, uid: null, canWrite: true };
+const $ = id => document.getElementById(id);
+function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function recall(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function norm(w) { return w.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/æ/g, 'a').replace(/[^a-z0-9]/g, ''); }
+const SPLIT = /(\s+|[—–…]+)/;
+function wc(t) { return t ? t.split(/[\s—–…]+/).filter(x => norm(x)).length : 0; }
+/* ---------- variant readings: BJT, Myanmar, Thai vote word by word; ms is checked against them ---------- */
+function strict(w) { return w.toLowerCase().normalize('NFC').replace(/ṁ/g, 'ṃ').replace(/l̤/g, 'ḷ').replace(/[^\p{L}\p{M}]/gu, ''); }
+function tokenize(text) {
+  const parts = [], wordsArr = [];
+  for (const t of (text || '').split(SPLIT)) {
+    if (!t) continue;
+    if (/^(\s+|[—–…]+)$/.test(t) || !norm(t)) { parts.push({ sep: t }); continue; }
+    const w = { s: t, k: strict(t), n: norm(t) };
+    parts.push({ w: wordsArr.length }); wordsArr.push(w);
+  }
+  return { parts, words: wordsArr };
+}
+function lcsPairs(a, b, eq) {
+  const n = a.length, m = b.length, dp = Array.from({ length: n + 1 }, () => new Int16Array(m + 1));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    dp[i][j] = eq(a[i], b[j]) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const out = []; let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (eq(a[i], b[j])) { out.push([i, j]); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+  }
+  return out;
+}
+function sim(a, b) {
+  const p = lcsPairs([...a], [...b], (x, y) => x === y).length;
+  return 2 * p / Math.max(1, a.length + b.length);
+}
+/* map word i of A to a word of B (or -1): same word without diacritics, then leftovers in order if alike */
+function alignWords(A, B) {
+  const map = new Array(A.length).fill(-1);
+  const pairs = lcsPairs(A, B, (x, y) => x.n === y.n);
+  let pi = 0, pj = 0;
+  for (const [i, j] of [...pairs, [A.length, B.length]]) {
+    let q = pj;  // leftovers: each word takes the most alike word still free, keeping the order
+    for (let a = pi; a < i && q < j; a++) {
+      let best = -1, bs = 0.5;
+      for (let c = q; c < j; c++) { const v = sim(A[a].n, B[c].n); if (v >= bs) { bs = v; best = c; } }
+      if (best >= 0) { map[a] = best; q = best + 1; }
+    }
+    if (i < A.length) map[i] = j;
+    pi = i + 1; pj = j + 1;
+  }
+  return map;
+}
+/* letters of a that the other word lacks are marked; a thin bar where the other word has letters a lacks */
+function charDiff(a, b) {
+  /* letters of a that differ from b are coloured; where b has letters a lacks, the letter before the spot */
+  const chars = [...a.normalize('NFC')];
+  const letters = [], pos = [];
+  chars.forEach((c, i) => { const k = strict(c); if (k) { letters.push(k); pos.push(i); } });
+  const other = [...b.k];
+  const pairs = lcsPairs(letters, other, (x, y) => x === y);
+  const mark = new Array(chars.length).fill(false);
+  let pj = 0, pl = 0;
+  for (const [li, j] of [...pairs, [letters.length, other.length]]) {
+    for (let k = pl; k < li; k++) mark[pos[k]] = true;
+    if (j > pj && li === pl && letters.length) mark[pos[pl > 0 ? pl - 1 : 0]] = true;
+    pj = j + 1; pl = li + 1;
+  }
+  let h = '', run = '';
+  chars.forEach((c, i) => {
+    if (mark[i]) { run += c; return; }
+    if (run) { h += `<span class="d">${esc(run)}</span>`; run = ''; }
+    h += esc(c);
+  });
+  if (run) h += `<span class="d">${esc(run)}</span>`;
+  return h;
+}
+const VOTERS = ['bjt', 'my', 'th'];
+function readings(row) {
+  const T = { ms: tokenize(row[1]), bjt: tokenize(row[2]), my: tokenize(row[3]), th: tokenize(row[4]) };
+  const maps = {};
+  for (const x of ['ms', ...VOTERS]) for (const y of VOTERS) if (x !== y && T[x].words.length && T[y].words.length)
+    maps[x + '>' + y] = alignWords(T[x].words, T[y].words);
+  const html = {};
+  for (const x of ['ms', ...VOTERS]) {
+    const others = VOTERS.filter(y => y !== x && T[y].words.length);
+    html[x] = T[x].parts.map(p => {
+      if (p.sep !== undefined) return esc(p.sep);
+      const w = T[x].words[p.w];
+      if (!others.length) return esc(w.s);
+      const cands = others.map(y => { const j = maps[x + '>' + y][p.w]; return j >= 0 ? T[y].words[j] : null; });
+      if (cands.some(c => c && c.k === w.k)) return esc(w.s);
+      const present = cands.filter(Boolean);
+      if (!present.length) return `<span class="w ins">${esc(w.s)}</span>`;
+      let ref = present[0];
+      if (!(present.length === 2 && present[0].k === present[1].k))
+        ref = present.reduce((b, c) => sim(c.k, w.k) > sim(b.k, w.k) ? c : b);
+      return charDiff(w.s, ref);
+    }).join('');
+  }
+  return html;
+}
+function plain(text) { return text ? esc(text) : '<span class="empty">—</span>'; }
+const bookOf = key => key.split(':')[0].split('.')[0];
+
+async function loadBook(book) {
+  if (!state.cache[book]) {
+    const r = await fetch(`data/${book}.json`);
+    if (!r.ok) throw new Error(`Не удалось загрузить ${book} (${r.status})`);
+    state.cache[book] = await r.json();
+  }
+  return state.cache[book];
+}
+
+const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN' };
+const collOf = b => b.match(/^[a-z]+/)[0];
+function renderNav() {
+  const cur = collOf(state.book);
+  $('colls').innerHTML = Object.entries(COLLS).filter(([c]) => state.index.some(b => collOf(b.book) === c)).map(([c, n]) =>
+    `<a href="#${state.index.find(b => collOf(b.book) === c).book}" ${c === cur ? 'aria-current="page"' : ''}>${n}</a>`).join('');
+  $('booksel').innerHTML = state.index.filter(b => collOf(b.book) === cur).map(b => {
+    const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} файлов`;
+    return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}</option>`;
+  }).join('');
+  $('booksel').value = state.book;
+  const i = state.index.findIndex(b => b.book === state.book);
+  $('prevbook').disabled = i <= 0; $('nextbook').disabled = i >= state.index.length - 1;
+  const b = state.index.find(x => x.book === state.book);
+  $('edchips').innerHTML = EDS.map(e => `
+    <label class="chip" title="${e.full}"><input type="checkbox" data-ed="${e.id}" ${state.show[e.id] ? 'checked' : ''}>
+      <span class="dot" style="background:${e.color}"></span>${e.name}
+      ${e.id !== 'ms' && b ? `<span class="fill" title="заполнено сегментов в книге">${b.fill[e.id]}%</span>` : ''}</label>`).join('');
+  $('edchips').querySelectorAll('input').forEach(i => i.addEventListener('change', () => {
+    state.show[i.dataset.ed] = i.checked; store('show', state.show); render();
+  }));
+}
+
+async function render() {
+  const grid = $('grid');
+  let data;
+  try { data = await loadBook(state.book); }
+  catch (e) { grid.innerHTML = `<div class="status">${esc(e.message)}. Обновите страницу.</div>`; return; }
+  const eds = EDS.filter(e => state.show[e.id]);
+  const diff = $('optdiff').checked, notes = $('optnotes').checked, sus = $('optsus').checked;
+  const keyw = '7.6em';
+  grid.style.setProperty('--cols', `${keyw} repeat(${eds.length}, minmax(0, 1fr))`);
+  grid.style.setProperty('--keyw', keyw);
+  const out = [`<div class="row colhead"><div class="cell key">сегмент</div>${eds.map(e =>
+    `<div class="cell"><span class="colname" title="${e.full}"><span class="dot" style="background:${e.color}"></span>${e.name}</span></div>`).join('')}</div>`];
+  for (const s of data.suttas) {
+    out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
+    for (const row of s.rows) {
+      const [key, ms] = row;
+      const head = /:0\.\d+$/.test(key) || /:\d+\.0$/.test(key);
+      const rd = diff ? readings(row) : null;
+      const msw = wc(ms);
+      let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: отметить проблему">${key}</div>`;
+      for (const e of eds) {
+        const text = row[e.col];
+        const isSus = sus && e.id !== 'ms' && !head && wc(text) > 2 * msw + 8;
+        let cell = `<span class="edlabel" style="color:${e.color}">${e.name}</span>` + (rd && text && !(head && e.id === 'ms') ? rd[e.id] : plain(text));
+        if (notes && e.id !== 'ms') {
+          const v = s.var[e.id]?.[key], r = s.ref[e.id]?.[key];
+          if (v || r) cell += `<div class="notes">${v ? `<span class="var">${esc(v)}</span>` : ''}${r ? `<span class="ref">${esc(r)}</span>` : ''}</div>`;
+        }
+        h += `<div class="cell${isSus ? ' sus' : ''}" data-ed="${e.id}">${cell}</div>`;
+      }
+      out.push(h + '</div>');
+    }
+  }
+  grid.innerHTML = out.join('');
+  paintFlags();
+}
+
+/* ---------- problem marks (shared, in the page's db) ---------- */
+function paintFlags() {
+  document.querySelectorAll('.row.flag').forEach(r => {
+    r.classList.remove('flag'); r.querySelectorAll('.flagged').forEach(c => c.classList.remove('flagged'));
+    r.querySelector('.flagnote')?.remove();
+  });
+  for (const [key, f] of state.flags) {
+    const r = document.getElementById('r:' + key);
+    if (!r) continue;
+    r.classList.add('flag');
+    (f.eds || []).forEach(ed => r.querySelector(`.cell[data-ed="${ed}"]`)?.classList.add('flagged'));
+    const label = (f.eds || []).map(ed => EDS.find(e => e.id === ed)?.name).filter(Boolean).join(', ');
+    if (f.note || label) {
+      const n = document.createElement('div');
+      n.className = 'flagnote';
+      n.textContent = (label ? label + ': ' : '') + (f.note || '');
+      r.appendChild(n);
+    }
+  }
+  const list = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0));
+  $('flagsbtn').textContent = `Отмечено: ${list.length}`;
+  $('flaglist').innerHTML = list.length ? list.map(f => `<li><a href="#${esc(f.key)}" class="k">${esc(f.key)}</a>
+    <span class="n">${esc((f.eds || []).map(ed => EDS.find(e => e.id === ed)?.name).join(', '))}${f.note ? ' · ' + esc(f.note) : ''}</span></li>`).join('')
+    : '<li class="n">Пока ничего не отмечено. Кликните по номеру сегмента в таблице.</li>';
+  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)'
+    : 'Отмеченные сегменты (хранятся в этом браузере; чтобы передать, скопируйте список)';
+}
+
+function closeEditor() { document.querySelector('.editor')?.remove(); }
+function openEditor(row) {
+  const key = row.dataset.key;
+  if (document.querySelector('.editor')?.dataset.key === key) { closeEditor(); return; }
+  closeEditor();
+  if (!state.canWrite) { alertRow(row, 'У вас доступ только на чтение, отмечать нельзя.'); return; }
+  const f = state.flags.get(key) || { eds: [], note: '' };
+  const ed = document.createElement('div');
+  ed.className = 'editor'; ed.dataset.key = key;
+  ed.innerHTML = `<span class="k" style="font-family:var(--font-mono);font-size:.8rem">${esc(key)}</span>
+    ${EDS.map(e => `<label class="chip"><input type="checkbox" value="${e.id}" ${f.eds?.includes(e.id) ? 'checked' : ''}>
+      <span class="dot" style="background:${e.color}"></span>${e.name}</label>`).join('')}
+    <input type="text" id="flagnote-input" placeholder="что не так (например: перелив из следующей сутты)" value="${esc(f.note || '')}">
+    <button type="button" class="save">${state.flags.has(key) ? 'Сохранить' : 'Отметить'}</button>
+    ${state.flags.has(key) ? '<button type="button" class="del">Снять отметку</button>' : ''}
+    <button type="button" class="cancel">Отмена</button><span class="msg" style="color:var(--flag)"></span>`;
+  row.appendChild(ed);
+  const inp = ed.querySelector('input[type="text"]');
+  inp.focus();
+  const msg = t => { ed.querySelector('.msg').textContent = t; };
+  const save = async () => {
+    const eds = [...ed.querySelectorAll('input[type="checkbox"]:checked')].map(i => i.value);
+    const body = { key, book: bookOf(key), eds, note: inp.value.trim(), at: Date.now() };
+    if (state.uid) body.by = state.uid;
+    try { await store_.set(key, body); closeEditor(); }
+    catch (e) { msg(e.code === 'invalid_argument' ? 'Нет прав на запись.' : 'Не сохранилось, попробуйте ещё раз.'); if (e.code === 'invalid_argument') state.canWrite = false; }
+  };
+  ed.querySelector('.save').onclick = save;
+  inp.addEventListener('keydown', ev => { if (ev.key === 'Enter') save(); if (ev.key === 'Escape') closeEditor(); });
+  ed.querySelector('.cancel').onclick = closeEditor;
+  const del = ed.querySelector('.del');
+  if (del) del.onclick = async () => {
+    try { await store_.del(key); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
+  };
+}
+function alertRow(row, text) {
+  const ed = document.createElement('div');
+  ed.className = 'editor'; ed.dataset.key = row.dataset.key; ed.textContent = text;
+  row.appendChild(ed);
+}
+
+/* marks live in the artifact's shared db on claude.ai; anywhere else (own server, local file) in this browser */
+const local = {
+  load() { state.flags = new Map(Object.entries(recall('flags', {}))); paintFlags(); },
+  save() { store('flags', Object.fromEntries(state.flags)); paintFlags(); },
+  async set(key, body) { state.flags.set(key, body); this.save(); },
+  async del(key) { state.flags.delete(key); this.save(); },
+};
+let store_ = local;
+async function connect() {
+  const use = window.claude?.use;
+  if (!use) { local.load(); return; }
+  const [db, user] = await Promise.all([use('db'), use('user')]);
+  if (!db) { local.load(); return; }
+  state.db = db;
+  store_ = { set: (key, body) => db.collection('flags').doc(key).set(body), del: key => db.collection('flags').doc(key).delete() };
+  if (user) {
+    try { state.uid = await user.id(); } catch (e) {}
+    try { const c = await user.can('data.write'); if (c === false) state.canWrite = false; } catch (e) {}
+  }
+  db.collection('flags').onSnapshot(snap => {
+    state.flags = new Map(snap.docs.filter(d => d.exists).map(d => [d.id, d.data()]));
+    paintFlags();
+  }, () => { paintFlags(); });
+}
+
+/* ---------- navigation ---------- */
+async function go(target) {
+  const m = (target || '').match(/^([a-z]+\d+)/);
+  const book = m && state.index.some(b => b.book === m[1]) ? m[1] : state.book || state.index[0].book;
+  if (book !== state.book) {
+    state.book = book; store('book', book);
+    renderNav();
+    $('grid').innerHTML = '<div class="status">Загрузка…</div>';
+    await render();
+  }
+  const el = target && (document.getElementById('r:' + target) || document.getElementById('s:' + target) || findSutta(target));
+  if (el) { el.scrollIntoView({ block: 'center' }); el.animate?.([{ outline: '2px solid var(--flag)' }, { outline: '2px solid transparent' }], { duration: 1600 }); }
+  else if (target === book) window.scrollTo({ top: 0 });
+}
+function findSutta(t) {
+  const m = t.match(/^([a-z]+\d+)\.(\d+)$/);
+  if (!m) return null;
+  const n = +m[2];
+  for (const el of document.querySelectorAll('.row.sutta')) {
+    const r = el.id.slice(2 + m[1].length + 1).split('-').map(Number);
+    if (n >= r[0] && n <= (r[1] ?? r[0])) return el;
+  }
+  return null;
+}
+
+async function start() {
+  try { state.index = await (await fetch('data/index.json')).json(); }
+  catch (e) { $('grid').innerHTML = '<div class="status">Не удалось загрузить список книг. Обновите страницу.</div>'; return; }
+  Object.assign(state.show, recall('show', {}));
+  for (const [id, key] of [['optdiff', 'diff'], ['optnotes', 'notes'], ['optsus', 'sus']]) {
+    const v = recall(key, null); if (v !== null) $(id).checked = v;
+    $(id).addEventListener('change', () => { store(key, $(id).checked); render(); });
+  }
+  $('booksel').addEventListener('change', () => go($('booksel').value));
+  const stepBook = d => { const i = state.index.findIndex(b => b.book === state.book) + d; if (state.index[i]) go(state.index[i].book); };
+  $('prevbook').onclick = () => stepBook(-1);
+  $('nextbook').onclick = () => stepBook(1);
+  $('copyflags').onclick = async () => {
+    const text = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0))
+      .map(f => `${f.key}\t${(f.eds || []).join(',')}\t${f.note || ''}`).join('\n');
+    try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Скопировано.'; }
+    catch (e) { $('copymsg').textContent = 'Не удалось скопировать, выделите список вручную.'; }
+  };
+  $('flagsbtn').onclick = () => { $('flagpanel').hidden = !$('flagpanel').hidden; };
+  $('grid').addEventListener('click', ev => {
+    const k = ev.target.closest('.key');
+    const row = k?.closest('.row[data-key]');
+    if (row && !ev.target.closest('.editor')) openEditor(row);
+  });
+  document.addEventListener('click', ev => {
+    const a = ev.target.closest('a[href^="#"]');
+    if (!a) return;
+    ev.preventDefault();
+    go(a.getAttribute('href').slice(1));
+  });
+  window.addEventListener('hashchange', () => go(location.hash.slice(1)));
+  const first = location.hash.slice(1) || recall('book', null) || 'sn45';
+  await go(first);
+  connect();
+}
+start();
+</script>

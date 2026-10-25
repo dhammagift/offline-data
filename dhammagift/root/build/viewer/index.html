@@ -1,8 +1,10 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Сверка изданий канона</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head><body>
 <style>
 /* Layout: sticky bar with book links and switches, then the whole book as one concordance grid:
    one row per SC segment, one column per edition, suttas one after another. */
@@ -103,8 +105,8 @@ button:hover { border-color: var(--accent); }
 .cell .edlabel { display: none; }
 .empty { color: var(--muted); opacity: .5; }
 .d { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
-.gap { display: inline-block; width: 2px; height: 1em; margin: 0 1px; vertical-align: -0.12em; background: var(--diff-fg); opacity: .55; border-radius: 1px; }
-.w.ins { text-decoration: underline wavy var(--sus); text-underline-offset: 3px; }
+.gap { display: inline-block; width: .35em; height: 1.05em; vertical-align: -0.18em; background: var(--diff); border-radius: 2px; }
+.w.ins { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
 .cell.sus { box-shadow: inset 0 -3px 0 var(--sus); }
 .cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
 .notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
@@ -148,14 +150,14 @@ button:hover { border-color: var(--accent); }
       <button type="button" id="flagsbtn" class="flagbtn">Отмечено: 0</button>
     </div>
     <div class="legend">
-      <span>bah<mark>u</mark>kāro: буква отличается от двух других изданий; <span class="gap"></span> у других тут есть буквы</span>
-      <span><span class="w ins">слово</span>: в других изданиях этого слова нет</span>
+      <span>жёлтым: буквы, где издание расходится с двумя другими (bah<mark>u</mark>kāro; если у других тут лишние буквы, закрашена буква перед этим местом); слово целиком: в других изданиях его нет</span>
       <span>ms подсвечен, только где отличается от всех трёх</span>
       <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
       <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
     </div>
     <section class="panel" id="flagpanel" hidden>
       <h2 id="flagtitle">Отмеченные сегменты</h2>
+      <div><button type="button" id="copyflags">Скопировать список</button> <span id="copymsg" class="n"></span></div>
       <ol id="flaglist"></ol>
     </section>
   </header>
@@ -225,25 +227,26 @@ function alignWords(A, B) {
 }
 /* letters of a that the other word lacks are marked; a thin bar where the other word has letters a lacks */
 function charDiff(a, b) {
+  /* letters of a that differ from b are coloured; where b has letters a lacks, the letter before the spot */
   const chars = [...a.normalize('NFC')];
   const letters = [], pos = [];
   chars.forEach((c, i) => { const k = strict(c); if (k) { letters.push(k); pos.push(i); } });
   const other = [...b.k];
   const pairs = lcsPairs(letters, other, (x, y) => x === y);
-  const mark = new Array(chars.length).fill(false), gapBefore = new Array(chars.length + 1).fill(false);
-  const matched = new Set(pairs.map(p => p[0]));
-  letters.forEach((_, li) => { if (!matched.has(li)) mark[pos[li]] = true; });
+  const mark = new Array(chars.length).fill(false);
   let pj = 0, pl = 0;
   for (const [li, j] of [...pairs, [letters.length, other.length]]) {
-    if (j > pj && li === pl) gapBefore[li < letters.length ? pos[li] : chars.length] = true;
+    for (let k = pl; k < li; k++) mark[pos[k]] = true;
+    if (j > pj && li === pl && letters.length) mark[pos[pl > 0 ? pl - 1 : 0]] = true;
     pj = j + 1; pl = li + 1;
   }
-  let h = '';
+  let h = '', run = '';
   chars.forEach((c, i) => {
-    if (gapBefore[i]) h += '<span class="gap"></span>';
-    h += mark[i] ? `<span class="d">${esc(c)}</span>` : esc(c);
+    if (mark[i]) { run += c; return; }
+    if (run) { h += `<span class="d">${esc(run)}</span>`; run = ''; }
+    h += esc(c);
   });
-  if (gapBefore[chars.length]) h += '<span class="gap"></span>';
+  if (run) h += `<span class="d">${esc(run)}</span>`;
   return h;
 }
 const VOTERS = ['bjt', 'my', 'th'];
@@ -322,8 +325,8 @@ async function render() {
     out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
     for (const row of s.rows) {
       const [key, ms] = row;
-      const rd = diff ? readings(row) : null;
       const head = /:0\.\d+$/.test(key) || /:\d+\.0$/.test(key);
+      const rd = diff ? readings(row) : null;
       const msw = wc(ms);
       let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: отметить проблему">${key}</div>`;
       for (const e of eds) {
@@ -367,7 +370,8 @@ function paintFlags() {
   $('flaglist').innerHTML = list.length ? list.map(f => `<li><a href="#${esc(f.key)}" class="k">${esc(f.key)}</a>
     <span class="n">${esc((f.eds || []).map(ed => EDS.find(e => e.id === ed)?.name).join(', '))}${f.note ? ' · ' + esc(f.note) : ''}</span></li>`).join('')
     : '<li class="n">Пока ничего не отмечено. Кликните по номеру сегмента в таблице.</li>';
-  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)' : 'Отметки недоступны в этом просмотре';
+  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)'
+    : 'Отмеченные сегменты (хранятся в этом браузере; чтобы передать, скопируйте список)';
 }
 
 function closeEditor() { document.querySelector('.editor')?.remove(); }
@@ -375,7 +379,6 @@ function openEditor(row) {
   const key = row.dataset.key;
   if (document.querySelector('.editor')?.dataset.key === key) { closeEditor(); return; }
   closeEditor();
-  if (!state.db) { alertRow(row, 'Отметки работают только в опубликованной странице claude.ai, когда вы вошли в аккаунт.'); return; }
   if (!state.canWrite) { alertRow(row, 'У вас доступ только на чтение, отмечать нельзя.'); return; }
   const f = state.flags.get(key) || { eds: [], note: '' };
   const ed = document.createElement('div');
@@ -395,7 +398,7 @@ function openEditor(row) {
     const eds = [...ed.querySelectorAll('input[type="checkbox"]:checked')].map(i => i.value);
     const body = { key, book: bookOf(key), eds, note: inp.value.trim(), at: Date.now() };
     if (state.uid) body.by = state.uid;
-    try { await state.db.collection('flags').doc(key).set(body); closeEditor(); }
+    try { await store_.set(key, body); closeEditor(); }
     catch (e) { msg(e.code === 'invalid_argument' ? 'Нет прав на запись.' : 'Не сохранилось, попробуйте ещё раз.'); if (e.code === 'invalid_argument') state.canWrite = false; }
   };
   ed.querySelector('.save').onclick = save;
@@ -403,7 +406,7 @@ function openEditor(row) {
   ed.querySelector('.cancel').onclick = closeEditor;
   const del = ed.querySelector('.del');
   if (del) del.onclick = async () => {
-    try { await state.db.collection('flags').doc(key).delete(); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
+    try { await store_.del(key); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
   };
 }
 function alertRow(row, text) {
@@ -412,12 +415,21 @@ function alertRow(row, text) {
   row.appendChild(ed);
 }
 
+/* marks live in the artifact's shared db on claude.ai; anywhere else (own server, local file) in this browser */
+const local = {
+  load() { state.flags = new Map(Object.entries(recall('flags', {}))); paintFlags(); },
+  save() { store('flags', Object.fromEntries(state.flags)); paintFlags(); },
+  async set(key, body) { state.flags.set(key, body); this.save(); },
+  async del(key) { state.flags.delete(key); this.save(); },
+};
+let store_ = local;
 async function connect() {
   const use = window.claude?.use;
-  if (!use) { paintFlags(); return; }
+  if (!use) { local.load(); return; }
   const [db, user] = await Promise.all([use('db'), use('user')]);
-  if (!db) { paintFlags(); return; }
+  if (!db) { local.load(); return; }
   state.db = db;
+  store_ = { set: (key, body) => db.collection('flags').doc(key).set(body), del: key => db.collection('flags').doc(key).delete() };
   if (user) {
     try { state.uid = await user.id(); } catch (e) {}
     try { const c = await user.can('data.write'); if (c === false) state.canWrite = false; } catch (e) {}
@@ -465,6 +477,12 @@ async function start() {
   const stepBook = d => { const i = state.index.findIndex(b => b.book === state.book) + d; if (state.index[i]) go(state.index[i].book); };
   $('prevbook').onclick = () => stepBook(-1);
   $('nextbook').onclick = () => stepBook(1);
+  $('copyflags').onclick = async () => {
+    const text = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0))
+      .map(f => `${f.key}\t${(f.eds || []).join(',')}\t${f.note || ''}`).join('\n');
+    try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Скопировано.'; }
+    catch (e) { $('copymsg').textContent = 'Не удалось скопировать, выделите список вручную.'; }
+  };
   $('flagsbtn').onclick = () => { $('flagpanel').hidden = !$('flagpanel').hidden; };
   $('grid').addEventListener('click', ev => {
     const k = ev.target.closest('.key');
@@ -484,3 +502,5 @@ async function start() {
 }
 start();
 </script>
+
+</body></html>
