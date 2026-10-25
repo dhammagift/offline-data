@@ -123,7 +123,7 @@ def head_class(text, big=False):
     if big or re.search(r'samyutt|nipat|pannasak|nikay|pitak|bhago', t):
         return 'above'
     if re.search(r'vagg|peyyal', t) and 'sutt' not in t:
-        return 'vagga'
+        return 'vagga' if vagga_num(text) else 'above'
     return 'sutta'
 
 
@@ -327,10 +327,142 @@ def vri_stream(path, chunk_div=None):
     return chunks
 
 
+# ---------------------------------------------------------------- Thai (Siam Rath 1927, E-Tipitaka palinew.sqlite)
+
+TH_CONS = {'ก': 'k', 'ข': 'kh', 'ค': 'g', 'ฆ': 'gh', 'ง': 'ṅ', 'จ': 'c', 'ฉ': 'ch', 'ช': 'j',
+           'ฌ': 'jh', 'ญ': 'ñ', 'ฎ': 'ṭ', 'ฏ': 'ṭ', 'ฐ': 'ṭh', 'ฑ': 'ḍ', 'ฒ': 'ḍh', 'ณ': 'ṇ',
+           'ต': 't', 'ถ': 'th', 'ท': 'd', 'ธ': 'dh', 'น': 'n', 'ป': 'p', 'ผ': 'ph', 'พ': 'b',
+           'ภ': 'bh', 'ม': 'm', 'ย': 'y', 'ร': 'r', 'ล': 'l', 'ว': 'v', 'ส': 's', 'ห': 'h',
+           'ฬ': 'ḷ', 'อ': '', 'ด': 'd', 'ซ': 's', 'ฝ': 'f', 'ฟ': 'f', 'ฅ': 'kh'}
+TH_SIGNS = {'า': 'ā', 'ิ': 'i', 'ี': 'ī', 'ึ': 'iṃ', 'ุ': 'u', 'ู': 'ū'}
+TH_PRE = {'เ': 'e', 'โ': 'o'}
+TH_VIRAMA, TH_NIGGAHITA = 'ฺ', 'ํ'
+
+
+def th2ro(s):
+    s = s.replace('ฯเปฯ', ' .pe. ').replace('ฯลฯ', ' .la. ')
+    s = re.sub(r'\s*ฯ', '.', s)
+    out, pre, i, n = [], None, 0, len(s)
+    while i < n:
+        ch = s[i]
+        if ch in TH_PRE:
+            pre = TH_PRE[ch]
+        elif ch in TH_CONS:
+            out.append(TH_CONS[ch])
+            nx = s[i + 1] if i + 1 < n else ''
+            if nx == TH_VIRAMA:
+                i += 1
+            elif nx in TH_SIGNS:
+                out.append(TH_SIGNS[nx])
+                i += 1
+                pre = None
+            else:
+                out.append(pre or 'a')
+                pre = None
+        elif ch == TH_NIGGAHITA:
+            out.append('ṃ')
+        elif '๐' <= ch <= '๙':
+            out.append(str(ord(ch) - ord('๐')))
+        elif ch in ('่', '้', '๊', '๋', 'ๆ', TH_VIRAMA):
+            pass
+        elif ch == 'ฤ':
+            out.append('ṛ')
+        else:
+            if pre:
+                out.append(pre)
+                pre = None
+            out.append(ch)
+        i += 1
+    return ''.join(out)
+
+
+TH_BODY_HEAD = re.compile(r'(tassuddan|tatruddan|uddanambhavati)')
+
+
+def th_footnotes(footer):
+    t = th2ro(re.sub(r'\s+', ' ', footer or '')).strip()
+    fn = {}
+    parts = re.split(r'(?:^|\s)(\d+)\s(?=\D)', t)
+    for k in range(1, len(parts) - 1, 2):
+        fn[parts[k]] = parts[k + 1].strip()
+    return fn
+
+
+def th_stream(db, volume):
+    import sqlite3
+    st = Stream()
+    buf, mk = [], []
+
+    def flush():
+        if buf:
+            st.body(' '.join(buf), list(mk))
+        buf.clear()
+        mk.clear()
+
+    con = sqlite3.connect(db)
+    for page, html, footer in con.execute(
+            'select page, html, footer from main where volume=? order by page', (volume,)):
+        fn = th_footnotes(footer)
+        html = re.sub(r'<span class="reference">([^<]*)</span>', r'<\1>', html)
+        html = re.split(r'<br/>', html)[0]
+        page_ref = f'sya{volume}.{page}'
+        for raw in html.split('\r\n'):
+            m = re.fullmatch(r'\s*<div class="center">(.*)</div>\s*', raw)
+            line = th2ro(m.group(1) if m else raw)
+            if not line.strip() or re.fullmatch(r'\s*_+\s*', line):
+                continue
+            if m and (not line.rstrip().endswith('.') or 'namotassa' in norm(line)) \
+                    and not TH_BODY_HEAD.search(norm(line)):
+                flush()
+                st.heading(line, head_class(line), [page_ref] if page_ref else [])
+                page_ref = None
+                continue
+            if m or re.match(r'\s{4,}', raw):  # centred end line, paragraph [n], verse
+                flush()
+            line = ' '.join(line.split())
+            joined = ' '.join(buf)
+            glue = bool(buf) and joined.endswith('-') and line[:1].isalpha()  # word broken at line end
+            base = len(joined) - 1 if glue else len(joined) + (1 if buf else 0)
+            out, lmk, pos = [], [], 0
+            for mm in re.finditer(r'\[(\d+(?:\s*-\s*\d+)?)\]\s*|\s*<([^>]*)>', line):
+                out.append(line[pos:mm.start()])
+                off = len(''.join(out))
+                if mm.group(1):
+                    lmk.append((off, 'para', mm.group(1).replace(' ', '')))
+                elif mm.group(2) in fn:
+                    lmk.append((off, 'note', fn[mm.group(2)]))
+                pos = mm.end()
+            out.append(line[pos:])
+            clean = ''.join(out)
+            lead = len(clean) - len(clean.lstrip())
+            clean = clean.strip()
+            if page_ref:
+                mk.append((base, 'pb', page_ref))
+                page_ref = None
+            mk.extend((base + max(0, o - lead), k, v) for o, k, v in lmk)
+            if clean:
+                if glue:
+                    buf[-1] = buf[-1][:-1] + clean
+                else:
+                    buf.append(clean)
+    flush()
+    return st
+
+
+def sya_volume(ref_dir, coll, book):
+    """Siam Rath volume of a SC book, from SC reference 'syaV.P' marks."""
+    for f in ms_files(ref_dir, coll, book, suffix='_reference.json'):
+        for v in json.load(open(f, encoding='utf-8')).values():
+            m = re.search(r'\bsya(\d+)\.', v)
+            if m:
+                return int(m.group(1))
+    return None
+
+
 # ---------------------------------------------------------------- ms
 
-def ms_files(ms_dir, coll, book):
-    fs = glob.glob(os.path.join(ms_dir, coll, book, '*_root-pli-ms.json'))
+def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
+    fs = glob.glob(os.path.join(ms_dir, coll, book, '*' + suffix))
 
     def key(f):
         b = os.path.basename(f).split('_')[0][len(book) + 1:]
@@ -361,13 +493,14 @@ def header_slots(keys):
 
 def lis(pairs):
     """longest increasing subsequence on j of pairs sorted by i."""
-    tails, prev, pos = [], [None] * len(pairs), []
+    tails, tails_j, prev = [], [], [None] * len(pairs)
     for k, (_, j) in enumerate(pairs):
-        x = bisect.bisect_left([pairs[t][1] for t in tails], j)
+        x = bisect.bisect_left(tails_j, j)
         if x == len(tails):
             tails.append(k)
+            tails_j.append(j)
         else:
-            tails[x] = k
+            tails[x], tails_j[x] = k, j
         prev[k] = tails[x - 1] if x else None
     out, k = [], tails[-1] if tails else None
     while k is not None:
@@ -420,14 +553,37 @@ def head_key(text):
     return '#' + w if len(w) > 3 else None
 
 
+ORDINALS = ['patham', 'dutiy', 'tatiy', 'catutth', 'pancam', 'chatth', 'sattam', 'attham',
+            'navam', 'dasam', 'ekadasam', 'dvadasam', 'terasam', 'cuddasam', 'pannarasam',
+            'solasam', 'sattarasam', 'attharasam']
+ORD_RE = re.compile(r'^(%s)(o|am|a|e)?$' % '|'.join(ORDINALS))
+
+
+def ordinal(word):
+    m = ORD_RE.match(norm(word))
+    return str(ORDINALS.index(m.group(1)) + 1) if m else None
+
+
 def vagga_num(text):
+    if not re.search(r'vagg|peyyal', norm(text)):
+        return None
     m = re.match(r'\s*\[?(\d+)\.', text)
-    return m.group(1) if m and re.search(r'vagg|peyyal', norm(text)) else None
+    if m:
+        return m.group(1)
+    return next((ordinal(w) for w in text.split()[1:] if ordinal(w)), None)  # "naḷavaggo paṭhamo"
 
 
 def title_keys(text, vn):
-    hk = head_key(text)
-    return [hk, f'{hk}/{vn}'] if hk and vn else [hk] if hk else []
+    words = text.split()
+    texts = [text]
+    if len(words) > 1 and ordinal(words[0]):  # "paṭhamaṃ oghataraṇasuttaṃ"
+        texts.append(' '.join(words[1:]))
+    keys = []
+    for t in texts:
+        hk = head_key(t)
+        if hk:
+            keys += [hk, f'{hk}/{vn}'] if vn else [hk]
+    return keys
 
 
 def align(toks, segs, slots_before=None):
@@ -481,22 +637,31 @@ def align(toks, segs, slots_before=None):
                 else:
                     equal -= 1  # title anchors are not edition words
         elif op == 'replace':
+            # a heading in the block opens the next sutta: split both sides there
+            cut = next((k for k in range(i1, i2) if idx[k] < 0 or toks[idx[k]].heads), i2)
+            jc = j2
+            if cut < i2:
+                prev_s = sutta_of(segs[bseg[j1 - 1]][0]) if j1 > 0 else None
+                jc = next((j for j in range(j1, j2) if sutta_of(segs[bseg[j]][0]) != prev_s), j1)
             for k in range(i1, i2):
-                j = j1 + (k - i1) * (j2 - j1) // (i2 - i1)
-                if idx[k] >= 0:
-                    out[idx[k]] = bseg[j]
+                if idx[k] < 0:
+                    continue
+                if k < cut:
+                    j = j1 + (k - i1) * (jc - j1) // (cut - i1) if jc > j1 else max(j1 - 1, 0)
+                else:
+                    j = jc + (k - cut) * (j2 - jc) // (i2 - cut) if j2 > jc else j2 - 1
+                out[idx[k]] = bseg[j]
         elif op == 'insert':  # ms words the edition does not have
             continue
         else:  # 'delete': edition words ms does not have
             ent = lambda k: toks[idx[k]].entry if idx[k] >= 0 else -k - 1
             whole = (i1 == 0 or ent(i1 - 1) != ent(i1)) and (i2 == len(a) or ent(i2) != ent(i2 - 1))
-            if (whole or j1 == 0) and j1 < len(b):
-                s = bseg[j1]
-            else:
-                s = bseg[j1 - 1]
+            nxt = bseg[j1] if j1 < len(b) else bseg[j1 - 1]
+            prv = bseg[j1 - 1] if j1 > 0 else nxt
+            cut = next((k for k in range(i1, i2) if idx[k] < 0 or toks[idx[k]].heads), i2)  # a new sutta starts
             for k in range(i1, i2):
                 if idx[k] >= 0:
-                    out[idx[k]] = s
+                    out[idx[k]] = nxt if (whole or j1 == 0 or k >= cut) else prv
     last = None
     for i in range(len(toks)):
         if out[i] is None:
@@ -510,7 +675,7 @@ def align(toks, segs, slots_before=None):
     return out, equal / max(1, sum(1 for x in idx if x >= 0))
 
 
-def place(chunk, ms_paths, ed, out_dir, coll, book, report):
+def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     segs_all, keys_all = [], []
     files = []
     for p in ms_paths:
@@ -562,7 +727,10 @@ def place(chunk, ms_paths, ed, out_dir, coll, book, report):
     n_full = n_seg = 0
     for p, keys in files:
         base = os.path.basename(p).replace('_root-pli-ms.json', '')
-        rel = os.path.join('sutta', coll, book)
+        book = base.split('.')[0]
+        if write_books and book not in write_books:
+            continue
+        rel = os.path.join('sutta', re.match(r'[a-z]+', book).group(), book)
         root = {k: (' '.join(text[k]) + ' ') if text[k] else '' for k in keys}
         n_seg += len(keys)
         n_full += sum(1 for v in root.values() if v)
@@ -576,10 +744,10 @@ def place(chunk, ms_paths, ed, out_dir, coll, book, report):
     # every edition word must be somewhere, once, in order
     got = [w for k, _ in body for w in body_words[k]]
     if got != [t.text for t in chunk.toks]:
-        raise SystemExit(f'{ed} {book}: edition words lost or reordered')
+        raise SystemExit(f'{ed} {label}: edition words lost or reordered')
     n_heads = sum(len(t.heads) for t in chunk.toks) + len(leftover_heads)
     n_words = len(chunk.toks)
-    report.append((ed, book, len(files), n_seg, n_full, n_words, n_heads, round(score, 3)))
+    report.append((ed, label, len(files), n_seg, n_full, n_words, n_heads, round(score, 3)))
 
 
 def put_heads(heads, slots, text, para):
@@ -647,6 +815,8 @@ def main():
     ap.add_argument('--ms', required=True)
     ap.add_argument('--out', required=True)
     ap.add_argument('--only', default='sn1-10,sn45-49,an1-2')
+    ap.add_argument('--thai', help='E-Tipitaka palinew.sqlite (Siam Rath 1927)')
+    ap.add_argument('--ref', help='bilara-data reference/pli/ms/sutta, for Siam Rath volumes')
     ap.add_argument('--report')
     a = ap.parse_args()
     report, cache = [], {}
@@ -667,7 +837,19 @@ def main():
             if ch is None:
                 print(f'!! {ed} {book}: chunk not found', file=sys.stderr)
                 continue
-            place(ch, ms, ed, a.out, coll, book, report)
+            place(ch, ms, ed, a.out, book, report)
+            print('\t'.join(map(str, report[-1])), file=sys.stderr)
+    if a.thai:
+        want = collections.defaultdict(set)  # volume -> books to write
+        for coll, n in parse_only(a.only):
+            want[sya_volume(a.ref, coll, f'{coll}{n}')].add(f'{coll}{n}')
+        for vol, books in sorted(want.items()):
+            coll = re.match(r'[a-z]+', next(iter(books))).group()
+            maxn = {'sn': 56, 'an': 11}[coll]
+            inside = [f'{coll}{n}' for n in range(1, maxn + 1) if sya_volume(a.ref, coll, f'{coll}{n}') == vol]
+            ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
+            label = f'sya{vol}:' + ','.join(sorted(books, key=lambda b: int(b[2:])))
+            place(th_stream(a.thai, vol), ms, 'th', a.out, label, report, books)
             print('\t'.join(map(str, report[-1])), file=sys.stderr)
     if a.report:
         with open(a.report, 'w', encoding='utf-8') as f:
