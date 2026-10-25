@@ -114,6 +114,17 @@ def strip_punct(w):
 NUM_RE = re.compile(r'^[\s\d.\-–\[\]()]+$')
 
 
+COLOPHON = re.compile(r'(samatt|nitthit)(o|a|am|ani|e)?$')
+
+
+def colophon(text):
+    """end lines of a section ("paṭhamo paṇṇāsako samatto", "akusalapeyyālaṃ niṭṭhitaṃ"): text, not a title"""
+    w = [norm(x) for x in text.split() if norm(x)]
+    if len(w) > 1 and ordinal(w[-1]):  # "... suttaṃ niṭṭhitaṃ navamaṃ"
+        w = w[:-1]
+    return bool(w) and bool(COLOPHON.match(w[-1]))
+
+
 def head_class(text, big=False):
     t = norm(text)
     if 'namotassa' in t:
@@ -215,7 +226,9 @@ def bjt_stream(files, split_re=None):
                     cur.heading(*h)
                 pre = []
             cls = head_class(text, big=level >= 4 and kind == 'heading')
-            if kind == 'centered' and level == 1 and cls in ('sutta', 'vagga'):
+            if colophon(text):
+                kind = 'body'
+            elif kind == 'centered' and level == 1 and cls in ('sutta', 'vagga'):
                 kind = 'body'  # end lines like "vaggo paṭhamo.", "saṃyuttaṃ samattaṃ."
             elif kind == 'centered' and cls in ('sutta', 'vagga'):
                 cls = 'above'
@@ -305,7 +318,7 @@ def vri_stream(path, chunk_div=None):
                 continue
             rend = c.get('rend') or ''
             text, markers = vri_flatten(c)
-            if c.tag == 'head' or rend in ('title', 'subhead', 'nikaya', 'book', 'chapter'):
+            if (c.tag == 'head' or rend in ('title', 'subhead', 'nikaya', 'book', 'chapter')) and not colophon(text):
                 big = rend in ('nikaya', 'book') or (c.tag == 'head' and types and types[-1] in ('book', 'samyutta'))
                 cur.heading(text, head_class(text, big=big), [v for _, k, v in markers if k == 'pb'])
                 continue
@@ -417,7 +430,8 @@ def th_stream(db, volume):
             cls = head_class(line) if m else None
             if m and (not line.rstrip().endswith('.') or 'namotassa' in norm(line)) \
                     and not TH_BODY_HEAD.search(norm(line)) \
-                    and not (cls == 'sutta' and 'sutt' not in norm(line)):  # centred verse lines are text
+                    and not (cls == 'sutta' and 'sutt' not in norm(line)) \
+                    and not colophon(line):  # centred verse lines and section end lines are text
                 flush()
                 st.heading(line, cls, [page_ref] if page_ref else [])
                 page_ref = None
@@ -541,24 +555,50 @@ def patience(a, b):
             out.append((ahi - 1, bhi - 1)); ahi -= 1; bhi -= 1
         if alo >= ahi or blo >= bhi:
             continue
-        ca = collections.Counter(a[alo:ahi])
-        cb = collections.Counter(b[blo:bhi])
-        posb = {b[j]: j for j in range(blo, bhi) if cb[b[j]] == 1}
-        pairs = [(i, posb[a[i]]) for i in range(alo, ahi) if ca[a[i]] == 1 and a[i] in posb]
-        anchors = lis(pairs)
+        anchors, n = gram_anchors(a, b, alo, ahi, blo, bhi)
         if not anchors:
             if (ahi - alo) * (bhi - blo) <= 4_000_000:
                 sm = difflib.SequenceMatcher(None, a[alo:ahi], b[blo:bhi], autojunk=False)
-                for i, j, n in sm.get_matching_blocks():
-                    out.extend((alo + i + k, blo + j + k) for k in range(n))
+                for i, j, m in sm.get_matching_blocks():
+                    out.extend((alo + i + k, blo + j + k) for k in range(m))
             continue
         pi, pj = alo, blo
         for i, j in anchors:
+            if i < pi or j < pj:  # overlapping n-grams
+                continue
             stack.append((pi, i, pj, j))
-            out.append((i, j))
-            pi, pj = i + 1, j + 1
+            out.extend((i + k, j + k) for k in range(n))
+            pi, pj = i + n, j + n
         stack.append((pi, ahi, pj, bhi))
     return sorted(out)
+
+
+def gram_anchors(a, b, alo, ahi, blo, bhi):
+    """anchors for one gap: words, then 2-, 3-, 5-word runs that occur once on both sides; in texts made
+    of one repeated formula (SN 34) none may, then words occurring the same few times on both sides are
+    paired in order. -> (LIS of (i, j) pairs, run length)"""
+    for n in (1, 2, 3, 5):
+        ga = [tuple(a[i:i + n]) for i in range(alo, ahi - n + 1)]
+        gb = [tuple(b[j:j + n]) for j in range(blo, bhi - n + 1)]
+        ca, cb = collections.Counter(ga), collections.Counter(gb)
+        posb = {g: blo + k for k, g in enumerate(gb) if cb[g] == 1}
+        pairs = [(alo + k, posb[g]) for k, g in enumerate(ga) if ca[g] == 1 and g in posb]
+        anchors = lis(pairs)
+        if anchors:
+            return anchors, n
+    if (ahi - alo) * (bhi - blo) <= 4_000_000:
+        return [], 1
+    ca, cb = collections.Counter(a[alo:ahi]), collections.Counter(b[blo:bhi])
+    seen, posb = collections.Counter(), collections.defaultdict(list)
+    for j in range(blo, bhi):
+        posb[b[j]].append(j)
+    pairs = []
+    for i in range(alo, ahi):
+        w = a[i]
+        if ca[w] == cb[w] <= 8:
+            pairs.append((i, posb[w][seen[w]]))
+            seen[w] += 1
+    return lis(pairs), 1
 
 
 def head_key(text):
@@ -644,6 +684,8 @@ def align(toks, segs, slots_before=None):
         if i < len(a):
             ops.append(('equal', i, i + 1, j, j + 1))
         pi, pj = i + 1, j + 1
+    matched = set()
+
     def starts(k):
         return idx[k] < 0 or bool(toks[idx[k]].heads) or toks[idx[k]].para is not None
 
@@ -654,6 +696,7 @@ def align(toks, segs, slots_before=None):
             for k in range(i2 - i1):
                 if idx[i1 + k] >= 0:
                     out[idx[i1 + k]] = bseg[j1 + k]
+                    matched.add(idx[i1 + k])
                 else:
                     equal -= 1  # title anchors are not edition words
         elif op == 'replace':
@@ -682,6 +725,8 @@ def align(toks, segs, slots_before=None):
             nxt = bseg[j1] if j1 < len(b) else bseg[j1 - 1]
             prv = bseg[j1 - 1] if j1 > 0 else nxt
             boundary = sutta_of(segs[prv][0]) != sutta_of(segs[nxt][0])
+            if not boundary and nxt != prv and re.search(r':\d+\.0$', segs[nxt][0]):
+                nxt = prv  # an ms subheading segment (dn8:5.0) takes no edition text it lacks
             cut = next((k for k in range(i1, i2) if starts(k) if boundary or idx[k] < 0 or toks[idx[k]].heads), i2)
             # the edition opens the next sutta right after these words: they close the previous one
             closes = boundary and cut == i2 and i2 < len(a) and starts(i2) and j1 > 0
@@ -701,6 +746,24 @@ def align(toks, segs, slots_before=None):
     for i in range(1, len(out)):  # keep order monotonic
         if out[i] < out[i - 1]:
             out[i] = out[i - 1]
+    # an ms subheading inside a sutta (dn8:5.0, "N.0 Tassuddānaṁ") keeps only edition words that match it;
+    # the rest is the end of the previous segment (vagga end lines, readings ms lacks)
+    sub = {si for si, (k, _) in enumerate(segs) if re.search(r':[1-9]\d*\.0$', k)
+           and si > 0 and sutta_of(segs[si - 1][0]) == sutta_of(k)}
+    i = 0
+    while i < len(toks):  # move the words before the first one that matches (all, if none does)
+        if out[i] in sub:
+            j = i
+            while j < len(toks) and out[j] == out[i] and j not in matched and not toks[j].heads:
+                j += 1
+            seg = out[i]
+            for k in range(i, j):
+                out[k] = seg - 1
+            while j < len(toks) and out[j] == seg:
+                j += 1
+            i = j
+        else:
+            i += 1
     return out, equal / max(1, sum(1 for x in idx if x >= 0))
 
 
@@ -738,8 +801,11 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         start = s not in seen  # first edition word of this sutta
         seen.add(s)
         if t.heads:
+            prev = body[si - 1][0] if si > 0 else None
             if start and slots.get(s):
                 put_heads(t.heads, slots[s], text, t.para)
+            elif prev and sutta_of(prev) == s and re.search(r':\d+\.0$', prev) and not text[prev]:
+                text[prev].append(' '.join(h for _, h in t.heads))  # a subheading ms keeps in its own N.0 segment
             else:
                 text[key].append(' '.join(h for _, h in t.heads))
         elif t.para and start:
@@ -767,11 +833,9 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         n_full += sum(1 for v in root.values() if v)
         write(os.path.join(out_dir, 'root', 'pli', ed, rel, f'{base}_root-pli-{ed}.json'), root)
         v = {k: ' | '.join(vars_[k]) for k in keys if vars_[k]}
-        if v:
-            write(os.path.join(out_dir, 'variant', 'pli', ed, rel, f'{base}_variant-pli-{ed}.json'), v)
+        write_or_drop(os.path.join(out_dir, 'variant', 'pli', ed, rel, f'{base}_variant-pli-{ed}.json'), v)
         r = {k: ', '.join(refs[k]) for k in keys if refs[k]}
-        if r:
-            write(os.path.join(out_dir, 'reference', 'pli', ed, rel, f'{base}_reference-pli-{ed}.json'), r)
+        write_or_drop(os.path.join(out_dir, 'reference', 'pli', ed, rel, f'{base}_reference-pli-{ed}.json'), r)
     # every edition word must be somewhere, once, in order
     got = [w for k, _ in body for w in body_words[k]]
     if got != [t.text for t in chunk.toks]:
@@ -805,6 +869,14 @@ def put_heads(heads, slots, text, para):
         text[zero[0]].extend(by.get('above', []) + by.get('vagga', []) + sutta)
     if nums and para and not text[nums[0]]:
         text[nums[0]].append(para + '.')
+
+
+def write_or_drop(path, d):
+    """an empty file is not written, and one left from an earlier build is removed"""
+    if d:
+        write(path, d)
+    elif os.path.exists(path):
+        os.remove(path)
 
 
 def write(path, d):
