@@ -87,7 +87,13 @@ neighbouring segments.
 
 ## Viewer
 
-`viewer/index.html` shows a whole book on one page, the four Pali texts side by side, variant readings by majority of
-BJT / Myanmar / Thai (ms is checked against them), and shared problem marks. Data for it:
-`python3 viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta viewer/` then open `viewer/index.html`
-through any local web server (`python3 -m http.server`); the problem marks work only on the published claude.ai page.
+A whole book on one page, the four Pali texts side by side, variant readings by majority of BJT / Myanmar / Thai
+(ms is checked against them; differing letters in yellow) and problem marks.
+
+- `viewer/index.html` + `viewer/data/` work on any web server as they are: copy the `viewer` folder and open
+  `.../viewer/index.html#sn45.1`. (Opened as a file from disk the browser does not let the page read `data/`;
+  locally use `python3 -m http.server` in `viewer/`.) Problem marks are kept in that browser;
+  "Скопировать список" in the marks panel copies them as `key<TAB>editions<TAB>note` lines.
+- `viewer/page.html` is the same page as published on claude.ai, where the marks are shared through the page's database.
+- Rebuild after a new run: `python3 viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta dhammagift/root/build/viewer`
+  for the data, `python3 viewer/make_page.py` for `index.html` from `page.html`.

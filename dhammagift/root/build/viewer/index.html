@@ -1,8 +1,10 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Сверка изданий канона</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head><body>
 <style>
 /* Layout: sticky bar with book links and switches, then the whole book as one concordance grid:
    one row per SC segment, one column per edition, suttas one after another. */
@@ -155,6 +157,7 @@ button:hover { border-color: var(--accent); }
     </div>
     <section class="panel" id="flagpanel" hidden>
       <h2 id="flagtitle">Отмеченные сегменты</h2>
+      <div><button type="button" id="copyflags">Скопировать список</button> <span id="copymsg" class="n"></span></div>
       <ol id="flaglist"></ol>
     </section>
   </header>
@@ -367,7 +370,8 @@ function paintFlags() {
   $('flaglist').innerHTML = list.length ? list.map(f => `<li><a href="#${esc(f.key)}" class="k">${esc(f.key)}</a>
     <span class="n">${esc((f.eds || []).map(ed => EDS.find(e => e.id === ed)?.name).join(', '))}${f.note ? ' · ' + esc(f.note) : ''}</span></li>`).join('')
     : '<li class="n">Пока ничего не отмечено. Кликните по номеру сегмента в таблице.</li>';
-  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)' : 'Отметки недоступны в этом просмотре';
+  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)'
+    : 'Отмеченные сегменты (хранятся в этом браузере; чтобы передать, скопируйте список)';
 }
 
 function closeEditor() { document.querySelector('.editor')?.remove(); }
@@ -375,7 +379,6 @@ function openEditor(row) {
   const key = row.dataset.key;
   if (document.querySelector('.editor')?.dataset.key === key) { closeEditor(); return; }
   closeEditor();
-  if (!state.db) { alertRow(row, 'Отметки работают только в опубликованной странице claude.ai, когда вы вошли в аккаунт.'); return; }
   if (!state.canWrite) { alertRow(row, 'У вас доступ только на чтение, отмечать нельзя.'); return; }
   const f = state.flags.get(key) || { eds: [], note: '' };
   const ed = document.createElement('div');
@@ -395,7 +398,7 @@ function openEditor(row) {
     const eds = [...ed.querySelectorAll('input[type="checkbox"]:checked')].map(i => i.value);
     const body = { key, book: bookOf(key), eds, note: inp.value.trim(), at: Date.now() };
     if (state.uid) body.by = state.uid;
-    try { await state.db.collection('flags').doc(key).set(body); closeEditor(); }
+    try { await store_.set(key, body); closeEditor(); }
     catch (e) { msg(e.code === 'invalid_argument' ? 'Нет прав на запись.' : 'Не сохранилось, попробуйте ещё раз.'); if (e.code === 'invalid_argument') state.canWrite = false; }
   };
   ed.querySelector('.save').onclick = save;
@@ -403,7 +406,7 @@ function openEditor(row) {
   ed.querySelector('.cancel').onclick = closeEditor;
   const del = ed.querySelector('.del');
   if (del) del.onclick = async () => {
-    try { await state.db.collection('flags').doc(key).delete(); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
+    try { await store_.del(key); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
   };
 }
 function alertRow(row, text) {
@@ -412,12 +415,21 @@ function alertRow(row, text) {
   row.appendChild(ed);
 }
 
+/* marks live in the artifact's shared db on claude.ai; anywhere else (own server, local file) in this browser */
+const local = {
+  load() { state.flags = new Map(Object.entries(recall('flags', {}))); paintFlags(); },
+  save() { store('flags', Object.fromEntries(state.flags)); paintFlags(); },
+  async set(key, body) { state.flags.set(key, body); this.save(); },
+  async del(key) { state.flags.delete(key); this.save(); },
+};
+let store_ = local;
 async function connect() {
   const use = window.claude?.use;
-  if (!use) { paintFlags(); return; }
+  if (!use) { local.load(); return; }
   const [db, user] = await Promise.all([use('db'), use('user')]);
-  if (!db) { paintFlags(); return; }
+  if (!db) { local.load(); return; }
   state.db = db;
+  store_ = { set: (key, body) => db.collection('flags').doc(key).set(body), del: key => db.collection('flags').doc(key).delete() };
   if (user) {
     try { state.uid = await user.id(); } catch (e) {}
     try { const c = await user.can('data.write'); if (c === false) state.canWrite = false; } catch (e) {}
@@ -465,6 +477,12 @@ async function start() {
   const stepBook = d => { const i = state.index.findIndex(b => b.book === state.book) + d; if (state.index[i]) go(state.index[i].book); };
   $('prevbook').onclick = () => stepBook(-1);
   $('nextbook').onclick = () => stepBook(1);
+  $('copyflags').onclick = async () => {
+    const text = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0))
+      .map(f => `${f.key}\t${(f.eds || []).join(',')}\t${f.note || ''}`).join('\n');
+    try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Скопировано.'; }
+    catch (e) { $('copymsg').textContent = 'Не удалось скопировать, выделите список вручную.'; }
+  };
   $('flagsbtn').onclick = () => { $('flagpanel').hidden = !$('flagpanel').hidden; };
   $('grid').addEventListener('click', ev => {
     const k = ev.target.closest('.key');
@@ -484,3 +502,5 @@ async function start() {
 }
 start();
 </script>
+
+</body></html>
