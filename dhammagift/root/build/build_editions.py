@@ -630,6 +630,9 @@ def align(toks, segs, slots_before=None):
         if i < len(a):
             ops.append(('equal', i, i + 1, j, j + 1))
         pi, pj = i + 1, j + 1
+    def starts(k):
+        return idx[k] < 0 or bool(toks[idx[k]].heads) or toks[idx[k]].para is not None
+
     equal = 0
     for op, i1, i2, j1, j2 in ops:
         if op == 'equal':
@@ -640,19 +643,22 @@ def align(toks, segs, slots_before=None):
                 else:
                     equal -= 1  # title anchors are not edition words
         elif op == 'replace':
-            # a heading in the block opens the next sutta: split both sides there
-            cut = next((k for k in range(i1, i2) if idx[k] < 0 or toks[idx[k]].heads), i2)
-            jc = j2
-            if cut < i2:
-                prev_s = sutta_of(segs[bseg[j1 - 1]][0]) if j1 > 0 else None
-                jc = next((j for j in range(j1, j2) if sutta_of(segs[bseg[j]][0]) != prev_s), j1)
+            # where a sutta boundary of ms falls in or right after the block, the edition words from its
+            # heading or, failing that, its new paragraph on, open the next sutta; both sides are split there
+            prev_s = sutta_of(segs[bseg[j1 - 1]][0]) if j1 > 0 else None
+            jc = next((j for j in range(j1, min(j2 + 1, len(b))) if sutta_of(segs[bseg[j]][0]) != prev_s), None)
+            cut = i2
+            if jc is not None and j1 > 0:
+                cut = next((k for k in range(i1, i2) if starts(k)), i2)
+            else:
+                jc = j2
             for k in range(i1, i2):
                 if idx[k] < 0:
                     continue
                 if k < cut:
                     j = j1 + (k - i1) * (jc - j1) // (cut - i1) if jc > j1 else max(j1 - 1, 0)
                 else:
-                    j = jc + (k - cut) * (j2 - jc) // (i2 - cut) if j2 > jc else j2 - 1
+                    j = jc + (k - cut) * (j2 - jc) // (i2 - cut) if j2 > jc else min(jc, len(b) - 1)
                 out[idx[k]] = bseg[j]
         elif op == 'insert':  # ms words the edition does not have
             continue
@@ -661,7 +667,8 @@ def align(toks, segs, slots_before=None):
             whole = (i1 == 0 or ent(i1 - 1) != ent(i1)) and (i2 == len(a) or ent(i2) != ent(i2 - 1))
             nxt = bseg[j1] if j1 < len(b) else bseg[j1 - 1]
             prv = bseg[j1 - 1] if j1 > 0 else nxt
-            cut = next((k for k in range(i1, i2) if idx[k] < 0 or toks[idx[k]].heads), i2)  # a new sutta starts
+            boundary = sutta_of(segs[prv][0]) != sutta_of(segs[nxt][0])
+            cut = next((k for k in range(i1, i2) if starts(k) if boundary or idx[k] < 0 or toks[idx[k]].heads), i2)
             for k in range(i1, i2):
                 if idx[k] >= 0:
                     out[idx[k]] = nxt if (whole or j1 == 0 or k >= cut) else prv
