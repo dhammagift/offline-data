@@ -106,6 +106,8 @@ button:hover { border-color: var(--accent); }
 .gap { display: inline-block; width: .35em; height: 1.05em; vertical-align: -0.18em; background: var(--diff); border-radius: 2px; }
 .w.ins { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
 .cell.sus { box-shadow: inset 0 -3px 0 var(--sus); }
+.cell.shift { background: var(--flag-bg); box-shadow: inset 3px 0 0 var(--flag); }
+.legend .sh { background: var(--flag-bg); box-shadow: inset 3px 0 0 var(--flag); padding: 0 4px 0 7px; }
 .cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
 .notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
 .notes .var::before { content: "вар. "; font-weight: 600; }
@@ -145,6 +147,8 @@ button:hover { border-color: var(--accent); }
       <label class="chip" title="BJT, Myanmar и Thai голосуют по каждому слову; ms сверяется с итогом"><input type="checkbox" id="optdiff" checked> разночтения (2 из 3)</label>
       <label class="chip"><input type="checkbox" id="optnotes"> разночтения и страницы</label>
       <label class="chip"><input type="checkbox" id="optsus" checked> подозрительные</label>
+      <label class="chip" title="Найдено автоматически (find_shifts.py): в сегменте издания слова соседнего сегмента ms"><input type="checkbox" id="optshift" checked> сдвиги <span id="shiftn" class="fill"></span></label>
+      <button type="button" id="nextshift">следующий сдвиг ↓</button>
       <button type="button" id="flagsbtn" class="flagbtn">Отмечено: 0</button>
     </div>
     <div class="legend">
@@ -152,6 +156,7 @@ button:hover { border-color: var(--accent); }
       <span>ms подсвечен, только где отличается от всех трёх</span>
       <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
       <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
+      <span><span class="sh">красным</span>: сдвиг разбивки, в сегменте издания слова соседнего сегмента ms (найдено автоматически; подробности при наведении)</span>
     </div>
     <section class="panel" id="flagpanel" hidden>
       <h2 id="flagtitle">Отмеченные сегменты</h2>
@@ -171,7 +176,7 @@ const EDS = [
   { id: 'my', name: 'Myanmar', full: 'Чаттха Сангаяна, VRI', color: 'var(--my)', col: 3 },
   { id: 'th', name: 'Thai', full: 'Сиам Рат 1927', color: 'var(--th)', col: 4 },
 ];
-const state = { index: [], cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true }, flags: new Map(), db: null, uid: null, canWrite: true };
+const state = { index: [], shifts: {}, cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true }, flags: new Map(), db: null, uid: null, canWrite: true };
 const $ = id => document.getElementById(id);
 function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 function recall(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
@@ -292,9 +297,11 @@ function renderNav() {
     `<a href="#${state.index.find(b => collOf(b.book) === c).book}" ${c === cur ? 'aria-current="page"' : ''}>${n}</a>`).join('');
   $('booksel').innerHTML = state.index.filter(b => collOf(b.book) === cur).map(b => {
     const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} файлов`;
-    return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}</option>`;
+    const n = Object.keys(state.shifts[b.book] || {}).length;
+    return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}${n ? ' · сдвигов ' + n : ''}</option>`;
   }).join('');
   $('booksel').value = state.book;
+  $('shiftn').textContent = Object.keys(state.shifts[state.book] || {}).length;
   const i = state.index.findIndex(b => b.book === state.book);
   $('prevbook').disabled = i <= 0; $('nextbook').disabled = i >= state.index.length - 1;
   const b = state.index.find(x => x.book === state.book);
@@ -314,6 +321,7 @@ async function render() {
   catch (e) { grid.innerHTML = `<div class="status">${esc(e.message)}. Обновите страницу.</div>`; return; }
   const eds = EDS.filter(e => state.show[e.id]);
   const diff = $('optdiff').checked, notes = $('optnotes').checked, sus = $('optsus').checked;
+  const shifts = $('optshift').checked && state.shifts[state.book] || {};
   const keyw = '7.6em';
   grid.style.setProperty('--cols', `${keyw} repeat(${eds.length}, minmax(0, 1fr))`);
   grid.style.setProperty('--keyw', keyw);
@@ -335,7 +343,8 @@ async function render() {
           const v = s.var[e.id]?.[key], r = s.ref[e.id]?.[key];
           if (v || r) cell += `<div class="notes">${v ? `<span class="var">${esc(v)}</span>` : ''}${r ? `<span class="ref">${esc(r)}</span>` : ''}</div>`;
         }
-        h += `<div class="cell${isSus ? ' sus' : ''}" data-ed="${e.id}">${cell}</div>`;
+        const shift = shifts[key]?.[e.id];
+        h += `<div class="cell${isSus ? ' sus' : ''}${shift ? ' shift' : ''}" data-ed="${e.id}"${shift ? ` title="${esc('Сдвиг: ' + shift)}"` : ''}>${cell}</div>`;
       }
       out.push(h + '</div>');
     }
@@ -466,8 +475,9 @@ function findSutta(t) {
 async function start() {
   try { state.index = await (await fetch('data/index.json')).json(); }
   catch (e) { $('grid').innerHTML = '<div class="status">Не удалось загрузить список книг. Обновите страницу.</div>'; return; }
+  try { state.shifts = await (await fetch('data/shifts.json')).json(); } catch (e) { /* no marks: the page works without them */ }
   Object.assign(state.show, recall('show', {}));
-  for (const [id, key] of [['optdiff', 'diff'], ['optnotes', 'notes'], ['optsus', 'sus']]) {
+  for (const [id, key] of [['optdiff', 'diff'], ['optnotes', 'notes'], ['optsus', 'sus'], ['optshift', 'shift']]) {
     const v = recall(key, null); if (v !== null) $(id).checked = v;
     $(id).addEventListener('change', () => { store(key, $(id).checked); render(); });
   }
@@ -480,6 +490,15 @@ async function start() {
       .map(f => `${f.key}\t${(f.eds || []).join(',')}\t${f.note || ''}`).join('\n');
     try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Скопировано.'; }
     catch (e) { $('copymsg').textContent = 'Не удалось скопировать, выделите список вручную.'; }
+  };
+  // The next marked row below the middle of the screen; past the last one, the first again.
+  $('nextshift').onclick = () => {
+    const rows = [...new Set([...document.querySelectorAll('.cell.shift')].map(c => c.closest('.row')))];
+    if (!rows.length) return;
+    const y = window.innerHeight / 2;   // a jump puts its row in the middle, so the next one is below it
+    const next = rows.find(r => r.getBoundingClientRect().top > y + 4) || rows[0];
+    next.scrollIntoView({ block: 'center' });
+    next.animate?.([{ outline: '2px solid var(--flag)' }, { outline: '2px solid transparent' }], { duration: 1600 });
   };
   $('flagsbtn').onclick = () => { $('flagpanel').hidden = !$('flagpanel').hidden; };
   $('grid').addEventListener('click', ev => {
