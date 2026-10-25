@@ -50,7 +50,10 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - Where a sutta of ms ends with a line the edition lacks (`Paṭhamaṁ.`, a vagga end) and the edition opens the next one
   with words ms lacks (Thai `sāvatthīnidānaṃ.`), the edition's paragraph or heading starts the next sutta.
 
-- An ms subheading inside a sutta (`dn8:5.0`, `N.0 Tassuddānaṁ`) takes only edition words that match it; edition text
+- Words printed with no space between them count as two (BJT `tīhi:accayaṃ`, `viditavedassa,purindadassa`,
+  `samāno‘na`, `gotamaṃ’jinaṃ`); the text is written back as printed. An elision mark stays inside the word
+  (`cattāro’me`, ms `cattārome`).
+- An ms subheading inside a sutta at any depth (`dn8:5.0`, `dn16:1.4.0`, `N.0 Tassuddānaṁ`) takes only edition words that match it; edition text
   ms lacks before it (a reading, a vagga end line) closes the previous segment. An edition subheading lands there.
 - Section end lines (`paṭhamo paṇṇāsako samatto`, `… niṭṭhitaṃ navamaṃ`) are text, not titles of what follows.
 
@@ -63,7 +66,7 @@ occur once, then by words that occur the same few times on both sides; without t
 Thai SN 34 ran half a segment behind.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
-168 before these rules, 51 after; most of the rest are BJT paṇṇāsaka titles without `samatto` and real readings.
+168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, now 57; most of the rest are BJT paṇṇāsaka titles without `samatto` and real readings.
 Run it after every build: `python3 viewer/find_shifts.py viewer/data viewer/data/shifts.json`. `report.tsv`: segments filled and share of edition words matched exactly.
 
 ## Run / sync

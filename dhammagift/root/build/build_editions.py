@@ -65,10 +65,10 @@ def si2ro(s):
 # ---------------------------------------------------------------- tokens
 
 class Tok:
-    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para')
+    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para', 'glue')
 
-    def __init__(self, text, entry):
-        self.text, self.entry = text, entry
+    def __init__(self, text, entry, glue=False):
+        self.text, self.entry, self.glue = text, entry, glue
         self.norm = norm(text)
         self.refs, self.vars, self.heads, self.para = [], [], [], None
 
@@ -85,8 +85,11 @@ def tokenize(text, markers, entry):
     note to the previous word. Returns list of Tok."""
     toks, spans = [], []
     for m in re.finditer(r'\S+', text):
-        toks.append(Tok(m.group(), entry))
-        spans.append((m.start(), m.end()))
+        start = m.start()
+        for k, part in enumerate(GLUED.split(m.group())):
+            toks.append(Tok(part, entry, glue=k > 0))
+            spans.append((start, start + len(part)))
+            start += len(part)
     if not toks:
         return toks
     starts = [a for a, _ in spans]
@@ -103,6 +106,14 @@ def tokenize(text, markers, entry):
             else:
                 toks[k].refs.append(val)
     return toks
+
+
+# words printed with no space between them: after , : ; ("tīhi:accayaṃ", "viditavedassa,purindadassa"), before an
+# opening quote ("samāno‘na"), after an opening quote that follows -ṃ ("gotamaṃ’jinaṃ"). An elision mark stays inside
+# the word ("cattāro’me" is ms "cattārome"), as does the enclitic ’ti / ’nti.
+GLUED = re.compile(r"(?:(?<=[,:;])(?=[‘“’'\"]?[^\W\d_]))"
+                   r"|(?:(?<=[^\W\d_])(?=[‘“][^\W\d_]))"
+                   r"|(?:(?<=ṃ[’'])(?=[^\W\d_])(?!n?ti\b|ti[,.;:’'”]))")
 
 
 def strip_punct(w):
@@ -501,6 +512,12 @@ def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
     return sorted(fs, key=key)
 
 
+def is_subhead(k):
+    """an ms subheading / number segment inside the text: the last level is 0 (an1.2:1.0, dn16:1.4.0)"""
+    seg = k.split(':')[1]
+    return seg.endswith('.0') and not seg.startswith('0.')
+
+
 def sutta_of(k):
     return k.split(':')[0]
 
@@ -725,7 +742,7 @@ def align(toks, segs, slots_before=None):
             nxt = bseg[j1] if j1 < len(b) else bseg[j1 - 1]
             prv = bseg[j1 - 1] if j1 > 0 else nxt
             boundary = sutta_of(segs[prv][0]) != sutta_of(segs[nxt][0])
-            if not boundary and nxt != prv and re.search(r':\d+\.0$', segs[nxt][0]):
+            if not boundary and nxt != prv and is_subhead(segs[nxt][0]):
                 nxt = prv  # an ms subheading segment (dn8:5.0) takes no edition text it lacks
             cut = next((k for k in range(i1, i2) if starts(k) if boundary or idx[k] < 0 or toks[idx[k]].heads), i2)
             # the edition opens the next sutta right after these words: they close the previous one
@@ -748,7 +765,7 @@ def align(toks, segs, slots_before=None):
             out[i] = out[i - 1]
     # an ms subheading inside a sutta (dn8:5.0, "N.0 Tassuddānaṁ") keeps only edition words that match it;
     # the rest is the end of the previous segment (vagga end lines, readings ms lacks)
-    sub = {si for si, (k, _) in enumerate(segs) if re.search(r':[1-9]\d*\.0$', k)
+    sub = {si for si, (k, _) in enumerate(segs) if is_subhead(k)
            and si > 0 and sutta_of(segs[si - 1][0]) == sutta_of(k)}
     i = 0
     while i < len(toks):  # move the words before the first one that matches (all, if none does)
@@ -804,7 +821,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             prev = body[si - 1][0] if si > 0 else None
             if start and slots.get(s):
                 put_heads(t.heads, slots[s], text, t.para)
-            elif prev and sutta_of(prev) == s and re.search(r':\d+\.0$', prev) and not text[prev]:
+            elif prev and sutta_of(prev) == s and is_subhead(prev) and not text[prev]:
                 text[prev].append(' '.join(h for _, h in t.heads))  # a subheading ms keeps in its own N.0 segment
             else:
                 text[key].append(' '.join(h for _, h in t.heads))
@@ -812,7 +829,10 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             sl = [k for k in slots.get(s, []) if not k.split(':')[1].startswith('0.')]
             if sl and not text[sl[0]]:
                 text[sl[0]].append(t.para + '.')
-        text[key].append(t.text)
+        if t.glue and body_words[key] and text[key] and text[key][-1].endswith(body_words[key][-1]):
+            text[key][-1] += t.text
+        else:
+            text[key].append(t.text)
         body_words[key].append(t.text)
         refs[key].extend(r for r in t.refs if r not in refs[key])
         vars_[key].extend(f'{l} → {r}' for l, r in t.vars)
