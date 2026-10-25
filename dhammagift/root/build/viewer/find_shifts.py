@@ -33,6 +33,8 @@ def scan(rows):
             # peyyāla: one side abbreviates (…pe…) what the other prints in full; the full text repeats the
             # neighbours' words by nature, which is not a shift
             if any(PE.search(rows[j][k]) for j in (i - 1, i, i + 1) if 0 <= j < len(rows) for k in (1, e)): continue
+            # ms abbreviating with a bare … (sn35.53:2.3 "Cakkhuviññāṇaṁ …") is peyyāla too
+            if any('…' in rows[j][1] for j in (i - 1, i, i + 1) if 0 <= j < len(rows)): continue
             m = SequenceMatcher(None, ms[i], w, autojunk=False)
             blocks = [b for b in m.get_matching_blocks() if b.size]
             first = blocks[0].b if blocks else len(w)
