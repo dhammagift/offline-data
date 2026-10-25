@@ -148,7 +148,7 @@ button:hover { border-color: var(--accent); }
       <button type="button" id="flagsbtn" class="flagbtn">Отмечено: 0</button>
     </div>
     <div class="legend">
-      <span>жёлтым: где издание расходится с двумя другими (bah<mark>u</mark>kāro); пустая жёлтая метка: у других тут есть буквы; слово целиком: в других изданиях его нет</span>
+      <span>жёлтым: буквы, где издание расходится с двумя другими (bah<mark>u</mark>kāro; если у других тут лишние буквы, закрашена буква перед этим местом); слово целиком: в других изданиях его нет</span>
       <span>ms подсвечен, только где отличается от всех трёх</span>
       <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
       <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
@@ -224,25 +224,26 @@ function alignWords(A, B) {
 }
 /* letters of a that the other word lacks are marked; a thin bar where the other word has letters a lacks */
 function charDiff(a, b) {
+  /* letters of a that differ from b are coloured; where b has letters a lacks, the letter before the spot */
   const chars = [...a.normalize('NFC')];
   const letters = [], pos = [];
   chars.forEach((c, i) => { const k = strict(c); if (k) { letters.push(k); pos.push(i); } });
   const other = [...b.k];
   const pairs = lcsPairs(letters, other, (x, y) => x === y);
-  const mark = new Array(chars.length).fill(false), gapBefore = new Array(chars.length + 1).fill(false);
-  const matched = new Set(pairs.map(p => p[0]));
-  letters.forEach((_, li) => { if (!matched.has(li)) mark[pos[li]] = true; });
+  const mark = new Array(chars.length).fill(false);
   let pj = 0, pl = 0;
   for (const [li, j] of [...pairs, [letters.length, other.length]]) {
-    if (j > pj && li === pl) gapBefore[li < letters.length ? pos[li] : chars.length] = true;
+    for (let k = pl; k < li; k++) mark[pos[k]] = true;
+    if (j > pj && li === pl && letters.length) mark[pos[pl > 0 ? pl - 1 : 0]] = true;
     pj = j + 1; pl = li + 1;
   }
-  let h = '';
+  let h = '', run = '';
   chars.forEach((c, i) => {
-    if (gapBefore[i]) h += '<span class="gap"></span>';
-    h += mark[i] ? `<span class="d">${esc(c)}</span>` : esc(c);
+    if (mark[i]) { run += c; return; }
+    if (run) { h += `<span class="d">${esc(run)}</span>`; run = ''; }
+    h += esc(c);
   });
-  if (gapBefore[chars.length]) h += '<span class="gap"></span>';
+  if (run) h += `<span class="d">${esc(run)}</span>`;
   return h;
 }
 const VOTERS = ['bjt', 'my', 'th'];
