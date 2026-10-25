@@ -18,6 +18,8 @@
   --flag: #c2362b;
   --flag-bg: #fbe7e4;
   --sus: #c98a00;
+  --shift: #b8236f;
+  --shift-bg: #fbe6f0;
   --ms: #4b5561;
   --bjt: #b05a12;
   --my: #1f63a8;
@@ -30,13 +32,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
-    --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a;
+    --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a; --shift: #ff7ab8; --shift-bg: #3a1a2c;
     --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
-  --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a;
+  --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a; --shift: #ff7ab8; --shift-bg: #3a1a2c;
   --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -106,8 +108,10 @@ button:hover { border-color: var(--accent); }
 .gap { display: inline-block; width: .35em; height: 1.05em; vertical-align: -0.18em; background: var(--diff); border-radius: 2px; }
 .w.ins { background: var(--diff); color: var(--diff-fg); border-radius: 2px; box-shadow: 0 0 0 1px var(--diff); }
 .cell.sus { box-shadow: inset 0 -3px 0 var(--sus); }
-.cell.shift { background: var(--flag-bg); box-shadow: inset 3px 0 0 var(--flag); }
-.legend .sh { background: var(--flag-bg); box-shadow: inset 3px 0 0 var(--flag); padding: 0 4px 0 7px; }
+.cell.shift { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); }
+.notes .why { color: var(--shift); }
+.notes .why::before { content: "сдвиг: "; font-weight: 600; }
+.legend .sh { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); padding: 0 4px 0 7px; }
 .cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
 .notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
 .notes .var::before { content: "вар. "; font-weight: 600; }
@@ -120,6 +124,7 @@ button:hover { border-color: var(--accent); }
 .colname { display: inline-flex; align-items: center; gap: 6px; }
 
 @media (max-width: 760px) {
+  #nextshift { position: fixed; right: 12px; bottom: max(12px, env(safe-area-inset-bottom, 0px)); z-index: 5; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
   header.top { position: static; }
   .row { grid-template-columns: 1fr; }
   .row.colhead { display: none; }
@@ -156,7 +161,7 @@ button:hover { border-color: var(--accent); }
       <span>ms подсвечен, только где отличается от всех трёх</span>
       <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
       <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
-      <span><span class="sh">красным</span>: сдвиг разбивки, в сегменте издания слова соседнего сегмента ms (найдено автоматически; подробности при наведении)</span>
+      <span><span class="sh">малиновым</span>: сдвиг разбивки, в сегменте издания слова соседнего сегмента ms (найдено автоматически, что именно — под текстом)</span>
     </div>
     <section class="panel" id="flagpanel" hidden>
       <h2 id="flagtitle">Отмеченные сегменты</h2>
@@ -301,7 +306,6 @@ function renderNav() {
     return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}${n ? ' · сдвигов ' + n : ''}</option>`;
   }).join('');
   $('booksel').value = state.book;
-  $('shiftn').textContent = Object.keys(state.shifts[state.book] || {}).length;
   const i = state.index.findIndex(b => b.book === state.book);
   $('prevbook').disabled = i <= 0; $('nextbook').disabled = i >= state.index.length - 1;
   const b = state.index.find(x => x.book === state.book);
@@ -344,12 +348,16 @@ async function render() {
           if (v || r) cell += `<div class="notes">${v ? `<span class="var">${esc(v)}</span>` : ''}${r ? `<span class="ref">${esc(r)}</span>` : ''}</div>`;
         }
         const shift = shifts[key]?.[e.id];
-        h += `<div class="cell${isSus ? ' sus' : ''}${shift ? ' shift' : ''}" data-ed="${e.id}"${shift ? ` title="${esc('Сдвиг: ' + shift)}"` : ''}>${cell}</div>`;
+        // the reason under the text, not in a title: a phone has no hover
+        if (shift) cell += `<div class="notes"><span class="why">${esc(shift)}</span></div>`;
+        h += `<div class="cell${isSus ? ' sus' : ''}${shift ? ' shift' : ''}" data-ed="${e.id}">${cell}</div>`;
       }
       out.push(h + '</div>');
     }
   }
   grid.innerHTML = out.join('');
+  // the bar counts the rows marked in the editions shown; the book list keeps the whole book's number
+  $('shiftn').textContent = Object.values(state.shifts[state.book] || {}).filter(c => eds.some(e => c[e.id])).length;
   paintFlags();
 }
 

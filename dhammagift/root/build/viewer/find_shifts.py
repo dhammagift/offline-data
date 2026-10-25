@@ -43,12 +43,15 @@ def scan(rows):
             # tail: edition words after the last ms match that are the start of the next ms segment
             if i + 1 < len(rows) and last < len(w):
                 extra = w[last:]
-                if len(extra) >= 2 and edge_match(extra, ms[i + 1], True) >= 0.7 and not ms[i][-len(extra):] == extra:
+                # one word counts only when it is exactly the next ms segment's first word and the edition's next segment lacks it
+                one = len(extra) == 1 and ms[i + 1][:1] == extra and ew[i + 1][:1] != extra
+                if (one or len(extra) >= 2 and edge_match(extra, ms[i + 1], True) >= 0.7) and not ms[i][-len(extra):] == extra:
                     out.append((rows[i][0], ed, 'next-in', rows[i + 1][0].split(':')[0] != sid, len(extra), ' '.join(extra[:12])))
             # head: edition words before the first ms match that are the end of the previous ms segment
             if i > 0 and first > 0:
                 extra = w[:first]
-                if len(extra) >= 2 and edge_match(extra, ms[i - 1], False) >= 0.7 and not ms[i][:len(extra)] == extra:
+                one = len(extra) == 1 and ms[i - 1][-1:] == extra and ew[i - 1][-1:] != extra
+                if (one or len(extra) >= 2 and edge_match(extra, ms[i - 1], False) >= 0.7) and not ms[i][:len(extra)] == extra:
                     out.append((rows[i][0], ed, 'prev-in', rows[i - 1][0].split(':')[0] != sid, len(extra), ' '.join(extra[:12])))
             # whole segment belongs to a neighbour
             own = sim(ms[i], w)
@@ -70,7 +73,9 @@ def main(data, dst):
                'is-next': 'это текст следующего сегмента ms', 'is-prev': 'это текст предыдущего сегмента ms'}
         for book, key, ed, kind, cross, n, text in res:
             cell = out.setdefault(book, {}).setdefault(key, {})
-            cell[ed] = (cell[ed] + '; ' if ed in cell else '') + say[kind] + (' (через границу сутты)' if cross else '') + ': ' + text
+            line = say[kind] + (' (через границу сутты)' if cross else '') + ': ' + text
+            if text in cell.get(ed, ''): continue   # the same words found two ways ("в начале…" and "это текст…"): once
+            cell[ed] = (cell[ed] + '; ' if ed in cell else '') + line
         json.dump(out, open(dst, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
     else:
         with open(dst, 'w', encoding='utf8') as o:
