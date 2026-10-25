@@ -41,8 +41,14 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   `my` `sī.` (Sinhala), `syā.` (Thai), `pī.` (PTS), `kaṃ.`, `ka.`; `th` `ma.` (Myanmar), `yu.` (PTS), `sī.` (Sinhala).
 - References: BJT `<tipitaka.lk file>.<page>` and `para<n>`; `my` `para<n>` and VRI page marks `M` (Myanmar), `V` (VRI),
   `P` (PTS), `T` (Thai) with volume.page; `th` `sya<volume>.<page>` (the same marks SC reference uses) and `para<n>`.
-- `th` is aligned one Siam Rath volume at a time against all SC books in it (volume found from SC `sya` marks),
-  so no text spills from one book into the next; only the books asked for are written.
+- Every edition is aligned one volume at a time against all SC books in it: BJT and VRI by the volumes in `VOLUMES`
+  (DN and MN in 3, SN by vagga, AN by nipāta), Siam Rath by the volume found from SC `sya` marks (AN 5, 6, 7, 9 have
+  none in SC and are set in `SYA_VOLUME`). No text spills from one book into the next; only the books asked for are written.
+- At a sutta boundary, edition words ms lacks go with the previous sutta up to the edition's own start of the next one
+  (its title or numbered paragraph), the rest with the next sutta: the closing verses (uddāna) of mn9 stay in mn9.
+  In the Thai source, centred lines that are no title (verse lines) are text.
+- Where a sutta of ms ends with a line the edition lacks (`Paṭhamaṁ.`, a vagga end) and the edition opens the next one
+  with words ms lacks (Thai `sāvatthīnidānaṃ.`), the edition's paragraph or heading starts the next sutta.
 
 ## Alignment
 
@@ -60,11 +66,24 @@ curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/r
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
   --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
-  --out dhammagift --only sn1-10,sn45-49,an1-2 --report dhammagift/root/build/report.tsv
+  --out dhammagift --only dn,mn,sn,an --report dhammagift/root/build/report.tsv
 ```
 
-Done so far: SN 1-10, SN 45-49, AN 1-2. Sources of this build: tipitaka.lk `319c415`, tipitaka-xml `00a2b2b`,
+Done: DN, MN, SN, AN (about 50 s). Not yet: KN, Vinaya, Abhidhamma. Sources of this build: tipitaka.lk `319c415`, tipitaka-xml `00a2b2b`,
 bilara-data `6a395ce`, palinew.sqlite sha256 `62e0b31282b87c2a…`.
+
+Segments with text (whole collections; in brackets the same count for the 4nt `mod` branch columns):
+
+| | BJT | Myanmar | Thai |
+|---|---|---|---|
+| DN | 98% (94) | 97% (99) | 96% (94) |
+| MN | 98% (93) | 99% (96) | 98% (96) |
+| SN | 86% (75) | 92% (85) | 84% (71) |
+| AN | 89% (81) | 93% (88) | 85% (77) |
+
+Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
+BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
+neighbouring segments.
 
 ## Viewer
 

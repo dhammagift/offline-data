@@ -6,15 +6,21 @@ import json, glob, os, re, sys
 DG, MS, OUT = sys.argv[1:4]
 os.makedirs(f'{OUT}/data', exist_ok=True)
 EDS = ['bjt', 'my', 'th']
-books = sorted({p.split('/')[-2] for p in glob.glob(f'{DG}/root/pli/bjt/sutta/*/*/*.json')},
-               key=lambda b: (b[:2] != 'sn', int(b[2:])))
+FLAT = ('dn', 'mn')
+ORDER = {'dn': 0, 'mn': 1, 'sn': 2, 'an': 3}
+found = set()
+for f in glob.glob(f'{DG}/root/pli/bjt/sutta/*/**/*.json', recursive=True):
+    coll = f.split('/sutta/')[1].split('/')[0]
+    found.add(os.path.basename(f).split('_')[0] if coll in FLAT else f.split('/')[-2])
+books = sorted(found, key=lambda b: (ORDER.get(re.match(r'[a-z]+', b).group(), 9), int(re.search(r'\d+', b).group())))
 def nkey(f):
     b = os.path.basename(f).split('_')[0]
     return [int(x) for x in re.findall(r'\d+', b)]
 index = []
 for book in books:
-    coll = book[:2]
-    files = sorted(glob.glob(f'{MS}/{coll}/{book}/*_root-pli-ms.json'), key=nkey)
+    coll = re.match(r'[a-z]+', book).group()
+    sub = coll if coll in FLAT else f'{coll}/{book}'
+    files = [f'{MS}/{coll}/{book}_root-pli-ms.json'] if coll in FLAT else sorted(glob.glob(f'{MS}/{sub}/*_root-pli-ms.json'), key=nkey)
     suttas = []
     stats = {e: [0, 0] for e in EDS}
     for f in files:
@@ -22,10 +28,10 @@ for book in books:
         ms = json.load(open(f))
         eds, var, ref = {}, {}, {}
         for e in EDS:
-            p = f'{DG}/root/pli/{e}/sutta/{coll}/{book}/{base}_root-pli-{e}.json'
+            p = f'{DG}/root/pli/{e}/sutta/{sub}/{base}_root-pli-{e}.json'
             eds[e] = json.load(open(p)) if os.path.exists(p) else {}
             for kind, store in (('variant', var), ('reference', ref)):
-                q = f'{DG}/{kind}/pli/{e}/sutta/{coll}/{book}/{base}_{kind}-pli-{e}.json'
+                q = f'{DG}/{kind}/pli/{e}/sutta/{sub}/{base}_{kind}-pli-{e}.json'
                 if os.path.exists(q):
                     store[e] = json.load(open(q))
         rows = []

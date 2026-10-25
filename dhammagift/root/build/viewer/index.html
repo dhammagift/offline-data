@@ -57,7 +57,8 @@ header.top {
 h1 { font-family: var(--font-text); font-weight: 700; font-size: 1.35rem; margin: 0; text-wrap: balance; }
 .sub { color: var(--muted); font-size: .82rem; }
 .row-ctl { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
-.books { display: flex; flex-wrap: wrap; gap: 4px; }
+.books { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+#booksel { max-width: min(320px, 100%); font-family: var(--font-mono); font-size: .82rem; }
 .books a { font-family: var(--font-mono); font-size: .8rem; color: var(--fg); text-decoration: none; padding: 3px 8px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .books a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
@@ -133,7 +134,12 @@ button:hover { border-color: var(--accent); }
       <h1>Сверка изданий канона</h1>
       <span class="sub">Махасангити (SC ms), Буддха Джаянти (BJT), Чаттха Сангаяна (VRI), Сиам Рат 1927. Вся книга на одной странице, по сегментам SuttaCentral</span>
     </div>
-    <nav class="books" id="books" aria-label="Книги"></nav>
+    <nav class="books" aria-label="Книги">
+      <span id="colls" class="books"></span>
+      <button type="button" id="prevbook" aria-label="Предыдущая книга">←</button>
+      <select id="booksel" aria-label="Книга"></select>
+      <button type="button" id="nextbook" aria-label="Следующая книга">→</button>
+    </nav>
     <div class="row-ctl">
       <span id="edchips" class="row-ctl"></span>
       <label class="chip" title="BJT, Myanmar и Thai голосуют по каждому слову; ms сверяется с итогом"><input type="checkbox" id="optdiff" checked> разночтения (2 из 3)</label>
@@ -277,9 +283,19 @@ async function loadBook(book) {
   return state.cache[book];
 }
 
+const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN' };
+const collOf = b => b.match(/^[a-z]+/)[0];
 function renderNav() {
-  $('books').innerHTML = state.index.map(b =>
-    `<a href="#${b.book}" data-book="${b.book}" ${b.book === state.book ? 'aria-current="page"' : ''}>${b.book.toUpperCase()}</a>`).join('');
+  const cur = collOf(state.book);
+  $('colls').innerHTML = Object.entries(COLLS).filter(([c]) => state.index.some(b => collOf(b.book) === c)).map(([c, n]) =>
+    `<a href="#${state.index.find(b => collOf(b.book) === c).book}" ${c === cur ? 'aria-current="page"' : ''}>${n}</a>`).join('');
+  $('booksel').innerHTML = state.index.filter(b => collOf(b.book) === cur).map(b => {
+    const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} файлов`;
+    return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}</option>`;
+  }).join('');
+  $('booksel').value = state.book;
+  const i = state.index.findIndex(b => b.book === state.book);
+  $('prevbook').disabled = i <= 0; $('nextbook').disabled = i >= state.index.length - 1;
   const b = state.index.find(x => x.book === state.book);
   $('edchips').innerHTML = EDS.map(e => `
     <label class="chip" title="${e.full}"><input type="checkbox" data-ed="${e.id}" ${state.show[e.id] ? 'checked' : ''}>
@@ -445,6 +461,10 @@ async function start() {
     const v = recall(key, null); if (v !== null) $(id).checked = v;
     $(id).addEventListener('change', () => { store(key, $(id).checked); render(); });
   }
+  $('booksel').addEventListener('change', () => go($('booksel').value));
+  const stepBook = d => { const i = state.index.findIndex(b => b.book === state.book) + d; if (state.index[i]) go(state.index[i].book); };
+  $('prevbook').onclick = () => stepBook(-1);
+  $('nextbook').onclick = () => stepBook(1);
   $('flagsbtn').onclick = () => { $('flagpanel').hidden = !$('flagpanel').hidden; };
   $('grid').addEventListener('click', ev => {
     const k = ev.target.closest('.key');
