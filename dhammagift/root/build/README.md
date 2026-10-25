@@ -65,3 +65,10 @@ python3 dhammagift/root/build/build_editions.py \
 
 Done so far: SN 1-10, SN 45-49, AN 1-2. Sources of this build: tipitaka.lk `319c415`, tipitaka-xml `00a2b2b`,
 bilara-data `6a395ce`, palinew.sqlite sha256 `62e0b31282b87c2a…`.
+
+## Viewer
+
+`viewer/index.html` shows a whole book on one page, the four Pali texts side by side, variant readings by majority of
+BJT / Myanmar / Thai (ms is checked against them), and shared problem marks. Data for it:
+`python3 viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta viewer/` then open `viewer/index.html`
+through any local web server (`python3 -m http.server`); the problem marks work only on the published claude.ai page.
