@@ -84,7 +84,8 @@ def norm(w):
     w = unicodedata.normalize('NFD', w.lower())
     w = ''.join(c for c in w if not unicodedata.combining(c))
     w = w.replace('æ', 'a')
-    return re.sub(r'[^a-z0-9]', '', w)
+    w = re.sub(r'[^a-z0-9]', '', w)
+    return '' if w.isdigit() else w  # a bare number (list mark, paragraph) is no word to align on
 
 
 def tokenize(text, markers, entry):
@@ -120,6 +121,7 @@ def tokenize(text, markers, entry):
 # the word ("cattāro’me" is ms "cattārome"), as does the enclitic ’ti / ’nti.
 GLUED = re.compile(r"(?:(?<=[,:;])(?=[‘“’'\"]?[^\W\d_]))"
                    r"|(?:(?<=[^\W\d_]-)(?=[^\W\d_]))"  # BJT verse halves "rammā-agamā"
+                   r"|(?:(?<=[^\W\d_][.?!])(?=[\[(]|[A-ZĀĪŪṬḌṆÑṄḶ]))"  # VRI "patthiyo.[iti", "ekanidānāni.Vihāravaggo"
                    r"|(?:(?<=[^\W\d_])(?=[‘“][^\W\d_]))"
                    r"|(?:(?<=ṃ[’'])(?=[^\W\d_])(?!n?ti\b|ti[,.;:’'”]))")
 
@@ -205,6 +207,18 @@ def bjt_variant(t):
     return '; '.join(x for x in parts if x)
 
 
+def bjt_end_line(text, level, kind):
+    """BJT prints the end line of a vagga / paṇṇāsaka like a title. A vagga that starts carries its number
+    ("15. navapurāṇavaggo", "[5. parisavaggo]"), the end line has none ("navapurāṇavaggo pañcadasamo.",
+    "catuttha gaṅgāpeyyāli"); a paṇṇāsaka end line ends with a full stop ("paṭhamo paṇṇāsako.")."""
+    t = norm(text)
+    if level >= 4 and kind == 'heading':  # book titles (sagāthavaggo)
+        return False
+    if re.search(r'vagg|peyyal', t) and not re.match(r'\s*\[?\d', text):
+        return True
+    return 'pannasak' in t and text.rstrip().endswith('.')
+
+
 def bjt_entries(files):
     """yield (kind, text_roman, markers, level) in book order."""
     for f in files:
@@ -245,7 +259,7 @@ def bjt_stream(files, split_re=None):
                     cur.heading(*h)
                 pre = []
             cls = head_class(text, big=level >= 4 and kind == 'heading')
-            if colophon(text):
+            if colophon(text) or bjt_end_line(text, level, kind):
                 kind = 'body'
             elif kind == 'centered' and level == 1 and cls in ('sutta', 'vagga'):
                 kind = 'body'  # end lines like "vaggo paṭhamo.", "saṃyuttaṃ samattaṃ."
@@ -415,7 +429,9 @@ def th2ro(s):
     return ''.join(out)
 
 
-TH_TITLE = re.compile(r'(sutt|jatak|vatthu|apadan|niddes|kath|panh|gatha|cariy|vams|uddes|path)[a-z]*$')  # on the last word
+# on the last word; strict endings, so verse words like vādapathātivattaṃ, vusitabrahmacariyo are no titles
+TH_TITLE = re.compile(r'(sutt[a-z]*|jatak[a-z]*|vatthu|apadan[a-z]*|niddes[a-z]*|kath(a|am|o)?|panh[a-z]*'
+                      r'|gath(a|ayo)|cariy(a|am)|vams(o|am)|uddes[a-z]*|path(o|am))$')
 TH_BODY_HEAD = re.compile(r'(tassuddan|tatruddan|uddanambhavati)')
 
 
@@ -543,8 +559,8 @@ def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
 
 def is_subhead(k):
     """an ms subheading / number segment inside the text: the last level is 0 (an1.2:1.0, dn16:1.4.0)"""
-    seg = k.split(':')[1]
-    return seg.endswith('.0') and not seg.startswith('0.')
+    parts = k.split(':')[1].split('.')
+    return parts[0] != '0' and '0' in parts[1:]  # an1.2:1.0, dn16:1.4.0, dn1:1.28.0.2
 
 
 def sutta_of(k):
@@ -840,8 +856,31 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     vars_ = collections.defaultdict(list)
     leftover_heads = list(chunk.pending)
     body_words = collections.defaultdict(list)
+    def home(h, si):
+        """an empty ms segment just before si that this title line is the end line of (same first word)"""
+        hw = [norm(x) for x in h.split() if norm(x)]
+        if not hw or len(hw) > 6:
+            return None
+        for j in range(si - 1, max(-1, si - 5), -1):
+            k, v = body[j]
+            vw = [norm(x) for x in v.split() if norm(x)]
+            if vw and vw[0] == hw[0] and not text[k] and not body_words[k]:
+                return k
+            if body_words[k]:  # stop at edition text already placed
+                break
+        return None
+
     seen = set()
     for t, si in zip(chunk.toks, assign):
+        if t.heads:
+            keep = []
+            for c, h in t.heads:
+                k = home(h, si) if not keep else None  # only the leading end lines
+                if k:
+                    text[k].append(h)
+                else:
+                    keep.append((c, h))
+            t.heads = keep
         key = body[si][0]
         s = sutta_of(key)
         start = s not in seen  # first edition word of this sutta
