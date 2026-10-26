@@ -119,6 +119,7 @@ def tokenize(text, markers, entry):
 # opening quote ("samāno‘na"), after an opening quote that follows -ṃ ("gotamaṃ’jinaṃ"). An elision mark stays inside
 # the word ("cattāro’me" is ms "cattārome"), as does the enclitic ’ti / ’nti.
 GLUED = re.compile(r"(?:(?<=[,:;])(?=[‘“’'\"]?[^\W\d_]))"
+                   r"|(?:(?<=[^\W\d_]-)(?=[^\W\d_]))"  # BJT verse halves "rammā-agamā"
                    r"|(?:(?<=[^\W\d_])(?=[‘“][^\W\d_]))"
                    r"|(?:(?<=ṃ[’'])(?=[^\W\d_])(?!n?ti\b|ti[,.;:’'”]))")
 
@@ -314,8 +315,9 @@ def vri_flatten(el):
 
 
 def vri_stream(path, chunk_div=None):
-    """chunk_div: 'samyutta' -> {n: Stream} by div id sn<k>_<n>; None -> {0: Stream}."""
-    root = vri_root(path)
+    """path: a file or a list of files read as one text. chunk_div: 'samyutta' -> {n: Stream} by div id
+    sn<k>_<n>; None -> {0: Stream}."""
+    paths = path if isinstance(path, list) else [path]
     chunks = {}
     pre = Stream()
 
@@ -350,12 +352,13 @@ def vri_stream(path, chunk_div=None):
                 continue
             cur.body(text, markers)
 
-    body = root.find('.//body')
-    if chunk_div:
-        walk(body, pre, [])
-    else:
-        chunks[0] = pre
-        walk(body, pre, [])
+    for path in paths:
+        body = vri_root(path).find('.//body')
+        if chunk_div:
+            walk(body, pre, [])
+        else:
+            chunks[0] = pre
+            walk(body, pre, [])
     return chunks
 
 
@@ -412,6 +415,7 @@ def th2ro(s):
     return ''.join(out)
 
 
+TH_TITLE = re.compile(r'(sutt|jatak|vatthu|apadan|niddes|kath|panh|gatha|cariy|vams|uddes|path)[a-z]*$')  # on the last word
 TH_BODY_HEAD = re.compile(r'(tassuddan|tatruddan|uddanambhavati)')
 
 
@@ -425,6 +429,7 @@ def th_footnotes(footer):
 
 
 def th_stream(db, volume):
+    """volume: a Siam Rath volume or a list of them read as one text"""
     import sqlite3
     st = Stream()
     buf, mk = [], []
@@ -436,8 +441,10 @@ def th_stream(db, volume):
         mk.clear()
 
     con = sqlite3.connect(db)
-    for page, html, footer in con.execute(
-            'select page, html, footer from main where volume=? order by page', (volume,)):
+    vols = volume if isinstance(volume, list) else [volume]
+    for volume, page, html, footer in con.execute(
+            'select volume, page, html, footer from main where volume in (%s) order by volume, page'
+            % ','.join('?' * len(vols)), vols):
         fn = th_footnotes(footer)
         html = re.sub(r'<span class="reference">([^<]*)</span>', r'<\1>', html)
         html = re.split(r'<br/>', html)[0]
@@ -452,7 +459,7 @@ def th_stream(db, volume):
             cls = head_class(line) if m else None
             if m and (not line.rstrip().endswith('.') or 'namotassa' in norm(line)) \
                     and not TH_BODY_HEAD.search(norm(line)) \
-                    and not (cls == 'sutta' and 'sutt' not in norm(line)) \
+                    and not (cls == 'sutta' and not TH_TITLE.search(norm(line.split()[-1]))) \
                     and not colophon(line):  # centred verse lines and section end lines are text
                 flush()
                 st.heading(line, cls, [page_ref] if page_ref else [])
@@ -494,6 +501,17 @@ def th_stream(db, volume):
 SYA_VOLUME = {'an5': 22, 'an6': 22, 'an7': 23, 'an9': 23}
 
 
+def sya_volumes(ref_dir, coll, book):
+    """all Siam Rath volumes a SC book is printed in"""
+    if book in SYA_VOLUME:
+        return {SYA_VOLUME[book]}
+    vols = set()
+    for f in ms_files(ref_dir, coll, book, suffix='_reference.json'):
+        for v in json.load(open(f, encoding='utf-8')).values():
+            vols.update(int(m) for m in re.findall(r'\bsya(\d+)\.', v))
+    return vols
+
+
 def sya_volume(ref_dir, coll, book):
     """Siam Rath volume of a SC book, from SC reference 'syaV.P' marks."""
     if book in SYA_VOLUME:
@@ -515,10 +533,10 @@ def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
     if coll in FLAT:
         f = os.path.join(ms_dir, coll, book + suffix)
         return [f] if os.path.exists(f) else []
-    fs = glob.glob(os.path.join(ms_dir, coll, book, '*' + suffix))
+    fs = glob.glob(os.path.join(ms_dir, coll, book, '**', '*' + suffix), recursive=True)
 
     def key(f):
-        b = os.path.basename(f).split('_')[0][len(book) + 1:]
+        b = os.path.basename(f).split('_')[0][len(book):]
         return [int(x) for x in re.findall(r'\d+', b)]
     return sorted(fs, key=key)
 
@@ -853,11 +871,12 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     n_full = n_seg = n_written = 0
     for p, keys in files:
         base = os.path.basename(p).replace('_root-pli-ms.json', '')
-        book = base.split('.')[0]
+        rel_dir = os.path.relpath(os.path.dirname(p), MS_DIR)  # dn | sn/sn1 | kn/iti/vagga1
+        parts = rel_dir.split(os.sep)
+        book = parts[1] if len(parts) > 1 else base
         if write_books and book not in write_books:
             continue
-        coll = re.match(r'[a-z]+', book).group()
-        rel = os.path.join('sutta', coll) if coll in FLAT else os.path.join('sutta', coll, book)
+        rel = os.path.join('sutta', rel_dir)
         root = {k: (' '.join(text[k]) + ' ') if text[k] else '' for k in keys}
         n_seg += len(keys)
         n_written += 1
@@ -933,21 +952,57 @@ VOLUMES = {
          's0404m4.mul.xml'], 1)],
 }
 LAST = {c: v[-1][1] for c, v in VOLUMES.items()}
+# KN: (SC books, BJT file prefixes, VRI files); BJT has no Milindapañha. Apadāna is one text in all editions.
+KN = [
+    (['kp'], ['kn-khp'], ['s0501m.mul.xml']), (['dhp'], ['kn-dhp'], ['s0502m.mul.xml']),
+    (['ud'], ['kn-ud'], ['s0503m.mul.xml']), (['iti'], ['kn-iti'], ['s0504m.mul.xml']),
+    (['snp'], ['kn-snp'], ['s0505m.mul.xml']), (['vv'], ['kn-vv'], ['s0506m.mul.xml']),
+    (['pv'], ['kn-pv'], ['s0507m.mul.xml']), (['thag'], ['kn-thag'], ['s0508m.mul.xml']),
+    (['thig'], ['kn-thig'], ['s0509m.mul.xml']),
+    (['tha-ap', 'thi-ap'], ['kn-ap'], ['s0510m1.mul.xml', 's0510m2.mul.xml']),
+    (['bv'], ['kn-bv'], ['s0511m.mul.xml']), (['cp'], ['kn-cp'], ['s0512m.mul.xml']),
+    (['ja'], ['kn-jat'], ['s0513m.mul.xml', 's0514m.mul.xml']), (['mnd'], ['kn-mn'], ['s0515m.mul.xml']),
+    (['cnd'], ['kn-nc'], ['s0516m.mul.xml']), (['ps'], ['kn-ps'], ['s0517m.mul.xml']),
+    (['mil'], [], ['s0518m.nrf.xml']), (['ne'], ['kn-nett'], ['s0519m.mul.xml']),
+    (['pe'], ['kn-petk'], ['s0520m.nrf.xml']),
+]
+KN_BOOKS = [b for books, _, _ in KN for b in books]
+
+
+def groups():
+    """(collection, SC books, BJT prefixes, VRI files) for every edition volume"""
+    for coll, vols in VOLUMES.items():
+        for lo, hi, bjt_prefix, vri_file in vols:
+            yield coll, [f'{coll}{n}' for n in range(lo, hi + 1)], [bjt_prefix], [vri_file]
+    for books, bjt, vri in KN:
+        yield 'kn', books, bjt, vri
+
+
+def coll_of(book):
+    return 'kn' if book in KN_BOOKS else re.match(r'[a-z]+', book).group()
+
+
+def books_of(coll):
+    return KN_BOOKS if coll == 'kn' else [f'{coll}{n}' for n in range(1, LAST[coll] + 1)]
 
 
 def bjt_book_files(bjt_dir, prefix):
     fs = [f for f in glob.glob(os.path.join(bjt_dir, prefix + '*.json'))
           if re.fullmatch(re.escape(prefix) + r'(-\d+)*\.json', os.path.basename(f))]
-    return sorted(fs, key=lambda f: [int(x) for x in re.findall(r'\d+', os.path.basename(f))[1:]])
+    # parts in order: dn-1, dn-1-3, dn-1-6 ... (numbers after the prefix; KN prefixes have none of their own)
+    return sorted(fs, key=lambda f: [int(x) for x in re.findall(r'\d+', os.path.basename(f)[len(prefix):])])
 
 
 def parse_only(s):
     books = []
     for part in s.split(','):
         part = part.strip()
+        if part == 'kn' or part in KN_BOOKS:
+            books += [('kn', b) for b in (KN_BOOKS if part == 'kn' else [part])]
+            continue
         m = re.fullmatch(r'(dn|mn|sn|an)(?:(\d+)(?:-(\d+))?)?', part)
         if not m:
-            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4)')
+            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4, kn, dhp)')
         a = int(m.group(2) or 1)
         b = int(m.group(3) or m.group(2) or LAST[m.group(1)])
         books += [(m.group(1), n) for n in range(a, b + 1)]
@@ -959,41 +1014,57 @@ def log(report):
 
 
 def main():
+    global MS_DIR
     ap = argparse.ArgumentParser()
     ap.add_argument('--bjt', required=True)
     ap.add_argument('--vri', required=True)
     ap.add_argument('--ms', required=True)
     ap.add_argument('--out', required=True)
-    ap.add_argument('--only', default='dn,mn,sn,an', help='e.g. dn,mn,sn1-10,an4')
+    ap.add_argument('--only', default='dn,mn,sn,an,kn', help='e.g. dn,mn,sn1-10,an4,kn,dhp')
     ap.add_argument('--thai', help='E-Tipitaka palinew.sqlite (Siam Rath 1927)')
     ap.add_argument('--ref', help='bilara-data reference/pli/ms/sutta, for Siam Rath volumes')
     ap.add_argument('--report')
     a = ap.parse_args()
+    MS_DIR = a.ms
     report = []
-    asked = {f'{c}{n}' for c, n in parse_only(a.only)}
-    for coll, vols in VOLUMES.items():
-        for lo, hi, bjt_prefix, vri_file in vols:
-            inside = [f'{coll}{n}' for n in range(lo, hi + 1)]
-            books = asked.intersection(inside)
-            if not books:
-                continue
-            ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
-            label = f'{coll}{lo}-{hi}' if lo != hi else f'{coll}{lo}'
-            place(bjt_stream(bjt_book_files(a.bjt, bjt_prefix))[0], ms, 'bjt', a.out, label, report, books)
+    asked = {b if c == 'kn' else f'{c}{b}' for c, b in parse_only(a.only)}
+    for coll, inside, bjt_prefixes, vri_files in groups():
+        books = asked.intersection(inside)
+        if not books:
+            continue
+        ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
+        label = inside[0] if len(inside) == 1 else f'{inside[0]}-{inside[-1]}'
+        if bjt_prefixes:
+            files = [f for pre in bjt_prefixes for f in bjt_book_files(a.bjt, pre)]
+            place(bjt_stream(files)[0], ms, 'bjt', a.out, label, report, books)
             log(report)
-            place(vri_stream(os.path.join(a.vri, vri_file))[0], ms, 'my', a.out, label, report, books)
-            log(report)
+        place(vri_stream([os.path.join(a.vri, f) for f in vri_files])[0], ms, 'my', a.out, label, report, books)
+        log(report)
     if a.thai:
-        want = collections.defaultdict(set)  # Siam Rath volume -> books to write
-        for b in asked:
-            want[sya_volume(a.ref, re.match(r'[a-z]+', b).group(), b)].add(b)
-        for vol, books in sorted(want.items()):
-            coll = re.match(r'[a-z]+', next(iter(books))).group()
-            inside = [f'{coll}{n}' for n in range(1, LAST[coll] + 1) if sya_volume(a.ref, coll, f'{coll}{n}') == vol]
-            ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
-            label = f'sya{vol}:{inside[0]}-{inside[-1]}'
-            place(th_stream(a.thai, vol), ms, 'th', a.out, label, report, books)
-            log(report)
+        # SC books joined by the Siam Rath volumes they share (ja spans two, Apadāna and Bv/Cp share one)
+        for coll in sorted({coll_of(b) for b in asked}):
+            vols = {b: sya_volumes(a.ref, coll, b) for b in books_of(coll)}
+            todo = [b for b in books_of(coll) if vols[b]]
+            while todo:
+                group = [todo.pop(0)]
+                gv = set(vols[group[0]])
+                grew = True
+                while grew:
+                    grew = False
+                    for b in list(todo):
+                        if vols[b] & gv:
+                            group.append(b)
+                            gv |= vols[b]
+                            todo.remove(b)
+                            grew = True
+                books = asked.intersection(group)
+                if not books:
+                    continue
+                group = [b for b in books_of(coll) if b in group]
+                ms = [p for b in group for p in ms_files(a.ms, coll, b)]
+                label = 'sya' + ','.join(map(str, sorted(gv))) + f':{group[0]}-{group[-1]}'
+                place(th_stream(a.thai, sorted(gv)), ms, 'th', a.out, label, report, books)
+                log(report)
     if a.report:
         with open(a.report, 'w', encoding='utf-8') as f:
             f.write('edition\tvolume\tfiles\tsegments\tfilled\twords\theadings\tmatch\n')

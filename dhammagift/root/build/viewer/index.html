@@ -296,16 +296,17 @@ async function loadBook(book) {
   return state.cache[book];
 }
 
-const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN' };
-const collOf = b => b.match(/^[a-z]+/)[0];
+const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN', kn: 'KN' };
+const collOf = b => state.index.find(x => x.book === b)?.coll || b.match(/^[a-z]+/)[0];
 function renderNav() {
   const cur = collOf(state.book);
   $('colls').innerHTML = Object.entries(COLLS).filter(([c]) => state.index.some(b => collOf(b.book) === c)).map(([c, n]) =>
     `<a href="#${state.index.find(b => collOf(b.book) === c).book}" ${c === cur ? 'aria-current="page"' : ''}>${n}</a>`).join('');
   $('booksel').innerHTML = state.index.filter(b => collOf(b.book) === cur).map(b => {
+    const name = b.label || b.book.toUpperCase();
     const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} файлов`;
     const n = Object.keys(state.shifts[b.book] || {}).length;
-    return `<option value="${b.book}">${b.book.toUpperCase()}${t ? ' · ' + esc(t) : ''}${n ? ' · сдвигов ' + n : ''}</option>`;
+    return `<option value="${b.book}">${esc(name)}${t ? ' · ' + esc(t) : ''}${n ? ' · сдвигов ' + n : ''}</option>`;
   }).join('');
   $('booksel').value = state.book;
   const i = state.index.findIndex(b => b.book === state.book);
@@ -314,7 +315,7 @@ function renderNav() {
   $('edchips').innerHTML = EDS.map(e => `
     <label class="chip" title="${e.full}"><input type="checkbox" data-ed="${e.id}" ${state.show[e.id] ? 'checked' : ''}>
       <span class="dot" style="background:${e.color}"></span>${e.name}
-      ${e.id !== 'ms' && b ? `<span class="fill" title="заполнено сегментов в книге">${b.fill[e.id]}%</span>` : ''}</label>`).join('');
+      ${e.id !== 'ms' && b ? `<span class="fill" title="заполнено сегментов в книге">${b.fill[e.id] == null ? 'нет книги' : b.fill[e.id] + '%'}</span>` : ''}</label>`).join('');
   $('edchips').querySelectorAll('input').forEach(i => i.addEventListener('change', () => {
     state.show[i.dataset.ed] = i.checked; store('show', state.show); render();
   }));
@@ -459,8 +460,7 @@ async function connect() {
 
 /* ---------- navigation ---------- */
 async function go(target) {
-  const m = (target || '').match(/^([a-z]+\d+)/);
-  const book = m && state.index.some(b => b.book === m[1]) ? m[1] : state.book || state.index[0].book;
+  const book = pageOf(target || '') || state.book || state.index[0].book;
   if (book !== state.book) {
     state.book = book; store('book', book);
     renderNav();
@@ -471,13 +471,36 @@ async function go(target) {
   if (el) { el.scrollIntoView({ block: 'center' }); el.animate?.([{ outline: '2px solid var(--flag)' }, { outline: '2px solid transparent' }], { duration: 1600 }); }
   else if (target === book) window.scrollTo({ top: 0 });
 }
-function findSutta(t) {
-  const m = t.match(/^([a-z]+\d+)\.(\d+)$/);
+/* the page that holds a target: a page id (sn45, ja-p3), a sutta file id (dhp1-20, ja547) or a sutta in a range
+   file (an1.5 in an1.1-10, dhp5 in dhp1-20); a segment key works through its sutta */
+function pageOf(t) {
+  if (state.index.some(b => b.book === t)) return t;
+  const sid = t.split(':')[0];
+  const hit = state.index.find(b => b.suttas.some(([id]) => id === sid));
+  if (hit) return hit.book;
+  const m = sid.match(/^([a-z-]+?)(\d+(?:\.\d+)*)$/);
   if (!m) return null;
-  const n = +m[2];
+  const want = m[2].split('.').map(Number);
+  for (const b of state.index) for (const [id] of b.suttas) {
+    if (!id.startsWith(m[1]) || !/\d/.test(id[m[1].length])) continue;
+    const [lo, hi] = id.slice(m[1].length).split('-');
+    const a = lo.split('.').map(Number), z = hi ? [...a.slice(0, -1), +hi] : a;
+    if (a.length === want.length && a.slice(0, -1).join('.') === want.slice(0, -1).join('.')
+        && want.at(-1) >= a.at(-1) && want.at(-1) <= z.at(-1)) return b.book;
+  }
+  return null;
+}
+function findSutta(t) {
+  const m = t.match(/^([a-z-]+?)(\d+(?:\.\d+)*)$/);
+  if (!m) return null;
+  const want = m[2].split('.').map(Number);
   for (const el of document.querySelectorAll('.row.sutta')) {
-    const r = el.id.slice(2 + m[1].length + 1).split('-').map(Number);
-    if (n >= r[0] && n <= (r[1] ?? r[0])) return el;
+    const id = el.id.slice(2);
+    if (!id.startsWith(m[1])) continue;
+    const [lo, hi] = id.slice(m[1].length).split('-');
+    const a = lo.split('.').map(Number), z = hi ? [...a.slice(0, -1), +hi] : a;
+    if (a.length === want.length && a.slice(0, -1).join('.') === want.slice(0, -1).join('.')
+        && want.at(-1) >= a.at(-1) && want.at(-1) <= z.at(-1)) return el;
   }
   return null;
 }

@@ -51,7 +51,7 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - Where a sutta of ms ends with a line the edition lacks (`Paṭhamaṁ.`, a vagga end) and the edition opens the next one
   with words ms lacks (Thai `sāvatthīnidānaṃ.`), the edition's paragraph or heading starts the next sutta.
 
-- Words printed with no space between them count as two (BJT `tīhi:accayaṃ`, `viditavedassa,purindadassa`,
+- Words printed with no space between them count as two (BJT `tīhi:accayaṃ`, `viditavedassa,purindadassa`, `rammā-agamā`,
   `samāno‘na`, `gotamaṃ’jinaṃ`); the text is written back as printed. An elision mark stays inside the word
   (`cattāro’me`, ms `cattārome`).
 - An ms subheading inside a sutta at any depth (`dn8:5.0`, `dn16:1.4.0`, `N.0 Tassuddānaṁ`) takes only edition words that match it; edition text
@@ -80,10 +80,13 @@ curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/r
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
   --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
-  --out dhammagift --only dn,mn,sn,an --report dhammagift/root/build/report.tsv
+  --out dhammagift --only dn,mn,sn,an,kn --report dhammagift/root/build/report.tsv
 ```
 
-Done: DN, MN, SN, AN (about 70 s). Not yet: KN, Vinaya, Abhidhamma. Sources of this build: tipitaka.lk `58eed98`, tipitaka-xml `00a2b2b`,
+Done: DN, MN, SN, AN, KN (about 2 min). Not yet: Vinaya, Abhidhamma.
+KN: BJT has no Milindapañha; Siam Rath has no Milindapañha, Nettippakaraṇa, Peṭakopadesa (not in its canon).
+Apadāna (tha-ap + thi-ap) is one text in all three editions and is aligned as one; Jātaka and Apadāna span two
+Siam Rath volumes (27-28, 32-33), read as one text. KN files keep SC's folders (`sutta/kn/iti/vagga1/iti1_…`). Sources of this build: tipitaka.lk `58eed98`, tipitaka-xml `00a2b2b`,
 bilara-data `6a395ce`, palinew.sqlite sha256 `62e0b31282b87c2a…`.
 
 Segments with text (whole collections; in brackets the same count for the 4nt `mod` branch columns):
@@ -94,6 +97,7 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | MN | 98% (93) | 99% (96) | 98% (96) |
 | SN | 86% (75) | 92% (85) | 84% (71) |
 | AN | 89% (81) | 93% (88) | 85% (77) |
+| KN | 92% | 95% | 93% |
 
 Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
