@@ -28,6 +28,7 @@ SI_CONS = {'ක': 'k', 'ඛ': 'kh', 'ග': 'g', 'ඝ': 'gh', 'ඞ': 'ṅ', 'ඟ'
 SI_SIGNS = {'ා': 'ā', 'ැ': 'æ', 'ෑ': 'ǣ', 'ි': 'i', 'ී': 'ī', 'ු': 'u', 'ූ': 'ū', 'ෘ': 'ṛ',
             'ෲ': 'ṝ', 'ෙ': 'e', 'ේ': 'ē', 'ෛ': 'ai', 'ො': 'o', 'ෝ': 'ō', 'ෞ': 'au'}
 SI_VIRAMA, SI_ANUSVARA, ZWJ, ZWNJ = '්', 'ං', '‍', '‌'
+SI_PRE = {'ෙ', 'ේ', 'ෛ', 'ො', 'ෝ', 'ෞ'}  # signs written left of the consonant
 
 
 def si2ro(s):
@@ -50,7 +51,13 @@ def si2ro(s):
             out.append('a')
             i = j
             continue
-        if ch in SI_VOWELS:
+        if ch in SI_SIGNS and i + 1 < n and s[i + 1] in SI_CONS and ch in SI_PRE:
+            out.append(SI_CONS[s[i + 1]] + SI_SIGNS[ch])  # sign typed before its consonant (source typo)
+            i += 2
+            continue
+        if ch in SI_SIGNS:
+            out.append(SI_SIGNS[ch])  # a sign with no consonant: its vowel
+        elif ch in SI_VOWELS:
             out.append(SI_VOWELS[ch])
         elif ch == SI_ANUSVARA:
             out.append('ṃ')
@@ -358,8 +365,8 @@ TH_CONS = {'ก': 'k', 'ข': 'kh', 'ค': 'g', 'ฆ': 'gh', 'ง': 'ṅ', 'จ'
            'ฌ': 'jh', 'ญ': 'ñ', 'ฎ': 'ṭ', 'ฏ': 'ṭ', 'ฐ': 'ṭh', 'ฑ': 'ḍ', 'ฒ': 'ḍh', 'ณ': 'ṇ',
            'ต': 't', 'ถ': 'th', 'ท': 'd', 'ธ': 'dh', 'น': 'n', 'ป': 'p', 'ผ': 'ph', 'พ': 'b',
            'ภ': 'bh', 'ม': 'm', 'ย': 'y', 'ร': 'r', 'ล': 'l', 'ว': 'v', 'ส': 's', 'ห': 'h',
-           'ฬ': 'ḷ', 'อ': '', 'ด': 'd', 'ซ': 's', 'ฝ': 'f', 'ฟ': 'f', 'ฅ': 'kh'}
-TH_SIGNS = {'า': 'ā', 'ิ': 'i', 'ี': 'ī', 'ึ': 'iṃ', 'ุ': 'u', 'ู': 'ū'}
+           'ฬ': 'ḷ', 'อ': '', 'ด': 'd', 'ซ': 's', 'ฝ': 'f', 'ฟ': 'f', 'ฅ': 'kh', 'ฃ': 'kh', 'บ': 'b'}
+TH_SIGNS = {'า': 'ā', 'ิ': 'i', 'ี': 'ī', 'ึ': 'iṃ', 'ุ': 'u', 'ู': 'ū', 'ั': 'a'}
 TH_PRE = {'เ': 'e', 'โ': 'o'}
 TH_VIRAMA, TH_NIGGAHITA = 'ฺ', 'ํ'
 
@@ -377,7 +384,7 @@ def th2ro(s):
         elif ch in TH_CONS:
             out.append(TH_CONS[ch])
             nx = s[i + 1] if i + 1 < n else ''
-            if nx == TH_VIRAMA:
+            if nx in (TH_VIRAMA, '๎'):  # ๎ (yamakkan) marks a cluster like the pinthu
                 i += 1
             elif nx in TH_SIGNS:
                 out.append(TH_SIGNS[nx])
@@ -390,8 +397,10 @@ def th2ro(s):
             out.append('ṃ')
         elif '๐' <= ch <= '๙':
             out.append(str(ord(ch) - ord('๐')))
-        elif ch in ('่', '้', '๊', '๋', 'ๆ', TH_VIRAMA):
+        elif ch in ('่', '้', '๊', '๋', 'ๆ', '์', '็', TH_VIRAMA, '๎'):  # tone and Thai-only marks
             pass
+        elif ch in TH_SIGNS:
+            out.append(TH_SIGNS[ch])  # a sign with no consonant: its vowel
         elif ch == 'ฤ':
             out.append('ṛ')
         else:
@@ -436,6 +445,8 @@ def th_stream(db, volume):
         for raw in html.split('\r\n'):
             m = re.fullmatch(r'\s*<div class="center">(.*)</div>\s*', raw)
             line = th2ro(m.group(1) if m else raw)
+            if m:
+                line = re.sub(r'\s*<[^>]*>', '', line)  # footnote marks in a title line
             if not line.strip() or re.fullmatch(r'\s*_+\s*', line):
                 continue
             cls = head_class(line) if m else None

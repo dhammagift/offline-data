@@ -26,7 +26,8 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - The edition text is not edited. BJT is transliterated from Sinhala to Roman, `th` from Thai script to Roman
   (`ṃ`, no capitals, as printed; Thai `ฯ` is `.`, a word broken with `-` at a line end is joined),
   `my` is used as VRI gives it. Peyyāla marks are written as in `ms` in all editions: `…pe…`, `…la…`, `…pa…`
-  (BJT `-pe-`, Thai `ฯเปฯ`; `...` is `…`). Typos of the source stay (`th` an1.1 `paccassosasa`). Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
+  (BJT `-pe-`, Thai `ฯเปฯ`; `...` is `…`). Typos of the source stay (`th` an1.1 `paccassosasa`, a stray `<` or `{`); a vowel sign typed before its consonant
+  or with none (BJT `ෙmathi…`, Thai `า`) is read as that vowel, Thai `บ` `ฃ` `ั` `๎` are read, tone marks dropped. Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
 - Every word of the edition goes to exactly one segment; joining the segments gives the whole edition text in its order
   (the build stops if not). Words `ms` does not have go to the neighbour segment, `ms` words the edition does not have
   leave the segment empty (peyyāla expanded on one side, abbreviated on the other).
@@ -82,7 +83,7 @@ python3 dhammagift/root/build/build_editions.py \
   --out dhammagift --only dn,mn,sn,an --report dhammagift/root/build/report.tsv
 ```
 
-Done: DN, MN, SN, AN (about 50 s). Not yet: KN, Vinaya, Abhidhamma. Sources of this build: tipitaka.lk `319c415`, tipitaka-xml `00a2b2b`,
+Done: DN, MN, SN, AN (about 70 s). Not yet: KN, Vinaya, Abhidhamma. Sources of this build: tipitaka.lk `58eed98`, tipitaka-xml `00a2b2b`,
 bilara-data `6a395ce`, palinew.sqlite sha256 `62e0b31282b87c2a…`.
 
 Segments with text (whole collections; in brackets the same count for the 4nt `mod` branch columns):
