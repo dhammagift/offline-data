@@ -56,7 +56,11 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   (`cattāro’me`, ms `cattārome`).
 - An ms subheading inside a sutta at any depth (`dn8:5.0`, `dn16:1.4.0`, `N.0 Tassuddānaṁ`) takes only edition words that match it; edition text
   ms lacks before it (a reading, a vagga end line) closes the previous segment. An edition subheading lands there.
-- Section end lines (`paṭhamo paṇṇāsako samatto`, `… niṭṭhitaṃ navamaṃ`) are text, not titles of what follows.
+- Section end lines (`paṭhamo paṇṇāsako samatto`, `… niṭṭhitaṃ navamaṃ`, BJT `navapurāṇavaggo pañcadasamo.`,
+  `paṭhamo paṇṇāsako.`) are text, not titles of what follows; one printed as a title goes to the empty ms line that
+  starts with the same word (`sn35.155:2.9`), not to `Tassuddānaṁ`.
+- Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text.
+- Bare numbers are not used to align (`dn29:8.0` Thai `3`).
 
 ## Alignment
 
@@ -67,7 +71,10 @@ occur once, then by words that occur the same few times on both sides; without t
 Thai SN 34 ran half a segment behind.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
-168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, now 57; most of the rest are BJT paṇṇāsaka titles without `samatto` and real readings.
+168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
+review of those by eye 29 in the nikāyas (100 with KN). The rest are real readings (`an8.85` nimmalo, `sn48.37` word
+order), compounds spaced differently (`yoniso manasikāro`), and BJT elision marks that look like a glued word
+(`dn23` ’purato, `mn56` so’dāni).
 Run it after every build: `python3 viewer/find_shifts.py viewer/data viewer/data/shifts.json`. `report.tsv`: segments filled and share of edition words matched exactly.
 
 ## Run / sync
