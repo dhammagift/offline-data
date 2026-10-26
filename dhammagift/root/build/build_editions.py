@@ -122,6 +122,8 @@ def tokenize(text, markers, entry):
 GLUED = re.compile(r"(?:(?<=[,:;])(?=[‘“’'\"]?[^\W\d_]))"
                    r"|(?:(?<=[^\W\d_]-)(?=[^\W\d_]))"  # BJT verse halves "rammā-agamā"
                    r"|(?:(?<=[^\W\d_][.?!])(?=[\[(]|[A-ZĀĪŪṬḌṆÑṄḶ]))"  # VRI "patthiyo.[iti", "ekanidānāni.Vihāravaggo"
+                   r"|(?:(?<=[^\s(\[])(?=[\[(][^\W\d_]))"  # "attanā-(sabhiyāti", VRI "patthiyo’’.[iti"
+                   r"|(?:(?<=[?!])(?=[‘“]+[^\W\d_]))"  # VRI "nāgaseno’’ti?‘‘Na"
                    r"|(?:(?<=[^\W\d_])(?=[‘“][^\W\d_]))"
                    r"|(?:(?<=ṃ[’'])(?=[^\W\d_])(?!n?ti\b|ti[,.;:’'”]))")
 
@@ -245,11 +247,39 @@ def bjt_entries(files):
                 yield e['type'], text, markers, e.get('level') or 1
 
 
+def tail_titles(entries):
+    """Sutta titles printed after their text (BJT Jātaka: verse, then "4. macchajātakaṃ."; the vagga's text
+    starts before its first title and its last title is followed by no text): end lines, text like ms
+    "Macchajātakaṁ pañcamaṁ."."""
+    def cls(i):
+        kind, text, _, level = entries[i]
+        if kind not in ('heading', 'centered') or colophon(text) or bjt_end_line(text, level, kind):
+            return None
+        if kind != 'heading':
+            return 'centered'
+        return head_class(text) if level == 1 else 'above'  # level 2+ is a vagga or higher (AN1 "14. etadaggapāḷi.")
+    out, i = set(), 0
+    while i < len(entries):
+        j = i + 1
+        while j < len(entries) and cls(j) not in ('vagga', 'above'):
+            j += 1
+        titles = [k for k in range(i + 1, j) if cls(k) == 'sutta']
+        if len(titles) > 1:
+            text_first = any(entries[k][0] in ('paragraph', 'gatha') for k in range(i + 1, titles[0]))
+            after = entries[titles[-1] + 1][0] if titles[-1] + 1 < j else None
+            if text_first and after not in ('paragraph', 'gatha', 'unindented'):
+                out.update(titles)
+        i = j
+    return out
+
+
 def bjt_stream(files, split_re=None):
     """Returns {chunk_number: Stream}; chunks split on saṃyutta headings when split_re given."""
     chunks, cur, n = {}, Stream(), 0
     pre = []
-    for kind, text, markers, level in bjt_entries(files):
+    entries = list(bjt_entries(files))
+    tails = tail_titles(entries)
+    for n_e, (kind, text, markers, level) in enumerate(entries):
         if kind in ('heading', 'centered'):
             m = split_re.match(text.strip()) if split_re and kind == 'heading' else None
             if m:
@@ -259,7 +289,7 @@ def bjt_stream(files, split_re=None):
                     cur.heading(*h)
                 pre = []
             cls = head_class(text, big=level >= 4 and kind == 'heading')
-            if colophon(text) or bjt_end_line(text, level, kind):
+            if colophon(text) or bjt_end_line(text, level, kind) or n_e in tails:
                 kind = 'body'
             elif kind == 'centered' and level == 1 and cls in ('sutta', 'vagga'):
                 kind = 'body'  # end lines like "vaggo paṭhamo.", "saṃyuttaṃ samattaṃ."
@@ -705,6 +735,56 @@ def title_keys(text, vn):
     return keys
 
 
+def spacing(A, B):
+    """Word pairs of a gap where the two texts space compounds differently (`yoniso manasikāro`,
+    ms `yonisomanasikāro`): edit distance where 2 or 3 words joined equal one word at no cost.
+    -> (words matched, B index per A word) or None when nothing joins or matches."""
+    n, m = len(A), len(B)
+    if not n or not m or n * m > 4000:
+        return None
+    INF = 1 << 30
+    cost = [[INF] * (m + 1) for _ in range(n + 1)]
+    back = [[None] * (m + 1) for _ in range(n + 1)]
+    cost[0][0] = 0
+    for i in range(n + 1):
+        for j in range(m + 1):
+            c = cost[i][j]
+            if c == INF:
+                continue
+            steps = []
+            if i < n and j < m:
+                steps.append((1, 1, 0 if A[i] == B[j] else 1))
+            for w in (2, 3):
+                if i + w <= n and j < m and ''.join(A[i:i + w]) == B[j]:
+                    steps.append((w, 1, 0))
+                if j + w <= m and i < n and A[i] == ''.join(B[j:j + w]):
+                    steps.append((1, w, 0))
+            if i < n:
+                steps.append((1, 0, 1))
+            if j < m:
+                steps.append((0, 1, 1))
+            for di, dj, dc in steps:
+                if c + dc < cost[i + di][j + dj]:
+                    cost[i + di][j + dj] = c + dc
+                    back[i + di][j + dj] = (di, dj, dc)
+    pairs, got, i, j = [None] * n, 0, n, m
+    while i or j:
+        di, dj, dc = back[i][j]
+        i, j = i - di, j - dj
+        for k in range(di):
+            pairs[i + k] = j if dj else None
+        if di and dj and not dc:
+            got += di
+    if not got:
+        return None
+    last = next((p for p in pairs if p is not None), 0)
+    for k in range(n):  # words only the edition has go with the word before
+        if pairs[k] is None:
+            pairs[k] = last
+        last = pairs[k]
+    return got, pairs
+
+
 def align(toks, segs, slots_before=None):
     """toks: edition Tok list; segs: [(key, text)] body segments;
     slots_before: {body seg index: [ms header texts]} used as title anchors.
@@ -771,6 +851,14 @@ def align(toks, segs, slots_before=None):
                 cut = next((k for k in range(i1, i2) if starts(k)), i2)
             else:
                 jc = j2
+                fit = spacing(a[i1:i2], b[j1:j2])
+                if fit:
+                    got, pairs = fit
+                    equal += got
+                    for k, j in enumerate(pairs):
+                        if idx[i1 + k] >= 0:
+                            out[idx[i1 + k]] = bseg[j1 + j]
+                    continue
             for k in range(i1, i2):
                 if idx[k] < 0:
                     continue
@@ -837,7 +925,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         files.append((p, list(d.keys())))
         for k, v in d.items():
             keys_all.append(k)
-            segs_all.append((k, v))
+            segs_all.append((k, re.sub(r'</?b>', '', v)))  # ms marks the lemma of niddesa books in <b>
     slots = header_slots(keys_all)
     slot_keys = {k for v in slots.values() for k in v}
     body, before, hold = [], {}, []
@@ -850,6 +938,10 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             before[len(body)], hold = hold, []
         body.append((k, v))
     assign, score = align(chunk.toks, body, before)
+    toks = heads_as_text(chunk.toks, assign, body, [v for k, v in segs_all if k in slot_keys])
+    if len(toks) != len(chunk.toks):
+        chunk.toks = toks
+        assign, score = align(chunk.toks, body, before)
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)
@@ -932,6 +1024,51 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     n_heads = sum(len(t.heads) for t in chunk.toks) + len(leftover_heads)
     n_words = len(chunk.toks)
     report.append((ed, label, n_written, n_seg, n_full, n_words, n_heads, round(score, 3)))
+
+
+def heads_as_text(toks, assign, body, headers):
+    """An edition title line that is, word for word, one or more whole ms text segments (no subheading)
+    ending just before where the line was placed (VRI ja152 verse marked subhead, Thai
+    `atha vagguddānaṃ`) is text: its words are aligned like any other."""
+    def seq(t):
+        return ' '.join(w for w in map(norm, t.split()) if w)
+    starts, ends, sub, flow = {}, {}, set(), ''
+    for i, (k, v) in enumerate(body):
+        q = seq(v)
+        if not q:
+            continue
+        starts[len(flow) + 1], ends[len(flow) + 1 + len(q)] = i, i
+        if is_subhead(k):
+            sub.add(i)
+        flow += ' ' + q
+    flow += ' '
+    tops = [' ' + seq(h) + ' ' for h in headers]
+
+    def text_run(q, si):
+        at = flow.find(' ' + q + ' ')
+        while at >= 0:
+            i, j = starts.get(at + 1), ends.get(at + 1 + len(q))
+            if i is not None and j is not None and si - 3 <= j <= si:
+                return not sub & set(range(i, j + 1))
+            at = flow.find(' ' + q + ' ', at + 1)
+        return False
+
+    out = []
+    for t, si in zip(toks, assign):
+        new = []
+        while t.heads:
+            c, h = t.heads[-1]
+            q = seq(h)
+            if c == 'num' or len(q.split()) < 2 or not text_run(q, si) or any(' ' + q + ' ' in x for x in tops):
+                break
+            t.heads.pop()
+            new[:0] = [Tok(part, t.entry, glue=k > 0) for w in h.split() for k, part in enumerate(GLUED.split(w))]
+        if new:
+            new[0].heads, t.heads = t.heads, []
+            new[0].para, t.para = t.para, None
+            out.extend(new)
+        out.append(t)
+    return out
 
 
 def put_heads(heads, slots, text, para):
