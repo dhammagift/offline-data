@@ -59,6 +59,14 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - Section end lines (`paṭhamo paṇṇāsako samatto`, `… niṭṭhitaṃ navamaṃ`, BJT `navapurāṇavaggo pañcadasamo.`,
   `paṭhamo paṇṇāsako.`) are text, not titles of what follows; one printed as a title goes to the empty ms line that
   starts with the same word (`sn35.155:2.9`), not to `Tassuddānaṁ`.
+- An edition title line that is word for word one or more whole ms text segments just before the place it fell on
+  is text (VRI marks the ja152 verse `subhead`; Thai prints `atha vagguddānaṃ` as a title).
+- Where the titles follow their text (BJT Jātaka, Theragāthā, Therīgāthā, Vimānavatthu, Petavatthu: verse, then
+  `macchajātakaṃ.`; found per vagga: text before the first title, no text after the last) they are end lines and go
+  with their own text, as ms `Macchajātakaṁ pañcamaṁ.`; before, each was the title of the next one.
+- Compounds spaced differently (`yoniso manasikāro`, ms `yonisomanasikāro`; `tena hāvuso`, ms `tenahāvuso`) are
+  matched as one word.
+- ms `<b>…</b>` (the lemma in Niddesa, Paṭisambhidāmagga, Nettippakaraṇa) is no part of the words compared.
 - Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text.
 - Bare numbers are not used to align (`dn29:8.0` Thai `3`).
 
@@ -72,9 +80,11 @@ Thai SN 34 ran half a segment behind.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
-review of those by eye 29 in the nikāyas (100 with KN). The rest are real readings (`an8.85` nimmalo, `sn48.37` word
+review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80. The rest are real readings (`an8.85` nimmalo, `sn48.37` word
 order), compounds spaced differently (`yoniso manasikāro`), and BJT elision marks that look like a glued word
-(`dn23` ’purato, `mn56` so’dāni).
+(`dn23` ’purato, `mn56` so’dāni). Many of the rest only look like a shift to the check: the same words on both
+sides of a boundary (`ps1.1:576.1` samantacakkhūti), an edition title that repeats the first line (`ne23:0.4`),
+word order (`thig11.1:7.3` na tvaṃ, all three editions against ms), a sentence the edition has twice (`ps1.7:7.3`).
 Run it after every build: `python3 viewer/find_shifts.py viewer/data viewer/data/shifts.json`. `report.tsv`: segments filled and share of edition words matched exactly.
 
 ## Run / sync
