@@ -473,6 +473,8 @@ async function go(target) {
    file (an1.5 in an1.1-10, dhp5 in dhp1-20); a segment key works through its sutta */
 function pageOf(t) {
   if (state.index.some(b => b.book === t)) return t;
+  const part = state.index.find(b => b.book.startsWith(t + '-p'));  // a KN book shown in parts: its first part
+  if (part) return part.book;
   const sid = t.split(':')[0];
   const hit = state.index.find(b => b.suttas.some(([id]) => id === sid));
   if (hit) return hit.book;
