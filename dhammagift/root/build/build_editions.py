@@ -123,7 +123,10 @@ GLUED = re.compile(r"(?:(?<=[,:;])(?=[‘“’'\"]?[^\W\d_]))"
                    r"|(?:(?<=[^\W\d_]-)(?=[^\W\d_]))"  # BJT verse halves "rammā-agamā"
                    r"|(?:(?<=[^\W\d_][.?!])(?=[\[(]|[A-ZĀĪŪṬḌṆÑṄḶ]))"  # VRI "patthiyo.[iti", "ekanidānāni.Vihāravaggo"
                    r"|(?:(?<=[^\s(\[])(?=[\[(][^\W\d_]))"  # "attanā-(sabhiyāti", VRI "patthiyo’’.[iti"
-                   r"|(?:(?<=[?!])(?=[‘“]+[^\W\d_]))"  # VRI "nāgaseno’’ti?‘‘Na"
+                   r"|(?:(?<=[.?!])(?=[‘“]+[^\W\d_]))"  # VRI "nāgaseno’’ti?‘‘Na", "jānāhī’’ti.‘‘Suṭṭhu"
+                   r"|(?:(?<=[–—])(?=[‘“’'\"]?[^\W\d_]))"  # BJT "gotama,–na"
+                   r"|(?:(?<=[^\W\d_])(?=-\d+$))"  # VRI Pātimokkha "Pubbakaraṇaṃ-4" (number of items)
+                   r"|(?:(?<=[^\s…])(?=…(?:pe|la|pa)…))|(?:(?<=…(?:pe|la|pa)…)(?=[^\s…]))"  # VRI "nissajjitabbaṃ…pe…"
                    r"|(?:(?<=[^\W\d_])(?=[‘“][^\W\d_]))"
                    r"|(?:(?<=ṃ[’'])(?=[^\W\d_])(?!n?ti\b|ti[,.;:’'”]))")
 
@@ -258,19 +261,23 @@ def tail_titles(entries):
         if kind != 'heading':
             return 'centered'
         return head_class(text) if level == 1 else 'above'  # level 2+ is a vagga or higher (AN1 "14. etadaggapāḷi.")
-    out, i = set(), 0
+    segs, i = [], 0
     while i < len(entries):
         j = i + 1
         while j < len(entries) and cls(j) not in ('vagga', 'above'):
             j += 1
         titles = [k for k in range(i + 1, j) if cls(k) == 'sutta']
-        if len(titles) > 1:
+        if titles:
             text_first = any(entries[k][0] in ('paragraph', 'gatha') for k in range(i + 1, titles[0]))
-            after = entries[titles[-1] + 1][0] if titles[-1] + 1 < j else None
-            if text_first and after not in ('paragraph', 'gatha', 'unindented'):
-                out.update(titles)
+            nxt = entries[titles[-1] + 1] if titles[-1] + 1 < j else None
+            text_after = nxt and nxt[0] in ('paragraph', 'gatha', 'unindented') and 'uddān' not in nxt[1]
+            segs.append((titles, text_first, len(titles) > 1 and not text_after))
         i = j
-    return out
+    # a book where most vaggas print their titles after the text does so also in a vagga of one title (Thag 30-70)
+    tail = sum(1 for _, first, clear in segs if first and clear)
+    if not tail or tail * 2 < sum(1 for t, _, _ in segs if len(t) > 1):
+        return set()
+    return {k for titles, first, _ in segs if first for k in titles}
 
 
 def bjt_stream(files, split_re=None):
@@ -364,6 +371,10 @@ def vri_stream(path, chunk_div=None):
     paths = path if isinstance(path, list) else [path]
     chunks = {}
     pre = Stream()
+    stop = [None]
+
+    class Stop(Exception):
+        pass
 
     def walk(e, cur, types):
         for c in e:
@@ -382,6 +393,8 @@ def vri_stream(path, chunk_div=None):
                 continue
             rend = c.get('rend') or ''
             text, markers = vri_flatten(c)
+            if stop[0] and rend == 'chapter' and text.strip().startswith(stop[0]):
+                raise Stop
             if (c.tag == 'head' or rend in ('title', 'subhead', 'nikaya', 'book', 'chapter')) and not colophon(text):
                 big = rend in ('nikaya', 'book') or (c.tag == 'head' and types and types[-1] in ('book', 'samyutta'))
                 cur.heading(text, head_class(text, big=big), [v for _, k, v in markers if k == 'pb'])
@@ -397,12 +410,14 @@ def vri_stream(path, chunk_div=None):
             cur.body(text, markers)
 
     for path in paths:
+        path, _, stop[0] = path.partition('|')  # 'vin04t.nrf.xml|Kaṅkhāvitaraṇī': the text before that chapter
         body = vri_root(path).find('.//body')
-        if chunk_div:
-            walk(body, pre, [])
-        else:
+        if not chunk_div:
             chunks[0] = pre
+        try:
             walk(body, pre, [])
+        except Stop:
+            pass
     return chunks
 
 
@@ -461,7 +476,7 @@ def th2ro(s):
 
 # on the last word; strict endings, so verse words like vādapathātivattaṃ, vusitabrahmacariyo are no titles
 TH_TITLE = re.compile(r'(sutt[a-z]*|jatak[a-z]*|vatthu|apadan[a-z]*|niddes[a-z]*|kath(a|am|o)?|panh[a-z]*'
-                      r'|gath(a|ayo)|cariy(a|am)|vams(o|am)|uddes[a-z]*|path(o|am))$')
+                      r'|gath(a|ayo)|cariy(a|am)|vams(o|am)|uddes[a-z]*|path(o|am)|kand(a|am|o)|sikkhapad(a|am))$')
 TH_BODY_HEAD = re.compile(r'(tassuddan|tatruddan|uddanambhavati)')
 
 
@@ -576,6 +591,12 @@ FLAT = ('dn', 'mn')  # SC keeps these as one file per sutta, no book folder
 
 
 def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
+    """ms_dir: the sutta folder of root/ or reference/; Vinaya files are in the vinaya folder beside it"""
+    if coll == 'vinaya':
+        fs = [f for f in glob.glob(os.path.join(os.path.dirname(ms_dir.rstrip('/')), 'vinaya', '**', book + '*' + suffix),
+                                   recursive=True)
+              if re.fullmatch(re.escape(book) + r'[\d-]*', os.path.basename(f)[:-len(suffix)])]
+        return sorted(fs, key=lambda f: [int(x) for x in re.findall(r'\d+', os.path.basename(f)[len(book):])])
     if coll in FLAT:
         f = os.path.join(ms_dir, coll, book + suffix)
         return [f] if os.path.exists(f) else []
@@ -597,15 +618,19 @@ def sutta_of(k):
     return k.split(':')[0]
 
 
-def header_slots(keys):
-    """per sutta: its 0.x keys and a leading N.0 key (sutta number) before the first body key."""
+def header_slots(keys, texts=None):
+    """per sutta: its 0.x keys and a leading N.0 key (sutta number) before the first body key.
+    A 0.x that is a sentence (Vinaya sk1:0.6 "Ime kho panāyasmanto sekhiyā dhammā uddesaṁ āgacchanti.") is text."""
     slots, started = collections.OrderedDict(), set()
     for k in keys:
         s, seg = k.split(':')
         sl = slots.setdefault(s, [])
         if s in started:
             continue
-        if seg.startswith('0.') or re.fullmatch(r'\d+\.0', seg):
+        t = (texts or {}).get(k, '').strip()
+        if len(t.split()) >= 5 and t[-1:] in '.?—':
+            started.add(s)
+        elif seg.startswith('0.') or re.fullmatch(r'\d+\.0', seg):
             sl.append(k)
         else:
             started.add(s)
@@ -896,6 +921,37 @@ def align(toks, segs, slots_before=None):
     for i in range(1, len(out)):  # keep order monotonic
         if out[i] < out[i - 1]:
             out[i] = out[i - 1]
+    # edition words that are, word for word, an ms segment left empty right before (or after) their segment go
+    # there: VRI prints "Ime kho panāyasmanto … āgacchanti." after the title, BJT before it (pc1:1.0.2)
+    seg_words = [[w for w in map(norm, t.split()) if w] for _, t in segs]
+    runs = collections.defaultdict(list)
+    for i, si in enumerate(out):
+        if toks[i].norm:
+            runs[si].append(i)
+    for si in sorted(runs):
+        got = runs[si]
+        for j in range(si - 1, max(-1, si - 4), -1):  # leading words -> an empty segment before
+            if runs.get(j) or sutta_of(segs[j][0]) != sutta_of(segs[si][0]):
+                break
+            w = seg_words[j]
+            if w and len(w) < len(got) and [toks[i].norm for i in got[:len(w)]] == w:
+                for i in range(got[0], got[len(w) - 1] + 1):
+                    out[i] = j
+                runs[j], got = got[:len(w)], got[len(w):]
+                runs[si] = got
+                break
+        for j in range(si + 1, min(len(segs), si + 4)):  # trailing words -> an empty segment after
+            if runs.get(j) or sutta_of(segs[j][0]) != sutta_of(segs[si][0]):
+                break
+            w = seg_words[j]
+            if w and len(w) < len(got) and [toks[i].norm for i in got[-len(w):]] == w:
+                last = got[-len(w)]
+                for i in range(last, len(toks)):
+                    if out[i] != si:
+                        break
+                    out[i] = j
+                runs[j], runs[si] = got[-len(w):], got[:-len(w)]
+                break
     # an ms subheading inside a sutta (dn8:5.0, "N.0 Tassuddānaṁ") keeps only edition words that match it;
     # the rest is the end of the previous segment (vagga end lines, readings ms lacks)
     sub = {si for si, (k, _) in enumerate(segs) if is_subhead(k)
@@ -926,16 +982,19 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         for k, v in d.items():
             keys_all.append(k)
             segs_all.append((k, re.sub(r'</?b>', '', v)))  # ms marks the lemma of niddesa books in <b>
-    slots = header_slots(keys_all)
+    ms_text = dict(segs_all)
+    slots = header_slots(keys_all, ms_text)
     slot_keys = {k for v in slots.values() for k in v}
     body, before, hold = [], {}, []
     for k, v in segs_all:
         if k in slot_keys:
             if k.split(':')[1].startswith('0.'):
-                hold.append(v)
+                hold.append((sutta_of(k), v))
             continue
-        if hold:
-            before[len(body)], hold = hold, []
+        # the title anchors before the first text segment, after ms subheadings that open the sutta
+        # (Vinaya pc1:1.0.2 "Ime kho panāyasmanto dvenavuti pācittiyā dhammā…", printed before the title)
+        if hold and not (is_subhead(k) and sutta_of(k) == hold[0][0]):
+            before[len(body)], hold = [h for _, h in hold], []
         body.append((k, v))
     assign, score = align(chunk.toks, body, before)
     toks = heads_as_text(chunk.toks, assign, body, [v for k, v in segs_all if k in slot_keys])
@@ -980,7 +1039,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         if t.heads:
             prev = body[si - 1][0] if si > 0 else None
             if start and slots.get(s):
-                put_heads(t.heads, slots[s], text, t.para)
+                put_heads(t.heads, slots[s], text, t.para, ms_text)
             elif prev and sutta_of(prev) == s and is_subhead(prev) and not text[prev]:
                 text[prev].append(' '.join(h for _, h in t.heads))  # a subheading ms keeps in its own N.0 segment
             else:
@@ -996,18 +1055,34 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         body_words[key].append(t.text)
         refs[key].extend(r for r in t.refs if r not in refs[key])
         vars_[key].extend(f'{l} → {r}' for l, r in t.vars)
+    # a leading N.0 that ms gives a title (VRI Pātimokkha "Pubbakaraṇaṃ-4" printed as a text line) takes the
+    # edition's first words of the sutta when they are that title
+    first = {}
+    for k, _ in body:
+        first.setdefault(sutta_of(k), k)
+    for s_, ks in slots.items():
+        k0 = next((k for k in ks if not k.split(':')[1].startswith('0.')), None)
+        want = [w for w in map(norm, ms_text.get(k0, '').split()) if w] if k0 else []
+        f = first.get(s_)
+        if want and not text[k0] and f and [re.sub(r'\d+$', '', norm(w)) for w in text[f][:len(want)]] == want:
+            n = len(want)
+            while n < len(text[f]) and not norm(text[f][n]):  # "-4"
+                n += 1
+            text[k0], text[f] = text[f][:n], text[f][n:]
     if leftover_heads and body:
         text[body[-1][0]].append(' '.join(h for _, h in leftover_heads))
 
     n_full = n_seg = n_written = 0
     for p, keys in files:
         base = os.path.basename(p).replace('_root-pli-ms.json', '')
-        rel_dir = os.path.relpath(os.path.dirname(p), MS_DIR)  # dn | sn/sn1 | kn/iti/vagga1
-        parts = rel_dir.split(os.sep)
-        book = parts[1] if len(parts) > 1 else base
+        rel = os.path.relpath(os.path.dirname(p), os.path.dirname(MS_DIR))  # sutta/sn/sn1 | vinaya/pli-tv-bu-vb/...
+        parts = rel.split(os.sep)
+        if parts[0] == 'vinaya':
+            book = re.sub(r'\d.*$', '', base)  # pli-tv-bu-vb-pj1 -> pli-tv-bu-vb-pj, pli-tv-bu-pm
+        else:
+            book = parts[2] if len(parts) > 2 else base
         if write_books and book not in write_books:
             continue
-        rel = os.path.join('sutta', rel_dir)
         root = {k: (' '.join(text[k]) + ' ') if text[k] else '' for k in keys}
         n_seg += len(keys)
         n_written += 1
@@ -1049,7 +1124,7 @@ def heads_as_text(toks, assign, body, headers):
         while at >= 0:
             i, j = starts.get(at + 1), ends.get(at + 1 + len(q))
             if i is not None and j is not None and si - 3 <= j <= si:
-                return not sub & set(range(i, j + 1))
+                return len(q.split()) >= 5 or not sub & set(range(i, j + 1))  # a sentence may be an ms subheading
             at = flow.find(' ' + q + ' ', at + 1)
         return False
 
@@ -1071,28 +1146,34 @@ def heads_as_text(toks, assign, body, headers):
     return out
 
 
-def put_heads(heads, slots, text, para):
+def title_fit(h, t):
+    """how well the edition title h names the ms header t: the common start of the two titles without numbers,
+    if it leaves no more than an ending of the shorter one (`sekhiyakaṇḍo` / `Sekhiyakaṇḍa`, `samaṇasaññā suttaṃ` /
+    `Samaṇasaññāsutta`; not `dhātusaṃyuttaṃ` / `Dhātunānattasutta`)"""
+    a, b = (''.join(w for w in map(norm, x.split()) if w) for x in (h, t))
+    n = len(os.path.commonprefix([a, b]))
+    return n if n >= 5 and n >= min(len(a), len(b)) - 2 else 0
+
+
+def put_heads(heads, slots, text, para, ms_text=None):
     zero = [k for k in slots if k.split(':')[1].startswith('0.')]
     nums = [k for k in slots if not k.split(':')[1].startswith('0.')]
-    by = collections.defaultdict(list)
-    for c, h in heads:
-        by[c].append(h)
-    if nums:
-        text[nums[0]].extend(by.pop('num', []))
-    sutta = by.get('num', []) + by.get('sutta', [])
-    if not zero:
-        target = nums[0]
-        text[target].extend(by.get('above', []) + by.get('vagga', []) + sutta)
-        return
-    if len(zero) >= 3:
-        text[zero[0]].extend(by.get('above', []))
-        text[zero[-2]].extend(by.get('vagga', []))
-        text[zero[-1]].extend(sutta)
-    elif len(zero) == 2:  # ms: 0.1 nikāya, 0.2 vagga
-        text[zero[0]].extend(by.get('above', []))
-        text[zero[1]].extend(by.get('vagga', []) + sutta)
-    else:
-        text[zero[0]].extend(by.get('above', []) + by.get('vagga', []) + sutta)
+
+    def by_class(c):
+        if (c == 'num' and nums) or not zero:
+            return nums[0]
+        if len(zero) >= 3:
+            return {'above': zero[0], 'vagga': zero[-2]}.get(c, zero[-1])
+        if len(zero) == 2:  # ms: 0.1 nikāya, 0.2 vagga
+            return zero[0] if c == 'above' else zero[1]
+        return zero[0]
+    for c, h in heads:  # a title that names an ms header goes there, the rest by its class; in printed order
+        fit = {k: title_fit(h, ms_text.get(k, '')) for k in zero} if ms_text and c != 'num' else {}
+        best = max(fit.values(), default=0)
+        k = by_class(c)
+        if best and fit.get(k) != best:
+            k = next(k for k in zero if fit[k] == best)
+        text[k].append(h)
     if nums and para and not text[nums[0]]:
         text[nums[0]].append(para + '.')
 
@@ -1145,6 +1226,20 @@ KN = [
 KN_BOOKS = [b for books, _, _ in KN for b in books]
 
 
+def vb(side, parts):
+    return [f'pli-tv-{side}-vb-{k}' for k in parts]
+
+
+# Vinaya: Vibhaṅga in the volumes of BJT and VRI, Pātimokkha (Dvemātikā) only in VRI, before its commentary
+VINAYA = [
+    (vb('bu', ['pj', 'ss', 'ay', 'np']), ['vp-prj'], ['vin01m.mul.xml']),
+    (vb('bu', ['pc', 'pd', 'sk', 'as']) + vb('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as']), ['vp-pct'],
+     ['vin02m1.mul.xml']),
+    (['pli-tv-bu-pm', 'pli-tv-bi-pm'], [], ['vin04t.nrf.xml|Kaṅkhāvitaraṇī']),
+]
+VINAYA_BOOKS = [b for books, _, _ in VINAYA for b in books]
+
+
 def groups():
     """(collection, SC books, BJT prefixes, VRI files) for every edition volume"""
     for coll, vols in VOLUMES.items():
@@ -1152,13 +1247,19 @@ def groups():
             yield coll, [f'{coll}{n}' for n in range(lo, hi + 1)], [bjt_prefix], [vri_file]
     for books, bjt, vri in KN:
         yield 'kn', books, bjt, vri
+    for books, bjt, vri in VINAYA:
+        yield 'vinaya', books, bjt, vri
 
 
 def coll_of(book):
+    if book in VINAYA_BOOKS:
+        return 'vinaya'
     return 'kn' if book in KN_BOOKS else re.match(r'[a-z]+', book).group()
 
 
 def books_of(coll):
+    if coll == 'vinaya':
+        return VINAYA_BOOKS
     return KN_BOOKS if coll == 'kn' else [f'{coll}{n}' for n in range(1, LAST[coll] + 1)]
 
 
@@ -1176,9 +1277,14 @@ def parse_only(s):
         if part == 'kn' or part in KN_BOOKS:
             books += [('kn', b) for b in (KN_BOOKS if part == 'kn' else [part])]
             continue
+        vin = [b for b in VINAYA_BOOKS if part == 'vinaya' or part in (b, b.replace('pli-tv-', ''))
+               or (part in ('vb', 'pm') and b.split('-')[3] == part)]
+        if vin:
+            books += [('vinaya', b) for b in vin]
+            continue
         m = re.fullmatch(r'(dn|mn|sn|an)(?:(\d+)(?:-(\d+))?)?', part)
         if not m:
-            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4, kn, dhp)')
+            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4, kn, dhp, vinaya, vb, pm, bu-vb-pj)')
         a = int(m.group(2) or 1)
         b = int(m.group(3) or m.group(2) or LAST[m.group(1)])
         books += [(m.group(1), n) for n in range(a, b + 1)]
@@ -1196,14 +1302,14 @@ def main():
     ap.add_argument('--vri', required=True)
     ap.add_argument('--ms', required=True)
     ap.add_argument('--out', required=True)
-    ap.add_argument('--only', default='dn,mn,sn,an,kn', help='e.g. dn,mn,sn1-10,an4,kn,dhp')
+    ap.add_argument('--only', default='dn,mn,sn,an,kn,vinaya', help='e.g. dn,mn,sn1-10,an4,kn,dhp,vinaya,vb,pm')
     ap.add_argument('--thai', help='E-Tipitaka palinew.sqlite (Siam Rath 1927)')
     ap.add_argument('--ref', help='bilara-data reference/pli/ms/sutta, for Siam Rath volumes')
     ap.add_argument('--report')
     a = ap.parse_args()
     MS_DIR = a.ms
     report = []
-    asked = {b if c == 'kn' else f'{c}{b}' for c, b in parse_only(a.only)}
+    asked = {b if c in ('kn', 'vinaya') else f'{c}{b}' for c, b in parse_only(a.only)}
     for coll, inside, bjt_prefixes, vri_files in groups():
         books = asked.intersection(inside)
         if not books:

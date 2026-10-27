@@ -294,7 +294,7 @@ async function loadBook(book) {
   return state.cache[book];
 }
 
-const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN', kn: 'KN' };
+const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN', kn: 'KN', vinaya: 'Vinaya' };
 const collOf = b => state.index.find(x => x.book === b)?.coll || b.match(/^[a-z]+/)[0];
 function renderNav() {
   const cur = collOf(state.book);
@@ -333,13 +333,13 @@ async function render() {
   const out = [`<div class="row colhead"><div class="cell key">сегмент</div>${eds.map(e =>
     `<div class="cell"><span class="colname" title="${e.full}"><span class="dot" style="background:${e.color}"></span>${e.name}</span></div>`).join('')}</div>`];
   for (const s of data.suttas) {
-    out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
+    out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id.replace(/^pli-tv-/, '')}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
     for (const row of s.rows) {
       const [key, ms] = row;
       const head = /:0\.\d+$/.test(key) || /:\d+\.0$/.test(key);
       const rd = diff ? readings(row) : null;
       const msw = wc(ms);
-      let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: отметить проблему">${key}</div>`;
+      let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: отметить проблему">${key.replace(/^pli-tv-/, '')}</div>`;
       for (const e of eds) {
         const text = row[e.col];
         const isSus = sus && e.id !== 'ms' && !head && wc(text) > 2 * msw + 8;

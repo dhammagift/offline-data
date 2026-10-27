@@ -9,7 +9,8 @@ so a reader can switch between editions or show them side by side.
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
 
-`ms` from [bilara-data](https://github.com/suttacentral/bilara-data) `root/pli/ms/sutta` gives only the ids and the segmentation.
+`ms` from [bilara-data](https://github.com/suttacentral/bilara-data) `root/pli/ms/sutta` and `root/pli/ms/vinaya` gives only
+the ids and the segmentation.
 
 ## Layout
 
@@ -17,6 +18,8 @@ so a reader can switch between editions or show them side by side.
 dhammagift/root/pli/<ed>/sutta/sn/sn1/sn1.1_root-pli-<ed>.json        text
 dhammagift/variant/pli/<ed>/sutta/sn/sn1/sn1.1_variant-pli-<ed>.json  readings of the edition's footnotes / <note>
 dhammagift/reference/pli/<ed>/sutta/sn/sn1/sn1.1_reference-pli-<ed>.json  pages and paragraph numbers
+dhammagift/root/pli/<ed>/vinaya/pli-tv-bu-vb/pli-tv-bu-vb-pj/pli-tv-bu-vb-pj1_root-pli-<ed>.json  Vinaya, SC folders
+dhammagift/root/pli/my/vinaya/pli-tv-bu-pm_root-pli-my.json                                       Pātimokkha
 ```
 
 One file per `ms` file, same keys in the same order. A key the edition has no text for is `""`.
@@ -67,6 +70,18 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - Compounds spaced differently (`yoniso manasikāro`, ms `yonisomanasikāro`; `tena hāvuso`, ms `tenahāvuso`) are
   matched as one word.
 - ms `<b>…</b>` (the lemma in Niddesa, Paṭisambhidāmagga, Nettippakaraṇa) is no part of the words compared.
+- An edition title goes to the ms header it names (`sekhiyakaṇḍo` to `0.3 Sekhiyakaṇḍa`, `samaṇasaññā suttaṃ` to
+  `Samaṇasaññāsutta`, not `Samaṇasaññāvagga`: the longest common start of the whole titles, leaving no more than an
+  ending), else by its class (above, vagga, sutta); in the order printed.
+- A 0.x of ms that is a sentence (Vinaya `sk1:0.6` "Ime kho panāyasmanto sekhiyā dhammā uddesaṁ āgacchanti.") is text.
+- The sutta title anchors the alignment before the first text segment, after the ms subheadings that open the sutta
+  (Vinaya `pc1:1.0.1` Namo, `1.0.2` Ime kho…).
+- Edition words that are word for word an ms segment left empty right before or after their segment go there
+  (VRI prints "Ime kho panāyasmanto … āgacchanti." after the title, BJT before it).
+- A leading `N.0` that ms gives a title takes the edition's first words when they are that title (VRI Pātimokkha
+  `Pubbakaraṇaṃ-4`, the number of items glued with `-`).
+- Glued in the sources and split: `…pe…` (VRI `nissajjitabbaṃ…pe…`), `,–` (BJT `gotama,–na`), `.‘‘` (VRI
+  `jānāhī’’ti.‘‘Suṭṭhu`).
 - Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text.
 - Bare numbers are not used to align (`dn29:8.0` Thai `3`).
 
@@ -80,7 +95,8 @@ Thai SN 34 ran half a segment behind.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
-review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80. The rest are real readings (`an8.85` nimmalo, `sn48.37` word
+review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya 83 in all, 2 of them Vinaya
+(both Thai readings: `np4:1.14` word order, `ss1:3.7.4` printed in full where ms abbreviates). The rest are real readings (`an8.85` nimmalo, `sn48.37` word
 order), compounds spaced differently (`yoniso manasikāro`), and BJT elision marks that look like a glued word
 (`dn23` ’purato, `mn56` so’dāni). Many of the rest only look like a shift to the check: the same words on both
 sides of a boundary (`ps1.1:576.1` samantacakkhūti), an edition title that repeats the first line (`ne23:0.4`),
@@ -92,15 +108,23 @@ Run it after every build: `python3 viewer/find_shifts.py viewer/data viewer/data
 ```
 git clone --depth 1 https://github.com/pathnirvana/tipitaka.lk
 git clone --depth 1 --filter=blob:none --sparse https://github.com/VipassanaTech/tipitaka-xml && git -C tipitaka-xml sparse-checkout set romn
-git clone --depth 1 --filter=blob:none --sparse https://github.com/suttacentral/bilara-data && git -C bilara-data sparse-checkout set root/pli/ms/sutta reference/pli/ms/sutta
+git clone --depth 1 --filter=blob:none --sparse https://github.com/suttacentral/bilara-data && git -C bilara-data sparse-checkout set root/pli/ms/sutta reference/pli/ms/sutta root/pli/ms/vinaya reference/pli/ms/vinaya
 curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/resources/palinew.sqlite
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
   --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
-  --out dhammagift --only dn,mn,sn,an,kn --report dhammagift/root/build/report.tsv
+  --out dhammagift --only dn,mn,sn,an,kn,vinaya --report dhammagift/root/build/report.tsv
 ```
 
-Done: DN, MN, SN, AN, KN (about 2 min). Not yet: Vinaya, Abhidhamma.
+Done: DN, MN, SN, AN, KN, Vinaya Vibhaṅga (Bhikkhu, Bhikkhunī) and Pātimokkha (about 2.5 min). Not yet: Khandhaka,
+Parivāra, Abhidhamma.
+Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikkhunīvibhaṅga), VRI `vin01m`, `vin02m1`;
+Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
+Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has SC rule titles
+(`Pācittiya 6. Dutiyasahaseyya`) that VRI does not print: most of its empty segments.
+palinew.sqlite has no pages 211-220 of volume 1 (end of pj4, from `9.2.2`): those segments are empty in `th`.
+Empty Vinaya segments are where an edition abbreviates (`…pe…`, BJT `dutiyampi kho …pe…`) or does not print a line
+(Thai `…sikkhāpadaṁ niṭṭhitaṁ.`).
 KN: BJT has no Milindapañha; Siam Rath has no Milindapañha, Nettippakaraṇa, Peṭakopadesa (not in its canon).
 Apadāna (tha-ap + thi-ap) is one text in all three editions and is aligned as one; Jātaka and Apadāna span two
 Siam Rath volumes (27-28, 32-33), read as one text. KN files keep SC's folders (`sutta/kn/iti/vagga1/iti1_…`). Sources of this build: tipitaka.lk `58eed98`, tipitaka-xml `00a2b2b`,
@@ -115,6 +139,8 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | SN | 86% (75) | 92% (85) | 84% (71) |
 | AN | 89% (81) | 93% (88) | 85% (77) |
 | KN | 92% | 95% | 93% |
+| Vinaya: Vibhaṅga | 88% | 89% | 87% |
+| Vinaya: Pātimokkha | — | 83% | — |
 
 Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
