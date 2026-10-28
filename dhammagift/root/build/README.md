@@ -32,7 +32,10 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   (BJT `-pe-`, Thai `ฯเปฯ`; `...` is `…`). Typos of the source stay (`th` an1.1 `paccassosasa`, a stray `<` or `{`); a vowel sign typed before its consonant
   or with none (BJT `ෙmathi…`, Thai `า`) is read as that vowel, Thai `บ` `ฃ` `ั` `๎` are read, tone marks dropped. Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
 - Every word of the edition goes to exactly one segment; joining the segments gives the whole edition text in its order
-  (the build stops if not). Words `ms` does not have go to the neighbour segment, `ms` words the edition does not have
+  inside every sutta (the build stops if not). A sutta the edition prints elsewhere in the book is the one exception
+  to the book order: BJT Jātaka prints Khaṇḍahāla (ms `ja544` Candakumāra) right after Nimi (`ja541`). The edition's
+  text is cut at its own sutta titles, each block goes to the ms sutta whose rare words it has (5 times more than
+  any other, 200 words at least), and a block whose sutta gets no block in the book order is aligned to it on its own. Words `ms` does not have go to the neighbour segment, `ms` words the edition does not have
   leave the segment empty (peyyāla expanded on one side, abbreviated on the other).
 - Headings and numbers are the edition's own: `0.1` saṃyutta / nipāta and higher titles, `0.2` vagga, `0.3` number and
   sutta title (`1. 7. 1. kalyāṇamittasuttaṃ` in BJT, `10. Nandiyasuttaṃ` in `my`, `paṭhamaṃ oghataraṇasuttaṃ` in `th`;
@@ -67,6 +70,12 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - Where the titles follow their text (BJT Jātaka, Theragāthā, Therīgāthā, Vimānavatthu, Petavatthu: verse, then
   `macchajātakaṃ.`; found per vagga: text before the first title, no text after the last) they are end lines and go
   with their own text, as ms `Macchajātakaṁ pañcamaṁ.`; before, each was the title of the next one.
+- Words of an edition end line (`upālipucchākathā niṭṭhitā`) and of an ms subheading or end line (`kd11:1.0.1
+  1. Tajjanīyakamma`, `pvr8:11.1 Uposathādipucchāvissajjanā niṭṭhitā`) are no unique anchors: they repeat a title
+  printed at the other end of the section, and anchored there a whole section went to its neighbour (kd9, kd11,
+  pvr8). They still match in the word by word comparison.
+- In a gap too long for difflib, an anchor whose place on the two sides differs by more than a third of the gap is
+  dropped: a look-alike line (kd13 `(yathā heṭṭhā tathā vitthāretabbaṁ)`) sent 1200 words astray.
 - Compounds spaced differently (`yoniso manasikāro`, ms `yonisomanasikāro`; `tena hāvuso`, ms `tenahāvuso`) are
   matched as one word.
 - ms `<b>…</b>` (the lemma in Niddesa, Paṭisambhidāmagga, Nettippakaraṇa) is no part of the words compared.
@@ -95,7 +104,8 @@ Thai SN 34 ran half a segment behind.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
-review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya 83 in all, 2 of them Vinaya
+review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in
+place (titles spaced otherwise, `Dvemāsā` / `dve māsā`, or repeating the next line)
 (both Thai readings: `np4:1.14` word order, `ss1:3.7.4` printed in full where ms abbreviates). The rest are real readings (`an8.85` nimmalo, `sn48.37` word
 order), compounds spaced differently (`yoniso manasikāro`), and BJT elision marks that look like a glued word
 (`dn23` ’purato, `mn56` so’dāni). Many of the rest only look like a shift to the check: the same words on both
@@ -116,8 +126,12 @@ python3 dhammagift/root/build/build_editions.py \
   --out dhammagift --only dn,mn,sn,an,kn,vinaya --report dhammagift/root/build/report.tsv
 ```
 
-Done: DN, MN, SN, AN, KN, Vinaya Vibhaṅga (Bhikkhu, Bhikkhunī) and Pātimokkha (about 2.5 min). Not yet: Khandhaka,
-Parivāra, Abhidhamma.
+Done: DN, MN, SN, AN, KN, the whole Vinaya: Vibhaṅga (Bhikkhu, Bhikkhunī), Pātimokkha, Khandhaka (kd1-22),
+Parivāra (about 6 min). Not yet: Abhidhamma.
+Khandhaka: BJT `vp-mv` + `vp-cv`, VRI `vin02m2` + `vin02m3`, Siam Rath 4-7, aligned as one text; Parivāra: BJT
+`vp-pv`, VRI `vin02m4`, Siam Rath 8. Not in the edition (empty there): Siam Rath abbreviates the lineage verses of
+`pvr2.1` and kd9 `7.14.17` (pabbājanīya), VRI has no closing verses of `pvr21` (81-87); Siam Rath prints no Pārāyana
+verses apart from their Niddesa (`cnd2-4`) and has no `tha-ap553-561`.
 Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikkhunīvibhaṅga), VRI `vin01m`, `vin02m1`;
 Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
 Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has SC rule titles
@@ -141,6 +155,8 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | KN | 92% | 95% | 93% |
 | Vinaya: Vibhaṅga | 88% | 89% | 87% |
 | Vinaya: Pātimokkha | — | 83% | — |
+| Vinaya: Khandhaka | 96% | 99% | 94% |
+| Vinaya: Parivāra | 96% | 99% | 95% |
 
 Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the

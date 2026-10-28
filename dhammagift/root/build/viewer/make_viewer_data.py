@@ -13,7 +13,7 @@ PART = 2500  # segments: a KN or Vinaya book longer than this is shown in parts
 ROOT = os.path.dirname(MS.rstrip('/'))  # bilara root/pli/ms: sutta/, vinaya/
 VINAYA = [f'pli-tv-{s}-vb-{k}' for s, ks in (('bu', ['pj', 'ss', 'ay', 'np', 'pc', 'pd', 'sk', 'as']),
                                             ('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as'])) for k in ks] \
-    + ['pli-tv-bu-pm', 'pli-tv-bi-pm']
+    + ['pli-tv-bu-pm', 'pli-tv-bi-pm', 'pli-tv-kd', 'pli-tv-pvr']
 
 
 def nkey(f):
@@ -40,7 +40,7 @@ for coll in ('sn', 'an'):
             pages.append((b, coll, b.upper(), fs))
 books = [('kn', b, glob.glob(f'{MS}/kn/{b}/**/*_root-pli-ms.json', recursive=True)) for b in KN] + \
     [('vinaya', b, [f for f in glob.glob(f'{ROOT}/vinaya/**/{b}*_root-pli-ms.json', recursive=True)
-                    if re.fullmatch(re.escape(b) + r'[\d-]*', os.path.basename(f).split('_')[0])]) for b in VINAYA]
+                    if re.fullmatch(re.escape(b) + r'[\d.-]*', os.path.basename(f).split('_')[0])]) for b in VINAYA]
 for coll, book, found in books:
     fs = [f for f in sorted(found, key=lambda f: nkey(f)[-2:] if coll == 'vinaya' else nkey(f)) if built(f)]
     if not fs:

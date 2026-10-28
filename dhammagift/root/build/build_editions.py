@@ -72,12 +72,13 @@ def si2ro(s):
 # ---------------------------------------------------------------- tokens
 
 class Tok:
-    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para', 'glue')
+    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para', 'glue', 'end')
 
     def __init__(self, text, entry, glue=False):
         self.text, self.entry, self.glue = text, entry, glue
         self.norm = norm(text)
         self.refs, self.vars, self.heads, self.para = [], [], [], None
+        self.end = False  # a word of a section end line ("upālipucchākathā niṭṭhitā"): no anchor
 
 
 def norm(w):
@@ -181,6 +182,9 @@ class Stream:
         toks = tokenize(text, markers, self.entry)
         if not toks:
             return
+        if len(toks) <= 6 and colophon(text):
+            for t in toks:
+                t.end = True
         if self.pending:
             toks[0].heads, self.pending = self.pending, []
         if getattr(self, 'pending_refs', None):
@@ -595,7 +599,7 @@ def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
     if coll == 'vinaya':
         fs = [f for f in glob.glob(os.path.join(os.path.dirname(ms_dir.rstrip('/')), 'vinaya', '**', book + '*' + suffix),
                                    recursive=True)
-              if re.fullmatch(re.escape(book) + r'[\d-]*', os.path.basename(f)[:-len(suffix)])]
+              if re.fullmatch(re.escape(book) + r'[\d.-]*', os.path.basename(f)[:-len(suffix)])]
         return sorted(fs, key=lambda f: [int(x) for x in re.findall(r'\d+', os.path.basename(f)[len(book):])])
     if coll in FLAT:
         f = os.path.join(ms_dir, coll, book + suffix)
@@ -657,7 +661,7 @@ def lis(pairs):
     return out[::-1]
 
 
-def patience(a, b):
+def patience(a, b, weak=frozenset(), weak_b=frozenset()):
     """order-preserving word matches [(i, j)]: anchors on words unique in both ranges
     (robust to repeated formulas), difflib only inside small gaps without anchors."""
     out, stack = [], [(0, len(a), 0, len(b))]
@@ -672,7 +676,7 @@ def patience(a, b):
             out.append((ahi - 1, bhi - 1)); ahi -= 1; bhi -= 1
         if alo >= ahi or blo >= bhi:
             continue
-        anchors, n = gram_anchors(a, b, alo, ahi, blo, bhi)
+        anchors, n = gram_anchors(a, b, alo, ahi, blo, bhi, weak, weak_b)
         if not anchors:
             if (ahi - alo) * (bhi - blo) <= 4_000_000:
                 sm = difflib.SequenceMatcher(None, a[alo:ahi], b[blo:bhi], autojunk=False)
@@ -690,16 +694,24 @@ def patience(a, b):
     return sorted(out)
 
 
-def gram_anchors(a, b, alo, ahi, blo, bhi):
+def gram_anchors(a, b, alo, ahi, blo, bhi, weak=frozenset(), weak_b=frozenset()):
     """anchors for one gap: words, then 2-, 3-, 5-word runs that occur once on both sides; in texts made
     of one repeated formula (SN 34) none may, then words occurring the same few times on both sides are
-    paired in order. -> (LIS of (i, j) pairs, run length)"""
-    for n in (1, 2, 3, 5):
+    paired in order; in a gap too long for difflib, runs of 8, 13, 21 words first. -> (LIS of (i, j) pairs, run length)"""
+    for n in (1, 2, 3, 5, 8, 13, 21):  # long runs: formulas repeated with one word changed (kd9 Campeyya)
+        if n > 5 and (ahi - alo) * (bhi - blo) <= 4_000_000:
+            break
         ga = [tuple(a[i:i + n]) for i in range(alo, ahi - n + 1)]
         gb = [tuple(b[j:j + n]) for j in range(blo, bhi - n + 1)]
         ca, cb = collections.Counter(ga), collections.Counter(gb)
         posb = {g: blo + k for k, g in enumerate(gb) if cb[g] == 1}
-        pairs = [(alo + k, posb[g]) for k, g in enumerate(ga) if ca[g] == 1 and g in posb]
+        pairs = [(alo + k, posb[g]) for k, g in enumerate(ga) if ca[g] == 1 and g in posb
+                 and not any(alo + k + x in weak or posb[g] + x in weak_b for x in range(n))]
+        # an edition end line and an ms subheading repeat a title (kd11:1.0.1 "1. Tajjanīyakamma"): no anchor
+        if (ahi - alo) * (bhi - blo) > 4_000_000:  # a long gap: a pair far from its place on the other side is
+            near = [(i, j) for i, j in pairs  # a look-alike line (kd13 "(yathā heṭṭhā tathā vitthāretabbaṁ)")
+                    if abs((i - alo) / (ahi - alo) - (j - blo) / (bhi - blo)) <= 0.35]
+            pairs = near or pairs
         anchors = lis(pairs)
         if anchors:
             return anchors, n
@@ -810,7 +822,7 @@ def spacing(A, B):
     return got, pairs
 
 
-def align(toks, segs, slots_before=None):
+def align(toks, segs, slots_before=None, with_matched=False):
     """toks: edition Tok list; segs: [(key, text)] body segments;
     slots_before: {body seg index: [ms header texts]} used as title anchors.
     -> seg index per tok, match ratio."""
@@ -842,7 +854,9 @@ def align(toks, segs, slots_before=None):
     out = [None] * len(toks)
     if not b:
         return [0] * len(toks), 0.0
-    matches = patience(a, b)
+    matches = patience(a, b, {k for k, i in enumerate(idx) if i >= 0 and toks[i].end},
+                       {j for j, si in enumerate(bseg) if not b[j].startswith('#') and (
+                           is_subhead(segs[si][0]) or len(segs[si][1].split()) <= 6 and colophon(segs[si][1]))})
     ops = []
     pi = pj = 0
     for i, j in matches + [(len(a), len(b))]:
@@ -970,8 +984,96 @@ def align(toks, segs, slots_before=None):
             i = j
         else:
             i += 1
-    return out, equal / max(1, sum(1 for x in idx if x >= 0))
+    ratio = equal / max(1, sum(1 for x in idx if x >= 0))
+    return (out, ratio, matched) if with_matched else (out, ratio)
 
+
+def reordered(toks, body):
+    """suttas the edition prints in another order (BJT Jātaka: Khaṇḍahāla = ms ja544 right after Nimi ja541):
+    the edition's text is cut at its own sutta titles, each block goes to the ms sutta whose rare words it has;
+    a block whose sutta gets no block in the common order is that sutta. -> [(lo, hi, ms body indices)]"""
+    by = collections.OrderedDict()
+    for si, (k, _) in enumerate(body):
+        by.setdefault(sutta_of(k), []).append(si)
+    starts = [i for i, t in enumerate(toks) if any(c == 'sutta' for c, _ in t.heads)]
+    if len(by) < 3 or len(starts) < 3:
+        return []
+    order = {s: n for n, s in enumerate(by)}
+    words = {s: {w for si in ix for w in map(norm, body[si][1].split()) if len(w) >= 4} for s, ix in by.items()}
+    df = collections.Counter(w for ws in words.values() for w in ws)
+    where = collections.defaultdict(list)
+    for s_, ws in words.items():
+        for w in ws:
+            if df[w] <= 20:
+                where[w].append(s_)
+    bounds = sorted({0, len(toks), *starts})
+    blocks = []
+    for lo, hi in zip(bounds, bounds[1:]):
+        sc = collections.Counter()
+        for w in {t.norm for t in toks[lo:hi] if len(t.norm) >= 4}:
+            for s_ in where.get(w, ()):
+                sc[s_] += 1 / df[w]
+        top = sc.most_common(2) + [(None, 0)] * 2
+        size = sum(1 for t in toks[lo:hi] if t.norm)
+        sure = top[0][1] >= 3 and top[0][1] >= 5 * top[1][1] and size >= 200  # ja544: 331 against 22
+        blocks.append((lo, hi, top[0][0] if sure else None))
+    sure = [(n, order[s_]) for n, (_, _, s_) in enumerate(blocks) if s_]
+    keep = set(n for n, _ in lis_nondecreasing(sure))
+    covered = {blocks[n][2] for n in keep}
+    moves = []
+    for n, (lo, hi, s_) in enumerate(blocks):
+        if s_ and n not in keep and s_ not in covered:
+            if moves and moves[-1][2] == s_ and moves[-1][1] == lo:
+                moves[-1] = (moves[-1][0], hi, s_)
+            else:
+                moves.append((lo, hi, s_))
+    return [(lo, hi, by[s_]) for lo, hi, s_ in moves]
+
+
+def lis_nondecreasing(pairs):
+    """longest run of (n, v) pairs with v not decreasing"""
+    import bisect
+    tails, prev, at = [], [None] * len(pairs), []
+    for k, (_, v) in enumerate(pairs):
+        p = bisect.bisect_right(tails, v)
+        if p == len(tails):
+            tails.append(v)
+            at.append(k)
+        else:
+            tails[p] = v
+            at[p] = k
+        prev[k] = at[p - 1] if p else None
+    out, k = [], at[-1] if at else None
+    while k is not None:
+        out.append(pairs[k])
+        k = prev[k]
+    return out[::-1]
+
+
+def align_book(toks, body, before):
+    """align(); suttas the edition prints elsewhere (reordered()) are aligned on their own. Words keep their
+    order inside every sutta. -> (seg index per tok, match ratio, matched toks)"""
+    moves = reordered(toks, body)
+    if not moves:
+        return align(toks, body, before, with_matched=True)
+    gone_t = {i for lo, hi, _ in moves for i in range(lo, hi)}
+    gone_s = {si for _, _, ix in moves for si in ix}
+    keep_t = [i for i in range(len(toks)) if i not in gone_t]
+    keep_s = [si for si in range(len(body)) if si not in gone_s]
+    pos = {si: k for k, si in enumerate(keep_s)}
+    a, score, m = align([toks[i] for i in keep_t], [body[si] for si in keep_s],
+                        {pos[si]: h for si, h in (before or {}).items() if si in pos}, with_matched=True)
+    assign = [None] * len(toks)
+    for k, i in enumerate(keep_t):
+        assign[i] = keep_s[a[k]]
+    matched = {keep_t[k] for k in m}
+    for lo, hi, ix in moves:
+        sub, _, sm = align(toks[lo:hi], [body[si] for si in ix],
+                           {0: before[ix[0]]} if before and ix[0] in before else {}, with_matched=True)
+        for k, x in enumerate(sub):
+            assign[lo + k] = ix[x]
+        matched |= {lo + k for k in sm}
+    return assign, score, matched
 
 def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     segs_all, keys_all = [], []
@@ -1000,13 +1102,14 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     toks = heads_as_text(chunk.toks, assign, body, [v for k, v in segs_all if k in slot_keys])
     if len(toks) != len(chunk.toks):
         chunk.toks = toks
-        assign, score = align(chunk.toks, body, before)
+    assign, score, matched = align_book(chunk.toks, body, before)
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)
     vars_ = collections.defaultdict(list)
     leftover_heads = list(chunk.pending)
     body_words = collections.defaultdict(list)
+    body_idx = collections.defaultdict(list)
     def home(h, si):
         """an empty ms segment just before si that this title line is the end line of (same first word)"""
         hw = [norm(x) for x in h.split() if norm(x)]
@@ -1022,7 +1125,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         return None
 
     seen = set()
-    for t, si in zip(chunk.toks, assign):
+    for n_tok, (t, si) in enumerate(zip(chunk.toks, assign)):
         if t.heads:
             keep = []
             for c, h in t.heads:
@@ -1053,6 +1156,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         else:
             text[key].append(t.text)
         body_words[key].append(t.text)
+        body_idx[key].append(n_tok)
         refs[key].extend(r for r in t.refs if r not in refs[key])
         vars_[key].extend(f'{l} → {r}' for l, r in t.vars)
     # a leading N.0 that ms gives a title (VRI Pātimokkha "Pubbakaraṇaṃ-4" printed as a text line) takes the
@@ -1092,9 +1196,12 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         write_or_drop(os.path.join(out_dir, 'variant', 'pli', ed, rel, f'{base}_variant-pli-{ed}.json'), v)
         r = {k: ', '.join(refs[k]) for k in keys if refs[k]}
         write_or_drop(os.path.join(out_dir, 'reference', 'pli', ed, rel, f'{base}_reference-pli-{ed}.json'), r)
-    # every edition word must be somewhere, once, in order
-    got = [w for k, _ in body for w in body_words[k]]
-    if got != [t.text for t in chunk.toks]:
+    # every edition word must be somewhere, once, in order inside its sutta (a sutta printed elsewhere moves whole)
+    got = [i for k, _ in body for i in body_idx[k]]
+    per = collections.defaultdict(list)
+    for k, _ in body:
+        per[sutta_of(k)] += body_idx[k]
+    if sorted(got) != list(range(len(chunk.toks))) or any(x != sorted(x) for x in per.values()):
         raise SystemExit(f'{ed} {label}: edition words lost or reordered')
     n_heads = sum(len(t.heads) for t in chunk.toks) + len(leftover_heads)
     n_words = len(chunk.toks)
@@ -1230,12 +1337,15 @@ def vb(side, parts):
     return [f'pli-tv-{side}-vb-{k}' for k in parts]
 
 
-# Vinaya: Vibhaṅga in the volumes of BJT and VRI, Pātimokkha (Dvemātikā) only in VRI, before its commentary
+# Vinaya: Vibhaṅga, Khandhaka, Parivāra in the volumes of BJT and VRI; Pātimokkha (Dvemātikā) only in VRI,
+# before its commentary
 VINAYA = [
     (vb('bu', ['pj', 'ss', 'ay', 'np']), ['vp-prj'], ['vin01m.mul.xml']),
     (vb('bu', ['pc', 'pd', 'sk', 'as']) + vb('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as']), ['vp-pct'],
      ['vin02m1.mul.xml']),
     (['pli-tv-bu-pm', 'pli-tv-bi-pm'], [], ['vin04t.nrf.xml|Kaṅkhāvitaraṇī']),
+    (['pli-tv-kd'], ['vp-mv', 'vp-cv'], ['vin02m2.mul.xml', 'vin02m3.mul.xml']),  # Mahāvagga kd1-10, Cūḷavagga kd11-22
+    (['pli-tv-pvr'], ['vp-pv'], ['vin02m4.mul.xml']),
 ]
 VINAYA_BOOKS = [b for books, _, _ in VINAYA for b in books]
 
