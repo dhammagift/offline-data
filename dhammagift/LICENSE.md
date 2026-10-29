@@ -20,12 +20,14 @@ source's terms. How the Pali files are made: [root/build/README.md](root/build/R
 `variant/pli/ms` holds the readings of all the editions above on SuttaCentral ids, with the editions' footnotes. Each
 reading names its edition (`bj`, `cck`, `sya-all`, `ms2005`, `pts`) and carries that edition's license and
 attribution as listed above; the readings marked `pts` are CC BY-SA 4.0. The project's own readings
-(`variant_own.json`, from the old site) are Dhamma.gift's.
+(`variant_own.json`, from the old site) are Dhamma.gift's, under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Code and comparison
 
 The build scripts in `root/build` and the comparison lists in `root/build/compare` are Dhamma.gift's own work,
-free to use with attribution to Dhamma.gift.
+under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), like all the project's materials
+([Terms](https://github.com/dhammagift/dg-docs/blob/main/docs/user/policies.md#terms)).
 
 Translations (`translation/`, `en`, `ru` and others) are not covered by this file: each keeps the license of its
 translator or publisher.
