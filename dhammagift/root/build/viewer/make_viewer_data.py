@@ -78,7 +78,7 @@ for pid, coll, label, files in pages:
                 q = f'{DG}/{kind}/pli/{e}/{sub}/{base}_{kind}-pli-{e}.json'
                 if os.path.exists(q):
                     store[e] = json.load(open(q))
-        q = f'{DG}/variant/pli/mso/{sub}/{base}_variant-pli-mso.json'  # the Mahāsaṅgīti as printed, where SC ms differs
+        q = f'{DG}/variant/pli/ms/{sub}/{base}_variant-pli-ms.json'  # the project's readings of ms (collate.py)
         if os.path.exists(q):
             var['ms'] = json.load(open(q))
         rows = []
