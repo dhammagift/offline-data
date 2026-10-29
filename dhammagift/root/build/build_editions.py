@@ -601,6 +601,9 @@ def th2ro(s):
 # on the last word; strict endings, so verse words like vādapathātivattaṃ, vusitabrahmacariyo are no titles
 TH_TITLE = re.compile(r'(sutt[a-z]*|jatak[a-z]*|vatthu|apadan[a-z]*|niddes[a-z]*|kath(a|am|o)?|panh[a-z]*'
                       r'|gath(a|ayo)|cariy(a|am)|vams(o|am)|uddes[a-z]*|path(o|am)|kand(a|am|o)|sikkhapad(a|am))$')
+# a one-word line naming a section (Yamaka `anusayavāro`, Paṭṭhāna `paṭiccavāro`); not `bhāṇavāraṃ`, an end line,
+# and not a verse line ending in -varo (Jātaka uddāna `mahaticamuyāva sigālavaro`)
+TH_VARA = re.compile(r'(?!.*bhanavar)[a-z]{4,}var(o|am)')
 TH_BODY_HEAD = re.compile(r'(tassuddan|tatruddan|uddanambhavati)')
 
 
@@ -644,7 +647,8 @@ def th_stream(db, volume):
             cls = head_class(line) if m else None
             if m and (not line.rstrip().endswith('.') or 'namotassa' in norm(line)) \
                     and not TH_BODY_HEAD.search(norm(line)) \
-                    and not (cls == 'sutta' and not TH_TITLE.search(norm(line.split()[-1]))) \
+                    and not (cls == 'sutta' and not TH_TITLE.search(norm(line.split()[-1]))
+                             and not (len(line.split()) == 1 and TH_VARA.fullmatch(norm(line)))) \
                     and not colophon(line):  # centred verse lines and section end lines are text
                 flush()
                 st.heading(line, cls, [page_ref] if page_ref else [])
@@ -1317,6 +1321,48 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             if 'namo' in nxt and 'sammasambuddhassa' in nxt[nxt.index('namo'):]:
                 n = nxt.index('sammasambuddhassa', nxt.index('namo')) + 1
                 text[k], text[k2] = [' '.join(ws[:n])], ([' '.join(ws[n:])] if ws[n:] else [])
+    # an empty ms heading (0.x, N.0) takes its title, word for word, from the end of the text segment before or the
+    # start of the one after, where the edition printed it in the text (VRI vb17 `Ekakaṃ. 2. Dukamātikā (1)`, BJT dt1.2 `abbhantaramātikā.
+    # pañcakkhandhā`); and an N.0 heading keeps only its title: the edition's text after it goes on to the next segment
+    # (BJT patthana1.2:6.0 `ārammaṇa kusalañca dhammaṃ paṭicca …`)
+    def head_key(k):
+        sk = k.split(':')[1]
+        return sk.startswith('0.') or re.search(r'(^|\.)0(\.\d+)?$', sk)
+
+    def ms_words(k):
+        return [w for w in map(norm, ms_text.get(k, '').split()) if w]
+    for i, k in enumerate(allk):
+        want = ms_words(k)
+        if not head_key(k) or not want or len(want) > 6:
+            continue
+        prev = allk[i - 1] if i and sutta_of(allk[i - 1]) == sutta_of(k) else None
+        nxt = allk[i + 1] if i + 1 < len(allk) and sutta_of(allk[i + 1]) == sutta_of(k) else None
+        if not text[k]:
+            if prev and text[prev] and not head_key(prev):
+                ws = ' '.join(text[prev]).split()
+                ix = [j for j, w in enumerate(ws) if norm(w)]
+                if len(ix) > len(want) and ms_words(prev)[-len(want):] != want:
+                    start = ix[-len(want)]
+                    while start > ix[-len(want) - 1] + 1 and not norm(ws[start - 1]):
+                        start -= 1  # its number: `2.`
+                    if [norm(ws[j]) for j in ix[-len(want):]] == want:  # the whole title, word for word
+                        text[prev], text[k] = [' '.join(ws[:start])], [' '.join(ws[start:])]
+                        continue
+            if nxt and text[nxt] and not head_key(nxt):
+                ws = ' '.join(text[nxt]).split()
+                ix = [j for j, w in enumerate(ws) if norm(w)]
+                if len(ix) > len(want) and ms_words(nxt)[:len(want)] != want:
+                    end = ix[len(want) - 1] + 1
+                    if [norm(ws[j]) for j in ix[:len(want)]] == want:
+                        text[k], text[nxt] = [' '.join(ws[:end])], [' '.join(ws[end:])]
+        elif nxt and not k.split(':')[1].startswith('0.'):
+            ws = ' '.join(text[k]).split()
+            ix = [j for j, w in enumerate(ws) if norm(w)]
+            if len(ix) >= len(want) + 4 and [norm(ws[j]) for j in ix[:len(want)]] == want:
+                rest = [norm(ws[j]) for j in ix[len(want):len(want) + 6]]
+                if sum(w in ms_words(nxt)[:10] for w in rest) >= 0.6 * len(rest):
+                    end = ix[len(want) - 1] + 1
+                    text[k], text[nxt] = [' '.join(ws[:end])], [' '.join(ws[end:])] + text[nxt]
     if leftover_heads and body:
         text[body[-1][0]].append(' '.join(h for _, h in leftover_heads))
 

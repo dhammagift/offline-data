@@ -94,7 +94,14 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   `Pubbakaraṇaṃ-4`, the number of items glued with `-`).
 - Glued in the sources and split: `…pe…` (VRI `nissajjitabbaṃ…pe…`), `,–` (BJT `gotama,–na`), `.‘‘` (VRI
   `jānāhī’’ti.‘‘Suṭṭhu`).
-- Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text.
+- Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text. A
+  one-word line naming a section, `anusayavāro`, `paṭiccavāro`, is a title too: Siam Rath prints it before the
+  section, ms `Anusayavāro.` after it, and anchored there the Yamaka's Thai text went a whole section down. Not
+  `ekādasamaṃ bhāṇavāraṃ` (an end line) nor a verse line ending in -varo (Jātaka uddāna `… sigālavaro`).
+- An empty ms heading (0.x, N.0) takes its title, word for word, from the end of the text segment before or the start
+  of the one after (VRI vb17 `Ekakaṃ. 2. Dukamātikā (1)`, BJT dt1.2 `abbhantaramātikā. pañcakkhandhā`); an N.0
+  heading keeps only its title, and edition text after it that is the next segment's goes there (BJT
+  patthana1.2:6.0 `ārammaṇa kusalañca dhammaṃ paṭicca …`).
 - Bare numbers are not used to align (`dn29:8.0` Thai `3`).
 - An ms `Namo tassa…` that opens a sutta takes no edition words but the edition's own Namo tassa: words that are
   not (the first line of the text, `ya2.1.1:1.1`; `vv1:1.1` Thai `pīṭhante`) go on to the next segment, and an
@@ -174,8 +181,8 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | Abhidhamma: Dhātukathā | 96% | 96% | 94% |
 | Abhidhamma: Puggalapaññatti | 98% | 98% | 97% |
 | Abhidhamma: Kathāvatthu | 96% | 97% | 96% |
-| Abhidhamma: Yamaka | 92% | 97% | 72% |
-| Abhidhamma: Paṭṭhāna | 68% | 86% | 70% |
+| Abhidhamma: Yamaka | 92% | 97% | 88% |
+| Abhidhamma: Paṭṭhāna | 68% | 86% | 71% |
 
 Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
@@ -236,7 +243,7 @@ reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single f
 abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
 marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
-About 263 000 readings: bj 95 100, sya-all 88 200, pts 76 300, cck 3 500, ms2005 15. The Paṭṭhāna's
+About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005 15. The Paṭṭhāna's
 `saṅkhittaṁ` ("abbreviated") is a peyyāla mark. The printed Mahāsaṅgīti is not compared in the Paṭṭhāna: the
 reconstruction's pages there do not follow SC's order (`patthana2.2` Paccanīyuddhāra before Paccayānuloma).
 
