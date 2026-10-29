@@ -186,6 +186,34 @@ SuttaCentral today, the error outlined in red:
 ![SuttaCentral sn48.147-158:1.1](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn48_147-158_1_1.png)
 ![SuttaCentral sn50.67-76:1.1](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn50_67-76_1_1.png)
 
+## 3. A passage of the source left out: MN 10
+
+Unlike the places above, this is not a copying slip and the other editions are divided; it is listed because here
+SC's text is not the edition it names. In the printed Mahāsaṅgīti, as in the Chaṭṭha Saṅgāyana, MN 10 is the
+*Mahāsatipaṭṭhānasutta*: after the four truths in brief
+([mn10:44.3](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/mn/mn10_root-pli-ms.json#L196)) it has the whole exposition of the truths (`Paṭhamabhāṇavāro niṭṭhito. Dukkhasaccaniddesa:
+Katamañca, bhikkhave, dukkhaṃ ariyasaccaṃ? …`, paragraphs 120-136 of the print, as in DN 22), and it ends
+`Mahāsatipaṭṭhānasuttaṃ niṭṭhitaṃ dasamaṃ`. SC goes on at once with `Iti ajjhattaṁ vā …`
+([mn10:45.1](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/mn/mn10_root-pli-ms.json#L197)) and names the sutta `Satipaṭṭhānasutta` ([mn10:0.2](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/mn/mn10_root-pli-ms.json#L3),
+[mn10:47.5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/mn/mn10_root-pli-ms.json#L230)), as do Buddha Jayanti, Syāmaraṭṭha and PTS. Neither the text nor the title is
+noted in SC's variants.
+
+| edition | MN 10 |
+|---|---|
+| Mahāsaṅgīti 2005 | with the exposition: [1.10.4.5.1 Dukkhasaccaniddesa](https://tipitaka2500.github.io/tipitaka/9M/1/1.10/1.10.4/1.10.4.5/1.10.4.5.1.html), end title [1.10.4.5.4](https://tipitaka2500.github.io/tipitaka/9M/1/1.10/1.10.4/1.10.4.5/1.10.4.5.4.html) |
+| Chaṭṭha Saṅgāyana | with the exposition: [s0201m.mul0.xml](https://www.tipitaka.org/romn/cscd/s0201m.mul0.xml) paras 120-136 |
+| Buddha Jayanti, Syāmaraṭṭha, PTS | without it, as SC |
+
+SuttaCentral today, the place outlined in red:
+
+![SuttaCentral mn10:44.3](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-mn10_44_3.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io) and the Chaṭṭha Saṅgāyana (tipitaka.org), outlined in green:
+
+![Mahāsaṅgīti 2005 mn10 Dukkhasaccaniddesa](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-mn10-ms2005.png)
+![Mahāsaṅgīti 2005 mn10 end title](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-mn10-ms2005-end.png)
+![Chaṭṭha Saṅgāyana mn10 Dukkhasaccaniddeso](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-mn10-vri.png)
+
 ## How this was found
 
 The texts of the editions were aligned to SC segment ids by rules, without manual editing, and compared word by
