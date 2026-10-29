@@ -5,6 +5,7 @@
   cck     Chaṭṭha Saṅgāyana, VRI (dhammagift/root/pli/my)
   sya-all Siam Rath 1927 (dhammagift/root/pli/th)
   ms2005  the Mahāsaṅgīti as printed, World Tipiṭaka 2005 (built with build_editions.py --eds mso, not in the data)
+  pts     Pali Text Society (GRETIL, Dhammakaya input; build_editions.py --eds pts, not in the data)
 
 Each edition is compared with ms word by word over a whole sutta, so a word the alignment put in a neighbour segment
 is no variant. Left out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing (`yoniso manasikāro` /
@@ -16,17 +17,19 @@ The editions' own footnotes (build_editions.py --notes) go in too, after the col
 its sources: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṃ, syā)` (BJT's note: so the Chaṭṭha Saṅgāyana and Siam
 Rath read), `(cck: ka.)`, `(sya-all: yu.)`; a note that names no source is `(bj note)`.
 
-usage: collate.py BILARA_ROOT_PLI_MS BILARA_VARIANT_PLI_MS DHAMMAGIFT_DIR MSO_ROOT_PLI_MSO|- NOTES_DIR
+usage: collate.py BILARA_ROOT_PLI_MS BILARA_VARIANT_PLI_MS DHAMMAGIFT_DIR MSO_ROOT_PLI_MSO|- NOTES_DIR|- [PTS_ROOT_PLI_PTS]
 """
 import collections, difflib, glob, json, os, re, sys, unicodedata
 
 MS, SCVAR, DG = sys.argv[1:4]
 MSO = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != '-' else None
-NOTES = sys.argv[5] if len(sys.argv) > 5 else None
+NOTES = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] != '-' else None
+PTS = sys.argv[6] if len(sys.argv) > 6 else None
 NOTE_ED = [('bjt', 'bj'), ('my', 'cck'), ('th', 'sya-all')]
 TH_SRC = re.compile(r'^((?:(?:ma|yu|sī|syā|ka|machasaṃ|pī|kaṃ)\.?\s*)+)\s')
 SIGLA = [('bj', os.path.join(DG, 'root', 'pli', 'bjt'), 'bjt'), ('cck', os.path.join(DG, 'root', 'pli', 'my'), 'my'),
-         ('sya-all', os.path.join(DG, 'root', 'pli', 'th'), 'th')] + ([('ms2005', MSO, 'mso')] if MSO else [])
+         ('sya-all', os.path.join(DG, 'root', 'pli', 'th'), 'th')] + ([('ms2005', MSO, 'mso')] if MSO else []) \
+    + ([('pts', PTS, 'pts')] if PTS else [])
 PEYYALA = {'pe', 'la', 'pa', 'peyyālo'}
 # headings and end lines an edition prints inside the text: no readings of it
 TITLE = re.compile(r'.{3,}(vagg[aoā]?|vaggā|kaṇḍ(a|aṃ|o)|sutt(a|aṃ|ā)|sikkhāpad(a|aṃ)|kkhandhak(a|o|aṃ)|pabb(a|aṃ)|'
@@ -38,12 +41,40 @@ END = re.compile(r'(uddān|uddes|ānisaṃs)|^(paṭham|dutiy|tatiy|catutth|pañ
                  r'ekādasam|dvādasam|terasam|cuddasam|pannarasam|paṇṇarasam|soḷasam|vīsatim)(o|aṃ|ā|ī)$')
 PARTICLES = {'vā', 'ca', 'pi', 'na', 'hi', 'va', 'ti', 'te', 'me', 'no', 'so', 'sā', 've', 'yo', 'ce', 'su', 'ha', 'ku'}
 MAX = 4
+VOWELS = set('aāiīuūeo')
 
 
 def norm(w):
     w = unicodedata.normalize('NFC', re.sub(r'<[^>]+>', '', w).lower()).replace('ṁ', 'ṃ')
     w = re.sub(r'[^\w]', '', w)
     return re.sub(r'ṅ(?=[kg])', 'ṃ', w)
+
+
+def loose(ws):
+    """words joined, spelling the editions differ in without a reading: niggahita as m (PTS `evam eva`, `yan ti`),
+    any nasal before a stop or nasal (`angaṃ`, `saṃcāra`, `yaṃ nūna`), single for double consonants (PTS `upekhā`,
+    `na pajānāti`), evamevaṃ / evam eva, -nīya / -niya, by / vy, vīriya / viriya, catūhi / catuhi, seyyathīdaṃ"""
+    ws = [w[:-1] + 'm' if len(w) > 1 and w.endswith('n') and (i + 1 == len(ws) or ws[i + 1][0] not in VOWELS) else w
+          for i, w in enumerate(ws)]  # yan ti; not n' etaṃ, ten' upasaṅkami
+    s = ''.join(re.sub(r'(?<=.)evaṃ$', 'eva', w) for w in ws).replace('ṃ', 'm')  # evam eva
+    s = re.sub(r'[ṅñnṇ](?=[kgcjṭḍtdpbnm])', 'm', s)
+    s = s.replace('nīy', 'niy').replace('thīdam', 'thidam').replace('vy', 'by').replace('ūhi', 'uhi').replace('vīriy', 'viriy')
+    s = re.sub(r'([kgcjṭḍtdpbsylvm])(?=\1)', '', s)
+    return re.sub(r'([kgcjṭḍtdpb])(?=\1h)', '', s)
+
+
+
+def abbreviated(xa, xb):
+    """PTS abbreviations: `āp` for āpatti, `a a maggaṃ` for ariyaṃ aṭṭhaṅgikaṃ maggaṃ, `pañcah`, the Parivāra's
+    `kattha paññattaṃ` left out"""
+    if any(len(w) == 1 for w in xb) or 'kattha' in xa and 'kattha' not in xb:
+        return True
+    if any(w[-1] not in VOWELS | {'ṃ', 'm', 'n'} and (i + 1 == len(xb) or xb[i + 1][0] not in VOWELS)
+           for i, w in enumerate(xb)):
+        return True
+    pairs = list(zip(xa, xb))
+    return len(xa) == len(xb) and any(a != b and a.startswith(b) for a, b in pairs) and \
+        all(loose([a]) == loose([b]) or a.startswith(b) for a, b in pairs)
 
 
 def words(text):
@@ -122,8 +153,12 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
             at_end = op == 'insert' and (a1 == len(A) or A[a1][0] != A[a1 - 1][0])
             if at_end and (siglum == 'ms2005' or any(END.search(w) for w in xb)):
                 continue  # a heading, an uddāna label, a number at the end of a segment
-            if ''.join(xa) == ''.join(xb) or PEYYALA & set(xa + xb) or len(xa) > MAX or len(xb) > MAX:
+            if loose(xa) == loose(xb) or PEYYALA & set(xa + xb) or len(xa) > MAX or len(xb) > MAX:
                 continue
+            if xb and abbreviated(xa, xb):
+                continue
+            if op in ('insert', 'replace') and xb[-1:] == ['ti'] and loose(xa) == loose(xb[:-1]):
+                continue  # a quotation closed with ti (PTS dhp `sāsanan ti`)
             if any(TITLE.search(w) for w in xa + xb):
                 continue
             if op == 'insert':  # the edition has more: show it after the word before
@@ -147,12 +182,14 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
 def entry_text(by_lemma):
     parts = []
     for lemma, rs in by_lemma.items():
-        group = collections.OrderedDict()
+        group, shown_as = collections.OrderedDict(), {}
         for reading, siglum in rs:
-            group.setdefault(reading, [])
-            if siglum not in group[reading]:
-                group[reading].append(siglum)
-        parts.append(f'{lemma} → ' + '; '.join(f'{r} ({", ".join(s)})' for r, s in group.items()))
+            k = loose([norm(w) for w in reading.split()])  # idhāvuso, idh āvuso: one reading
+            shown_as.setdefault(k, reading)
+            group.setdefault(k, [])
+            if siglum not in group[k]:
+                group[k].append(siglum)
+        parts.append(f'{lemma} → ' + '; '.join(f'{shown_as[k]} ({", ".join(s)})' for k, s in group.items()))
     return ' | '.join(parts)
 
 

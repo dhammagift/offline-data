@@ -466,6 +466,79 @@ def t2500_stream(vol_dirs):
     return st
 
 
+# ---------------------------------------------------------------- PTS (GRETIL, Dhammakaya input)
+
+PTS_TITLE = re.compile(r'(vagg[a-z]*|sutt(a|o|am|anta|antam)|nipat[a-z]*|thero|theri|uddan[a-z]*|bhanavar[a-z]*|pucch[a-z]*|'
+                       r'niddes[a-z]*)$|^(chapter|book|division|similar)')
+
+
+def pts_stream(files):
+    """Pali Text Society editions as input by the Dhammakaya Foundation (GRETIL 2_pali, plain text version, (C) PTS
+    and Dhammakaya 2015, CC BY-SA 4.0). For comparison only, so its headings (a centred short line that is a title,
+    in capitals or bold: `SN_1.1,1.1. Oghaṃ.`, English `CHAPTER I.`) are left out: they never fit SC's titles."""
+    st = Stream()
+    for f in files:
+        t = open(f, encoding='utf-8', errors='replace').read()
+        t = t[t.find('[page '):]
+        # page headers and notes: <i>…</i>, <span class="red">…</span>; in MN I %…%, \[…]\
+        t = re.sub(r'<span class="red">.*?</span>|<i>.*?</i>|%[^%\n]*%|\\\[.*?\]\\', ' ', t, flags=re.S)
+        for line in re.split(r'<br>', t, flags=re.I):
+            if re.search(r'\[page \d+', line):
+                continue
+            line = re.sub(r'<b>\s*\|\|[^<]*\|\|\s*</b>', ' ', line)  # verse numbers: || Th_12 ||
+            bold = re.fullmatch(r'\s*<b>(.*)</b>\s*', line, flags=re.S)
+            raw = re.sub(r'<[^>]+>', '', line).replace('\n', ' ')
+            indent = len(raw) - len(raw.lstrip(' '))
+            text = html.unescape(re.sub(r'<[^>]+>', ' ', bold.group(1) if bold else line)).replace("';", "'")
+            text = re.sub(r'\b[A-Z][A-Za-z]*_[\w.,*]+\.?', ' ', text)  # Dhammakaya ids: SN_1.1,1.1.
+            text = re.sub(r'(?<=[^\W\d_])\d+', '', text)  # footnote numbers on a word: paṭhamo.1
+            text = ' '.join(re.sub(r'[{}%\x00-\x1f]', ' ', text).split())
+            if not text or text.isdigit():
+                continue
+            letters = [c for c in text if c.isalpha()]
+            caps = len(letters) > 1 and all(c.isupper() for c in letters)
+            ws = [norm(w) for w in text.split() if norm(w)]
+            title = indent >= 16 and len(ws) <= 6 and ('[' in text or any(PTS_TITLE.search(w) for w in ws[-1:] + ws[:1]))
+            if not (bold or (caps and len(ws) <= 8) or title) or colophon(text):
+                st.body(text, [])
+    return st
+
+
+# PTS volumes (file names in GRETIL 2_pali/1_tipit) and the SC books in them; Jātaka is printed with its
+# commentary and the Netti and Peṭakopadesa are not PTS input there
+PTS = [('dn', 'dn1-13', '2_sut/1_digh/dighn1pu'), ('dn', 'dn14-23', '2_sut/1_digh/dighn2pu'),
+       ('dn', 'dn24-34', '2_sut/1_digh/dighn3pu'), ('mn', 'mn1-76', '2_sut/2_majjh/majjn1pu'),
+       ('mn', 'mn77-106', '2_sut/2_majjh/majjn2pu'), ('mn', 'mn107-152', '2_sut/2_majjh/majjn3pu'),
+       ('sn', 'sn1-11', '2_sut/3_samyu/samyu1pu'), ('sn', 'sn12-21', '2_sut/3_samyu/samyu2pu'),
+       ('sn', 'sn22-34', '2_sut/3_samyu/samyu3pu'), ('sn', 'sn35-44', '2_sut/3_samyu/samyu4pu'),
+       ('sn', 'sn45-56', '2_sut/3_samyu/samyu5pu'), ('an', 'an1-3', '2_sut/4_angu/angut1pu'),
+       ('an', 'an4', '2_sut/4_angu/angut2pu'), ('an', 'an5-6', '2_sut/4_angu/angut3pu'),
+       ('an', 'an7-8', '2_sut/4_angu/angut4pu'), ('an', 'an9-11', '2_sut/4_angu/angut5pu'),
+       ('kn', 'kp', '2_sut/5_khudd/khudp_pu'), ('kn', 'dhp', '2_sut/5_khudd/dhampdpu'),
+       ('kn', 'ud', '2_sut/5_khudd/udana_pu'), ('kn', 'iti', '2_sut/5_khudd/itivutpu'),
+       ('kn', 'snp', '2_sut/5_khudd/sutnippu'), ('kn', 'vv', '2_sut/5_khudd/vimvatpu'),
+       ('kn', 'pv', '2_sut/5_khudd/petvatpu'), ('kn', 'thag', '2_sut/5_khudd/theragpu'),
+       ('kn', 'thig', '2_sut/5_khudd/therigpu'), ('kn', 'tha-ap,thi-ap', '2_sut/5_khudd/apadanpu'),
+       ('kn', 'bv', '2_sut/5_khudd/budvmspu'), ('kn', 'cp', '2_sut/5_khudd/carpitpu'),
+       ('kn', 'mnd', '2_sut/5_khudd/nidde1pu'), ('kn', 'cnd', '2_sut/5_khudd/nidde2pu'),
+       ('kn', 'ps', '2_sut/5_khudd/patis1pu,2_sut/5_khudd/patis2pu'), ('kn', 'mil', '../2_parcan/milindpu'),
+       ('vinaya', 'pli-tv-bu-vb-pj,pli-tv-bu-vb-ss,pli-tv-bu-vb-ay,pli-tv-bu-vb-np', '1_vin/vin3s1pu'),
+       ('vinaya', ','.join(f'pli-tv-{s}-vb-{k}' for s, ks in (('bu', ['pc', 'pd', 'sk', 'as']),
+                                                              ('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as']))
+                           for k in ks), '1_vin/vin4s2pu'),
+       ('vinaya', 'pli-tv-kd', '1_vin/vin1mapu,1_vin/vin2cupu'), ('vinaya', 'pli-tv-pvr', '1_vin/vin5papu')]
+
+
+def pts_groups():
+    """(collection, SC books, PTS files) for every PTS volume"""
+    for coll, books, files in PTS:
+        out = []
+        for b in books.split(','):
+            m = re.fullmatch(r'(dn|mn|sn|an)(\d+)(?:-(\d+))?', b)
+            out += [f'{m.group(1)}{n}' for n in range(int(m.group(2)), int(m.group(3) or m.group(2)) + 1)] if m else [b]
+        yield coll, out, [f + '.htm' for f in files.split(',')]
+
+
 # ---------------------------------------------------------------- Thai (Siam Rath 1927, E-Tipitaka palinew.sqlite)
 
 TH_CONS = {'ก': 'k', 'ข': 'kh', 'ค': 'g', 'ฆ': 'gh', 'ง': 'ṅ', 'จ': 'c', 'ฉ': 'ch', 'ช': 'j',
@@ -1480,6 +1553,7 @@ def main():
     ap.add_argument('--report')
     ap.add_argument('--eds', default='bjt,my,th', help='editions to build; mso = Mahāsaṅgīti as printed, for comparison')
     ap.add_argument('--mso', help='tipitaka2500.github.io/tipitaka (World Tipiṭaka 2005), for --eds mso')
+    ap.add_argument('--pts', help='GRETIL 2_pali/1_tipit (PTS, Dhammakaya input), for --eds pts')
     ap.add_argument('--notes', help="folder for the editions' footnotes, which collate.py puts into variant/pli/ms")
     a = ap.parse_args()
     eds = set(a.eds.split(','))
@@ -1505,6 +1579,15 @@ def main():
         if vols:
             vols = [vols] if isinstance(vols, str) else vols
             place(t2500_stream([os.path.join(a.mso, v) for v in vols]), ms, 'mso', a.out, label, report, books)
+            log(report)
+    if a.pts and 'pts' in eds:
+        for coll, inside, files in pts_groups():
+            books = asked.intersection(inside)
+            if not books:
+                continue
+            ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
+            label = inside[0] if len(inside) == 1 else f'{inside[0]}-{inside[-1]}'
+            place(pts_stream([os.path.join(a.pts, f) for f in files]), ms, 'pts', a.out, label, report, books)
             log(report)
     if a.thai and 'th' in eds:
         # SC books joined by the Siam Rath volumes they share (ja spans two, Apadāna and Bv/Cp share one)

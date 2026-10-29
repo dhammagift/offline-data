@@ -188,21 +188,39 @@ The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
 The text of the print is not in the data; its readings are, with those of the other editions (below).
 
+## PTS
+
+The Pali Text Society editions as input by the Dhammakaya Foundation, from GRETIL `2_pali` (plain text version;
+(C) PTS and Dhammakaya 2015, CC BY-SA 4.0), for comparison only: their readings go into the variants (`pts`), the
+text is not in the data. The archive is `gretil/2_pali.zip` on the branch `gretil-pali`.
+
+```
+git show origin/gretil-pali:gretil/2_pali.zip > 2_pali.zip && unzip -q 2_pali.zip
+python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds pts --out compare
+```
+
+All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, and KN but the Jātaka (printed with its commentary), the
+Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`. PTS headings are left out (`SN_1.1,1.1.
+Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. The PTS apparatus (the annotated version's footnotes) is
+not read yet.
+
 ## Variant readings
 
 One file per ms file, at SC's place and in SC's form, which the dg.db build mixes with SC's own
 `variant-pli-ms`: `dhammagift/variant/pli/ms/sutta/sn/sn35/sn35.19_variant-pli-ms.json`,
-`"sn35.19:2.9": "aparimutto → parimutto (bj, cck, sya-all, ms2005)"`. Made by `collate.py` from the editions on SC
-ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as printed.
-Each is compared with ms word by word over a whole sutta (a word the alignment put next door is no reading). Left
-out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing, peyyāla, differences of more than 4 words (abbreviation,
-a passage in full), headings, uddāna labels and number words an edition prints in a line, VRI marks like `jha`, and
-readings SC already gives for that edition. The project's own readings (`variant_own.json`, from the old site) come
-first. About 197 700 readings: bj 88 700, sya-all 94 200, cck 4 800, ms2005 15. A new edition (PTS) is one more
-siglum here, not one more folder.
+`"sn35.19:2.9": "aparimutto → parimutto (bj, cck, sya-all, ms2005, pts)"`. Made by `collate.py` from the editions
+on SC ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as
+printed, `pts` the Pali Text Society editions (below). Each is compared with ms word by word over a whole sutta (a
+word the alignment put next door is no reading). Left out: case, punctuation, spacing, spellings that are no
+reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single for a double consonant as PTS `upekhā`,
+-nīya/-niya, by/vy, vīriya/viriya), peyyāla, differences of more than 4 words (abbreviation, a passage in full),
+abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
+marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
+(`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
+About 215 000 readings: sya-all 76 800, bj 70 700, pts 65 200, cck 2 700, ms2005 16.
 
 ```
-python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes
+python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes compare/root/pli/pts
 ```
 
 The editions' own footnotes (`build_editions.py --notes notes`, outside the repo) go into the same file after the
