@@ -6,7 +6,8 @@ four other editions. In the places below SC differs from the very edition it was
 edition agrees with that edition. These are errors in SC's text, not variant readings, and none of them is
 recorded in `variant/pli/ms`.
 
-Each place lists where to read it in every edition:
+Each place links to the line of the SC file in bilara-data (branch `published`, 59b845a2, 29 October 2026), where the
+error is, and lists where to read the place in every other edition. Those editions show the correct reading:
 
 - **Mahāsaṅgīti 2005**, the printed edition SC was made from, as reconstructed by
   [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io): a link to the page.
@@ -34,7 +35,7 @@ sn35.19:2.2 and 2.6, which correctly read `nābhinandati … parimutto`.
 
 | edition | sn35.19 | sn35.20 |
 |---|---|---|
-| SuttaCentral | [sn35.19:2.9](https://suttacentral.net/sn35.19/pli/ms) | [sn35.20:2.2, 2.8](https://suttacentral.net/sn35.20/pli/ms) |
+| SuttaCentral | [sn35.19:2.9](https://suttacentral.net/sn35.19/pli/ms), bilara-data [line 22](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn35/sn35.19_root-pli-ms.json#L22) | [sn35.20:2.2, 2.8](https://suttacentral.net/sn35.20/pli/ms), bilara-data [line 14](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn35/sn35.20_root-pli-ms.json#L14), [line 20](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn35/sn35.20_root-pli-ms.json#L20) |
 | Mahāsaṅgīti 2005 | [13S4 1.1.2.7](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.7.html) | [13S4 1.1.2.8](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.8.html) |
 | Buddha Jayanti | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-4/pali) | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-9/pali) |
 | Chaṭṭha Saṅgāyana | [s0304m.mul0.xml](https://www.tipitaka.org/romn/cscd/s0304m.mul0.xml) para 19, M 2.246 | para 20, M 2.246 |
@@ -55,7 +56,7 @@ bhāvanāpadhānaṁ?`). `bhikkhave` is the Buddha's address.
 
 | edition | where |
 |---|---|
-| SuttaCentral | [dn33:1.11.85, 1.11.91](https://suttacentral.net/dn33/pli/ms) |
+| SuttaCentral | [dn33:1.11.85, 1.11.91](https://suttacentral.net/dn33/pli/ms), bilara-data [line 327](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/dn/dn33_root-pli-ms.json#L327), [line 333](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/dn/dn33_root-pli-ms.json#L333) |
 | Mahāsaṅgīti 2005 | [8D 10.4](https://tipitaka2500.github.io/tipitaka/8D/10/10.4.html) |
 | Buddha Jayanti | [DN III (BJT) p. 382](https://tipitaka.lk/dn-3-10/15-0/pali), [next paragraph](https://tipitaka.lk/dn-3-10/15-1/pali) |
 | Chaṭṭha Saṅgāyana | [s0103m.mul9.xml](https://www.tipitaka.org/romn/cscd/s0103m.mul9.xml) para 310, M 3.189 |
@@ -75,7 +76,7 @@ before 8.2, which ends the sentence with a full stop.
 
 | edition | where |
 |---|---|
-| SuttaCentral | [sn22.7:8.2–8.3](https://suttacentral.net/sn22.7/pli/ms) |
+| SuttaCentral | [sn22.7:8.2–8.3](https://suttacentral.net/sn22.7/pli/ms), bilara-data [lines 47–48](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn22/sn22.7_root-pli-ms.json#L47-L48) |
 | Mahāsaṅgīti 2005 | [13S3 1.1.1.7](https://tipitaka2500.github.io/tipitaka/13S3/1/1.1/1.1.1/1.1.1.7.html) |
 | Buddha Jayanti | [SN III (BJT) p. 30](https://tipitaka.lk/sn-3-1-1-1/14-6/pali) (`na saṅkhāravantaṃ attānaṃ`) |
 | Chaṭṭha Saṅgāyana | [s0303m.mul0.xml](https://www.tipitaka.org/romn/cscd/s0303m.mul0.xml) para 7, M 2.16 |
@@ -94,7 +95,7 @@ Buddha Jayanti and Syāmaraṭṭha read `veḷunā vā`, also with `vā`.
 
 | edition | where |
 |---|---|
-| SuttaCentral | [pli-tv-bu-vb-ss13:2.8](https://suttacentral.net/pli-tv-bu-vb-ss13/pli/ms) |
+| SuttaCentral | [pli-tv-bu-vb-ss13:2.8](https://suttacentral.net/pli-tv-bu-vb-ss13/pli/ms), bilara-data [line 146](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/vinaya/pli-tv-bu-vb/pli-tv-bu-vb-ss/pli-tv-bu-vb-ss13_root-pli-ms.json#L146) |
 | Mahāsaṅgīti 2005 | [1V 1.2.13](https://tipitaka2500.github.io/tipitaka/1V/1/1.2/1.2.13.html) |
 | Buddha Jayanti | [Pārājikapāḷi (BJT) p. 478](https://tipitaka.lk/vp-prj-3-12/74-3/pali) |
 | Chaṭṭha Saṅgāyana | [vin01m.mul2.xml](https://www.tipitaka.org/romn/cscd/vin01m.mul2.xml) para 437, M 281 |
@@ -112,7 +113,7 @@ A lost first letter in the name of the first of the seven ways of settling dispu
 
 | edition | where |
 |---|---|
-| SuttaCentral | [pli-tv-pvr5:122.4](https://suttacentral.net/pli-tv-pvr5/pli/ms) |
+| SuttaCentral | [pli-tv-pvr5:122.4](https://suttacentral.net/pli-tv-pvr5/pli/ms), bilara-data [line 450](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/vinaya/pli-tv-pvr/pli-tv-pvr5_root-pli-ms.json#L450) |
 | Mahāsaṅgīti 2005 | [5V 5.13](https://tipitaka2500.github.io/tipitaka/5V/5/5.13.html) |
 | Buddha Jayanti | [Parivārapāḷi (BJT) p. 370](https://tipitaka.lk/vp-pv-4-6/91-5/pali) |
 | Chaṭṭha Saṅgāyana | [vin02m4.mul2.xml](https://www.tipitaka.org/romn/cscd/vin02m4.mul2.xml) para 308, M 199 |
@@ -126,9 +127,9 @@ Three Pali segments contain an editorial note instead of text. The printed editi
 
 | segment | SC |
 |---|---|
-| [sn48.137-146:1.1](https://suttacentral.net/sn48.137-146/pli/ms) | On Display: Title of Section Only |
-| [sn48.147-158:1.1](https://suttacentral.net/sn48.147-158/pli/ms) | On Display: Title of Section Only |
-| [sn50.67-76:1.1](https://suttacentral.net/sn50.67-76/pli/ms) | On Display: Title of Section Only |
+| [sn48.137-146:1.1](https://suttacentral.net/sn48.137-146/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn48/sn48.137-146_root-pli-ms.json#L5) | On Display: Title of Section Only |
+| [sn48.147-158:1.1](https://suttacentral.net/sn48.147-158/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn48/sn48.147-158_root-pli-ms.json#L5) | On Display: Title of Section Only |
+| [sn50.67-76:1.1](https://suttacentral.net/sn50.67-76/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn50/sn50.67-76_root-pli-ms.json#L5) | On Display: Title of Section Only |
 
 ## How this was found
 
