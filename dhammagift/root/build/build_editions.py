@@ -482,7 +482,7 @@ T2500_FIXES = [('‘ānāmi passāmī’', '‘jānāmi passāmī’')]  # an1.4
 
 def t2500_stream(vol_dirs):
     """Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (Dhamma Society 2005), as reconstructed by tipitaka2500.github.io
-    (CC0): the text SC ms comes from, before SC's edits. For comparison only."""
+    (CC0): the text ms (the digital MS) comes from, before its edits. For comparison only."""
     st = Stream()
     for vol in vol_dirs:
         heads = []  # the last run of titles: the site repeats before a page, and before a paragraph inside it, the
@@ -531,7 +531,7 @@ PTS_TITLE = re.compile(r'(vagg[a-z]*|sutt(a|o|am|anta|antam)|nipat[a-z]*|thero|t
 def pts_stream(files):
     """Pali Text Society editions as input by the Dhammakaya Foundation (GRETIL 2_pali, plain text version, (C) PTS
     and Dhammakaya 2015, CC BY-SA 4.0). For comparison only, so its headings (a centred short line that is a title,
-    in capitals or bold: `SN_1.1,1.1. Oghaṃ.`, English `CHAPTER I.`) are left out: they never fit SC's titles."""
+    in capitals or bold: `SN_1.1,1.1. Oghaṃ.`, English `CHAPTER I.`) are left out: they never fit the ms titles."""
     st = Stream()
     for f in files:
         t = open(f, encoding='utf-8', errors='replace').read()

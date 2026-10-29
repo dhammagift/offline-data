@@ -7,21 +7,21 @@
 
 | что | где | для чего |
 |---|---|---|
-| Палийские корни 5 изданий на id SC | `root/pli/{bjt,my,th,mso,pts}/sutta/{dn,mn,sn,an}/…_root-pli-<ed>.json` | переключение изданий, сравнение |
-| Книжная Махасангити 2005 | `root/pli/mso` (+ `reference/pli/mso`, номера параграфов) | текст «не из SC»; в dg.db пока не включён |
-| Разночтения всех изданий + сноски | `variant/pli/ms/sutta/{dn,mn,sn,an}/…_variant-pli-ms.json` | показывать под SC; первыми идут ошибки SC `(SC error: …)` |
-| Исправления ошибок SC | `root/build/sc-fixes/fixes.json`, `apply.py` | накатываются на чекаут SC после еженедельного обновления |
+| Палийские корни 5 изданий на id сегментов ms | `root/pli/{bjt,my,th,mso,pts}/sutta/{dn,mn,sn,an}/…_root-pli-<ed>.json` | переключение изданий, сравнение |
+| Книжная Махасангити 2005 | `root/pli/mso` (+ `reference/pli/mso`, номера параграфов) | печатный текст; в dg.db пока не включён |
+| Разночтения всех изданий + сноски | `variant/pli/ms/sutta/{dn,mn,sn,an}/…_variant-pli-ms.json` | показывать под Пали-текстом; первыми идут ошибки MS `(MS error: …)` |
+| Исправления ошибок MS | `root/build/sc-fixes/fixes.json`, `apply.py` | накатываются на чекаут bilara-data после еженедельного обновления |
 | Страница сравнения | `root/build/viewer/` (`index.html` + `data/`) | old.dhamma.gift/editions после `git pull` |
 
 Формат всех файлов как у bilara-data: `{ "sn35.19:2.9": "…" }`, ключи и порядок как в `root/pli/ms`.
 
 ## Как подключить в dg.db
 
-- Корень по умолчанию остаётся `ms` (SC) с наложенными `sc-fixes` (`python3 root/build/sc-fixes/apply.py <SC root/pli/ms>`).
+- Корень по умолчанию остаётся `ms` (MS) с наложенными `sc-fixes` (`python3 root/build/sc-fixes/apply.py <bilara-data root/pli/ms>`).
 - Дополнительные корни: `root/pli/<ed>` по тем же ключам. Пустая строка `""` значит, что в издании этой строки нет.
-- Разночтения: `variant/pli/ms`, одна строка на сегмент, записи через ` | `, вида `слово SC → чтение (издания)`.
+- Разночтения: `variant/pli/ms`, одна строка на сегмент, записи через ` | `, вида `слово MS → чтение (издания)`.
   `ms2005` — книжная Махасангити, `pts` — PTS (CC BY-SA 4.0), `(… note)` — сноска издания.
-  Длинная запись на `mn10:44.3` (1 300 слов) — блок о четырёх истинах, который SC выбросил из MN 10.
+  Длинная запись на `mn10:44.3` (1 300 слов) — блок о четырёх истинах, которого нет в цифровой MS в MN 10.
 
 ## Как пересобрать только 4 никаи
 
@@ -45,15 +45,15 @@ python3 dhammagift/root/build/viewer/find_shifts.py dhammagift/root/build/viewer
 
 ## Доработки, которые можно сделать (по желанию)
 
-1. **Печатные подзаголовки, которых нет у SC** (15 мест в 4 никаях, список в `root/build/compare/ms-orig.tsv`, op `insert`):
+1. **Печатные подзаголовки, которых нет в MS** (15 мест в 4 никаях, список в `root/build/compare/ms-orig.tsv`, op `insert`):
    - sn43.12:2.1–11.1: `Vipassanā`, `Vitakkasamādhi`, `Suññatasamādhi`, `Satipaṭṭhāna`, `Sammappadhāna`, `Iddhipāda`,
      `Indriya`, `Bala`, `Bojjhaṅga`, `Maggaṅga`;
    - dn29:1.3 `Nigaṇṭhanāṭaputtakālaṅkiriyā`, dn33:1.2.1 `Ubbhatakanavasandhāgāra`; an3.20:6.8 `Rathakāravaggo dutiyo`
      (в книге стоит на другом месте).
 
-   Это не ошибки SC. Если нужны в наших данных: показывать как подзаголовок из `root/pli/mso` (они там стоят в начале
-   этих сегментов) или собрать в `3-printed-headings.md` для отчёта SC.
-2. **Страницы PTS.** В GRETIL есть метки `[page 003]`, у SC есть ссылки `pts-vp-pli` по абзацам. Чтобы иметь страницы
+   Это не ошибки MS. Если нужны в наших данных: показывать как подзаголовок из `root/pli/mso` (они там стоят в начале
+   этих сегментов) или собрать в `3-printed-headings.md` для отчёта SuttaCentral.
+2. **Страницы PTS.** В GRETIL есть метки `[page 003]`, в reference bilara-data есть ссылки `pts-vp-pli` по абзацам. Чтобы иметь страницы
    с точностью до слова: в `pts_stream` (`build_editions.py`) передавать `[page N]` как маркер `pb` (как у BJT/Thai),
    тогда появится `reference/pli/pts`.
 3. **Два сдвига у BJT** из-за кавычки, приклеенной к следующему слову: dn23:23.48 `evamāha’purato`,
@@ -62,5 +62,5 @@ python3 dhammagift/root/build/viewer/find_shifts.py dhammagift/root/build/viewer
 ## Что сделано недавно (для контекста)
 
 - Граница сегмента, сдвинутая на несколько слов, возвращается правилом (156 сегментов, в основном BJT и Сиам).
-- Заголовок SC, повторённый в начале текста (`Eko dhammo` / `Eko, āvuso, dhammo …`), остаётся в тексте издания.
-- Ошибки SC из `sc-fixes/fixes.json` стоят первыми в разночтениях; отчёт: `root/build/compare/sc-report/`.
+- Заголовок MS, повторённый в начале текста (`Eko dhammo` / `Eko, āvuso, dhammo …`), остаётся в тексте издания.
+- Ошибки MS из `sc-fixes/fixes.json` стоят первыми в разночтениях; отчёт: `root/build/compare/sc-report/`.

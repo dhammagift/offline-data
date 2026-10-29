@@ -10,10 +10,10 @@
 Each edition is compared with ms word by word over a whole sutta, so a word the alignment put in a neighbour segment
 is no variant. Left out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing (`yoniso manasikāro` /
 `yonisomanasikāro`), peyyāla (a side with …pe…, …la…), differences of more than 4 words (an abbreviation or a
-passage printed in full; but a passage of the printed Mahāsaṅgīti that SC left out, 40 words or more, is written in
+passage printed in full; but a passage of MS 2005 that the digital MS left out, 40 words or more, is written in
 full: `mn10:44.3`, the exposition of the four truths), and readings SC already gives for that edition. The project's own readings
-(variant_own.json, from the old site) come first, after SC's errors against its printed source
-(sc-fixes/fixes.json): `aparimutto → parimutto (SC error: ms2005 and the other editions)`.
+(variant_own.json, from the old site) come first, after the errors of the digital MS against MS 2005
+(sc-fixes/fixes.json): `aparimutto → parimutto (MS error: ms2005 and the other editions)`.
 
 The editions' own footnotes (build_editions.py --notes) go in too, after the collation, marked with the edition and
 its sources: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṃ, syā)` (BJT's note: so the Chaṭṭha Saṅgāyana and Siam
@@ -84,7 +84,7 @@ def abbreviated(xa, xb):
 def words(text):
     """[(word as written, normalized)], numbers dropped, …pe… as one word 'pe'"""
     text = re.sub(r'…\s*(pe|la|pa)\s*…', r' \1 ', text.replace('...', '…'))
-    text = re.sub(r'[—–]', ' ', text)  # SC's dash between words: seyyathidaṁ—gaṅgā is two words
+    text = re.sub(r'[—–]', ' ', text)  # MS's dash between words: seyyathidaṁ—gaṅgā is two words
     out = []
     for w in text.split():
         n = norm(w)
@@ -94,7 +94,7 @@ def words(text):
 
 
 def shown(ws):
-    """a reading as SC writes it: lower case, ṁ, no punctuation"""
+    """a reading as ms writes it: lower case, ṁ, no punctuation"""
     return ' '.join(re.sub(r'[^\w]', '', unicodedata.normalize('NFC', re.sub(r'<[^>]+>', '', w).lower()).replace('ṃ', 'ṁ'))
                     for w in ws).strip()
 
@@ -111,7 +111,7 @@ OWN = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'v
 
 
 def fix_entry(old, new):
-    """an error of SC's text (sc-fixes/fixes.json): the words that differ, the printed reading after the arrow"""
+    """an error of the digital MS (sc-fixes/fixes.json): the words that differ, the printed reading after the arrow"""
     a, b = old.split(), new.split()
     sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
     ops = [op for op in sm.get_opcodes() if op[0] != 'equal']
@@ -119,13 +119,13 @@ def fix_entry(old, new):
         return None
     i1, j1 = ops[0][1], ops[0][3]
     i2, j2 = ops[-1][2], ops[-1][4]
-    if i1 == i2 and i1:  # a word SC left out: show it with the word before (`veḷuyā → veḷuyā vā`)
+    if i1 == i2 and i1:  # a word MS left out: show it with the word before (`veḷuyā → veḷuyā vā`)
         i1, j1 = i1 - 1, j1 - 1
     strip = lambda ws: ' '.join(ws).strip(' ,;:.“”‘’')
-    return f'{strip(a[i1:i2])} → {strip(b[j1:j2])} (SC error: ms2005 and the other editions)'
+    return f'{strip(a[i1:i2])} → {strip(b[j1:j2])} (MS error: ms2005 and the other editions)'
 
 
-# SC's errors against its printed source go first, as the readings that correct them
+# the digital MS's errors against MS 2005 go first, as the readings that correct them
 for fx in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sc-fixes', 'fixes.json'),
                          encoding='utf-8'))['fixes']:
     e = fix_entry(fx['old'], fx['new'])
@@ -180,7 +180,7 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
                 if tail == xa:
                     continue  # dn34:1.3.0 `Dve dhammā`
             if siglum == 'ms2005' and op == 'insert' and len(xb) >= 40 and a1:
-                # a passage of the printed source that SC left out (mn10:44.3, the exposition of the four truths):
+                # a passage of MS 2005 that the digital MS left out (mn10:44.3, the exposition of the four truths):
                 # written in full, once
                 k0 = A[a1 - 1][0]
                 long_entries[rel][k0] = (shown(w for _, w, _ in A[a1 - 1:a1]),
@@ -266,7 +266,7 @@ for rel in sorted(set(new_entries) | set(own_rel) | set(notes) | set(long_entrie
     out = os.path.join(target, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     merged = dict(own_rel.get(rel, {}))
     for key, (lemma, passage, n) in long_entries.get(rel, {}).items():
-        e = f'{lemma} → {lemma} {passage} (ms2005: {n} words SC has not)'
+        e = f'{lemma} → {lemma} {passage} (ms2005: {n} words MS has not)'
         merged[key] = (merged[key] + ' | ' + e) if key in merged else e
         count['ms2005 passage'] += 1
     for key, by_lemma in new_entries.get(rel, {}).items():
