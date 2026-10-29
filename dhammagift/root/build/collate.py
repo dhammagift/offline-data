@@ -53,11 +53,12 @@ def norm(w):
 def loose(ws):
     """words joined, spelling the editions differ in without a reading: niggahita as m (PTS `evam eva`, `yan ti`),
     any nasal before a stop or nasal (`angaṃ`, `saṃcāra`, `yaṃ nūna`), single for double consonants (PTS `upekhā`,
-    `na pajānāti`), evamevaṃ / evam eva, -nīya / -niya, by / vy, vīriya / viriya, catūhi / catuhi, seyyathīdaṃ"""
+    `na pajānāti`), the sandhi of ṃ with y, h, ñ (`ahañhi`, `ahaṃ hi`), evamevaṃ / evam eva, -nīya / -niya, by / vy, vīriya / viriya, catūhi / catuhi, seyyathīdaṃ"""
     ws = [w[:-1] + 'm' if len(w) > 1 and w.endswith('n') and (i + 1 == len(ws) or ws[i + 1][0] not in VOWELS) else w
           for i, w in enumerate(ws)]  # yan ti; not n' etaṃ, ten' upasaṅkami
     s = ''.join(re.sub(r'(?<=.)evaṃ$', 'eva', w) for w in ws).replace('ṃ', 'm')  # evam eva
     s = re.sub(r'[ṅñnṇ](?=[kgcjṭḍtdpbnm])', 'm', s)
+    s = s.replace('ññ', 'my').replace('ñh', 'mh').replace('mñ', 'ñ')  # sandhi: thokaññeva, ahañhi, °bhāvaṃ ñāṇaṃ
     s = s.replace('nīy', 'niy').replace('thīdam', 'thidam').replace('vy', 'by').replace('ūhi', 'uhi').replace('vīriy', 'viriy')
     s = re.sub(r'([kgcjṭḍtdpbsylvm])(?=\1)', '', s)
     return re.sub(r'([kgcjṭḍtdpb])(?=\1h)', '', s)
@@ -80,6 +81,7 @@ def abbreviated(xa, xb):
 def words(text):
     """[(word as written, normalized)], numbers dropped, …pe… as one word 'pe'"""
     text = re.sub(r'…\s*(pe|la|pa)\s*…', r' \1 ', text.replace('...', '…'))
+    text = re.sub(r'[—–]', ' ', text)  # SC's dash between words: seyyathidaṁ—gaṅgā is two words
     out = []
     for w in text.split():
         n = norm(w)
