@@ -13,6 +13,7 @@ def plain(s):
     """lower case, no punctuation, ṁ = ṃ"""
     s = re.sub(r'<[^>]+>', '', s)  # SC <b> in the Niddesa
     s = unicodedata.normalize('NFC', s.lower()).replace('ṁ', 'ṃ').replace('…pe…', ' ').replace('…', ' ')
+    s = re.sub(r'[—–]', ' ', s)  # SC's dash between words: seyyathidaṁ—gaṅgā is two words
     return [w for w in (re.sub(r'[^\w]', '', x) for x in re.sub(r"[’'](?=\w)", '', s).split()) if w and w != 'pe' and not w.isdigit()]
 
 

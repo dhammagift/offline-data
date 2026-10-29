@@ -174,10 +174,9 @@ python3 dhammagift/root/build/build_editions.py ... --mso tipitaka2500.github.io
 python3 dhammagift/root/build/compare/compare_ms.py bilara-data/root/pli/ms compare/root/pli/mso dhammagift/root/build/compare/ms-orig.tsv
 ```
 
-Of 1 930 512 words of `ms` (DN, MN, SN, AN, KN, Vinaya but the Pātimokkha, which is none of the 40 volumes) all but
+Of 1 933 660 words of `ms` (DN, MN, SN, AN, KN, Vinaya but the Pātimokkha, which is none of the 40 volumes) all but
 a few hundred are the printed words. What SC changed: `ṅ` for the printed `ṃ` before k, g (`saṃgha` → `saṅgha`,
-in 8 757 segments), also across words it joins (`yadidaṃ kalyāṇamittatā` → `yadidaṅkalyāṇamittatā`); spacing
-(`dvālopikope` → `dvālopiko …pe…`, `āhāreti iti` → `āhāretiiti`, 5 148 places); `ṁ`; punctuation, capitals and its
+in 8 757 segments); spacing (mostly `ti` after a quotation, SC `bhagavā”ti`, printed `bhagavā ti`, 5 851 places); `ṁ`; punctuation, capitals and its
 own headings (the printed headings stand inside its text: `dn34` `dve dhammā`, the Vinaya word glosses). Words that
 differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed `idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`,
 printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
