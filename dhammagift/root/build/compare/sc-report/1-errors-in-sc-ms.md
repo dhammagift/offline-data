@@ -198,6 +198,16 @@ Katamañca, bhikkhave, dukkhaṃ ariyasaccaṃ? …`, paragraphs 120-136 of the 
 [mn10:47.5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/mn/mn10_root-pli-ms.json#L230)), as do Buddha Jayanti, Syāmaraṭṭha and PTS. Neither the text nor the title is
 noted in SC's variants.
 
+SC once had the long text: in 2015 a reader found DN 22 under MN 10, and Bhikkhu Sujato answered that "this is
+unfortunately how the text is presented in the 6th council editions, of which Mahasangiti is one"
+([forum, 17 August 2015](https://discourse.suttacentral.net/t/dn-22-instead-of-mn-10/2067)); he holds the passage
+to be a late, probably 19th century Burmese, insertion
+([forum, 2018](https://discourse.suttacentral.net/t/are-the-satipathana-suttas-not-original-dn22-mn10/10202/8)).
+Since then SC's `ms` has the short text. Its English notes say that DN 22 expands the truths
+([comment mn10:1.1, 44.3](https://github.com/suttacentral/bilara-data/blob/published/comment/en/sujato/sutta/mn/mn10_comment-en-sujato.json)),
+but nothing in the Pali data says that `ms` here leaves its source. We found no notice of the change. If it is
+meant, a variant note on `mn10:44.3` and `mn10:0.2` would record what the Mahāsaṅgīti prints.
+
 | edition | MN 10 |
 |---|---|
 | Mahāsaṅgīti 2005 | with the exposition: [1.10.4.5.1 Dukkhasaccaniddesa](https://tipitaka2500.github.io/tipitaka/9M/1/1.10/1.10.4/1.10.4.5/1.10.4.5.1.html), end title [1.10.4.5.4](https://tipitaka2500.github.io/tipitaka/9M/1/1.10/1.10.4/1.10.4.5/1.10.4.5.4.html) |
