@@ -436,13 +436,44 @@ def t2500_pages(vol_dir):
         return [int(x) for x in re.findall(r'\d+', name)]
 
     def walk(d):
-        for f in sorted((f for f in os.listdir(d) if f.endswith('.html')), key=num):
-            yield os.path.join(d, f)
+        # the order of the parent page's links: Paṭṭhāna pages are named by words (Hetu.html, Arammanadi.html)
+        parent = open(d + '.html', encoding='utf-8').read() if os.path.exists(d + '.html') else ''
+        name = os.path.basename(d)
+
+        def order(f):  # 0.html, the opening page (Namo tassa), is not linked: it comes first
+            at = parent.find(f'/{name}/{f}"')
+            return (-1 if f == '0.html' else at if at >= 0 else len(parent), num(f))
+        fs = [f for f in os.listdir(d) if f.endswith('.html')]
+        fs += [f + '.html' for f in os.listdir(d) if os.path.isdir(os.path.join(d, f)) and f + '.html' not in fs]
+        for f in sorted(fs, key=num if all(num(f) for f in fs) else order):
+            if os.path.exists(os.path.join(d, f)):
+                yield os.path.join(d, f)
             sub = os.path.join(d, f[:-5])
             if os.path.isdir(sub):
                 yield from walk(sub)
-    yield vol_dir + '.html'
-    yield from walk(vol_dir)
+    # the site's own "next" links give the reading order (the parent pages do not link every Paṭṭhāna page); where
+    # the chain breaks (37P1 12.1.2: a link to a page kept elsewhere) or leaves the volume, go on with the first page
+    # of the tree walk not read yet
+    tree = [vol_dir + '.html'] + list(walk(vol_dir))
+    done, pages = set(), []
+    for cur in tree:
+        while cur and cur not in done:
+            done.add(cur)
+            pages.append(cur)
+            m = re.search(r'href="/tipitaka/([^"]+)" id="next"', open(cur, encoding='utf-8').read())
+            cur = m and os.path.join(os.path.dirname(vol_dir), m.group(1))
+            if not (cur and cur.startswith(vol_dir + '/') and os.path.exists(cur)):
+                break
+    # a page no link leads to (39P3 3.1.1 Naadhipati) goes back before the first page of a higher paragraph number
+    paras = {p: [int(n) for n in re.findall(r'text-bg-light me-1" id="(\d+)"', open(p, encoding='utf-8').read())]
+             for p in pages}
+    top = 0
+    for p in list(pages):
+        if paras[p] and paras[p][0] < top:
+            pages.remove(p)
+            pages.insert(next(i for i, q in enumerate(pages) if paras[q] and paras[q][0] > paras[p][0]), p)
+        top = max([top] + paras[p])
+    yield from pages
 
 
 def t2500_stream(vol_dirs):
@@ -1337,6 +1368,14 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             continue
         prev = allk[i - 1] if i and sutta_of(allk[i - 1]) == sutta_of(k) else None
         nxt = allk[i + 1] if i + 1 < len(allk) and sutta_of(allk[i + 1]) == sutta_of(k) else None
+        if text[k] and nxt and not head_key(nxt) and ms_words(nxt)[:len(want)] == want:
+            # ms repeats its heading as the first words of the text (patthana2.1:41 `Hetu` / `Hetu dhammo hetussa …`):
+            # an edition that printed those words only once printed them in the text
+            ws = ' '.join(text[k]).split()
+            if [w for w in map(norm, ws) if w] == want and \
+                    [w for w in map(norm, ' '.join(text[nxt]).split()) if w][:len(want)] != want:
+                text[k], text[nxt] = [], [' '.join(ws)] + text[nxt]
+                continue
         if not text[k]:
             if prev and text[prev] and not head_key(prev):
                 ws = ' '.join(text[prev]).split()

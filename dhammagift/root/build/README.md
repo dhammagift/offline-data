@@ -209,6 +209,10 @@ printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena`
 `an1.439-446` printed `ānāmi` for `jānāmi` (a typo of the print or of the reconstruction); `sn48.137-146:1.1`,
 `sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only` in the Pali;
 `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana (`snp5.2`).
+The Abhidhamma (769 088 words) has no word that differs. In the Paṭṭhāna the reconstruction leaves out a few
+passages every other edition has (`patthana3.3:1.1`, `16.38`) and some of SC's subheadings (`Paccanīya`); its page
+order is the site's own `next` links (the parent pages do not link every page; one page, 39P3 3.1.1 Naadhipati, no
+link leads to: it goes back by its paragraph number).
 The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
 The text of the print is not in the data; its readings are, with those of the other editions (below).
@@ -244,8 +248,7 @@ abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number w
 marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
 About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005 15. The Paṭṭhāna's
-`saṅkhittaṁ` ("abbreviated") is a peyyāla mark. The printed Mahāsaṅgīti is not compared in the Paṭṭhāna: the
-reconstruction's pages there do not follow SC's order (`patthana2.2` Paccanīyuddhāra before Paccayānuloma).
+`saṅkhittaṁ` ("abbreviated") is a peyyāla mark.
 
 ```
 python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes compare/root/pli/pts
