@@ -346,7 +346,7 @@ async function render() {
         const text = row[e.col];
         const isSus = sus && e.id !== 'ms' && !head && wc(text) > 2 * msw + 8;
         let cell = `<span class="edlabel" style="color:${e.color}">${e.name}</span>` + (rd && text && !(head && e.id === 'ms') ? rd[e.id] : plain(text));
-        if (notes && e.id !== 'ms') {
+        if (notes) {  // under ms: the reading of the printed Mahāsaṅgīti where SC differs
           const v = s.var[e.id]?.[key], r = s.ref[e.id]?.[key];
           if (v || r) cell += `<div class="notes">${v ? `<span class="var">${esc(v)}</span>` : ''}${r ? `<span class="ref">${esc(r)}</span>` : ''}</div>`;
         }
