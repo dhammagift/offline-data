@@ -24,6 +24,8 @@
   --bjt: #b05a12;
   --my: #1f63a8;
   --th: #7d3a96;
+  --mso: #2f7d4f;
+  --pts: #8a6d1d;
   --head-bg: #eaeee9;
   --font-text: "Gentium Book Plus", "Noto Serif", "Georgia", serif;
   --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
@@ -33,13 +35,13 @@
   :root:not([data-theme="light"]) {
     --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
     --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a; --shift: #ff7ab8; --shift-bg: #3a1a2c;
-    --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
+    --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --mso: #79c99a; --pts: #d4b45e; --head-bg: #222a27; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #151a18; --surface: #1c2220; --fg: #e3e8e4; --muted: #95a09a; --line: #2d3532;
   --accent: #5cc7b0; --diff: #5a4716; --diff-fg: #fbe9b8; --flag: #ff8a7d; --flag-bg: #3a1f1c; --sus: #e8b84a; --shift: #ff7ab8; --shift-bg: #3a1a2c;
-  --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --head-bg: #222a27; color-scheme: dark;
+  --ms: #a9b4c0; --bjt: #e59a55; --my: #7fb3ea; --th: #c78ddc; --mso: #79c99a; --pts: #d4b45e; --head-bg: #222a27; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
@@ -141,7 +143,7 @@ button:hover { border-color: var(--accent); }
   <header class="top" id="topbar">
     <div class="titlerow">
       <h1>Pali Editions Side by Side</h1>
-      <span class="sub">SuttaCentral (Mahāsaṅgīti), Buddha Jayanti, Chaṭṭha Saṅgāyana (VRI), Siam Rath 1927, aligned on SuttaCentral segments</span>
+      <span class="sub">SuttaCentral (Mahāsaṅgīti), Buddha Jayanti, Chaṭṭha Saṅgāyana (VRI), Siam Rath 1927, the printed Mahāsaṅgīti 2005 and PTS, aligned on SuttaCentral segments</span>
     </div>
     <nav class="books" aria-label="Books">
       <span id="colls" class="books"></span>
@@ -151,7 +153,7 @@ button:hover { border-color: var(--accent); }
     </nav>
     <div class="row-ctl">
       <span id="edchips" class="row-ctl"></span>
-      <label class="chip" title="BJT, VRI and Siam Rath vote word by word; SC is checked against the result"><input type="checkbox" id="optdiff" checked> Differences</label>
+      <label class="chip" title="BJT, VRI and Siam Rath vote word by word; SC, MS 2005 and PTS are checked against the result"><input type="checkbox" id="optdiff" checked> Differences</label>
       <label class="chip" title="Variant readings under SC (all editions, PTS, the printed Mahāsaṅgīti, footnotes); page numbers under each edition"><input type="checkbox" id="optnotes"> Variants &amp; pages</label>
       <label class="chip" title="An edition has much more text than SC here"><input type="checkbox" id="optsus" checked> Overflow</label>
       <label class="chip" title="Found automatically: words of a neighbouring SC segment in an edition's segment"><input type="checkbox" id="optshift" checked> Shifts <span id="shiftn" class="fill"></span></label>
@@ -161,7 +163,7 @@ button:hover { border-color: var(--accent); }
     <details class="howto">
       <summary>How to read</summary>
       <div class="legend">
-        <span><mark>Yellow</mark>: letters where an edition differs from the other two (bah<mark>u</mark>kāro). A whole word in yellow is missing in the others; if the others have extra letters, the letter before the spot is marked. SC is marked only where it differs from all three.</span>
+        <span><mark>Yellow</mark>: letters where an edition differs from the other two (bah<mark>u</mark>kāro). A whole word in yellow is missing in the others; if the others have extra letters, the letter before the spot is marked. SC, MS 2005 (the printed Mahāsaṅgīti SC was made from) and PTS are marked only where they differ from all three. MS 2005 and PTS are off at first: tick them above.</span>
         <span><span class="s">Underlined</span>: an edition has much more text here than SC (it may have run over from the next segment).</span>
         <span><span class="sh">Pink</span>: a shift, words of a neighbouring SC segment in this edition's segment; the reason is shown under the text.</span>
         <span><span class="f">Click a segment number</span> to mark a problem. Marks stay in this browser; copy them from the "Marked" panel.</span>
@@ -185,8 +187,10 @@ const EDS = [
   { id: 'bjt', name: 'BJT', full: 'Buddha Jayanti, Sri Lanka (tipitaka.lk)', color: 'var(--bjt)', col: 2 },
   { id: 'my', name: 'VRI', full: 'Chaṭṭha Saṅgāyana, VRI (tipitaka.org)', color: 'var(--my)', col: 3 },
   { id: 'th', name: 'Siam Rath', full: 'Syāmaraṭṭha 1927, Thailand (E-Tipitaka)', color: 'var(--th)', col: 4 },
+  { id: 'mso', name: 'MS 2005', full: 'Mahāsaṅgīti 2005 as printed, World Tipiṭaka (tipitaka2500.github.io)', color: 'var(--mso)', col: 5 },
+  { id: 'pts', name: 'PTS', full: 'Pali Text Society, Dhammakaya input (GRETIL), CC BY-SA 4.0', color: 'var(--pts)', col: 6 },
 ];
-const state = { index: [], shifts: {}, cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true }, flags: new Map(), db: null, uid: null, canWrite: true };
+const state = { index: [], shifts: {}, cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true, mso: false, pts: false }, flags: new Map(), db: null, uid: null, canWrite: true };
 const $ = id => document.getElementById(id);
 function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 function recall(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
@@ -264,12 +268,14 @@ function charDiff(a, b) {
 }
 const VOTERS = ['bjt', 'my', 'th'];
 function readings(row) {
-  const T = { ms: tokenize(row[1]), bjt: tokenize(row[2]), my: tokenize(row[3]), th: tokenize(row[4]) };
+  // the printed Mahāsaṅgīti and PTS are marked against the three, not counted as voters: MS 2005 is SC's own source
+  const T = Object.fromEntries(EDS.map(e => [e.id, tokenize(row[e.col] || '')]));
+  const shown = EDS.map(e => e.id);
   const maps = {};
-  for (const x of ['ms', ...VOTERS]) for (const y of VOTERS) if (x !== y && T[x].words.length && T[y].words.length)
+  for (const x of shown) for (const y of VOTERS) if (x !== y && T[x].words.length && T[y].words.length)
     maps[x + '>' + y] = alignWords(T[x].words, T[y].words);
   const html = {};
-  for (const x of ['ms', ...VOTERS]) {
+  for (const x of shown) {
     const others = VOTERS.filter(y => y !== x && T[y].words.length);
     html[x] = T[x].parts.map(p => {
       if (p.sep !== undefined) return esc(p.sep);
