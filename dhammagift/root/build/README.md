@@ -48,15 +48,15 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   Siam Rath numbers vaggas and suttas with ordinal words and prints no sutta titles in SN 45-56, there only its
   paragraph numbers `[355]` in reference/). AN `N.0` gets the edition number.
   A vagga title stands only where the edition prints it, at the first sutta of the vagga.
-  Where SC joins several suttas in one file (`sn45.64-68`), the edition's titles of the inner suttas stay inline in the text.
+  Where ms joins several suttas in one file (`sn45.64-68`), the edition's titles of the inner suttas stay inline in the text.
 - Variants: `"word → reading (sources)"`, several joined with ` | `, as in SC `variant-pli-ms`.
   Source abbreviations are the edition's: BJT `machasaṃ` (Chaṭṭha Saṅgāyana), `syā` (Thai), `sī.pavi`, `PTS`;
   `my` `sī.` (Sinhala), `syā.` (Thai), `pī.` (PTS), `kaṃ.`, `ka.`; `th` `ma.` (Myanmar), `yu.` (PTS), `sī.` (Sinhala).
 - References: BJT `<tipitaka.lk file>.<page>` and `para<n>`; `my` `para<n>` and VRI page marks `M` (Myanmar), `V` (VRI),
   `P` (PTS), `T` (Thai) with volume.page; `th` `sya<volume>.<page>` (the same marks SC reference uses) and `para<n>`.
-- Every edition is aligned one volume at a time against all SC books in it: BJT and VRI by the volumes in `VOLUMES`
-  (DN and MN in 3, SN by vagga, AN by nipāta), Siam Rath by the volume found from SC `sya` marks (AN 5, 6, 7, 9 have
-  none in SC and are set in `SYA_VOLUME`). No text spills from one book into the next; only the books asked for are written.
+- Every edition is aligned one volume at a time against all ms books in it: BJT and VRI by the volumes in `VOLUMES`
+  (DN and MN in 3, SN by vagga, AN by nipāta), Siam Rath by the volume found from the `sya` marks of the ms reference (AN 5, 6, 7, 9 have
+  none there and are set in `SYA_VOLUME`). No text spills from one book into the next; only the books asked for are written.
 - At a sutta boundary, edition words ms lacks go with the previous sutta up to the edition's own start of the next one
   (its title or numbered paragraph), the rest with the next sutta: the closing verses (uddāna) of mn9 stay in mn9.
   In the Thai source, centred lines that are no title (verse lines) are text.
@@ -163,7 +163,7 @@ Khandhaka: BJT `vp-mv` + `vp-cv`, VRI `vin02m2` + `vin02m3`, Siam Rath 4-7, alig
 verses apart from their Niddesa (`cnd2-4`) and has no Yasavagga (`tha-ap553-563`, which repeats `tha-ap20`, `24`…).
 Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikkhunīvibhaṅga), VRI `vin01m`, `vin02m1`;
 Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
-Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has SC rule titles
+Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has rule titles
 (`Pācittiya 6. Dutiyasahaseyya`) that VRI does not print: most of its empty segments.
 palinew.sqlite has no pages 211-220 of volume 1 (end of pj4, from `9.2.2`): those segments are empty in `th`.
 Empty Vinaya segments are where an edition abbreviates (`…pe…`, BJT `dutiyampi kho …pe…`) or does not print a line
@@ -194,7 +194,7 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | Abhidhamma: Yamaka | 92% | 97% | 88% |
 | Abhidhamma: Paṭṭhāna | 68% | 86% | 71% |
 
-Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
+Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, ms numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
 neighbouring segments.
 
@@ -219,16 +219,16 @@ Naadhipati, which no link leads to, goes back by its paragraph number). `Namo ta
 `an1.439-446` `ānāmi` → `jānāmi`. The site leaves out a few Paṭṭhāna passages every other edition has
 (`patthana3.3:1.1`, `16.38`): those segments are empty.
 
-Against `ms`, all but a few dozen of its 2 702 748 words are the printed words. What SC changed: `ṅ` for the printed
-`ṃ` before k, g (`saṃgha` → `saṅgha`, in 8 757 segments); spacing (mostly `ti` after a quotation, SC `bhagavā”ti`,
+Against `ms`, all but a few dozen of its 2 702 748 words are the printed words. What MS changed against the print: `ṅ` for the printed
+`ṃ` before k, g (`saṃgha` → `saṅgha`, in 8 757 segments); spacing (mostly `ti` after a quotation, MS `bhagavā”ti`,
 printed `bhagavā ti`); `ṁ`; punctuation, capitals and its own headings (the printed headings stand inside its text:
-`dn34` `dve dhammā`, the Vinaya word glosses). Words that differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed
-`idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`, printed `parimutto`; `sn22.7:8.2` word order;
-`pli-tv-bu-vb-ss13:2.8` SC leaves out `vā`; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
-`sn48.137-146:1.1`, `sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only`
-in the Pali; `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana
+`dn34` `dve dhammā`, the Vinaya word glosses). Words that differ: `dn33:1.11.85, 91` MS `idha bhikkhave`, printed
+`idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` MS `aparimutto`, printed `parimutto`; `sn22.7:8.2` word order;
+`pli-tv-bu-vb-ss13:2.8` MS leaves out `vā`; `pvr5:122.4` MS `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
+`sn48.137-146:1.1`, `sn48.147-158:1.1`, `sn50.67-76:1.1` MS has the English note `on display title of section only`
+in the Pali; `snp5.18:1.1` MS prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana
 (`snp5.2`); `mn10` the print (as VRI) has the whole exposition of the four truths (`Dukkhasaccaniddesa …`, as in
-dn22) after `mn10:44.3`, SC (as BJT, Siam Rath, PTS) has not, and the print ends `Mahāsatipaṭṭhānasuttaṃ`. The
+dn22) after `mn10:44.3`, MS (as BJT, Siam Rath, PTS) has not, and the print ends `Mahāsatipaṭṭhānasuttaṃ`. The
 Abhidhamma has no word that differs. The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
 ## PTS
@@ -246,7 +246,7 @@ All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, the Abhidhamma (of the Ya
 parts PTS printed), and KN but the Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`.
 The Jātaka is printed with its commentary: only its verses are read, which GRETIL sets apart and numbers
 (`Ja_I,1.1(=1).1:`), and `phalo ti` is read `phaloti` as ms `phalo”ti`. PTS headings are left out (`SN_1.1,1.1.
-Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. PTS prints no end lines (`Apaṇṇakajātakaṁ paṭhamaṁ.`):
+Oghaṃ.`, English `CHAPTER I.`): they never fit the ms titles. PTS prints no end lines (`Apaṇṇakajātakaṁ paṭhamaṁ.`):
 what the alignment put on one goes to the neighbour it belongs to, the start of the next segment or the end of the
 one before. The PTS apparatus, the footnotes of the annotated version (`*ou.htm`:
 the manuscripts' readings, `S1-3 rūpaṃ . . . aniccaṃ`), goes into the variants: `pts_notes.py` matches the annotated
@@ -263,13 +263,13 @@ python3 dhammagift/root/build/pts_notes.py 2_pali/1_tipit bilara-data/root/pli/m
 One file per ms file, at SC's place and in SC's form, which the dg.db build mixes with SC's own
 `variant-pli-ms`: `dhammagift/variant/pli/ms/sutta/sn/sn35/sn35.19_variant-pli-ms.json`,
 `"sn35.19:2.9": "aparimutto → parimutto (bj, cck, sya-all, ms2005, pts)"`. Made by `collate.py` from the editions
-on SC ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as
+on the ms segment ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as
 printed, `pts` the Pali Text Society editions (below). Each is compared with ms word by word over a whole sutta (a
 word the alignment put next door is no reading). Left out: case, punctuation, spacing, spellings that are no
 reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single for a double consonant as PTS `upekhā`,
 -nīya/-niya, by/vy, vīriya/viriya), peyyāla, differences of more than 4 words (abbreviation, a passage in full),
 abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
-marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
+marks like `jha`, and readings bilara-data already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
 About 267 000 readings: bj 95 100, sya-all 86 500, pts 82 100, cck 3 500, ms2005 7. The Paṭṭhāna's
 `saṅkhittaṁ` ("abbreviated") is a peyyāla mark.
