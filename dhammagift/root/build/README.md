@@ -9,6 +9,8 @@ so a reader can switch between editions or show them side by side.
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
 
+Licenses of all the texts: [dhammagift/LICENSE.md](../../LICENSE.md).
+
 `ms` from [bilara-data](https://github.com/suttacentral/bilara-data) `root/pli/ms/sutta`, `vinaya` and `abhidhamma` gives only
 the ids and the segmentation.
 
