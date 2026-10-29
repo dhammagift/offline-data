@@ -1,4 +1,4 @@
-"""Data for viewer/index.html: one JSON per page with ms + bjt + my + th rows, variants and references.
+"""Data for viewer/index.html: one JSON per page with ms + bjt + my + th + mso + pts rows, variants and references.
 A page is a DN / MN sutta, an SN saṃyutta, an AN nipāta, a KN, Vinaya or Abhidhamma book (large books in parts).
 
 usage: make_viewer_data.py DHAMMAGIFT_DIR BILARA_MS_SUTTA_DIR OUT_DIR   (writes OUT_DIR/data/*.json)
@@ -6,7 +6,7 @@ usage: make_viewer_data.py DHAMMAGIFT_DIR BILARA_MS_SUTTA_DIR OUT_DIR   (writes 
 import json, glob, os, re, sys
 DG, MS, OUT = sys.argv[1:4]
 os.makedirs(f'{OUT}/data', exist_ok=True)
-EDS = ['bjt', 'my', 'th']
+EDS = ['bjt', 'my', 'th', 'mso', 'pts']
 KN = ['kp', 'dhp', 'ud', 'iti', 'snp', 'vv', 'pv', 'thag', 'thig', 'tha-ap', 'thi-ap', 'bv', 'cp', 'ja', 'mnd', 'cnd',
       'ps', 'mil', 'ne', 'pe']
 PART = 2500  # segments: a KN or Vinaya book longer than this is shown in parts
