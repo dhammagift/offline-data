@@ -186,15 +186,26 @@ printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena`
 `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana (`snp5.2`).
 The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
-The text of the print is not in the data; its readings where its words differ from SC ms are, as variants of ms:
-`dhammagift/variant/pli/mso/.../<file>_variant-pli-mso.json`, `"aparimutto → parimutto (Mahāsaṅgīti 2005; bjt, my, th)"`,
-with the editions that read as the print (`compare_ms.py ... dhammagift`). Left out: `ṅ`/`ṃ`, spacing, the print's
-headings, numbers and lines it has in another segment. 18 in all: SC differs from the print and all three editions
-in `dn33:1.11.85, 91` (`idha bhikkhave`, Sāriputta speaking: `idhāvuso`), `sn35.19:2.9`, `sn35.20:2.2, 2.8`
-(`aparimutto` for `parimutto` in "yo dukkhaṃ nābhinandati, parimutto so dukkhasmā"), `pvr5:122.4`
-(`ammukhāvinayena`); SC lacks `vā` after `veḷuyā` in `pli-tv-bu-vb-ss13:2.8` (VRI has it, BJT and Siam Rath read
-`veḷunā vā`); the print is wrong in `an1.439-446` (`ānāmi`). The viewer shows them under the ms column with the
-readings ("разночтения и страницы").
+The text of the print is not in the data; its readings are, with those of the other editions (below).
+
+## Variant readings
+
+One file per ms file, at SC's place and in SC's form, which the dg.db build mixes with SC's own
+`variant-pli-ms`: `dhammagift/variant/pli/ms/sutta/sn/sn35/sn35.19_variant-pli-ms.json`,
+`"sn35.19:2.9": "aparimutto → parimutto (bj, cck, sya-all, ms2005)"`. Made by `collate.py` from the editions on SC
+ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as printed.
+Each is compared with ms word by word over a whole sutta (a word the alignment put next door is no reading). Left
+out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing, peyyāla, differences of more than 4 words (abbreviation,
+a passage in full), headings, uddāna labels and number words an edition prints in a line, VRI marks like `jha`, and
+readings SC already gives for that edition. The project's own readings (`variant_own.json`, from the old site) come
+first. About 197 700 readings: bj 88 700, sya-all 94 200, cck 4 800, ms2005 15. A new edition (PTS) is one more
+siglum here, not one more folder.
+
+```
+python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso
+```
+
+The editions' own footnotes stay with their text (`variant/pli/bjt`, `my`, `th`).
 
 ## Viewer
 
