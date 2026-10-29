@@ -1,5 +1,5 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>[hidden]{display:none!important}img{max-width:100%}</style>
-<title>Сверка изданий канона</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Pali Editions Side by Side</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +77,8 @@ button { cursor: pointer; }
 button:hover { border-color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .flagbtn { border-color: var(--flag); color: var(--flag); font-weight: 600; }
-.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .78rem; color: var(--muted); }
+.legend { display: flex; flex-direction: column; gap: 4px; font-size: .8rem; color: var(--muted); padding: 6px 0 2px; max-width: 90ch; }
+.howto > summary { cursor: pointer; font-size: .82rem; color: var(--accent); width: max-content; }
 .legend mark { background: var(--diff); color: var(--diff-fg); padding: 0 3px; border-radius: 3px; }
 .legend .s { border-bottom: 2px dotted var(--sus); }
 .legend .f { color: var(--flag); font-weight: 600; }
@@ -90,11 +91,11 @@ button:hover { border-color: var(--accent); }
 .panel .k { font-family: var(--font-mono); font-size: .8rem; }
 .panel .n { color: var(--muted); }
 
-.grid { margin-top: 12px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.grid { margin-top: 12px; border: 1px solid var(--line); border-radius: 8px; overflow: clip; background: var(--surface); }
 .row { display: grid; grid-template-columns: var(--cols); border-top: 1px solid var(--line); }
-.row.colhead { background: var(--head-bg); border-top: 0; }
+.row.colhead { background: var(--head-bg); border-top: 0; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barh, 0px)); z-index: 3; box-shadow: 0 1px 0 var(--line); }
 .row.colhead .cell { font-family: var(--font-ui); font-size: .78rem; font-weight: 600; letter-spacing: .04em; padding-block: 6px; }
-.row.sutta { background: var(--accent); color: var(--bg); border-top: 0; }
+.row.sutta { background: var(--accent); color: var(--bg); border-top: 0; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barh, 0px) + var(--colh, 0px)); z-index: 2; }
 .row.sutta .cell { font-family: var(--font-mono); font-size: .82rem; font-weight: 500; padding-block: 5px; border-left-color: transparent; }
 .row.h0 { background: var(--head-bg); }
 .row.h0 .cell { font-weight: 700; }
@@ -112,11 +113,11 @@ button:hover { border-color: var(--accent); }
 .cell.sus { box-shadow: inset 0 -3px 0 var(--sus); }
 .cell.shift { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); }
 .notes .why { color: var(--shift); }
-.notes .why::before { content: "сдвиг: "; font-weight: 600; }
+.notes .why::before { content: "shift: "; font-weight: 600; }
 .legend .sh { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); padding: 0 4px 0 7px; }
 .cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
 .notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
-.notes .var::before { content: "вар. "; font-weight: 600; }
+.notes .var::before { content: "var. "; font-weight: 600; }
 .notes .ref { font-family: var(--font-mono); font-size: .7rem; }
 .flagnote { grid-column: 1 / -1; padding: 2px 10px 6px calc(var(--keyw) + 10px); font-size: .8rem; color: var(--flag); font-family: var(--font-ui); }
 .editor { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; padding: 8px 10px; border-top: 1px dashed var(--flag); background: var(--surface); font-family: var(--font-ui); }
@@ -128,6 +129,7 @@ button:hover { border-color: var(--accent); }
 @media (max-width: 760px) {
   #nextshift { position: fixed; right: 12px; bottom: max(12px, env(safe-area-inset-bottom, 0px)); z-index: 5; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
   header.top { position: static; }
+  .row.sutta { top: env(safe-area-inset-top, 0px); }
   .row { grid-template-columns: 1fr; }
   .row.colhead { display: none; }
   .cell { border-left: 0; padding: 4px 12px; }
@@ -138,50 +140,53 @@ button:hover { border-color: var(--accent); }
 </style>
 
 <div class="wrap">
-  <header class="top">
+  <header class="top" id="topbar">
     <div class="titlerow">
-      <h1>Сверка изданий канона</h1>
-      <span class="sub">Махасангити (SC ms), Буддха Джаянти (BJT), Чаттха Сангаяна (VRI), Сиам Рат 1927. Вся книга на одной странице, по сегментам SuttaCentral</span>
+      <h1>Pali Editions Side by Side</h1>
+      <span class="sub">SuttaCentral (Mahāsaṅgīti), Buddha Jayanti, Chaṭṭha Saṅgāyana (VRI), Siam Rath 1927, aligned on SuttaCentral segments</span>
     </div>
-    <nav class="books" aria-label="Книги">
+    <nav class="books" aria-label="Books">
       <span id="colls" class="books"></span>
-      <button type="button" id="prevbook" aria-label="Предыдущая книга">←</button>
-      <select id="booksel" aria-label="Книга"></select>
-      <button type="button" id="nextbook" aria-label="Следующая книга">→</button>
+      <button type="button" id="prevbook" aria-label="Previous book">←</button>
+      <select id="booksel" aria-label="Book"></select>
+      <button type="button" id="nextbook" aria-label="Next book">→</button>
     </nav>
     <div class="row-ctl">
       <span id="edchips" class="row-ctl"></span>
-      <label class="chip" title="BJT, Myanmar и Thai голосуют по каждому слову; ms сверяется с итогом"><input type="checkbox" id="optdiff" checked> разночтения (2 из 3)</label>
-      <label class="chip"><input type="checkbox" id="optnotes"> разночтения и страницы</label>
-      <label class="chip"><input type="checkbox" id="optsus" checked> подозрительные</label>
-      <label class="chip" title="Найдено автоматически (find_shifts.py): в сегменте издания слова соседнего сегмента ms"><input type="checkbox" id="optshift" checked> сдвиги <span id="shiftn" class="fill"></span></label>
-      <button type="button" id="nextshift">следующий сдвиг ↓</button>
-      <button type="button" id="flagsbtn" class="flagbtn">Отмечено: 0</button>
+      <label class="chip" title="BJT, VRI and Siam Rath vote word by word; SC is checked against the result"><input type="checkbox" id="optdiff" checked> Differences</label>
+      <label class="chip" title="Variant readings under SC (all editions, PTS, the printed Mahāsaṅgīti, footnotes); page numbers under each edition"><input type="checkbox" id="optnotes"> Variants &amp; pages</label>
+      <label class="chip" title="An edition has much more text than SC here"><input type="checkbox" id="optsus" checked> Overflow</label>
+      <label class="chip" title="Found automatically: words of a neighbouring SC segment in an edition's segment"><input type="checkbox" id="optshift" checked> Shifts <span id="shiftn" class="fill"></span></label>
+      <button type="button" id="nextshift">Next shift ↓</button>
+      <button type="button" id="flagsbtn" class="flagbtn">Marked: 0</button>
     </div>
-    <div class="legend">
-      <span>жёлтым: буквы, где издание расходится с двумя другими (bah<mark>u</mark>kāro; если у других тут лишние буквы, закрашена буква перед этим местом); слово целиком: в других изданиях его нет</span>
-      <span>ms подсвечен, только где отличается от всех трёх</span>
-      <span><span class="s">подчёркнуто</span>: текста намного больше, чем в ms (возможен перелив)</span>
-      <span><span class="f">клик по номеру сегмента</span>: отметить проблему</span>
-      <span><span class="sh">малиновым</span>: сдвиг разбивки, в сегменте издания слова соседнего сегмента ms (найдено автоматически, что именно — под текстом)</span>
-    </div>
+    <details class="howto">
+      <summary>How to read</summary>
+      <div class="legend">
+        <span><mark>Yellow</mark>: letters where an edition differs from the other two (bah<mark>u</mark>kāro). A whole word in yellow is missing in the others; if the others have extra letters, the letter before the spot is marked. SC is marked only where it differs from all three.</span>
+        <span><span class="s">Underlined</span>: an edition has much more text here than SC (it may have run over from the next segment).</span>
+        <span><span class="sh">Pink</span>: a shift, words of a neighbouring SC segment in this edition's segment; the reason is shown under the text.</span>
+        <span><span class="f">Click a segment number</span> to mark a problem. Marks stay in this browser; copy them from the "Marked" panel.</span>
+        <span>A segment opens with its key in the address: <code>#sn35.19:2.9</code>. The percentage beside an edition is the share of segments it fills in this book.</span>
+      </div>
+    </details>
     <section class="panel" id="flagpanel" hidden>
-      <h2 id="flagtitle">Отмеченные сегменты</h2>
-      <div><button type="button" id="copyflags">Скопировать список</button> <span id="copymsg" class="n"></span></div>
+      <h2 id="flagtitle">Marked segments</h2>
+      <div><button type="button" id="copyflags">Copy list</button> <span id="copymsg" class="n"></span></div>
       <ol id="flaglist"></ol>
     </section>
   </header>
   <main>
-    <div class="grid" id="grid"><div class="status">Загрузка…</div></div>
+    <div class="grid" id="grid"><div class="status">Loading…</div></div>
   </main>
 </div>
 
 <script>
 const EDS = [
-  { id: 'ms', name: 'ms', full: 'Махасангити (SC)', color: 'var(--ms)', col: 1 },
-  { id: 'bjt', name: 'BJT', full: 'Буддха Джаянти, Шри-Ланка', color: 'var(--bjt)', col: 2 },
-  { id: 'my', name: 'Myanmar', full: 'Чаттха Сангаяна, VRI', color: 'var(--my)', col: 3 },
-  { id: 'th', name: 'Thai', full: 'Сиам Рат 1927', color: 'var(--th)', col: 4 },
+  { id: 'ms', name: 'SC', full: 'SuttaCentral, Mahāsaṅgīti (root/pli/ms)', color: 'var(--ms)', col: 1 },
+  { id: 'bjt', name: 'BJT', full: 'Buddha Jayanti, Sri Lanka (tipitaka.lk)', color: 'var(--bjt)', col: 2 },
+  { id: 'my', name: 'VRI', full: 'Chaṭṭha Saṅgāyana, VRI (tipitaka.org)', color: 'var(--my)', col: 3 },
+  { id: 'th', name: 'Siam Rath', full: 'Syāmaraṭṭha 1927, Thailand (E-Tipitaka)', color: 'var(--th)', col: 4 },
 ];
 const state = { index: [], shifts: {}, cache: {}, book: null, show: { ms: true, bjt: true, my: true, th: true }, flags: new Map(), db: null, uid: null, canWrite: true };
 const $ = id => document.getElementById(id);
@@ -290,7 +295,7 @@ const bookOf = key => key.split(':')[0].split('.')[0];
 async function loadBook(book) {
   if (!state.cache[book]) {
     const r = await fetch(`data/${book}.json`);
-    if (!r.ok) throw new Error(`Не удалось загрузить ${book} (${r.status})`);
+    if (!r.ok) throw new Error(`Could not load ${book} (${r.status})`);
     state.cache[book] = await r.json();
   }
   return state.cache[book];
@@ -304,9 +309,9 @@ function renderNav() {
     `<a href="#${state.index.find(b => collOf(b.book) === c).book}" ${c === cur ? 'aria-current="page"' : ''}>${n}</a>`).join('');
   $('booksel').innerHTML = state.index.filter(b => collOf(b.book) === cur).map(b => {
     const name = b.label || b.book.toUpperCase();
-    const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} файлов`;
+    const t = b.n === 1 ? (b.suttas[0][1] || '') : `${b.n} files`;
     const n = Object.keys(state.shifts[b.book] || {}).length;
-    return `<option value="${b.book}">${esc(name)}${t ? ' · ' + esc(t) : ''}${n ? ' · сдвигов ' + n : ''}</option>`;
+    return `<option value="${b.book}">${esc(name)}${t ? ' · ' + esc(t) : ''}${n ? ' · shifts ' + n : ''}</option>`;
   }).join('');
   $('booksel').value = state.book;
   const i = state.index.findIndex(b => b.book === state.book);
@@ -315,7 +320,7 @@ function renderNav() {
   $('edchips').innerHTML = EDS.map(e => `
     <label class="chip" title="${e.full}"><input type="checkbox" data-ed="${e.id}" ${state.show[e.id] ? 'checked' : ''}>
       <span class="dot" style="background:${e.color}"></span>${e.name}
-      ${e.id !== 'ms' && b ? `<span class="fill" title="заполнено сегментов в книге">${b.fill[e.id] == null ? 'нет книги' : b.fill[e.id] + '%'}</span>` : ''}</label>`).join('');
+      ${e.id !== 'ms' && b ? `<span class="fill" title="segments filled in this book">${b.fill[e.id] == null ? 'not in this edition' : b.fill[e.id] + '%'}</span>` : ''}</label>`).join('');
   $('edchips').querySelectorAll('input').forEach(i => i.addEventListener('change', () => {
     state.show[i.dataset.ed] = i.checked; store('show', state.show); render();
   }));
@@ -325,14 +330,14 @@ async function render() {
   const grid = $('grid');
   let data;
   try { data = await loadBook(state.book); }
-  catch (e) { grid.innerHTML = `<div class="status">${esc(e.message)}. Обновите страницу.</div>`; return; }
+  catch (e) { grid.innerHTML = `<div class="status">${esc(e.message)}. Reload the page.</div>`; return; }
   const eds = EDS.filter(e => state.show[e.id]);
   const diff = $('optdiff').checked, notes = $('optnotes').checked, sus = $('optsus').checked;
   const shifts = $('optshift').checked && state.shifts[state.book] || {};
   const keyw = '7.6em';
   grid.style.setProperty('--cols', `${keyw} repeat(${eds.length}, minmax(0, 1fr))`);
   grid.style.setProperty('--keyw', keyw);
-  const out = [`<div class="row colhead"><div class="cell key">сегмент</div>${eds.map(e =>
+  const out = [`<div class="row colhead"><div class="cell key">segment</div>${eds.map(e =>
     `<div class="cell"><span class="colname" title="${e.full}"><span class="dot" style="background:${e.color}"></span>${e.name}</span></div>`).join('')}</div>`];
   for (const s of data.suttas) {
     out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id.replace(/^pli-tv-/, '')}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
@@ -341,7 +346,7 @@ async function render() {
       const head = /:0\.\d+$/.test(key) || /:\d+\.0$/.test(key);
       const rd = diff ? readings(row) : null;
       const msw = wc(ms);
-      let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: отметить проблему">${key.replace(/^pli-tv-/, '')}</div>`;
+      let h = `<div class="row${head ? ' h0' : ''}" id="r:${key}" data-key="${key}"><div class="cell key" title="${key}: mark a problem">${key.replace(/^pli-tv-/, '')}</div>`;
       for (const e of eds) {
         const text = row[e.col];
         const isSus = sus && e.id !== 'ms' && !head && wc(text) > 2 * msw + 8;
@@ -359,6 +364,7 @@ async function render() {
     }
   }
   grid.innerHTML = out.join('');
+  measure();
   // the bar counts the rows marked in the editions shown; the book list keeps the whole book's number
   $('shiftn').textContent = Object.values(state.shifts[state.book] || {}).filter(c => eds.some(e => c[e.id])).length;
   paintFlags();
@@ -384,12 +390,12 @@ function paintFlags() {
     }
   }
   const list = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0));
-  $('flagsbtn').textContent = `Отмечено: ${list.length}`;
+  $('flagsbtn').textContent = `Marked: ${list.length}`;
   $('flaglist').innerHTML = list.length ? list.map(f => `<li><a href="#${esc(f.key)}" class="k">${esc(f.key)}</a>
     <span class="n">${esc((f.eds || []).map(ed => EDS.find(e => e.id === ed)?.name).join(', '))}${f.note ? ' · ' + esc(f.note) : ''}</span></li>`).join('')
-    : '<li class="n">Пока ничего не отмечено. Кликните по номеру сегмента в таблице.</li>';
-  $('flagtitle').textContent = state.db ? 'Отмеченные сегменты (видны всем, кто открывает страницу, и Claude)'
-    : 'Отмеченные сегменты (хранятся в этом браузере; чтобы передать, скопируйте список)';
+    : '<li class="n">Nothing marked yet. Click a segment number in the table.</li>';
+  $('flagtitle').textContent = state.db ? 'Marked segments (shared with everyone who opens this page)'
+    : 'Marked segments (kept in this browser; copy the list to pass it on)';
 }
 
 function closeEditor() { document.querySelector('.editor')?.remove(); }
@@ -397,17 +403,17 @@ function openEditor(row) {
   const key = row.dataset.key;
   if (document.querySelector('.editor')?.dataset.key === key) { closeEditor(); return; }
   closeEditor();
-  if (!state.canWrite) { alertRow(row, 'У вас доступ только на чтение, отмечать нельзя.'); return; }
+  if (!state.canWrite) { alertRow(row, 'You can only read this page; marking is off.'); return; }
   const f = state.flags.get(key) || { eds: [], note: '' };
   const ed = document.createElement('div');
   ed.className = 'editor'; ed.dataset.key = key;
   ed.innerHTML = `<span class="k" style="font-family:var(--font-mono);font-size:.8rem">${esc(key)}</span>
     ${EDS.map(e => `<label class="chip"><input type="checkbox" value="${e.id}" ${f.eds?.includes(e.id) ? 'checked' : ''}>
       <span class="dot" style="background:${e.color}"></span>${e.name}</label>`).join('')}
-    <input type="text" id="flagnote-input" placeholder="что не так (например: перелив из следующей сутты)" value="${esc(f.note || '')}">
-    <button type="button" class="save">${state.flags.has(key) ? 'Сохранить' : 'Отметить'}</button>
-    ${state.flags.has(key) ? '<button type="button" class="del">Снять отметку</button>' : ''}
-    <button type="button" class="cancel">Отмена</button><span class="msg" style="color:var(--flag)"></span>`;
+    <input type="text" id="flagnote-input" placeholder="what is wrong (e.g. text from the next sutta)" value="${esc(f.note || '')}">
+    <button type="button" class="save">${state.flags.has(key) ? 'Save' : 'Mark'}</button>
+    ${state.flags.has(key) ? '<button type="button" class="del">Remove mark</button>' : ''}
+    <button type="button" class="cancel">Cancel</button><span class="msg" style="color:var(--flag)"></span>`;
   row.appendChild(ed);
   const inp = ed.querySelector('input[type="text"]');
   inp.focus();
@@ -417,14 +423,14 @@ function openEditor(row) {
     const body = { key, book: bookOf(key), eds, note: inp.value.trim(), at: Date.now() };
     if (state.uid) body.by = state.uid;
     try { await store_.set(key, body); closeEditor(); }
-    catch (e) { msg(e.code === 'invalid_argument' ? 'Нет прав на запись.' : 'Не сохранилось, попробуйте ещё раз.'); if (e.code === 'invalid_argument') state.canWrite = false; }
+    catch (e) { msg(e.code === 'invalid_argument' ? 'No permission to write.' : 'Not saved. Try again.'); if (e.code === 'invalid_argument') state.canWrite = false; }
   };
   ed.querySelector('.save').onclick = save;
   inp.addEventListener('keydown', ev => { if (ev.key === 'Enter') save(); if (ev.key === 'Escape') closeEditor(); });
   ed.querySelector('.cancel').onclick = closeEditor;
   const del = ed.querySelector('.del');
   if (del) del.onclick = async () => {
-    try { await store_.del(key); closeEditor(); } catch (e) { msg('Не удалось снять отметку.'); }
+    try { await store_.del(key); closeEditor(); } catch (e) { msg('Could not remove the mark.'); }
   };
 }
 function alertRow(row, text) {
@@ -465,7 +471,7 @@ async function go(target) {
   if (book !== state.book) {
     state.book = book; store('book', book);
     renderNav();
-    $('grid').innerHTML = '<div class="status">Загрузка…</div>';
+    $('grid').innerHTML = '<div class="status">Loading…</div>';
     await render();
   }
   const el = target && (document.getElementById('r:' + target) || document.getElementById('s:' + target) || findSutta(target));
@@ -486,7 +492,7 @@ async function fromSlug(slug) {
     if (book !== state.book) {
       state.book = book; store('book', book);
       renderNav();
-      $('grid').innerHTML = '<div class="status">Загрузка…</div>';
+      $('grid').innerHTML = '<div class="status">Loading…</div>';
       await render();
     }
     if (document.getElementById('r:' + key)) return key;
@@ -529,9 +535,18 @@ function findSutta(t) {
   return null;
 }
 
+/* the column heads stick under the bar, the sutta row under the column heads */
+function measure() {
+  const bar = $('topbar'), sticky = getComputedStyle(bar).position === 'sticky';
+  document.documentElement.style.setProperty('--barh', (sticky ? bar.offsetHeight : 0) + 'px');
+  const ch = document.querySelector('.row.colhead');
+  document.documentElement.style.setProperty('--colh', (ch && ch.offsetParent ? ch.offsetHeight : 0) + 'px');
+}
 async function start() {
+  if (window.ResizeObserver) new ResizeObserver(measure).observe($('topbar'));
+  window.addEventListener('resize', measure);
   try { state.index = await (await fetch('data/index.json')).json(); }
-  catch (e) { $('grid').innerHTML = '<div class="status">Не удалось загрузить список книг. Обновите страницу.</div>'; return; }
+  catch (e) { $('grid').innerHTML = '<div class="status">Could not load the list of books. Reload the page.</div>'; return; }
   try { state.shifts = await (await fetch('data/shifts.json')).json(); } catch (e) { /* no marks: the page works without them */ }
   Object.assign(state.show, recall('show', {}));
   for (const [id, key] of [['optdiff', 'diff'], ['optnotes', 'notes'], ['optsus', 'sus'], ['optshift', 'shift']]) {
@@ -545,8 +560,8 @@ async function start() {
   $('copyflags').onclick = async () => {
     const text = [...state.flags.values()].sort((a, b) => (a.at || 0) - (b.at || 0))
       .map(f => `${f.key}\t${(f.eds || []).join(',')}\t${f.note || ''}`).join('\n');
-    try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Скопировано.'; }
-    catch (e) { $('copymsg').textContent = 'Не удалось скопировать, выделите список вручную.'; }
+    try { await navigator.clipboard.writeText(text); $('copymsg').textContent = 'Copied.'; }
+    catch (e) { $('copymsg').textContent = 'Could not copy; select the list by hand.'; }
   };
   // The next marked row below the middle of the screen; past the last one, the first again.
   $('nextshift').onclick = () => {
