@@ -4,13 +4,14 @@
   bj      Buddha Jayanti (dhammagift/root/pli/bjt)
   cck     Chaṭṭha Saṅgāyana, VRI (dhammagift/root/pli/my)
   sya-all Siam Rath 1927 (dhammagift/root/pli/th)
-  ms2005  the Mahāsaṅgīti as printed, World Tipiṭaka 2005 (built with build_editions.py --eds mso, not in the data)
-  pts     Pali Text Society (GRETIL, Dhammakaya input; build_editions.py --eds pts, not in the data)
+  ms2005  the Mahāsaṅgīti as printed, World Tipiṭaka 2005 (dhammagift/root/pli/mso)
+  pts     Pali Text Society (GRETIL, Dhammakaya input; dhammagift/root/pli/pts)
 
 Each edition is compared with ms word by word over a whole sutta, so a word the alignment put in a neighbour segment
 is no variant. Left out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing (`yoniso manasikāro` /
 `yonisomanasikāro`), peyyāla (a side with …pe…, …la…), differences of more than 4 words (an abbreviation or a
-passage printed in full), and readings SC already gives for that edition. The project's own readings
+passage printed in full; but a passage of the printed Mahāsaṅgīti that SC left out, 40 words or more, is written in
+full: `mn10:44.3`, the exposition of the four truths), and readings SC already gives for that edition. The project's own readings
 (variant_own.json, from the old site) come first, after SC's errors against its printed source
 (sc-fixes/fixes.json): `aparimutto → parimutto (SC error: ms2005 and the other editions)`.
 
@@ -131,6 +132,7 @@ for fx in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__))
     if e:
         OWN[fx['seg']] = e + (' | ' + OWN[fx['seg']] if fx['seg'] in OWN else '')
 new_entries = collections.defaultdict(lambda: collections.defaultdict(lambda: collections.defaultdict(list)))
+long_entries = collections.defaultdict(dict)  # rel -> {key: (lemma, passage, words)}
 n_files = 0
 for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursive=True)):
     rel = os.path.relpath(p, MS)
@@ -180,6 +182,13 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
             at_end = op == 'insert' and (a1 == len(A) or A[a1][0] != A[a1 - 1][0])
             if at_end and (siglum == 'ms2005' or any(END.search(w) for w in xb)):
                 continue  # a heading, an uddāna label, a number at the end of a segment
+            if siglum == 'ms2005' and op == 'insert' and len(xb) >= 40 and a1:
+                # a passage of the printed source that SC left out (mn10:44.3, the exposition of the four truths):
+                # written in full, once
+                k0 = A[a1 - 1][0]
+                long_entries[rel][k0] = (shown(w for _, w, _ in A[a1 - 1:a1]),
+                                         ' '.join(w for w, _ in B[b1:b2]), len(xb))
+                continue
             if loose(xa) == loose(xb) or PEYYALA & set(xa + xb) or len(xa) > MAX or len(xb) > MAX:
                 continue
             if xb and abbreviated(xa, xb):
@@ -253,9 +262,13 @@ if NOTES:
                             src, reading = t.group(1).strip(), reading[t.end() - 1:].strip()
                         out_.append(reading.rstrip('.').strip() + f' ({siglum}' + (f': {src.strip()})' if src.strip() else ' note)'))
                     notes[rel].setdefault(key, []).append(f'{lemma} → ' + '; '.join(out_))
-for rel in sorted(set(new_entries) | set(own_rel) | set(notes)):
+for rel in sorted(set(new_entries) | set(own_rel) | set(notes) | set(long_entries)):
     out = os.path.join(target, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     merged = dict(own_rel.get(rel, {}))
+    for key, (lemma, passage, n) in long_entries.get(rel, {}).items():
+        e = f'{lemma} → {lemma} {passage} (ms2005: {n} words SC has not)'
+        merged[key] = (merged[key] + ' | ' + e) if key in merged else e
+        count['ms2005 passage'] += 1
     for key, by_lemma in new_entries.get(rel, {}).items():
         text = entry_text(by_lemma)
         merged[key] = (merged[key] + ' | ' + text) if key in merged else text
