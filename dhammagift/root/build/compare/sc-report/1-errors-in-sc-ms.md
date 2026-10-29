@@ -47,6 +47,17 @@ sn35.19:2.2 and 2.6, which correctly read `nābhinandati … parimutto`.
 | Syāmaraṭṭha | [vol. 18, p. 16, item 19](https://84000.org/tipitaka/read/roman_item_s.php?book=18&item=19) | [vol. 18, p. 17, item 20](https://84000.org/tipitaka/read/roman_item_s.php?book=18&item=20) |
 | PTS | SN IV 13, [samyu4pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu4pu.htm) | SN IV 14, [samyu4pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu4pu.htm) |
 
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral sn35.19:2.9](screens/sc-sn35_19_2_9.png)
+![SuttaCentral sn35.20:2.2](screens/sc-sn35_20_2_2.png)
+![SuttaCentral sn35.20:2.8](screens/sc-sn35_20_2_8.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
+
+![Mahāsaṅgīti 2005 sn35.19](screens/ed-sn35.19-ms2005.png)
+![Mahāsaṅgīti 2005 sn35.20](screens/ed-sn35.20-ms2005.png)
+
 ### dn33:1.11.85, dn33:1.11.91: `Idha, bhikkhave` for `Idhāvuso`
 
 | | |
@@ -68,6 +79,15 @@ bhāvanāpadhānaṁ?`). `bhikkhave` is the Buddha's address.
 | Syāmaraṭṭha | [vol. 11, p. 238, item 238](https://84000.org/tipitaka/read/roman_item_s.php?book=11&item=238) |
 | PTS | DN III 226, [dighn3pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/1_digh/dighn3pu.htm) |
 
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral dn33:1.11.85](screens/sc-dn33_1_11_85.png)
+![SuttaCentral dn33:1.11.91](screens/sc-dn33_1_11_91.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
+
+![Mahāsaṅgīti 2005 dn33](screens/ed-dn33-ms2005.png)
+
 ### sn22.7:8.2–8.3: two segments in the wrong order
 
 | | |
@@ -88,6 +108,14 @@ before 8.2, which ends the sentence with a full stop.
 | Syāmaraṭṭha | [vol. 17, p. 23, item 33](https://84000.org/tipitaka/read/roman_item_s.php?book=17&item=33) |
 | PTS | SN III 17, [samyu3pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu3pu.htm) |
 
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral sn22.7:8.2–8.3](screens/sc-sn22_7_8_2.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
+
+![Mahāsaṅgīti 2005 sn22.7](screens/ed-sn22.7-ms2005.png)
+
 ### pli-tv-bu-vb-ss13:2.8: `vā` missing
 
 | | |
@@ -107,6 +135,14 @@ Buddha Jayanti and Syāmaraṭṭha read `veḷunā vā`, also with `vā`.
 | Syāmaraṭṭha | [vol. 1, p. 426, item 624](https://84000.org/tipitaka/read/roman_item_s.php?book=1&item=624) |
 | PTS | Vin III 185, [vin3s1pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/1_vin/vin3s1pu.htm) |
 
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral pli-tv-bu-vb-ss13:2.8](screens/sc-pli-tv-bu-vb-ss13_2_8.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
+
+![Mahāsaṅgīti 2005 ss13](screens/ed-ss13-ms2005.png)
+
 ### pli-tv-pvr5:122.4: `ammukhāvinayena` for `sammukhāvinayena`
 
 | | |
@@ -125,6 +161,14 @@ A lost first letter in the name of the first of the seven ways of settling dispu
 | Syāmaraṭṭha | [vol. 8, p. 279, item 904](https://84000.org/tipitaka/read/roman_item_s.php?book=8&item=904) |
 | PTS | Vin V 109, [vin5papu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/1_vin/vin5papu.htm) (abbreviated there: `samm. ca yebh. ca …`) |
 
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral pli-tv-pvr5:122.4](screens/sc-pli-tv-pvr5_122_4.png)
+
+The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
+
+![Mahāsaṅgīti 2005 pvr5](screens/ed-pvr5-ms2005.png)
+
 ## 2. English text inside the Pali
 
 Three Pali segments contain an editorial note instead of text. The printed edition has the section titles there
@@ -135,6 +179,12 @@ Three Pali segments contain an editorial note instead of text. The printed editi
 | [sn48.137-146:1.1](https://suttacentral.net/sn48.137-146/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn48/sn48.137-146_root-pli-ms.json#L5) | On Display: Title of Section Only |
 | [sn48.147-158:1.1](https://suttacentral.net/sn48.147-158/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn48/sn48.147-158_root-pli-ms.json#L5) | On Display: Title of Section Only |
 | [sn50.67-76:1.1](https://suttacentral.net/sn50.67-76/pli/ms), [line 5](https://github.com/suttacentral/bilara-data/blob/59b845a247cdfe625ce2061ac74b4999e183beb3/root/pli/ms/sutta/sn/sn50/sn50.67-76_root-pli-ms.json#L5) | On Display: Title of Section Only |
+
+SuttaCentral today, the error outlined in red:
+
+![SuttaCentral sn48.137-146:1.1](screens/sc-sn48_137-146_1_1.png)
+![SuttaCentral sn48.147-158:1.1](screens/sc-sn48_147-158_1_1.png)
+![SuttaCentral sn50.67-76:1.1](screens/sc-sn50_67-76_1_1.png)
 
 ## How this was found
 
