@@ -8,7 +8,7 @@ recorded in `variant/pli/ms`.
 
 Each place links to our comparison page ([viewer](https://github.com/dhammagift/offline-data/tree/main/dhammagift/root/build/viewer) in this repository), where the SC text stands in one row with Buddha Jayanti, Chaṭṭha
 Saṅgāyana and Syāmaraṭṭha, and the readings of the printed Mahāsaṅgīti and PTS are shown under the SC text
-(tick *разночтения и страницы*). It also lists where to read the place in every edition:
+(tick *Variants & pages*). It also lists where to read the place in every edition:
 
 - **Mahāsaṅgīti 2005**, the printed edition SC was made from, as reconstructed by
   [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io): a link to the page.
@@ -34,7 +34,7 @@ sn35.19:2.2 and 2.6, which correctly read `nābhinandati … parimutto`.
 
 | edition | sn35.19 | sn35.20 |
 |---|---|---|
-| side by side | [sn35.19:2.9](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#sn35.19:2.9) | [sn35.20:2.2](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#sn35.20:2.2), [2.8](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#sn35.20:2.8) |
+| side by side | [sn35.19:2.9](https://old.dhamma.gift/editions/#sn35.19:2.9) | [sn35.20:2.2](https://old.dhamma.gift/editions/#sn35.20:2.2), [2.8](https://old.dhamma.gift/editions/#sn35.20:2.8) |
 | SuttaCentral | [sn35.19:2.9](https://suttacentral.net/sn35.19/pli/ms) | [sn35.20:2.2, 2.8](https://suttacentral.net/sn35.20/pli/ms) |
 | Mahāsaṅgīti 2005 | [13S4 1.1.2.7](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.7.html) | [13S4 1.1.2.8](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.8.html) |
 | Buddha Jayanti | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-4/pali) | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-9/pali) |
@@ -56,7 +56,7 @@ bhāvanāpadhānaṁ?`). `bhikkhave` is the Buddha's address.
 
 | edition | where |
 |---|---|
-| side by side | [dn33:1.11.85](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#dn33:1.11.85), [1.11.91](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#dn33:1.11.91) |
+| side by side | [dn33:1.11.85](https://old.dhamma.gift/editions/#dn33:1.11.85), [1.11.91](https://old.dhamma.gift/editions/#dn33:1.11.91) |
 | SuttaCentral | [dn33:1.11.85, 1.11.91](https://suttacentral.net/dn33/pli/ms) |
 | Mahāsaṅgīti 2005 | [8D 10.4](https://tipitaka2500.github.io/tipitaka/8D/10/10.4.html) |
 | Buddha Jayanti | [DN III (BJT) p. 382](https://tipitaka.lk/dn-3-10/15-0/pali), [next paragraph](https://tipitaka.lk/dn-3-10/15-1/pali) |
@@ -77,7 +77,7 @@ before 8.2, which ends the sentence with a full stop.
 
 | edition | where |
 |---|---|
-| side by side | [sn22.7:8.2–8.3](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#sn22.7:8.2) |
+| side by side | [sn22.7:8.2–8.3](https://old.dhamma.gift/editions/#sn22.7:8.2) |
 | SuttaCentral | [sn22.7:8.2–8.3](https://suttacentral.net/sn22.7/pli/ms) |
 | Mahāsaṅgīti 2005 | [13S3 1.1.1.7](https://tipitaka2500.github.io/tipitaka/13S3/1/1.1/1.1.1/1.1.1.7.html) |
 | Buddha Jayanti | [SN III (BJT) p. 30](https://tipitaka.lk/sn-3-1-1-1/14-6/pali) (`na saṅkhāravantaṃ attānaṃ`) |
@@ -97,7 +97,7 @@ Buddha Jayanti and Syāmaraṭṭha read `veḷunā vā`, also with `vā`.
 
 | edition | where |
 |---|---|
-| side by side | [pli-tv-bu-vb-ss13:2.8](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#pli-tv-bu-vb-ss13:2.8) |
+| side by side | [pli-tv-bu-vb-ss13:2.8](https://old.dhamma.gift/editions/#pli-tv-bu-vb-ss13:2.8) |
 | SuttaCentral | [pli-tv-bu-vb-ss13:2.8](https://suttacentral.net/pli-tv-bu-vb-ss13/pli/ms) |
 | Mahāsaṅgīti 2005 | [1V 1.2.13](https://tipitaka2500.github.io/tipitaka/1V/1/1.2/1.2.13.html) |
 | Buddha Jayanti | [Pārājikapāḷi (BJT) p. 478](https://tipitaka.lk/vp-prj-3-12/74-3/pali) |
@@ -116,7 +116,7 @@ A lost first letter in the name of the first of the seven ways of settling dispu
 
 | edition | where |
 |---|---|
-| side by side | [pli-tv-pvr5:122.4](https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#pli-tv-pvr5:122.4) |
+| side by side | [pli-tv-pvr5:122.4](https://old.dhamma.gift/editions/#pli-tv-pvr5:122.4) |
 | SuttaCentral | [pli-tv-pvr5:122.4](https://suttacentral.net/pli-tv-pvr5/pli/ms) |
 | Mahāsaṅgīti 2005 | [5V 5.13](https://tipitaka2500.github.io/tipitaka/5V/5/5.13.html) |
 | Buddha Jayanti | [Parivārapāḷi (BJT) p. 370](https://tipitaka.lk/vp-pv-4-6/91-5/pali) |
