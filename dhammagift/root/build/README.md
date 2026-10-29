@@ -219,16 +219,16 @@ Naadhipati, which no link leads to, goes back by its paragraph number). `Namo ta
 `an1.439-446` `ānāmi` → `jānāmi`. The site leaves out a few Paṭṭhāna passages every other edition has
 (`patthana3.3:1.1`, `16.38`): those segments are empty.
 
-Against `ms`, all but a few dozen of its 2 702 748 words are the printed words. What MS changed against the print: `ṅ` for the printed
-`ṃ` before k, g (`saṃgha` → `saṅgha`, in 8 757 segments); spacing (mostly `ti` after a quotation, MS `bhagavā”ti`,
+Against `ms`, all but a few dozen of its 2 702 748 words are the printed words. What SuttaCentral changed (all in its own edits: `compare/sc-report`, "Where the errors come from"): `ṅ` for the printed
+`ṃ` before k, g (`saṃgha` → `saṅgha`, in 8 757 segments); spacing (mostly `ti` after a quotation, SC `bhagavā”ti`,
 printed `bhagavā ti`); `ṁ`; punctuation, capitals and its own headings (the printed headings stand inside its text:
-`dn34` `dve dhammā`, the Vinaya word glosses). Words that differ: `dn33:1.11.85, 91` MS `idha bhikkhave`, printed
-`idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` MS `aparimutto`, printed `parimutto`; `sn22.7:8.2` word order;
-`pli-tv-bu-vb-ss13:2.8` MS leaves out `vā`; `pvr5:122.4` MS `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
-`sn48.137-146:1.1`, `sn48.147-158:1.1`, `sn50.67-76:1.1` MS has the English note `on display title of section only`
-in the Pali; `snp5.18:1.1` MS prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana
+`dn34` `dve dhammā`, the Vinaya word glosses). Words that differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed
+`idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`, printed `parimutto`; `sn22.7:8.2` word order;
+`pli-tv-bu-vb-ss13:2.8` SC leaves out `vā`; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
+`sn48.137-146:1.1`, `sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only`
+in the Pali; `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana
 (`snp5.2`); `mn10` the print (as VRI) has the whole exposition of the four truths (`Dukkhasaccaniddesa …`, as in
-dn22) after `mn10:44.3`, MS (as BJT, Siam Rath, PTS) has not, and the print ends `Mahāsatipaṭṭhānasuttaṃ`. The
+dn22) after `mn10:44.3`, SC (as BJT, Siam Rath, PTS) has not, and the print ends `Mahāsatipaṭṭhānasuttaṃ`. The
 Abhidhamma has no word that differs. The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
 ## PTS

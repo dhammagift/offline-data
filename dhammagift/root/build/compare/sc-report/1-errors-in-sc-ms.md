@@ -224,6 +224,22 @@ The printed Mahāsaṅgīti (tipitaka2500.github.io) and the Chaṭṭha Saṅg�
 ![Mahāsaṅgīti 2005 mn10 end title](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-mn10-ms2005-end.png)
 ![Chaṭṭha Saṅgāyana mn10 Dukkhasaccaniddeso](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-mn10-vri.png)
 
+## Where the errors come from
+
+The history of bilara-data (branch `published`) and of SC's older HTML texts (sc-data, 2017) shows that every place
+above was right in SC's earlier text and changed in one of SC's own edits. None comes from the Mahāsaṅgīti SC
+received: its first bilara import, or the 2017 HTML, reads as the print.
+
+| place | right until | changed in |
+|---|---|---|
+| sn35.19:2.9, sn35.20:2.2, 2.8 `aparimutto` | bilara-data from 2020 | [7de11d9](https://github.com/suttacentral/bilara-data/commit/7de11d955aa965dbca4879e9cee163c60830234e), 2025-10-09, "standardize punctuation of Pali" |
+| dn33:1.11.85, 91 `Idha, bhikkhave` | first import, 2020 (`Idhāvuso`) | [3e83314](https://github.com/suttacentral/bilara-data/commit/3e83314b7353e453fa431be3d496a46f58129d6d), 2021-02-15, "Publishing segment updates for ms texts (#352)" |
+| pli-tv-pvr5:122.4 `ammukhāvinayena` | first import, 2020 (`sammukhāvinayena`) | [2617122](https://github.com/suttacentral/bilara-data/commit/261712250c1117f5569b0e8da6280a88ba28a50e), 2021-11-12, "fix segment numbers mistakenly in root file" |
+| sn22.7:8.2-8.3 order | [SC HTML 2017](https://github.com/suttacentral/sc-data/blob/5970ea8137a8ece8b974c9420b6baccd6eb34baf/html_text/pi/su/sn/sn22/vagga1/sn22.7.html) (`na saṅkhāravantaṃ vā attānaṃ; na attani vā saṅkhāre …`) | [01ddc81](https://github.com/suttacentral/bilara-data/commit/01ddc8115e27cf8d76ff372cdb2eb154e64feaaa), 2020-07-20, the first bilara import |
+| pli-tv-bu-vb-ss13:2.8 `vā` | [SC HTML 2017](https://github.com/suttacentral/sc-data/blob/5970ea8137a8ece8b974c9420b6baccd6eb34baf/html_text/pi/vi/pi-tv-bu-vb/pi-tv-bu-vb-ss/pi-tv-bu-vb-ss13.html) (`veḷuyā vā vejjikāya vā`) | [01ddc81](https://github.com/suttacentral/bilara-data/commit/01ddc8115e27cf8d76ff372cdb2eb154e64feaaa), 2020-07-20 |
+| sn48.137-146, sn48.147-158, sn50.67-76 `On Display: Title of Section Only` | never right: SC's own placeholder, already in the [SC HTML 2017](https://github.com/suttacentral/sc-data/blob/5970ea8137a8ece8b974c9420b6baccd6eb34baf/html_text/pi/su/sn/sn48/vagga14/sn48.137.html) | |
+| mn10 the exposition of the four truths | [SC HTML 2017](https://github.com/suttacentral/sc-data/blob/5970ea8137a8ece8b974c9420b6baccd6eb34baf/html_text/pi/su/mn/vagga1/mn10.html) has it (`4.5.1. Dukkhasaccaniddesa`) | [01ddc81](https://github.com/suttacentral/bilara-data/commit/01ddc8115e27cf8d76ff372cdb2eb154e64feaaa), 2020-07-20: not in the bilara import |
+
 ## How this was found
 
 The texts of the editions were aligned to SC segment ids by rules, without manual editing, and compared word by
