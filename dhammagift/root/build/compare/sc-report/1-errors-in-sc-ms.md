@@ -20,6 +20,11 @@ error is, and lists where to read the place in every other edition. Those editio
   and a link to the PTS file in [GRETIL](https://gretil.sub.uni-goettingen.de/) (Dhammakaya input), where `[page 013]`
   marks the page.
 
+Screenshots taken on 29 October 2026: [screens/](screens/) holds `sc-*.png`, each error on suttacentral.net outlined
+in red, and `ed-*.png`, the correct reading outlined in green on the linked page of each edition
+([screens.js](screens.js), [check_links.js](check_links.js) make them again). The 84000.org pages are behind a
+Cloudflare check and were not opened by the script.
+
 ## 1. Readings that change the meaning
 
 ### sn35.19:2.9, sn35.20:2.2, sn35.20:2.8: `aparimutto` for `parimutto`
