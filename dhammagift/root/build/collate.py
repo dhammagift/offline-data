@@ -179,9 +179,6 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
                 tail = [n for _, n in words(e.get(prev, ''))][-len(xa):] if prev else []
                 if tail == xa:
                     continue  # dn34:1.3.0 `Dve dhammā`
-            at_end = op == 'insert' and (a1 == len(A) or A[a1][0] != A[a1 - 1][0])
-            if at_end and (siglum == 'ms2005' or any(END.search(w) for w in xb)):
-                continue  # a heading, an uddāna label, a number at the end of a segment
             if siglum == 'ms2005' and op == 'insert' and len(xb) >= 40 and a1:
                 # a passage of the printed source that SC left out (mn10:44.3, the exposition of the four truths):
                 # written in full, once
@@ -189,6 +186,9 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
                 long_entries[rel][k0] = (shown(w for _, w, _ in A[a1 - 1:a1]),
                                          ' '.join(w for w, _ in B[b1:b2]), len(xb))
                 continue
+            at_end = op == 'insert' and (a1 == len(A) or A[a1][0] != A[a1 - 1][0])
+            if at_end and (siglum == 'ms2005' or any(END.search(w) for w in xb)):
+                continue  # a heading, an uddāna label, a number at the end of a segment
             if loose(xa) == loose(xb) or PEYYALA & set(xa + xb) or len(xa) > MAX or len(xb) > MAX:
                 continue
             if xb and abbreviated(xa, xb):
