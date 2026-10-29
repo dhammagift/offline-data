@@ -232,6 +232,8 @@ are not readings and stay in `reference/pli/<ed>`.
 A whole book on one page, the four Pali texts side by side, variant readings by majority of BJT / Myanmar / Thai
 (ms is checked against them; differing letters in yellow) and problem marks.
 
+- Online straight from this repository: https://raw.githack.com/dhammagift/offline-data/main/dhammagift/root/build/viewer/index.html#sn35.19:2.9
+  (a segment key or a page id after `#`).
 - `viewer/index.html` + `viewer/data/` work on any web server as they are: copy the `viewer` folder and open
   `.../viewer/index.html#sn45.1`. (Opened as a file from disk the browser does not let the page read `data/`;
   locally use `python3 -m http.server` in `viewer/`.) Problem marks are kept in that browser;
