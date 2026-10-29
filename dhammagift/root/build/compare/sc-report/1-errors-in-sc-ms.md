@@ -20,9 +20,9 @@ error is, and lists where to read the place in every other edition. Those editio
   and a link to the PTS file in [GRETIL](https://gretil.sub.uni-goettingen.de/) (Dhammakaya input), where `[page 013]`
   marks the page.
 
-Screenshots taken on 29 October 2026: [screens/](screens/) holds `sc-*.png`, each error on suttacentral.net outlined
+Screenshots taken on 29 October 2026: [screens/](https://github.com/dhammagift/offline-data/tree/main/dhammagift/root/build/compare/sc-report/screens) holds `sc-*.png`, each error on suttacentral.net outlined
 in red, and `ed-*.png`, the correct reading outlined in green on the linked page of each edition
-([screens.js](screens.js), [check_links.js](check_links.js) make them again). The 84000.org pages are behind a
+([screens.js](https://github.com/dhammagift/offline-data/blob/main/dhammagift/root/build/compare/sc-report/screens.js), [check_links.js](https://github.com/dhammagift/offline-data/blob/main/dhammagift/root/build/compare/sc-report/check_links.js) make them again). The 84000.org pages are behind a
 Cloudflare check and were not opened by the script.
 
 ## 1. Readings that change the meaning
@@ -49,14 +49,14 @@ sn35.19:2.2 and 2.6, which correctly read `nābhinandati … parimutto`.
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral sn35.19:2.9](screens/sc-sn35_19_2_9.png)
-![SuttaCentral sn35.20:2.2](screens/sc-sn35_20_2_2.png)
-![SuttaCentral sn35.20:2.8](screens/sc-sn35_20_2_8.png)
+![SuttaCentral sn35.19:2.9](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn35_19_2_9.png)
+![SuttaCentral sn35.20:2.2](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn35_20_2_2.png)
+![SuttaCentral sn35.20:2.8](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn35_20_2_8.png)
 
 The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
 
-![Mahāsaṅgīti 2005 sn35.19](screens/ed-sn35.19-ms2005.png)
-![Mahāsaṅgīti 2005 sn35.20](screens/ed-sn35.20-ms2005.png)
+![Mahāsaṅgīti 2005 sn35.19](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-sn35.19-ms2005.png)
+![Mahāsaṅgīti 2005 sn35.20](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-sn35.20-ms2005.png)
 
 ### dn33:1.11.85, dn33:1.11.91: `Idha, bhikkhave` for `Idhāvuso`
 
@@ -81,12 +81,12 @@ bhāvanāpadhānaṁ?`). `bhikkhave` is the Buddha's address.
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral dn33:1.11.85](screens/sc-dn33_1_11_85.png)
-![SuttaCentral dn33:1.11.91](screens/sc-dn33_1_11_91.png)
+![SuttaCentral dn33:1.11.85](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-dn33_1_11_85.png)
+![SuttaCentral dn33:1.11.91](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-dn33_1_11_91.png)
 
 The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
 
-![Mahāsaṅgīti 2005 dn33](screens/ed-dn33-ms2005.png)
+![Mahāsaṅgīti 2005 dn33](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-dn33-ms2005.png)
 
 ### sn22.7:8.2–8.3: two segments in the wrong order
 
@@ -110,11 +110,11 @@ before 8.2, which ends the sentence with a full stop.
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral sn22.7:8.2–8.3](screens/sc-sn22_7_8_2.png)
+![SuttaCentral sn22.7:8.2–8.3](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn22_7_8_2.png)
 
 The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
 
-![Mahāsaṅgīti 2005 sn22.7](screens/ed-sn22.7-ms2005.png)
+![Mahāsaṅgīti 2005 sn22.7](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-sn22.7-ms2005.png)
 
 ### pli-tv-bu-vb-ss13:2.8: `vā` missing
 
@@ -137,11 +137,11 @@ Buddha Jayanti and Syāmaraṭṭha read `veḷunā vā`, also with `vā`.
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral pli-tv-bu-vb-ss13:2.8](screens/sc-pli-tv-bu-vb-ss13_2_8.png)
+![SuttaCentral pli-tv-bu-vb-ss13:2.8](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-pli-tv-bu-vb-ss13_2_8.png)
 
 The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
 
-![Mahāsaṅgīti 2005 ss13](screens/ed-ss13-ms2005.png)
+![Mahāsaṅgīti 2005 ss13](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-ss13-ms2005.png)
 
 ### pli-tv-pvr5:122.4: `ammukhāvinayena` for `sammukhāvinayena`
 
@@ -163,11 +163,11 @@ A lost first letter in the name of the first of the seven ways of settling dispu
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral pli-tv-pvr5:122.4](screens/sc-pli-tv-pvr5_122_4.png)
+![SuttaCentral pli-tv-pvr5:122.4](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-pli-tv-pvr5_122_4.png)
 
 The printed Mahāsaṅgīti (tipitaka2500.github.io), the correct reading outlined in green:
 
-![Mahāsaṅgīti 2005 pvr5](screens/ed-pvr5-ms2005.png)
+![Mahāsaṅgīti 2005 pvr5](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/ed-pvr5-ms2005.png)
 
 ## 2. English text inside the Pali
 
@@ -182,9 +182,9 @@ Three Pali segments contain an editorial note instead of text. The printed editi
 
 SuttaCentral today, the error outlined in red:
 
-![SuttaCentral sn48.137-146:1.1](screens/sc-sn48_137-146_1_1.png)
-![SuttaCentral sn48.147-158:1.1](screens/sc-sn48_147-158_1_1.png)
-![SuttaCentral sn50.67-76:1.1](screens/sc-sn50_67-76_1_1.png)
+![SuttaCentral sn48.137-146:1.1](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn48_137-146_1_1.png)
+![SuttaCentral sn48.147-158:1.1](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn48_147-158_1_1.png)
+![SuttaCentral sn50.67-76:1.1](https://raw.githubusercontent.com/dhammagift/offline-data/main/dhammagift/root/build/compare/sc-report/screens/sc-sn50_67-76_1_1.png)
 
 ## How this was found
 
@@ -195,6 +195,6 @@ editions by hand.
 
 Of the 1 933 660 words of `ms` (DN, MN, SN, AN, KN, Vinaya), all but these few are the words of the printed
 edition, apart from spacing, punctuation and SC's ṅ for ṃ before k, g. Places where the Mahāsaṅgīti itself
-stands against all other editions are listed in [2-other-differences.md](2-other-differences.md).
+stands against all other editions are listed in [2-other-differences.md](https://github.com/dhammagift/offline-data/blob/main/dhammagift/root/build/compare/sc-report/2-other-differences.md).
 
 Data and code: https://github.com/dhammagift/offline-data/tree/main/dhammagift/root/build
