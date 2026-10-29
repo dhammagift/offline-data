@@ -458,6 +458,7 @@ async function connect() {
 
 /* ---------- navigation ---------- */
 async function go(target) {
+  if (target && target.includes('--')) target = await fromSlug(target) || target;
   const book = pageOf(target || '') || state.book || state.index[0].book;
   if (book !== state.book) {
     state.book = book; store('book', book);
@@ -468,6 +469,27 @@ async function go(target) {
   const el = target && (document.getElementById('r:' + target) || document.getElementById('s:' + target) || findSutta(target));
   if (el) { el.scrollIntoView({ block: 'center' }); el.animate?.([{ outline: '2px solid var(--flag)' }, { outline: '2px solid transparent' }], { duration: 1600 }); }
   else if (target === book) window.scrollTo({ top: 0 });
+}
+/* a segment in a link: only letters, digits and hyphens pass a link's #, so sn35.19:2.9 is sn35-19--2-9; a hyphen
+   in the sutta part is a dot or a hyphen (sn48.137-146), tried in that order */
+async function fromSlug(slug) {
+  const [sp, seg] = slug.split('--');
+  const m = sp.match(/^([a-z-]*?[a-z])(\d[\d-]*)$/);
+  if (!m || !seg) return null;
+  const nums = m[2].split('-');
+  for (let mask = 0; mask < 1 << (nums.length - 1); mask++) {
+    const key = m[1] + nums.reduce((a, n, i) => a + (i ? (mask >> (i - 1) & 1 ? '-' : '.') : '') + n, '') + ':' + seg.replace(/-/g, '.');
+    const book = pageOf(key);
+    if (!book) continue;
+    if (book !== state.book) {
+      state.book = book; store('book', book);
+      renderNav();
+      $('grid').innerHTML = '<div class="status">Загрузка…</div>';
+      await render();
+    }
+    if (document.getElementById('r:' + key)) return key;
+  }
+  return null;
 }
 /* the page that holds a target: a page id (sn45, ja-p3), a sutta file id (dhp1-20, ja547) or a sutta in a range
    file (an1.5 in an1.1-10, dhp5 in dhp1-20); a segment key works through its sutta */
