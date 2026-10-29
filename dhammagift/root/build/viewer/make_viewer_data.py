@@ -74,11 +74,10 @@ for pid, coll, label, files in pages:
         for e in EDS:
             p = f'{DG}/root/pli/{e}/{sub}/{base}_root-pli-{e}.json'
             eds[e] = json.load(open(p)) if os.path.exists(p) else {}
-            for kind, store in (('variant', var), ('reference', ref)):
-                q = f'{DG}/{kind}/pli/{e}/{sub}/{base}_{kind}-pli-{e}.json'
-                if os.path.exists(q):
-                    store[e] = json.load(open(q))
-        q = f'{DG}/variant/pli/ms/{sub}/{base}_variant-pli-ms.json'  # the project's readings of ms (collate.py)
+            q = f'{DG}/reference/pli/{e}/{sub}/{base}_reference-pli-{e}.json'
+            if os.path.exists(q):
+                ref[e] = json.load(open(q))
+        q = f'{DG}/variant/pli/ms/{sub}/{base}_variant-pli-ms.json'  # all readings, footnotes included (collate.py)
         if os.path.exists(q):
             var['ms'] = json.load(open(q))
         rows = []

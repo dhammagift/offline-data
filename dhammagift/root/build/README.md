@@ -16,7 +16,7 @@ the ids and the segmentation.
 
 ```
 dhammagift/root/pli/<ed>/sutta/sn/sn1/sn1.1_root-pli-<ed>.json        text
-dhammagift/variant/pli/<ed>/sutta/sn/sn1/sn1.1_variant-pli-<ed>.json  readings of the edition's footnotes / <note>
+dhammagift/variant/pli/ms/sutta/sn/sn1/sn1.1_variant-pli-ms.json       readings of all editions, footnotes included
 dhammagift/reference/pli/<ed>/sutta/sn/sn1/sn1.1_reference-pli-<ed>.json  pages and paragraph numbers
 dhammagift/root/pli/<ed>/vinaya/pli-tv-bu-vb/pli-tv-bu-vb-pj/pli-tv-bu-vb-pj1_root-pli-<ed>.json  Vinaya, SC folders
 dhammagift/root/pli/my/vinaya/pli-tv-bu-pm_root-pli-my.json                                       Pātimokkha
@@ -123,7 +123,7 @@ curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/r
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
   --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
-  --out dhammagift --only dn,mn,sn,an,kn,vinaya --report dhammagift/root/build/report.tsv
+  --out dhammagift --notes notes --only dn,mn,sn,an,kn,vinaya --report dhammagift/root/build/report.tsv
 ```
 
 Done: DN, MN, SN, AN, KN, the whole Vinaya: Vibhaṅga (Bhikkhu, Bhikkhunī), Pātimokkha, Khandhaka (kd1-22),
@@ -202,10 +202,13 @@ first. About 197 700 readings: bj 88 700, sya-all 94 200, cck 4 800, ms2005 15. 
 siglum here, not one more folder.
 
 ```
-python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso
+python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes
 ```
 
-The editions' own footnotes stay with their text (`variant/pli/bjt`, `my`, `th`).
+The editions' own footnotes (`build_editions.py --notes notes`, outside the repo) go into the same file after the
+collation, with the edition and the sources the note names: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṁ, syā)`,
+`(cck: sī. pī.)`, `(sya-all: yu.)`; a note naming no source is `(bj note)`. About 50 300. Pages and paragraph numbers
+are not readings and stay in `reference/pli/<ed>`.
 
 ## Viewer
 

@@ -1116,6 +1116,9 @@ def align_book(toks, body, before):
         matched |= {lo + k for k in sm}
     return assign, score, matched
 
+NOTES = None
+
+
 def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     segs_all, keys_all = [], []
     files = []
@@ -1234,7 +1237,8 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         n_full += sum(1 for v in root.values() if v)
         write(os.path.join(out_dir, 'root', 'pli', ed, rel, f'{base}_root-pli-{ed}.json'), root)
         v = {k: ' | '.join(vars_[k]) for k in keys if vars_[k]}
-        write_or_drop(os.path.join(out_dir, 'variant', 'pli', ed, rel, f'{base}_variant-pli-{ed}.json'), v)
+        write_or_drop(os.path.join(NOTES or os.path.join(out_dir, 'variant', 'pli'), ed, rel,
+                                   f'{base}_variant-pli-{ed}.json'), v)  # the edition's footnotes: collate.py
         r = {k: ', '.join(refs[k]) for k in keys if refs[k]}
         write_or_drop(os.path.join(out_dir, 'reference', 'pli', ed, rel, f'{base}_reference-pli-{ed}.json'), r)
     # every edition word must be somewhere, once, in order inside its sutta (a sutta printed elsewhere moves whole)
@@ -1476,8 +1480,11 @@ def main():
     ap.add_argument('--report')
     ap.add_argument('--eds', default='bjt,my,th', help='editions to build; mso = Mahāsaṅgīti as printed, for comparison')
     ap.add_argument('--mso', help='tipitaka2500.github.io/tipitaka (World Tipiṭaka 2005), for --eds mso')
+    ap.add_argument('--notes', help="folder for the editions' footnotes, which collate.py puts into variant/pli/ms")
     a = ap.parse_args()
     eds = set(a.eds.split(','))
+    global NOTES
+    NOTES = a.notes
     MS_DIR = a.ms
     report = []
     asked = {b if c in ('kn', 'vinaya') else f'{c}{b}' for c, b in parse_only(a.only)}

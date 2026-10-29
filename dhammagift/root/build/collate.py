@@ -12,12 +12,19 @@ is no variant. Left out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, sp
 passage printed in full), and readings SC already gives for that edition. The project's own readings
 (variant_own.json, from the old site) come first.
 
-usage: collate.py BILARA_ROOT_PLI_MS BILARA_VARIANT_PLI_MS DHAMMAGIFT_DIR [MSO_ROOT_PLI_MSO]
+The editions' own footnotes (build_editions.py --notes) go in too, after the collation, marked with the edition and
+its sources: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṃ, syā)` (BJT's note: so the Chaṭṭha Saṅgāyana and Siam
+Rath read), `(cck: ka.)`, `(sya-all: yu.)`; a note that names no source is `(bj note)`.
+
+usage: collate.py BILARA_ROOT_PLI_MS BILARA_VARIANT_PLI_MS DHAMMAGIFT_DIR MSO_ROOT_PLI_MSO|- NOTES_DIR
 """
 import collections, difflib, glob, json, os, re, sys, unicodedata
 
 MS, SCVAR, DG = sys.argv[1:4]
-MSO = sys.argv[4] if len(sys.argv) > 4 else None
+MSO = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != '-' else None
+NOTES = sys.argv[5] if len(sys.argv) > 5 else None
+NOTE_ED = [('bjt', 'bj'), ('my', 'cck'), ('th', 'sya-all')]
+TH_SRC = re.compile(r'^((?:(?:ma|yu|sī|syā|ka|machasaṃ|pī|kaṃ)\.?\s*)+)\s')
 SIGLA = [('bj', os.path.join(DG, 'root', 'pli', 'bjt'), 'bjt'), ('cck', os.path.join(DG, 'root', 'pli', 'my'), 'my'),
          ('sya-all', os.path.join(DG, 'root', 'pli', 'th'), 'th')] + ([('ms2005', MSO, 'mso')] if MSO else [])
 PEYYALA = {'pe', 'la', 'pa', 'peyyālo'}
@@ -158,7 +165,28 @@ for p in glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursive=True)
 target = os.path.join(DG, 'variant', 'pli', 'ms')
 for old in glob.glob(os.path.join(target, '**', '*_variant-pli-ms.json'), recursive=True):
     os.remove(old)  # written anew from variant_own.json and the collation
-for rel in sorted(set(new_entries) | set(own_rel)):
+notes = collections.defaultdict(dict)  # rel -> {key: [entry]}
+if NOTES:
+    for ed, siglum in NOTE_ED:
+        for q in glob.glob(os.path.join(NOTES, ed, '**', f'*_variant-pli-{ed}.json'), recursive=True):
+            rel = os.path.relpath(q, os.path.join(NOTES, ed)).replace(f'_variant-pli-{ed}.json', '_root-pli-ms.json')
+            for key, text in json.load(open(q, encoding='utf-8')).items():
+                for part in text.split(' | '):
+                    lemma, _, rest = (x.strip().replace('ṃ', 'ṁ') for x in part.partition('→'))
+                    if not _:
+                        continue
+                    rs = re.findall(r'\s*([^();,][^()]*?)\s*\(([^()]*)\)\s*[;,]?', rest)
+                    flat = lambda x: re.sub(r'[\s;,]', '', x)
+                    if not rs or flat(''.join(f'{r}({s})' for r, s in rs)) != flat(rest):
+                        rs = [(rest, '')]  # else several readings, each with its sources: "a (sī.), b (syā.)"
+                    out_ = []
+                    for reading, src in rs:
+                        t = TH_SRC.match(reading + ' ') if not src else None
+                        if t:  # Siam Rath writes the source first: "yu. kāraṃviyaṃ."
+                            src, reading = t.group(1).strip(), reading[t.end() - 1:].strip()
+                        out_.append(reading.rstrip('.').strip() + f' ({siglum}' + (f': {src.strip()})' if src.strip() else ' note)'))
+                    notes[rel].setdefault(key, []).append(f'{lemma} → ' + '; '.join(out_))
+for rel in sorted(set(new_entries) | set(own_rel) | set(notes)):
     out = os.path.join(target, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     merged = dict(own_rel.get(rel, {}))
     for key, by_lemma in new_entries.get(rel, {}).items():
@@ -167,6 +195,11 @@ for rel in sorted(set(new_entries) | set(own_rel)):
         for rs in by_lemma.values():
             for _, s_ in rs:
                 count[s_] += 1
+    for key, es in notes.get(rel, {}).items():
+        merged[key] = ' | '.join(([merged[key]] if key in merged else []) + es)
+        count['notes'] += len(es)
+    if not os.path.exists(os.path.join(MS, rel)):
+        continue
     ms_keys = list(json.load(open(os.path.join(MS, rel), encoding='utf-8')))
     merged = {k: merged[k] for k in ms_keys if k in merged}
     os.makedirs(os.path.dirname(out), exist_ok=True)
