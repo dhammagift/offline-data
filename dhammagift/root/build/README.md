@@ -254,7 +254,7 @@ reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single f
 abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
 marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
-About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005 15. The Paṭṭhāna's
+About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005 7. The Paṭṭhāna's
 `saṅkhittaṁ` ("abbreviated") is a peyyāla mark.
 
 ```
