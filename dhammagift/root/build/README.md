@@ -162,6 +162,30 @@ Empty segments are mostly where the edition itself has no text there (peyyāla, 
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
 neighbouring segments.
 
+## SC ms against the Mahāsaṅgīti as printed
+
+`ms` is the Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (World Tipiṭaka, Dhamma Society 2005) as SuttaCentral edited it.
+For comparison only (not part of the data), the printed text, reconstructed by
+[tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) (CC0), is built on the same ids:
+
+```
+git clone --depth 1 https://github.com/tipitaka2500/tipitaka2500.github.io
+python3 dhammagift/root/build/build_editions.py ... --mso tipitaka2500.github.io/tipitaka --eds mso --out compare
+python3 dhammagift/root/build/compare/compare_ms.py bilara-data/root/pli/ms compare/root/pli/mso dhammagift/root/build/compare/ms-orig.tsv
+```
+
+Of 1 930 512 words of `ms` (DN, MN, SN, AN, KN, Vinaya but the Pātimokkha, which is none of the 40 volumes) all but
+a few hundred are the printed words. What SC changed: `ṅ` for the printed `ṃ` before k, g (`saṃgha` → `saṅgha`,
+in 8 757 segments), also across words it joins (`yadidaṃ kalyāṇamittatā` → `yadidaṅkalyāṇamittatā`); spacing
+(`dvālopikope` → `dvālopiko …pe…`, `āhāreti iti` → `āhāretiiti`, 5 148 places); `ṁ`; punctuation, capitals and its
+own headings (the printed headings stand inside its text: `dn34` `dve dhammā`, the Vinaya word glosses). Words that
+differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed `idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`,
+printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
+`an1.439-446` printed `ānāmi` for `jānāmi` (a typo of the print or of the reconstruction); `sn48.137-146:1.1`,
+`sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only` in the Pali;
+`snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana (`snp5.2`).
+The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
+
 ## Viewer
 
 A whole book on one page, the four Pali texts side by side, variant readings by majority of BJT / Myanmar / Thai
