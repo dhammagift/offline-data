@@ -244,8 +244,8 @@ Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. PTS prints no end 
 what the alignment put on one goes to the neighbour it belongs to, the start of the next segment or the end of the
 one before. The PTS apparatus, the footnotes of the annotated version (`*ou.htm`:
 the manuscripts' readings, `S1-3 rūpaṃ . . . aniccaṃ`), goes into the variants: `pts_notes.py` matches the annotated
-text word by word with `root/pli/pts` and puts each note on the segment of its word (61 800 of 66 900 notes; the rest
-stand on titles PTS root leaves out). MN 1-76, Thera- and Therīgāthā, Khuddakapāṭha, Milinda, Mahāvagga, Cullavagga
+text word by word with `root/pli/pts` and puts each note on the segment of its word (61 900 of 66 900 notes; the rest
+stand on titles PTS root leaves out; the 52 000 notes on the Jātaka commentary have no place). MN 1-76, Thera- and Therīgāthā, Khuddakapāṭha, Milinda, Mahāvagga, Cullavagga
 and Dhātukathā have no notes in GRETIL.
 
 ```
@@ -265,7 +265,7 @@ reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single f
 abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
 marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
-About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005 7. The Paṭṭhāna's
+About 267 000 readings: bj 95 100, sya-all 86 500, pts 82 100, cck 3 500, ms2005 7. The Paṭṭhāna's
 `saṅkhittaṁ` ("abbreviated") is a peyyāla mark.
 
 ```
@@ -274,7 +274,7 @@ python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/var
 
 The editions' own footnotes (`build_editions.py --notes notes`, outside the repo) go into the same file after the
 collation, with the edition and the sources the note names: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṁ, syā)`,
-`(cck: sī. pī.)`, `(sya-all: yu.)`; a note naming no source is `(bj note)`; the PTS apparatus as printed, `(pts note)`. About 113 800 (PTS 61 800). Pages and paragraph numbers
+`(cck: sī. pī.)`, `(sya-all: yu.)`; a note naming no source is `(bj note)`; the PTS apparatus as printed, `(pts note)`. About 113 900 (PTS 61 900). Pages and paragraph numbers
 are not readings and stay in `reference/pli/<ed>`.
 
 ## Viewer
