@@ -107,6 +107,12 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   heading keeps only its title, and edition text after it that is the next segment's goes there (BJT
   patthana1.2:6.0 `ārammaṇa kusalañca dhammaṃ paṭicca …`).
 - Bare numbers are not used to align (`dn29:8.0` Thai `3`).
+- A heading ms repeats as the first words of its text (`patthana2.1:41` `Hetu` / `Hetu dhammo …`, `dn34:1.2` `Eko
+  dhammo` / `Eko, āvuso, dhammo …`) stays in the text of an edition that prints those words once.
+- A boundary a few words off goes back: the start of the next ms segment at the end of this one, or the end of the one
+  before at its start, goes over when the neighbour lacks those words and both segments then read closer to ms
+  (BJT `dn2:70.1` `… balamattā, so aparena samayena …`; spacing and ṃ/ñ aside, `bhattañcassa` = `bhattaṁ cassa`).
+  Left as they are: BJT quotes glued to the next word (`dn23:23.48` `evamāha’purato`, `thig13.4:7.1`).
 - An ms `Namo tassa…` that opens a sutta takes no edition words but the edition's own Namo tassa: words that are
   not (the first line of the text, `ya2.1.1:1.1`; `vv1:1.1` Thai `pīṭhante`) go on to the next segment, and an
   edition Namo tassa printed in the next title line comes back with the title before it (Siam Rath Paṭṭhāna
