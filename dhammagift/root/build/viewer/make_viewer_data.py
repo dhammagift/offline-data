@@ -78,6 +78,9 @@ for pid, coll, label, files in pages:
                 q = f'{DG}/{kind}/pli/{e}/{sub}/{base}_{kind}-pli-{e}.json'
                 if os.path.exists(q):
                     store[e] = json.load(open(q))
+        q = f'{DG}/variant/pli/mso/{sub}/{base}_variant-pli-mso.json'  # the Mahāsaṅgīti as printed, where SC ms differs
+        if os.path.exists(q):
+            var['ms'] = json.load(open(q))
         rows = []
         for k, v in ms.items():
             rows.append([k, v.strip()] + [eds[e].get(k, '').strip() for e in EDS])

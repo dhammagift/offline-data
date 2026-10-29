@@ -186,6 +186,16 @@ printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena`
 `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana (`snp5.2`).
 The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
+The text of the print is not in the data; its readings where its words differ from SC ms are, as variants of ms:
+`dhammagift/variant/pli/mso/.../<file>_variant-pli-mso.json`, `"aparimutto → parimutto (Mahāsaṅgīti 2005; bjt, my, th)"`,
+with the editions that read as the print (`compare_ms.py ... dhammagift`). Left out: `ṅ`/`ṃ`, spacing, the print's
+headings, numbers and lines it has in another segment. 18 in all: SC differs from the print and all three editions
+in `dn33:1.11.85, 91` (`idha bhikkhave`, Sāriputta speaking: `idhāvuso`), `sn35.19:2.9`, `sn35.20:2.2, 2.8`
+(`aparimutto` for `parimutto` in "yo dukkhaṃ nābhinandati, parimutto so dukkhasmā"), `pvr5:122.4`
+(`ammukhāvinayena`); SC lacks `vā` after `veḷuyā` in `pli-tv-bu-vb-ss13:2.8` (VRI has it, BJT and Siam Rath read
+`veḷunā vā`); the print is wrong in `an1.439-446` (`ānāmi`). The viewer shows them under the ms column with the
+readings ("разночтения и страницы").
+
 ## Viewer
 
 A whole book on one page, the four Pali texts side by side, variant readings by majority of BJT / Myanmar / Thai
