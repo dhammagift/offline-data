@@ -13,7 +13,8 @@ footnotes / <note> readings to variant/, page and paragraph numbers to reference
 
 usage: build_editions.py --bjt DIR --vri DIR --ms DIR --out DIR [--only sn1-10,sn45-49,an1,an2]
 """
-import argparse, bisect, collections, difflib, glob, json, os, re, sys, unicodedata
+import argparse
+import html, bisect, collections, difflib, glob, json, os, re, sys, unicodedata
 import xml.etree.ElementTree as ET
 
 # ---------------------------------------------------------------- Sinhala -> Roman
@@ -423,6 +424,46 @@ def vri_stream(path, chunk_div=None):
         except Stop:
             pass
     return chunks
+
+
+# ---------------------------------------------------------------- Mahāsaṅgīti as printed (World Tipiṭaka 2005)
+
+def t2500_pages(vol_dir):
+    """the pages of a volume of tipitaka2500.github.io in reading order: a page, then the pages under it"""
+    def num(name):
+        return [int(x) for x in re.findall(r'\d+', name)]
+
+    def walk(d):
+        for f in sorted((f for f in os.listdir(d) if f.endswith('.html')), key=num):
+            yield os.path.join(d, f)
+            sub = os.path.join(d, f[:-5])
+            if os.path.isdir(sub):
+                yield from walk(sub)
+    yield vol_dir + '.html'
+    yield from walk(vol_dir)
+
+
+def t2500_stream(vol_dirs):
+    """Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (Dhamma Society 2005), as reconstructed by tipitaka2500.github.io
+    (CC0): the text SC ms comes from, before SC's edits. For comparison only."""
+    st = Stream()
+    for vol in vol_dirs:
+        for path in t2500_pages(vol):
+            t = open(path, encoding='utf-8').read()
+            t = t[t.find('<div class="container overflow-scroll">'):t.find('<div class="fixed_bottom')]
+            t = re.sub(r'<nav.*?</nav>|<div class="m-4 p-4.*?</div>|<ul class="list-group.*?</ul>', '', t, flags=re.S)
+            for m in re.finditer(r'<(h3|p)([^>]*)>(.*?)</\1>', t, flags=re.S):
+                tag, attr, inner = m.groups()
+                para = re.search(r'text-bg-secondary[^>]*>\s*(\d+(?:-\d+)?)\.?\s*<', inner)
+                inner = re.sub(r'<span class="badge[^>]*>.*?</span>', '', inner, flags=re.S)
+                text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', inner)).split())
+                if not text:
+                    continue
+                if tag == 'h3' or re.search(r'text-center h[13]', attr):
+                    st.heading(text, head_class(text))
+                else:
+                    st.body(text, [(0, 'para', para.group(1))] if para else [])
+    return st
 
 
 # ---------------------------------------------------------------- Thai (Siam Rath 1927, E-Tipitaka palinew.sqlite)
@@ -1361,6 +1402,23 @@ def groups():
         yield 'vinaya', books, bjt, vri
 
 
+T2500_KN = {'kp': ['18Kh'], 'dhp': ['18Dh'], 'ud': ['18Ud'], 'iti': ['18It'], 'snp': ['18Sn'], 'vv': ['19Vv'],
+            'pv': ['19Pv'], 'thag': ['19Th1'], 'thig': ['19Th2'], 'tha-ap': ['20Ap1', '20Ap2'], 'bv': ['21Bu'],
+            'cp': ['21Cp'], 'ja': ['22J', '23J'], 'mnd': ['24Mn'], 'cnd': ['25Cn'], 'ps': ['26Ps'], 'mil': ['28Mi'],
+            'ne': ['27Ne'], 'pe': ['27Pe'], 'pli-tv-bu-vb-pj': ['1V'], 'pli-tv-bu-vb-pc': ['2V'], 'pli-tv-kd': ['3V', '4V'],
+            'pli-tv-pvr': ['5V']}
+
+
+def t2500_volumes(coll, inside):
+    """World Tipiṭaka volumes of a group (the Pātimokkha is none of its 40 volumes)"""
+    if coll in VOLUMES:
+        n = [lo for lo, _, _, _ in VOLUMES[coll]].index(int(re.findall(r'\d+', inside[0])[0]))
+        return {'dn': ['6D', '7D', '8D'], 'mn': ['9M', '10M', '11M'],
+                'sn': ['12S1', '12S2', '13S3', '13S4', '14S5'],
+                'an': ['15A1', '15A2', '15A3', '15A4', '16A5', '16A6', '16A7', '17A8', '17A9', '17A10', '17A11']}[coll][n]
+    return T2500_KN.get(inside[0], [])
+
+
 def coll_of(book):
     if book in VINAYA_BOOKS:
         return 'vinaya'
@@ -1416,7 +1474,10 @@ def main():
     ap.add_argument('--thai', help='E-Tipitaka palinew.sqlite (Siam Rath 1927)')
     ap.add_argument('--ref', help='bilara-data reference/pli/ms/sutta, for Siam Rath volumes')
     ap.add_argument('--report')
+    ap.add_argument('--eds', default='bjt,my,th', help='editions to build; mso = Mahāsaṅgīti as printed, for comparison')
+    ap.add_argument('--mso', help='tipitaka2500.github.io/tipitaka (World Tipiṭaka 2005), for --eds mso')
     a = ap.parse_args()
+    eds = set(a.eds.split(','))
     MS_DIR = a.ms
     report = []
     asked = {b if c in ('kn', 'vinaya') else f'{c}{b}' for c, b in parse_only(a.only)}
@@ -1426,13 +1487,19 @@ def main():
             continue
         ms = [p for b in inside for p in ms_files(a.ms, coll, b)]
         label = inside[0] if len(inside) == 1 else f'{inside[0]}-{inside[-1]}'
-        if bjt_prefixes:
+        if bjt_prefixes and 'bjt' in eds:
             files = [f for pre in bjt_prefixes for f in bjt_book_files(a.bjt, pre)]
             place(bjt_stream(files)[0], ms, 'bjt', a.out, label, report, books)
             log(report)
-        place(vri_stream([os.path.join(a.vri, f) for f in vri_files])[0], ms, 'my', a.out, label, report, books)
-        log(report)
-    if a.thai:
+        if 'my' in eds:
+            place(vri_stream([os.path.join(a.vri, f) for f in vri_files])[0], ms, 'my', a.out, label, report, books)
+            log(report)
+        vols = t2500_volumes(coll, inside) if 'mso' in eds else []
+        if vols:
+            vols = [vols] if isinstance(vols, str) else vols
+            place(t2500_stream([os.path.join(a.mso, v) for v in vols]), ms, 'mso', a.out, label, report, books)
+            log(report)
+    if a.thai and 'th' in eds:
         # SC books joined by the Siam Rath volumes they share (ja spans two, Apadāna and Bv/Cp share one)
         for coll in sorted({coll_of(b) for b in asked}):
             vols = {b: sya_volumes(a.ref, coll, b) for b in books_of(coll)}
