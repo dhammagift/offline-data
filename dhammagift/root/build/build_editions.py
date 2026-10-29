@@ -1266,6 +1266,9 @@ def align_book(toks, body, before):
 NOTES = None
 
 
+PEYYALA_ANY = re.compile(r'…\s*(pe|la|pa)\s*…|\bpe\b|-pe-|\.\.\.pe', re.I)
+
+
 def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     segs_all, keys_all = [], []
     files = []
@@ -1437,6 +1440,46 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
                 if sum(w in ms_words(nxt)[:10] for w in rest) >= 0.6 * len(rest):
                     end = ix[len(want) - 1] + 1
                     text[k], text[nxt] = [' '.join(ws[:end])], [' '.join(ws[end:])] + text[nxt]
+    # a boundary a few words off: an edition that prints no stop between two ms segments (BJT dn2:70.1 `… balamattā,
+    # so aparena samayena …`) can have the start of the next segment at the end of this one, or the end of the one
+    # before at its start. Those words go over when the neighbour lacks them and both segments then read closer to ms.
+    def ed_words(k):
+        return [w for w in map(norm, ' '.join(text[k]).split()) if w]
+
+    def fit(k, ws):
+        return difflib.SequenceMatcher(None, ms_words(k), ws, autojunk=False).ratio() if ws else 0.0
+
+    def plain(k):
+        return text[k] and not head_key(k) and not PEYYALA_ANY.search(' '.join(text[k]) + ' ' + ms_text.get(k, ''))
+    def loose(ws):  # spacing and ṃ/ñ before a consonant aside: `bhattañcassa` is `bhattaṁ cassa`
+        return re.sub(r'[mn](?=[^aeiou]|$)', 'n', ''.join(ws))
+
+    def same(xs, ys):  # the words xs are the words ys[:m] for some m: that m, else 0
+        lx = loose(xs)
+        return next((m for m in range(1, len(ys) + 1) if loose(ys[:m]) == lx), 0)
+    for i in range(len(allk) - 1):
+        k, nxt = allk[i], allk[i + 1]
+        if sutta_of(k) != sutta_of(nxt) or not (plain(k) and plain(nxt)):
+            continue
+        a, b, ma, mb = ed_words(k), ed_words(nxt), ms_words(k), ms_words(nxt)
+        for n in range(min(12, len(a) - 1), 0, -1):  # the end of k is the start of nxt
+            m = same(a[-n:], mb[:n + 3])
+            if m and len(loose(a[-n:])) >= 6 and loose(ma[-m:]) != loose(mb[:m]) and not same(b[:n + 3], mb[:m]) \
+                    and fit(k, a[:-n]) + fit(nxt, mb[:m] + b) > fit(k, a) + fit(nxt, b) + 0.05:
+                ws = ' '.join(text[k]).split()
+                cut = [j for j, w in enumerate(ws) if norm(w)][-n]
+                text[k], text[nxt] = [' '.join(ws[:cut])], [' '.join(ws[cut:])] + text[nxt]
+                break
+        a, b = ed_words(k), ed_words(nxt)
+        for n in range(min(12, len(b) - 1), 0, -1):  # the start of nxt is the end of k
+            mm = next((x for x in range(1, min(len(ma), n + 3) + 1) if loose(ma[-x:]) == loose(b[:n])), 0)
+            if mm and len(loose(b[:n])) >= 6 and loose(mb[:mm]) != loose(ma[-mm:]) and \
+                    not any(loose(a[-x:]) == loose(b[:n]) for x in range(1, n + 4)) \
+                    and fit(k, a + ma[-mm:]) + fit(nxt, b[n:]) > fit(k, a) + fit(nxt, b) + 0.05:
+                ws = ' '.join(text[nxt]).split()
+                cut = [j for j, w in enumerate(ws) if norm(w)][n - 1] + 1
+                text[k], text[nxt] = text[k] + [' '.join(ws[:cut])], [' '.join(ws[cut:])]
+                break
     if ed == 'pts':
         # PTS prints no end lines (`Apaṇṇakajātakaṁ paṭhamaṁ.`, `Majjhimo paṇṇāsako.`): what fell on one belongs to a
         # neighbour, the start of the next segment's text or the end of the one before (ja163:3.1 `Yan nu`)
