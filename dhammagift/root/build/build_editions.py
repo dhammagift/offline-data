@@ -14,7 +14,7 @@ footnotes / <note> readings to variant/, page and paragraph numbers to reference
 usage: build_editions.py --bjt DIR --vri DIR --ms DIR --out DIR [--only sn1-10,sn45-49,an1,an2]
 """
 import argparse
-import html, bisect, collections, difflib, glob, json, os, re, sys, unicodedata
+import html, bisect, collections, difflib, glob, itertools, json, os, re, sys, unicodedata
 import xml.etree.ElementTree as ET
 
 # ---------------------------------------------------------------- Sinhala -> Roman
@@ -476,23 +476,46 @@ def t2500_pages(vol_dir):
     yield from pages
 
 
+# typos of the reconstruction, against the print and every other edition
+T2500_FIXES = [('‘ānāmi passāmī’', '‘jānāmi passāmī’')]  # an1.439-446
+
+
 def t2500_stream(vol_dirs):
     """Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (Dhamma Society 2005), as reconstructed by tipitaka2500.github.io
     (CC0): the text SC ms comes from, before SC's edits. For comparison only."""
     st = Stream()
     for vol in vol_dirs:
-        for path in t2500_pages(vol):
-            t = open(path, encoding='utf-8').read()
+        heads = []  # the last run of titles: the site repeats before a page, and before a paragraph inside it, the
+        for path in t2500_pages(vol):  # titles of all the sections above (Kevaṭṭasutta Bhūtanirodhesakabhikkhuvatthu,
+            t = open(path, encoding='utf-8').read()  # Hetugocchaka Hetuduka Pañhāvāra …); the print has each once
             t = t[t.find('<div class="container overflow-scroll">'):t.find('<div class="fixed_bottom')]
             t = re.sub(r'<nav.*?</nav>|<div class="m-4 p-4.*?</div>|<ul class="list-group.*?</ul>', '', t, flags=re.S)
-            for m in re.finditer(r'<(h3|p)([^>]*)>(.*?)</\1>', t, flags=re.S):
+            ms_ = list(re.finditer(r'<(h3|p)([^>]*)>(.*?)</\1>', t, flags=re.S))
+            title = [' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', m.group(3))).split()) if m.group(1) == 'h3' else None
+                     for m in ms_]
+            skip = set()
+            for i, m in enumerate(ms_):
+                if title[i] is not None and (i == 0 or title[i - 1] is None):
+                    run = list(itertools.takewhile(lambda x: x is not None, title[i:]))
+                    n = 0
+                    while n < min(len(run), len(heads)) and run[n] == heads[n]:
+                        n += 1  # the titles still open
+                    skip.update(range(i, i + n))
+                    heads = run
+            for i, m in enumerate(ms_):
+                if i in skip:
+                    continue
                 tag, attr, inner = m.groups()
                 para = re.search(r'text-bg-secondary[^>]*>\s*(\d+(?:-\d+)?)\.?\s*<', inner)
                 inner = re.sub(r'<span class="badge[^>]*>.*?</span>', '', inner, flags=re.S)
                 text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', inner)).split())
+                text = re.sub(r'([»«]) ', r'\1', text)  # the Yamaka's question marks go with the question they open
                 if not text:
                     continue
-                if tag == 'h3' or re.search(r'text-center h[13]', attr):
+                for wrong, right in T2500_FIXES:
+                    text = text.replace(wrong, right)
+                if tag == 'h3' or re.search(r'text-center h[13]', attr) and not colophon(text) or \
+                        re.fullmatch(r'Namo tassa .*buddhassa\.?', text):
                     st.heading(text, head_class(text))
                 else:
                     st.body(text, [(0, 'para', para.group(1))] if para else [])
@@ -1368,12 +1391,14 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             continue
         prev = allk[i - 1] if i and sutta_of(allk[i - 1]) == sutta_of(k) else None
         nxt = allk[i + 1] if i + 1 < len(allk) and sutta_of(allk[i + 1]) == sutta_of(k) else None
-        if text[k] and nxt and not head_key(nxt) and ms_words(nxt)[:len(want)] == want:
-            # ms repeats its heading as the first words of the text (patthana2.1:41 `Hetu` / `Hetu dhammo hetussa …`):
-            # an edition that printed those words only once printed them in the text
+        if text[k] and nxt and not head_key(nxt):
+            # ms repeats its heading as the first words of the text (patthana2.1:41 `Hetu` / `Hetu dhammo hetussa …`,
+            # dn34:1.2 `Eko dhammo` / `Eko, āvuso, dhammo …`): an edition that printed those words only once, or only
+            # the first of them, printed them in the text
             ws = ' '.join(text[k]).split()
-            if [w for w in map(norm, ws) if w] == want and \
-                    [w for w in map(norm, ' '.join(text[nxt]).split()) if w][:len(want)] != want:
+            got = [w for w in map(norm, ws) if w]
+            if got and got == ms_words(nxt)[:len(got)] and got == want[:len(got)] and \
+                    [w for w in map(norm, ' '.join(text[nxt]).split()) if w][:len(got)] != got:
                 text[k], text[nxt] = [], [' '.join(ws)] + text[nxt]
                 continue
         if not text[k]:
