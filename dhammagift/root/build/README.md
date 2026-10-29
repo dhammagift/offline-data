@@ -9,7 +9,7 @@ so a reader can switch between editions or show them side by side.
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
 
-`ms` from [bilara-data](https://github.com/suttacentral/bilara-data) `root/pli/ms/sutta` and `root/pli/ms/vinaya` gives only
+`ms` from [bilara-data](https://github.com/suttacentral/bilara-data) `root/pli/ms/sutta`, `vinaya` and `abhidhamma` gives only
 the ids and the segmentation.
 
 ## Layout
@@ -20,6 +20,7 @@ dhammagift/variant/pli/ms/sutta/sn/sn1/sn1.1_variant-pli-ms.json       readings 
 dhammagift/reference/pli/<ed>/sutta/sn/sn1/sn1.1_reference-pli-<ed>.json  pages and paragraph numbers
 dhammagift/root/pli/<ed>/vinaya/pli-tv-bu-vb/pli-tv-bu-vb-pj/pli-tv-bu-vb-pj1_root-pli-<ed>.json  Vinaya, SC folders
 dhammagift/root/pli/my/vinaya/pli-tv-bu-pm_root-pli-my.json                                       Pātimokkha
+dhammagift/root/pli/<ed>/abhidhamma/ds/ds1/ds1.1_root-pli-<ed>.json                               Abhidhamma, SC folders
 ```
 
 One file per `ms` file, same keys in the same order. A key the edition has no text for is `""`.
@@ -30,7 +31,8 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   (`ṃ`, no capitals, as printed; Thai `ฯ` is `.`, a word broken with `-` at a line end is joined),
   `my` is used as VRI gives it. Peyyāla marks are written as in `ms` in all editions: `…pe…`, `…la…`, `…pa…`
   (BJT `-pe-`, Thai `ฯเปฯ`; `...` is `…`). Typos of the source stay (`th` an1.1 `paccassosasa`, a stray `<` or `{`); a vowel sign typed before its consonant
-  or with none (BJT `ෙmathi…`, Thai `า`) is read as that vowel, Thai `บ` `ฃ` `ั` `๎` are read, tone marks dropped. Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers.
+  or with none (BJT `ෙmathi…`, Thai `า`) is read as that vowel, Thai `บ` `ฃ` `ั` `๎` are read, tone marks dropped. Only markup is removed: `**bold**`, footnote marks `{1}`, `<pb/>`, `<note>`, paragraph numbers, and in the
+  BJT Kathāvatthu the speaker marks `sa. pu:`, `pa. paṭiññā:`, `anu. pā:` (sakavādī / paravādī, question, assent).
 - Every word of the edition goes to exactly one segment; joining the segments gives the whole edition text in its order
   inside every sutta (the build stops if not). A sutta the edition prints elsewhere in the book is the one exception
   to the book order: BJT Jātaka prints Khaṇḍahāla (ms `ja544` Candakumāra) right after Nimi (`ja541`). The edition's
@@ -81,7 +83,8 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - ms `<b>…</b>` (the lemma in Niddesa, Paṭisambhidāmagga, Nettippakaraṇa) is no part of the words compared.
 - An edition title goes to the ms header it names (`sekhiyakaṇḍo` to `0.3 Sekhiyakaṇḍa`, `samaṇasaññā suttaṃ` to
   `Samaṇasaññāsutta`, not `Samaṇasaññāvagga`: the longest common start of the whole titles, leaving no more than an
-  ending), else by its class (above, vagga, sutta); in the order printed.
+  ending), a 0.x or the leading `N.0` subheading (VRI Kathāvatthu `1. Vādayuttiparihāni` to `kv1.2:1.0`), else by
+  its class (above, vagga, sutta); in the order printed.
 - A 0.x of ms that is a sentence (Vinaya `sk1:0.6` "Ime kho panāyasmanto sekhiyā dhammā uddesaṁ āgacchanti.") is text.
 - The sutta title anchors the alignment before the first text segment, after the ms subheadings that open the sutta
   (Vinaya `pc1:1.0.1` Namo, `1.0.2` Ime kho…).
@@ -93,6 +96,10 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
   `jānāhī’’ti.‘‘Suṭṭhu`).
 - Thai title lines are recognised by the last word only (`…suttaṃ`, `…vaggo`, `…kathā`); verse lines are text.
 - Bare numbers are not used to align (`dn29:8.0` Thai `3`).
+- An ms `Namo tassa…` that opens a sutta takes no edition words but the edition's own Namo tassa: words that are
+  not (the first line of the text, `ya2.1.1:1.1`; `vv1:1.1` Thai `pīṭhante`) go on to the next segment, and an
+  edition Namo tassa printed in the next title line comes back with the title before it (Siam Rath Paṭṭhāna
+  `anuloma dukattikapaṭṭhānaṃ namo tassa…`). A Namo tassa said in the text (`dn21:2.10.8`) is no opening.
 
 ## Alignment
 
@@ -118,16 +125,21 @@ Run it after every build: `python3 viewer/find_shifts.py viewer/data viewer/data
 ```
 git clone --depth 1 https://github.com/pathnirvana/tipitaka.lk
 git clone --depth 1 --filter=blob:none --sparse https://github.com/VipassanaTech/tipitaka-xml && git -C tipitaka-xml sparse-checkout set romn
-git clone --depth 1 --filter=blob:none --sparse https://github.com/suttacentral/bilara-data && git -C bilara-data sparse-checkout set root/pli/ms/sutta reference/pli/ms/sutta root/pli/ms/vinaya reference/pli/ms/vinaya
+git clone --depth 1 --filter=blob:none --sparse https://github.com/suttacentral/bilara-data && git -C bilara-data sparse-checkout set root/pli/ms/sutta reference/pli/ms/sutta root/pli/ms/vinaya reference/pli/ms/vinaya root/pli/ms/abhidhamma reference/pli/ms/abhidhamma
 curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/resources/palinew.sqlite
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
   --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
-  --out dhammagift --notes notes --only dn,mn,sn,an,kn,vinaya --report dhammagift/root/build/report.tsv
+  --out dhammagift --notes notes --only dn,mn,sn,an,kn,vinaya,abhidhamma --report dhammagift/root/build/report.tsv
 ```
 
-Done: DN, MN, SN, AN, KN, the whole Vinaya: Vibhaṅga (Bhikkhu, Bhikkhunī), Pātimokkha, Khandhaka (kd1-22),
-Parivāra (about 6 min). Not yet: Abhidhamma.
+Done: the whole canon. DN, MN, SN, AN, KN, the Vinaya: Vibhaṅga (Bhikkhu, Bhikkhunī), Pātimokkha, Khandhaka
+(kd1-22), Parivāra, and the Abhidhamma (about 8 min).
+Abhidhamma: BJT `ap-dhs`, `ap-vbh`, `ap-dhk`, `ap-pug`, `ap-kvu`, `ap-yam`, `ap-pat`; VRI `abh01m`, `abh02m`,
+`abh03m1`-`11`; Siam Rath 34-45. `--only abhidhamma` or a book (`ds`, `dt`, `pp`, `kv`, `ya`, `patthana`; the
+Abhidhamma's Vibhaṅga is `abh-vb`, plain `vb` is the Vinaya's). Empty Paṭṭhāna segments are mostly the many ms
+subheadings (`Naārammaṇa`) that BJT and Siam Rath do not print as lines; BJT prints in full what ms abbreviates in
+the Kathāvatthu (1.1-2 times the words).
 Khandhaka: BJT `vp-mv` + `vp-cv`, VRI `vin02m2` + `vin02m3`, Siam Rath 4-7, aligned as one text; Parivāra: BJT
 `vp-pv`, VRI `vin02m4`, Siam Rath 8. Not in the edition (empty there): Siam Rath abbreviates the lineage verses of
 `pvr2.1` and kd9 `7.14.17` (pabbājanīya), VRI has no closing verses of `pvr21` (81-87); Siam Rath prints no Pārāyana
@@ -157,6 +169,13 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | Vinaya: Pātimokkha | — | 83% | — |
 | Vinaya: Khandhaka | 96% | 99% | 94% |
 | Vinaya: Parivāra | 96% | 99% | 95% |
+| Abhidhamma: Dhammasaṅgaṇī | 91% | 94% | 92% |
+| Abhidhamma: Vibhaṅga | 96% | 98% | 94% |
+| Abhidhamma: Dhātukathā | 96% | 96% | 94% |
+| Abhidhamma: Puggalapaññatti | 98% | 98% | 97% |
+| Abhidhamma: Kathāvatthu | 96% | 97% | 96% |
+| Abhidhamma: Yamaka | 92% | 97% | 72% |
+| Abhidhamma: Paṭṭhāna | 68% | 86% | 70% |
 
 Empty segments are mostly where the edition itself has no text there (peyyāla, `Paṭhamaṁ.` lines, SC numbers).
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
@@ -198,7 +217,8 @@ git show origin/gretil-pali:gretil/2_pali.zip > 2_pali.zip && unzip -q 2_pali.zi
 python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds pts --out compare
 ```
 
-All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, and KN but the Jātaka (printed with its commentary), the
+All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, the Abhidhamma (of the Yamaka and the Paṭṭhāna only the
+parts PTS printed), and KN but the Jātaka (printed with its commentary), the
 Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`. PTS headings are left out (`SN_1.1,1.1.
 Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. The PTS apparatus (the annotated version's footnotes) is
 not read yet.
@@ -216,7 +236,9 @@ reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single f
 abbreviations (PTS `āp`, `a a maggaṃ`), headings, uddāna labels and number words an edition prints in a line, VRI
 marks like `jha`, and readings SC already gives for that edition. Readings spelled apart only by spacing are one
 (`idhāvuso (cck, ms2005, pts)`). The project's own readings (`variant_own.json`, from the old site) come first.
-About 215 000 readings: sya-all 76 800, bj 70 700, pts 65 200, cck 2 700, ms2005 16.
+About 263 000 readings: bj 95 100, sya-all 88 200, pts 76 300, cck 3 500, ms2005 15. The Paṭṭhāna's
+`saṅkhittaṁ` ("abbreviated") is a peyyāla mark. The printed Mahāsaṅgīti is not compared in the Paṭṭhāna: the
+reconstruction's pages there do not follow SC's order (`patthana2.2` Paccanīyuddhāra before Paccayānuloma).
 
 ```
 python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes compare/root/pli/pts

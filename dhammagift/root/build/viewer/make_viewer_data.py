@@ -1,5 +1,5 @@
 """Data for viewer/index.html: one JSON per page with ms + bjt + my + th rows, variants and references.
-A page is a DN / MN sutta, an SN saṃyutta, an AN nipāta, a KN or Vinaya book (large books in parts).
+A page is a DN / MN sutta, an SN saṃyutta, an AN nipāta, a KN, Vinaya or Abhidhamma book (large books in parts).
 
 usage: make_viewer_data.py DHAMMAGIFT_DIR BILARA_MS_SUTTA_DIR OUT_DIR   (writes OUT_DIR/data/*.json)
 """
@@ -14,6 +14,7 @@ ROOT = os.path.dirname(MS.rstrip('/'))  # bilara root/pli/ms: sutta/, vinaya/
 VINAYA = [f'pli-tv-{s}-vb-{k}' for s, ks in (('bu', ['pj', 'ss', 'ay', 'np', 'pc', 'pd', 'sk', 'as']),
                                             ('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as'])) for k in ks] \
     + ['pli-tv-bu-pm', 'pli-tv-bi-pm', 'pli-tv-kd', 'pli-tv-pvr']
+ABHI = ['ds', 'vb', 'dt', 'pp', 'kv', 'ya', 'patthana']
 
 
 def nkey(f):
@@ -40,7 +41,8 @@ for coll in ('sn', 'an'):
             pages.append((b, coll, b.upper(), fs))
 books = [('kn', b, glob.glob(f'{MS}/kn/{b}/**/*_root-pli-ms.json', recursive=True)) for b in KN] + \
     [('vinaya', b, [f for f in glob.glob(f'{ROOT}/vinaya/**/{b}*_root-pli-ms.json', recursive=True)
-                    if re.fullmatch(re.escape(b) + r'[\d.-]*', os.path.basename(f).split('_')[0])]) for b in VINAYA]
+                    if re.fullmatch(re.escape(b) + r'[\d.-]*', os.path.basename(f).split('_')[0])]) for b in VINAYA] + \
+    [('abhidhamma', b, glob.glob(f'{ROOT}/abhidhamma/{b}/**/*_root-pli-ms.json', recursive=True)) for b in ABHI]
 for coll, book, found in books:
     fs = [f for f in sorted(found, key=lambda f: nkey(f)[-2:] if coll == 'vinaya' else nkey(f)) if built(f)]
     if not fs:
@@ -88,7 +90,7 @@ for pid, coll, label, files in pages:
                     stats[e][1] += 1
                     stats[e][0] += bool(eds[e].get(k, '').strip())
         heads = [v.strip() for k, v in ms.items() if re.search(r':0\.\d+$', k) and len(v.split()) < 5]
-        title = (heads[-1] if heads else '') if coll == 'vinaya' else \
+        title = (heads[-1] if heads else '') if coll in ('vinaya', 'abhidhamma') else \
             next((v.strip() for k, v in ms.items() if re.search(r':0\.[2-9]$', k) and 'sutta' in v.lower()), '') \
             or (ms.get(next((k for k in ms if k.endswith(':0.3')), ''), '') or '').strip()
         suttas.append({'id': base, 'title': title, 'rows': rows, 'var': var, 'ref': ref})
