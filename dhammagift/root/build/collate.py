@@ -117,8 +117,6 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
     scv = os.path.join(SCVAR, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     sc = json.load(open(scv, encoding='utf-8')) if os.path.exists(scv) else {}
     for siglum, root, ed in SIGLA:
-        if siglum == 'ms2005' and rel.startswith('abhidhamma/patthana'):
-            continue  # the reconstruction's Paṭṭhāna pages are not in SC's order: no reliable alignment
         q = os.path.join(root, rel.replace('_root-pli-ms.json', f'_root-pli-{ed}.json'))
         if not os.path.exists(q):
             continue

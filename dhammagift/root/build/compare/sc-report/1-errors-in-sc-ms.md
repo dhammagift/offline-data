@@ -193,8 +193,8 @@ word over whole suttas. Case, punctuation, spacing and spellings that are no rea
 single/double consonants, abbreviations, peyyāla) were not counted. Every place above was then read in all
 editions by hand.
 
-Of the 1 933 660 words of `ms` (DN, MN, SN, AN, KN, Vinaya), all but these few are the words of the printed
-edition, apart from spacing, punctuation and SC's ṅ for ṃ before k, g. Places where the Mahāsaṅgīti itself
+Of the 2 702 748 words of `ms` (DN, MN, SN, AN, KN, Vinaya, Abhidhamma), all but these few are the words of the printed
+edition (the Abhidhamma has no difference at all), apart from spacing, punctuation and SC's ṅ for ṃ before k, g. Places where the Mahāsaṅgīti itself
 stands against all other editions are listed in [2-other-differences.md](https://github.com/dhammagift/offline-data/blob/main/dhammagift/root/build/compare/sc-report/2-other-differences.md).
 
 Data and code: https://github.com/dhammagift/offline-data/tree/main/dhammagift/root/build
