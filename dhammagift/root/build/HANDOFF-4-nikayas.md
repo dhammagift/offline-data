@@ -1,0 +1,66 @@
+# 4 никаи (DN, MN, SN, AN): что есть в offline-data и как доработать
+
+Для сессии на сервере (F1 / dg-node). Репо `dhammagift/offline-data`, ветка `main`, всё в `dhammagift/`.
+Подробно: `root/build/README.md`. Лицензии: `dhammagift/LICENSE.md`.
+
+## Что уже лежит в данных
+
+| что | где | для чего |
+|---|---|---|
+| Палийские корни 5 изданий на id SC | `root/pli/{bjt,my,th,mso,pts}/sutta/{dn,mn,sn,an}/…_root-pli-<ed>.json` | переключение изданий, сравнение |
+| Книжная Махасангити 2005 | `root/pli/mso` (+ `reference/pli/mso`, номера параграфов) | текст «не из SC»; в dg.db пока не включён |
+| Разночтения всех изданий + сноски | `variant/pli/ms/sutta/{dn,mn,sn,an}/…_variant-pli-ms.json` | показывать под SC; первыми идут ошибки SC `(SC error: …)` |
+| Исправления ошибок SC | `root/build/sc-fixes/fixes.json`, `apply.py` | накатываются на чекаут SC после еженедельного обновления |
+| Страница сравнения | `root/build/viewer/` (`index.html` + `data/`) | old.dhamma.gift/editions после `git pull` |
+
+Формат всех файлов как у bilara-data: `{ "sn35.19:2.9": "…" }`, ключи и порядок как в `root/pli/ms`.
+
+## Как подключить в dg.db
+
+- Корень по умолчанию остаётся `ms` (SC) с наложенными `sc-fixes` (`python3 root/build/sc-fixes/apply.py <SC root/pli/ms>`).
+- Дополнительные корни: `root/pli/<ed>` по тем же ключам. Пустая строка `""` значит, что в издании этой строки нет.
+- Разночтения: `variant/pli/ms`, одна строка на сегмент, записи через ` | `, вида `слово SC → чтение (издания)`.
+  `ms2005` — книжная Махасангити, `pts` — PTS (CC BY-SA 4.0), `(… note)` — сноска издания.
+  Длинная запись на `mn10:44.3` (1 300 слов) — блок о четырёх истинах, который SC выбросил из MN 10.
+
+## Как пересобрать только 4 никаи
+
+Источники вне репо (пути в README, раздел Run / sync): tipitaka.lk, tipitaka-xml, bilara-data, palinew.sqlite,
+tipitaka2500.github.io, GRETIL `2_pali` (ветка `gretil-pali`, `gretil/2_pali.zip`).
+
+```
+python3 dhammagift/root/build/build_editions.py --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn \
+  --ms bilara-data/root/pli/ms/sutta --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
+  --out dhammagift --notes notes --only dn,mn,sn,an --report dhammagift/root/build/report.tsv
+python3 dhammagift/root/build/build_editions.py ... --eds mso --mso tipitaka2500.github.io/tipitaka --out dhammagift --only dn,mn,sn,an
+python3 dhammagift/root/build/build_editions.py ... --eds pts --pts 2_pali/1_tipit --out dhammagift --only dn,mn,sn,an
+python3 dhammagift/root/build/pts_notes.py 2_pali/1_tipit bilara-data/root/pli/ms/sutta dhammagift/root/pli/pts notes
+python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift dhammagift/root/pli/mso notes dhammagift/root/pli/pts
+python3 dhammagift/root/build/viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta dhammagift/root/build/viewer
+python3 dhammagift/root/build/viewer/find_shifts.py dhammagift/root/build/viewer/data dhammagift/root/build/viewer/data/shifts.json
+```
+
+`collate.py` всегда идёт по всему канону (около 9 минут). Выравнивание делается только правилами в `build_editions.py`,
+ручных правок сегментов нет: исправление вносится правилом, потом пересборка.
+
+## Доработки, которые можно сделать (по желанию)
+
+1. **Печатные подзаголовки, которых нет у SC** (15 мест в 4 никаях, список в `root/build/compare/ms-orig.tsv`, op `insert`):
+   - sn43.12:2.1–11.1: `Vipassanā`, `Vitakkasamādhi`, `Suññatasamādhi`, `Satipaṭṭhāna`, `Sammappadhāna`, `Iddhipāda`,
+     `Indriya`, `Bala`, `Bojjhaṅga`, `Maggaṅga`;
+   - dn29:1.3 `Nigaṇṭhanāṭaputtakālaṅkiriyā`, dn33:1.2.1 `Ubbhatakanavasandhāgāra`; an3.20:6.8 `Rathakāravaggo dutiyo`
+     (в книге стоит на другом месте).
+
+   Это не ошибки SC. Если нужны в наших данных: показывать как подзаголовок из `root/pli/mso` (они там стоят в начале
+   этих сегментов) или собрать в `3-printed-headings.md` для отчёта SC.
+2. **Страницы PTS.** В GRETIL есть метки `[page 003]`, у SC есть ссылки `pts-vp-pli` по абзацам. Чтобы иметь страницы
+   с точностью до слова: в `pts_stream` (`build_editions.py`) передавать `[page N]` как маркер `pb` (как у BJT/Thai),
+   тогда появится `reference/pli/pts`.
+3. **Два сдвига у BJT** из-за кавычки, приклеенной к следующему слову: dn23:23.48 `evamāha’purato`,
+   thig13.4:7.1 `arahato’dhammaṃ`. Правилом не отделяются (сломаются элизии `cattāro’me`). Можно оставить.
+
+## Что сделано недавно (для контекста)
+
+- Граница сегмента, сдвинутая на несколько слов, возвращается правилом (156 сегментов, в основном BJT и Сиам).
+- Заголовок SC, повторённый в начале текста (`Eko dhammo` / `Eko, āvuso, dhammo …`), остаётся в тексте издания.
+- Ошибки SC из `sc-fixes/fixes.json` стоят первыми в разночтениях; отчёт: `root/build/compare/sc-report/`.
