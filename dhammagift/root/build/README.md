@@ -154,7 +154,7 @@ the Kathāvatthu (1.1-2 times the words).
 Khandhaka: BJT `vp-mv` + `vp-cv`, VRI `vin02m2` + `vin02m3`, Siam Rath 4-7, aligned as one text; Parivāra: BJT
 `vp-pv`, VRI `vin02m4`, Siam Rath 8. Not in the edition (empty there): Siam Rath abbreviates the lineage verses of
 `pvr2.1` and kd9 `7.14.17` (pabbājanīya), VRI has no closing verses of `pvr21` (81-87); Siam Rath prints no Pārāyana
-verses apart from their Niddesa (`cnd2-4`) and has no `tha-ap553-561`.
+verses apart from their Niddesa (`cnd2-4`) and has no Yasavagga (`tha-ap553-563`, which repeats `tha-ap20`, `24`…).
 Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikkhunīvibhaṅga), VRI `vin01m`, `vin02m1`;
 Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
 Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has SC rule titles
@@ -237,9 +237,12 @@ python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds p
 ```
 
 All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, the Abhidhamma (of the Yamaka and the Paṭṭhāna only the
-parts PTS printed), and KN but the Jātaka (printed with its commentary), the
-Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`. PTS headings are left out (`SN_1.1,1.1.
-Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. The PTS apparatus, the footnotes of the annotated version (`*ou.htm`:
+parts PTS printed), and KN but the Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`.
+The Jātaka is printed with its commentary: only its verses are read, which GRETIL sets apart and numbers
+(`Ja_I,1.1(=1).1:`), and `phalo ti` is read `phaloti` as ms `phalo”ti`. PTS headings are left out (`SN_1.1,1.1.
+Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. PTS prints no end lines (`Apaṇṇakajātakaṁ paṭhamaṁ.`):
+what the alignment put on one goes to the neighbour it belongs to, the start of the next segment or the end of the
+one before. The PTS apparatus, the footnotes of the annotated version (`*ou.htm`:
 the manuscripts' readings, `S1-3 rūpaṃ . . . aniccaṃ`), goes into the variants: `pts_notes.py` matches the annotated
 text word by word with `root/pli/pts` and puts each note on the segment of its word (61 800 of 66 900 notes; the rest
 stand on titles PTS root leaves out). MN 1-76, Thera- and Therīgāthā, Khuddakapāṭha, Milinda, Mahāvagga, Cullavagga

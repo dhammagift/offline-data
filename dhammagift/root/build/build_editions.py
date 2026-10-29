@@ -536,6 +536,15 @@ def pts_stream(files):
     for f in files:
         t = open(f, encoding='utf-8', errors='replace').read()
         t = t[t.find('[page '):]
+        if os.path.basename(f).startswith('jatak'):
+            # the Jātaka is printed with its commentary: only the verses, set apart and numbered (`Ja_I,1.1(=1).1:`)
+            for m in re.finditer(r'<span class="blue">\s*Ja_[^:]*:(.*?)</span>', t, flags=re.S):
+                v = html.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'\|\|\s*Ja_[^|]*\|\|', ' ', m.group(1))))
+                v = ' '.join(re.sub(r"';", "'", re.sub(r'[{}%]', ' ', v)).split())
+                v = re.sub(r"(?<=[^\W\d_])['’]? (ti|'ti)(?=\W|$)", r'ti', v)  # `phalo ti` is ms `phalo”ti`
+                if v:
+                    st.body(v, [])
+            continue
         # page headers and notes: <i>…</i>, <span class="red">…</span>; in MN I %…%, \[…]\
         t = re.sub(r'<span class="red">.*?</span>|<i>.*?</i>|%[^%\n]*%|\\\[.*?\]\\', ' ', t, flags=re.S)
         for line in re.split(r'<br>', t, flags=re.I):
@@ -560,8 +569,8 @@ def pts_stream(files):
     return st
 
 
-# PTS volumes (file names in GRETIL 2_pali/1_tipit) and the SC books in them; Jātaka is printed with its
-# commentary and the Netti and Peṭakopadesa are not PTS input there
+# PTS volumes (file names in GRETIL 2_pali/1_tipit) and the SC books in them; the Jātaka is printed with its
+# commentary (its verses are read); the Netti and Peṭakopadesa are not PTS input there
 PTS = [('dn', 'dn1-13', '2_sut/1_digh/dighn1pu'), ('dn', 'dn14-23', '2_sut/1_digh/dighn2pu'),
        ('dn', 'dn24-34', '2_sut/1_digh/dighn3pu'), ('mn', 'mn1-76', '2_sut/2_majjh/majjn1pu'),
        ('mn', 'mn77-106', '2_sut/2_majjh/majjn2pu'), ('mn', 'mn107-152', '2_sut/2_majjh/majjn3pu'),
@@ -575,6 +584,7 @@ PTS = [('dn', 'dn1-13', '2_sut/1_digh/dighn1pu'), ('dn', 'dn14-23', '2_sut/1_dig
        ('kn', 'snp', '2_sut/5_khudd/sutnippu'), ('kn', 'vv', '2_sut/5_khudd/vimvatpu'),
        ('kn', 'pv', '2_sut/5_khudd/petvatpu'), ('kn', 'thag', '2_sut/5_khudd/theragpu'),
        ('kn', 'thig', '2_sut/5_khudd/therigpu'), ('kn', 'tha-ap,thi-ap', '2_sut/5_khudd/apadanpu'),
+       ('kn', 'ja', ','.join(f'2_sut/5_khudd/jatak{i}pu' for i in range(1, 7))),
        ('kn', 'bv', '2_sut/5_khudd/budvmspu'), ('kn', 'cp', '2_sut/5_khudd/carpitpu'),
        ('kn', 'mnd', '2_sut/5_khudd/nidde1pu'), ('kn', 'cnd', '2_sut/5_khudd/nidde2pu'),
        ('kn', 'ps', '2_sut/5_khudd/patis1pu,2_sut/5_khudd/patis2pu'), ('kn', 'mil', '../2_parcan/milindpu'),
@@ -1427,6 +1437,20 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
                 if sum(w in ms_words(nxt)[:10] for w in rest) >= 0.6 * len(rest):
                     end = ix[len(want) - 1] + 1
                     text[k], text[nxt] = [' '.join(ws[:end])], [' '.join(ws[end:])] + text[nxt]
+    if ed == 'pts':
+        # PTS prints no end lines (`Apaṇṇakajātakaṁ paṭhamaṁ.`, `Majjhimo paṇṇāsako.`): what fell on one belongs to a
+        # neighbour, the start of the next segment's text or the end of the one before (ja163:3.1 `Yan nu`)
+        for i, k in enumerate(allk):
+            ws, mw = ' '.join(text[k]).split(), ms_words(k)
+            end_line = colophon(ms_text.get(k, '')) or 1 < len(mw) <= 4 and ordinal(mw[-1]) and not head_key(k)
+            if not ws or not end_line or set(map(norm, ws)) & set(mw) and len(ws) <= len(mw) + 1:
+                continue
+            nxt = next((x for x in allk[i + 1:i + 8] if ms_words(x) and not head_key(x)), None)
+            prv = next((x for x in reversed(allk[max(0, i - 3):i]) if text[x]), None)
+            if nxt and ''.join(ms_words(nxt)).startswith(''.join(map(norm, ws))):
+                text[k], text[nxt] = [], [' '.join(ws)] + text[nxt]
+            elif prv:
+                text[k], text[prv] = [], text[prv] + [' '.join(ws)]
     if leftover_heads and body:
         text[body[-1][0]].append(' '.join(h for _, h in leftover_heads))
 
