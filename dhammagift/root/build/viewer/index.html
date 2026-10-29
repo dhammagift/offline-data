@@ -301,7 +301,7 @@ async function loadBook(book) {
   return state.cache[book];
 }
 
-const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN', kn: 'KN', vinaya: 'Vinaya' };
+const COLLS = { dn: 'DN', mn: 'MN', sn: 'SN', an: 'AN', kn: 'KN', vinaya: 'Vinaya', abhidhamma: 'Abhidhamma' };  // a collection shows once its data is there
 const collOf = b => state.index.find(x => x.book === b)?.coll || b.match(/^[a-z]+/)[0];
 function renderNav() {
   const cur = collOf(state.book);
