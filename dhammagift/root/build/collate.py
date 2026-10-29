@@ -11,7 +11,8 @@ Each edition is compared with ms word by word over a whole sutta, so a word the 
 is no variant. Left out: ṁ/ṃ, ṅ for ṃ before k, g, case, punctuation, spacing (`yoniso manasikāro` /
 `yonisomanasikāro`), peyyāla (a side with …pe…, …la…), differences of more than 4 words (an abbreviation or a
 passage printed in full), and readings SC already gives for that edition. The project's own readings
-(variant_own.json, from the old site) come first.
+(variant_own.json, from the old site) come first, after SC's errors against its printed source
+(sc-fixes/fixes.json): `aparimutto → parimutto (SC error: ms2005 and the other editions)`.
 
 The editions' own footnotes (build_editions.py --notes) go in too, after the collation, marked with the edition and
 its sources: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṃ, syā)` (BJT's note: so the Chaṭṭha Saṅgāyana and Siam
@@ -106,6 +107,29 @@ def body(d):
 
 
 OWN = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'variant_own.json'), encoding='utf-8'))
+
+
+def fix_entry(old, new):
+    """an error of SC's text (sc-fixes/fixes.json): the words that differ, the printed reading after the arrow"""
+    a, b = old.split(), new.split()
+    sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
+    ops = [op for op in sm.get_opcodes() if op[0] != 'equal']
+    if not ops:
+        return None
+    i1, j1 = ops[0][1], ops[0][3]
+    i2, j2 = ops[-1][2], ops[-1][4]
+    if i1 == i2 and i1:  # a word SC left out: show it with the word before (`veḷuyā → veḷuyā vā`)
+        i1, j1 = i1 - 1, j1 - 1
+    strip = lambda ws: ' '.join(ws).strip(' ,;:.“”‘’')
+    return f'{strip(a[i1:i2])} → {strip(b[j1:j2])} (SC error: ms2005 and the other editions)'
+
+
+# SC's errors against its printed source go first, as the readings that correct them
+for fx in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sc-fixes', 'fixes.json'),
+                         encoding='utf-8'))['fixes']:
+    e = fix_entry(fx['old'], fx['new'])
+    if e:
+        OWN[fx['seg']] = e + (' | ' + OWN[fx['seg']] if fx['seg'] in OWN else '')
 new_entries = collections.defaultdict(lambda: collections.defaultdict(lambda: collections.defaultdict(list)))
 n_files = 0
 for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursive=True)):
