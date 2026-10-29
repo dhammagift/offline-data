@@ -13,9 +13,11 @@ Each place lists where to read it in every edition:
 - **Buddha Jayanti** (Sri Lanka), [tipitaka.lk](https://tipitaka.lk): a link that opens the paragraph.
 - **Chaṭṭha Saṅgāyana**, VRI, [tipitaka.org](https://www.tipitaka.org/romn/): the file and paragraph number, with the
   page of the Myanmar print (M).
-- **Syāmaraṭṭha 1927** (Thai), as in E-Tipitaka: volume and page.
+- **Syāmaraṭṭha 1927** (Thai), [84000.org](https://84000.org/tipitaka/pitaka_item/) in Roman script: volume, page and
+  item (paragraph) number, a link that opens the item.
 - **Pali Text Society**: volume and page of the PTS edition (SC shows these pages itself with *Reference: PTS*),
-  and the PTS file in GRETIL (Dhammakaya input).
+  and a link to the PTS file in [GRETIL](https://gretil.sub.uni-goettingen.de/) (Dhammakaya input), where `[page 013]`
+  marks the page.
 
 ## 1. Readings that change the meaning
 
@@ -36,8 +38,8 @@ sn35.19:2.2 and 2.6, which correctly read `nābhinandati … parimutto`.
 | Mahāsaṅgīti 2005 | [13S4 1.1.2.7](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.7.html) | [13S4 1.1.2.8](https://tipitaka2500.github.io/tipitaka/13S4/1/1.1/1.1.2/1.1.2.8.html) |
 | Buddha Jayanti | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-4/pali) | [SN IV (BJT) p. 26](https://tipitaka.lk/sn-4-1-1/12-9/pali) |
 | Chaṭṭha Saṅgāyana | [s0304m.mul0.xml](https://www.tipitaka.org/romn/cscd/s0304m.mul0.xml) para 19, M 2.246 | para 20, M 2.246 |
-| Syāmaraṭṭha | vol. 18, p. 16 | vol. 18, p. 17 |
-| PTS | SN IV 13, [samyu4pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu4pu.htm) | SN IV 14 |
+| Syāmaraṭṭha | [vol. 18, p. 16, item 19](https://84000.org/tipitaka/read/roman_item_s.php?book=18&item=19) | [vol. 18, p. 17, item 20](https://84000.org/tipitaka/read/roman_item_s.php?book=18&item=20) |
+| PTS | SN IV 13, [samyu4pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu4pu.htm) | SN IV 14, [samyu4pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu4pu.htm) |
 
 ### dn33:1.11.85, dn33:1.11.91: `Idha, bhikkhave` for `Idhāvuso`
 
@@ -57,7 +59,7 @@ bhāvanāpadhānaṁ?`). `bhikkhave` is the Buddha's address.
 | Mahāsaṅgīti 2005 | [8D 10.4](https://tipitaka2500.github.io/tipitaka/8D/10/10.4.html) |
 | Buddha Jayanti | [DN III (BJT) p. 382](https://tipitaka.lk/dn-3-10/15-0/pali), [next paragraph](https://tipitaka.lk/dn-3-10/15-1/pali) |
 | Chaṭṭha Saṅgāyana | [s0103m.mul9.xml](https://www.tipitaka.org/romn/cscd/s0103m.mul9.xml) para 310, M 3.189 |
-| Syāmaraṭṭha | vol. 11, p. 238 |
+| Syāmaraṭṭha | [vol. 11, p. 238, item 238](https://84000.org/tipitaka/read/roman_item_s.php?book=11&item=238) |
 | PTS | DN III 226, [dighn3pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/1_digh/dighn3pu.htm) |
 
 ### sn22.7:8.2–8.3: two segments in the wrong order
@@ -77,7 +79,7 @@ before 8.2, which ends the sentence with a full stop.
 | Mahāsaṅgīti 2005 | [13S3 1.1.1.7](https://tipitaka2500.github.io/tipitaka/13S3/1/1.1/1.1.1/1.1.1.7.html) |
 | Buddha Jayanti | [SN III (BJT) p. 30](https://tipitaka.lk/sn-3-1-1-1/14-6/pali) (`na saṅkhāravantaṃ attānaṃ`) |
 | Chaṭṭha Saṅgāyana | [s0303m.mul0.xml](https://www.tipitaka.org/romn/cscd/s0303m.mul0.xml) para 7, M 2.16 |
-| Syāmaraṭṭha | vol. 17, p. 23 |
+| Syāmaraṭṭha | [vol. 17, p. 23, item 33](https://84000.org/tipitaka/read/roman_item_s.php?book=17&item=33) |
 | PTS | SN III 17, [samyu3pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/2_sut/3_samyu/samyu3pu.htm) |
 
 ### pli-tv-bu-vb-ss13:2.8: `vā` missing
@@ -96,7 +98,7 @@ Buddha Jayanti and Syāmaraṭṭha read `veḷunā vā`, also with `vā`.
 | Mahāsaṅgīti 2005 | [1V 1.2.13](https://tipitaka2500.github.io/tipitaka/1V/1/1.2/1.2.13.html) |
 | Buddha Jayanti | [Pārājikapāḷi (BJT) p. 478](https://tipitaka.lk/vp-prj-3-12/74-3/pali) |
 | Chaṭṭha Saṅgāyana | [vin01m.mul2.xml](https://www.tipitaka.org/romn/cscd/vin01m.mul2.xml) para 437, M 281 |
-| Syāmaraṭṭha | vol. 1, p. 426 |
+| Syāmaraṭṭha | [vol. 1, p. 426, item 624](https://84000.org/tipitaka/read/roman_item_s.php?book=1&item=624) |
 | PTS | Vin III 185, [vin3s1pu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/1_vin/vin3s1pu.htm) |
 
 ### pli-tv-pvr5:122.4: `ammukhāvinayena` for `sammukhāvinayena`
@@ -114,8 +116,8 @@ A lost first letter in the name of the first of the seven ways of settling dispu
 | Mahāsaṅgīti 2005 | [5V 5.13](https://tipitaka2500.github.io/tipitaka/5V/5/5.13.html) |
 | Buddha Jayanti | [Parivārapāḷi (BJT) p. 370](https://tipitaka.lk/vp-pv-4-6/91-5/pali) |
 | Chaṭṭha Saṅgāyana | [vin02m4.mul2.xml](https://www.tipitaka.org/romn/cscd/vin02m4.mul2.xml) para 308, M 199 |
-| Syāmaraṭṭha | vol. 8, p. 279 |
-| PTS | Vin V 109 (abbreviated there: `samm. ca yebh. ca …`) |
+| Syāmaraṭṭha | [vol. 8, p. 279, item 904](https://84000.org/tipitaka/read/roman_item_s.php?book=8&item=904) |
+| PTS | Vin V 109, [vin5papu.htm](https://gretil.sub.uni-goettingen.de/gretil/2_pali/1_tipit/1_vin/vin5papu.htm) (abbreviated there: `samm. ca yebh. ca …`) |
 
 ## 2. English text inside the Pali
 
