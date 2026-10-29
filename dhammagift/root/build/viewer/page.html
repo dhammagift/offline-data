@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: sticky bar with book links and switches, then the whole book as one concordance grid:
-   one row per SC segment, one column per edition, suttas one after another. */
+   one row per segment, one column per edition, suttas one after another. */
 :root {
   --bg: #f4f5f2;
   --surface: #ffffff;
@@ -143,7 +143,7 @@ button:hover { border-color: var(--accent); }
   <header class="top" id="topbar">
     <div class="titlerow">
       <h1>Pali Editions Side by Side</h1>
-      <span class="sub">SuttaCentral (Mahāsaṅgīti), Buddha Jayanti, Chaṭṭha Saṅgāyana (VRI), Siam Rath 1927, the printed Mahāsaṅgīti 2005 and PTS, aligned on SuttaCentral segments</span>
+      <span class="sub">Mahāsaṅgīti (digital), Buddha Jayanti, Chaṭṭha Saṅgāyana (VRI), Siam Rath 1927, the printed Mahāsaṅgīti 2005 and PTS, aligned segment by segment</span>
     </div>
     <nav class="books" aria-label="Books">
       <span id="colls" class="books"></span>
@@ -153,19 +153,19 @@ button:hover { border-color: var(--accent); }
     </nav>
     <div class="row-ctl">
       <span id="edchips" class="row-ctl"></span>
-      <label class="chip" title="BJT, VRI and Siam Rath vote word by word; SC, MS 2005 and PTS are checked against the result"><input type="checkbox" id="optdiff" checked> Differences</label>
-      <label class="chip" title="Variant readings under SC (all editions, PTS, the printed Mahāsaṅgīti, footnotes); page numbers under each edition"><input type="checkbox" id="optnotes"> Variants &amp; pages</label>
-      <label class="chip" title="An edition has much more text than SC here"><input type="checkbox" id="optsus" checked> Overflow</label>
-      <label class="chip" title="Found automatically: words of a neighbouring SC segment in an edition's segment"><input type="checkbox" id="optshift" checked> Shifts <span id="shiftn" class="fill"></span></label>
+      <label class="chip" title="BJT, VRI and Siam Rath vote word by word; MS, MS 2005 and PTS are checked against the result"><input type="checkbox" id="optdiff" checked> Differences</label>
+      <label class="chip" title="Variant readings under MS (all editions, PTS, the printed Mahāsaṅgīti, footnotes); page numbers under each edition"><input type="checkbox" id="optnotes"> Variants &amp; pages</label>
+      <label class="chip" title="An edition has much more text than MS here"><input type="checkbox" id="optsus" checked> Overflow</label>
+      <label class="chip" title="Found automatically: words of a neighbouring MS segment in an edition's segment"><input type="checkbox" id="optshift" checked> Shifts <span id="shiftn" class="fill"></span></label>
       <button type="button" id="nextshift">Next shift ↓</button>
       <button type="button" id="flagsbtn" class="flagbtn">Marked: 0</button>
     </div>
     <details class="howto">
       <summary>How to read</summary>
       <div class="legend">
-        <span><mark>Yellow</mark>: letters where an edition differs from the other two (bah<mark>u</mark>kāro). A whole word in yellow is missing in the others; if the others have extra letters, the letter before the spot is marked. SC, MS 2005 (the printed Mahāsaṅgīti SC was made from) and PTS are marked only where they differ from all three. MS 2005 and PTS are off at first: tick them above.</span>
-        <span><span class="s">Underlined</span>: an edition has much more text here than SC (it may have run over from the next segment).</span>
-        <span><span class="sh">Pink</span>: a shift, words of a neighbouring SC segment in this edition's segment; the reason is shown under the text.</span>
+        <span><mark>Yellow</mark>: letters where an edition differs from the other two (bah<mark>u</mark>kāro). A whole word in yellow is missing in the others; if the others have extra letters, the letter before the spot is marked. MS, MS 2005 (the printed Mahāsaṅgīti the digital MS was made from) and PTS are marked only where they differ from all three. MS 2005 and PTS are off at first: tick them above.</span>
+        <span><span class="s">Underlined</span>: an edition has much more text here than MS (it may have run over from the next segment).</span>
+        <span><span class="sh">Pink</span>: a shift, words of a neighbouring MS segment in this edition's segment; the reason is shown under the text.</span>
         <span><span class="f">Click a segment number</span> to mark a problem. Marks stay in this browser; copy them from the "Marked" panel.</span>
         <span>A segment opens with its key in the address: <code>#sn35.19:2.9</code>. The percentage beside an edition is the share of segments it fills in this book.</span>
       </div>
@@ -183,7 +183,7 @@ button:hover { border-color: var(--accent); }
 
 <script>
 const EDS = [
-  { id: 'ms', name: 'SC', full: 'SuttaCentral, Mahāsaṅgīti (root/pli/ms)', color: 'var(--ms)', col: 1 },
+  { id: 'ms', name: 'MS', full: 'Mahāsaṅgīti, digital edition', color: 'var(--ms)', col: 1 },
   { id: 'bjt', name: 'BJT', full: 'Buddha Jayanti, Sri Lanka (tipitaka.lk)', color: 'var(--bjt)', col: 2 },
   { id: 'my', name: 'VRI', full: 'Chaṭṭha Saṅgāyana, VRI (tipitaka.org)', color: 'var(--my)', col: 3 },
   { id: 'th', name: 'Siam Rath', full: 'Syāmaraṭṭha 1927, Thailand (E-Tipitaka)', color: 'var(--th)', col: 4 },
@@ -268,7 +268,7 @@ function charDiff(a, b) {
 }
 const VOTERS = ['bjt', 'my', 'th'];
 function readings(row) {
-  // the printed Mahāsaṅgīti and PTS are marked against the three, not counted as voters: MS 2005 is SC's own source
+  // the printed Mahāsaṅgīti and PTS are marked against the three, not counted as voters: MS 2005 is the digital MS's own source
   const T = Object.fromEntries(EDS.map(e => [e.id, tokenize(row[e.col] || '')]));
   const shown = EDS.map(e => e.id);
   const maps = {};
