@@ -15,7 +15,8 @@ passage printed in full), and readings SC already gives for that edition. The pr
 
 The editions' own footnotes (build_editions.py --notes) go in too, after the collation, marked with the edition and
 its sources: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṃ, syā)` (BJT's note: so the Chaṭṭha Saṅgāyana and Siam
-Rath read), `(cck: ka.)`, `(sya-all: yu.)`; a note that names no source is `(bj note)`.
+Rath read), `(cck: ka.)`, `(sya-all: yu.)`; a note that names no source is `(bj note)`. The PTS apparatus
+(pts_notes.py) goes in as printed: `aniccā → S1-3 rūpaṃ . . . aniccaṃ (pts note)`.
 
 usage: collate.py BILARA_ROOT_PLI_MS BILARA_VARIANT_PLI_MS DHAMMAGIFT_DIR MSO_ROOT_PLI_MSO|- NOTES_DIR|- [PTS_ROOT_PLI_PTS]
 """
@@ -25,7 +26,7 @@ MS, SCVAR, DG = sys.argv[1:4]
 MSO = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != '-' else None
 NOTES = sys.argv[5] if len(sys.argv) > 5 and sys.argv[5] != '-' else None
 PTS = sys.argv[6] if len(sys.argv) > 6 else None
-NOTE_ED = [('bjt', 'bj'), ('my', 'cck'), ('th', 'sya-all')]
+NOTE_ED = [('bjt', 'bj'), ('my', 'cck'), ('th', 'sya-all'), ('pts', 'pts')]
 TH_SRC = re.compile(r'^((?:(?:ma|yu|sī|syā|ka|machasaṃ|pī|kaṃ)\.?\s*)+)\s')
 SIGLA = [('bj', os.path.join(DG, 'root', 'pli', 'bjt'), 'bjt'), ('cck', os.path.join(DG, 'root', 'pli', 'my'), 'my'),
          ('sya-all', os.path.join(DG, 'root', 'pli', 'th'), 'th')] + ([('ms2005', MSO, 'mso')] if MSO else []) \
@@ -213,6 +214,9 @@ if NOTES:
                 for part in text.split(' | '):
                     lemma, _, rest = (x.strip().replace('ṃ', 'ṁ') for x in part.partition('→'))
                     if not _:
+                        continue
+                    if siglum == 'pts':  # the PTS apparatus: manuscripts and remarks as printed (pts_notes.py)
+                        notes[rel].setdefault(key, []).append(f'{lemma} → {rest} (pts note)')
                         continue
                     rs = re.findall(r'\s*([^();,][^()]*?)\s*\(([^()]*)\)\s*[;,]?', rest)
                     flat = lambda x: re.sub(r'[\s;,]', '', x)

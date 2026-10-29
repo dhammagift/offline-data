@@ -69,12 +69,12 @@ def main(data, dst):
         res += [(d['book'],) + x for x in scan(rows)]
     if dst.endswith('.json'):   # the viewer's marks: {book: {key: {edition: "kind: words"}}}
         out = {}
-        say = {'next-in': 'в конце начало следующего сегмента ms', 'prev-in': 'в начале конец предыдущего сегмента ms',
-               'is-next': 'это текст следующего сегмента ms', 'is-prev': 'это текст предыдущего сегмента ms'}
+        say = {'next-in': 'ends with the start of the next SC segment', 'prev-in': 'starts with the end of the previous SC segment',
+               'is-next': 'is the text of the next SC segment', 'is-prev': 'is the text of the previous SC segment'}
         for book, key, ed, kind, cross, n, text in res:
             cell = out.setdefault(book, {}).setdefault(key, {})
-            line = say[kind] + (' (через границу сутты)' if cross else '') + ': ' + text
-            if text in cell.get(ed, ''): continue   # the same words found two ways ("в начале…" and "это текст…"): once
+            line = say[kind] + (' (across a sutta boundary)' if cross else '') + ': ' + text
+            if text in cell.get(ed, ''): continue   # the same words found two ways ("starts with…" and "is the text…"): once
             cell[ed] = (cell[ed] + '; ' if ed in cell else '') + line
         json.dump(out, open(dst, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
     else:

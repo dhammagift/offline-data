@@ -239,8 +239,15 @@ python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds p
 All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, the Abhidhamma (of the Yamaka and the Paṭṭhāna only the
 parts PTS printed), and KN but the Jātaka (printed with its commentary), the
 Netti and the Peṭakopadesa (not PTS input in GRETIL); Milinda from `2_parcan`. PTS headings are left out (`SN_1.1,1.1.
-Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. The PTS apparatus (the annotated version's footnotes) is
-not read yet.
+Oghaṃ.`, English `CHAPTER I.`): they never fit SC's titles. The PTS apparatus, the footnotes of the annotated version (`*ou.htm`:
+the manuscripts' readings, `S1-3 rūpaṃ . . . aniccaṃ`), goes into the variants: `pts_notes.py` matches the annotated
+text word by word with `root/pli/pts` and puts each note on the segment of its word (61 800 of 66 900 notes; the rest
+stand on titles PTS root leaves out). MN 1-76, Thera- and Therīgāthā, Khuddakapāṭha, Milinda, Mahāvagga, Cullavagga
+and Dhātukathā have no notes in GRETIL.
+
+```
+python3 dhammagift/root/build/pts_notes.py 2_pali/1_tipit bilara-data/root/pli/ms/sutta dhammagift/root/pli/pts notes
+```
 
 ## Variant readings
 
@@ -264,7 +271,7 @@ python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/var
 
 The editions' own footnotes (`build_editions.py --notes notes`, outside the repo) go into the same file after the
 collation, with the edition and the sources the note names: `varaṇajātakaṁ → varuṇajātakaṁ (bj: machasaṁ, syā)`,
-`(cck: sī. pī.)`, `(sya-all: yu.)`; a note naming no source is `(bj note)`. About 50 300. Pages and paragraph numbers
+`(cck: sī. pī.)`, `(sya-all: yu.)`; a note naming no source is `(bj note)`; the PTS apparatus as printed, `(pts note)`. About 113 800 (PTS 61 800). Pages and paragraph numbers
 are not readings and stay in `reference/pli/<ed>`.
 
 ## Viewer
