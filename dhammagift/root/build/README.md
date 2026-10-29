@@ -8,6 +8,7 @@ so a reader can switch between editions or show them side by side.
 | Buddha Jayanti Tipiṭaka (Sri Lanka) | `bjt` | [tipitaka.lk](https://github.com/pathnirvana/tipitaka.lk) `public/static/text/*.json` | CC BY-ND 4.0, attribution tipitaka.lk; text must be kept in sync, errors are reported to them, not fixed here |
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
+| Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 as printed (World Tipiṭaka, Dhamma Society 2005) | `mso` | [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) `tipitaka/*` | CC0 as published there; attribution World Tipiṭaka Project, Dhamma Society |
 
 Licenses of all the texts: [dhammagift/LICENSE.md](../../LICENSE.md).
 
@@ -190,34 +191,38 @@ Empty segments are mostly where the edition itself has no text there (peyyāla, 
 BJT prints in full what ms and VRI abbreviate in DN 3, 5-7, 11-13 (the sīla passages): that text stays in the
 neighbouring segments.
 
-## SC ms against the Mahāsaṅgīti as printed
+## Mahāsaṅgīti as printed (`mso`)
 
 `ms` is the Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (World Tipiṭaka, Dhamma Society 2005) as SuttaCentral edited it.
-For comparison only (not part of the data), the printed text, reconstructed by
-[tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) (CC0), is built on the same ids:
+`root/pli/mso` is that edition as printed, from the reconstruction of
+[tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) (CC0), on the same ids, with its
+own spelling (`ṃ`, `saṃgha`), punctuation and headings. `reference/pli/mso` has its paragraph numbers.
 
 ```
 git clone --depth 1 https://github.com/tipitaka2500/tipitaka2500.github.io
-python3 dhammagift/root/build/build_editions.py ... --mso tipitaka2500.github.io/tipitaka --eds mso --out compare
-python3 dhammagift/root/build/compare/compare_ms.py bilara-data/root/pli/ms compare/root/pli/mso dhammagift/root/build/compare/ms-orig.tsv
+python3 dhammagift/root/build/build_editions.py ... --mso tipitaka2500.github.io/tipitaka --eds mso --out dhammagift
+python3 dhammagift/root/build/compare/compare_ms.py bilara-data/root/pli/ms dhammagift/root/pli/mso dhammagift/root/build/compare/ms-orig.tsv
 ```
 
-Of 1 933 660 words of `ms` (DN, MN, SN, AN, KN, Vinaya but the Pātimokkha, which is none of the 40 volumes) all but
-a few hundred are the printed words. What SC changed: `ṅ` for the printed `ṃ` before k, g (`saṃgha` → `saṅgha`,
-in 8 757 segments); spacing (mostly `ti` after a quotation, SC `bhagavā”ti`, printed `bhagavā ti`, 5 851 places); `ṁ`; punctuation, capitals and its
-own headings (the printed headings stand inside its text: `dn34` `dve dhammā`, the Vinaya word glosses). Words that
-differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed `idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`,
-printed `parimutto`; `sn22.7:8.2` word order; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
-`an1.439-446` printed `ānāmi` for `jānāmi` (a typo of the print or of the reconstruction); `sn48.137-146:1.1`,
-`sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only` in the Pali;
-`snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana (`snp5.2`).
-The Abhidhamma (769 088 words) has no word that differs. In the Paṭṭhāna the reconstruction leaves out a few
-passages every other edition has (`patthana3.3:1.1`, `16.38`) and some of SC's subheadings (`Paccanīya`); its page
-order is the site's own `next` links (the parent pages do not link every page; one page, 39P3 3.1.1 Naadhipati, no
-link leads to: it goes back by its paragraph number).
-The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
+What the site adds and the print does not have is left out: the titles of all the sections above, which the site
+repeats before every page and paragraph (`Kevaṭṭasutta Bhūtanirodhesakabhikkhuvatthu` before each paragraph of
+dn11 68-83); the page order is the site's own `next` links (the parent pages do not link every page; 39P3 3.1.1
+Naadhipati, which no link leads to, goes back by its paragraph number). `Namo tassa …` is a heading; the Yamaka's
+`»` `«` stay with the question they open. A typo of the reconstruction is corrected (`T2500_FIXES`):
+`an1.439-446` `ānāmi` → `jānāmi`. The site leaves out a few Paṭṭhāna passages every other edition has
+(`patthana3.3:1.1`, `16.38`): those segments are empty.
 
-The text of the print is not in the data; its readings are, with those of the other editions (below).
+Against `ms`, all but a few dozen of its 2 702 748 words are the printed words. What SC changed: `ṅ` for the printed
+`ṃ` before k, g (`saṃgha` → `saṅgha`, in 8 757 segments); spacing (mostly `ti` after a quotation, SC `bhagavā”ti`,
+printed `bhagavā ti`); `ṁ`; punctuation, capitals and its own headings (the printed headings stand inside its text:
+`dn34` `dve dhammā`, the Vinaya word glosses). Words that differ: `dn33:1.11.85, 91` SC `idha bhikkhave`, printed
+`idhāvuso`; `sn35.19:2.9`, `sn35.20:2.2, 2.8` SC `aparimutto`, printed `parimutto`; `sn22.7:8.2` word order;
+`pli-tv-bu-vb-ss13:2.8` SC leaves out `vā`; `pvr5:122.4` SC `ammukhāvinayena` (a typo), printed `sammukhāvinayena`;
+`sn48.137-146:1.1`, `sn48.147-158:1.1`, `sn50.67-76:1.1` SC has the English note `on display title of section only`
+in the Pali; `snp5.18:1.1` SC prints `Idamavoca bhagavā magadhesu…` there, the print at the head of the Pārāyana
+(`snp5.2`); `mn10` the print (as VRI) has the whole exposition of the four truths (`Dukkhasaccaniddesa …`, as in
+dn22) after `mn10:44.3`, SC (as BJT, Siam Rath, PTS) has not, and the print ends `Mahāsatipaṭṭhānasuttaṃ`. The
+Abhidhamma has no word that differs. The list is `compare/ms-orig.tsv` (headings and numbers of the print included).
 
 ## PTS
 
