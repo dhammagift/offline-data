@@ -482,7 +482,7 @@ T2500_FIXES = [('‘ānāmi passāmī’', '‘jānāmi passāmī’')]  # an1.4
 
 def t2500_stream(vol_dirs):
     """Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (Dhamma Society 2005), as reconstructed by tipitaka2500.github.io
-    (CC0): the text ms (the digital MS) comes from, before its edits. For comparison only."""
+    (CC0): the World Tipiṭaka text that SuttaCentral's ms was edited from, without SuttaCentral's edits. For comparison only."""
     st = Stream()
     for vol in vol_dirs:
         heads = []  # the last run of titles: the site repeats before a page, and before a paragraph inside it, the
