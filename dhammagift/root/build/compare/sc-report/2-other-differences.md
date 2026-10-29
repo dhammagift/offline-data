@@ -1,6 +1,6 @@
 # The Mahāsaṅgīti against all other editions
 
-See [1-errors-in-sc-ms.md](1-errors-in-sc-ms.md) for the errors SC made in copying its source, the editions and
+See [1-errors-in-sc-ms.md](https://github.com/dhammagift/offline-data/blob/main/dhammagift/root/build/compare/sc-report/1-errors-in-sc-ms.md) for the errors SC made in copying its source, the editions and
 the method.
 
 In these places SC follows its source faithfully: SC and the printed Mahāsaṅgīti (World Tipiṭaka 2005) read
