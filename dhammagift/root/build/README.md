@@ -9,6 +9,7 @@ so a reader can switch between editions or show them side by side.
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
 | Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 as printed (World Tipiṭaka, Dhamma Society 2005) | `mso` | [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) `tipitaka/*` | CC0 as published there; attribution World Tipiṭaka Project, Dhamma Society |
+| Pali Text Society editions (Dhammakaya input) | `pts` | [GRETIL](https://gretil.sub.uni-goettingen.de/) `2_pali` | CC BY-SA 4.0, (C) PTS and Dhammakaya Foundation |
 
 Licenses of all the texts: [dhammagift/LICENSE.md](../../LICENSE.md).
 
@@ -227,12 +228,12 @@ Abhidhamma has no word that differs. The list is `compare/ms-orig.tsv` (headings
 ## PTS
 
 The Pali Text Society editions as input by the Dhammakaya Foundation, from GRETIL `2_pali` (plain text version;
-(C) PTS and Dhammakaya 2015, CC BY-SA 4.0), for comparison only: their readings go into the variants (`pts`), the
-text is not in the data. The archive is `gretil/2_pali.zip` on the branch `gretil-pali`.
+(C) PTS and Dhammakaya 2015, CC BY-SA 4.0): `root/pli/pts`, and their readings go into the variants (`pts`). The
+files stay CC BY-SA 4.0 (`dhammagift/LICENSE.md`). The archive is `gretil/2_pali.zip` on the branch `gretil-pali`.
 
 ```
 git show origin/gretil-pali:gretil/2_pali.zip > 2_pali.zip && unzip -q 2_pali.zip
-python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds pts --out compare
+python3 dhammagift/root/build/build_editions.py ... --pts 2_pali/1_tipit --eds pts --out dhammagift
 ```
 
 All of DN, MN, SN, AN, the Vinaya but the Pātimokkha, the Abhidhamma (of the Yamaka and the Paṭṭhāna only the
@@ -258,7 +259,7 @@ About 261 000 readings: bj 95 100, sya-all 86 500, pts 76 300, cck 3 500, ms2005
 `saṅkhittaṁ` ("abbreviated") is a peyyāla mark.
 
 ```
-python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift compare/root/pli/mso notes compare/root/pli/pts
+python3 dhammagift/root/build/collate.py bilara-data/root/pli/ms bilara-data/variant/pli/ms dhammagift dhammagift/root/pli/mso notes dhammagift/root/pli/pts
 ```
 
 The editions' own footnotes (`build_editions.py --notes notes`, outside the repo) go into the same file after the
