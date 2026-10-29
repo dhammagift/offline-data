@@ -30,7 +30,7 @@ TH_SRC = re.compile(r'^((?:(?:ma|yu|sī|syā|ka|machasaṃ|pī|kaṃ)\.?\s*)+)\s
 SIGLA = [('bj', os.path.join(DG, 'root', 'pli', 'bjt'), 'bjt'), ('cck', os.path.join(DG, 'root', 'pli', 'my'), 'my'),
          ('sya-all', os.path.join(DG, 'root', 'pli', 'th'), 'th')] + ([('ms2005', MSO, 'mso')] if MSO else []) \
     + ([('pts', PTS, 'pts')] if PTS else [])
-PEYYALA = {'pe', 'la', 'pa', 'peyyālo'}
+PEYYALA = {'pe', 'la', 'pa', 'peyyālo', 'saṃkhittaṃ', 'vitthāretabbaṃ'}  # Paṭṭhāna: saṅkhittaṃ, an abbreviation mark
 # headings and end lines an edition prints inside the text: no readings of it
 TITLE = re.compile(r'.{3,}(vagg[aoā]?|vaggā|kaṇḍ(a|aṃ|o)|sutt(a|aṃ|ā)|sikkhāpad(a|aṃ)|kkhandhak(a|o|aṃ)|pabb(a|aṃ)|'
                    r'kathā|vatthu|bhāṇavār(a|o|aṃ)|niddes(a|o)|pucchā|apadān(a|aṃ)|jātak(a|aṃ)|vimān(a|aṃ)|'
@@ -117,6 +117,8 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
     scv = os.path.join(SCVAR, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     sc = json.load(open(scv, encoding='utf-8')) if os.path.exists(scv) else {}
     for siglum, root, ed in SIGLA:
+        if siglum == 'ms2005' and rel.startswith('abhidhamma/patthana'):
+            continue  # the reconstruction's Paṭṭhāna pages are not in SC's order: no reliable alignment
         q = os.path.join(root, rel.replace('_root-pli-ms.json', f'_root-pli-{ed}.json'))
         if not os.path.exists(q):
             continue

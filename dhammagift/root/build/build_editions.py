@@ -240,6 +240,8 @@ def bjt_entries(files):
             for e in page['pali']['entries']:
                 raw = si2ro(e['text']).replace('**', '').replace('__', '')
                 raw = re.sub(r'-(pe|la)-', r'…\1…', raw).replace('...', '…')  # peyyāla marks as in ms
+                if name.startswith('ap-kvu'):  # Kathāvatthu speaker marks: "sa. pu:", "pa. paṭiññā:", "anu. pā:"
+                    raw = re.sub(r'\b(?:sa|pa|anu|paṭi)\.\s*(?:[a-zṭḍñṃāīū]{1,9}\.?\s*)?:\s*', '', raw)
                 markers, buf, pos = [], [], 0
                 for m in BJT_MARK.finditer(raw):
                     buf.append(raw[pos:m.start()])
@@ -526,7 +528,11 @@ PTS = [('dn', 'dn1-13', '2_sut/1_digh/dighn1pu'), ('dn', 'dn14-23', '2_sut/1_dig
        ('vinaya', ','.join(f'pli-tv-{s}-vb-{k}' for s, ks in (('bu', ['pc', 'pd', 'sk', 'as']),
                                                               ('bi', ['pj', 'ss', 'np', 'pc', 'pd', 'sk', 'as']))
                            for k in ks), '1_vin/vin4s2pu'),
-       ('vinaya', 'pli-tv-kd', '1_vin/vin1mapu,1_vin/vin2cupu'), ('vinaya', 'pli-tv-pvr', '1_vin/vin5papu')]
+       ('vinaya', 'pli-tv-kd', '1_vin/vin1mapu,1_vin/vin2cupu'), ('vinaya', 'pli-tv-pvr', '1_vin/vin5papu'),
+       ('abhidhamma', 'ds', '3_abh/dhamsgpu'), ('abhidhamma', 'vb', '3_abh/vibhanpu'), ('abhidhamma', 'dt', '3_abh/dhatukpu'),
+       ('abhidhamma', 'pp', '3_abh/pugpan_pu'), ('abhidhamma', 'kv', '3_abh/kathavpu'),
+       ('abhidhamma', 'ya', '3_abh/yamak_1pu,3_abh/yamak_2pu'),
+       ('abhidhamma', 'patthana', '3_abh/patti1pu,3_abh/patti2pu,3_abh/patti3pu,3_abh/patdukpu')]
 
 
 def pts_groups():
@@ -709,9 +715,9 @@ FLAT = ('dn', 'mn')  # SC keeps these as one file per sutta, no book folder
 
 
 def ms_files(ms_dir, coll, book, suffix='_root-pli-ms.json'):
-    """ms_dir: the sutta folder of root/ or reference/; Vinaya files are in the vinaya folder beside it"""
-    if coll == 'vinaya':
-        fs = [f for f in glob.glob(os.path.join(os.path.dirname(ms_dir.rstrip('/')), 'vinaya', '**', book + '*' + suffix),
+    """ms_dir: the sutta folder of root/ or reference/; Vinaya and Abhidhamma files are in the folders beside it"""
+    if coll in ('vinaya', 'abhidhamma'):
+        fs = [f for f in glob.glob(os.path.join(os.path.dirname(ms_dir.rstrip('/')), coll, '**', book + '*' + suffix),
                                    recursive=True)
               if re.fullmatch(re.escape(book) + r'[\d.-]*', os.path.basename(f)[:-len(suffix)])]
         return sorted(fs, key=lambda f: [int(x) for x in re.findall(r'\d+', os.path.basename(f)[len(book):])])
@@ -1290,6 +1296,27 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
             while n < len(text[f]) and not norm(text[f][n]):  # "-4"
                 n += 1
             text[k0], text[f] = text[f][:n], text[f][n:]
+    # an ms line "Namo tassa…" opening a sutta (its first segment after 0.x), that the edition prints elsewhere (as a
+    # title, Yamaka), takes none of its words: they go on to the next segment; and the other way, the edition's Namo
+    # tassa printed in the next segment's title (Siam Rath Paṭṭhāna) comes back to it. Not a Namo tassa said in the
+    # text (dn21:2.10.8).
+    allk = [k for k, _ in segs_all]
+    opening = {}
+    for k in allk:
+        if not k.split(':')[1].startswith('0.'):
+            opening.setdefault(sutta_of(k), k)
+    for i, k in enumerate(allk[:-1]):
+        if opening.get(sutta_of(k)) != k or not ''.join(map(norm, ms_text.get(k, '').split())).startswith('namotassa'):
+            continue
+        k2 = allk[i + 1]
+        if text[k] and 'namo' not in [norm(w) for w in ' '.join(text[k]).split()[:6]]:
+            text[k2][:0], text[k] = text[k], []
+        elif not text[k]:
+            ws = ' '.join(text[k2]).split()  # a title line is one string of several words
+            nxt = [norm(w) for w in ws[:12]]
+            if 'namo' in nxt and 'sammasambuddhassa' in nxt[nxt.index('namo'):]:
+                n = nxt.index('sammasambuddhassa', nxt.index('namo')) + 1
+                text[k], text[k2] = [' '.join(ws[:n])], ([' '.join(ws[n:])] if ws[n:] else [])
     if leftover_heads and body:
         text[body[-1][0]].append(' '.join(h for _, h in leftover_heads))
 
@@ -1300,6 +1327,8 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         parts = rel.split(os.sep)
         if parts[0] == 'vinaya':
             book = re.sub(r'\d.*$', '', base)  # pli-tv-bu-vb-pj1 -> pli-tv-bu-vb-pj, pli-tv-bu-pm
+        elif parts[0] == 'abhidhamma':
+            book = parts[1]  # abhidhamma/ds/ds1 -> ds
         else:
             book = parts[2] if len(parts) > 2 else base
         if write_books and book not in write_books:
@@ -1392,12 +1421,13 @@ def put_heads(heads, slots, text, para, ms_text=None):
         if len(zero) == 2:  # ms: 0.1 nikāya, 0.2 vagga
             return zero[0] if c == 'above' else zero[1]
         return zero[0]
-    for c, h in heads:  # a title that names an ms header goes there, the rest by its class; in printed order
-        fit = {k: title_fit(h, ms_text.get(k, '')) for k in zero} if ms_text and c != 'num' else {}
+    for c, h in heads:  # a title that names an ms header (0.x or a leading N.0 subheading) goes there, the rest
+        # by its class; in printed order
+        fit = {k: title_fit(h, ms_text.get(k, '')) for k in zero + nums} if ms_text and c != 'num' else {}
         best = max(fit.values(), default=0)
         k = by_class(c)
         if best and fit.get(k) != best:
-            k = next(k for k in zero if fit[k] == best)
+            k = next(k for k in zero + nums if fit[k] == best)
         text[k].append(h)
     if nums and para and not text[nums[0]]:
         text[nums[0]].append(para + '.')
@@ -1466,6 +1496,14 @@ VINAYA = [
     (['pli-tv-pvr'], ['vp-pv'], ['vin02m4.mul.xml']),
 ]
 VINAYA_BOOKS = [b for books, _, _ in VINAYA for b in books]
+# Abhidhamma: (SC books, BJT prefixes, VRI files)
+ABHI = [
+    (['ds'], ['ap-dhs'], ['abh01m.mul.xml']), (['vb'], ['ap-vbh'], ['abh02m.mul.xml']),
+    (['dt'], ['ap-dhk'], ['abh03m1.mul.xml']), (['pp'], ['ap-pug'], ['abh03m2.mul.xml']),
+    (['kv'], ['ap-kvu'], ['abh03m3.mul.xml']), (['ya'], ['ap-yam'], [f'abh03m{n}.mul.xml' for n in (4, 5, 6)]),
+    (['patthana'], ['ap-pat'], [f'abh03m{n}.mul.xml' for n in (7, 8, 9, 10, 11)]),
+]
+ABHI_BOOKS = [b for books, _, _ in ABHI for b in books]
 
 
 def groups():
@@ -1477,13 +1515,17 @@ def groups():
         yield 'kn', books, bjt, vri
     for books, bjt, vri in VINAYA:
         yield 'vinaya', books, bjt, vri
+    for books, bjt, vri in ABHI:
+        yield 'abhidhamma', books, bjt, vri
 
 
 T2500_KN = {'kp': ['18Kh'], 'dhp': ['18Dh'], 'ud': ['18Ud'], 'iti': ['18It'], 'snp': ['18Sn'], 'vv': ['19Vv'],
             'pv': ['19Pv'], 'thag': ['19Th1'], 'thig': ['19Th2'], 'tha-ap': ['20Ap1', '20Ap2'], 'bv': ['21Bu'],
             'cp': ['21Cp'], 'ja': ['22J', '23J'], 'mnd': ['24Mn'], 'cnd': ['25Cn'], 'ps': ['26Ps'], 'mil': ['28Mi'],
             'ne': ['27Ne'], 'pe': ['27Pe'], 'pli-tv-bu-vb-pj': ['1V'], 'pli-tv-bu-vb-pc': ['2V'], 'pli-tv-kd': ['3V', '4V'],
-            'pli-tv-pvr': ['5V']}
+            'pli-tv-pvr': ['5V'], 'ds': ['29Dhs'], 'vb': ['30Vbh'], 'dt': ['31Dht'], 'pp': ['31Pu'], 'kv': ['32Kv'],
+            'ya': ['33Y1', '33Y2', '33Y3', '33Y4', '33Y5', '34Y6', '34Y7', '34Y8', '35Y9', '35Y10'],
+            'patthana': ['36P1', '37P1', '38P2', '39P3', '39P4', '39P5', '39P6'] + [f'40P{n}' for n in range(7, 25)]}
 
 
 def t2500_volumes(coll, inside):
@@ -1499,12 +1541,16 @@ def t2500_volumes(coll, inside):
 def coll_of(book):
     if book in VINAYA_BOOKS:
         return 'vinaya'
+    if book in ABHI_BOOKS:
+        return 'abhidhamma'
     return 'kn' if book in KN_BOOKS else re.match(r'[a-z]+', book).group()
 
 
 def books_of(coll):
     if coll == 'vinaya':
         return VINAYA_BOOKS
+    if coll == 'abhidhamma':
+        return ABHI_BOOKS
     return KN_BOOKS if coll == 'kn' else [f'{coll}{n}' for n in range(1, LAST[coll] + 1)]
 
 
@@ -1522,6 +1568,10 @@ def parse_only(s):
         if part == 'kn' or part in KN_BOOKS:
             books += [('kn', b) for b in (KN_BOOKS if part == 'kn' else [part])]
             continue
+        if part == 'abhidhamma' or (part in ABHI_BOOKS and part != 'vb') or part.startswith('abh-'):
+            # 'vb' alone is the Vinaya's Vibhaṅga: the Abhidhamma's is abh-vb
+            books += [('abhidhamma', b) for b in (ABHI_BOOKS if part == 'abhidhamma' else [part.replace('abh-', '')])]
+            continue
         vin = [b for b in VINAYA_BOOKS if part == 'vinaya' or part in (b, b.replace('pli-tv-', ''))
                or (part in ('vb', 'pm') and b.split('-')[3] == part)]
         if vin:
@@ -1529,7 +1579,7 @@ def parse_only(s):
             continue
         m = re.fullmatch(r'(dn|mn|sn|an)(?:(\d+)(?:-(\d+))?)?', part)
         if not m:
-            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4, kn, dhp, vinaya, vb, pm, bu-vb-pj)')
+            raise SystemExit(f'--only: cannot read {part!r} (e.g. dn, mn1-50, sn1-56, an4, kn, dhp, vinaya, vb, pm, bu-vb-pj, abhidhamma, ds, abh-vb)')
         a = int(m.group(2) or 1)
         b = int(m.group(3) or m.group(2) or LAST[m.group(1)])
         books += [(m.group(1), n) for n in range(a, b + 1)]
@@ -1561,7 +1611,7 @@ def main():
     NOTES = a.notes
     MS_DIR = a.ms
     report = []
-    asked = {b if c in ('kn', 'vinaya') else f'{c}{b}' for c, b in parse_only(a.only)}
+    asked = {b if c in ('kn', 'vinaya', 'abhidhamma') else f'{c}{b}' for c, b in parse_only(a.only)}
     for coll, inside, bjt_prefixes, vri_files in groups():
         books = asked.intersection(inside)
         if not books:
