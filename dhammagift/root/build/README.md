@@ -268,6 +268,6 @@ kept in view, variant readings by majority of BJT / Myanmar / Thai
   `.../viewer/index.html#sn45.1`. (Opened as a file from disk the browser does not let the page read `data/`;
   locally use `python3 -m http.server` in `viewer/`.) Problem marks are kept in that browser;
   "Copy list" in the marks panel copies them as `key<TAB>editions<TAB>note` lines.
-- `viewer/page.html` is the same page as published on claude.ai, where the marks are shared through the page's database.
+- `viewer/page.html` is the source of the page; `viewer/make_page.py` wraps it into `index.html`.
 - Rebuild after a new run: `python3 viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta dhammagift/root/build/viewer`
   for the data, `python3 viewer/make_page.py` for `index.html` from `page.html`.
