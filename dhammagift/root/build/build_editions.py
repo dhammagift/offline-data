@@ -1451,6 +1451,19 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
 
     def plain(k):
         return text[k] and not head_key(k) and not PEYYALA_ANY.search(' '.join(text[k]) + ' ' + ms_text.get(k, ''))
+    # two words glued by a quote or an elision mark across an ms boundary (BJT dn23:23.48 `evamāha’purato`, mn56:24.2
+    # `so’dāni`): split where the halves are the last word of this segment and the first of the next
+    for i in range(len(allk) - 1):
+        k, nxt = allk[i], allk[i + 1]
+        if sutta_of(k) != sutta_of(nxt) or not text[k] or head_key(nxt):
+            continue
+        ws = ' '.join(text[k]).split()
+        m = re.fullmatch(r"(.*[^\W\d_])([’'‘][^\W\d_].*)", ws[-1]) if ws else None
+        ma, mb = ms_words(k), ms_words(nxt)
+        if m and ma and mb and norm(m.group(1)) == ma[-1] and norm(m.group(2)) == mb[0] and \
+                [w for w in map(norm, ' '.join(text[nxt]).split()) if w][:1] != mb[:1]:
+            text[k], text[nxt] = [' '.join(ws[:-1] + [m.group(1)])], [m.group(2)] + text[nxt]
+
     def loose(ws):  # spacing and ṃ/ñ before a consonant aside: `bhattañcassa` is `bhattaṁ cassa`
         return re.sub(r'[mn](?=[^aeiou]|$)', 'n', ''.join(ws))
 

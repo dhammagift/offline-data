@@ -56,8 +56,7 @@ python3 dhammagift/root/build/viewer/find_shifts.py dhammagift/root/build/viewer
 2. **Страницы PTS.** В GRETIL есть метки `[page 003]`, в reference bilara-data есть ссылки `pts-vp-pli` по абзацам. Чтобы иметь страницы
    с точностью до слова: в `pts_stream` (`build_editions.py`) передавать `[page N]` как маркер `pb` (как у BJT/Thai),
    тогда появится `reference/pli/pts`.
-3. **Два сдвига у BJT** из-за кавычки, приклеенной к следующему слову: dn23:23.48 `evamāha’purato`,
-   thig13.4:7.1 `arahato’dhammaṃ`. Правилом не отделяются (сломаются элизии `cattāro’me`). Можно оставить.
+3. **Склейки у BJT** через кавычку на границе сегментов (dn23:23.48, mn56:24.2 и ещё 3) теперь делятся правилом.
 
 ## Что сделано недавно (для контекста)
 
