@@ -1,6 +1,8 @@
 # Typos in the Buddha Jayanti text of tipitaka.lk
 
 To: tipitaka.lk (path.nirvana@gmail.com, or an issue at https://github.com/pathnirvana/tipitaka.lk)
+Sent: [pathnirvana/tipitaka.lk#154](https://github.com/pathnirvana/tipitaka.lk/issues/154), 2026-10-31.
+
 
 In four places of `public/static/text` a closing quote `’` stands between two words with no space, where the text
 needs a space (and, where a quotation begins, an opening quote `‘`). The same passages elsewhere in your files are
