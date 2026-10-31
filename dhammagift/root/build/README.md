@@ -112,7 +112,9 @@ One file per `ms` file, same keys in the same order. A key the edition has no te
 - A boundary a few words off goes back: the start of the next ms segment at the end of this one, or the end of the one
   before at its start, goes over when the neighbour lacks those words and both segments then read closer to ms
   (BJT `dn2:70.1` `… balamattā, so aparena samayena …`; spacing and ṃ/ñ aside, `bhattañcassa` = `bhattaṁ cassa`).
-  Left as they are: BJT quotes glued to the next word (`dn23:23.48` `evamāha’purato`, `thig13.4:7.1`).
+- Two words glued by a quote or an elision mark across an ms boundary are split there, when the halves are the last
+  word of one segment and the first of the next (BJT `dn23:23.48` `evamāha’purato`, `mn56:24.2` `so’dāni`,
+  `thig13.4:7.1`, `kv1.1:37.2`, `pe6:51.3`); an elision inside a segment (`cattāro’me`) stays one word.
 - An ms `Namo tassa…` that opens a sutta takes no edition words but the edition's own Namo tassa: words that are
   not (the first line of the text, `ya2.1.1:1.1`; `vv1:1.1` Thai `pīṭhante`) go on to the next segment, and an
   edition Namo tassa printed in the next title line comes back with the title before it (Siam Rath Paṭṭhāna
