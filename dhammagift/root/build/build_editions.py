@@ -1263,6 +1263,55 @@ def align_book(toks, body, before):
         matched |= {lo + k for k in sm}
     return assign, score, matched
 
+
+def glued_segs(toks, body, assign, lo, hi, ix):
+    """ms text segments of one sutta that got no edition word while a segment of the same sutta holds
+    much more than its ms text: the edition text of several segments glued into one."""
+    got = collections.Counter(assign[i] for i in range(lo, hi) if toks[i].norm)
+    msw = {si: sum(1 for w in body[si][1].split() if norm(w)) for si in ix}
+    empty = [si for si in ix if msw[si] and not got[si] and not is_subhead(body[si][0])]
+    over = [si for si in ix if got[si] > 2 * msw[si] + 8]
+    return empty if over else []
+
+
+def realign_glued(toks, body, before, assign, matched):
+    """Each sutta where the book-wide alignment glued segments (glued_segs) is aligned again on its own.
+    Book-wide, a word unique in the whole volume is an anchor even where the edition prints two near-equal
+    lines in the other order: sn35.229 ms 1.6 ends `nātivattati`, 2.3 `nātivattatīti`, BJT the other way round,
+    and the crossing anchor put BJT 1.6-2.3 all into 1.6 with 2.1-2.3 empty. Inside one sutta the words of the
+    lines between (`jivhāviññeyyā`, `manoviññeyyā`) outnumber it. The sutta's result is kept only when it leaves
+    fewer segments empty and matches no fewer words. -> number of suttas realigned"""
+    spans = {}
+    for i, si in enumerate(assign):
+        s = sutta_of(body[si][0])
+        lo, hi = spans.get(s, (i, i))
+        spans[s] = (min(lo, i), max(hi, i + 1))
+    segs_of = collections.defaultdict(list)
+    for si, (k, _) in enumerate(body):
+        segs_of[sutta_of(k)].append(si)
+    done = 0
+    for s, (lo, hi) in spans.items():
+        ix = segs_of[s]
+        if any(sutta_of(body[assign[i]][0]) != s for i in range(lo, hi)):
+            continue  # not one contiguous run of words
+        old = glued_segs(toks, body, assign, lo, hi, ix)
+        if not old:
+            continue
+        sub, _, sm = align(toks[lo:hi], [body[si] for si in ix],
+                           {0: before[ix[0]]} if before and ix[0] in before else {}, with_matched=True)
+        new_assign = list(assign)
+        for k, x in enumerate(sub):
+            new_assign[lo + k] = ix[x]
+        empty = lambda a: sum(1 for si in ix if any(body[si][1].split()) and not is_subhead(body[si][0])
+                              and not any(a[i] == si and toks[i].norm for i in range(lo, hi)))
+        old_m = sum(1 for i in range(lo, hi) if i in matched)
+        if empty(new_assign) < empty(assign) and len(sm) >= old_m:
+            assign[lo:hi] = new_assign[lo:hi]
+            matched -= set(range(lo, hi))
+            matched |= {lo + k for k in sm}
+            done += 1
+    return done
+
 NOTES = None
 
 
@@ -1297,6 +1346,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     if len(toks) != len(chunk.toks):
         chunk.toks = toks
     assign, score, matched = align_book(chunk.toks, body, before)
+    realign_glued(chunk.toks, body, before, assign, matched)
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)

@@ -128,6 +128,16 @@ sutta titles together with the vagga number (titles repeat across peyyāla vagga
 occur once, then by words that occur the same few times on both sides; without that the gap was spread evenly and
 Thai SN 34 ran half a segment behind.
 
+A volume is aligned as a whole, so a word unique in the volume is an anchor even where the edition prints two
+near-equal lines in the other order (sn35.229: ms 1.6 ends `nātivattati`, 2.3 `nātivattatīti`, BJT the other way
+round). The crossing anchor glued BJT 1.6-2.3 into 1.6 and left 2.1-2.3 empty. A sutta where one segment holds more
+than twice its ms words (+8) while ms text segments of it got nothing is aligned again on its own, where the words of
+the lines between (`jivhāviññeyyā`, `manoviññeyyā`) outnumber the crossing one; the new result is kept only when
+fewer segments stay empty and no fewer words match (`realign_glued`). 32 suttas (31 BJT, `my` pvr2.9), 271 segments
+filled: sn24.5 (34 empty before, 7 after: BJT 1.3-1.12 had held the repeat of 3.20), an5.223, ps1.5, dn9, sn35.160.
+Two flags this adds to `shifts.json` are in place: BJT prints in ms sn37.5 and sn37.15 two suttas (`anuruddhasuttaṃ`,
+then `kodhanasuttaṃ`), ms has one; the second, which ms lacks, now closes the sutta in 2.5 instead of standing in 2.1-2.4.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in
