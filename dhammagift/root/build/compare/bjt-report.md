@@ -2,6 +2,7 @@
 
 To: tipitaka.lk (path.nirvana@gmail.com, or an issue at https://github.com/pathnirvana/tipitaka.lk)
 Sent: [pathnirvana/tipitaka.lk#154](https://github.com/pathnirvana/tipitaka.lk/issues/154), 2026-10-31.
+Our copy: [dhammagift/dg-node#72](https://github.com/dhammagift/dg-node/issues/72).
 
 
 In four places of `public/static/text` a closing quote `’` stands between two words with no space, where the text

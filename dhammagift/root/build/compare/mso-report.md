@@ -1,7 +1,8 @@
 # A typo in the reconstruction, and readings of the Mahāsaṅgīti 2005 to check
 
 To: tipitaka2500.github.io (an issue at https://github.com/tipitaka2500/tipitaka2500.github.io)
-Sent: not yet.
+Sent: [tipitaka2500/tipitaka2500.github.io#1](https://github.com/tipitaka2500/tipitaka2500.github.io/issues/1), 2026-11-05.
+Our copy: [dhammagift/dg-node#73](https://github.com/dhammagift/dg-node/issues/73).
 
 Good day
 
