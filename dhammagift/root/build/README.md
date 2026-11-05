@@ -133,8 +133,8 @@ near-equal lines in the other order (sn35.229: ms 1.6 ends `nātivattati`, 2.3 `
 round). The crossing anchor glued BJT 1.6-2.3 into 1.6 and left 2.1-2.3 empty. A sutta where one segment holds more
 than twice its ms words (+8) while ms text segments of it got nothing is aligned again on its own, where the words of
 the lines between (`jivhāviññeyyā`, `manoviññeyyā`) outnumber the crossing one; the new result is kept only when
-fewer segments stay empty and no fewer words match (`realign_glued`). 32 suttas (31 BJT, `my` pvr2.9), 271 segments
-filled: sn24.5 (34 empty before, 7 after: BJT 1.3-1.12 had held the repeat of 3.20), an5.223, ps1.5, dn9, sn35.160.
+fewer segments stay empty and no fewer words match (`realign_glued`). 73 suttas, 577 segments filled (BJT 31
+suttas / 267, `my` 1 / 4, `th` 26 / 170, `pts` 15 / 136, `mso` none), none further from ms: sn24.5 (34 empty before, 7 after: BJT 1.3-1.12 had held the repeat of 3.20), an5.223, ps1.5, dn9, sn35.160.
 Two flags this adds to `shifts.json` are in place: BJT prints in ms sn37.5 and sn37.15 two suttas (`anuruddhasuttaṃ`,
 then `kodhanasuttaṃ`), ms has one; the second, which ms lacks, now closes the sutta in 2.5 instead of standing in 2.1-2.4.
 
