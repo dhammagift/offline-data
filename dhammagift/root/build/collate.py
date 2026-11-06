@@ -4,6 +4,7 @@
   bj      Buddha Jayanti (dhammagift/root/pli/bjt)
   cck     Chaṭṭha Saṅgāyana, VRI (dhammagift/root/pli/my)
   sya-all Siam Rath 1927 (dhammagift/root/pli/th)
+  mm      Mahāmakuṭa's Bhikkhupāṭimokkhapāli, in root/pli/th for pli-tv-bu-pm: Siam Rath has no Pātimokkha
   ms2005  the Mahāsaṅgīti as printed, World Tipiṭaka 2005 (dhammagift/root/pli/mso)
   pts     Pali Text Society (GRETIL, Dhammakaya input; dhammagift/root/pli/pts)
 
@@ -144,6 +145,8 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
     scv = os.path.join(SCVAR, rel.replace('_root-pli-ms.json', '_variant-pli-ms.json'))
     sc = json.load(open(scv, encoding='utf-8')) if os.path.exists(scv) else {}
     for siglum, root, ed in SIGLA:
+        if ed == 'th' and os.path.basename(rel).startswith('pli-tv-bu-pm_'):
+            siglum = 'mm'  # the Thai Pātimokkha is Mahāmakuṭa's, not Siam Rath's
         q = os.path.join(root, rel.replace('_root-pli-ms.json', f'_root-pli-{ed}.json'))
         if not os.path.exists(q):
             continue

@@ -343,8 +343,9 @@ async function render() {
   const keyw = '7.6em';
   grid.style.setProperty('--cols', `${keyw} repeat(${eds.length}, minmax(0, 1fr))`);
   grid.style.setProperty('--keyw', keyw);
+  const nm = e => data.names?.[e.id]?.name || e.name, fl = e => data.names?.[e.id]?.full || e.full;  // th of the Pātimokkha: Mahāmakuṭa
   const out = [`<div class="row colhead"><div class="cell key">segment</div>${eds.map(e =>
-    `<div class="cell"><span class="colname" title="${e.full}"><span class="dot" style="background:${e.color}"></span>${e.name}</span></div>`).join('')}</div>`];
+    `<div class="cell"><span class="colname" title="${fl(e)}"><span class="dot" style="background:${e.color}"></span>${nm(e)}</span></div>`).join('')}</div>`];
   for (const s of data.suttas) {
     out.push(`<div class="row sutta" id="s:${s.id}"><div class="cell">${s.id.replace(/^pli-tv-/, '')}</div><div class="cell" style="grid-column: 2 / -1">${esc(s.title || '')}</div></div>`);
     for (const row of s.rows) {
@@ -356,7 +357,7 @@ async function render() {
       for (const e of eds) {
         const text = row[e.col];
         const isSus = sus && e.id !== 'ms' && !head && wc(text) > 2 * msw + 8;
-        let cell = `<span class="edlabel" style="color:${e.color}">${e.name}</span>` + (rd && text && !(head && e.id === 'ms') ? rd[e.id] : plain(text));
+        let cell = `<span class="edlabel" style="color:${e.color}">${nm(e)}</span>` + (rd && text && !(head && e.id === 'ms') ? rd[e.id] : plain(text));
         if (notes) {  // under ms: all readings (collate.py); under an edition: its pages
           const v = s.var[e.id]?.[key], r = s.ref[e.id]?.[key];
           if (v || r) cell += `<div class="notes">${v ? `<span class="var">${esc(v)}</span>` : ''}${r ? `<span class="ref">${esc(r)}</span>` : ''}</div>`;

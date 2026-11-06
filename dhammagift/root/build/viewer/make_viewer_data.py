@@ -7,6 +7,9 @@ import json, glob, os, re, sys
 DG, MS, OUT = sys.argv[1:4]
 os.makedirs(f'{OUT}/data', exist_ok=True)
 EDS = ['bjt', 'my', 'th', 'mso', 'pts']
+# a column that holds another edition in one book: Siam Rath has no Pātimokkha; th has the Mahāmakuṭa one there
+NAMES = {'bu-pm': {'th': {'name': 'Mahāmakuṭa', 'full': 'Bhikkhupāṭimokkhapāli, Mahāmakuṭarājavidyālaya, Thailand '
+                                                '(uisp, Hugging Face); Siam Rath has no Pātimokkha'}}}
 KN = ['kp', 'dhp', 'ud', 'iti', 'snp', 'vv', 'pv', 'thag', 'thig', 'tha-ap', 'thi-ap', 'bv', 'cp', 'ja', 'mnd', 'cnd',
       'ps', 'mil', 'ne', 'pe']
 PART = 2500  # segments: a KN or Vinaya book longer than this is shown in parts
@@ -94,7 +97,10 @@ for pid, coll, label, files in pages:
             next((v.strip() for k, v in ms.items() if re.search(r':0\.[2-9]$', k) and 'sutta' in v.lower()), '') \
             or (ms.get(next((k for k in ms if k.endswith(':0.3')), ''), '') or '').strip()
         suttas.append({'id': base, 'title': title, 'rows': rows, 'var': var, 'ref': ref})
-    json.dump({'book': pid, 'suttas': suttas}, open(f'{OUT}/data/{pid}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    out = {'book': pid, 'suttas': suttas}
+    if pid in NAMES:
+        out['names'] = NAMES[pid]
+    json.dump(out, open(f'{OUT}/data/{pid}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     index.append({'book': pid, 'coll': coll, 'label': label, 'n': len(suttas),
                   'fill': {e: round(100 * a / b) if b else None for e, (a, b) in stats.items()},
                   'suttas': [[s['id'], s['title']] for s in suttas]})

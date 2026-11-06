@@ -750,6 +750,70 @@ def th_stream(db, volume):
     return st
 
 
+# ---------------------------------------------------------------- Thai Pātimokkha (Mahāmakuṭa)
+
+# Siam Rath has no Pātimokkha (none of its 45 volumes). Its Thai stand-in, in root/pli/th with a note: the
+# Bhikkhupāṭimokkhapāli of Mahāmakuṭarājavidyālaya (preface of 18 May 1947; the 2nd printing made to agree with the
+# recitation of Wat Bovoranives, the Dhammayut one), put online by uisp on Hugging Face (dataset
+# dhamma-book-for-general-public, book 3: 03/03NNNN.csv, a CSV per page). Its Thai font wrote ญ and ฐ without their
+# lower stroke as \x90 and \x80. Pages 1-5: the preliminaries; 7-18: Thai notes on the words to change for each
+# uposatha and season (no text); 19-109: the Pātimokkha; 110-113: chants after it (no text). Thai words (the
+# responses `(รับพร้อมกันว่า …)`, notes) are left out by the letters and signs Pali in Thai script has no use for.
+MBU_PM_PAGES = list(range(1, 6)) + list(range(19, 110))
+TH_ONLY = re.compile('[ดบซฝฟศษฮะัำืแใไ'
+                     '็-์]')
+
+
+def mbu_pm_stream(src):
+    import csv
+    st = Stream()
+    buf, mk = [], []
+
+    def flush():
+        if buf:
+            st.body(' '.join(buf), list(mk))
+        buf.clear()
+        mk.clear()
+
+    for page in MBU_PM_PAGES:
+        f = os.path.join(src, f'03{page:04d}.csv')
+        page_ref = f'mbu-pm.{page}'
+        for row in csv.DictReader(open(f, encoding='utf-8-sig')):
+            t = row['Text'].replace('\x90', 'ญ').replace('\x80', 'ฐ')
+            t = re.sub(r'<SUP>.*?</SUP>|<[^>]*>', ' ', t)
+            t = re.sub(r'\([^)]*\)?', ' ', t)  # the responses, in Thai
+            t = ' '.join(w for w in t.split() if not TH_ONLY.search(w))
+            line = ' '.join(th2ro(t).replace('"', '').split())
+            m = re.match(r'(\d+)\.\s*', line)
+            if m:  # a rule's number
+                flush()
+                line = line[m.end():]
+            if not re.search(r'[^\W\d_]', line):
+                continue
+            if page == 1 and row['LineNumber'] == '001' or re.match(r'namotassa|sammasambuddhassa$', norm(line)):
+                st.heading(line, 'above', [page_ref] if page_ref else [])  # the book's title, namo tassa (2 lines)
+                page_ref = None
+                continue
+            if colophon(line):  # an end line ("nidānuddeso niṭṭhito.") is an entry of its own
+                flush()
+            joined = ' '.join(buf)
+            glue = bool(buf) and joined.endswith('-') and line[:1].isalpha()  # word broken at line end
+            base = len(joined) - 1 if glue else len(joined) + (1 if buf else 0)
+            if m:
+                mk.append((base, 'para', m.group(1)))
+            if page_ref:
+                mk.append((base, 'pb', page_ref))
+                page_ref = None
+            if glue:
+                buf[-1] = buf[-1][:-1] + line
+            else:
+                buf.append(line)
+            if re.search(r'[.?]$', line):
+                flush()
+    flush()
+    return st
+
+
 # SC reference has no sya marks for these; volumes checked against the nipāta titles in palinew.sqlite
 SYA_VOLUME = {'an5': 22, 'an6': 22, 'an7': 23, 'an9': 23}
 
@@ -1312,6 +1376,42 @@ def realign_glued(toks, body, before, assign, matched):
             done += 1
     return done
 
+
+def rule_starts(toks, body, segs_all, assign):
+    """Pātimokkha: a rule the edition numbers (`15.`) begins the ms segment after the rule's title (N.0). When its
+    first words read too unlike ms to anchor (Thai `nisīdanasanthatampana bhikkhanā kārayamāmena purāṇasentassa`),
+    the alignment leaves them at the end of the rule before (pm 47.2, 114.2): they go on to the rule's own segment."""
+    title = lambda k: '-pm:' in k and re.search(r':\d+\.0(\.\d+)?$', k)
+    for i, t in enumerate(toks):
+        si = assign[i]
+        if not t.para or i == 0 or assign[i - 1] != si or title(body[si][0]):
+            continue
+        to = si + 1
+        while to < len(body) and title(body[to][0]):
+            to += 1
+        if to == si + 1 or to >= len(body):
+            continue
+        j = i
+        while j < len(toks) and assign[j] == si:
+            assign[j] = to
+            j += 1
+    # an end line the alignment spread over segments ms has and the edition not (Thai `nidānuddeso niṭṭhito.` over
+    # pm 7.1-7.4, the questions after the nidāna Thai does not print) goes whole to ms's end line just after
+    i = 0
+    while i < len(toks):
+        j = i
+        while j < len(toks) and toks[j].entry == toks[i].entry:
+            j += 1
+        segs = sorted(set(assign[i:j]))
+        if toks[i].end and len(segs) > 1 and '-pm:' in body[segs[0]][0]:
+            got = set(assign)
+            to = next((s for s in range(segs[-1] + 1, min(len(body), segs[0] + 8))
+                       if colophon(body[s][1]) and s not in got), None)
+            if to is not None:
+                assign[i:j] = [to] * (j - i)
+        i = j
+
+
 NOTES = None
 
 
@@ -1347,6 +1447,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         chunk.toks = toks
     assign, score, matched = align_book(chunk.toks, body, before)
     realign_glued(chunk.toks, body, before, assign, matched)
+    rule_starts(chunk.toks, body, segs_all, assign)
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)
@@ -1813,7 +1914,7 @@ def parse_only(s):
             books += [('abhidhamma', b) for b in (ABHI_BOOKS if part == 'abhidhamma' else [part.replace('abh-', '')])]
             continue
         vin = [b for b in VINAYA_BOOKS if part == 'vinaya' or part in (b, b.replace('pli-tv-', ''))
-               or (part in ('vb', 'pm') and b.split('-')[3] == part)]
+               or (part in ('vb', 'pm') and b.split('-')[3:4] == [part])]
         if vin:
             books += [('vinaya', b) for b in vin]
             continue
@@ -1840,6 +1941,8 @@ def main():
     ap.add_argument('--only', default='dn,mn,sn,an,kn,vinaya', help='e.g. dn,mn,sn1-10,an4,kn,dhp,vinaya,vb,pm')
     ap.add_argument('--thai', help='E-Tipitaka palinew.sqlite (Siam Rath 1927)')
     ap.add_argument('--ref', help='bilara-data reference/pli/ms/sutta, for Siam Rath volumes')
+    ap.add_argument('--mbu-pm', help="uisp/dhamma-book-for-general-public book 3 (03/), the Thai Bhikkhupātimokkha "
+                                     "of Mahāmakuṭa, for th's pli-tv-bu-pm")
     ap.add_argument('--report')
     ap.add_argument('--eds', default='bjt,my,th', help='editions to build; mso = Mahāsaṅgīti as printed, for comparison')
     ap.add_argument('--mso', help='tipitaka2500.github.io/tipitaka (World Tipiṭaka 2005), for --eds mso')
@@ -1904,6 +2007,10 @@ def main():
                 label = 'sya' + ','.join(map(str, sorted(gv))) + f':{group[0]}-{group[-1]}'
                 place(th_stream(a.thai, sorted(gv)), ms, 'th', a.out, label, report, books)
                 log(report)
+    if a.mbu_pm and 'th' in eds and 'pli-tv-bu-pm' in asked:
+        place(mbu_pm_stream(a.mbu_pm), ms_files(a.ms, 'vinaya', 'pli-tv-bu-pm'), 'th', a.out, 'mbu:pli-tv-bu-pm',
+              report, {'pli-tv-bu-pm'})
+        log(report)
     if a.report:
         with open(a.report, 'w', encoding='utf-8') as f:
             f.write('edition\tvolume\tfiles\tsegments\tfilled\twords\theadings\tmatch\n')

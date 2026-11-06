@@ -8,6 +8,7 @@ so a reader can switch between editions or show them side by side.
 | Buddha Jayanti Tipiṭaka (Sri Lanka) | `bjt` | [tipitaka.lk](https://github.com/pathnirvana/tipitaka.lk) `public/static/text/*.json` | CC BY-ND 4.0, attribution tipitaka.lk; text must be kept in sync, errors are reported to them, not fixed here |
 | Chaṭṭha Saṅgāyana (Myanmar, VRI CST) | `my` | [VipassanaTech/tipitaka-xml](https://github.com/VipassanaTech/tipitaka-xml) `romn/*.mul.xml` | VRI |
 | Syāmaraṭṭha (Siam Rath, Thai) 1927 | `th` | E-Tipitaka [ssutee/e-tipitaka-pc](https://github.com/ssutee/e-tipitaka-pc) `resources/palinew.sqlite` (Git LFS), 45 vols | no data license stated; attribution E-Tipitaka (Sutee Sudprasert), Siam Rath |
+| Bhikkhupāṭimokkhapāli of Mahāmakuṭarājavidyālaya (Thai), in `th` for `pli-tv-bu-pm` only: Siam Rath has no Pātimokkha | `th` | [uisp/dhamma-book-for-general-public](https://huggingface.co/datasets/uisp/dhamma-book-for-general-public) book 3 (`03/`, a CSV per page) | no data license stated; attribution Mahāmakuṭarājavidyālaya, uisp (Hugging Face) |
 | Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 as printed (World Tipiṭaka, Dhamma Society 2005) | `mso` | [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) `tipitaka/*` | CC0 as published there; attribution World Tipiṭaka Project, Dhamma Society |
 | Pali Text Society editions (Dhammakaya input) | `pts` | [GRETIL](https://gretil.sub.uni-goettingen.de/) `2_pali` | CC BY-SA 4.0, (C) PTS and Dhammakaya Foundation |
 
@@ -24,6 +25,7 @@ dhammagift/variant/pli/ms/sutta/sn/sn1/sn1.1_variant-pli-ms.json       readings 
 dhammagift/reference/pli/<ed>/sutta/sn/sn1/sn1.1_reference-pli-<ed>.json  pages and paragraph numbers
 dhammagift/root/pli/<ed>/vinaya/pli-tv-bu-vb/pli-tv-bu-vb-pj/pli-tv-bu-vb-pj1_root-pli-<ed>.json  Vinaya, SC folders
 dhammagift/root/pli/my/vinaya/pli-tv-bu-pm_root-pli-my.json                                       Pātimokkha
+dhammagift/root/pli/th/vinaya/pli-tv-bu-pm_root-pli-th.json                                       Pātimokkha, Mahāmakuṭa
 dhammagift/root/pli/<ed>/abhidhamma/ds/ds1/ds1.1_root-pli-<ed>.json                               Abhidhamma, SC folders
 ```
 
@@ -156,9 +158,11 @@ git clone --depth 1 https://github.com/pathnirvana/tipitaka.lk
 git clone --depth 1 --filter=blob:none --sparse https://github.com/VipassanaTech/tipitaka-xml && git -C tipitaka-xml sparse-checkout set romn
 git clone --depth 1 --filter=blob:none --sparse https://github.com/suttacentral/bilara-data && git -C bilara-data sparse-checkout set root/pli/ms/sutta reference/pli/ms/sutta root/pli/ms/vinaya reference/pli/ms/vinaya root/pli/ms/abhidhamma reference/pli/ms/abhidhamma
 curl -LO https://media.githubusercontent.com/media/ssutee/e-tipitaka-pc/master/resources/palinew.sqlite
+mkdir -p mbu-pm && for p in $(seq 1 113); do f=$(printf '03%04d.csv' $p); curl -sSfL -o mbu-pm/$f \
+  https://huggingface.co/datasets/uisp/dhamma-book-for-general-public/resolve/main/03/$f; done
 python3 dhammagift/root/build/build_editions.py \
   --bjt tipitaka.lk/public/static/text --vri tipitaka-xml/romn --ms bilara-data/root/pli/ms/sutta \
-  --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta \
+  --thai palinew.sqlite --ref bilara-data/reference/pli/ms/sutta --mbu-pm mbu-pm \
   --out dhammagift --notes notes --only dn,mn,sn,an,kn,vinaya,abhidhamma --report dhammagift/root/build/report.tsv
 ```
 
@@ -177,6 +181,20 @@ Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikk
 Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
 Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has rule titles
 (`Pācittiya 6. Dutiyasahaseyya`) that VRI does not print: most of its empty segments.
+None of the other editions prints the Pātimokkha on its own: tipitaka.lk has no such book (its `anya` texts are the
+Visuddhimagga only), nor the 45 volumes of Siam Rath, the 40 of the World Tipiṭaka 2005, or GRETIL's PTS. It is not
+made up here from the rules in the Vibhaṅga: a rule can read differently there and in the Pātimokkha (as in the
+Mahāsaṅgīti), and the recitation around the rules is in no Vibhaṅga. In `th` the Bhikkhupātimokkha is the Thai one
+of Mahāmakuṭarājavidyālaya instead (`--mbu-pm`; collated as `mm`, the viewer names the column Mahāmakuṭa):
+`Bhikkhupāṭimokkhapāli`, preface of 18 May 1947, its 2nd printing made to agree with the recitation of Wat
+Bovoranives (Dhammayut), from uisp's Hugging Face dataset (a CSV per page). Its Thai font wrote ญ and ฐ without
+their lower stroke as `\x90`, `\x80`; Thai words (responses, notes) go by the letters and signs Pali in Thai script
+does not use; pages 7-18 (Thai notes on the words to change for each uposatha) and 110-113 (chants after it) are
+left out. It prints the preliminaries in prose where ms has verses (`1.1`-`3.3`), no questions after the nidāna
+(`7.1`-`7.5` empty), its own end lines for the sekhiya groups (`tayo pakiṇṇakā`), and no Bhikkhunīpātimokkha.
+Its typos are kept (`sikākhāsājīva`, `kārayamāmena`). A rule it numbers (`15.`) opens the segment after ms's rule
+title even where its first words are too unlike ms to anchor (`rule_starts`), and an end line the alignment spread
+over ms segments the edition lacks goes whole to ms's end line after them (`nidānuddeso niṭṭhito.` in `7.6`).
 palinew.sqlite has no pages 211-220 of volume 1 (end of pj4, from `9.2.2`): those segments are empty in `th`.
 Empty Vinaya segments are where an edition abbreviates (`…pe…`, BJT `dutiyampi kho …pe…`) or does not print a line
 (Thai `…sikkhāpadaṁ niṭṭhitaṁ.`).
@@ -195,7 +213,7 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | AN | 89% (81) | 93% (88) | 85% (77) |
 | KN | 92% | 95% | 93% |
 | Vinaya: Vibhaṅga | 88% | 89% | 87% |
-| Vinaya: Pātimokkha | — | 83% | — |
+| Vinaya: Pātimokkha | — | 83% | 64% (bhikkhu only, Mahāmakuṭa) |
 | Vinaya: Khandhaka | 96% | 99% | 94% |
 | Vinaya: Parivāra | 96% | 99% | 95% |
 | Abhidhamma: Dhammasaṅgaṇī | 91% | 94% | 92% |
@@ -275,7 +293,7 @@ python3 dhammagift/root/build/pts_notes.py 2_pali/1_tipit bilara-data/root/pli/m
 One file per ms file, at SC's place and in SC's form, which the dg.db build mixes with SC's own
 `variant-pli-ms`: `dhammagift/variant/pli/ms/sutta/sn/sn35/sn35.19_variant-pli-ms.json`,
 `"sn35.19:2.9": "aparimutto → parimutto (bj, cck, sya-all, ms2005, pts)"`. Made by `collate.py` from the editions
-on the ms segment ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath, `ms2005` the Mahāsaṅgīti as
+on the ms segment ids: `bj` Buddha Jayanti, `cck` Chaṭṭha Saṅgāyana (VRI), `sya-all` Siam Rath (`mm`: the Mahāmakuṭa Pātimokkha in `th`), `ms2005` the Mahāsaṅgīti as
 printed, `pts` the Pali Text Society editions (below). Each is compared with ms word by word over a whole sutta (a
 word the alignment put next door is no reading). Left out: case, punctuation, spacing, spellings that are no
 reading (ṁ/ṃ/m and any nasal before a stop, `evam eva`, `yan ti`, a single for a double consonant as PTS `upekhā`,
