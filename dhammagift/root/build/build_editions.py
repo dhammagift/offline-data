@@ -372,6 +372,20 @@ def vri_flatten(el):
     return ''.join(buf), markers
 
 
+def vri_centre_title(text):
+    """a centred line VRI prints as a title, not as text, that would otherwise be glued to the end of the segment
+    before: the rule names of the Pātimokkha (`Kāyasaṃsaggasikkhāpadaṃ`, `Methunadhamma sikkhāpadaṃ`), printed
+    before each rule; the subheadings of the Apadāna in brackets (`(Cintanākāro)`, `(1. Chattānisaṃso)`); a one-word
+    section name (`Lakkhaṇakaṇḍaṃ` ja546, `Nayasaṅkhepo` ne3). Not an end line (it has a full stop), not an
+    Abhidhamma remark in brackets (`(Ekamūlakaṃ.)`, `(Nissayampi ninnānaṃ)`)."""
+    t = ' '.join(text.split())
+    if not t or t[-1] in '.–,;:?!’' or len(t.split()) > 4:
+        return False
+    w = norm(t.split()[-1])
+    return (w.endswith('sikkhapadam') or bool(re.fullmatch(r'\((\d+\.\s*)?[^\s().]+\)', t))
+            or (len(t.split()) == 1 and bool(re.search(r'(kandam|sankhepo)$', w))))
+
+
 def vri_stream(path, chunk_div=None):
     """path: a file or a list of files read as one text. chunk_div: 'samyutta' -> {n: Stream} by div id
     sn<k>_<n>; None -> {0: Stream}."""
@@ -413,6 +427,10 @@ def vri_stream(path, chunk_div=None):
                 continue
             if rend == 'centre' and 'namotassa' in norm(text):
                 cur.heading(text, 'above')
+                continue
+            if rend == 'centre' and vri_centre_title(text) or rend == 'bodytext' and len(text.split()) == 1 \
+                    and norm(text).endswith('sikkhapadam'):  # 4 Pātimokkha rule names VRI marks up as text
+                cur.heading(text, 'sutta', [v for _, k, v in markers if k == 'pb'])
                 continue
             cur.body(text, markers)
 

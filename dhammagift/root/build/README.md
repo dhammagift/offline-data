@@ -179,8 +179,12 @@ Khandhaka: BJT `vp-mv` + `vp-cv`, VRI `vin02m2` + `vin02m3`, Siam Rath 4-7, alig
 verses apart from their Niddesa (`cnd2-4`) and has no Yasavagga (`tha-ap553-563`, which repeats `tha-ap20`, `24`…).
 Vinaya: BJT `vp-prj` (pj, ss, ay, np) and `vp-pct` (pc, pd, sk, as and the Bhikkhunīvibhaṅga), VRI `vin01m`, `vin02m1`;
 Siam Rath volumes 1-3. The Pātimokkha (Dvemātikāpāḷi) is only in VRI (`vin04t.nrf.xml`, read up to the
-Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. In ms the Pātimokkha has rule titles
-(`Pācittiya 6. Dutiyasahaseyya`) that VRI does not print: most of its empty segments.
+Kaṅkhāvitaraṇī commentary); tipitaka.lk and Siam Rath have none. VRI prints the name of each rule
+centred before it (`Kāyasaṃsaggasikkhāpadaṃ`; 4 marked up as text, `Uccasaddasikkhāpadaṃ`): a title, which goes to
+ms's rule title (`Saṅghādisesa 2. Kāyasaṃsagga`), not to the end of the rule before (`vri_centre_title`). So also
+the Apadāna's subheadings in brackets (`(Cintanākāro)`, `(1. Chattānisaṃso)`, tha-ap393, 406) and a one-word section
+name (`Lakkhaṇakaṇḍaṃ` ja546, `Nayasaṅkhepo` ne3); a centred line with a full stop is an end line and stays text.
+Empty in VRI: the vagga titles of the sekhiyas (`Chapter 1. Parimaṇḍala`), which VRI does not print.
 None of the other editions prints the Pātimokkha on its own: tipitaka.lk has no such book (its `anya` texts are the
 Visuddhimagga only), nor the 45 volumes of Siam Rath, the 40 of the World Tipiṭaka 2005, or GRETIL's PTS. It is not
 made up here from the rules in the Vibhaṅga: a rule can read differently there and in the Pātimokkha (as in the
@@ -213,7 +217,7 @@ Segments with text (whole collections; in brackets the same count for the 4nt `m
 | AN | 89% (81) | 93% (88) | 85% (77) |
 | KN | 92% | 95% | 93% |
 | Vinaya: Vibhaṅga | 88% | 89% | 87% |
-| Vinaya: Pātimokkha | — | 83% | 64% (bhikkhu only, Mahāmakuṭa) |
+| Vinaya: Pātimokkha | — | 95% | 64% (bhikkhu only, Mahāmakuṭa) |
 | Vinaya: Khandhaka | 96% | 99% | 94% |
 | Vinaya: Parivāra | 96% | 99% | 95% |
 | Abhidhamma: Dhammasaṅgaṇī | 91% | 94% | 92% |
