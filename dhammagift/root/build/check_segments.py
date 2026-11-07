@@ -13,9 +13,10 @@ import collections, difflib, glob, json, os, re, sys, unicodedata
 MS, DG, OUT = sys.argv[1:4]
 EDS = (sys.argv[4] if len(sys.argv) > 4 else 'bjt,my,th,mso,pts').split(',')
 TOP = int(sys.argv[5]) if len(sys.argv) > 5 else 20
+ONLY = re.compile(sys.argv[6]) if len(sys.argv) > 6 else None  # e.g. '^dn\d': only these suttas
 
 
-PEYYALA = re.compile(r'…|\.\.\.|\bpe\b|\bla\b|peyyāl|vitthāretabb|saṅkhitt|saṃkhitt|saṁkhitt', re.I)
+PEYYALA = re.compile(r'…|\.\.\.|\. \. \.|\bpe\b|\bla\b|peyyāl|vitthāretabb|saṅkhitt|saṃkhitt|saṁkhitt', re.I)
 
 
 def words(text):
@@ -35,6 +36,8 @@ def seq(d):
 rows = []
 for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursive=True)):
     rel = os.path.relpath(p, MS)
+    if ONLY and not ONLY.search(os.path.basename(p)):
+        continue
     ms = json.load(open(p, encoding='utf-8'))
     A = seq(ms)
     if not A:
@@ -61,8 +64,9 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
                     bad[(ke, km)].append(w)
         for (ke, km), ws in bad.items():
             here = ' '.join(words(ms.get(ke) or ''))
-            if ' '.join(ws[:6]) in here and ke in ms:
-                kind = 'repeat'  # ms has the same words in this segment too: which repetition is meant is unclear
+            same = difflib.SequenceMatcher(None, words(ms.get(ke) or ''), words(ms.get(km) or ''), autojunk=False)
+            if (' '.join(ws[:6]) in here and ke in ms) or same.ratio() >= 0.5:
+                kind = 'repeat'  # ms has the same words (or a segment much like it) here too: which repetition is meant is unclear
             elif PEYYALA.search(ms.get(km) or '') or PEYYALA.search(e.get(ke) or '') or PEYYALA.search(ms.get(ke) or ''):
                 kind = 'peyyala'  # one side abbreviates
             else:

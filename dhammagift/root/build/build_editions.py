@@ -1415,6 +1415,99 @@ def realign_glued(toks, body, before, assign, matched):
     return done
 
 
+def realign_window(toks, body, assign, width=30):
+    """A block repeated almost word for word, one right after the other, can pull the alignment one block back:
+    Siam Rath dn29 prints `Taṁ kissa hetu? Evañhetaṁ, cunda, hoti durakkhāte …` (ms 4.12-5.9) and then the same
+    words again (5.10-6.1); its first block all went into 4.12 and its second into 4.13-5.1, with 5.2-5.10 empty.
+    The sutta aligned on its own (realign_glued) gives the same. Here a segment that holds much more than its ms
+    text (more than twice its ms words, +8) with an empty ms text segment among the next 15 is the start of a
+    window of `width` segments, whose words are matched with ms word for word (runs of 2 or more): a matched word
+    goes to the segment of its ms word, the words between two matched ones are spread over the ms words between
+    them (unless there is far more edition text than ms there: then it stays whole with the word before). The window
+    takes the new assignment only when the number of matched words that stand in their own segment grows by 5 or
+    more, also counted over the whole sutta aligned at once (as check_segments.py counts: a repeated passage can
+    fool the window, iti81 PTS), no more ms text segments are left empty, and no segment gets words of which none
+    matches its ms text. -> number of windows realigned"""
+    got = collections.Counter(a for i, a in enumerate(assign) if toks[i].norm)
+    msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
+    home_of = {}  # sutta -> {token: the segment of the ms word it matches, the sutta aligned whole}
+
+    def home(s):
+        if s not in home_of:
+            segs = [j for j, (k, _) in enumerate(body) if sutta_of(k) == s]
+            ti = [i for i, a in enumerate(assign) if toks[i].norm and sutta_of(body[a][0]) == s]
+            SA = [(w, j) for j in segs for w in msw[j]]
+            sm2 = difflib.SequenceMatcher(None, [w for w, _ in SA], [toks[i].norm for i in ti], autojunk=False)
+            home_of[s] = {ti[m.b + d]: SA[m.a + d][1] for m in sm2.get_matching_blocks() if m.size >= 2
+                          for d in range(m.size)}
+        return home_of[s]
+    done, si = 0, 0
+    while si < len(body):
+        if not (got[si] > 2 * len(msw[si]) + 8
+                and any(msw[j] and not got[j] for j in range(si + 1, min(len(body), si + 16)))):
+            si += 1
+            continue
+        s = sutta_of(body[si][0])
+        ix = [j for j in range(si, min(len(body), si + width)) if sutta_of(body[j][0]) == s]
+        lo = next((i for i, a in enumerate(assign) if a == si), None)
+        hi = max((i for i, a in enumerate(assign) if a in ix), default=None)
+        if lo is None or hi is None or any(not (ix[0] <= assign[i] <= ix[-1]) for i in range(lo, hi + 1)):
+            si += 1
+            continue
+        hi += 1
+        A = [(w, j) for j in ix for w in msw[j]]  # ms words of the window and their segments
+        B = [i for i in range(lo, hi) if toks[i].norm]
+        sm = difflib.SequenceMatcher(None, [w for w, _ in A], [toks[i].norm for i in B], autojunk=False)
+        pairs = [(m.a + d, m.b + d) for m in sm.get_matching_blocks() if m.size >= 2 for d in range(m.size)]
+        if not pairs:
+            si += 1
+            continue
+        new = {}
+        for a, b in pairs:
+            new[B[b]] = A[a][1]
+        # the words between two matched ones: spread over the ms words between them
+        for (a1, b1), (a2, b2) in zip([(-1, -1)] + pairs, pairs + [(len(A), len(B))]):
+            run = range(b1 + 1, b2)
+            if not run:
+                continue
+            gap = list(range(a1 + 1, a2))
+            if len(run) > 2 * len(gap) + 4:
+                gap = []  # much more edition text than ms has here: it stays whole with the word before
+            for n, b in enumerate(run):
+                if gap:
+                    new[B[b]] = A[gap[min(len(gap) - 1, n * len(gap) // len(run))]][1]
+                else:
+                    new[B[b]] = A[a1][1] if a1 >= 0 else A[0][1]
+        old_ok = sum(1 for a, b in pairs if assign[B[b]] == A[a][1])
+        new_ok = len(pairs)
+        cand = list(assign)
+        last = ix[0]
+        for i in range(lo, hi):
+            if i in new:
+                last = new[i]
+            cand[i] = new.get(i, last)  # words with no letters go with the word before
+        if any(cand[i] > cand[i + 1] for i in range(lo, hi - 1)):
+            si += 1
+            continue  # not in order
+        anchored = {A[a][1] for a, _ in pairs}
+        had = {assign[i] for i in range(lo, hi) if toks[i].norm}
+        if any(toks[i].norm and cand[i] not in anchored and cand[i] not in had for i in range(lo, hi)):
+            si += 1
+            continue  # a segment would get words without one of them matching its ms text
+        empty = lambda a: sum(1 for j in ix if msw[j] and not is_subhead(body[j][0])
+                              and not any(a[i] == j and toks[i].norm for i in range(lo, hi)))
+        h = home(s)  # the gain counted as check_segments.py counts it: over the whole sutta, not the window alone
+        gain = sum((cand[i] == h[i]) - (assign[i] == h[i]) for i in range(lo, hi) if i in h)
+        if new_ok - old_ok >= 5 and gain >= 5 and empty(cand) <= empty(assign):
+            assign[lo:hi] = cand[lo:hi]
+            got = collections.Counter(a for i, a in enumerate(assign) if toks[i].norm)
+            done += 1
+            si = ix[-1] + 1
+        else:
+            si += 1
+    return done
+
+
 def rule_starts(toks, body, segs_all, assign):
     """Pātimokkha: a rule the edition numbers (`15.`) begins the ms segment after the rule's title (N.0). When its
     first words read too unlike ms to anchor (Thai `nisīdanasanthatampana bhikkhanā kārayamāmena purāṇasentassa`),
@@ -1522,6 +1615,8 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         chunk.toks = toks
     assign, score, matched = align_book(chunk.toks, body, before)
     realign_glued(chunk.toks, body, before, assign, matched)
+    if os.environ.get('REALIGN_WINDOW'):  # not applied yet: still worse in iti81 PTS, sn12.35 BJT (alignment-log.md)
+        realign_window(chunk.toks, body, assign)
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
