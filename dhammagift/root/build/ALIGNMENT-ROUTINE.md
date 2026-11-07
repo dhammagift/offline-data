@@ -12,6 +12,13 @@ mostly the checker's own uncertainty, a formula repeated or abbreviated). A text
 (the Thai Pātimokkha's own preliminaries) stays whole in one segment (`Stream.body(block=True)`), not cut at stray
 shared words.
 
+## Branch
+
+All work goes to the branch `alignment-daily`, never to `main`. The owner reviews it and merges into main what he
+accepts. At the start of a run: `git fetch origin main alignment-daily`; check out `alignment-daily` (create it from
+`origin/main` if it does not exist yet) and merge `origin/main` into it (a merge commit, no rebase, no force-push),
+so each run builds on the last one and on what was merged. Push with `git push -u origin alignment-daily`.
+
 ## Each run
 
 1. Sources: `bash dhammagift/root/build/fetch_sources.sh` (into `../src`, about 2 min). Set
@@ -40,7 +47,7 @@ shared words.
    (into an empty notes/pts). Then `collate.py`, `viewer/make_viewer_data.py`, `viewer/find_shifts.py` (commands in
    HANDOFF-4-nikayas.md and README).
 8. README: a paragraph on the rule (what, why, the first case, how many places). Commit with the numbers, push to
-   main. Do not commit `$SRC`, `$W` or notes.
+   `alignment-daily`. Do not commit `$SRC`, `$W` or notes.
 9. Log entry in `compare/alignment-log.md`: date, area, breaks before/after in the area, places read, types found,
    rules added (with counts), and what needs the owner (a typo of an edition to report, a case no rule should touch,
    a question). Short, in Russian, as a checklist.
