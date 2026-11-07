@@ -1422,12 +1422,16 @@ def realign_window(toks, body, assign, width=30):
     The sutta aligned on its own (realign_glued) gives the same. Here a segment that holds much more than its ms
     text (more than twice its ms words, +8) with an empty ms text segment among the next 15 is the start of a
     window of `width` segments, whose words are matched with ms word for word (runs of 2 or more): a matched word
-    goes to the segment of its ms word, the words between two matched ones are spread over the ms words between
-    them (unless there is far more edition text than ms there: then it stays whole with the word before). The window
+    goes to the segment of its ms word, the words between two matched ones are cut between the segments of the ms
+    words between them where their letters read most like those (unless there is far more edition text than ms
+    there: then it stays whole with the word before). The window
     takes the new assignment only when the number of matched words that stand in their own segment grows by 5 or
     more, also counted over the whole sutta aligned at once (as check_segments.py counts: a repeated passage can
-    fool the window, iti81 PTS), no more ms text segments are left empty, and no segment gets words of which none
-    matches its ms text. -> number of windows realigned"""
+    fool the window, iti81 PTS), fewer ms text segments are left empty (the window must fill what the shift left
+    empty: PTS iti81 repeats a paragraph inside 5.1 and BJT sn12.35 7.2 holds a longer text than ms, with nothing
+    empty to fill), no segment gets words of which none matches its ms text, and a segment it fills matches at least
+    half its ms words (PTS sn12.51: `vedanaṃ vedayati` repeats in 10.1-10.6), and no segment reads less like its ms
+    text than before (PTS dn19, Thai Vinaya kd9). -> number of windows realigned"""
     got = collections.Counter(a for i, a in enumerate(assign) if toks[i].norm)
     msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
     home_of = {}  # sutta -> {token: the segment of the ms word it matches, the sutta aligned whole}
@@ -1465,7 +1469,7 @@ def realign_window(toks, body, assign, width=30):
         new = {}
         for a, b in pairs:
             new[B[b]] = A[a][1]
-        # the words between two matched ones: spread over the ms words between them
+        # the words between two matched ones: cut between the segments of the ms words between them
         for (a1, b1), (a2, b2) in zip([(-1, -1)] + pairs, pairs + [(len(A), len(B))]):
             run = range(b1 + 1, b2)
             if not run:
@@ -1473,11 +1477,33 @@ def realign_window(toks, body, assign, width=30):
             gap = list(range(a1 + 1, a2))
             if len(run) > 2 * len(gap) + 4:
                 gap = []  # much more edition text than ms has here: it stays whole with the word before
-            for n, b in enumerate(run):
-                if gap:
-                    new[B[b]] = A[gap[min(len(gap) - 1, n * len(gap) // len(run))]][1]
-                else:
+            if not gap:
+                for b in run:
                     new[B[b]] = A[a1][1] if a1 >= 0 else A[0][1]
+                continue
+            groups = []  # the gap's ms words by segment
+            for g in gap:
+                if groups and groups[-1][0] == A[g][1]:
+                    groups[-1][1].append(A[g][0])
+                else:
+                    groups.append((A[g][1], [A[g][0]]))
+            ws = [toks[B[b]].norm for b in run]
+            if len(groups) == 1:
+                cuts = [len(ws)]
+            elif len(groups) <= 3 and len(ws) <= 60:  # where the run is cut between segments: by its letters
+                # (Thai ud5.5 `… papāto yaṃ | bhikkhave mahāsamuddo`: `yaṃ` is ms 10.2's `Yampi`)
+                score = lambda cs: sum(difflib.SequenceMatcher(None, ''.join(ws[x:y]), ''.join(g[1]),
+                                                               autojunk=False).ratio()
+                                       for (x, y), g in zip(zip((0,) + cs, cs + (len(ws),)), groups))
+                cuts = list(max(itertools.combinations(range(len(ws) + 1), len(groups) - 1),
+                                key=lambda cs: (score(cs), cs))) + [len(ws)]
+            else:
+                cuts = [len(ws) * (n + 1) // len(groups) for n in range(len(groups))]
+            x = 0
+            for (seg, _), y in zip(groups, cuts):
+                for b in run[x:y]:
+                    new[B[b]] = seg
+                x = y
         old_ok = sum(1 for a, b in pairs if assign[B[b]] == A[a][1])
         new_ok = len(pairs)
         cand = list(assign)
@@ -1494,11 +1520,23 @@ def realign_window(toks, body, assign, width=30):
         if any(toks[i].norm and cand[i] not in anchored and cand[i] not in had for i in range(lo, hi)):
             si += 1
             continue  # a segment would get words without one of them matching its ms text
+        hits = collections.Counter(A[a][1] for a, _ in pairs)
+        if any(hits[j] < max(2, len(msw[j]) / 2) for j in {cand[i] for i in range(lo, hi) if toks[i].norm} - had):
+            si += 1
+            continue  # a segment it fills must match at least half its ms words: a repeated formula can fool the
+            # window (PTS sn12.51 10.2 got `sukhaṃ ce vedanaṃ vedayati visaññutto taṃ`, the words of 10.4)
         empty = lambda a: sum(1 for j in ix if msw[j] and not is_subhead(body[j][0])
                               and not any(a[i] == j and toks[i].norm for i in range(lo, hi)))
+        def like(a, j):  # how much the words a gives segment j read like its ms text
+            w = [toks[i].norm for i in range(lo, hi) if a[i] == j and toks[i].norm]
+            return difflib.SequenceMatcher(None, w, msw[j], autojunk=False).ratio() if w or msw[j] else 1
+        if any(like(cand, j) < like(assign, j) - 0.1 for j in ix):
+            si += 1
+            continue  # no segment may read less like its ms text than before (PTS dn19 prints paragraphs in another
+            # order: the window cut them into pieces)
         h = home(s)  # the gain counted as check_segments.py counts it: over the whole sutta, not the window alone
         gain = sum((cand[i] == h[i]) - (assign[i] == h[i]) for i in range(lo, hi) if i in h)
-        if new_ok - old_ok >= 5 and gain >= 5 and empty(cand) <= empty(assign):
+        if new_ok - old_ok >= 5 and gain >= 5 and empty(cand) < empty(assign):
             assign[lo:hi] = cand[lo:hi]
             got = collections.Counter(a for i, a in enumerate(assign) if toks[i].norm)
             done += 1
@@ -1615,8 +1653,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
         chunk.toks = toks
     assign, score, matched = align_book(chunk.toks, body, before)
     realign_glued(chunk.toks, body, before, assign, matched)
-    if os.environ.get('REALIGN_WINDOW'):  # not applied yet: still worse in iti81 PTS, sn12.35 BJT (alignment-log.md)
-        realign_window(chunk.toks, body, assign)
+    realign_window(chunk.toks, body, assign)
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
