@@ -203,7 +203,9 @@ of Mahāmakuṭarājavidyālaya instead (`--mbu-pm`; collated as `mm`, the viewe
 Bovoranives (Dhammayut), from uisp's Hugging Face dataset (a CSV per page). Its Thai font wrote ญ and ฐ without
 their lower stroke as `\x90`, `\x80`; Thai words (responses, notes) go by the letters and signs Pali in Thai script
 does not use; pages 7-18 (Thai notes on the words to change for each uposatha) and 110-113 (chants after it) are
-left out. It prints the preliminaries in prose where ms has verses (`1.1`-`3.3`), no questions after the nidāna
+left out. It prints the preliminaries in prose where ms has verses: they share a few words with ms (`pubbakicca`, `chanda`,
+`pārisuddhi`) but are another text, so they go whole into `1.1` (`Stream.body(block=True)`), not cut at those
+words over `1.1`-`3.3`; its request to recite is ms `4.1`. It has no questions after the nidāna
 (`7.1`-`7.5` empty), its own end lines for the sekhiya groups (`tayo pakiṇṇakā`), and no Bhikkhunīpātimokkha.
 Its typos are kept (`sikākhāsājīva`, `kārayamāmena`). A rule it numbers (`15.`) opens the segment after ms's rule
 title even where its first words are too unlike ms to anchor (`rule_starts`), and an end line the alignment spread

@@ -73,13 +73,14 @@ def si2ro(s):
 # ---------------------------------------------------------------- tokens
 
 class Tok:
-    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para', 'glue', 'end')
+    __slots__ = ('text', 'norm', 'entry', 'refs', 'vars', 'heads', 'para', 'glue', 'end', 'block')
 
     def __init__(self, text, entry, glue=False):
         self.text, self.entry, self.glue = text, entry, glue
         self.norm = norm(text)
         self.refs, self.vars, self.heads, self.para = [], [], [], None
         self.end = False  # a word of a section end line ("upālipucchākathā niṭṭhitā"): no anchor
+        self.block = False  # a word of a passage that stays whole in one segment (Stream.body(block=True))
 
 
 def norm(w):
@@ -178,11 +179,15 @@ class Stream:
             self.pending.append((cls, text))
         self.pending_refs = getattr(self, 'pending_refs', []) + list(refs)
 
-    def body(self, text, markers):
+    def body(self, text, markers, block=False):
+        """block: a passage of the edition with no counterpart in ms line by line (the Thai Pātimokkha's own
+        preliminaries): it goes whole into one segment, the first it reaches, not cut at the few words it shares"""
         self.entry += 1
         toks = tokenize(text, markers, self.entry)
         if not toks:
             return
+        for t in toks:
+            t.block = block
         if len(toks) <= 6 and colophon(text):
             for t in toks:
                 t.end = True
@@ -793,6 +798,8 @@ def mbu_pm_stream(src):
         buf.clear()
         mk.clear()
 
+    prelim, prelim_refs = [], []  # pages 1-5 up to the request to recite: the Thai preliminaries, prose where ms has verses
+
     for page in MBU_PM_PAGES:
         f = os.path.join(src, f'03{page:04d}.csv')
         page_ref = f'mbu-pm.{page}'
@@ -812,6 +819,19 @@ def mbu_pm_stream(src):
                 st.heading(line, 'above', [page_ref] if page_ref else [])  # the book's title, namo tassa (2 lines)
                 page_ref = None
                 continue
+            if prelim is not None and page <= 5:
+                if norm(line).startswith('pubbakaranapubbakiccani'):  # the request, ms 4.1: text again
+                    st.body(' '.join(prelim), [(0, 'pb', r) for r in prelim_refs], block=True)
+                    prelim = None
+                else:
+                    if page_ref:
+                        prelim_refs.append(page_ref)
+                        page_ref = None
+                    if prelim and prelim[-1].endswith('-') and line[:1].isalpha():
+                        prelim[-1] = prelim[-1][:-1] + line
+                    else:
+                        prelim.append(line)
+                    continue
             if colophon(line):  # an end line ("nidānuddeso niṭṭhito.") is an entry of its own
                 flush()
             joined = ' '.join(buf)
@@ -1504,6 +1524,14 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     realign_glued(chunk.toks, body, before, assign, matched)
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
+    blocks = collections.defaultdict(list)
+    for i, t in enumerate(chunk.toks):
+        if t.block:
+            blocks[t.entry].append(i)
+    for ix in blocks.values():
+        first = min(assign[i] for i in ix)
+        for i in ix:
+            assign[i] = first
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)
