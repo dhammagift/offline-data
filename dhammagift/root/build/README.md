@@ -140,6 +140,15 @@ suttas / 267, `my` 1 / 4, `th` 26 / 170, `pts` 15 / 136, `mso` none), none furth
 Two flags this adds to `shifts.json` are in place: BJT prints in ms sn37.5 and sn37.15 two suttas (`anuruddhasuttaṃ`,
 then `kodhanasuttaṃ`), ms has one; the second, which ms lacks, now closes the sutta in 2.5 instead of standing in 2.1-2.4.
 
+The start of a sentence left before a passage the edition does not print goes on with the rest of it
+(`gap_fragments`): PTS dn22 has no appiya / piya passage (ms 18.27-18.32), and `Katamañ ca bhikkhave`, the opening of
+the next question, stood in 18.27 with `yam p' icchaṃ na labhati …` in 18.33. A segment that got only a short piece
+(up to 4 words, at least 6 letters, no closing stop) which the ms segment after the empty ones begins with, and its
+own ms text does not, goes there when the edition text there begins in lower case and the piece with its next words
+reads as that ms segment does. 38 places: PTS 34 (mostly the opening of a sutta left at the end of the one before,
+`Ekam antaṃ`, `Dasa yime`, `Sīla-vipatti`), Siam Rath 3 (Paṭṭhāna), BJT 1 (an5.131). Applied by an A/B build of the
+whole canon (with and without the rule), so the data took only this rule's changes.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in

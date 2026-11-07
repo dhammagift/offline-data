@@ -1430,6 +1430,43 @@ def rule_starts(toks, body, segs_all, assign):
         i = j
 
 
+def gap_fragments(toks, body, assign):
+    """The start of a sentence left before a passage the edition does not print. PTS dn22 has no appiya / piya
+    passage (ms 18.27-18.32); the alignment put `Katamañ ca bhikkhave`, the opening of the next question, in 18.27
+    and the rest of it, `yam p' icchaṃ na labhati …`, in 18.33. When all a segment got is a short piece (up to 4
+    words, no closing stop) that the ms segment after the empty ones begins with, and not the segment's own ms text,
+    and that next segment's edition text begins in lower case, the piece goes on to it."""
+    def joined(ws):
+        return ''.join(norm(w) for w in ws)
+    got = collections.defaultdict(list)
+    for i, si in enumerate(assign):
+        got[si].append(i)
+    for si in sorted(got):
+        ix = got[si]
+        words = [toks[i].text for i in ix]
+        if not (0 < len([w for w in words if norm(w)]) <= 4) or re.search(r'[.?!;:’”\'"]\s*$', words[-1]) \
+                or ix != list(range(ix[0], ix[-1] + 1)):
+            continue
+        j = si + 1
+        while j < len(body) and j - si <= 12 and not got.get(j):
+            j += 1
+        if j >= len(body) or j == si + 1 or not got.get(j):
+            continue
+        if not any(body[k][1].strip() and not re.search(r':\d+\.0(\.\d+)?$', body[k][0]) for k in range(si + 1, j)):
+            continue  # no ms text in between: not a passage the edition left out
+        nxt = toks[got[j][0]].text.lstrip('‘“"\'(')
+        frag = joined(words)
+        if not nxt[:1].islower() or len(frag) < 6:  # `na`: too short to tell
+            continue
+        to = joined(body[j][1].split())
+        more = frag + joined(toks[i].text for i in got[j][:3])  # the piece and the words after it read as ms does
+        if to.startswith(frag) and not joined(body[si][1].split()).startswith(frag) \
+                and difflib.SequenceMatcher(None, more, to[:len(more)]).ratio() >= 0.8:
+            for i in ix:
+                assign[i] = j
+            got[j][:0], got[si] = ix, []
+
+
 NOTES = None
 
 
@@ -1466,6 +1503,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     assign, score, matched = align_book(chunk.toks, body, before)
     realign_glued(chunk.toks, body, before, assign, matched)
     rule_starts(chunk.toks, body, segs_all, assign)
+    gap_fragments(chunk.toks, body, assign)
 
     text = collections.defaultdict(list)
     refs = collections.defaultdict(list)
