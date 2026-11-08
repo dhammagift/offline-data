@@ -500,7 +500,9 @@ def t2500_pages(vol_dir):
 
 
 # typos of the reconstruction, against the print and every other edition
-T2500_FIXES = [('‘ānāmi passāmī’', '‘jānāmi passāmī’')]  # an1.439-446
+T2500_FIXES = [('‘ānāmi passāmī’', '‘jānāmi passāmī’'),  # an1.439-446
+               ('Pubbenivāsaṃ yoveti', 'Pubbenivāsaṃ yo vedi'),  # iti99:6.1
+               ('kharapattasannitaṃ', 'kharapattasannibhaṃ')]  # ja526:41.2; misprints, compare/mso-typos.md
 
 
 def t2500_stream(vol_dirs):
