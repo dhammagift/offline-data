@@ -48,7 +48,11 @@ so each run builds on the last one and on what was merged. Push with `git push -
    HANDOFF-4-nikayas.md and README).
 8. README: a paragraph on the rule (what, why, the first case, how many places). Commit with the numbers, push to
    `alignment-daily`. Do not commit `$SRC`, `$W` or notes.
-9. Progress row in `compare/alignment-plan.md` (date, step, rule, segments changed, breaks in all). Log entry in `compare/alignment-log.md`: date, area, breaks before/after in the area, places read, types found,
+9. Public page: the section "Problems of each edition and what we did" of dg-docs (`docs/user/compare.md` and
+   `i18n/ru/docusaurus-plugin-content-docs/current/user/compare.md`, English and Russian alike) gets what the run
+   changed. Push to the dg-docs branch `preview` only (test.dhamma.gift; the owner moves it to main), wait for the
+   build, check the page. Keep `compare/editions-problems.md` and `viewer/data/editions.json` in step with it.
+10. Progress row in `compare/alignment-plan.md` (date, step, rule, segments changed, breaks in all). Log entry in `compare/alignment-log.md`: date, area, breaks before/after in the area, places read, types found,
    rules added (with counts), and what needs the owner (a typo of an edition to report, a case no rule should touch,
    a question). Short, in Russian, as a checklist.
 
