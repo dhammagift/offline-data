@@ -26,9 +26,7 @@
 | `dussilyaṁ` | `dussīlyaṁ` | 10 | an10.75:10.2, an10.75:12.2, an10.75:9.4, an10.76:11.4 … |
 | `nitthiṇṇā` | `nittiṇṇā` | 1 | cnd11:66.6 |
 | `accantadussilyaṁ` | `accantadussīlyaṁ` | 1 | dhp162:1 |
-| `yoveti` | `yo vedi` | 1 | iti99:6.1 |
 | `vuddhasāsananti` | `buddhasāsananti` | 1 | ja381:6.6 |
-| `kharapattasannitaṁ` | `kharapattasannibhaṁ` | 1 | ja526:41.2 |
 | `kuṭakārissa` | `kūṭakārissa` | 1 | ja541:72.1 |
 | `dhiro` | `dhīro` | 1 | ja545:89.2 |
 | `thinamiddhaṁ` | `thīnamiddhaṁ` | 4 | mn10:36.6, mn38:38.4, mn43:20.3, mn51:19.4 |

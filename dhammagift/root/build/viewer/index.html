@@ -116,6 +116,15 @@ button:hover { border-color: var(--accent); }
 .cell.shift { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); }
 .notes .why { color: var(--shift); }
 .notes .why::before { content: "shift: "; font-weight: 600; }
+.edprobs { display: flex; flex-direction: column; gap: 10px; font-size: .8rem; padding: 6px 0 2px; max-width: 110ch; }
+.edprobs h3 { margin: 0; font-size: .85rem; }
+.edprobs p { margin: 2px 0 4px; color: var(--muted); }
+.edprobs table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+.edprobs td:first-child { width: 7.5em; } .edprobs td.w { width: 32%; }
+.edprobs td { border-top: 1px solid var(--line, #ddd); padding: 3px 6px 3px 0; vertical-align: top; }
+.edprobs td.w { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); }
+.edprobs .st { white-space: nowrap; font-weight: 600; }
+.edprobs .fixed { color: #2a8a4a; } .edprobs .reported { color: #b07a00; } .edprobs .open { color: var(--flag); } .edprobs .shown { color: var(--muted); }
 .legend .sh { background: var(--shift-bg); box-shadow: inset 3px 0 0 var(--shift); padding: 0 4px 0 7px; }
 .cell.flagged { box-shadow: inset 0 0 0 2px var(--flag); }
 .notes { margin-top: 3px; font-family: var(--font-ui); font-size: .74rem; line-height: 1.35; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
@@ -172,6 +181,10 @@ button:hover { border-color: var(--accent); }
         <span>A segment opens with its key in the address: <code>#sn35.19:2.9</code>. The percentage beside an edition is the share of segments it fills in this book.</span>
       </div>
     </details>
+    <details class="howto" id="edprobsbox">
+      <summary>Проблемы изданий</summary>
+      <div class="edprobs" id="edprobs">Загрузка…</div>
+    </details>
     <section class="panel" id="flagpanel" hidden>
       <h2 id="flagtitle">Marked segments</h2>
       <div><button type="button" id="copyflags">Copy list</button> <span id="copymsg" class="n"></span></div>
@@ -196,6 +209,16 @@ const state = { index: [], shifts: {}, cache: {}, book: null, show: { ms: true, 
 const $ = id => document.getElementById(id);
 function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 function recall(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+const ST = { fixed: 'исправлено', reported: 'сообщено', shown: 'оставлено', open: 'не решено' };
+async function loadEdProbs() {
+  const box = $('edprobs');
+  try {
+    const d = await (await fetch('data/editions.json')).json();
+    box.innerHTML = d.editions.map(e => `<section><h3>${esc(e.name)}</h3>${e.about ? `<p>${esc(e.about)}</p>` : ''}<table>${
+      e.items.map(i => `<tr><td class="st ${esc(i.status)}">${esc(ST[i.status] || i.status)}</td><td>${esc(i.what)}</td><td class="w">${esc(i.where)}</td></tr>`).join('')
+    }</table></section>`).join('');
+  } catch (err) { box.textContent = 'Не удалось загрузить список.'; }
+}
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function norm(w) { return w.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/æ/g, 'a').replace(/[^a-z0-9]/g, ''); }
 const SPLIT = /(\s+|[—–…]+)/;
@@ -555,6 +578,7 @@ async function start() {
   try { state.index = await (await fetch('data/index.json')).json(); }
   catch (e) { $('grid').innerHTML = '<div class="status">Could not load the list of books. Reload the page.</div>'; return; }
   try { state.shifts = await (await fetch('data/shifts.json')).json(); } catch (e) { /* no marks: the page works without them */ }
+  $('edprobsbox').addEventListener('toggle', loadEdProbs, { once: true });
   Object.assign(state.show, recall('show', {}));
   for (const [id, key] of [['optdiff', 'diff'], ['optnotes', 'notes'], ['optsus', 'sus'], ['optshift', 'shift']]) {
     const v = recall(key, null); if (v !== null) $(id).checked = v;

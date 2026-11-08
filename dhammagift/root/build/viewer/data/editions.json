@@ -1,0 +1,70 @@
+{
+  "_note": "Проблемы каждого издания и что с ними сделано. Источники: compare/sc-report, compare/mso-report.md, compare/mso-typos.md, compare/bjt-report.md, README.md. status: fixed (исправлено у нас), shown (оставлено, видно в разночтениях или на странице), reported (сообщено изданию), open (не решено).",
+  "editions": [
+    {
+      "id": "ms", "name": "Махасангити (SuttaCentral)",
+      "about": "Цифровой текст SuttaCentral, сделанный из печатной Махасангити 2005. Ошибки ниже внесены правками самого SC, в печати их нет. Сообщено: suttacentral/sc-data#463. Текст ms в этом репозитории берётся из bilara-data как есть.",
+      "items": [
+        {"what": "aparimutto вместо parimutto: смысл наоборот", "where": "sn35.19:2.9, sn35.20:2.2, 2.8", "status": "reported"},
+        {"what": "Idha, bhikkhave вместо Idhāvuso", "where": "dn33:1.11.85, 1.11.91", "status": "reported"},
+        {"what": "два сегмента в обратном порядке", "where": "sn22.7:8.2-8.3", "status": "reported"},
+        {"what": "пропущено vā", "where": "pli-tv-bu-vb-ss13:2.8", "status": "reported"},
+        {"what": "ammukhāvinayena вместо sammukhāvinayena", "where": "pli-tv-pvr5:122.4", "status": "reported"},
+        {"what": "английская пометка On Display: Title of Section Only вместо пали", "where": "sn48.137-146:1.1, sn48.147-158:1.1, sn50.67-76:1.1", "status": "reported"},
+        {"what": "выпущено изложение четырёх истин, которое есть в печати (как в VRI)", "where": "mn10 после 44.3", "status": "reported"},
+        {"what": "общие с печатью: 172 чтения против всех изданий, 24 места с пропущенным или лишним словом", "where": "см. Махасангити 2005", "status": "shown"}
+      ]
+    },
+    {
+      "id": "mso", "name": "Махасангити 2005 (печать)",
+      "about": "Реконструкция tipitaka2500.github.io. Сообщено: tipitaka2500/tipitaka2500.github.io#1; на сайте текст не правят, исправления обещают в tipitaka-md/tipitaka2500. Опечатка у нас: выпавшая или искажённая буква, дающая не-слово, в одном месте. Разбор: compare/mso-typos.md.",
+      "items": [
+        {"what": "ānāmi вместо jānāmi (опечатка реконструкции)", "where": "an1.439-446 (8 мест)", "status": "fixed"},
+        {"what": "yoveti вместо yo vedi", "where": "iti99:6.1", "status": "fixed"},
+        {"what": "kharapattasannitaṁ вместо kharapattasannibhaṁ", "where": "ja526:41.2", "status": "fixed"},
+        {"what": "пропущено отрицание na", "where": "mn94:3.6, pli-tv-kd2:21.1.1, 21.1.3", "status": "shown"},
+        {"what": "пропущена часть фразы: pāṇātipātaṁ pahāya, so rūpe, niviṭṭhā, devo", "where": "an10.217:20.2, sn22.149:1.7, mnd2:49.8, cnd19:20.5", "status": "shown"},
+        {"what": "пропущено служебное слово (te, sā)", "where": "sn55.3:3.1, 4.1, sn55.39:3.1, pli-tv-bu-vb-pc23:2.10, pli-tv-kd10:1.8.16", "status": "shown"},
+        {"what": "лишнее слово, которого нет в других изданиях", "where": "mnd16:247.1, mnd9:11.4, sn5.3:1.3, dn29:30.4, dn9:33.26, cnd23:292.2, cnd8:64.14, mnd15:170.4, mnd15:183.4, sn16.13:2.2, pli-tv-bu-vb-ss8:1.8.21, pli-tv-kd19:1.4.8", "status": "shown"},
+        {"what": "долгота гласной и написание: dussilyaṁ, thinamiddha, abhibhuto, bibbohanaṁ, bhikkhuni-, -anupassanañāṇaṁ и др. (150 чтений)", "where": "compare/mso-typos.md", "status": "shown"},
+        {"what": "на сайте нет нескольких отрывков Паттханы, которые есть во всех изданиях", "where": "patthana3.3:1.1, 16.38", "status": "open"}
+      ]
+    },
+    {
+      "id": "bjt", "name": "Будда Джаянти (tipitaka.lk)",
+      "about": "Сообщено: pathnirvana/tipitaka.lk#154.",
+      "items": [
+        {"what": "кавычка ’ без пробела между двумя словами (4 места)", "where": "dn-2-7, kn-thig, ap-kvu, kn-petk-6 (compare/bjt-report.md)", "status": "reported"},
+        {"what": "две сутты там, где в ms одна (anuruddhasuttaṃ, kodhanasuttaṃ)", "where": "sn37.5, sn37.15", "status": "shown"},
+        {"what": "нет Патимоккхи отдельной книгой", "where": "pli-tv-bu-pm", "status": "shown"}
+      ]
+    },
+    {
+      "id": "my", "name": "Чаттха Сангаяна (VRI)",
+      "about": "",
+      "items": [
+        {"what": "названия правил Патимоккхи и разделов набраны по центру и склеивались с текстом", "where": "pli-tv-bu-pm, Ападана, ja546, ne3", "status": "fixed"},
+        {"what": "почти вся книга попадает в первый сегмент", "where": "ya7.2.1:1.1 (4717 слов)", "status": "open"},
+        {"what": "в mn10 изложение четырёх истин (как в печати Махасангити)", "where": "mn10", "status": "shown"}
+      ]
+    },
+    {
+      "id": "th", "name": "Сиам Рат 1927",
+      "about": "",
+      "items": [
+        {"what": "нет Патимоккхи: взята бхиккху-Патимоккха Махамакута (сигла mm), её вступление целиком в 1.1", "where": "pli-tv-bu-pm", "status": "fixed"},
+        {"what": "повторённый блок сдвигает выравнивание", "where": "dn29 4.12-5.10", "status": "open"}
+      ]
+    },
+    {
+      "id": "pts", "name": "PTS (GRETIL)",
+      "about": "Ввод Dhammakaya, CC BY-SA 4.0.",
+      "items": [
+        {"what": "нет отрывка appiya / piya; начало следующего вопроса было оторвано", "where": "dn22:18.27-18.33", "status": "fixed"},
+        {"what": "абзац напечатан дважды", "where": "iti81:5.1", "status": "shown"},
+        {"what": "нет строк-концовок и заголовков ms", "where": "весь PTS", "status": "shown"},
+        {"what": "Джатака только стихи; нет Нетти и Петакопадесы; нет сносок для MN 1-76, Тхера- и Тхеригатхи, Кхуддакапатхи, Милинды, Махавагги, Чуллавагги, Дхатукатхи", "where": "", "status": "shown"}
+      ]
+    }
+  ]
+}

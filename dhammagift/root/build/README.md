@@ -350,5 +350,6 @@ kept in view, variant readings by majority of BJT / Myanmar / Thai
   locally use `python3 -m http.server` in `viewer/`.) Problem marks are kept in that browser;
   "Copy list" in the marks panel copies them as `key<TAB>editions<TAB>note` lines.
 - `viewer/page.html` is the source of the page; `viewer/make_page.py` wraps it into `index.html`.
+- "Проблемы изданий" (under the header): each edition's known problems and what was done (fixed, reported, left), from `viewer/data/editions.json`, kept by hand from `compare/`.
 - Rebuild after a new run: `python3 viewer/make_viewer_data.py dhammagift bilara-data/root/pli/ms/sutta dhammagift/root/build/viewer`
   for the data, `python3 viewer/make_page.py` for `index.html` from `page.html`.
