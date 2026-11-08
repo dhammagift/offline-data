@@ -1,6 +1,6 @@
-# Daily alignment work
+# Alignment work, twice a week
 
-A scheduled cloud session runs this once a day. It starts in an empty container with this repo checked out. The
+This cloud session is woken twice a week (Sunday and Thursday, 02:43 UTC) to run this. It starts in an empty container with this repo checked out. The
 aim: every edition's text in the segment of the Mahāsaṅgīti (ms) it belongs to, by rules in `build_editions.py`,
 never by editing a segment by hand. Progress and open questions go to `compare/alignment-log.md` (newest on top).
 
@@ -23,8 +23,8 @@ so each run builds on the last one and on what was merged. Push with `git push -
 
 1. Sources: `bash dhammagift/root/build/fetch_sources.sh` (into `../src`, about 2 min). Set
    `SRC=$(cd .. && pwd)/src` and a work dir `W` outside the repo.
-2. Area of the day: the next one after the last entry of `compare/alignment-log.md`, in this order: dn, mn, sn, an,
-   kn, vinaya, abhidhamma, then from the start again.
+2. Area of the run: the next step of `compare/alignment-plan.md` (dn, mn, sn, an, kn, vinaya, abhidhamma, then a
+   second round by type).
 3. Check: `python3 dhammagift/root/build/check_segments.py $SRC/bilara-data/root/pli/ms dhammagift $W/check.tsv`
    (7 min). Take the `break` rows of the area, worst first, about 100-150 of them.
 4. Read them: for each, ms and the editions around it (`root/pli/<ed>/…`, `$SRC/bilara-data/root/pli/ms/…`) and,
@@ -48,7 +48,7 @@ so each run builds on the last one and on what was merged. Push with `git push -
    HANDOFF-4-nikayas.md and README).
 8. README: a paragraph on the rule (what, why, the first case, how many places). Commit with the numbers, push to
    `alignment-daily`. Do not commit `$SRC`, `$W` or notes.
-9. Log entry in `compare/alignment-log.md`: date, area, breaks before/after in the area, places read, types found,
+9. Progress row in `compare/alignment-plan.md` (date, step, rule, segments changed, breaks in all). Log entry in `compare/alignment-log.md`: date, area, breaks before/after in the area, places read, types found,
    rules added (with counts), and what needs the owner (a typo of an edition to report, a case no rule should touch,
    a question). Short, in Russian, as a checklist.
 
