@@ -4,7 +4,8 @@ the sutta, stands in the same segment as that ms word.
 Each sutta (one ms file) is aligned word by word with each edition (difflib, runs of 2 words or more, so a stray `ca`
 is no anchor). A matched word whose edition segment is not the segment of its ms word breaks the rule: the text of
 one ms segment sits in another (dn22 PTS before gap_fragments: `Katamañ ca bhikkhave` in 18.27, its ms words in 18.33).
-Breaks are grouped by sutta, edition, the segment the words are in and the segment they belong to.
+Breaks are grouped by sutta, edition, the segment the words are in and the segment they belong to. Words the edition
+prints a second time, while its own segment for them already reads as ms, are `extra`, not a break (BJT mn82 10.1).
 
 usage: check_segments.py BILARA_ROOT_PLI_MS DHAMMAGIFT_DIR OUT.tsv [editions, default bjt,my,th,mso,pts] [top N]
 """
@@ -69,6 +70,9 @@ for p in sorted(glob.glob(os.path.join(MS, '**', '*_root-pli-ms.json'), recursiv
                 kind = 'repeat'  # ms has the same words (or a segment much like it) here too: which repetition is meant is unclear
             elif PEYYALA.search(ms.get(km) or '') or PEYYALA.search(e.get(ke) or '') or PEYYALA.search(ms.get(ke) or ''):
                 kind = 'peyyala'  # one side abbreviates
+            elif e.get(km) and difflib.SequenceMatcher(None, words(e.get(km)), words(ms.get(km) or ''),
+                                                       autojunk=False).ratio() >= 0.8:
+                kind = 'extra'  # the edition prints these words twice: its own segment km has them too (BJT mn82 10.1)
             else:
                 kind = 'break'
             rows.append((len(ws), kind, ed, os.path.basename(p).split('_')[0], ke, km, order.get(km, 0) - order.get(ke, 0),
