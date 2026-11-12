@@ -56,6 +56,15 @@ so each run builds on the last one and on what was merged. Push with `git push -
    rules added (with counts), and what needs the owner (a typo of an edition to report, a case no rule should touch,
    a question). Short, in Russian, as a checklist.
 
+## What a run must deliver
+
+- The result of a run is fixed segments in the data, applied through A/B. A run that only reads, counts or improves
+  `check_segments.py` is not done.
+- Take the largest type that can be fixed within one run. A type too big for one run (PTS mn60, three views in
+  near-identical formulas) is cut into a part that fits, or the next largest type is taken; never left with nothing.
+- Fixes to the checker, the log, the plan and the docs are made along the way, not instead of a fix.
+- The report to the owner opens with how many segments were fixed and in which suttas.
+
 ## Limits
 
 - No change to translations, to `variant_own.json`, or to an edition's text itself: an edition's typo is reported
