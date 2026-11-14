@@ -789,6 +789,27 @@ TH_ONLY = re.compile('[ดบซฝฟศษฮะัำืแใไ'
                      '็-์]')
 
 
+# Misreadings of the OCR of the Mahāmakuṭa Pātimokkha (uisp CSVs), not readings of the book: a letter lost, added or
+# misread (ฆ for ฑ in piṇḍapātaṃ, a lost phinthu in paṭinissajjeyya), checked against the rule in the Vibhaṅga and VRI.
+# Vowel length and forms the text keeps throughout (desissāmīti 15x, kavaḷa, pāṭimokkha) are left as printed.
+MBU_PM_FIXES = [(w, r) for w, r in (
+    ('sikākhāsājīva', 'sikkhāsājīva'), ('barhmacāriṃ', 'brahmacāriṃ'), ('adhakaraṇaṃ', 'adhikaraṇaṃ'),
+    ('selamattaṃ', 'lesamattaṃ'), ('tiṭiṭhayya', 'tiṭṭheyya'), ('sammodanāno', 'sammodamāno'),
+    ('sammodanāmo', 'sammodamāno'), ('paṭinissajajeyya', 'paṭinissajjeyya'), ('avissajajetvā', 'avissajjetvā'),
+    ('nisajajaṃ', 'nisajjaṃ'), ('paṭipajijeyya', 'paṭipajjeyya'), ('ekadidhānamaggaṃ', 'ekaddhānamaggaṃ'),
+    ('pugagalo', 'puggalo'), ('paṭiggahetivā', 'paṭiggahetvā'), ('samamubhāsiyamānā', 'samanubhāsiyamānā'),
+    ('aññaññevacanena', 'aññamaññavacanena'), ('āsine', 'āsane'), ('vadeyay', 'vadeyya'),
+    ('akāsacīvaraṃ', 'akālacīvaraṃ'), ('addissa', 'uddissa'), ('kusasaṃ', 'kusalaṃ'), ('atathaṃ', 'atthaṃ'),
+    ('eḷakalomamānaṃ', 'eḷakalomānaṃ'), ('pakiggahetvā', 'paṭiggahetvā'), ('samdhiṃ', 'saddhiṃ'),
+    ('bhahagavā', 'bhagavā'), ('ratanasamātaṃ', 'ratanasammataṃ'), ('paṭidetetabbaṃ', 'paṭidesetabbaṃ'),
+    ('nisīdisusāmīti', 'nisīdissāmīti'), ('nisadassāmīti', 'nisīdissāmīti'), ('piṇghapātaṃ', 'piṇḍapātaṃ'),
+    ('kheḷa vā', 'kheḷaṃ vā'), ('acchādekatha ubhoṅa', 'acchādetha ubho va'), ('dvittipatitapūrā', 'dvittipattapūrā'),
+    ('anāpucachā', 'anāpucchā'), ('pucachāmi', 'pucchāmi'), ('pariniṭaṭhitattā', 'pariniṭṭhitattā'),
+    ('parisudadhā', 'parisuddhā'), ('pañcakakhattuṃ', 'pañcakkhattuṃ'), ('piṇḍukikhepakaṃ', 'piṇḍukkhepakaṃ'),
+    ('sudadhakāḷakānaṃ', 'suddhakāḷakānaṃ'), ('uddiṭaṭhaṃ', 'uddiṭṭhaṃ'), ('kaccitatha', 'kaccittha'),
+    ('sikikhā', 'sikkhā'), ('paṭiggahetabhaṃ', 'paṭiggahetabbaṃ'), ('sametāyasumā', 'sametāyasmā'), ('evavañca', 'evañca'))]
+
+
 def mbu_pm_stream(src):
     import csv
     st = Stream()
@@ -811,6 +832,8 @@ def mbu_pm_stream(src):
             t = re.sub(r'\([^)]*\)?', ' ', t)  # the responses, in Thai
             t = ' '.join(w for w in t.split() if not TH_ONLY.search(w))
             line = ' '.join(th2ro(t).replace('"', '').split())
+            for wrong, right in MBU_PM_FIXES:
+                line = line.replace(wrong, right)
             m = re.match(r'(\d+)\.\s*', line)
             if m:  # a rule's number
                 flush()

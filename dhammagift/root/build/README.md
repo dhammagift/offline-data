@@ -254,6 +254,8 @@ neighbouring segments.
 
 ## Mahāsaṅgīti as printed (`mso`)
 
+The Thai Pātimokkha (Mahāmakuṭa, `th` in `pli-tv-bu-pm`) is an OCR of the book; its misreadings are corrected (`MBU_PM_FIXES`): a lost phinthu (`paṭinissajajeyya` → `paṭinissajjeyya`, `parisudadhā` → `parisuddhā`), ฆ read for ฑ (`piṇghapātaṃ` → `piṇḍapātaṃ`), letters swapped or lost (`barhmacāriṃ`, `selamattaṃ`, `kusasaṃ`), each checked against the rule in the Vibhaṅga and VRI; vowel length and forms the text keeps throughout (`desissāmīti` 15 times, `kavaḷa`, `pāṭimokkha`) are left. 51 segments; variant notes of `mm` 258 → 210.
+
 `ms` is the Mahāsaṅgīti Tipiṭaka Buddhavasse 2500 (World Tipiṭaka, Dhamma Society 2005) as SuttaCentral edited it.
 `root/pli/mso` is that edition as printed, from the reconstruction of
 [tipitaka2500.github.io](https://github.com/tipitaka2500/tipitaka2500.github.io) (CC0), on the same ids, with its
