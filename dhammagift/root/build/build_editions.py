@@ -1445,7 +1445,8 @@ def realign_window(toks, body, assign, width=30):
     Siam Rath dn29 prints `Taṁ kissa hetu? Evañhetaṁ, cunda, hoti durakkhāte …` (ms 4.12-5.9) and then the same
     words again (5.10-6.1); its first block all went into 4.12 and its second into 4.13-5.1, with 5.2-5.10 empty.
     The sutta aligned on its own (realign_glued) gives the same. Here a segment that holds much more than its ms
-    text (more than twice its ms words, +8) with an empty ms text segment among the next 15 is the start of a
+    text (more than twice its ms words, +8) with an empty ms text segment among the next 15 (or, if none, among the
+    15 before it: BJT mn97 18.6 held 18.1-18.4, the window then starts at the filled segment before them) is in a
     window of `width` segments, whose words are matched with ms word for word (runs of 2 or more): a matched word
     goes to the segment of its ms word, the words between two matched ones are cut between the segments of the ms
     words between them where their letters read most like those (unless there is far more edition text than ms
@@ -1472,13 +1473,23 @@ def realign_window(toks, body, assign, width=30):
         return home_of[s]
     done, si = 0, 0
     while si < len(body):
-        if not (got[si] > 2 * len(msw[si]) + 8
-                and any(msw[j] and not got[j] for j in range(si + 1, min(len(body), si + 16)))):
+        s = sutta_of(body[si][0])
+        swollen = got[si] > 2 * len(msw[si]) + 8
+        ahead = any(msw[j] and not got[j] for j in range(si + 1, min(len(body), si + 16)))
+        back = [j for j in range(max(0, si - 15), si) if msw[j] and not got[j] and sutta_of(body[j][0]) == s]
+        if not (swollen and (ahead or back)):
             si += 1
             continue
-        s = sutta_of(body[si][0])
-        ix = [j for j in range(si, min(len(body), si + width)) if sutta_of(body[j][0]) == s]
-        lo = next((i for i, a in enumerate(assign) if a == si), None)
+        start = si
+        if not ahead:  # the empty segments stand before it (BJT mn97 18.6 holds 18.1-18.4): start at the filled one before them
+            start = back[0] - 1
+            while start >= 0 and not got[start] and sutta_of(body[start][0]) == s:
+                start -= 1
+            if start < 0 or sutta_of(body[start][0]) != s:
+                si += 1
+                continue
+        ix = [j for j in range(start, min(len(body), si + width)) if sutta_of(body[j][0]) == s]
+        lo = next((i for i, a in enumerate(assign) if a == start), None)
         hi = max((i for i, a in enumerate(assign) if a in ix), default=None)
         if lo is None or hi is None or any(not (ix[0] <= assign[i] <= ix[-1]) for i in range(lo, hi + 1)):
             si += 1

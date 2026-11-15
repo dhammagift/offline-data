@@ -158,6 +158,8 @@ like its ms text than before (without these: PTS iti81, sn12.51, dn19, BJT sn12.
 150 segments in 11 suttas: Siam Rath ya10.2.1, ds2.1.1, an7.70, ud5.5; BJT mn136, vb5, an4.102, an7.70, an5.131,
 sn8.7; PTS ud8.5. Applied by an A/B build of the whole canon; every change read against ms.
 
+The window also opens when the empty segments stand before the overloaded one, not after it (BJT mn97 18.6 held 18.1-18.4, its 17.5 words spread over 17.5-18.5): it then starts at the filled segment before the empty ones. 25 segments: BJT mn97, PTS sn40.10, Siam Rath patthana1.10.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in
