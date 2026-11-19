@@ -160,6 +160,8 @@ sn8.7; PTS ud8.5. Applied by an A/B build of the whole canon; every change read 
 
 The window also opens when the empty segments stand before the overloaded one, not after it (BJT mn97 18.6 held 18.1-18.4, its 17.5 words spread over 17.5-18.5): it then starts at the filled segment before the empty ones. 25 segments: BJT mn97, PTS sn40.10, Siam Rath patthana1.10.
 
+A half-verse or a line the edition marks off with `||` in the segment before an empty one goes to that segment (`danda_split`) when the words after the `||` (all, or up to the next `||`) read as its ms text (0.8) and the words before do not read worse: PTS sn12.34 2.4 held 2.5 (`anāgatam pi addhānaṃ …`), sn22.5 4.1 held 4.2 (`Saññam abhinandati`). 10 segments, all PTS: sn3.20, sn12.34, sn12.62, sn22.5, sn22.48. The uddāna lines PTS prints at the end of a vagga (sn14.29 3.5 `… || Dasaṅgena ca sattamam || || Kammapathavaggo tatiyo`) come as headings and are not reached by it.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in

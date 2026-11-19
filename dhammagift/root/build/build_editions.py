@@ -1617,6 +1617,49 @@ def rule_starts(toks, body, segs_all, assign):
         i = j
 
 
+def danda_split(toks, body, assign):
+    """A half-verse or an end line the edition marks off with `||` in the segment before an empty one: PTS sn14.29
+    3.5 `Chaṭṭham Aṭṭhaṅgiko vutto || Dasaṅgena ca sattamam`, ms 3.5 `Chaṭṭhaṁ aṭṭhaṅgiko vutto,` and 3.6 `dasaṅgena ca
+    sattamaṁ.` with 3.6 empty; PTS sn12.20 5.10 `Dasamaṃ || || Āhāravaggo dutiyo`, ms 5.11 `Āhāravaggo dutiyo.`. When the
+    words after a `||` (all of them, or those up to the next `||`) read as the next ms segment (0.8 or more) and that
+    segment got nothing, they go to it; again for
+    the one after it (the four lines of an uddāna in one segment, sn49.1-12). The words before must not read less like
+    their own ms text. -> number of moves"""
+    msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
+    ratio = lambda a, b: difflib.SequenceMatcher(None, a, b, autojunk=False).ratio() if a or b else 1
+    moves, changed = 0, True
+    while changed:
+        changed = False
+        got = collections.defaultdict(list)
+        for i, a in enumerate(assign):
+            got[a].append(i)
+        for si in sorted(got):
+            sj = si + 1
+            if sj >= len(body) or not msw[sj] or sutta_of(body[sj][0]) != sutta_of(body[si][0]) \
+                    or any(toks[i].norm for i in got.get(sj, ())):  # nothing but punctuation counts as empty
+                continue
+            ix = got[si]
+            if got.get(sj) and min(got[sj]) < max(ix):
+                continue
+            cuts = [n for n, i in enumerate(ix) if '|' in toks[i].text and n + 1 < len(ix)]
+            whole = [toks[i].norm for i in ix if toks[i].norm]
+            for c, n in enumerate(cuts):
+                head = [toks[i].norm for i in ix[:n + 1] if toks[i].norm]
+                tail = [toks[i].norm for i in ix[n + 1:] if toks[i].norm]
+                nxt = cuts[c + 1] if c + 1 < len(cuts) else len(ix)  # the piece up to the next `||`
+                piece = [toks[i].norm for i in ix[n + 1:nxt + 1] if toks[i].norm]
+                if piece and head and max(ratio(tail, msw[sj]), ratio(piece, msw[sj])) >= 0.8 \
+                        and ratio(head, msw[si]) >= ratio(whole, msw[si]):
+                    for i in ix[n + 1:]:
+                        assign[i] = sj
+                    moves += 1
+                    changed = True
+                    break
+            if changed:
+                break
+    return moves
+
+
 def gap_fragments(toks, body, assign):
     """The start of a sentence left before a passage the edition does not print. PTS dn22 has no appiya / piya
     passage (ms 18.27-18.32); the alignment put `Katamañ ca bhikkhave`, the opening of the next question, in 18.27
@@ -1692,6 +1735,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     realign_window(chunk.toks, body, assign)
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
+    danda_split(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
     for i, t in enumerate(chunk.toks):
         if t.block:
