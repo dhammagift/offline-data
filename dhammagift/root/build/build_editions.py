@@ -14,7 +14,7 @@ footnotes / <note> readings to variant/, page and paragraph numbers to reference
 usage: build_editions.py --bjt DIR --vri DIR --ms DIR --out DIR [--only sn1-10,sn45-49,an1,an2]
 """
 import argparse
-import html, bisect, collections, difflib, glob, itertools, json, os, re, sys, unicodedata
+import html, bisect, collections, difflib, functools, glob, itertools, json, os, re, sys, unicodedata
 import xml.etree.ElementTree as ET
 
 # ---------------------------------------------------------------- Sinhala -> Roman
@@ -1845,6 +1845,81 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
 
     def ms_words(k):
         return [w for w in map(norm, ms_text.get(k, '').split()) if w]
+    # a chain of headings the edition prints as one line, in one of them (MSO patthana3.1 114.0.5 `Hetuduka,
+    # Vedanāttika Sukhāyavedanāyasampayuttapada Paṭiccādivāra Paccayacatukka Hetu`, ms 114.0.1-114.0.5 one heading
+    # each): over a run of ms headings of six words or fewer, the words are cut again so that most of them match their
+    # own heading; a word that matches none stays with the heading before it. Only when the chain came in one heading
+    # with two words or more over its own, more words then match, and no heading loses a word it matched; a
+    # `Namo tassa…` line is no heading here, nor 0.1, the name of the book (Siam Rath bv12 `dasamo padumuttara
+    # buddhavaṃso` is 0.2 Padumuttarabuddhavaṁsa, not 0.1 Buddhavaṁsa).
+    @functools.lru_cache(maxsize=None)
+    def alike(x, y):  # x of the edition, y of ms. A spelling apart (Saṃkiliṭṭhattika / Saṅkiliṭṭhattika) is the same
+        # word, and so is an edition's word that starts with the ms word (VRI `Hetupaccayo` / Hetu,
+        # `Kusalattika-vedanāttikaṃ` / Kusalattika); not the other way (BJT an10.119 `paṭhama paccorohaṇī suttaṃ` is
+        # no Paccorohaṇivagga)
+        return x == y or difflib.SequenceMatcher(None, x, y, autojunk=False).ratio() >= 0.9 \
+            or (len(y) >= 4 and 3 * len(y) >= len(x) and x.startswith(y))
+
+    @functools.lru_cache(maxsize=None)
+    def hits(a, b):  # words in order that match
+        row = [0] * (len(b) + 1)
+        for x in a:
+            nrow = [0]
+            for n, y in enumerate(b):
+                nrow.append(row[n] + 1 if alike(x, y) else max(row[n + 1], nrow[n]))
+            row = nrow
+        return row[-1]
+    i = 0
+    while i < len(allk):
+        run = []
+        while i < len(allk) and head_key(allk[i]) and 0 < len(ms_words(allk[i])) <= 6 and not body_words[allk[i]] \
+                and ms_words(allk[i])[:2] != ['namo', 'tassa'] and not allk[i].endswith(':0.1') \
+                and (not run or sutta_of(allk[i]) == sutta_of(run[0])):
+            run.append(allk[i])
+            i += 1
+        if not run:
+            i += 1
+            continue
+        ws = ' '.join(h for k in run for h in text[k]).split()
+        wn = [n for n, w in enumerate(ws) if norm(w)]
+        w = [norm(ws[n]) for n in wn]
+        if len(run) < 2 or not w or len(w) > 40:
+            continue
+        had = [hits(tuple(x for x in map(norm, ' '.join(text[k]).split()) if x), tuple(ms_words(k))) for k in run]
+        src = [k for k in run if ' '.join(text[k]).strip()]
+        if len(src) != 1 or len(w) < len(ms_words(src[0])) + 2:
+            continue  # the chain came in one heading, two words or more over its own
+        old = sum(had)
+        best = [[None] * (len(w) + 1) for _ in range(len(run) + 1)]  # (matches, starts) for t words in j headings
+        best[0][0] = (0, ())
+        for j in range(1, len(run) + 1):
+            mw = tuple(ms_words(run[j - 1]))
+            for t in range(len(w) + 1):
+                for u in range(t + 1):
+                    if best[j - 1][u] is not None:
+                        sc = best[j - 1][u][0] + hits(tuple(w[u:t]), mw)
+                        if best[j][t] is None or sc >= best[j][t][0]:  # ties: the later cut
+                            best[j][t] = (sc, best[j - 1][u][1] + (u,))
+        sc, starts = best[len(run)][len(w)]
+        if sc <= old:
+            continue
+        def cut(u):
+            if u >= len(wn):
+                return len(ws)
+            c = wn[u]
+            while c > (wn[u - 1] + 1 if u else 0) and not norm(ws[c - 1]):
+                c -= 1
+            return c
+        starts = list(starts) + [len(w)]
+        first = next((j for j in range(len(run)) if hits(tuple(w[starts[j]:starts[j + 1]]), tuple(ms_words(run[j])))), None)
+        for j in range(first or 0):  # words before the first match go with it, not into the headings before
+            starts[j + 1] = starts[0]
+        if any(hits(tuple(w[starts[j]:starts[j + 1]]), tuple(ms_words(k))) < had[j] for j, k in enumerate(run)):
+            continue  # no heading loses a word it matched
+        bounds = [0] + [cut(u) for u in starts[1:-1]] + [len(ws)]
+        for j, k in enumerate(run):  # a number or a mark before a word goes with that word
+            piece = ws[bounds[j]:bounds[j + 1]]
+            text[k] = [' '.join(piece)] if piece else []
     for i, k in enumerate(allk):
         want = ms_words(k)
         if not head_key(k) or not want or len(want) > 6:
