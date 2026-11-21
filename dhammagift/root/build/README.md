@@ -158,6 +158,21 @@ like its ms text than before (without these: PTS iti81, sn12.51, dn19, BJT sn12.
 150 segments in 11 suttas: Siam Rath ya10.2.1, ds2.1.1, an7.70, ud5.5; BJT mn136, vb5, an4.102, an7.70, an5.131,
 sn8.7; PTS ud8.5. Applied by an A/B build of the whole canon; every change read against ms.
 
+The window also opens when the empty segments stand before the overloaded one, not after it (BJT mn97 18.6 held 18.1-18.4, its 17.5 words spread over 17.5-18.5): it then starts at the filled segment before the empty ones. 25 segments: BJT mn97, PTS sn40.10, Siam Rath patthana1.10.
+
+A half-verse or a line the edition marks off with `||` in the segment before an empty one goes to that segment (`danda_split`) when the words after the `||` (all, or up to the next `||`) read as its ms text (0.8) and the words before do not read worse: PTS sn12.34 2.4 held 2.5 (`anāgatam pi addhānaṃ …`), sn22.5 4.1 held 4.2 (`Saññam abhinandati`). 10 segments, all PTS: sn3.20, sn12.34, sn12.62, sn22.5, sn22.48. The uddāna lines PTS prints at the end of a vagga (sn14.29 3.5 `… || Dasaṅgena ca sattamam || || Kammapathavaggo tatiyo`) come as headings and are not reached by it.
+
+A chain of headings the edition prints as one line, in one ms heading, is cut again into the ms headings of that run
+(`place()`, after the end lines): MSO patthana3.1 114.0.5 `Hetuduka, Vedanāttika Sukhāyavedanāyasampayuttapada
+Paṭiccādivāra Paccayacatukka Hetu`, ms 114.0.1-114.0.5 one heading each. The cut is the one where most words match
+their own heading (a spelling apart, `Saṃkiliṭṭhattika` / Saṅkiliṭṭhattika, and an edition word that starts with the
+ms word, VRI `Hetupaccayo` / Hetu, count as a match); a word that matches none stays with the heading before it.
+Only when the whole chain came in one heading with two words or more over its own, and no heading loses a word it
+matched; 0.1 (the name of the book) and a `Namo tassa…` line are left out (Siam Rath bv12 `dasamo padumuttara
+buddhavaṃso` is 0.2, not 0.1 Buddhavaṁsa; BJT an10.119 `paṭhama paccorohaṇī suttaṃ` is no Paccorohaṇivagga). 3079
+segments in 96 suttas: VRI 2378, MSO 699, BJT 2; Paṭṭhāna 2946, Yamaka 106, Dhammasaṅgaṇī 11, Kathāvatthu 8,
+Vibhaṅga 6, Vinaya pj1 2.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in

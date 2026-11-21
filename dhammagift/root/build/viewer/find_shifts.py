@@ -63,7 +63,7 @@ def scan(rows):
 def main(data, dst):
     res = []
     for f in sorted(glob.glob(os.path.join(data, '*.json'))):
-        if os.path.basename(f) in ('index.json', 'shifts.json'): continue
+        if os.path.basename(f) in ('index.json', 'shifts.json', 'editions.json'): continue
         d = json.load(open(f, encoding='utf8'))
         rows = [r for s in d['suttas'] for r in s['rows']]
         res += [(d['book'],) + x for x in scan(rows)]

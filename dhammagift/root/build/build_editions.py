@@ -14,7 +14,7 @@ footnotes / <note> readings to variant/, page and paragraph numbers to reference
 usage: build_editions.py --bjt DIR --vri DIR --ms DIR --out DIR [--only sn1-10,sn45-49,an1,an2]
 """
 import argparse
-import html, bisect, collections, difflib, glob, itertools, json, os, re, sys, unicodedata
+import html, bisect, collections, difflib, functools, glob, itertools, json, os, re, sys, unicodedata
 import xml.etree.ElementTree as ET
 
 # ---------------------------------------------------------------- Sinhala -> Roman
@@ -1445,7 +1445,8 @@ def realign_window(toks, body, assign, width=30):
     Siam Rath dn29 prints `Taṁ kissa hetu? Evañhetaṁ, cunda, hoti durakkhāte …` (ms 4.12-5.9) and then the same
     words again (5.10-6.1); its first block all went into 4.12 and its second into 4.13-5.1, with 5.2-5.10 empty.
     The sutta aligned on its own (realign_glued) gives the same. Here a segment that holds much more than its ms
-    text (more than twice its ms words, +8) with an empty ms text segment among the next 15 is the start of a
+    text (more than twice its ms words, +8) with an empty ms text segment among the next 15 (or, if none, among the
+    15 before it: BJT mn97 18.6 held 18.1-18.4, the window then starts at the filled segment before them) is in a
     window of `width` segments, whose words are matched with ms word for word (runs of 2 or more): a matched word
     goes to the segment of its ms word, the words between two matched ones are cut between the segments of the ms
     words between them where their letters read most like those (unless there is far more edition text than ms
@@ -1472,13 +1473,23 @@ def realign_window(toks, body, assign, width=30):
         return home_of[s]
     done, si = 0, 0
     while si < len(body):
-        if not (got[si] > 2 * len(msw[si]) + 8
-                and any(msw[j] and not got[j] for j in range(si + 1, min(len(body), si + 16)))):
+        s = sutta_of(body[si][0])
+        swollen = got[si] > 2 * len(msw[si]) + 8
+        ahead = any(msw[j] and not got[j] for j in range(si + 1, min(len(body), si + 16)))
+        back = [j for j in range(max(0, si - 15), si) if msw[j] and not got[j] and sutta_of(body[j][0]) == s]
+        if not (swollen and (ahead or back)):
             si += 1
             continue
-        s = sutta_of(body[si][0])
-        ix = [j for j in range(si, min(len(body), si + width)) if sutta_of(body[j][0]) == s]
-        lo = next((i for i, a in enumerate(assign) if a == si), None)
+        start = si
+        if not ahead:  # the empty segments stand before it (BJT mn97 18.6 holds 18.1-18.4): start at the filled one before them
+            start = back[0] - 1
+            while start >= 0 and not got[start] and sutta_of(body[start][0]) == s:
+                start -= 1
+            if start < 0 or sutta_of(body[start][0]) != s:
+                si += 1
+                continue
+        ix = [j for j in range(start, min(len(body), si + width)) if sutta_of(body[j][0]) == s]
+        lo = next((i for i, a in enumerate(assign) if a == start), None)
         hi = max((i for i, a in enumerate(assign) if a in ix), default=None)
         if lo is None or hi is None or any(not (ix[0] <= assign[i] <= ix[-1]) for i in range(lo, hi + 1)):
             si += 1
@@ -1606,6 +1617,49 @@ def rule_starts(toks, body, segs_all, assign):
         i = j
 
 
+def danda_split(toks, body, assign):
+    """A half-verse or an end line the edition marks off with `||` in the segment before an empty one: PTS sn14.29
+    3.5 `Chaṭṭham Aṭṭhaṅgiko vutto || Dasaṅgena ca sattamam`, ms 3.5 `Chaṭṭhaṁ aṭṭhaṅgiko vutto,` and 3.6 `dasaṅgena ca
+    sattamaṁ.` with 3.6 empty; PTS sn12.20 5.10 `Dasamaṃ || || Āhāravaggo dutiyo`, ms 5.11 `Āhāravaggo dutiyo.`. When the
+    words after a `||` (all of them, or those up to the next `||`) read as the next ms segment (0.8 or more) and that
+    segment got nothing, they go to it; again for
+    the one after it (the four lines of an uddāna in one segment, sn49.1-12). The words before must not read less like
+    their own ms text. -> number of moves"""
+    msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
+    ratio = lambda a, b: difflib.SequenceMatcher(None, a, b, autojunk=False).ratio() if a or b else 1
+    moves, changed = 0, True
+    while changed:
+        changed = False
+        got = collections.defaultdict(list)
+        for i, a in enumerate(assign):
+            got[a].append(i)
+        for si in sorted(got):
+            sj = si + 1
+            if sj >= len(body) or not msw[sj] or sutta_of(body[sj][0]) != sutta_of(body[si][0]) \
+                    or any(toks[i].norm for i in got.get(sj, ())):  # nothing but punctuation counts as empty
+                continue
+            ix = got[si]
+            if got.get(sj) and min(got[sj]) < max(ix):
+                continue
+            cuts = [n for n, i in enumerate(ix) if '|' in toks[i].text and n + 1 < len(ix)]
+            whole = [toks[i].norm for i in ix if toks[i].norm]
+            for c, n in enumerate(cuts):
+                head = [toks[i].norm for i in ix[:n + 1] if toks[i].norm]
+                tail = [toks[i].norm for i in ix[n + 1:] if toks[i].norm]
+                nxt = cuts[c + 1] if c + 1 < len(cuts) else len(ix)  # the piece up to the next `||`
+                piece = [toks[i].norm for i in ix[n + 1:nxt + 1] if toks[i].norm]
+                if piece and head and max(ratio(tail, msw[sj]), ratio(piece, msw[sj])) >= 0.8 \
+                        and ratio(head, msw[si]) >= ratio(whole, msw[si]):
+                    for i in ix[n + 1:]:
+                        assign[i] = sj
+                    moves += 1
+                    changed = True
+                    break
+            if changed:
+                break
+    return moves
+
+
 def gap_fragments(toks, body, assign):
     """The start of a sentence left before a passage the edition does not print. PTS dn22 has no appiya / piya
     passage (ms 18.27-18.32); the alignment put `Katamañ ca bhikkhave`, the opening of the next question, in 18.27
@@ -1681,6 +1735,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     realign_window(chunk.toks, body, assign)
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
+    danda_split(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
     for i, t in enumerate(chunk.toks):
         if t.block:
@@ -1790,6 +1845,81 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
 
     def ms_words(k):
         return [w for w in map(norm, ms_text.get(k, '').split()) if w]
+    # a chain of headings the edition prints as one line, in one of them (MSO patthana3.1 114.0.5 `Hetuduka,
+    # Vedanāttika Sukhāyavedanāyasampayuttapada Paṭiccādivāra Paccayacatukka Hetu`, ms 114.0.1-114.0.5 one heading
+    # each): over a run of ms headings of six words or fewer, the words are cut again so that most of them match their
+    # own heading; a word that matches none stays with the heading before it. Only when the chain came in one heading
+    # with two words or more over its own, more words then match, and no heading loses a word it matched; a
+    # `Namo tassa…` line is no heading here, nor 0.1, the name of the book (Siam Rath bv12 `dasamo padumuttara
+    # buddhavaṃso` is 0.2 Padumuttarabuddhavaṁsa, not 0.1 Buddhavaṁsa).
+    @functools.lru_cache(maxsize=None)
+    def alike(x, y):  # x of the edition, y of ms. A spelling apart (Saṃkiliṭṭhattika / Saṅkiliṭṭhattika) is the same
+        # word, and so is an edition's word that starts with the ms word (VRI `Hetupaccayo` / Hetu,
+        # `Kusalattika-vedanāttikaṃ` / Kusalattika); not the other way (BJT an10.119 `paṭhama paccorohaṇī suttaṃ` is
+        # no Paccorohaṇivagga)
+        return x == y or difflib.SequenceMatcher(None, x, y, autojunk=False).ratio() >= 0.9 \
+            or (len(y) >= 4 and 3 * len(y) >= len(x) and x.startswith(y))
+
+    @functools.lru_cache(maxsize=None)
+    def hits(a, b):  # words in order that match
+        row = [0] * (len(b) + 1)
+        for x in a:
+            nrow = [0]
+            for n, y in enumerate(b):
+                nrow.append(row[n] + 1 if alike(x, y) else max(row[n + 1], nrow[n]))
+            row = nrow
+        return row[-1]
+    i = 0
+    while i < len(allk):
+        run = []
+        while i < len(allk) and head_key(allk[i]) and 0 < len(ms_words(allk[i])) <= 6 and not body_words[allk[i]] \
+                and ms_words(allk[i])[:2] != ['namo', 'tassa'] and not allk[i].endswith(':0.1') \
+                and (not run or sutta_of(allk[i]) == sutta_of(run[0])):
+            run.append(allk[i])
+            i += 1
+        if not run:
+            i += 1
+            continue
+        ws = ' '.join(h for k in run for h in text[k]).split()
+        wn = [n for n, w in enumerate(ws) if norm(w)]
+        w = [norm(ws[n]) for n in wn]
+        if len(run) < 2 or not w or len(w) > 40:
+            continue
+        had = [hits(tuple(x for x in map(norm, ' '.join(text[k]).split()) if x), tuple(ms_words(k))) for k in run]
+        src = [k for k in run if ' '.join(text[k]).strip()]
+        if len(src) != 1 or len(w) < len(ms_words(src[0])) + 2:
+            continue  # the chain came in one heading, two words or more over its own
+        old = sum(had)
+        best = [[None] * (len(w) + 1) for _ in range(len(run) + 1)]  # (matches, starts) for t words in j headings
+        best[0][0] = (0, ())
+        for j in range(1, len(run) + 1):
+            mw = tuple(ms_words(run[j - 1]))
+            for t in range(len(w) + 1):
+                for u in range(t + 1):
+                    if best[j - 1][u] is not None:
+                        sc = best[j - 1][u][0] + hits(tuple(w[u:t]), mw)
+                        if best[j][t] is None or sc >= best[j][t][0]:  # ties: the later cut
+                            best[j][t] = (sc, best[j - 1][u][1] + (u,))
+        sc, starts = best[len(run)][len(w)]
+        if sc <= old:
+            continue
+        def cut(u):
+            if u >= len(wn):
+                return len(ws)
+            c = wn[u]
+            while c > (wn[u - 1] + 1 if u else 0) and not norm(ws[c - 1]):
+                c -= 1
+            return c
+        starts = list(starts) + [len(w)]
+        first = next((j for j in range(len(run)) if hits(tuple(w[starts[j]:starts[j + 1]]), tuple(ms_words(run[j])))), None)
+        for j in range(first or 0):  # words before the first match go with it, not into the headings before
+            starts[j + 1] = starts[0]
+        if any(hits(tuple(w[starts[j]:starts[j + 1]]), tuple(ms_words(k))) < had[j] for j, k in enumerate(run)):
+            continue  # no heading loses a word it matched
+        bounds = [0] + [cut(u) for u in starts[1:-1]] + [len(ws)]
+        for j, k in enumerate(run):  # a number or a mark before a word goes with that word
+            piece = ws[bounds[j]:bounds[j + 1]]
+            text[k] = [' '.join(piece)] if piece else []
     for i, k in enumerate(allk):
         want = ms_words(k)
         if not head_key(k) or not want or len(want) > 6:
