@@ -1660,6 +1660,41 @@ def danda_split(toks, body, assign):
     return moves
 
 
+def quote_ti_back(toks, body, assign):
+    """The closing `ti` of a quotation that PTS prints as a word of its own, put at the start of the next segment:
+    PTS an1.5 `… cittaṃ pariyādāya tiṭṭhati ti. 6.`, ms 1.2 `… tiṭṭhatī”ti.` and 1.3 `Pañcamaṁ.` got `ti`; sn34.50
+    1.8 `ti || || (51)`. When the first word of a segment is `ti`, its own ms text does not start with ti / iti, and
+    the ms text of the segment before (the same sutta) ends a quotation there (`…”ti`, or its last word is the
+    edition's word before with ti), the `ti` goes back to that one.
+    -> number of moves"""
+    msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
+    first = {}
+    for i, a in enumerate(assign):
+        if toks[i].norm and a not in first:
+            first[a] = i
+    moves = 0
+    for si, i in first.items():
+        if toks[i].norm != 'ti' or not msw[si] or msw[si][0] in ('ti', 'iti'):
+            continue
+        sj = si - 1
+        while sj >= 0 and not msw[sj] and sutta_of(body[sj][0]) == sutta_of(body[si][0]):
+            sj -= 1
+        if sj < 0 or sutta_of(body[sj][0]) != sutta_of(body[si][0]) \
+                or not any(assign[x] == sj for x in range(max(0, i - 40), i)):
+            continue
+        last = body[sj][1].split()[-1] if body[sj][1].split() else ''
+        prev = next((toks[x].norm for x in range(i - 1, max(-1, i - 40), -1) if toks[x].norm), '')
+        if not (re.search(r'[”’"\']ti\W*$', last) or (prev and prev + 'ti' == msw[sj][-1])):
+            continue  # a quotation that ends there (an10.199-210 `sappatisso hoti …` is none)
+        assign[i] = sj
+        x = i + 1  # the danda after it goes with it (`ti || ||`); a number (`ti. 6.`) stays
+        while x < len(toks) and assign[x] == si and not toks[x].norm and re.fullmatch(r'[|.,;:]+', toks[x].text):
+            assign[x] = sj
+            x += 1
+        moves += 1
+    return moves
+
+
 def gap_fragments(toks, body, assign):
     """The start of a sentence left before a passage the edition does not print. PTS dn22 has no appiya / piya
     passage (ms 18.27-18.32); the alignment put `Katamañ ca bhikkhave`, the opening of the next question, in 18.27
@@ -1736,6 +1771,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
     danda_split(chunk.toks, body, assign)
+    quote_ti_back(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
     for i, t in enumerate(chunk.toks):
         if t.block:
