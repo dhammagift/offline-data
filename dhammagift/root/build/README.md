@@ -173,6 +173,14 @@ buddhavaṃso` is 0.2, not 0.1 Buddhavaṁsa; BJT an10.119 `paṭhama paccoroha�
 segments in 96 suttas: VRI 2378, MSO 699, BJT 2; Paṭṭhāna 2946, Yamaka 106, Dhammasaṅgaṇī 11, Kathāvatthu 8,
 Vibhaṅga 6, Vinaya pj1 2.
 
+The closing `ti` of a quotation that PTS prints as a word of its own goes back to the segment it closes
+(`quote_ti_back`): PTS an1.5 `… pariyādāya tiṭṭhati ti. 6.` put `ti` in 1.3 `Pañcamaṁ.`, sn34.50 1.8 `ti || || (51)`.
+When the first word of a segment is `ti`, its own ms text does not start with ti / iti, and the ms text of the
+segment before ends a quotation (`…”ti`, or its last word is the edition's word before with ti), the `ti` and the
+danda after it go back; a sutta number stays. Not after a verb in -ti with no quotation (BJT an10.199-210 `sappatisso
+hoti …`). 3026 segments in 1570 suttas: PTS 2926, BJT 100; with it the sutta numbers and the `Sāvatthi` lines that
+followed the `ti` came to the start of their sutta (an6.107 `Tayo 'me`, sn26.1 `1-3 Sāvatthi`).
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in
