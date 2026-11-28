@@ -181,6 +181,14 @@ danda after it go back; a sutta number stays. Not after a verb in -ti with no qu
 hoti …`). 3026 segments in 1570 suttas: PTS 2926, BJT 100; with it the sutta numbers and the `Sāvatthi` lines that
 followed the `ti` came to the start of their sutta (an6.107 `Tayo 'me`, sn26.1 `1-3 Sāvatthi`).
 
+A segment that holds its own line and the next one, with the next ms segment left empty and no `||` to cut at
+(`tail_split`): PTS snp4.12 4.3 held 4.4 `diṭṭhi hi tesam pi tathā samattā`, dn22 22.11 held 22.12-13; most often a
+title at the end of a section (BJT `[vajjīnaṃ satta aparihāniyā dhammā]`, `tatruddānaṃ`, Yamaka `(anuloma okāsa)`,
+Thai Paṭṭhāna `kusalattikahetudukaṃ`). The words are cut where the head still matches its own ms line as well as the
+whole did and the tail matches the empty one (letters, ratio ≥ 0.8; up to two empty lines). Not inside `[ ]`, not an
+end-title `… niṭṭhitā` into the next heading (VRI kd9 7.14.32), not a block over 80 words (the cut search is cubic).
+885 empty segments filled in 386 files (1989 with their references): BJT 518, Siam Rath 291, PTS 70, VRI 6.
+
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a
 review of those by eye 29 in the nikāyas (100 with KN); after a review of KN 27 + 53 = 80; with Vinaya Vibhaṅga 83, 2 of them Vinaya; with the whole Vinaya 106: the 18 in Khandhaka and Parivāra are all in

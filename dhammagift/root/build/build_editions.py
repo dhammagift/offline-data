@@ -1695,6 +1695,67 @@ def quote_ti_back(toks, body, assign):
     return moves
 
 
+NITTHIT = norm('niṭṭhita')[:-1]
+
+
+def tail_split(toks, body, assign):
+    """The words of an empty segment left at the end of the segment before, with no `||` to cut at (danda_split):
+    PTS snp4.12 4.3 `na tesaṃ koci parihīnapañño, diṭṭhi hi tesam pi tathā samattā`, ms 4.3 `Na tesaṁ koci
+    parihīnapañño,` and 4.4 `Diṭṭhī hi tesampi tathā samattā.` with 4.4 empty; PTS dn22:22.11 held 22.12 and 22.13.
+    When the next segment (or the next two) has ms text and no edition words, the end of this one that reads as
+    that ms text goes to it: letters compared, so `tesam pi` is `tesampi` (0.8 or more), cut at a word; the words
+    left must not read less like their own ms text. -> number of moves"""
+    msw = [[norm(w) for w in t.split() if norm(w)] for _, t in body]
+    lr = lambda a, b: difflib.SequenceMatcher(None, ''.join(a), ''.join(b), autojunk=False).ratio() if a or b else 1
+    got = collections.defaultdict(list)
+    for i, a in enumerate(assign):
+        got[a].append(i)
+    empty = lambda s: s < len(body) and msw[s] and not any(toks[i].norm for i in got.get(s, ()))
+    moves = 0
+    for si in sorted(got):
+        sj = si + 1
+        if not msw[si] or not empty(sj) or sutta_of(body[sj][0]) != sutta_of(body[si][0]):
+            continue
+        ix = got[si]
+        if got.get(sj) and min(got[sj]) < max(ix):
+            continue
+        words = [n for n, i in enumerate(ix) if toks[i].norm]
+        w = [toks[ix[n]].norm for n in words]
+        if len(w) > 80:  # the cut search is cubic; a block this long (Paṭṭhāna) is not a held tail
+            continue
+        depth, open_at = 0, []  # open_at[n]: word n stands inside [ ] (a BJT/PTS bracketed title), no cut before it
+        for n, i in enumerate(ix):
+            if toks[i].norm:
+                open_at.append(depth > 0 and not toks[i].text.startswith('['))
+            depth += toks[i].text.count('[') - toks[i].text.count(']')
+        ends = [n for n, x in enumerate(w) if x.startswith(NITTHIT)]  # '… kathā niṭṭhitā' closes the section before
+        head = body[sj][0].endswith('.0')
+        own = lr(w, msw[si])
+        two = empty(sj + 1) and sutta_of(body[sj + 1][0]) == sutta_of(body[si][0])
+        best = None
+        for c in range(1, len(w)):
+            if open_at[c] or lr(w[:c], msw[si]) < own:
+                continue
+            for e in range(c + 1, len(w) + 1):
+                if e < len(w) and open_at[e]:
+                    continue
+                if head and any(c <= n < e for n in ends):  # VRI kd9 7.14.32: the end-title is not the next heading
+                    continue
+                r = lr(w[c:e], msw[sj])
+                if r < 0.8:
+                    continue
+                if e < len(w) and not (two and lr(w[e:], msw[sj + 1]) >= 0.8):
+                    continue
+                if best is None or r > best[0]:
+                    best = (r, c, e)
+        if best:
+            _, c, e = best
+            for n in range(words[c], len(ix)):
+                assign[ix[n]] = sj if e == len(w) or n < words[e] else sj + 1
+            moves += 1
+    return moves
+
+
 def gap_fragments(toks, body, assign):
     """The start of a sentence left before a passage the edition does not print. PTS dn22 has no appiya / piya
     passage (ms 18.27-18.32); the alignment put `Katamañ ca bhikkhave`, the opening of the next question, in 18.27
@@ -1771,6 +1832,7 @@ def place(chunk, ms_paths, ed, out_dir, label, report, write_books=None):
     rule_starts(chunk.toks, body, segs_all, assign)
     gap_fragments(chunk.toks, body, assign)
     danda_split(chunk.toks, body, assign)
+    tail_split(chunk.toks, body, assign)
     quote_ti_back(chunk.toks, body, assign)
     blocks = collections.defaultdict(list)
     for i, t in enumerate(chunk.toks):
