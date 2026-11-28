@@ -183,11 +183,14 @@ followed the `ti` came to the start of their sutta (an6.107 `Tayo 'me`, sn26.1 `
 
 A segment that holds its own line and the next one, with the next ms segment left empty and no `||` to cut at
 (`tail_split`): PTS snp4.12 4.3 held 4.4 `diṭṭhi hi tesam pi tathā samattā`, dn22 22.11 held 22.12-13; most often a
-title at the end of a section (BJT `[vajjīnaṃ satta aparihāniyā dhammā]`, `tatruddānaṃ`, Yamaka `(anuloma okāsa)`,
-Thai Paṭṭhāna `kusalattikahetudukaṃ`). The words are cut where the head still matches its own ms line as well as the
-whole did and the tail matches the empty one (letters, ratio ≥ 0.8; up to two empty lines). Not inside `[ ]`, not an
-end-title `… niṭṭhitā` into the next heading (VRI kd9 7.14.32), not a block over 80 words (the cut search is cubic).
-885 empty segments filled in 386 files (1989 with their references): BJT 518, Siam Rath 291, PTS 70, VRI 6.
+title at the end of a section (BJT `[sāriputta sīhanādo]` dn16 1.16.0, `tatruddānaṃ`, Thai Paṭṭhāna
+`kusalattikahetudukaṃ`). The words are cut where the head still matches its own ms line as well as the whole did and
+the tail matches the empty one (letters, ratio ≥ 0.8; up to two empty lines). Not inside `[ ]` (BJT dn16 1.3.7), not a
+block over 80 words (the cut search is cubic: the Paṭṭhāna hung for 2 hours). Into an ms heading (`….0`, `….0.1`) only
+a title: not `… niṭṭhitā` (VRI kd9 7.14.32), not the start of the text under it (Thai ds1.2 41.0 `sañañojaniyā`), not a
+label that closes a section before, which BJT prints after a section (Yamaka `(anuloma okāsa)` closes 'Anulomaokāsa',
+not the next 'Anulomapuggalokāsa'; ds2.3.2 `ganthagocchakaṃ`); checked on the best cut only. 716 empty segments
+filled (1651 with their references): BJT 358, Siam Rath 284, PTS 68, VRI 6.
 
 `viewer/find_shifts.py` (from the f3 session) lists segments that still carry words of a neighbouring ms segment:
 168 before these rules, 51 after; with one-word shifts counted (f3 session) 167, then 57 in the nikāyas; after a

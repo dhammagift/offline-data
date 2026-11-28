@@ -1696,6 +1696,7 @@ def quote_ti_back(toks, body, assign):
 
 
 NITTHIT = norm('niṭṭhita')[:-1]
+HEAD_KEY = re.compile(r'\.0(\.\d+)?$')  # an ms heading segment: dn16:1.4.0, ds2.3.2:108.0.1
 
 
 def tail_split(toks, body, assign):
@@ -1729,7 +1730,10 @@ def tail_split(toks, body, assign):
                 open_at.append(depth > 0 and not toks[i].text.startswith('['))
             depth += toks[i].text.count('[') - toks[i].text.count(']')
         ends = [n for n, x in enumerate(w) if x.startswith(NITTHIT)]  # '… kathā niṭṭhitā' closes the section before
-        head = body[sj][0].endswith('.0')
+        head = HEAD_KEY.search(body[sj][0])
+        prev_heads = [msw[x] for x in range(si, -1, -1) if HEAD_KEY.search(body[x][0]) and msw[x]
+                      and sutta_of(body[x][0]) == sutta_of(body[si][0])][:12] if head else []
+        nxt = msw[sj + 1] if head and sj + 1 < len(body) else []
         own = lr(w, msw[si])
         two = empty(sj + 1) and sutta_of(body[sj + 1][0]) == sutta_of(body[si][0])
         best = None
@@ -1748,6 +1752,13 @@ def tail_split(toks, body, assign):
                     continue
                 if best is None or r > best[0]:
                     best = (r, c, e)
+        # into a heading only its title: not the start of the text under it (Thai ds1.2 41.0 `sañañojaniyā`,
+        # BJT patthana2.1 465.0 `(sahajātavāropi`), not the end-label of a section before (BJT ds2.3.2 125.0
+        # `ganthagocchakaṃ`, BJT Yamaka `(anuloma okāsa)` closes 'Anulomaokāsa', not 'Anulomapuggalokāsa')
+        if best and head:  # checked on the best cut only: when it is refused, a worse cut is no title either
+            r, c, e = best
+            if nxt and lr(w[c:e], nxt[:e - c]) > r or any(lr(w[c:e], h) > r for h in prev_heads):
+                best = None
         if best:
             _, c, e = best
             for n in range(words[c], len(ix)):
