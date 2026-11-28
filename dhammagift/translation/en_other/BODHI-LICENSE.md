@@ -7,11 +7,12 @@ and each sutta's title is Bhikkhu Bodhi's.
 - Majjhima Nikāya: © Bhikkhu Bodhi, *The Middle Length Discourses of the Buddha* (Wisdom Publications, 2009)
 - Saṃyutta Nikāya: © Bhikkhu Bodhi, *The Connected Discourses of the Buddha* (Wisdom Publications, 2000)
 - Aṅguttara Nikāya: © Bhikkhu Bodhi, *The Numerical Discourses of the Buddha* (Wisdom Publications, 2012)
-- Dīgha Nikāya 2 and 15: © Bhikkhu Bodhi, *The Discourse on the Fruits of Recluseship* (1989) and *The Great Discourse
-  on Causation* (1984, 1995), Buddhist Publication Society, Kandy. BPS: «For free distribution. This work may be
+- Dīgha Nikāya 1, 2 and 15: © Bhikkhu Bodhi, *The All-embracing Net of Views*, *The Discourse on the Fruits of
+  Recluseship*, *The Great Discourse on Causation* (Buddhist Publication Society, Kandy), made available on SuttaCentral
+  by the kind permission of Bhikkhu Bodhi and the BPS under the terms: «For free distribution. This work may be
   republished, reformatted, reprinted and redistributed in any medium. However, any such republication and
   redistribution is to be made available to the public on a free and unrestricted basis, and translations and other
-  derivative works are to be clearly marked as such.» (https://www.bps.lk)
+  derivative works are to be clearly marked as such.» (https://suttacentral.net/dn2/en/bodhi)
 
 The Wisdom Publications excerpts are licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
 (https://creativecommons.org/licenses/by-nc-nd/3.0/). Permissions beyond the scope of this license may be available
